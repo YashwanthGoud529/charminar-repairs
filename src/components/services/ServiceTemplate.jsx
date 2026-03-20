@@ -504,45 +504,46 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                             <button className="btn btn-outline-dark btn-sm fw-bold px-4" style={{ borderRadius: '8px' }}>Read Warranty Policy</button>
                                         </div>
 
-                                        {/* Reviews Section */}
+                                        {/* Reviews Section - DYNAMIC */}
                                         <div className="mb-5">
                                             <h4 className="fw-black mb-4 fs-5 text-dark">Verified Customer Stories</h4>
                                             <div className="row g-3">
-                                                {[1, 2].map(r => (
-                                                    <div key={r} className="col-md-6">
+                                                {(svc.reviews || [
+                                                    { user: 'Verified Customer', text: 'Brilliant service! The professional arrived exactly on time and completed the job perfectly. Highly recommend.' },
+                                                    { user: 'Happy Customer', text: 'Excellent work done at a very fair price. Very satisfied with the quality and professionalism.' }
+                                                ]).map((r, idx) => (
+                                                    <div key={idx} className="col-md-6">
                                                         <div className="p-3 border border-light bg-light" style={{ borderRadius: '8px' }}>
                                                             <div className="d-flex justify-content-between mb-2">
-                                                                <span className="fw-bold small text-dark">Verified User #{r}21</span>
+                                                                <span className="fw-bold small text-dark">{r.user}</span>
                                                                 <span className="d-flex align-items-center gap-1">
                                                                     {[1, 2, 3, 4, 5].map(n => <img key={n} src="/assets/Images/star.png" alt="star" style={{ width: '13px', height: '13px', objectFit: 'contain' }} />)}
                                                                 </span>
                                                             </div>
-                                                            <p className="text-muted mb-0 font-italic" style={{ fontSize: '13px' }}>"Brilliant service! The technician arrived exactly on time and fixed it in 45 mins. Highly recommend."</p>
+                                                            <p className="text-muted mb-0 font-italic" style={{ fontSize: '13px' }}>"{r.text}"</p>
                                                         </div>
                                                     </div>
                                                 ))}
                                             </div>
                                         </div>
 
-                                        {/* ADDITIONAL CONTENT: INCLUSIONS & EXCLUSIONS */}
+                                        {/* INCLUSIONS & EXCLUSIONS - DYNAMIC */}
                                         <div className="row g-4 mb-5 border-top pt-5">
                                             <div className="col-md-6">
                                                 <h5 className="fw-black text-dark mb-4 d-flex align-items-center gap-2">
                                                     <i className="fas fa-plus-circle text-success opacity-75"></i> What's included
                                                 </h5>
                                                 <ul className="list-unstyled d-flex flex-column gap-3">
-                                                     <li className="d-flex gap-2 text-secondary" style={{ fontSize: '14px' }}>
-                                                        <i className="fas fa-check text-success mt-1" style={{ fontSize: '11px' }}></i>
-                                                        <span>Professional diagnosis and fix by certified experts</span>
-                                                    </li>
-                                                    <li className="d-flex gap-2 text-secondary" style={{ fontSize: '14px' }}>
-                                                        <i className="fas fa-check text-success mt-1" style={{ fontSize: '11px' }}></i>
-                                                        <span>180-day warranty coverage on all parts and labor</span>
-                                                    </li>
-                                                    <li className="d-flex gap-2 text-secondary" style={{ fontSize: '14px' }}>
-                                                        <i className="fas fa-check text-success mt-1" style={{ fontSize: '11px' }}></i>
-                                                        <span>Post-service cleaning and workplace restoration</span>
-                                                    </li>
+                                                    {(svc.inclusions || [
+                                                        'Professional service by certified experts',
+                                                        '180-day warranty coverage',
+                                                        'Post-service cleanup included'
+                                                    ]).map((item, idx) => (
+                                                        <li key={idx} className="d-flex gap-2 text-secondary" style={{ fontSize: '14px' }}>
+                                                            <i className="fas fa-check text-success mt-1" style={{ fontSize: '11px' }}></i>
+                                                            <span>{item}</span>
+                                                        </li>
+                                                    ))}
                                                 </ul>
                                             </div>
                                             <div className="col-md-6">
@@ -550,27 +551,28 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                     <i className="fas fa-minus-circle text-danger opacity-75"></i> What's excluded
                                                 </h5>
                                                 <ul className="list-unstyled d-flex flex-column gap-3">
-                                                     <li className="d-flex gap-2 text-secondary" style={{ fontSize: '14px' }}>
-                                                        <i className="fas fa-times text-danger mt-1" style={{ fontSize: '11px' }}></i>
-                                                        <span>Cost of additional spare parts (if required)</span>
-                                                    </li>
-                                                    <li className="d-flex gap-2 text-secondary" style={{ fontSize: '14px' }}>
-                                                        <i className="fas fa-times text-danger mt-1" style={{ fontSize: '11px' }}></i>
-                                                        <span>Major structural or masonry work beyond service scope</span>
-                                                    </li>
+                                                    {(svc.exclusions || [
+                                                        'Cost of additional spare parts (if required)',
+                                                        'Major structural work beyond service scope'
+                                                    ]).map((item, idx) => (
+                                                        <li key={idx} className="d-flex gap-2 text-secondary" style={{ fontSize: '14px' }}>
+                                                            <i className="fas fa-times text-danger mt-1" style={{ fontSize: '11px' }}></i>
+                                                            <span>{item}</span>
+                                                        </li>
+                                                    ))}
                                                 </ul>
                                             </div>
                                         </div>
 
-                                        {/* TECHNICIAN SPOTLIGHT */}
+                                        {/* EXPERT SPOTLIGHT - DYNAMIC */}
                                         <div className="p-4 bg-dark text-white mb-5 d-flex align-items-center gap-4 shadow-lg" style={{ borderRadius: '12px' }}>
                                             <div className="bg-white rounded-circle p-1 flex-shrink-0" style={{ width: '70px', height: '70px' }}>
-                                                <img src="/images/8-Team-Member.jpg" className="w-100 h-100 rounded-circle object-fit-cover" alt="Elite Pro" />
+                                                <img src={svc.photo || '/images/8-Team-Member.jpg'} className="w-100 h-100 rounded-circle object-fit-cover" alt="Expert" />
                                             </div>
                                             <div>
-                                                <h5 className="fw-black mb-1 fs-5">Elite Professionals Only</h5>
+                                                <h5 className="fw-black mb-1 fs-5">{svc.spotlight?.title || 'Elite Professionals Only'}</h5>
                                                 <p className="mb-0 text-white-50 small pe-lg-4 lh-base">
-                                                    Every technician undergoes rigorous background verification and 100+ hours of technical training. We only send the top 1% of experts to ensure high-quality repairs and absolute peace of mind for your home.
+                                                    {svc.spotlight?.desc || 'Every professional undergoes rigorous background verification and 100+ hours of technical training. We only send the top 1% of experts to ensure high-quality service and absolute peace of mind for your home.'}
                                                 </p>
                                             </div>
                                         </div>
