@@ -1,0 +1,84 @@
+/* Refined Contact Form Premium Styles - Cart Synchronized */
+.contact-form-premium {
+    position: relative;
+    z-index: 2;
+}
+
+.form-group-premium {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.premium-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #666666;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.premium-input,
+.premium-select {
+    width: 100%;
+    background-color: #f8fafc;
+    border: 1px solid #eeeeee;
+    border-radius: 8px; /* Fixed 8px Radius */
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.premium-input:focus,
+.premium-select:focus {
+    background-color: #ffffff;
+    border-color: #673ab7 !important; /* Cart Primary Purple */
+    box-shadow: 0 0 0 4px rgba(103, 58, 183, 0.1) !important;
+}
+
+.premium-input::placeholder {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.btn-premium-action {
+    background-color: #673ab7; /* Cart Primary Purple */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px; /* Fixed 8px Radius */
+    padding: 18px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-premium-action:hover {
+    background-color: #5e35b1; /* Cart Purple Hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(103, 58, 183, 0.2);
+}
+
+.btn-premium-action:active {
+    transform: translateY(0);
+}
+
+.btn-premium-action:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+@media (max-width: 768px) {
+    .btn-premium-action {
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+}

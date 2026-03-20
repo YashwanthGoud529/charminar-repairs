@@ -1,0 +1,167 @@
+/* Pricing Premium Experience Styles - Strictly Purple */
+.pricing-premium-experience {
+    background-color: #fbfcff;
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-600: #475569;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --purple-primary: #673ab7;
+    --purple-soft: rgba(103, 58, 183, 0.08);
+}
+
+.text-purple { color: #673ab7 !important; }
+.bg-purple { background-color: #673ab7 !important; }
+
+.mt-n5 { margin-top: -3.5rem !important; }
+
+/* Navigation Tablet */
+.pricing-glass-tabs {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 8px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-premium-tab {
+    border: none;
+    background: transparent;
+    padding: 12px 24px;
+    margin: 0 4px;
+    border-radius: 8px; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    color: var(--slate-600);
+}
+
+.tab-icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    background: #f1f5f9;
+    color: var(--slate-600);
+}
+
+.pricing-premium-tab.active {
+    background: #673ab7 !important;
+    color: #ffffff !important;
+}
+
+.pricing-premium-tab.active .tab-icon-box {
+    background: rgba(255,255,255,0.2) !important;
+    color: #ffffff !important;
+}
+
+/* Rate Card */
+.premium-rate-card {
+    background: #fff;
+    border-radius: 8px; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.card-top-accent {
+    height: 6px;
+    background: #673ab7 !important; /* Explicit purple */
+    width: 100%;
+}
+
+.category-glow-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--purple-soft);
+    color: #673ab7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    font-size: 1.5rem;
+}
+
+.badge-premium {
+    background: var(--purple-soft);
+    color: #673ab7;
+    padding: 6px 16px;
+    border-radius: 8px; 
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.pricing-row {
+    transition: all 0.2s;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.pricing-row:hover {
+    background-color: #fbfcfe;
+}
+
+.price-digits {
+    color: #673ab7 !important;
+    font-weight: 800;
+}
+
+.pricing-disclaimer-card {
+    background: #f8faff;
+    border-left: 4px solid #673ab7;
+    padding: 20px;
+    border-radius: 8px; 
+}
+
+/* Sidebar */
+.trust-sidebar-card {
+    background: #0f172a;
+    color: white;
+    border-radius: 8px; 
+}
+
+.trust-icon-box {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    color: #673ab7;
+    font-size: 1.1rem;
+}
+
+.btn-call-premium {
+    background: #673ab7 !important;
+    color: white !important;
+    border: none;
+    border-radius: 8px; 
+    padding: 18px 25px;
+    transition: all 0.3s;
+    box-shadow: 0 10px 20px rgba(103, 58, 183, 0.2);
+}
+
+.btn-call-premium:hover {
+    background: #5e35b1 !important;
+}
+
+.commit-icon {
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    color: #673ab7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    margin: 0 auto;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    border: 1px solid #f1f5f9;
+}
+
+.text-orange { color: #673ab7 !important; }
+.spinner-border.text-orange { border-color: #673ab7 !important; border-right-color: transparent !important; }
