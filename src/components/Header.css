@@ -227,10 +227,13 @@
 
 .mobile-nav-list-v3 {
     padding: 30px;
+    list-style: none;
+    margin: 0;
 }
 
 .mobile-nav-list-v3 li {
     margin-bottom: 25px;
+    list-style: none;
 }
 
 .mobile-nav-list-v3 a {
