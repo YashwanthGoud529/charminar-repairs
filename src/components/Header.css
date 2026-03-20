@@ -239,6 +239,7 @@
     color: #1e293b;
     display: block;
     transition: all 0.3s;
+    text-decoration: none !important;
 }
 
 .mobile-nav-list-v3 a:hover {
