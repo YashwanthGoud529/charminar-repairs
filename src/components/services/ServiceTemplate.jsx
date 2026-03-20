@@ -78,7 +78,11 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
         fetchData();
     }, [baseTitle]);
 
-    const svc = liveSvc || SERVICE_DATA_MAP[baseTitle] || DEFAULT_SERVICE;
+    // Merge: local config is the BASE (has reviews, inclusions, exclusions, spotlight, brands, etc.)
+    // Firestore liveSvc OVERRIDES only what it has (title, desc, etc.)
+    // This ensures all dynamic modal content comes from the local config
+    const localConfigSvc = SERVICE_DATA_MAP[baseTitle] || DEFAULT_SERVICE;
+    const svc = liveSvc ? { ...localConfigSvc, ...liveSvc } : localConfigSvc;
 
     // Categorization logic
     const categorizeItem = (item) => {
@@ -322,6 +326,8 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                 const itemId = sub.docId || sub.id;
                                                 const cartItem = cartItems.find(item => item.id === itemId);
                                                 const isLast = i === groupedItems[cat].length - 1;
+                                                const discount = svc.globalDiscount || 0;
+                                                const originalPrice = discount > 0 ? Math.round(sub.price / (1 - discount / 100)) : null;
                                                 return (
                                                     <div key={i} className={`py-4 d-flex justify-content-between align-items-start gap-3 ${!isLast ? 'border-bottom border-light' : ''}`}>
 
@@ -335,8 +341,14 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                                 </div>
                                                                 <span className="text-muted item-reviews-text">4.1K reviews</span>
                                                             </div>
-                                                            <div className="price-tag fw-bold text-dark mb-2 fs-5">
-                                                                ₹{sub.price}
+                                                            <div className="d-flex align-items-center gap-2 flex-wrap mb-2">
+                                                                <span className="fw-black text-dark fs-5">₹{sub.price}</span>
+                                                                {originalPrice && (
+                                                                    <>
+                                                                        <span className="text-muted text-decoration-line-through" style={{ fontSize: '14px' }}>₹{originalPrice}</span>
+                                                                        <span className="badge text-white fw-bold px-2 py-1" style={{ backgroundColor: '#27ae60', fontSize: '11px', borderRadius: '4px' }}>{discount}% OFF</span>
+                                                                    </>
+                                                                )}
                                                             </div>
                                                             <p className="text-secondary mb-2 lh-base item-desc-para">
                                                                 {sub.desc}
@@ -438,8 +450,22 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                     <p className="text-muted mb-0">{svc.title} Certified Experts</p>
                                                 </div>
                                                 <div className="text-end">
-                                                    <div className="text-primary fw-black fs-2">₹{selectedService.price}</div>
-                                                    <div className="text-muted x-small">Inclusive of all taxes</div>
+                                                    {(() => {
+                                                        const discount = svc.globalDiscount || 0;
+                                                        const originalPrice = discount > 0 ? Math.round(selectedService.price / (1 - discount / 100)) : null;
+                                                        return (
+                                                            <>
+                                                                <div className="text-primary fw-black fs-2">₹{selectedService.price}</div>
+                                                                {originalPrice && (
+                                                                    <div className="d-flex align-items-center justify-content-end gap-2 mt-1">
+                                                                        <span className="text-muted text-decoration-line-through small">₹{originalPrice}</span>
+                                                                        <span className="badge fw-bold text-white px-2" style={{ backgroundColor: '#27ae60', fontSize: '11px', borderRadius: '4px' }}>{discount}% OFF</span>
+                                                                    </div>
+                                                                )}
+                                                                <div className="text-muted x-small mt-1">Inclusive of all taxes</div>
+                                                            </>
+                                                        );
+                                                    })()}
                                                 </div>
                                             </div>
 
