@@ -26,7 +26,7 @@ const LocalReviews = ({ serviceName, locationLabel }) => {
                 <div className="row g-4 overflow-auto py-2 no-scrollbar flex-nowrap flex-md-wrap">
                     {reviews.map((r, i) => (
                         <div key={i} className="col-lg-4 col-md-6 col-11 flex-shrink-0">
-                            <div className="p-4 bg-white border border-light h-100 shadow-sm" style={{ borderRadius: '12px' }}>
+                            <div className="p-4 bg-white border border-light h-100 shadow-sm" style={{ borderRadius: '8px' }}>
                                 <div className="d-flex justify-content-between align-items-center mb-3">
                                     <div className="d-flex align-items-center gap-2">
                                         <div className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style={{ width: '32px', height: '32px', fontSize: '13px' }}>{r.name.charAt(0)}</div>

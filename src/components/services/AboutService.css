@@ -149,7 +149,7 @@
 .as-stat-card {
     background: linear-gradient(135deg, #f8f4ff, #fff);
     border: 1px solid rgba(103, 58, 183, 0.12);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 22px 16px;
     text-align: center;
     transition: all 0.3s;
@@ -203,7 +203,7 @@
 .as-why-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
 .as-why-card {
@@ -288,7 +288,7 @@
     padding: 20px 22px;
     background: #fafbff;
     border: 1px solid #e8ecf4;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: all 0.3s;
     position: relative;
 }
@@ -442,7 +442,7 @@
 .as-spec-card {
     background: #fff;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border-radius: 8px;
     padding: 36px;
 }
 
