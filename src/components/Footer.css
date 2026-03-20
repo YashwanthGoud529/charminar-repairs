@@ -43,6 +43,7 @@
     display: block;
     color: rgba(255, 255, 255, 0.7) !important;
     font-family: var(--font-outfit), sans-serif;
+    text-decoration: none !important;
 }
 
 .links-list li a:hover {
