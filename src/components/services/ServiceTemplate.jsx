@@ -169,7 +169,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                     {isSaver ? (
                                                         <div className="text-primary fw-bold category-saver-text">
                                                             <span className="category-saver-upto">UPTO</span><br />
-                                                            <span className="category-saver-percent">25%</span><br />
+                                                            <span className="category-saver-percent">{svc.globalDiscount || 25}%</span><br />
                                                             <span className="category-saver-off">OFF</span>
                                                         </div>
                                                     ) : (
