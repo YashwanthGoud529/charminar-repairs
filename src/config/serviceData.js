@@ -1,5 +1,6 @@
 export const SERVICE_DATA_MAP = {
     'Air Conditioner Repair': {
+        globalDiscount: 16,
         icon: '/images/ac_icon.png',
         photo: '/images/ac-repair.png',
         desc: 'Is your <strong>AC blowing warm air</strong>, leaking water, or making unexplained noises? At <strong>Charminar Repairs</strong>, our HVAC-certified technicians perform a complete <strong>25-point diagnostic</strong> on your air conditioner across <strong>Hyderabad</strong> — from the outdoor compressor unit to the indoor evaporator coil.',
@@ -11,7 +12,7 @@ export const SERVICE_DATA_MAP = {
             '✦ Deep Jet Cleaning (Indoor + Outdoor Unit)',
             '✦ Water Leakage & Drain Line Unclogging',
             '✦ Same-Day Doorstep Service in Hyderabad',
-            '✦ 1-Year Warranty on Parts & Labour',
+            '✦ 1-Year Warranty on Parts & Labour'
         ],
         brands: ['Voltas', 'LG', 'Samsung', 'Daikin', 'Blue Star', 'Hitachi', 'Carrier', 'Panasonic', 'O General', 'Lloyd', 'Godrej', 'Haier'],
         specializations: [
@@ -42,7 +43,7 @@ export const SERVICE_DATA_MAP = {
             { id: 'ac-motor', name: 'Fan Motor Repair', price: 1400, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Resolution for noisy fans or unit vibration.' },
             { id: 'ac-leak', name: 'Refrigerant Leak Repair', price: 600, image: '/images/gas_1.png', desc: 'Pressure testing and leak sealing to restore cooling power.' },
             { id: 'ac-capacitor', name: 'Capacitor Swap', price: 450, image: '/images/electrical_wiring_3d.png', desc: 'Replacement of faulty capacitors to start the compressor safely.' },
-            { id: 'ac-coil', name: 'Coil & Condenser Repair', price: 2000, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Deep restoration for high-performance cooling coils.' },
+            { id: 'ac-coil', name: 'Coil & Condenser Repair', price: 2000, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Deep restoration for high-performance cooling coils.' }
         ]
     },
     'Refrigerator Repair': {
@@ -685,6 +686,7 @@ export const SERVICE_DATA_MAP = {
         ]
     },
     'Haircut for Men': {
+        globalDiscount: 21,
         icon: '/images/service_icon.png',
         photo: '/assets/Images/most-booked/haircut-for-men.jpg',
         desc: 'Skip the salon queue and experience <strong>Premium Men’s Grooming at home in Hyderabad</strong>. Our certified stylists bring a complete salon kit including sterilized tools and mess-free capes for a professional cut.',
@@ -718,7 +720,7 @@ export const SERVICE_DATA_MAP = {
             { t: 'Salon Hygiene Concerns', i: 'fas fa-shield-virus', d: '100% disposable capes and UV-sterilized tools.' }
         ],
         subServices: [
-            // --- HAIR CUT ---
+            // --- HAIR CUT & STYLE ---
             { id: 'hc-regular', name: 'Standard Hair Cut', price: 200, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Professional classic haircut with style consultation.' },
             { id: 'hc-style', name: 'Change of Style / Fade', price: 300, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Transform your look with a trendy fade or complete style change.' },
             { id: 'hc-shave', name: 'Regular Clean Shave', price: 80, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Smooth and clean shave using sterilized tools.' },
@@ -731,6 +733,9 @@ export const SERVICE_DATA_MAP = {
             { id: 'hc-color-grey', name: 'Grey Coverage (Hair Only)', price: 800, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Professional hair color to hide greys naturally.' },
             { id: 'hc-color-streak', name: 'Hair Streak (Per Streak)', price: 200, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Add a pop of color with single or multiple streaks.' },
             { id: 'hc-color-beard', name: 'Beard Coloring', price: 300, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Match your beard with your hair for a complete look.' },
+
+            // --- HAIR FORMS ---
+            { id: 'hc-straight', name: 'Hair Straightening / Smoothening', price: 4500, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Professional high-quality hair straightening for a permanent sleek look.' },
 
             // --- HEAD MASSAGE ---
             { id: 'hc-massage-wash', name: 'Indian Head Massage (With Wash)', price: 400, image: '/images/img_icons8_com_3d_fluency_94_spa_png.png', desc: 'Deeply relaxing head massage followed by a professional hair wash.' },
