@@ -69,10 +69,18 @@ function parseSlugPattern(slug) {
         const sSlug = parts[0];
         const locationRaw = parts[parts.length - 1];
         if (SLUG_TO_TITLE[sSlug]) {
-             const exactLocation = HYDERABAD_LOCATIONS.find(loc => toSlug(loc) === locationRaw);
-             if (exactLocation) return { serviceSlug: sSlug, location: exactLocation };
+            const exactLocation = HYDERABAD_LOCATIONS.find(loc => toSlug(loc) === locationRaw);
+            return { serviceSlug: sSlug, location: exactLocation || null };
         }
     }
+
+    // Fallback: Check if the slug starts with a known service slug
+    for (const sSlug of SORTED_SERVICE_SLUGS) {
+        if (slug.startsWith(sSlug)) {
+            return { serviceSlug: sSlug, location: null };
+        }
+    }
+
     return { serviceSlug: slug, location: null };
 }
 
