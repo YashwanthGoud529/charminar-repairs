@@ -450,31 +450,37 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                             </div>
 
                                             <div className="row g-5">
+                                                {/* Dynamic Process Steps from restorationFramework */}
                                                 <div className="col-md-6">
                                                     <h4 className="fw-black mb-4 fs-5 text-dark border-start border-primary border-4 ps-3">Our Process</h4>
                                                     <div className="d-flex flex-column gap-4">
-                                                        {[
-                                                            { title: 'Inspection & quote', desc: 'We inspect the appliance & share a repair quote for approval' },
-                                                            { title: 'Approval or expert review', desc: 'Repair begins after your approval, if you are unsure you can call our expert' },
-                                                            { title: 'Repair & spare parts', desc: 'If needed, we will source spare parts at fixed rates for the repair' },
-                                                            { title: 'Warranty activation', desc: 'Your appliance will automatically come under 180 days warranty after the repair' }
-                                                        ].map((item, idx) => (
+                                                        {(svc.restorationFramework || [
+                                                            { title: 'Consultation & Review', icon: 'fas fa-clipboard' },
+                                                            { title: 'Assessment & Diagnosis', icon: 'fas fa-search' },
+                                                            { title: 'Service Execution', icon: 'fas fa-tools' },
+                                                            { title: 'Quality Check & Finish', icon: 'fas fa-check-circle' }
+                                                        ]).map((item, idx) => (
                                                             <div key={idx} className="d-flex gap-3 align-items-start">
                                                                 <div className="process-step-indicator">{idx + 1}</div>
                                                                 <div>
-                                                                    <div className="fw-bold small text-dark">{item.title}</div>
-                                                                    <div className="text-muted" style={{ fontSize: '13px' }}>{item.desc}</div>
+                                                                    <div className="fw-bold small text-dark d-flex align-items-center gap-2">
+                                                                        {item.icon && <i className={`${item.icon} text-primary`} style={{ fontSize: '12px' }}></i>}
+                                                                        {item.title}
+                                                                    </div>
+                                                                    {item.desc && <div className="text-muted" style={{ fontSize: '13px' }}>{item.desc}</div>}
                                                                 </div>
                                                             </div>
                                                         ))}
                                                     </div>
                                                 </div>
 
-                                                {/* Brands Column */}
+                                                {/* Dynamic Brands Column */}
                                                 <div className="col-md-6">
-                                                    <h4 className="fw-black mb-4 fs-5 text-dark border-start border-primary border-4 ps-3">Trusted Brands</h4>
+                                                    <h4 className="fw-black mb-4 fs-5 text-dark border-start border-primary border-4 ps-3">
+                                                        {svc.brands && svc.brands.length > 0 ? 'Trusted Brands' : 'What We Cover'}
+                                                    </h4>
                                                     <div className="row g-2">
-                                                        {['LG', 'Samsung', 'IFB', 'Siemens', 'Whirlpool', 'Bosch'].map(b => (
+                                                        {(svc.brands || ['All Brands', 'All Models', 'All Types']).map(b => (
                                                             <div key={b} className="col-4">
                                                                 <div className="border border-light p-2 text-center text-secondary small fw-bold" style={{ borderRadius: '4px', fontSize: '11px' }}>{b}</div>
                                                             </div>
