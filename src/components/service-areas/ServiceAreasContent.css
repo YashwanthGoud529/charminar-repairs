@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+.service-areas-intl {
+    background-color: #f8fafc;
+    font-family: 'Outfit', var(--font-inter), sans-serif;
+}
+
+/* --- Quick Summary Grid --- */
+.areas-summary {
+    background: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.summary-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    height: 100%;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.summary-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.1);
+    border-color: var(--primary);
+}
+
+.summary-icon-wrapper {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 25px;
+    background: #fdf2e9;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    transition: all 0.4s ease;
+}
+
+.summary-card:hover .summary-icon-wrapper {
+    background: var(--primary);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.summary-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.4s ease;
+}
+
+.summary-card:hover .summary-icon-wrapper img {
+    filter: brightness(0) invert(1);
+}
+
+.summary-card h4 {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+/* --- Operational Radius Section --- */
+.radius-section {
+    background: #f8fafc;
+    border-radius: 60px 60px 0 0;
+    margin-top: -30px;
+}
+
+.radius-badge {
+    background: rgba(255, 107, 0, 0.1);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    display: inline-block;
+}
+
+.map-container {
+    border-radius: 30px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.2);
+}
+
+.feature-point {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.feature-point:hover {
+    border-color: var(--primary);
+    transform: translateX(10px);
+}
+
+.feature-icon-box {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    background: #f8fafc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+/* --- Neighborhood Grid --- */
+.neighborhoods-section {
+    background: #fff;
+    border-radius: 60px 60px 0 0;
+}
+
+.location-card-premium {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--primary);
+    transition: height 0.4s ease;
+}
+
+.location-card-premium:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.08);
+    border-color: #fff;
+}
+
+.location-card-premium:hover::before {
+    height: 100%;
+}
+
+.loc-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+}
+
+.zip-badge {
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.location-name {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--secondary);
+    margin: 15px 0 8px;
+}
+
+.location-type {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-book-area {
+    padding: 18px 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 991px) {
+    .row-cols-md-3 > * { width: 33.333%; }
+}
+
+@media (max-width: 767px) {
+    .radius-section, .neighborhoods-section { border-radius: 30px 30px 0 0; }
+}
