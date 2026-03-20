@@ -716,8 +716,27 @@ export const SERVICE_DATA_MAP = {
             { t: 'Salon Hygiene Concerns', i: 'fas fa-shield-virus', d: '100% disposable capes and UV-sterilized tools.' }
         ],
         subServices: [
-            { id: 'hc-basic', name: 'Classic Men\'s Haircut', price: 259, image: '/assets/Images/most-booked/haircut-for-men.jpg', desc: 'Includes style consultation & finish.' },
-            { id: 'hc-beard', name: 'Grooming Combo (Hair + Beard)', price: 399, image: '/images/img_icons8_com_3d_fluency_94_handshake_png.png', desc: 'Complete grooming & shaping service.' },
+            // --- HAIR CUT ---
+            { id: 'hc-regular', name: 'Standard Hair Cut', price: 200, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Professional classic haircut with style consultation.' },
+            { id: 'hc-style', name: 'Change of Style / Fade', price: 300, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Transform your look with a trendy fade or complete style change.' },
+            { id: 'hc-shave', name: 'Regular Clean Shave', price: 80, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Smooth and clean shave using sterilized tools.' },
+            { id: 'hc-head-shave', name: 'Full Head Shave', price: 200, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Traditional head shave for a clean look.' },
+            { id: 'hc-kids', name: 'Kids Hair Cut (Up to 10yr)', price: 120, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Special care haircut for children with a friendly approach.' },
+            { id: 'hc-beard-design', name: 'Beard Design & Sculpting', price: 200, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Precision beard shaping to match your face structure.' },
+            { id: 'hc-beard-trim', name: 'Quick Beard Trim', price: 100, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Fast and efficient beard length adjustment.' },
+            
+            // --- HAIR COLORING ---
+            { id: 'hc-color-grey', name: 'Grey Coverage (Hair Only)', price: 800, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Professional hair color to hide greys naturally.' },
+            { id: 'hc-color-streak', name: 'Hair Streak (Per Streak)', price: 200, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Add a pop of color with single or multiple streaks.' },
+            { id: 'hc-color-beard', name: 'Beard Coloring', price: 300, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Match your beard with your hair for a complete look.' },
+
+            // --- HEAD MASSAGE ---
+            { id: 'hc-massage-wash', name: 'Indian Head Massage (With Wash)', price: 400, image: '/images/img_icons8_com_3d_fluency_94_spa_png.png', desc: 'Deeply relaxing head massage followed by a professional hair wash.' },
+            { id: 'hc-massage-basic', name: 'Indian Head Massage (Dry)', price: 350, image: '/images/img_icons8_com_3d_fluency_94_spa_png.png', desc: 'traditional stress-relief head massage for instant relaxation.' },
+
+            // --- HAIR SPA & TREATMENT ---
+            { id: 'hc-spa-classic', name: 'Classic Hair Spa', price: 750, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Deep conditioning treatment to restore hair health and shine.' },
+            { id: 'hc-treatment-anti', name: 'Anti-Dandruff / Hairfall Treatment', price: 1300, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Professional clinical treatment targeting scalp issues.' },
         ]
     },
     'British Rose Pedicure': {
