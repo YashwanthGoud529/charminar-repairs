@@ -36,11 +36,13 @@ export const SERVICE_DATA_MAP = {
             { t: 'Remote Not Working', i: 'fas fa-signal', d: 'IR sensor replacement and control board sync.' }
         ],
         subServices: [
-            { id: 'ac-repair-visit', name: 'AC Comprehensive Diagnostic Visit', price: 299, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Our expert will perform a 25-point health check, identifying gas leaks, coil condition, and electrical relay health to provide an accurate repair estimate.' },
-            { id: 'ac-jet-clean', name: 'Premium Jet Cleaning (Indoor + Outdoor)', price: 699, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'High-pressure foam-based cleaning that removes deep-seated dust from cooling coils and outdoor fins, improving cooling efficiency by up to 40%.' },
-            { id: 'ac-gas-charge', name: 'Eco-Friendly Gas Refill (Full Charge)', price: 1499, image: '/images/gas_1.png', desc: 'Includes precision leak detection, vacuuming the system, and refilling high-grade R32 or R410A refrigerant for ice-cold cooling.' },
-            { id: 'ac-pcb-repair', name: 'Smart Logic Board (PCB) Restoration', price: 2499, image: '/images/chip_icon.png', desc: 'Specialized micro-soldering for inverter AC boards to fix sensors, display errors, and communication faults between units.' },
-            { id: 'ac-capacitor', name: 'Compressor Starter Capacitor Fix', price: 499, image: '/images/electrical_wiring_3d.png', desc: 'Replacement of faulty capacitors to ensure your compressor starts smoothly without putting load on your electrical lines.' },
+            { id: 'ac-repair-gen', name: 'General AC Repair', price: 650, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Starting from ₹650. Includes primary diagnostic and basic electrical repair.' },
+            { id: 'ac-compressor', name: 'AC Compressor Restoration', price: 1500, image: '/images/ac_icon.png', desc: 'Professional compressor health diagnostics and starter restoration.' },
+            { id: 'ac-pcb', name: 'PCB / Control Board Repair', price: 2700, image: '/images/chip_icon.png', desc: 'Fixes communication errors and main circuit failures.' },
+            { id: 'ac-motor', name: 'Fan Motor Repair', price: 1400, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Resolution for noisy fans or unit vibration.' },
+            { id: 'ac-leak', name: 'Refrigerant Leak Repair', price: 600, image: '/images/gas_1.png', desc: 'Pressure testing and leak sealing to restore cooling power.' },
+            { id: 'ac-capacitor', name: 'Capacitor Swap', price: 450, image: '/images/electrical_wiring_3d.png', desc: 'Replacement of faulty capacitors to start the compressor safely.' },
+            { id: 'ac-coil', name: 'Coil & Condenser Repair', price: 2000, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Deep restoration for high-performance cooling coils.' },
         ]
     },
     'Refrigerator Repair': {
