@@ -42,6 +42,15 @@ export const SERVICE_CANONICAL_MAP = {
     'Most Booked Services': 'most-booked-services',
     'Appliance Repair Services': 'appliance-repair-services',
     'Explore Our Services': 'all-services-hyderabad',
+
+    // --- Most Booked Section Mapping ---
+    'Insta Help': 'insta-help',
+    'Foam-jet AC service': 'foam-jet-ac-service',
+    'Intense bathroom cleaning': 'bathroom-cleaning',
+    'Intense cleaning (2 bathrooms)': 'bathroom-cleaning',
+    'Water Purifier (RO) Service': 'water-purifier-servicing',
+    'Geyser & Water Heater Repair': 'geyser-repairing',
+    'Kitchen Chimney Service': 'chimney-repairing',
 };
 
 export const CANONICAL_SLUGS = Object.values(SERVICE_CANONICAL_MAP);

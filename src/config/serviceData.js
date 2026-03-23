@@ -1,4 +1,124 @@
 export const SERVICE_DATA_MAP = {
+    'Pest Control Services': {
+        icon: '/assets/Images/home-repair-services/pest_control.png',
+        photo: '/assets/Images/home-repair-services/pest_control.png',
+        desc: 'Protect your home and family from disease-carrying pests. Our <strong>government-licensed pest control experts in Hyderabad</strong> provide specialized treatments for termites, cockroaches, rodents, and mosquitoes using eco-friendly, safe chemicals.',
+        highlights: [
+            '✦ Government Licensed & Certified Pest Experts',
+            '✦ Odorless, Eco-Friendly & Kids-Safe Treatments',
+            '✦ 90-Day Protection Guarantee on All Services',
+            '✦ Advanced Gel & Herbal Injection Technology',
+            '✦ Termite Construction & Post-Construction Fix',
+            '✦ Cockroach, Bed Bug & Rodent Management',
+            '✦ Mosquito Mesh & Fogging Solutions',
+            '✦ Same-Day Inspection & Treatment'
+        ],
+        specializations: ['Termite Proofing', 'Cockroach Control', 'Bed Bug Removal', 'Rodent Management'],
+        subServices: [
+            { id: 'pest-cockroach', name: 'General Pest Control', price: 799, category: 'Gel Treatment', image: '/assets/Images/home-repair-services/pest_control.png', desc: 'Control for cockroaches, ants, and spiders in home.' },
+            { id: 'pest-termite', name: 'Termite Protection Plan', price: 1499, category: 'Structural', image: '/assets/Images/home-repair-services/pest_control.png', desc: 'Anti-termite treatment with 5-year warranty.' }
+        ]
+    },
+    'Home Repair Services': {
+        icon: '/images/maintenance_icon.png',
+        photo: '/assets/Images/home-repair-services/plumbing_work.jpeg',
+        desc: 'Your one-stop solution for all <strong>home maintenance and repair needs in Hyderabad</strong>. From expert plumbing and electrical work to professional carpentry and bird netting, we ensure your home stays in perfect condition.',
+        highlights: [
+            '✦ Rapid Doorstep Plumbing & Leakage Fixing',
+            '✦ Certified Electricians for Wiring & Faults',
+            '✦ Precision Carpentry & Furniture Restoration',
+            '✦ High-Durability Balcony Bird Netting',
+            '✦ Mosaic & Tile Flooring Repair Works',
+            '✦ Door, Lock & Window Hardware Fixes',
+            '✦ Same-Day Emergency Repairs Available',
+            '✦ Verified Professionals with Modern Tools'
+        ],
+        specializations: ['Plumbing', 'Electrical', 'Carpentry', 'Bird Netting'],
+        subServices: [
+            { id: 'hr-plumber', name: 'Expert Plumbing Visit', price: 149, category: 'Plumbing', image: '/images/maintenance_icon.png', desc: 'Doorstep visit for leak detection and diagnosis.' },
+            { id: 'hr-electrician', name: 'Electrician Visit', price: 149, category: 'Electrical', image: '/images/lightning_bolt_icon.png', desc: 'Safety audit and fault finding by certified experts.' }
+        ]
+    },
+    'Most Booked Services': {
+        icon: '/images/ok_icon.png',
+        photo: '/images/worker_icon.png',
+        desc: 'Explore the <strong>top-rated appliance repair and home services</strong> trusted by over 10,000 residents across Hyderabad. These services have the highest customer satisfaction scores and fastest response times.',
+        highlights: [
+            '✦ Top-Rated AC & Refrigerator Restoration',
+            '✦ Most Hired Washing Machine Experts',
+            '✦ Fastest Response TV & Microwave Service',
+            '✦ Highest Rated Pest Control Treatments',
+            '✦ Best Valued Plumbing & Electrical Fixes',
+            '✦ Guaranteed Reliability & Workmanship',
+            '✦ Same-Day Priority Scheduling',
+            '✦ 180-Day Comprehensive Warranty'
+        ],
+        specializations: ['Top Rated Repairs', 'Trending Services', 'Customer Favorites'],
+        subServices: [
+            { id: 'mb-ac', name: 'Priority AC Service', price: 650, category: 'Best Seller', image: '/images/ac_icon.png', desc: 'Our #1 most booked service for cooling recovery.' }
+        ]
+    },
+    'Explore Our Services': {
+        icon: '/images/charminar-repairs-logo.png',
+        photo: '/images/unsplash_1621905251189.jpg',
+        desc: 'Discover the full range of <strong>professional home services provided by Charminar Repairs</strong>. From specialized appliance repair to complete home maintenance, our certified experts cover every corner of Hyderabad.',
+        highlights: [
+            '✦ Full Spectrum of Appliance Repair Solutions',
+            '✦ Comprehensive Home Maintenance & Repairs',
+            '✦ Licensed Pest Control & Hygiene Services',
+            '✦ Professional Smart Device & TV Diagnostics',
+            '✦ Rapid Doorstep Support Across 50+ Districts',
+            '✦ Transparent Pricing & Guaranteed Warranty',
+            '✦ Verified Experts for Every Service Category',
+            '✦ 24/7 Online Booking & Support Access'
+        ],
+        specializations: ['All Appliances', 'All Home Repairs', 'All Pest Control'],
+        subServices: [
+            { id: 'expl-all', name: 'View Full Rate Card', price: 0, category: 'Menu', image: '/images/logo.png', desc: 'Explore all repair items and service rates.' }
+        ]
+    },
+    'Insta Help': {
+        icon: '/assets/Images/most-booked/insta-help.jpg',
+        photo: '/assets/Images/most-booked/insta-help.jpg',
+        desc: 'Professional <strong>Insta Help home services in Hyderabad</strong>. Whether it’s a quick electrical fix, minor plumbing leak, or urgent furniture repair — we provide instant doorstep assistance within 60 minutes.',
+        highlights: [
+            '✦ Rapid 60-Minute Doorstep Response',
+            '✦ Background-Verified Expert Handy-men',
+            '✦ Fixes Starting from just ₹99',
+            '✦ Tool-Equipped Professionals for Any Task',
+            '✦ Major Localities in Hyderabad Covered',
+            '✦ 100% Satisfaction Guarantee',
+        ],
+        specializations: ['Minor Repairs', 'Instant Help', 'Home Maintenance'],
+    },
+    'Foam-jet AC service': {
+        icon: '/assets/Images/most-booked/foam-jet-ac-service.jpg',
+        photo: '/assets/Images/most-booked/foam-jet-ac-service.jpg',
+        desc: 'Experience advanced cooling with our <strong>Foam-jet AC Service in Hyderabad</strong>. We use high-pressure foam technology to deep-clean your AC coils, removing stubborn dirt and bacteria for 2X better cooling.',
+        highlights: [
+            '✦ Advanced 2X Deep Foam Cleaning Technology',
+            '✦ Increases Cooling Efficiency by up to 30%',
+            '✦ Reduces Electricity Consumption Significantly',
+            '✦ Kills 99.9% Bacteria & Odor Removal',
+            '✦ Full Jet Wash for Indoor & Outdoor Units',
+            '✦ Free 15-Point Safety & Performance Audit',
+        ],
+        specializations: ['Deep Cleaning', 'Energy Efficiency', 'Odor Control'],
+    },
+    'Intense bathroom cleaning': {
+        icon: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg',
+        photo: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg',
+        desc: 'Restore your bathroom to hospital-grade hygiene with our <strong>Intense Bathroom Cleaning in Hyderabad</strong>. We use professional-grade anti-bacterial agents and mechanized tools to remove deep stains and hard-water scales.',
+        highlights: [
+            '✦ Mechanized Surface & Tile Scrubbing',
+            '✦ Deep Hard-Water Stain & Pitted Scale Removal',
+            '✦ Hospital-Grade Sanitization of All Fixtures',
+            '✦ Mirror, Exhaust Fan & Grout Deep Cleaning',
+            '✦ Eco-Friendly, Fragrant Disinfectants Used',
+            '✦ 100% Guaranteed Mirror-Like Finish',
+        ],
+        specializations: ['De-scaling', 'Sanitization', 'Stain Removal'],
+    },
     'Air Conditioner Repair': {
         globalDiscount: 16,
         icon: '/images/ac_icon.png',

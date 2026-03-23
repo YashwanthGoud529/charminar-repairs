@@ -25,7 +25,9 @@ const Category = () => {
     return (
         <section className="shared-carousel-section" style={{ paddingTop: '50px', paddingBottom: '50px', }}>
             <div className="container" style={{ maxWidth: '100%' }}>
-                <h2 className="shared-carousel-title" style={{ paddingLeft: '15px' }}>Category</h2>
+                <Link href="/all-services-hyderabad/" className="text-decoration-none color-inherit">
+                    <h2 className="shared-carousel-title" style={{ paddingLeft: '15px', cursor: 'pointer' }}>Category</h2>
+                </Link>
                 
                 <Swiper
                     modules={[Navigation]}

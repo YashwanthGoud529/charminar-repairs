@@ -106,7 +106,9 @@ const MostBookedServices = () => {
     return (
         <section className="shared-carousel-section py-5 bg-light-soft">
             <div className="container custom-container">
-                <h2 className="shared-carousel-title mb-4">Most booked services</h2>
+                <Link href="/most-booked-services/" className="text-decoration-none color-inherit">
+                    <h2 className="shared-carousel-title mb-4" style={{ cursor: 'pointer' }}>Most booked services</h2>
+                </Link>
 
                 <Swiper
                     modules={[Navigation]}
