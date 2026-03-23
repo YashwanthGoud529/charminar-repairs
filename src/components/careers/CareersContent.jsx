@@ -140,7 +140,7 @@ const CareersContent = ({ careersSchema }) => {
 
             <section className="careers-main py-5">
                 <div className="container custom-container px-4 px-lg-0">
-                    <div className="bg-white p-4 rounded-4 shadow-sm border mb-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between gap-4">
+                    <div className="bg-white p-4 rounded-3 shadow-sm border mb-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between gap-4">
                         <div className="d-flex align-items-center gap-4">
                             <div className="p-3 bg-primary bg-opacity-10 rounded-circle text-primary"><UsersIcon /></div>
                             <div>
@@ -155,7 +155,7 @@ const CareersContent = ({ careersSchema }) => {
                                 <p className="text-muted small mb-0">Top technicians earn more</p>
                             </div>
                         </div>
-                        <Link href="/partner/login" className="btn btn-dark fw-bold px-4 py-3 d-flex align-items-center" style={{ borderRadius: '12px' }}>
+                        <Link href="/partner/login" className="btn btn-dark fw-bold px-4 py-3 d-flex align-items-center" style={{ borderRadius: '8px' }}>
                             <UserCircleIcon /> Partner Login
                         </Link>
                     </div>
@@ -171,7 +171,7 @@ const CareersContent = ({ careersSchema }) => {
                                     { t: 'Training & Support', d: 'Access deep-tech training in modern appliances and 24/7 support.', i: <GraduationIcon />, c: 'bg-danger' }
                                 ].map((b, idx) => (
                                     <div key={idx} className="col-md-6">
-                                        <div className="bg-white p-4 p-lg-5 rounded-4 border h-100 shadow-sm transition-all hover-translate">
+                                        <div className="bg-white p-4 p-lg-5 rounded-3 border h-100 shadow-sm transition-all hover-translate">
                                             <div className={`${b.c} bg-opacity-10 p-4 d-inline-block rounded-circle mb-4`}>{b.i}</div>
                                             <h4 className="fw-bold mb-3 font-outfit">{b.t}</h4>
                                             <p className="text-muted fs-6 mb-0 font-inter">{b.d}</p>
@@ -180,7 +180,7 @@ const CareersContent = ({ careersSchema }) => {
                                 ))}
                             </div>
 
-                            <div className="bg-dark text-white p-5 rounded-4 shadow-lg position-relative overflow-hidden mb-5 border border-warning border-opacity-25" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)' }}>
+                            <div className="bg-dark text-white p-5 rounded-3 shadow-lg position-relative overflow-hidden mb-5 border border-warning border-opacity-25" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)' }}>
                                 <div className="z-2 position-relative">
                                     <h3 className="fw-bold mb-3 d-flex align-items-center gap-3 font-outfit">
                                         <div className="bg-warning bg-opacity-10 p-3 rounded-circle"><RocketIcon /></div>
@@ -212,7 +212,7 @@ const CareersContent = ({ careersSchema }) => {
 
                         <div className="col-xl-5">
                             <div className="sticky-top" style={{ top: '120px' }}>
-                                <div className="bg-white p-4 p-lg-5 rounded-4 shadow-2xl border-0 border-top border-primary border-4">
+                                <div className="bg-white p-4 p-lg-5 rounded-3 shadow-2xl border-0 border-top border-primary border-4">
                                     <div className="text-center mb-5">
                                         <h2 className="fw-bold text-dark mb-2 font-outfit">Partner Onboarding</h2>
                                         <p className="text-muted font-inter">Start your professional growth today.</p>
@@ -260,7 +260,7 @@ const CareersContent = ({ careersSchema }) => {
                                             <input type="password" className="form-control" placeholder="Pass" required value={formData.password} onChange={(e) => setFormData({...formData, password: e.target.value})} />
                                             <label>Create Password</label>
                                         </div>
-                                        <button type="submit" className="btn btn-primary w-100 py-3 fw-bold shadow-lg" disabled={isSubmitting} style={{ borderRadius: '12px' }}>
+                                        <button type="submit" className="btn btn-primary w-100 py-3 fw-bold shadow-lg" disabled={isSubmitting} style={{ borderRadius: '8px' }}>
                                             {isSubmitting ? 'PROCESSING...' : 'REGISTER AS PARTNER'}
                                         </button>
                                     </form>

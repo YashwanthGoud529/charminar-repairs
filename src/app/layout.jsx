@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Script from 'next/script';
 import ClientScripts from '../components/ClientScripts';
 import MainLayoutWrapper from '@/components/shared/MainLayoutWrapper';
-import CartBar from '@/components/cart/CartBar';
 import ScrollToTop from '@/components/shared/ScrollToTop';
 import Providers from './providers';
 import { Outfit } from 'next/font/google';
@@ -170,7 +169,6 @@ export default function RootLayout({ children }) {
               {children}
             </MainLayoutWrapper>
             <ScrollToTop />
-            <CartBar />
           </Providers>
         </StyledJsxRegistry>
 

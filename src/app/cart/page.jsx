@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useCartStore } from '@/store/cartStore';
 import Link from 'next/link';
 import LocationSelector from '@/components/shared/LocationSelector';
+import toast from 'react-hot-toast';
 import './cart.css';
 
 export default function CartPage() {
@@ -15,29 +16,27 @@ export default function CartPage() {
 
     const [status, setStatus] = useState('idle'); 
     const [step, setStep] = useState('cart'); 
-    const [errorMsg, setErrorMsg] = useState('');
     const [noCallBefore, setNoCallBefore] = useState(false);
     const [showCustomTipInput, setShowCustomTipInput] = useState(false);
     const [customTipValue, setCustomTipValue] = useState('');
     
     const [formData, setFormData] = useState({
         name: '',
-        phone: '', // empty to enforce validation
+        phone: '', 
         address: ''
     });
 
-    // Ensure tip is reset to 0 by default
+    
     useEffect(() => {
         setTip(0);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+       
     }, []);
 
     const subtotal = getTotalPrice();
     const serviceFee = getServiceFee();
     const taxAndFee = getTaxAmount();
     const finalTotal = getFinalTotal();
-    const savingTotal = 50; // Updated as per user's image
-
+    const savingTotal = 50; 
     // Group items by category
     const groupedItems = cartItems.reduce((acc, item) => {
         const cat = item.category || 'General';
@@ -46,7 +45,7 @@ export default function CartPage() {
         return acc;
     }, {});
 
-    const [selectedDate, setSelectedDate] = useState(0); // Index for dates
+    const [selectedDate, setSelectedDate] = useState(0); 
     const [selectedSlot, setSelectedSlot] = useState(null);
 
     const dates = [...Array(7)].map((_, i) => {
@@ -89,13 +88,8 @@ export default function CartPage() {
     }, [selectedDate, slots]);
 
     const handleCheckout = async () => {
-        if (step === 'checkout' && (!formData.name || !formData.phone || !formData.address || !selectedSlot)) {
-            setErrorMsg('Please complete all mandatory details (Name, Mobile, Address & Slot) to proceed.');
-            return;
-        }
-        
-        if (step === 'cart') {
-            setStep('checkout');
+        if (!formData.name || !formData.phone || !formData.address || !selectedSlot) {
+            toast.error('Please complete all mandatory details (Contact & Service Address) to proceed.');
             return;
         }
 
@@ -122,18 +116,19 @@ export default function CartPage() {
             const data = await res.json();
             if (data.success) {
                 setStatus('success');
+                toast.success('Booking Confirmed Successfully!');
                 setTimeout(() => {
                     clearCart();
                     setStatus('idle');
                     window.location.href = '/';
                 }, 3000);
             } else {
-                setErrorMsg('Booking failed. Please try again.');
+                toast.error('Booking failed. Please try again.');
                 setStatus('idle');
             }
         } catch (err) {
             console.error(err);
-            setErrorMsg('Network error. Please try again.');
+            toast.error('Network error. Please try again.');
             setStatus('idle');
         }
     };
@@ -170,8 +165,6 @@ export default function CartPage() {
     return (
         <div className="cart-page-wrapper py-5">
             <div className="container px-xl-5">
-                {errorMsg && <div className="alert alert-danger mb-4 mx-auto" style={{maxWidth: '800px'}}>{errorMsg}</div>}
-                
                 <div className="row g-4 d-flex align-items-start">
                     
                     {/* LEFT COLUMN */}
@@ -186,103 +179,99 @@ export default function CartPage() {
                                     <i className="fas fa-user"></i>
                                 </div>
                                 <div className="cart-info-content flex-grow-1">
-                                    <h6>User Details</h6>
-                                    {step === 'cart' ? (
-                                        <div className="mt-2 fw-600">
-                                            {formData.name ? `${formData.name} - ` : 'Not provided'} 
-                                            {formData.phone ? `+91 ${formData.phone}` : ''}
-                                        </div>
-                                    ) : (
-                                        <div className="mt-3">
+                                    <h6 className="mb-3">Contact Details</h6>
+                                    <div className="d-flex flex-column gap-3">
+                                        <div className="form-floating">
                                             <input 
                                                 type="text" 
-                                                className="form-control mb-3 bg-light border-0 p-3" 
-                                                placeholder="Your Name *"
+                                                className="form-control bg-light border-0" 
+                                                id="userNameInput"
+                                                placeholder="Your Full Name"
                                                 value={formData.name}
                                                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                                             />
-                                            <div className="input-group">
-                                                <span className="input-group-text bg-light border-0">+91</span>
+                                            <label htmlFor="userNameInput" className="text-muted"><i className="far fa-user me-2"></i>Full Name *</label>
+                                        </div>
+                                        <div className="input-group">
+                                            <span className="input-group-text bg-light border-0 fw-bold px-3">+91</span>
+                                            <div className="form-floating flex-grow-1">
                                                 <input 
                                                     type="tel" 
-                                                    className="form-control bg-light border-0 p-3" 
-                                                    placeholder="Mobile Number *"
+                                                    className="form-control bg-light border-0 border-start" 
+                                                    id="userPhoneInput"
+                                                    placeholder="Mobile Number"
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                                                 />
+                                                <label htmlFor="userPhoneInput" className="text-muted"><i className="fas fa-mobile-alt me-2"></i>Mobile Number *</label>
                                             </div>
                                         </div>
-                                    )}
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="cart-info-item align-items-start border-0 pb-0">
+                            <div className="cart-info-item align-items-start border-0 pb-0 mt-4">
                                 <div className="icon-box-colorful icon-box-blue shadow-sm mt-1">
                                     <i className="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div className="cart-info-content flex-grow-1">
-                                    <h6>Address</h6>
-                                    {step === 'cart' ? (
-                                        <div className="mt-2 text-muted fw-600">Select complete address below</div>
-                                    ) : (
-                                        <div className="mt-2 text-muted fw-600">
-                                            <div className="mt-3">
-                                                <textarea 
-                                                    className="form-control border-0 bg-light p-3" 
-                                                    placeholder="Flat/House No., Building Name, Area..."
-                                                    rows="3"
-                                                    autoFocus
-                                                    value={formData.address}
-                                                    onChange={(e) => setFormData({...formData, address: e.target.value})}
-                                                ></textarea>
-                                            </div>
-                                        </div>
-                                    )}
+                                    <h6 className="mb-3">Service Address</h6>
+                                    <div className="form-floating">
+                                        <textarea 
+                                            className="form-control border-0 bg-light" 
+                                            id="userAddressInput"
+                                            placeholder="Flat/House No., Building Name, Area..."
+                                            style={{ height: '90px', resize: 'none' }}
+                                            value={formData.address}
+                                            onChange={(e) => setFormData({...formData, address: e.target.value})}
+                                        ></textarea>
+                                        <label htmlFor="userAddressInput" className="text-muted"><i className="fas fa-home me-2"></i>Complete Address *</label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className={`cart-info-item align-items-start border-0 pb-0 ${step === 'cart' ? 'opacity-50' : ''}`}>
+                            <div className="cart-info-item align-items-start border-0 pb-2 mt-4">
                                 <div className="icon-box-colorful icon-box-green shadow-sm mt-1">
                                     <i className="far fa-clock"></i>
                                 </div>
                                 <div className="cart-info-content flex-grow-1">
-                                    <h6>Slot</h6>
-                                    {step === 'checkout' && (
-                                        <div className="slot-selector-v4">
-                                            <div className="date-scroll-v4">
-                                                {dates.map((d, i) => (
+                                    <h6 className="mb-3">Preferred Time Slot</h6>
+                                    <div className="slot-selector-v4 bg-light rounded-3 p-3 border-0">
+                                        <div className="date-scroll-v4 mb-3">
+                                            {dates.map((d, i) => (
+                                                <div 
+                                                    key={i} 
+                                                    className={`date-item-v4 ${selectedDate === i ? 'active shadow-sm' : 'bg-white'}`}
+                                                    onClick={() => setSelectedDate(i)}
+                                                >
+                                                    <div className="date-day-v4 opacity-75">{d.day}</div>
+                                                    <div className="date-num-v4 fw-black fs-5">{d.num}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <div className="time-grid-v4">
+                                            {slots.length > 0 ? (
+                                                slots.map((s, i) => (
                                                     <div 
                                                         key={i} 
-                                                        className={`date-item-v4 ${selectedDate === i ? 'active' : ''}`}
-                                                        onClick={() => setSelectedDate(i)}
+                                                        className={`time-item-v4 ${selectedSlot === s ? 'active shadow-sm' : 'bg-white'}`}
+                                                        onClick={() => setSelectedSlot(s)}
                                                     >
-                                                        <div className="date-day-v4">{d.day}</div>
-                                                        <div className="date-num-v4">{d.num}</div>
+                                                        {s}
                                                     </div>
-                                                ))}
-                                            </div>
-
-                                            <div className="time-grid-v4">
-                                                {slots.length > 0 ? (
-                                                    slots.map((s, i) => (
-                                                        <div 
-                                                            key={i} 
-                                                            className={`time-item-v4 ${selectedSlot === s ? 'active' : ''}`}
-                                                            onClick={() => setSelectedSlot(s)}
-                                                        >
-                                                            {s}
-                                                        </div>
-                                                    ))
-                                                ) : (
-                                                    <div className="text-muted w-100 py-2" style={{gridColumn: '1 / -1'}}>
-                                                        No slots available for this date.
-                                                    </div>
-                                                )}
-                                            </div>
+                                                ))
+                                            ) : (
+                                                <div className="text-danger w-100 py-2 d-flex align-items-center gap-2" style={{gridColumn: '1 / -1'}}>
+                                                    <i className="fas fa-exclamation-circle"></i> No slots available for this date.
+                                                </div>
+                                            )}
                                         </div>
-                                    )}
-                                    {step === 'checkout' && selectedSlot && (
-                                        <div className="mt-2 text-dark fw-700 font-outfit">Selected: {dates[selectedDate].full}, {selectedSlot}</div>
+                                    </div>
+                                    {selectedSlot && (
+                                        <div className="mt-3 text-success fw-bold font-outfit bg-success bg-opacity-10 py-2 px-3 rounded-2 d-inline-block">
+                                            <i className="fas fa-check-circle me-2"></i>Selected: {dates[selectedDate].full}, {selectedSlot}
+                                        </div>
                                     )}
                                 </div>
                             </div>
