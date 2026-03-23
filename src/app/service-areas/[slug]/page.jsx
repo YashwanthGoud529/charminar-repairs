@@ -5,6 +5,7 @@ import PageHero from '@/components/shared/PageHero';
 import { HYDERABAD_LOCATIONS } from '@/config/locations';
 import { SERVICE_CANONICAL_MAP } from '@/config/services';
 import { constructMetadata } from '@/components/seo/constructMetadata';
+import './LocationPage.css';
 
 // Helper to convert string to URL-friendly slug
 const toSlug = (str) =>
@@ -60,7 +61,7 @@ const LocationServicePage = async ({ params }) => {
                         </div>
                         <div className="col-lg-5 text-lg-end">
                              <a href="tel:8008615049" className="btn btn-primary btn-lg shadow-lg px-5 py-3 rounded-4">
-                                <i className="fas fa-phone-alt me-2"></i> CALL 8008615049
+                                 <i className="fas fa-phone-alt me-2"></i> CALL 8008615049
                              </a>
                         </div>
                     </div>
@@ -89,19 +90,9 @@ const LocationServicePage = async ({ params }) => {
                     </div>
                 </div>
             </section>
-
-            <style jsx>{`
-                .hover-border-primary:hover {
-                    border-color: #673ab7 !important;
-                    box-shadow: 0 10px 30px rgba(103, 58, 183, 0.1) !important;
-                    transform: translateY(-5px);
-                }
-                .transition-all {
-                    transition: all 0.3s ease;
-                }
-            `}</style>
         </main>
     );
 };
+;
 
 export default LocationServicePage;
