@@ -181,8 +181,8 @@ export default function CartPage() {
                         </div>
 
                         <div className="cart-info-card shadow-sm">
-                            <div className="cart-info-item align-items-start">
-                                <div className="cart-icon-circle mt-1">
+                            <div className="cart-info-item align-items-start border-0 pb-0">
+                                <div className="icon-box-colorful icon-box-purple shadow-sm mt-1">
                                     <i className="fas fa-user"></i>
                                 </div>
                                 <div className="cart-info-content flex-grow-1">
@@ -216,24 +216,16 @@ export default function CartPage() {
                                 </div>
                             </div>
 
-                            <div className="cart-info-item align-items-start">
-                                <div className="cart-icon-circle mt-1">
+                            <div className="cart-info-item align-items-start border-0 pb-0">
+                                <div className="icon-box-colorful icon-box-blue shadow-sm mt-1">
                                     <i className="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div className="cart-info-content flex-grow-1">
                                     <h6>Address</h6>
                                     {step === 'cart' ? (
-                                        <div className="mt-3">
-                                            <button 
-                                                className="btn cart-btn-purple fw-800"
-                                                onClick={() => setStep('checkout')}
-                                            >
-                                                Select address
-                                            </button>
-                                        </div>
+                                        <div className="mt-2 text-muted fw-600">Select complete address below</div>
                                     ) : (
                                         <div className="mt-2 text-muted fw-600">
-                                            {formData.address || 'Select complete address below'}
                                             <div className="mt-3">
                                                 <textarea 
                                                     className="form-control border-0 bg-light p-3" 
@@ -249,8 +241,8 @@ export default function CartPage() {
                                 </div>
                             </div>
 
-                            <div className={`cart-info-item align-items-start ${step === 'cart' ? 'opacity-50' : ''}`}>
-                                <div className="cart-icon-circle mt-1">
+                            <div className={`cart-info-item align-items-start border-0 pb-0 ${step === 'cart' ? 'opacity-50' : ''}`}>
+                                <div className="icon-box-colorful icon-box-green shadow-sm mt-1">
                                     <i className="far fa-clock"></i>
                                 </div>
                                 <div className="cart-info-content flex-grow-1">
@@ -290,13 +282,13 @@ export default function CartPage() {
                                         </div>
                                     )}
                                     {step === 'checkout' && selectedSlot && (
-                                        <div className="mt-2 text-dark fw-700">Selected: {dates[selectedDate].full}, {selectedSlot}</div>
+                                        <div className="mt-2 text-dark fw-700 font-outfit">Selected: {dates[selectedDate].full}, {selectedSlot}</div>
                                     )}
                                 </div>
                             </div>
 
                             <div className="cart-info-item opacity-50 border-0">
-                                <div className="cart-icon-circle">
+                                <div className="icon-box-colorful icon-box-indigo shadow-sm">
                                     <i className="fas fa-wallet"></i>
                                 </div>
                                 <div className="cart-info-content">

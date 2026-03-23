@@ -124,9 +124,9 @@ const PricingContent = () => {
                             {isLoading && dynamicPricingData.length === 0 ? (
                                 <div className="text-purple small px-4 py-2 fw-bold">Connecting to Pricing Engine...</div>
                             ) : (
-                                dynamicPricingData.map((cat) => (
+                                dynamicPricingData.map((cat, idx) => (
                                     <button
-                                        key={cat.id}
+                                        key={`${cat.id}-${idx}`}
                                         className={`pricing-premium-tab ${activeTab === cat.id ? 'active' : ''}`}
                                         onClick={() => setActiveTab(cat.id)}
                                     >
