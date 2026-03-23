@@ -6,6 +6,13 @@ import PageHero from '@/components/shared/PageHero';
 import './AboutContent.css';
 
 const AboutContent = ({ aboutSchema }) => {
+    // --- SVG Phone Icon ---
+    const PhoneAltIcon = () => (
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" className="text-purple">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+    );
+
     return (
         <main className="about-page bg-light-soft">
             <script
@@ -59,11 +66,11 @@ const AboutContent = ({ aboutSchema }) => {
                                     BOOK A TECHNICIAN
                                 </Link>
                                 <div className="contact-info-hub d-flex align-items-center gap-3">
-                                    <div className="hub-icon bg-white shadow-sm">
-                                        <i className="fas fa-phone-alt text-purple"></i>
+                                    <div className="hub-icon bg-white shadow-sm d-flex align-items-center justify-content-center" style={{ width: '56px', height: '56px', borderRadius: '12px' }}>
+                                        <PhoneAltIcon />
                                     </div>
                                     <div>
-                                        <div className="small fw-bold text-muted text-uppercase tracking-widest">Support Hotline</div>
+                                        <div className="small fw-bold text-muted text-uppercase tracking-widest" style={{ fontSize: '10px' }}>Support Hotline</div>
                                         <div className="h4 mb-0 fw-black text-dark">8008615049</div>
                                     </div>
                                 </div>
@@ -108,8 +115,8 @@ const AboutContent = ({ aboutSchema }) => {
                 </div>
             </section>
 
-            {/* Professional Protocol Section (Added Content) */}
-            <section className="professional-protocol py-5 my-5 bg-repair-purple text-white overflow-hidden position-relative" style={{ borderRadius: '8px' }}>
+            {/* Professional Protocol Section */}
+            <section className="professional-protocol py-5 my-5 bg-repair-purple text-white overflow-hidden position-relative" style={{ borderRadius: '16px' }}>
                 <div className="bg-decoration-blob top-0 start-0 opacity-10"></div>
                 <div className="container custom-container py-5 position-relative z-1">
                     <div className="text-center mb-5">
@@ -124,7 +131,7 @@ const AboutContent = ({ aboutSchema }) => {
                             { num: "04", t: "Quality Verification", d: "A master engineer verifies the repair before providing the warranty." }
                         ].map((step, i) => (
                             <div key={i} className="col-lg-3 col-md-6">
-                                <div className="protocol-card p-4 border border-white-10 h-100">
+                                <div className="protocol-card p-4 border border-white-10 h-100" style={{ borderRadius: '12px' }}>
                                     <div className="step-num text-white opacity-50 fw-black mb-3 fs-3">{step.num}</div>
                                     <h4 className="fw-bold text-white mb-2">{step.t}</h4>
                                     <p className="text-white opacity-75 small mb-0 lh-base">{step.d}</p>
@@ -150,7 +157,7 @@ const AboutContent = ({ aboutSchema }) => {
                             { t: "Upfront Index", d: "Crystal clear pricing breakdowns with zero hidden fees.", i: "/images/scales_icon.png" }
                         ].map((p, i) => (
                             <div key={i} className="col-lg-3 col-md-6">
-                                <div className="pillar-card p-4 text-center bg-white shadow-sm border border-light h-100">
+                                <div className="pillar-card p-4 text-center bg-white shadow-sm border border-light h-100" style={{ borderRadius: '16px' }}>
                                     <div className="pillar-icon mb-3 mx-auto">
                                         <img src={p.i} alt={p.t} width="50" />
                                     </div>
@@ -168,11 +175,11 @@ const AboutContent = ({ aboutSchema }) => {
                 <div className="bg-decoration-blob bottom-0 end-0 opacity-25"></div>
                 <div className="container custom-container text-center py-5 position-relative z-1">
                     <h2 className="display-6 fw-black mb-4">Ready to Experience the Difference?</h2>
-                    <p className="fs-5 opacity-75 mb-5 mx-auto" style={{ maxWidth: '700px' }}>
+                    <p className="fs-5 opacity-75 mb-5 mx-auto font-inter" style={{ maxWidth: '700px' }}>
                         Join thousands of satisfied families in Hyderabad who trust Charminar Repairs for their household peace of mind.
                     </p>
                     <div className="d-flex justify-content-center gap-3 flex-wrap">
-                        <Link href="/contact-us" className="btn btn-warning px-5 py-3 fw-black rounded-3">
+                        <Link href="/contact-us" className="btn btn-warning px-5 py-3 fw-black rounded-3 shadow-lg">
                             BOOK NOW
                         </Link>
                         <a href="tel:8008615049" className="btn btn-outline-light px-5 py-3 fw-black rounded-3 border-2">
@@ -208,7 +215,7 @@ const AboutContent = ({ aboutSchema }) => {
                     padding: 20px;
                     background: #fff;
                     border: 1px solid rgba(0,0,0,0.03);
-                    border-radius: 8px;
+                    border-radius: 12px;
                     transition: all 0.3s;
                     box-shadow: 0 4px 12px rgba(0,0,0,0.02);
                 }
@@ -234,7 +241,7 @@ const AboutContent = ({ aboutSchema }) => {
                     color: #fff;
                     padding: 18px 40px;
                     border: none;
-                    border-radius: 8px;
+                    border-radius: 12px;
                     font-weight: 800;
                     text-transform: uppercase;
                     letter-spacing: 1px;
@@ -257,7 +264,7 @@ const AboutContent = ({ aboutSchema }) => {
 
                 .main-img {
                     width: 100%;
-                    border-radius: 8px;
+                    border-radius: 12px;
                     border: 8px solid white;
                 }
 
@@ -268,7 +275,7 @@ const AboutContent = ({ aboutSchema }) => {
                     background: #673ab7;
                     color: white;
                     padding: 25px 35px;
-                    border-radius: 8px;
+                    border-radius: 12px;
                     text-align: center;
                 }
 
@@ -287,7 +294,7 @@ const AboutContent = ({ aboutSchema }) => {
                 }
 
                 .vision-card-premium {
-                    border-radius: 8px;
+                    border-radius: 16px;
                     background: #f8faff;
                     border: 1px solid rgba(0,0,0,0.02);
                     transition: all 0.3s;
@@ -301,7 +308,7 @@ const AboutContent = ({ aboutSchema }) => {
                 }
 
                 .pillar-card {
-                    border-radius: 8px;
+                    border-radius: 16px;
                     transition: all 0.3s;
                 }
 

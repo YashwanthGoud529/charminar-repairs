@@ -42,6 +42,37 @@ const LocationSelector = () => {
         setSearchTerm('');
     };
 
+    // --- SVG Icons ---
+    const ChevronDownIcon = ({ className = "" }) => (
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M6 9l6 6 6-6"/>
+        </svg>
+    );
+
+    const SearchIcon = () => (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="location-search-icon">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+    );
+
+    const TimesIcon = () => (
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+    );
+
+    const MapMarkerIcon = () => (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="location-item-dot">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="12" r="3"/>
+        </svg>
+    );
+
+    const CheckIcon = () => (
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="location-check ms-auto">
+            <polyline points="20 6 9 17 4 12"/>
+        </svg>
+    );
+
     return (
         <div className="location-selector-wrapper" ref={dropdownRef}>
             <div className="location-display" onClick={() => setIsOpen(!isOpen)}>
@@ -49,13 +80,13 @@ const LocationSelector = () => {
                 <span title={selectedLocation} className="location-label">
                     {selectedLocation || 'Select Location'}
                 </span>
-                <i className={`fas fa-chevron-down location-chevron ${isOpen ? 'open' : ''}`}></i>
+                <ChevronDownIcon className={`location-chevron ${isOpen ? 'open' : ''}`} />
             </div>
 
             {isOpen && (
                 <div className="location-dropdown">
                     <div className="location-search-box">
-                        <i className="fas fa-search location-search-icon"></i>
+                        <SearchIcon />
                         <input
                             type="text"
                             className="location-search-input"
@@ -65,8 +96,8 @@ const LocationSelector = () => {
                             autoFocus
                         />
                         {searchTerm && (
-                            <button className="location-clear-btn" onClick={() => setSearchTerm('')}>
-                                <i className="fas fa-times"></i>
+                            <button className="location-clear-btn d-flex align-items-center justify-content-center" onClick={() => setSearchTerm('')}>
+                                <TimesIcon />
                             </button>
                         )}
                     </div>
@@ -78,8 +109,8 @@ const LocationSelector = () => {
                     )}
                     {searchTerm && filteredLocations.length === 0 && (
                         <div className="location-empty">
-                            <i className="fas fa-map-marker-alt mb-2 d-block"></i>
-                            No area found for "{searchTerm}"
+                            <MapMarkerIcon />
+                            <div className="mt-2">No area found for "{searchTerm}"</div>
                         </div>
                     )}
 
@@ -90,9 +121,9 @@ const LocationSelector = () => {
                                 className={`location-item ${selectedLocation === loc ? 'active' : ''}`}
                                 onClick={() => handleSelect(loc)}
                             >
-                                <i className="fas fa-location-dot location-item-dot"></i>
+                                <MapMarkerIcon />
                                 <span>{loc}</span>
-                                {selectedLocation === loc && <i className="fas fa-check location-check ms-auto"></i>}
+                                {selectedLocation === loc && <CheckIcon />}
                             </div>
                         ))}
                     </div>
@@ -131,8 +162,6 @@ const LocationSelector = () => {
                     background: #f8fafc;
                 }
                 .location-pin-icon {
-                    color: var(--primary);
-                    font-size: 18px;
                     flex-shrink: 0;
                 }
                 .location-label {
@@ -144,7 +173,6 @@ const LocationSelector = () => {
                 }
                 .location-chevron {
                     color: #94a3b8;
-                    font-size: 12px;
                     flex-shrink: 0;
                     transition: transform 0.25s ease;
                     margin-left: auto;
@@ -163,11 +191,6 @@ const LocationSelector = () => {
                     overflow: hidden;
                     border: 1px solid #e2e8f0;
                     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-                    animation: locDropIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-                }
-                @keyframes locDropIn {
-                    from { opacity: 0; transform: translateY(-8px); }
-                    to   { opacity: 1; transform: translateY(0); }
                 }
                 .location-search-box {
                     display: flex;
@@ -179,7 +202,6 @@ const LocationSelector = () => {
                 }
                 .location-search-icon {
                     color: #94a3b8;
-                    font-size: 14px;
                     flex-shrink: 0;
                 }
                 .location-search-input {
@@ -198,8 +220,6 @@ const LocationSelector = () => {
                     color: #94a3b8;
                     cursor: pointer;
                     padding: 0;
-                    font-size: 12px;
-                    line-height: 1;
                 }
                 .location-clear-btn:hover { color: #64748b; }
                 .location-group-label {
@@ -214,11 +234,7 @@ const LocationSelector = () => {
                 .location-list {
                     max-height: 260px;
                     overflow-y: auto;
-                    scrollbar-width: thin;
-                    scrollbar-color: #e2e8f0 transparent;
                 }
-                .location-list::-webkit-scrollbar { width: 4px; }
-                .location-list::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 4px; }
                 .location-item {
                     display: flex;
                     align-items: center;
@@ -233,26 +249,23 @@ const LocationSelector = () => {
                 }
                 .location-item:hover {
                     background: #fff5f0;
-                    color: var(--primary);
+                    color: #ff6b00;
                 }
                 .location-item.active {
                     background: #fff5f0;
-                    color: var(--primary);
+                    color: #ff6b00;
                     font-weight: 700;
                 }
                 .location-item-dot {
                     color: #cbd5e1;
-                    font-size: 12px;
                     flex-shrink: 0;
-                    transition: color 0.15s;
                 }
                 .location-item:hover .location-item-dot,
                 .location-item.active .location-item-dot {
-                    color: var(--primary);
+                    color: #ff6b00;
                 }
                 .location-check {
-                    color: var(--primary);
-                    font-size: 12px;
+                    color: #ff6b00;
                 }
                 .location-empty {
                     padding: 30px 14px;

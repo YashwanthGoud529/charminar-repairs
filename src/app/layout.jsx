@@ -130,12 +130,6 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://img.icons8.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         
-        {/* FontAwesome - High Reliability Link */}
-        <link 
-            rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-        />
-        
         {/* Preload Logo for LCP */}
         <link rel="preload" href="/images/charminar-repairs-logo.png" as="image" />
         

@@ -8,6 +8,19 @@ import BookBanner from '@/components/home/BookBanner';
 import './ServicesContent.css';
 
 const ServicesContent = ({ serviceListSchema, services }) => {
+    // --- SVG Icons Components ---
+    const ArrowRightIcon = () => (
+        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ms-2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+    );
+
+    const PhoneIcon = () => (
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" className="me-3">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+    );
+
     return (
         <main className="services-page-main">
             <script
@@ -69,7 +82,7 @@ const ServicesContent = ({ serviceListSchema, services }) => {
                                             <h5 className="font-outfit">{service.title}</h5>
                                             <p className="text-muted small mb-3 font-inter">{service.desc}</p>
                                             <span className="text-orange fw-bold small text-uppercase d-flex align-items-center learn-more">
-                                                Repair Details <i className="fas fa-arrow-right ms-2" style={{ fontSize: '10px' }}></i>
+                                                Repair Details <ArrowRightIcon />
                                             </span>
                                         </div>
                                     </article>
@@ -114,14 +127,14 @@ const ServicesContent = ({ serviceListSchema, services }) => {
             {/* Trust Quote Section */}
             <section className="trust-cta py-5 my-5">
                 <div className="container custom-container">
-                    <div className="trust-cta-box d-flex flex-column flex-lg-row align-items-center justify-content-between p-5 text-white shadow-2xl">
+                    <div className="trust-cta-box d-flex flex-column flex-lg-row align-items-center justify-content-between p-5 text-white shadow-2xl" style={{ borderRadius: '24px' }}>
                         <div className="mb-4 mb-lg-0 col-lg-8">
                             <h2 className="font-outfit text-white">Can't find your specific appliance on the list?</h2>
                             <p className="mb-0 fs-5 text-white opacity-90 font-inter">Our technical scope is vast. We restore <strong>almost all residential and commercial electric systems</strong> including high-end Air Purifiers, Induction Hobs, and Industrial Blenders. Deploy an expert for a <strong>custom restoration quote</strong> today.</p>
                         </div>
                         <div className="text-center text-lg-end col-lg-4">
-                            <a href="tel:8008615049" className="btn px-5 py-3 fw-bold text-white d-inline-flex align-items-center justify-content-center gap-3 btn-call-custom font-outfit text-uppercase tracking-wider">
-                                <i className="fas fa-phone-alt"></i>
+                            <a href="tel:8008615049" className="btn px-5 py-4 fw-bold text-white d-inline-flex align-items-center justify-content-center btn-call-custom font-outfit text-uppercase tracking-wider" style={{ borderRadius: '14px', minWidth: '240px' }}>
+                                <PhoneIcon />
                                 8008615049
                             </a>
                         </div>

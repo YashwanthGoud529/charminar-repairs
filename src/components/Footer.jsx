@@ -21,6 +21,13 @@ const APPLIANCE_ICONS = [
 ];
 
 const Footer = () => {
+    // --- SVG Right Arrow Icon ---
+    const ArrowRightIcon = () => (
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="ms-1">
+            <polyline points="9 18 15 12 9 6"/>
+        </svg>
+    );
+
     return (
         <footer className="footer-area" style={{ backgroundColor: '#0c1228', color: '#fff' }}>
             {/* Top Footer with Appliance Track */}
@@ -55,13 +62,13 @@ const Footer = () => {
                              <ul className="list-unstyled contact-list">
                                  <li className="mb-4">
                                      <div className="d-flex gap-3">
-                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#673ab7" viewBox="0 0 16 16" aria-hidden="true" style={{ marginTop: '3px', flexShrink: 0 }}><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg>
+                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ff6b00" viewBox="0 0 16 16" aria-hidden="true" style={{ marginTop: '3px', flexShrink: 0 }}><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg>
                                          <p className="mb-0 text-white" style={{ opacity: 0.8, fontSize: '15px' }}>Karwan, Hyderabad, Telangana 500006</p>
                                      </div>
                                  </li>
                                  <li className="mb-4">
                                      <div className="d-flex gap-3">
-                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#673ab7" viewBox="0 0 16 16" aria-hidden="true" style={{ marginTop: '3px', flexShrink: 0 }}><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" /></svg>
+                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ff6b00" viewBox="0 0 16 16" aria-hidden="true" style={{ marginTop: '3px', flexShrink: 0 }}><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" /></svg>
                                          <div className="d-flex flex-column">
                                              <a href="tel:8008615049" className="text-white text-decoration-none hover-orange fw-bold">8008615049</a>
                                          </div>
@@ -69,7 +76,7 @@ const Footer = () => {
                                  </li>
                                  <li className="mb-4">
                                      <div className="d-flex gap-3">
-                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#673ab7" viewBox="0 0 16 16" aria-hidden="true" style={{ marginTop: '3px', flexShrink: 0 }}><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" /></svg>
+                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ff6b00" viewBox="0 0 16 16" aria-hidden="true" style={{ marginTop: '3px', flexShrink: 0 }}><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" /></svg>
                                          <a href="mailto:contact@charminarrepairs.com" className="text-white text-decoration-none hover-orange">contact@charminarrepairs.com</a>
                                      </div>
                                  </li>
@@ -114,7 +121,11 @@ const Footer = () => {
                                  <li><Link href="/refrigerator-repairing/">Fridge Restoration</Link></li>
                                  <li><Link href="/microwave-repairing/">Microwave Oven</Link></li>
                                  <li><Link href="/laptop-repairing/">Laptop Fix</Link></li>
-                                 <li className="mt-3"><Link href="/#services" className="text-purple fw-bold small">View All Services <i className="fas fa-arrow-right ms-1"></i></Link></li>
+                                 <li className="mt-3">
+                                     <Link href="/#services" className="fw-bold small d-flex align-items-center" style={{ color: '#ff6b00' }}>
+                                         View All Services <ArrowRightIcon />
+                                     </Link>
+                                 </li>
                              </ul>
                          </div>
 
@@ -122,17 +133,17 @@ const Footer = () => {
                              <h2 className="widget-title">Business Hours</h2>
                              <div className="hours-card p-4">
                                  <div className="d-flex justify-content-between mb-2">
-                                     <span className="text-white opacity-75">Mon - Fri:</span>
-                                     <span className="text-white fw-bold">9:00am - 9:00pm</span>
+                                     <span className="text-white opacity-75 small">Mon - Fri:</span>
+                                     <span className="text-white fw-bold small">9:00am - 9:00pm</span>
                                  </div>
                                  <div className="d-flex justify-content-between mb-3">
-                                     <span className="text-white opacity-75">Sat - Sun:</span>
-                                     <span className="text-white fw-bold">8:00am - 9:00pm</span>
+                                     <span className="text-white opacity-75 small">Sat - Sun:</span>
+                                     <span className="text-white fw-bold small">8:00am - 9:00pm</span>
                                  </div>
                                  <p className="text-white opacity-40 small mb-0 font-italic">Doorstep repairs across 50+ Hyderabad districts.</p>
                              </div>
                              <div className="mt-4">
-                                 <a href="tel:8008615049" className="btn btn-primary w-100 py-3 fw-bold" style={{ borderRadius: '8px', background: '#673ab7', borderColor: '#673ab7' }}>
+                                 <a href="tel:8008615049" className="btn btn-primary w-100 py-3 fw-bold shadow-lg" style={{ borderRadius: '12px', background: '#ff6b00', borderColor: '#ff6b00' }}>
                                      URGENT SUPPORT: 8008615049
                                  </a>
                              </div>

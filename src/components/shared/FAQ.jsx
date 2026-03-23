@@ -15,7 +15,7 @@ const FAQ = ({ items = [], title = "Frequently Asked Questions", subtitle = "Got
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": item.answer
-            }
+              }
         }))
     };
 
@@ -24,30 +24,53 @@ const FAQ = ({ items = [], title = "Frequently Asked Questions", subtitle = "Got
     };
 
     return (
-        <section className="faq-section py-5">
+        <section className="faq-section d-block w-100" style={{ backgroundColor: '#f8fafc', padding: '80px 0' }}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <div className="container px-lg-5">
                 <div className="text-center mb-5">
-                    <h2 className="display-5 fw-bold mb-2">{title}</h2>
-                    <p className="text-muted">{subtitle}</p>
+                    <h2 className="display-5 fw-bold mb-2 font-outfit">{title}</h2>
+                    <p className="text-muted font-inter">{subtitle}</p>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
                         <div className="faq-accordion">
                             {items.map((item, index) => (
-                                <div key={index} className={`faq-item mb-3 ${activeIndex === index ? 'active' : ''}`}>
+                                <div key={index} className={`faq-item mb-4 shadow-sm ${activeIndex === index ? 'active' : ''}`} style={{
+                                    backgroundColor: '#fff',
+                                    borderRadius: '16px',
+                                    border: activeIndex === index ? '2px solid #ff6b00' : '1px solid #eef2f6',
+                                    overflow: 'hidden',
+                                    transition: 'all 0.3s ease'
+                                }}>
                                     <button 
-                                        className="faq-question w-100 text-start d-flex justify-content-between align-items-center p-3 p-md-4"
+                                        className="faq-question w-100 text-start d-flex justify-content-between align-items-center p-4"
+                                        style={{ background: 'none', border: 'none', cursor: 'pointer', outline: 'none' }}
                                         onClick={() => toggleAccordion(index)}
                                     >
-                                        <span className="fw-bold">{item.question}</span>
-                                        <i className={`fas ${activeIndex === index ? 'fa-minus' : 'fa-plus'} text-orange`}></i>
+                                        <span className={`fw-bold font-outfit fs-5 ${activeIndex === index ? 'text-dark' : 'text-secondary'}`}>{item.question}</span>
+                                        <div className="faq-icon-wrapper" style={{ transition: 'transform 0.4s' }}>
+                                            {activeIndex === index ? (
+                                                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#ff6b00" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                                    <line x1="18" y1="12" x2="6" y2="12"></line>
+                                                </svg>
+                                            ) : (
+                                                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#ff6b00" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg>
+                                            )}
+                                        </div>
                                     </button>
-                                    <div className={`faq-answer ${activeIndex === index ? 'show' : ''}`}>
-                                        <div className="p-3 p-md-4 pt-0 text-muted">
+                                    <div className={`faq-answer-collapse ${activeIndex === index ? 'show' : ''}`} style={{
+                                        maxHeight: activeIndex === index ? '1000px' : '0',
+                                        opacity: activeIndex === index ? '1' : '0',
+                                        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                        overflow: 'hidden'
+                                    }}>
+                                        <div className="px-4 pb-4 text-muted font-inter fs-6 lh-lg">
                                             {item.answer}
                                         </div>
                                     </div>
@@ -57,69 +80,6 @@ const FAQ = ({ items = [], title = "Frequently Asked Questions", subtitle = "Got
                     </div>
                 </div>
             </div>
-
-            <style jsx>{`
-                .faq-section {
-                    background: #f8fafc;
-                    width: 100%;
-                    padding: 80px 0;
-                }
-                .faq-accordion {
-                    width: 100%;
-                    max-width: 800px;
-                    margin: 0 auto;
-                    display: block;
-                }
-                .faq-item {
-                    background: #fff;
-                    border: 1px solid #eef2f6;
-                    border-radius: 12px;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                    margin-bottom: 20px;
-                    overflow: hidden;
-                    width: 100%;
-                    display: block;
-                }
-                .faq-item.active {
-                    border-color: #ff6b00;
-                    box-shadow: 0 15px 40px rgba(255,107,0,0.08);
-                }
-                .faq-question {
-                    background: none;
-                    border: none;
-                    font-size: 1.15rem;
-                    color: #0c1228;
-                    cursor: pointer;
-                    outline: none !important;
-                    transition: background 0.3s ease;
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    text-align: left;
-                }
-                .faq-question:hover {
-                    background: rgba(255,107,0,0.02);
-                }
-                .faq-answer {
-                    max-height: 0;
-                    opacity: 0;
-                    overflow: hidden;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                    width: 100%;
-                }
-                .faq-answer.show {
-                    max-height: 500px;
-                    opacity: 1;
-                }
-                .text-orange { color: #ff6b00; }
-                
-                @media (max-width: 768px) {
-                    .faq-section { padding: 40px 0; }
-                    .faq-question { font-size: 1.05rem; }
-                    .faq-item { margin-bottom: 12px; }
-                }
-            `}</style>
         </section>
     );
 };

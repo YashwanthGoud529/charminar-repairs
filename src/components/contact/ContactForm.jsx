@@ -50,6 +50,13 @@ const ContactForm = () => {
         }
     };
 
+    // --- SVG Shield Icon ---
+    const ShieldCheckIcon = () => (
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" className="text-success me-1">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+    );
+
     return (
         <div className="contact-form-premium">
             <form onSubmit={handleSubmit} className="row g-4">
@@ -131,8 +138,8 @@ const ContactForm = () => {
                             </div>
                         ) : 'CONFIRM SERVICE BOOKING'}
                     </button>
-                    <p className="text-center mt-3 small text-muted fw-medium">
-                        <i className="fas fa-shield-alt me-1 text-success"></i> Instant assignment to a nearby technician.
+                    <p className="text-center mt-3 d-flex align-items-center justify-content-center gap-1 small text-muted fw-medium">
+                        <ShieldCheckIcon /> Instant assignment to a nearby technician.
                     </p>
                 </div>
             </form>

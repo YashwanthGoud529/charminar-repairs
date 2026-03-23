@@ -16,7 +16,22 @@ const Toast = ({ message, type = 'success', onClose, duration = 4000 }) => {
     if (!visible) return null;
 
     const bgClass = type === 'success' ? 'bg-success' : type === 'error' ? 'bg-danger' : 'bg-warning';
-    const iconClass = type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-exclamation-triangle';
+
+    const Icon = () => {
+        if (type === 'success') {
+            return (
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            );
+        }
+        if (type === 'error') {
+            return (
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+            );
+        }
+        return (
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+        );
+    };
 
     return (
         <div className={`toast-premium fixed-top mt-4 ms-auto me-4 p-3 text-white shadow-lg animate-slide-up d-flex align-items-center gap-3 ${bgClass}`} style={{
@@ -24,10 +39,10 @@ const Toast = ({ message, type = 'success', onClose, duration = 4000 }) => {
             width: 'fit-content',
             minWidth: 300,
             zIndex: 9999,
-            right: 0,
+            right: 16,
             left: 'auto'
         }}>
-            <i className={`fas ${iconClass} fs-4`}></i>
+            <Icon />
             <div className="flex-grow-1 fw-bold">{message}</div>
             <button className="btn-close btn-close-white" onClick={() => setVisible(false)}></button>
             <style jsx>{`

@@ -53,3 +53,7 @@ export const HOME_PAGE_SLUGS = [
     'tv-repairing',
     'microwave-repairing',
 ];
+
+export const getServiceSlug = (serviceName) => {
+    return SERVICE_CANONICAL_MAP[serviceName] || null;
+};

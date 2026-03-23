@@ -689,7 +689,7 @@ const AdminPage = () => {
                                                     <div className="text-orange small fw-extrabold mb-1">{b.phone}</div>
                                                     {b.selectedSlot && (
                                                         <div className="mb-2 p-1 px-2 bg-soft-primary rounded border border-primary-subtle d-inline-block small text-primary fw-bold">
-                                                            <i className="far fa-calendar-alt me-1"></i> {b.selectedSlot.date} | <i className="far fa-clock me-1"></i> {b.selectedSlot.time}
+                                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="me-1"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> {b.selectedSlot.date} | <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="me-1"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {b.selectedSlot.time}
                                                         </div>
                                                     )}
                                                     <div>
@@ -762,11 +762,11 @@ const AdminPage = () => {
                                                 <td className="py-3 px-4">
                                                     <div className="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
                                                         {p.name}
-                                                        {p.isVerified && <i className="fas fa-check-circle text-primary small"></i>}
+                                                        {p.isVerified && <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-primary"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>}
                                                     </div>
                                                     <div className="text-orange small fw-bold d-flex align-items-center gap-2">
                                                         {p.phone}
-                                                        {p.whatsapp && <a href={`https://wa.me/91${p.whatsapp}`} target="_blank"><i className="fab fa-whatsapp text-success"></i></a>}
+                                                        {p.whatsapp && <a href={`https://wa.me/91${p.whatsapp}`} target="_blank" className="text-success"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884 0 2.225.569 3.847 1.606 5.62l-.993 3.635 3.791-.994-1.35 1.041zm11.057-7.477c-.313-.156-1.853-.915-2.14-.1.021-.286-.141-.43-.162-.482-.046-.117-.183-.248-.454-.313-.156-.217-.655-.156-.915-.286-.021-.033-.124-.132-.231-.24-.448-.454-.515-.558-.871-1.03-.518-.686-.689-.81-.979-1.22-.29-.41-.03-.701.071-.851.101-.15.228-.35.342-.48.113-.13.15-.224.227-.374.077-.15.038-.281-.019-.393-.057-.113-.513-1.236-.704-1.697-.186-.446-.363-.385-.513-.392-.132-.007-.284-.009-.437-.009-.153 0-.401.057-.611.286-.21.229-.801.782-.801 1.905 0 1.124.815 2.208.929 2.361.114.153 1.605 2.45 3.886 3.432.543.234.966.374 1.296.479.544.173 1.04.149 1.431.09.435-.066 1.341-.548 1.531-1.077.19-.529.19-.982.132-1.077-.059-.095-.213-.151-.527-.308z"/></svg></a>}
                                                     </div>
                                                 </td>
                                                 <td className="py-3 px-4">
@@ -782,11 +782,11 @@ const AdminPage = () => {
                                                 <td className="py-3 px-4 text-center">
                                                     <div className="d-flex gap-2 justify-content-center">
                                                         <button 
-                                                            className="btn-icon-admin edit shadow-sm" 
+                                                            className="btn-icon-admin edit shadow-sm d-flex align-items-center justify-content-center" 
                                                             onClick={() => { setSelectedPartner(p); setIsPartnerModalOpen(true); }} 
                                                             title="View Full Details"
                                                         >
-                                                            <i className="fas fa-eye text-primary"></i>
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                                                         </button>
                                                         {!p.isVerified && (
                                                             <button className="btn-icon-admin success shadow-sm" onClick={() => updateDoc(doc(db, 'partners', p.id), { isVerified: true, status: 'Approved' })} title="Verify & Approve"><img src="/images/ok_icon.png" alt="check" width="18" height="18" /></button>
@@ -1053,9 +1053,9 @@ const AdminPage = () => {
                             <div className="bg-dark p-5 text-white position-relative overflow-hidden">
                                 <button className="btn-close btn-close-white position-absolute" style={{top: '25px', right: '25px', zIndex: 10}} onClick={() => setIsPartnerModalOpen(false)}></button>
                                 <div className="d-flex align-items-center gap-4 position-relative z-2">
-                                     <div className="p-3 bg-primary rounded-circle shadow-lg border border-white border-opacity-10">
-                                         <i className="fas fa-user-tie fa-3x"></i>
-                                     </div>
+                                     <div className="p-3 bg-primary rounded-circle shadow-lg border border-white border-opacity-10 d-flex align-items-center justify-content-center" style={{ width: '80px', height: '80px' }}>
+                                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                 </div>
                                      <div>
                                          <h2 className="fw-black mb-1">{selectedPartner.name}</h2>
                                          <span className={`badge ${selectedPartner.isVerified ? 'bg-success' : 'bg-warning'} px-3 py-2 rounded-pill shadow-sm`}>
@@ -1063,45 +1063,45 @@ const AdminPage = () => {
                                          </span>
                                      </div>
                                 </div>
-                                <div className="position-absolute end-0 top-0 opacity-10 pe-5 pt-4">
-                                     <i className="fas fa-shield-alt fa-8x"></i>
-                                </div>
+                                 <div className="position-absolute end-0 top-0 opacity-10 pe-5 pt-4 text-white">
+                                     <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                 </div>
                             </div>
                             <div className="p-5 bg-white">
                                 <div className="row g-4 mb-5">
                                     <div className="col-md-6">
                                         <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
-                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-phone me-1"></i> CONTACT NUMBER</div>
+                                            <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> CONTACT</div>
                                             <div className="fw-extrabold text-dark fs-5">{selectedPartner.phone}</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
-                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fab fa-whatsapp me-1"></i> WHATSAPP</div>
+                                            <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884 0 2.225.569 3.847 1.606 5.62l-.993 3.635 3.791-.994-1.35 1.041zm11.057-7.477c-.313-.156-1.853-.915-2.14-.1.021-.286-.141-.43-.162-.482-.046-.117-.183-.248-.454-.313-.156-.217-.655-.156-.915-.286-.021-.033-.124-.132-.231-.24-.448-.454-.515-.558-.871-1.03-.518-.686-.689-.81-.979-1.22-.29-.41-.03-.701.071-.851.101-.15.228-.35.342-.48.113-.13.15-.224.227-.374.077-.15.038-.281-.019-.393-.057-.113-.513-1.236-.704-1.697-.186-.446-.363-.385-.513-.392-.132-.007-.284-.009-.437-.009-.153 0-.401.057-.611.286-.21.229-.801.782-.801 1.905 0 1.124.815 2.208.929 2.361.114.153 1.605 2.45 3.886 3.432.543.234.966.374 1.296.479.544.173 1.04.149 1.431.09.435-.066 1.341-.548 1.531-1.077.19-.529.19-.982.132-1.077-.059-.095-.213-.151-.527-.308z"/></svg> WHATSAPP</div>
                                             <div className="fw-extrabold text-success fs-5">{selectedPartner.whatsapp || 'N/A'}</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
-                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-tools me-1"></i> SPECIALTY</div>
+                                            <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> SPECIALTY</div>
                                             <div className="fw-extrabold text-primary fs-5">{selectedPartner.specialization}</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
-                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-map-marker-alt me-1"></i> WORK LOCATION</div>
+                                            <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="12" r="3"/></svg> LOCATION</div>
                                             <div className="fw-extrabold text-dark-blue fs-5">{selectedPartner.location}</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
-                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-star me-1"></i> PERFORMANCE RATING</div>
+                                            <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> RATING</div>
                                             <div className="fw-extrabold text-warning fs-5">★ {selectedPartner.rating || '5.0'} / 5.0</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
-                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-wallet me-1"></i> PAYMENT UPI</div>
+                                            <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h0M2 9.5h20"/></svg> PAYMENT UPI</div>
                                             <div className="fw-extrabold text-dark fs-5 truncate">{selectedPartner.upi || 'Not Set'}</div>
                                         </div>
                                     </div>
