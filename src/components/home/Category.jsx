@@ -34,8 +34,8 @@ const Category = () => {
                     slidesPerView={1.2}
                     breakpoints={{
                         640: { slidesPerView: 2.5, spaceBetween: 20 },
-                        991: { slidesPerView: 4.5, spaceBetween: 20 },
-                        1280: { slidesPerView: 5, spaceBetween: 20 },
+                        991: { slidesPerView: 3.5, spaceBetween: 20 },
+                        1280: { slidesPerView: 4, spaceBetween: 20 },
                     }}
                     style={{ padding: '10px 0' }}
                 >
@@ -43,7 +43,7 @@ const Category = () => {
                         <SwiperSlide key={item.id}>
                             {item.slug ? (
                                 <Link href={item.slug} className="text-decoration-none">
-                                    <div className="shared-carousel-card default-card" style={{ position: 'relative', height: '160px' }}>
+                                    <div className="shared-carousel-card default-card" style={{ position: 'relative', height: '240px' }}>
                                         <Image 
                                             src={item.image} 
                                             alt={item.alt} 
@@ -54,7 +54,7 @@ const Category = () => {
                                     </div>
                                 </Link>
                             ) : (
-                                <div className="shared-carousel-card default-card" style={{ cursor: 'default', position: 'relative', height: '160px', objectFit: 'cover' }}>
+                                <div className="shared-carousel-card default-card" style={{ cursor: 'default', position: 'relative', height: '240px', objectFit: 'cover' }}>
                                     <Image 
                                         src={item.image} 
                                         alt={item.alt} 
