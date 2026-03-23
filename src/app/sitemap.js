@@ -22,7 +22,7 @@ Object.values(SERVICE_DATA_MAP).forEach(service => {
 });
 
 const ALL_SERVICE_SLUGS = [...CANONICAL_SLUGS, ...subServiceSlugs];
-const SITEMAP_SIZE = 45000; // Safe limit per sitemap file
+const SITEMAP_SIZE = 5000; // Efficient chunking for high-volume local SEO
 
 export async function generateSitemaps() {
   const totalRoutes = ALL_SERVICE_SLUGS.length * HYDERABAD_LOCATIONS.length;
@@ -34,7 +34,7 @@ export default function sitemap({ id }) {
   const baseUrl = 'https://www.charminarrepairs.com';
   const lastModified = new Date();
 
-  // Part 0 includes static and main service routes
+  // Part 0: Static, Canonical Services, and Area Hubs
   if (id === 0) {
     const staticRoutes = [
       '', '/about-us', '/service-areas', '/careers', '/privacy-policy',
@@ -60,47 +60,29 @@ export default function sitemap({ id }) {
       priority: 0.6,
     }));
 
-    const locationServiceRoutes = [];
-    let currentIdx = 0;
-    const startIdx = id * SITEMAP_SIZE;
-    const endIdx = (id + 1) * SITEMAP_SIZE;
-
-    for (const slug of ALL_SERVICE_SLUGS) {
-      for (const location of HYDERABAD_LOCATIONS) {
-        if (currentIdx >= startIdx && currentIdx < endIdx) {
-          locationServiceRoutes.push({
-            url: `${baseUrl}/${slug}-in-${toSlug(location)}/`,
-            lastModified,
-            changeFrequency: 'monthly',
-            priority: 0.7,
-          });
-        }
-        currentIdx++;
-      }
-    }
-
-    return [...staticRoutes, ...serviceRoutes, ...areaLandingRoutes, ...locationServiceRoutes];
-  } else {
-    // Subsequent parts only include location-specific combinations
-    const locationServiceRoutes = [];
-    let currentIdx = 0;
-    const startIdx = id * SITEMAP_SIZE;
-    const endIdx = (id + 1) * SITEMAP_SIZE;
-
-    for (const slug of ALL_SERVICE_SLUGS) {
-      for (const location of HYDERABAD_LOCATIONS) {
-        if (currentIdx >= startIdx && currentIdx < endIdx) {
-          locationServiceRoutes.push({
-            url: `${baseUrl}/${slug}-in-${toSlug(location)}/`,
-            lastModified,
-            changeFrequency: 'monthly',
-            priority: 0.7,
-          });
-        }
-        currentIdx++;
-      }
-    }
-
-    return locationServiceRoutes;
+    return [...staticRoutes, ...serviceRoutes, ...areaLandingRoutes];
   }
+
+  // Subsequent Parts: Massive Service-Location Permutations
+  const locationServiceRoutes = [];
+  let currentIdx = 0;
+  // Account for items in id:0
+  const startIdx = (id - 1) * SITEMAP_SIZE;
+  const endIdx = id * SITEMAP_SIZE;
+
+  for (const slug of ALL_SERVICE_SLUGS) {
+    for (const location of HYDERABAD_LOCATIONS) {
+      if (currentIdx >= startIdx && currentIdx < endIdx) {
+        locationServiceRoutes.push({
+          url: `${baseUrl}/${slug}-in-${toSlug(location)}/`,
+          lastModified,
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+      currentIdx++;
+    }
+  }
+
+  return locationServiceRoutes;
 }

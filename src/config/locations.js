@@ -65,4 +65,13 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   // ============ NEW EMERGING AREAS ============
   'Kollur ORR', 'Patancheru Industrial Area', 'Pashamylaram SEZ', 'Kothur Area', 'Shadnagar Town Area', 'Maheshwaram Area', 'Adibatla IT SEZ', 'Fab City Complex',
   'Pocharam Infosys Campus', 'Singapore Township Area', 'Cyber Gateway Area', 'IKEA Area', 'T-Hub 2.0 Area', 'HICC Area', 'Hitex Area',
+  
+  // ============ EXTRA MEDCHAL-MALKAJGIRI ADDITIONS ============
+  'Ghatkesar', 'Keesara', 'Bibinagar', 'Uppal Canalside', 'Medipally', 'Peerzadiguda Area', 'Narapally Area', 'Chengicherla Village', 'Pratap Singaram',
+  'Balanagar IDPL', 'Jeedimetla Industrial Hub', 'Chintal Area', 'Suraram Colony', 'Doolapally Area', 'Maisammaguda Area', 'Gandimaisamma Circle',
+  'Dundigal Base Area', 'Shamirpet Lake Area', 'Lalgadi Malakpet Area', 'Gundlapochampally Villas', 'Medchal Outer Ring Road',
+  
+  // ============ EXTRA SECUNDERABAD ADDITIONS ============
+  'Mettuguda Secunderabad', 'Chilakalguda Station Area', 'Sitaphalmandi Area', 'Warasiguda Colony', 'Padmarao Nagar East', 'Kavadiguda Circle',
+  'Musheerabad Junction', 'Bholakpur Area', 'Parsigutta', 'Ram Nagar', 'Adikmet', 'Vidyanagar', 'Osmania University Area', 'Tarnaka Metro Area',
 ]));
