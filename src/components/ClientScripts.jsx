@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 const ClientScripts = () => {
     useEffect(() => {
-        
+
     }, []);
 
     return (
@@ -30,7 +30,7 @@ const ClientScripts = () => {
                         "brandSetting": {
                             "brandName": "Charminar Repairs",
                             "brandSubTitle": "Appliance Repair Specialists | Hyderabad",
-                            "brandImg": "/images/charminar-repairs-logo.png",
+                            "brandImg": "/images/charminar-repairs-logo.jpeg",
                             "welcomeText": "Hi there!<br>Need expert appliance repair services? We're here to help!",
                             "messageText": "Hi, I need service for my %0A- [Appliance Type: Washing Machine/AC/Fridge etc.]%0A- [Issue Description]%0A- [Location in Hyderabad]",
                             "backgroundColor": "#090956",
@@ -45,7 +45,7 @@ const ClientScripts = () => {
                         window.CreateWhatsappChatWidget(options);
                     }
                 }}
-            /> 
+            />
             <Script
                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
                 onLoad={() => {

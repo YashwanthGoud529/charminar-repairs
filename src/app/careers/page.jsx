@@ -18,7 +18,7 @@ const CareersPage = () => {
         publisher: {
             '@type': 'Organization',
             name: 'Charminar Repairs',
-            logo: '/images/charminar-repairs-logo.png'
+            logo: '/images/charminar-repairs-logo.jpeg'
         }
     };
 

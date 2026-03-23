@@ -23,16 +23,16 @@ const PartnerLogin = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
-        
+
         try {
             const q = query(
-                collection(db, 'partners'), 
+                collection(db, 'partners'),
                 where('phone', '==', credentials.phone),
                 where('password', '==', credentials.password)
             );
-            
+
             const snapshot = await getDocs(q);
-            
+
             if (!snapshot.empty) {
                 const partnerData = { id: snapshot.docs[0].id, ...snapshot.docs[0].data() };
                 localStorage.setItem('partner_session', JSON.stringify(partnerData));
@@ -56,40 +56,40 @@ const PartnerLogin = () => {
                     <div className="col-md-5">
                         <div className="login-card p-5 shadow-lg border-0 rounded-4 bg-white">
                             <div className="text-center mb-4">
-                                <img src="/images/charminar-repairs-logo.png" alt="Logo" width="150" className="mb-4" />
+                                <img src="/images/charminar-repairs-logo.jpeg" alt="Logo" width="150" className="mb-4" />
                                 <h2 className="fw-bold">Partner <span className="text-primary">Portal</span></h2>
                                 <p className="text-muted">Manage your profile & service bookings</p>
                             </div>
-                            
+
                             <form onSubmit={handleLogin}>
                                 <div className="form-group mb-3">
                                     <label className="small fw-bold text-uppercase text-muted mb-2">Registered Phone</label>
-                                    <input 
-                                        type="tel" 
-                                        className="form-control p-3 border-2" 
-                                        placeholder="Enter Phone Number" 
-                                        required 
+                                    <input
+                                        type="tel"
+                                        className="form-control p-3 border-2"
+                                        placeholder="Enter Phone Number"
+                                        required
                                         value={credentials.phone}
-                                        onChange={(e) => setCredentials({...credentials, phone: e.target.value})}
+                                        onChange={(e) => setCredentials({ ...credentials, phone: e.target.value })}
                                         style={{ borderRadius: '12px' }}
                                     />
                                 </div>
                                 <div className="form-group mb-4">
                                     <label className="small fw-bold text-uppercase text-muted mb-2">Account Password</label>
-                                    <input 
-                                        type="password" 
-                                        className="form-control p-3 border-2" 
-                                        placeholder="Enter Password" 
-                                        required 
+                                    <input
+                                        type="password"
+                                        className="form-control p-3 border-2"
+                                        placeholder="Enter Password"
+                                        required
                                         value={credentials.password}
-                                        onChange={(e) => setCredentials({...credentials, password: e.target.value})}
+                                        onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
                                         style={{ borderRadius: '12px' }}
                                     />
                                 </div>
                                 <button type="submit" className="btn btn-primary w-100 py-3 fw-bold text-uppercase shadow-lg border-0" disabled={loading} style={{ borderRadius: '12px' }}>
                                     {loading ? 'Verifying...' : 'Login to Dashboard'}
                                 </button>
-                                
+
                                 <div className="text-center mt-4">
                                     <p className="small text-muted mb-2">New Partner? <Link href="/careers" className="text-primary fw-bold">Register Now</Link></p>
                                     <Link href="/" className="text-decoration-none text-muted small fw-bold d-flex align-items-center justify-content-center gap-2">

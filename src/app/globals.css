@@ -20,6 +20,14 @@
   --section-py: 100px;
 }
 
+* {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
 html, body {
   overflow-x: hidden;
   width: 100%;
@@ -124,4 +132,29 @@ button, .btn, input, textarea, select, .card, .form-control, .form-select, .moda
   background: var(--primary);
   width: 60px;
   border-radius: 8px;
+}
+
+/* --- Colorful Icon Boxes --- */
+.icon-box-colorful {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 12px !important;
+  width: 42px !important;
+  height: 42px !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  flex-shrink: 0 !important;
+}
+
+.icon-box-purple { background: #f3e8ff !important; color: #673ab7 !important; }
+.icon-box-blue { background: #e0f2fe !important; color: #0284c7 !important; }
+.icon-box-green { background: #dcfce7 !important; color: #16a34a !important; }
+.icon-box-orange { background: #ffedd5 !important; color: #ea580c !important; }
+.icon-box-red { background: #fee2e2 !important; color: #dc2626 !important; }
+.icon-box-indigo { background: #e0e7ff !important; color: #4338ca !important; }
+.icon-box-teal { background: #ccfbf1 !important; color: #0f766e !important; }
+
+.icon-box-colorful:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
 }

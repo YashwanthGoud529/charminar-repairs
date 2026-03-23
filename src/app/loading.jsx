@@ -1,27 +1,27 @@
 'use client';
 
 export default function Loading() {
-  return (
-    <div className="global-loader-container">
-      <div className="loader-ring-wrapper">
-        <div className="loader-diamond"></div>
-        <div className="loader-ring-bg"></div>
-        <div className="loader-ring"></div>
-        <div className="loader-circle">
-          <img src="/images/charminar-repairs-logo.png" alt="Charminar Repairs Logo" className="loader-logo" />
-        </div>
-      </div>
+    return (
+        <div className="global-loader-container">
+            <div className="loader-ring-wrapper">
+                <div className="loader-diamond"></div>
+                <div className="loader-ring-bg"></div>
+                <div className="loader-ring"></div>
+                <div className="loader-circle">
+                    <img src="/images/charminar-repairs-logo.jpeg" alt="Charminar Repairs Logo" className="loader-logo" />
+                </div>
+            </div>
 
-      <div className="loader-text-container">
-        <span className="loader-text">Loading</span>
-        <span className="loader-dots"></span>
-      </div>
+            <div className="loader-text-container">
+                <span className="loader-text">Loading</span>
+                <span className="loader-dots"></span>
+            </div>
 
-      <div className="loader-bar-container">
-        <div className="loader-bar"></div>
-      </div>
+            <div className="loader-bar-container">
+                <div className="loader-bar"></div>
+            </div>
 
-      <style jsx>{`
+            <style jsx>{`
                 .global-loader-container {
                     position: fixed;
                     top: 0;
@@ -169,6 +169,6 @@ export default function Loading() {
                     100% { left: 100%; width: 30%; }
                 }
             `}</style>
-    </div>
-  );
+        </div>
+    );
 }

@@ -88,7 +88,7 @@ const PartnerDashboard = () => {
             {/* Header */}
             <header className="bg-white shadow-sm py-3 px-4 sticky-top">
                 <div className="container d-flex justify-content-between align-items-center">
-                    <img src="/images/charminar-repairs-logo.png" alt="Logo" width="120" />
+                    <img src="/images/charminar-repairs-logo.jpeg" alt="Logo" width="120" />
                     <div className="d-flex align-items-center gap-3">
                         <span className="small text-muted d-none d-md-block">Welcome, <strong>{partner?.name}</strong></span>
                         <button onClick={handleLogout} className="btn btn-outline-danger btn-sm rounded-pill px-3">Logout</button>
@@ -149,19 +149,19 @@ const PartnerDashboard = () => {
                                         <div className="col-md-6">
                                             <div className="form-group mb-4">
                                                 <label className="fw-bold text-muted small text-uppercase mb-2 d-flex align-items-center gap-2"><i className="fas fa-user-circle"></i> Full Name</label>
-                                                <input type="text" className="form-control p-3 border-2" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} required style={{borderRadius: 12}} />
+                                                <input type="text" className="form-control p-3 border-2" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required style={{ borderRadius: 12 }} />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="form-group mb-4">
                                                 <label className="fw-bold text-muted small text-uppercase mb-2 d-flex align-items-center gap-2"><i className="fab fa-whatsapp"></i> WhatsApp Number</label>
-                                                <input type="tel" className="form-control p-3 border-2" value={formData.whatsapp} onChange={(e) => setFormData({...formData, whatsapp: e.target.value})} style={{borderRadius: 12}} />
+                                                <input type="tel" className="form-control p-3 border-2" value={formData.whatsapp} onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })} style={{ borderRadius: 12 }} />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="form-group mb-4">
                                                 <label className="fw-bold text-muted small text-uppercase mb-2 d-flex align-items-center gap-2"><i className="fas fa-tools"></i> Primary Expertise</label>
-                                                <select className="form-select p-3 border-2" value={formData.specialization} onChange={(e) => setFormData({...formData, specialization: e.target.value})} required style={{borderRadius: 12}}>
+                                                <select className="form-select p-3 border-2" value={formData.specialization} onChange={(e) => setFormData({ ...formData, specialization: e.target.value })} required style={{ borderRadius: 12 }}>
                                                     <option value="Washing Machine">Washing Machine</option>
                                                     <option value="Fridge">Refrigerator</option>
                                                     <option value="AC">Air Conditioner</option>
@@ -174,19 +174,19 @@ const PartnerDashboard = () => {
                                         <div className="col-md-6">
                                             <div className="form-group mb-4">
                                                 <label className="fw-bold text-muted small text-uppercase mb-2 d-flex align-items-center gap-2"><i className="fas fa-map-marker-alt"></i> Home Operation Area</label>
-                                                <input type="text" className="form-control p-3 border-2" value={formData.location} onChange={(e) => setFormData({...formData, location: e.target.value})} required style={{borderRadius: 12}} />
+                                                <input type="text" className="form-control p-3 border-2" value={formData.location} onChange={(e) => setFormData({ ...formData, location: e.target.value })} required style={{ borderRadius: 12 }} />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="form-group mb-4">
                                                 <label className="fw-bold text-muted small text-uppercase mb-2 d-flex align-items-center gap-2"><i className="fas fa-wallet"></i> UPI ID (For Earnings)</label>
-                                                <input type="text" className="form-control p-3 border-2" value={formData.upi} onChange={(e) => setFormData({...formData, upi: e.target.value})} style={{borderRadius: 12}} placeholder="e.g. mobile@ybl" />
+                                                <input type="text" className="form-control p-3 border-2" value={formData.upi} onChange={(e) => setFormData({ ...formData, upi: e.target.value })} style={{ borderRadius: 12 }} placeholder="e.g. mobile@ybl" />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="form-group mb-4">
                                                 <label className="fw-bold text-muted small text-uppercase mb-2 d-flex align-items-center gap-2"><i className="fas fa-lock"></i> Account Password</label>
-                                                <input type="text" className="form-control p-3 border-2" value={formData.password} onChange={(e) => setFormData({...formData, password: e.target.value})} required style={{borderRadius: 12}} />
+                                                <input type="text" className="form-control p-3 border-2" value={formData.password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} required style={{ borderRadius: 12 }} />
                                             </div>
                                         </div>
                                     </div>

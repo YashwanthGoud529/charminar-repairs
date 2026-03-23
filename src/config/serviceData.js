@@ -1,7 +1,7 @@
 export const SERVICE_DATA_MAP = {
     'Pest Control Services': {
-        icon: '/assets/Images/home-repair-services/pest_control.png',
-        photo: '/assets/Images/home-repair-services/pest_control.png',
+        icon: '/assets/Images/home-repair-services/pest_control.jpeg',
+        photo: '/assets/Images/home-repair-services/pest_control.jpeg',
         desc: 'Protect your home and family from disease-carrying pests. Our <strong>government-licensed pest control experts in Hyderabad</strong> provide specialized treatments for termites, cockroaches, rodents, and mosquitoes using eco-friendly, safe chemicals.',
         highlights: [
             '✦ Government Licensed & Certified Pest Experts',
@@ -15,8 +15,8 @@ export const SERVICE_DATA_MAP = {
         ],
         specializations: ['Termite Proofing', 'Cockroach Control', 'Bed Bug Removal', 'Rodent Management'],
         subServices: [
-            { id: 'pest-cockroach', name: 'General Pest Control', price: 799, category: 'Gel Treatment', image: '/assets/Images/home-repair-services/pest_control.png', desc: 'Control for cockroaches, ants, and spiders in home.' },
-            { id: 'pest-termite', name: 'Termite Protection Plan', price: 1499, category: 'Structural', image: '/assets/Images/home-repair-services/pest_control.png', desc: 'Anti-termite treatment with 5-year warranty.' }
+            { id: 'pest-cockroach', name: 'General Pest Control', price: 799, category: 'Gel Treatment', image: '/assets/Images/home-repair-services/pest_control.jpeg', desc: 'Control for cockroaches, ants, and spiders in home.' },
+            { id: 'pest-termite', name: 'Termite Protection Plan', price: 1499, category: 'Structural', image: '/assets/Images/home-repair-services/pest_control.jpeg', desc: 'Anti-termite treatment with 5-year warranty.' }
         ]
     },
     'Home Repair Services': {
@@ -59,7 +59,7 @@ export const SERVICE_DATA_MAP = {
         ]
     },
     'Explore Our Services': {
-        icon: '/images/charminar-repairs-logo.png',
+        icon: '/images/charminar-repairs-logo.jpeg',
         photo: '/images/unsplash_1621905251189.jpg',
         desc: 'Discover the full range of <strong>professional home services provided by Charminar Repairs</strong>. From specialized appliance repair to complete home maintenance, our certified experts cover every corner of Hyderabad.',
         highlights: [
@@ -1011,21 +1011,21 @@ export const SERVICE_DATA_MAP = {
             { t: 'Salon Hygiene Concerns', i: 'fas fa-shield-virus', d: '100% disposable capes and UV-sterilized tools.' }
         ],
         subServices: [
-            { id: 'hc-regular',        name: 'Standard Hair Cut',                 price: 200,  image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Professional classic haircut with style consultation.' },
-            { id: 'hc-style',          name: 'Change of Style / Fade',            price: 300,  image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Transform your look with a trendy fade or complete style change.' },
-            { id: 'hc-shave',          name: 'Regular Clean Shave',               price: 80,   image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Smooth and clean shave using sterilized tools.' },
-            { id: 'hc-head-shave',     name: 'Full Head Shave',                   price: 200,  image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Traditional head shave for a clean look.' },
-            { id: 'hc-kids',           name: 'Kids Hair Cut (Up to 10yr)',        price: 120,  image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Special care haircut for children with a friendly approach.' },
-            { id: 'hc-beard-design',   name: 'Beard Design & Sculpting',         price: 200,  image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Precision beard shaping to match your face structure.' },
-            { id: 'hc-beard-trim',     name: 'Quick Beard Trim',                  price: 100,  image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Fast and efficient beard length adjustment.' },
-            { id: 'hc-color-grey',     name: 'Grey Coverage (Hair Only)',         price: 800,  image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Professional hair color to hide greys naturally.' },
-            { id: 'hc-color-streak',   name: 'Hair Streak (Per Streak)',          price: 200,  image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Add a pop of color with single or multiple streaks.' },
-            { id: 'hc-color-beard',    name: 'Beard Coloring',                    price: 300,  image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Match your beard with your hair for a complete look.' },
-            { id: 'hc-straight',       name: 'Hair Straightening / Smoothening', price: 4500, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Professional high-quality hair straightening for a permanent sleek look.' },
-            { id: 'hc-massage-wash',   name: 'Indian Head Massage (With Wash)',  price: 400,  image: '/images/img_icons8_com_3d_fluency_94_spa_png.png', desc: 'Deeply relaxing head massage followed by a professional hair wash.' },
-            { id: 'hc-massage-basic',  name: 'Indian Head Massage (Dry)',        price: 350,  image: '/images/img_icons8_com_3d_fluency_94_spa_png.png', desc: 'Traditional stress-relief head massage for instant relaxation.' },
-            { id: 'hc-spa-classic',    name: 'Classic Hair Spa',                  price: 750,  image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Deep conditioning treatment to restore hair health and shine.' },
-            { id: 'hc-treatment-anti', name: 'Anti-Dandruff / Hairfall Treatment',price: 1300, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Professional clinical treatment targeting scalp issues.' }
+            { id: 'hc-regular', name: 'Standard Hair Cut', price: 200, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Professional classic haircut with style consultation.' },
+            { id: 'hc-style', name: 'Change of Style / Fade', price: 300, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Transform your look with a trendy fade or complete style change.' },
+            { id: 'hc-shave', name: 'Regular Clean Shave', price: 80, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Smooth and clean shave using sterilized tools.' },
+            { id: 'hc-head-shave', name: 'Full Head Shave', price: 200, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Traditional head shave for a clean look.' },
+            { id: 'hc-kids', name: 'Kids Hair Cut (Up to 10yr)', price: 120, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Special care haircut for children with a friendly approach.' },
+            { id: 'hc-beard-design', name: 'Beard Design & Sculpting', price: 200, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Precision beard shaping to match your face structure.' },
+            { id: 'hc-beard-trim', name: 'Quick Beard Trim', price: 100, image: '/images/img_icons8_com_3d_fluency_94_razor_png.png', desc: 'Fast and efficient beard length adjustment.' },
+            { id: 'hc-color-grey', name: 'Grey Coverage (Hair Only)', price: 800, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Professional hair color to hide greys naturally.' },
+            { id: 'hc-color-streak', name: 'Hair Streak (Per Streak)', price: 200, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Add a pop of color with single or multiple streaks.' },
+            { id: 'hc-color-beard', name: 'Beard Coloring', price: 300, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Match your beard with your hair for a complete look.' },
+            { id: 'hc-straight', name: 'Hair Straightening / Smoothening', price: 4500, image: '/images/img_icons8_com_3d_fluency_94_scissors_png.png', desc: 'Professional high-quality hair straightening for a permanent sleek look.' },
+            { id: 'hc-massage-wash', name: 'Indian Head Massage (With Wash)', price: 400, image: '/images/img_icons8_com_3d_fluency_94_spa_png.png', desc: 'Deeply relaxing head massage followed by a professional hair wash.' },
+            { id: 'hc-massage-basic', name: 'Indian Head Massage (Dry)', price: 350, image: '/images/img_icons8_com_3d_fluency_94_spa_png.png', desc: 'Traditional stress-relief head massage for instant relaxation.' },
+            { id: 'hc-spa-classic', name: 'Classic Hair Spa', price: 750, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Deep conditioning treatment to restore hair health and shine.' },
+            { id: 'hc-treatment-anti', name: 'Anti-Dandruff / Hairfall Treatment', price: 1300, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Professional clinical treatment targeting scalp issues.' }
         ],
         inclusions: [
             'Professional certified stylist at your doorstep',
@@ -1626,7 +1626,7 @@ export const SERVICE_DATA_MAP = {
             { t: 'Net Loosening', i: 'fas fa-arrows-to-circle', d: 'Re-tensioning and anchor reinforcement.' }
         ],
         subServices: [
-            { id: 'bn-balcony', name: 'Standard Balcony Bird Netting', price: 15, category: 'Bird Protection', image: '/assets/Images/home-repair-services/bird_netting.png', desc: 'Per Sq.Ft for high-quality HDPE mesh installation.' },
+            { id: 'bn-balcony', name: 'Standard Balcony Bird Netting', price: 15, category: 'Bird Protection', image: '/assets/Images/home-repair-services/bird_netting.jpeg', desc: 'Per Sq.Ft for high-quality HDPE mesh installation.' },
             { id: 'bn-visit', name: 'Measurement & Quote Visit', price: 99, category: 'Other Services', image: '/images/binoculars_icon.png', desc: 'Professional site audit and customized estimation.' },
         ]
     },

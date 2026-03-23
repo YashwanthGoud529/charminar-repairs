@@ -179,7 +179,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                             <h1 className="fw-bold text-dark lh-sm mb-2 sidebar-title">{baseTitle}</h1>
                             <div className="d-flex align-items-center gap-3">
                                 <div className="d-flex align-items-center gap-1">
-                                    <img src="/assets/Images/star.png" alt="Star" className="sidebar-rating-star" />
+                                    <i className="fas fa-star text-warning sidebar-rating-star"></i>
                                     <span className="text-dark fs-5 fw-bold">4.85</span>
                                 </div>
                                 <span className="text-muted fw-normal sidebar-bookings-text">2.6 M bookings</span>
@@ -195,17 +195,25 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                 <div className="row g-3">
                                     {activeCategories.map(cat => {
                                         const isSaver = cat.toLowerCase().includes('saver') || cat.toLowerCase().includes('package');
+                                        const catConfig = {
+                                            'Repair & Gas Refill': { color: 'blue', icon: 'fas fa-tools' },
+                                            'Installation & Uninstallation': { color: 'green', icon: 'fas fa-plus-circle' },
+                                            'Service Options': { color: 'orange', icon: 'fas fa-cog' },
+                                            'Other Services': { color: 'purple', icon: 'fas fa-concierge-bell' }
+                                        };
+                                        const config = catConfig[cat] || { color: 'indigo', icon: 'fas fa-list' };
+
                                         return (
-                                            <div key={cat} className="col-4 text-center px-1 category-item-container" onClick={() => scrollToCategory(cat)}>
-                                                <div className={`mb-2 category-icon-wrapper transition-all ${activeTab === cat ? 'active' : 'inactive'}`}>
+                                            <div key={cat} className="col-4 text-center px-1 category-item-container" style={{ cursor: 'pointer' }} onClick={() => scrollToCategory(cat)}>
+                                                <div className={`mb-2 icon-box-colorful icon-box-${config.color} w-100 ${activeTab === cat ? 'active-cat-box shadow-sm' : 'opacity-75'}`} style={{ height: '60px', borderRadius: '12px' }}>
                                                     {isSaver ? (
-                                                        <div className="text-primary fw-bold category-saver-text">
-                                                            <span className="category-saver-upto">UPTO</span><br />
-                                                            <span className="category-saver-percent">{svc.globalDiscount || 25}%</span><br />
-                                                            <span className="category-saver-off">OFF</span>
+                                                        <div className="text-center lh-1">
+                                                            <span className="small d-block fw-bold opacity-75" style={{ fontSize: '10px' }}>UPTO</span>
+                                                            <span className="fs-5 d-block fw-black">{svc.globalDiscount || 25}%</span>
+                                                            <span className="small d-block fw-bold opacity-75" style={{ fontSize: '10px' }}>OFF</span>
                                                         </div>
                                                     ) : (
-                                                        <img src={svc.icon || '/images/default_icon.png'} className="object-fit-contain opacity-75 category-icon-img" alt={cat} />
+                                                        <i className={`${config.icon} fs-4`}></i>
                                                     )}
                                                 </div>
                                                 <div className={`lh-sm category-label-text ${activeTab === cat ? 'text-dark fw-bold' : 'text-secondary fw-medium'}`}>
@@ -216,14 +224,14 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                     })}
                                 </div>
                                 <div className="mt-4 p-3 bg-light-soft border-top d-flex align-items-center gap-3 sidebar-contact-promo">
-                                    <div className="bg-primary rounded-circle shadow-sm d-flex align-items-center justify-content-center" style={{ width: '42px', height: '42px' }}>
-                                        <PhoneIcon className="text-white" size={20} />
+                                    <div className="icon-box-colorful icon-box-purple shadow-sm">
+                                        <i className="fas fa-phone-alt"></i>
                                     </div>
                                     <div className="flex-grow-1">
                                         <div className="fw-bold text-dark x-small lh-1 mb-1">Confused?</div>
                                         <Link href="/contact-us" className="text-primary fw-bold text-decoration-none small">Talk to expert</Link>
                                     </div>
-                                    <ChevronRightIcon className="text-muted opacity-50" />
+                                    <i className="fas fa-chevron-right text-muted opacity-50 x-small"></i>
                                 </div>
                             </div>
                         </div>
@@ -235,7 +243,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                 Professional <span className="text-primary">{baseTitle}</span>
                             </h1>
                             <div className="d-flex align-items-center gap-2">
-                                <img src="/assets/Images/star.png" alt="Star" className="small-star-icon" />
+                                <i className="fas fa-star text-warning small-star-icon"></i>
                                 <span className="text-dark fw-bold small-bookings-text">4.85 <span className="text-muted fw-normal">(2.6 M bookings)</span></span>
                             </div>
                         </div>
@@ -341,7 +349,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                             <h5 className="fw-bold mb-1 text-dark fs-6">{sub.name}</h5>
                                                             <div className="d-flex align-items-center gap-2 mb-2">
                                                                 <div className="d-flex align-items-center gap-1 bg-success bg-opacity-10 text-success px-2 py-0 border border-success border-opacity-10 item-rating-badge" style={{ fontSize: '12px', borderRadius: '4px' }}>
-                                                                    <img src="/assets/Images/star.png" alt="Star" className="item-rating-star-small" style={{ width: '10px' }} /> 4.8
+                                                                    <i className="fas fa-star text-success" style={{ fontSize: '10px' }}></i> 4.8
                                                                 </div>
                                                                 <span className="text-muted item-reviews-text small">4.1K reviews</span>
                                                             </div>
@@ -454,7 +462,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                 <ul className="list-unstyled d-flex flex-column gap-2">
                                                     {(svc.inclusions || ['Professional service', '180-day warranty']).map((item, idx) => (
                                                         <li key={idx} className="d-flex gap-2 text-secondary small">
-                                                            <CheckIcon className="text-success mt-1" size={12} /> {item}
+                                                            <i className="fas fa-check text-success mt-1" style={{ fontSize: '12px' }}></i> {item}
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -464,7 +472,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                 <ul className="list-unstyled d-flex flex-column gap-2">
                                                     {(svc.exclusions || ['Parts cost']).map((item, idx) => (
                                                         <li key={idx} className="d-flex gap-2 text-secondary small">
-                                                            <TimesIcon className="text-danger mt-1" size={12} /> {item}
+                                                            <i className="fas fa-times text-danger mt-1" style={{ fontSize: '12px' }}></i> {item}
                                                         </li>
                                                     ))}
                                                 </ul>

@@ -74,13 +74,8 @@ const MostBookedServices = () => {
                                     <div className="service-details">
                                         <h3 className="service-title">{service.title}</h3>
                                         <div className="service-rating">
-                                            <Image 
-                                                src="/assets/Images/star.png" 
-                                                alt="star" 
-                                                width={14} 
-                                                height={14} 
-                                                className="rating-star" 
-                                            /> {service.rating}
+                                            <i className="fas fa-star text-warning me-1" style={{ fontSize: '13px' }}></i>
+                                            {service.rating}
                                         </div>
                                         <div className="service-price">
                                             {service.price}
