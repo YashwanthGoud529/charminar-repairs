@@ -1,97 +1,68 @@
-export const HYDERABAD_LOCATIONS = [
-  // ============ HYDERABAD (Central & Old City) ============
-  // Core City Areas
-  'Abids', 'Nampally', 'Khairatabad', 'Lakdikapul', 'Masab Tank',
-  'Banjara Hills', 'Jubilee Hills', 'Road No. 1', 'Road No. 10', 'Road No. 36',
-  'Road No. 45', 'Road No. 71', 'Road No. 92', 'Film Nagar', 'Journalist Colony',
-  'Madhapur', 'Hitech City', 'Gachibowli', 'Kondapur', 'Kavuri Hills', 'BOT Garden', 'NBT Nagar',
-  'Mehdipatnam', 'Toli Chowki', 'Seven Tombs', 'Toli Masjid', 'Karwan', 'SR Nagar', 'KPHB', 'LB Nagar', 'Bowenpally',
-  'Gudimalkapur', 'Humayun Nagar', 'Asif Nagar', 'Murad Nagar', 'Chatta Bazaar',
-  'Old City', 'Charminar', 'Falaknuma', 'Shalibanda', 'Barkas', 'Chandrayangutta',
-  'Talab Katta', 'Bandlaguda', 'Kishan Bagh', 'Attapur', 'Narsingi', 'Puppalguda',
-  'Rajendranagar', 'Mansanpally', 'Hyderguda', 'Gandipet', 'Mokila', 'Kollur',
-  'Golconda', 'Tolichowki', 'Panjagutta', 'Ameerpet', 'Begumpet', 'Somajiguda',
-  'Erramanzil', 'Punjagutta', 'Gagan Mahal', 'Himayatnagar', 'Narayanaguda',
-  'Basheerbagh', 'Koti', 'Sultan Bazar', 'Bank Street', 'Abids Road',
-  'Chikkadpally', 'Gandhi Nagar', 'Musheerabad', 'Ramnagar', 'Ashok Nagar',
-  'Vidyanagar', 'Adikmet', 'Nallakunta', 'Bagh Lingampally', 'Bhoiguda',
-  'Kachiguda', 'Kacheguda', 'Azamabad', 'Rezimental Bazaar', 'Putlibowli',
-  'Lal Darwaza', 'Madina', 'Patharghatti', 'Shah Ali Banda', 'Puranapul',
+export const HYDERABAD_LOCATIONS = Array.from(new Set([
+  // ============ CORE HYDERABAD (Central) ============
+  'Abids', 'Nampally', 'Khairatabad', 'Lakdikapul', 'Masab Tank', 'Himayatnagar', 'Narayanaguda', 'Basheerbagh', 'Koti', 'Sultan Bazar', 'Barkatpura', 'Saifabad',
+  'Mehdipatnam', 'Toli Chowki', 'Asif Nagar', 'Mallepally', 'Vijay Nagar Colony', 'Humayun Nagar', 'Gudimalkapur', 'Murad Nagar', 'Rethibowli', 'Amba Gardens', 'Ambedkar Nagar',
+  'Panjagutta', 'Ameerpet', 'Begumpet', 'Somajiguda', 'Erramanzil', 'Raj Bhavan Road', 'Srinagar Colony', 'Madhura Nagar', 'Yousufguda', 'Vengal Rao Nagar', 'Krishna Nagar', 'Indira Nagar',
+  'Banjara Hills', 'Jubilee Hills', 'Road No. 1', 'Road No. 10', 'Road No. 36', 'Road No. 45', 'Film Nagar', 'Journalist Colony', 'Kavuri Hills', 'Apollo Hospital Area', 'Nandagiri Hills',
+  'SR Nagar', 'Sanjeeva Reddy Nagar', 'Balkampet', 'Maitrivanam', 'Vengal Rao Nagar Area', 'Umesh Chandra Statue Area', 'Czech Colony', 'BK Guda',
   
-  // Hyderabad - Major Apartments
-  'Lanco Hills', 'Lodha Belmondo', 'Kwality Krishna', 'Mahaveer Harini',
-  'Aditya Heights', 'Sri Savithru Enclave', 'Celestia', 'Park Heights',
-  'My Home Avatar', 'Rajapushpa Atria', 'Aparna Sarovar Grande', 'Salzburg',
-
-  // ============ SECUNDERABAD (Cantonment & North Core) ============
-  'Secunderabad', 'Secunderabad Railway Station', 'Paradise', 'Paradise Circle',
-  'Patny', 'Rasoolpura', 'Begumpet', 'Cantonment', 'Cantonment Board',
-  'Wellington', 'Picket', 'Trimulgherry', 'Tirumalgherry', 'Marredpally',
-  'East Marredpally', 'West Marredpally', 'Lalaguda', 'Lalaguda Railway Colony',
-  'Mettuguda', 'Sitaphalmandi', 'Warasiguda', 'Chilakalguda', 'Bolarum',
-  'Macha Bollaram', 'Lothkunta', 'Alwal', 'Old Alwal', 'R.K. Puram',
-  'Karkhana', 'Subash Nagar', 'Vikaspuri', 'Defence Colony', 'Bolarum Cantt',
-  'Jawahar Nagar', 'Narasimha Nagar', 'Kavadiguda', 'Gandhinagar', 'Kawadiguda',
-  'Ranigunj', 'Minister Road', 'Park Lane', 'SD Road', 'MG Road',
-  'Trimulgherry Cross Roads', 'Lakshmipuram', 'Gunrock Enclave', 'Mailardevpally',
-
-  // Secunderabad - Apartments & Villas
-  'Lodha Meridian', 'Prestige High Fields', 'Indiaboods Estates', 'Kenya Heights',
-  'Rashtrapati Nilayam Area', 'Gunrock Enclave Villas', 'Mahaveer Grand',
-  'Vasavi Anandam', 'Sai Pratyusha Enclave', 'ABN Heights', 'Green Home',
-
-  // ============ MALKAJGIRI (East & North East District) ============
-  'Malkajgiri', 'Malkajgiri Rly Colony', 'Dayara', 'Goutham Nagar', 'Balaji Nagar',
-  'Kapra', 'ECIL', 'A.S. Rao Nagar', 'AS Rao Nagar', 'Nagole', 'L.B. Nagar',
-  'Saroornagar', 'Kothapet', 'Dilsukhnagar', 'Hayath Nagar', 'Vanasthalipuram',
-  'Champapet', 'Nagole', 'Peerzadiguda', 'Boduppal', 'Medipally', 'Chengicherla',
-  'Uppal', 'Habsiguda', 'Ramanthapur', 'Nacharam', 'Mallapur', 'Ghatkesar',
-  'Neredmet', 'Old Neredmet', 'Sainikpuri', 'Yapral', 'Safilguda', 'Anandbagh',
-  'Moula Ali', 'Kushaiguda', 'Kamala Nagar', 'Dammaiguda', 'HB Colony',
-  'Nagaram', 'Kakatiya Nagar', 'Radhika Nagar', 'Dr. A.S. Rao Nagar',
-  'HMT Hills', 'Snehapuri Colony', 'Gandhi Nagar', 'Sri Lakshmi Nagar',
-  'Vinay Nagar', 'Kranthi Nagar', 'Sri Niwas Nagar', 'Jamia Osmania', 'Osmania',
-
-  // Malkajgiri - Apartments
-  'Indy Woods', 'Aparna Cyberlife', 'Harmony Heights', 'Vijaya East Gate',
-  'Springboard Heights', 'Modi Commons', 'Sri Aditya Athena', 'Mahaveer Pinnacle',
-  'Prestige Silver Springs', 'Aparna Sarovar Zenith', 'Rajapushpa Sohini',
-  'Gowra Grandeur', 'Meru', 'Srihari Towers', 'SMR Vinay Galaxy', 'Wave Lifespaces',
-
-  // ============ MEDCHAL (North & North West District) ============
-  'Medchal', 'Medchal Town', 'Kompally', 'Gundlapochampally', 'Bahadurpally',
-  'Jeedimetla', 'Suraram', 'Chintal', 'Jaggamguda', 'Doolapally', 'Dhulapally',
-  'Maisammaguda', 'Gandimaisamma', 'Bowrampet', 'Gajularamaram', 'Nizampet',
-  'Bachupally', 'Suchitra', 'Patancheru', 'BHEL', 'Isnapur', 'Pashamylaram',
-  'Ameenpur', 'Patancheru', 'Ramachandrapuram', 'Beeramguda', 'Ganapathy Nagar',
-  'Chandanagar', 'Madinaguda', 'Miyapur', 'Hafeezpet', 'Tellapur',
-  'Kukatpally', 'KPHB Colony', 'Pragathi Nagar', 'Moosapet', 'Narsingi',
-  'Shankarpally', 'Mokila', 'Kollur', 'Ravalkole', 'Gowdavalli', 'Dundigal',
-  'Thumkunta', 'Shamirpet', 'Turkayamjal', 'Maheswaram', 'Kongara Kalan',
-  'Raviryal', 'Mamidipally', 'Srinagar', 'Kawadiguda', 'Shadnagar',
-  'Petbasheerabad', 'Gravelly', 'Aliabad', 'Kandlakoya', 'Dabilpur',
-
-  // Medchal - Apartments & Villas
-  'Aparna Sarovar', 'Aparna Cyberzone', 'My Home Vihanga', 'My Home Avatar',
-  'Prestige High Fields', 'Rainbow Vistas', 'Salzburg', 'Vienna Heights',
-  'Green Grace Villas', 'Harisudha Villas', 'Sri Venkateswara Villas',
-  'Modi Builders Galaxy', 'Rajyog Builders', 'T&S Greens', 'Sansar Atrium',
-  'Keerthana Richmond', 'Sai Surya Heritage', 'Indiaboods', 'NCC Urban Gardenia',
-  'Ramky One North', 'Manjeera Heights', 'Modi Heights', 'Kavya Enclave',
-  'Aditya Athena', 'Aparna Hillpark', 'Hallmark Skyrena', 'Lodha Wondergraphy',
-
-  // ============ OUTSKIRTS & INDUSTRIAL ZONES ============
-  'Shamshabad', 'Rajiv Gandhi International Airport', 'Maheshwaram', 'Tukkuguda',
-  'Adibatla', 'Sripuram Colony', 'Hardware Park', 'Fab City', 'Ravirala',
-  'Mucherla', 'Pharma City', 'Pocharam', 'Infosys Pocharam', 'Singapore Township',
-  'Raheja IT Park', 'Financial District', 'Nanakramguda', 'Waverock', 'Cyber Pearl',
-  'Cyber Towers', 'Mindspace', 'HICC', 'Hitex', 'Botanical Garden', 'Durgam Cheruvu',
+  // ============ OLD CITY (South) ============
+  'Charminar', 'Falaknuma', 'Shalibanda', 'Barkas', 'Chandrayangutta', 'Talab Katta', 'Bandlaguda', 'Kishan Bagh', 'Bahadurpura', 'Puranapul', 'Madina', 'Patharghatti', 'Shah Ali Banda',
+  'Moghalpura', 'Yakutpura', 'Dabeerpura', 'Darulshifa', 'Purani Haveli', 'Noorkhan Bazaar', 'Malakpet', 'Saidabad', 'Saroornagar', 'Kothapet', 'Dilsukhnagar', 'Chaitanyapuri',
+  'Attapur', 'Rajendranagar', 'Upparpally', 'Hyderguda Bharat Nagar', 'Tejaswi Nagar', 'Budvel', 'Kismatpur', 'Bandlaguda Jagir', 'Gandipet', 'Osmansagar Road', 'Janachaitanya Colony',
+  'Moinabad', 'Chevella Road', 'Appa Junction', 'TSPA Junction', 'Mir Alam Tank Area', 'Nehru Zoological Park Area',
   
-  // ============ LANDMARKS (Frequently used as Addresses) ============
-  'Secretariat', 'High Court', 'Assembly', 'Osmania University', 'OU Campus',
-  'Hyderabad Public School', 'HPS', 'Birla Mandir', 'Birla Planetarium',
-  'Salar Jung Museum', 'NTR Gardens', 'Lumbini Park', 'Sanjeevaiah Park',
-  'Indira Park', 'Zoo Park', 'Nehru Zoological Park', 'Golconda Fort',
-  'Qutub Shahi Tombs', 'Chowmahalla Palace', 'Shilparamam', 'Ravindra Bharathi',
-  'Ramoji Film City', 'Basar Temple', 'Yadadri', 'Bhongir',
-];
+  // ============ WEST HYDERABAD (IT Hub) ============
+  'Madhapur', 'Hitech City', 'Gachibowli', 'Kondapur', 'Kothaguda', 'Hafeezpet', 'Miyapur', 'Chandanagar', 'Madinaguda', 'Deepthisri Nagar', 'Allwyn Colony', 'Nallagandla',
+  'Nanakramguda', 'Financial District', 'Kokapet', 'Narsingi', 'Puppalguda', 'Manikonda', 'Alkapur Township', 'Lanco Hills Road', 'Wipro Circle', 'Q-City Area', 'Financial District Phase 2',
+  'Tellapur', 'Nallagandla', 'Serilingampally', 'Gulmohar Colony', 'APHB Colony', 'BHEL', 'Beeramguda', 'Isnapur', 'Patancheru', 'Lingampally', 'Tara Nagar',
+  'Mokila', 'Shankarpally', 'Kollur', 'Osman Nagar', 'Velimela', 'Gundlapochampally', 'Aminpur', 'Tellapur Road', 'Radha Krishna Nagar', 'Vattinagulapally',
+  
+  // ============ SECUNDERABAD & NORTH ============
+  'Secunderabad', 'Paradise', 'Rasoolpura', 'Sindhi Colony', 'PG Road', 'MG Road', 'SD Road', 'Minister Road', 'James Street', 'Ranigunj', 'Old Lancer Line', 'Wellington Road',
+  'Marredpally', 'East Marredpally', 'West Marredpally', 'Lalaguda', 'Mettuguda', 'Sitaphalmandi', 'Warasiguda', 'Chilakalguda', 'Padmarao Nagar', 'Kavadiguda', 'Chilkalguda',
+  'Alwal', 'Old Alwal', 'New Alwal', 'Father Balaiah Nagar', 'R.K. Puram', 'Subhash Nagar', 'Lothkunta', 'Venkatapuram', 'Temple Alwal', 'Loyola College Area',
+  'Trimulgherry', 'Tirumalgherry', 'Picket', 'Gunrock Enclave', 'Karkhana', 'Vikrampuri', 'Diamond Point', 'Sikh Village', 'Sainikpuri', 'Yapral', 'Defence Colony', 'Vayupuri',
+  'Bolarum', 'Macha Bollaram', 'Kowkur', 'Ammuguda', 'Risala Bazaar', 'Hakimpet', 'Jawahar Nagar', 'Bolarum Golf Course Area',
+  
+  // ============ MALKAJGIRI & EAST ============
+  'Malkajgiri', 'Safilguda', 'Anandbagh', 'Neredmet', 'Old Neredmet', 'Vinayak Nagar', 'Goutham Nagar', 'Moula Ali', 'Kushaiguda', 'HB Colony', 'AS Rao Nagar', 'Kamala Nagar', 'Dr AS Rao Nagar',
+  'Uppal', 'Habsiguda', 'Ramanthapur', 'Nacharam', 'Mallapur', 'Chengicherla', 'Boduppal', 'Nagole', 'Bandlaguda', 'Nagaram', 'Dammaiguda', 'Peerzadiguda', 'Laxmi Nagar',
+  'Kapra', 'ECIL', 'Sainikpuri', 'Yapral', 'Radhika Theatre Area', 'Vayupuri', 'Saket', 'Kapra Lake Area', 'Cherlapally', 'Rampally',
+  'L.B. Nagar', 'Vanasthalipuram', 'Hayath Nagar', 'Champapet', 'Karmanghat', 'Bairamalguda', 'Hastinapuram', 'Auto Nagar', 'Mansoorabad', 'Nagole Road', 'RK Puram LB Nagar',
+  
+  // ============ MEDCHAL & NORTH DIST ============
+  'Medchal', 'Medchal Town', 'Kompally', 'Suchitra', 'Jeedimetla', 'Chintal', 'Suraram', 'Shamirpet', 'Thumkunta', 'Turkapally', 'Gundlapochampally Area',
+  'Bahadurpally', 'Dulapally', 'Maisammaguda', 'Gandimaisamma', 'Bowrampet', 'Dundigal', 'Gajularamaram', 'Bachupally', 'Nizampet', 'Pragathi Nagar', 'Hydernagar',
+  'KPHB', 'KPHB Colony', 'KPHB Phase 1', 'KPHB Phase 2', 'KPHB Phase 3', 'KPHB Phase 4', 'KPHB Phase 6', 'JNTU Area', 'Kukatpally', 'Vivekananda Nagar', 'Moosapet', 'Balanagar', 'Ferozguda',
+  
+  // ============ GATED COMMUNITIES & APARTMENTS (SEO Targets) ============
+  'Lanco Hills Society', 'My Home Avatar', 'My Home Vihanga', 'My Home Jewel', 'My Home Mangala', 'My Home Tarkshya', 'My Home Sayuk', 'My Home Bhooja', 'My Home Abhra', 'My Home Navadweepa',
+  'Aparna Sarovar', 'Aparna Cyberzon', 'Aparna HillPark', 'Aparna Serene Park', 'Aparna Zenon', 'Aparna Sarovar Zenith', 'Aparna Sarovar Grande', 'Aparna One', 'Aparna Luxor Park',
+  'Lansum Etania', 'Lansum Oxygen', 'Jayabheri Orange County', 'Jayabheri The Peak', 'Jayabheri Pine Valley', 'Jayabheri Enclave',
+  'Rainbow Vistas', 'Lodha Belleza', 'Lodha Meridian', 'Prestige High Fields', 'PBEL City', 'SMR Vinay City', 'SMR Vinay Iconia',
+  'SMR Vinay Metropolitan', 'Mantri Celestia', 'Vasavi Atlantis', 'Candieur 40', 'Trendset Winz', 'Tellapur Luxury Villas',
+  'Kalpataru Residency', 'Sobha Dream Acres Area', 'Rithwik Enclave', 'DLF Garden City Area', 'Muppas Panchavati', 'Whistling Woods',
+  'Hill Ridge Springs', 'DivyaSree NSL Orion Area', 'Boulder Hills', 'Indu Fortune Fields', 'Aditya Empress Towers', 'Ramky Towers',
+  'The Prestige City', 'Prestige Rock Cliff', 'Prestige Clairemont', 'Prestige Beverly Hills', 'Vasavi Sarovar', 'Vasavi GP Trends',
+  'Phoenix Golf Edge', 'Emaar Boulder Hills', 'Incor Lake City', 'DSR The Twins', 'DSR Skymarq', 'Vamsiram Newmark',
+  
+  // ============ MICRO-LOCALITIES & NEARBY PLACES ============
+  'Nandagiri Hills Road', 'Film Nagar Site 2', 'Lotus Pond Area', 'Durgaam Cheruvu Road', 'Mindspace Junction', 'IKEA Hyderabad Area', 'Cyber Towers Road',
+  'Financial District Gachibowli', 'Nanakramguda Junction', 'Waverock Area', 'Continental Hospital Area', 'DLF Cyber City Area',
+  'Tellapur Lake Front', 'Osman Nagar Villas', 'Kokapet SEZ Area', 'Puppalguda Village', 'Manikonda Marichettu Junction', 'Ou Colony Manikonda',
+  'Nagole Metro Station Area', 'Uppal Ring Road Junction', 'Habsiguda Street No 8', 'Tarnaka Junction', 'Mettuguda Metro Area',
+  'AIBP Colony', 'Vikrampuri Colony', 'Karkhana Police Station Area', 'Sikh Village Area', 'Mudfort Area', 'Diamond Point Junction',
+  'Kukatpally Housing Board', 'Kukatpally Metro Station', 'JNTU Kukatpally', 'Pragathi Nagar KPHB', 'Nizampet Village', 'Bachupally Cross Roads',
+  'Suchitra Circle', 'Kompally Road', 'Doolapally Industrial Area', 'Jeedimetla Phase 1', 'Jeedimetla Phase 5',
+  
+  // ============ ADDED EXTRA AREAS (MEDCHAL-MALKAJGIRI) ============
+  'Zinkalawada', 'Fathenagar', 'Hasmathpet', 'Babbuguda', 'Dharmaram', 'Narsampally', 'Yadgarpally East', 'Yadgarpally West',
+  'Keesara Daira', 'Cheeryal', 'Thimmaipally', 'Haridaspally', 'Godumakunta', 'Bogaram', 'Ahmedguda', 'Keshavapur',
+  'Nagaloor', 'Gagilapur', 'Dommara Pochampally', 'Shambipur', 'Mallampet', 'Uppal Bagayath', 'Fathullaguda',
+  'Narapally', 'Jaganguda', 'Lalgadi Malakpet', 'Venkatapuram Alwal', 'Machabolaram Medchal',
+  
+  // ============ NEW EMERGING AREAS ============
+  'Kollur ORR', 'Patancheru Industrial Area', 'Pashamylaram SEZ', 'Kothur Area', 'Shadnagar Town Area', 'Maheshwaram Area', 'Adibatla IT SEZ', 'Fab City Complex',
+  'Pocharam Infosys Campus', 'Singapore Township Area', 'Cyber Gateway Area', 'IKEA Area', 'T-Hub 2.0 Area', 'HICC Area', 'Hitex Area',
+]));

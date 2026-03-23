@@ -1,20 +1,21 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 
 const AdBanner = () => {
     return (
         <section className="ad-banner-section position-relative container" style={{ paddingBottom: '20px', paddingTop: '20px' }}>
             <div className="container" style={{ maxWidth: '100%' }}>
-                <div className="position-relative" style={{ borderRadius: '8px', overflow: 'hidden', width: '100%', margin: '0 auto',boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+                <div className="position-relative" style={{ borderRadius: '8px', overflow: 'hidden', width: '100%', margin: '0 auto', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
                     
                     {/* The Original Background Image */}
-                    <img 
+                    <Image 
                         src="/assets/Images/packers-mover-banner.png" 
                         alt="Shifting Anywhere Anytime" 
+                        width={1200}
+                        height={400}
                         style={{ width: '100%', height: 'auto', display: 'block' }} 
-                        loading="lazy"
                     />
 
                     {/* Ultra-Modern Floating Pill Badge */}

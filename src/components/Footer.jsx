@@ -3,7 +3,22 @@
 import React from 'react';
 import Link from 'next/link';
 
+import Image from 'next/image';
 import './Footer.css';
+
+const APPLIANCE_ICONS = [
+    { name: 'AC',              icon: '/assets/Images/appliance/icons/ac.jpg' },
+    { name: 'Refrigerator',    icon: '/assets/Images/appliance/icons/fridge.jpg' },
+    { name: 'Washing Machine', icon: '/assets/Images/appliance/icons/washing-machine.jpg' },
+    { name: 'Microwave',       icon: '/assets/Images/appliance/icons/microwave.jpg' },
+    { name: 'Television',      icon: '/assets/Images/appliance/icons/tv.jpg' },
+    { name: 'Gas Stove',       icon: '/assets/Images/appliance/icons/stove.jpg' },
+    { name: 'Water Purifier',  icon: '/assets/Images/appliance/icons/water-purifier.jpg' },
+    { name: 'Kitchen Chimney', icon: '/assets/Images/appliance/icons/chimney.jpg' },
+    { name: 'Geyser',          icon: '/assets/Images/appliance/icons/geyser-repair.jpg' },
+    { name: 'Laptop',          icon: '/assets/Images/appliance/icons/laptop.jpg' },
+    { name: 'Air Cooler',      icon: '/assets/Images/appliance/icons/air-cooler.jpg' },
+];
 
 const Footer = () => {
     return (
@@ -13,39 +28,17 @@ const Footer = () => {
                 <div className="container-fluid px-0">
                     <div className="appliance-scroll-container">
                         <div className="appliance-track">
-                            {[
-                                { name: 'AC',              icon: '/assets/Images/appliance/icons/ac.jpg' },
-                                { name: 'Refrigerator',    icon: '/assets/Images/appliance/icons/fridge.jpg' },
-                                { name: 'Washing Machine', icon: '/assets/Images/appliance/icons/washing-machine.jpg' },
-                                { name: 'Microwave',       icon: '/assets/Images/appliance/icons/microwave.jpg' },
-                                { name: 'Television',      icon: '/assets/Images/appliance/icons/tv.jpg' },
-                                { name: 'Gas Stove',       icon: '/assets/Images/appliance/icons/stove.jpg' },
-                                { name: 'Water Purifier',  icon: '/assets/Images/appliance/icons/water-purifier.jpg' },
-                                { name: 'Kitchen Chimney', icon: '/assets/Images/appliance/icons/chimney.jpg' },
-                                { name: 'Geyser',          icon: '/assets/Images/appliance/icons/geyser-repair.jpg' },
-                                { name: 'Laptop',          icon: '/assets/Images/appliance/icons/laptop.jpg' },
-                                { name: 'Air Cooler',      icon: '/assets/Images/appliance/icons/air-cooler.jpg' },
-                            ].map((item, idx) => (
+                            {[...APPLIANCE_ICONS, ...APPLIANCE_ICONS].map((item, idx) => (
                                 <div key={idx} className="appliance-icon-item">
-                                    <img src={item.icon} alt={`${item.name} Repair Service in Hyderabad`} width="50" height="50" loading="lazy" style={{ height: '50px', width: '50px', objectFit: 'contain' }} />
-                                </div>
-                            ))}
-                            {/* Duplicate for infinite scroll */}
-                            {[
-                                { name: 'AC',              icon: '/assets/Images/appliance/icons/ac.jpg' },
-                                { name: 'Refrigerator',    icon: '/assets/Images/appliance/icons/fridge.jpg' },
-                                { name: 'Washing Machine', icon: '/assets/Images/appliance/icons/washing-machine.jpg' },
-                                { name: 'Microwave',       icon: '/assets/Images/appliance/icons/microwave.jpg' },
-                                { name: 'Television',      icon: '/assets/Images/appliance/icons/tv.jpg' },
-                                { name: 'Gas Stove',       icon: '/assets/Images/appliance/icons/stove.jpg' },
-                                { name: 'Water Purifier',  icon: '/assets/Images/appliance/icons/water-purifier.jpg' },
-                                { name: 'Kitchen Chimney', icon: '/assets/Images/appliance/icons/chimney.jpg' },
-                                { name: 'Geyser',          icon: '/assets/Images/appliance/icons/geyser-repair.jpg' },
-                                { name: 'Laptop',          icon: '/assets/Images/appliance/icons/laptop.jpg' },
-                                { name: 'Air Cooler',      icon: '/assets/Images/appliance/icons/air-cooler.jpg' },
-                            ].map((item, idx) => (
-                                <div key={`dub-${idx}`} className="appliance-icon-item">
-                                    <img src={item.icon} alt={`${item.name} Repair Service`} width="50" height="50" loading="lazy" style={{ height: '50px', width: '50px', objectFit: 'contain' }} aria-hidden="true" />
+                                    <div style={{ position: 'relative', width: '50px', height: '50px' }}>
+                                        <Image 
+                                            src={item.icon} 
+                                            alt={`${item.name} Repair Service`} 
+                                            fill
+                                            style={{ objectFit: 'contain', borderRadius: '6px' }} 
+                                            sizes="50px"
+                                        />
+                                    </div>
                                 </div>
                             ))}
                         </div>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import './Hero.css';
 
 const HERO_SERVICES = [
@@ -33,7 +34,13 @@ const Hero = () => {
                                 {HERO_SERVICES.map((service, index) => (
                                     <Link key={index} href={service.link} className="service-item-v3">
                                         <div className="service-icon-wrap-v3">
-                                            <img src={service.icon} alt={service.title} />
+                                            <Image 
+                                                src={service.icon} 
+                                                alt={service.title} 
+                                                width={48} 
+                                                height={48}
+                                                priority={index < 4}
+                                            />
                                         </div>
                                         <span className="service-label-v3">{service.title}</span>
                                     </Link>
@@ -47,18 +54,46 @@ const Hero = () => {
                         <div className="hero-collage-v3">
                             <div className="collage-col collage-col-left">
                                 <div className="collage-item collage-item-tall">
-                                    <img src="/images/service_beauty.png" alt="Beauty Services" />
+                                    <Image 
+                                        src="/images/service_beauty.png" 
+                                        alt="Beauty Services" 
+                                        width={280} 
+                                        height={400} 
+                                        className="img-fluid rounded-3"
+                                        priority
+                                    />
                                 </div>
                                 <div className="collage-item collage-item-short ">
-                                    <img src="/images/service_kitchen_repair.png" alt="Kitchen Repair" />
+                                    <Image 
+                                        src="/images/service_kitchen_repair.png" 
+                                        alt="Kitchen Repair" 
+                                        width={280} 
+                                        height={180} 
+                                        className="img-fluid rounded-3"
+                                        priority
+                                    />
                                 </div>
                             </div>
                             <div className="collage-col collage-col-right">
                                 <div className="collage-item collage-item-short ">
-                                    <img src="/images/service_massage.png" alt="Massage Services" />
+                                    <Image 
+                                        src="/images/service_massage.png" 
+                                        alt="Massage Services" 
+                                        width={280} 
+                                        height={180} 
+                                        className="img-fluid rounded-3"
+                                        priority
+                                    />
                                 </div>
                                 <div className="collage-item collage-item-tall">
-                                    <img src="/images/service_ac_repair.png" alt="AC Repair" />
+                                    <Image 
+                                        src="/images/service_ac_repair.png" 
+                                        alt="AC Repair" 
+                                        width={280} 
+                                        height={400} 
+                                        className="img-fluid rounded-3"
+                                        priority
+                                    />
                                 </div>
                             </div>
                         </div>

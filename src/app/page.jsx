@@ -12,9 +12,10 @@ const HomeSafety = dynamic(() => import('@/components/home/HomeSafety'), { ssr: 
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
 export const metadata = constructMetadata({
-    title: 'Appliance Repair Hyderabad | Charminar Repairs Service',
-    description: 'Trusted appliance repair in Hyderabad. Certified service for ACs, fridges & washers. 1-Year Warranty. Book same-day repair now.',
+    title: 'Expert Appliance Repair Hyderabad | Charminar Repairs Service',
+    description: 'Trusted doorstep appliance repair in Hyderabad. Certified experts for AC, Refrigerator, Washing Machine, TV & Microwave. 1-Year Warranty on parts. Same-day service in 2 hours. Book now for high-quality, professional repairs.',
     canonicalPath: '/',
+    keywords: 'appliance repair hyderabad, ac repair hyderabad, refrigerator repair hyderabad, washing machine repair hyderabad, tv repair hyderabad, microwave repair hyderabad, ro service hyderabad, geyser repair hyderabad'
 });
 
 export default function Home() {

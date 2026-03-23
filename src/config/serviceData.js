@@ -106,8 +106,27 @@ export const SERVICE_DATA_MAP = {
             { id: 'fridge-gas', name: 'Gas Refilling & Leakage Restoration', price: 1299, image: '/images/gas_1.png', desc: 'Full system vacuuming and leak sealing followed by R134a/R600a eco-friendly gas charging for peak freezer performance.' },
             { id: 'fridge-pcb', name: 'Inverter Board / Main Logic Repair', price: 1899, image: '/images/chip_icon.png', desc: 'Advanced repair for high-end side-by-side or double-door fridge boards to resolve sensor issues and display errors.' },
             { id: 'fridge-defrost', name: 'Automatic Defrost System Fix', price: 899, image: '/images/check_mark_3d.svg', desc: 'Replacement of faulty defrost heaters, timers, or sensors to stop excessive ice buildup in the freezer compartment.' },
-            { id: 'fridge-fan', name: 'Cooling Fan Motor Replacement', price: 799, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Fixes loud humming noises and uneven cooling by installing a silent, high-RPM fan motor.' },
-        ]
+            { id: 'fridge-fan', name: 'Cooling Fan Motor Replacement', price: 799, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Fixes loud humming noises and uneven cooling by installing a silent, high-RPM fan motor.' }
+        ],
+        inclusions: [
+            'Full 15-point diagnostic and safety audit',
+            '180-day warranty on all electronic parts',
+            'Internal cleaning and coil descaling',
+            'Genuine OEM-grade spare parts used'
+        ],
+        exclusions: [
+            'Cabinet body denting or painting',
+            'Full door/cabinet replacement costs',
+            'Power house-wiring electrical repairs'
+        ],
+        reviews: [
+            { user: 'Kiran T., Jubilee Hills', text: 'My side-by-side fridge stopped cooling. The technician arrived in 2 hours and fixed the inverter PCB. Saved all my frozen food!' },
+            { user: 'Sneha R., Madhapur', text: 'Professional gas refilling for my Whirlpool fridge. Very ethical and explained everything clearly. Great value.' }
+        ],
+        spotlight: {
+            title: 'Cooling System Engineers',
+            desc: 'Our experts are trained specifically in modern inverter and smart-sensor technologies. We focus on thermodynamic efficiency to ensure your refrigerator consumes less power while keeping food fresh.'
+        }
     },
     'Washing Machine Repair': {
         icon: '/images/washing_machine_icon.png',
@@ -150,8 +169,27 @@ export const SERVICE_DATA_MAP = {
             { id: 'wm-clean', name: 'Professional Drum Descaling & Service', price: 599, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Removes hard-water scale, lint, and bacteria from the outer tub and inner drum to restore hygiene and drainage speed.' },
             { id: 'wm-pcb', name: 'Main Control Board (PCB) Repair', price: 1999, image: '/images/chip_icon.png', desc: 'Resolving motherboard error codes (E1, E2, dC, etc.) through professional circuit component restoration.' },
             { id: 'wm-drum', name: 'Heavy-Duty Drum Bearing Replacement', price: 2499, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Fixes high-pitched screeching or vibration during the spin cycle with premium, long-life industrial bearings.' },
-            { id: 'wm-pump', name: 'Silent Drain Pump Replacement', price: 1200, image: '/images/img_icons8_com_3d_fluency_94_forward_png.png', desc: 'Solves water drainage issues and OE errors by installing a high-efficiency magnetic drain pump.' },
-        ]
+            { id: 'wm-pump', name: 'Silent Drain Pump Replacement', price: 1200, image: '/images/img_icons8_com_3d_fluency_94_forward_png.png', desc: 'Solves water drainage issues and OE errors by installing a high-efficiency magnetic drain pump.' }
+        ],
+        inclusions: [
+            'Deep jet drum sterilization and descaling',
+            'Full hydraulic pump and filter cleaning',
+            'Anti-vibration and load balancing service',
+            'Genuine wash-grade spare components'
+        ],
+        exclusions: [
+            'Drum spider or main outer body overhaul',
+            'Full tub assembly replacement',
+            'Plumbing work outside the machine unit'
+        ],
+        reviews: [
+            { user: 'Sandeep V., Kukatpally', text: 'My front-load machine had a loud noise. Technician replaced bearings and now it is pin-drop silent. Excellent work!' },
+            { user: 'Meena K., Secunderabad', text: 'Professional PCB repair for my LG top-loader. The cost was fair and it was fixed the same day.' }
+        ],
+        spotlight: {
+            title: 'Laundry Care Specialists',
+            desc: 'Washing machines are complex mechanical systems. Our experts specialize in drum dynamics and precision balance tuning, ensuring your machine lasts longer and performs quieter.'
+        }
     },
     'Television Repair': {
         icon: '/images/tv_icon.png',
@@ -193,8 +231,27 @@ export const SERVICE_DATA_MAP = {
             { id: 'tv-visit', name: 'TV Diagnostic Visit', price: 299, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Panel & board inspection with estimate.' },
             { id: 'tv-backlight', name: 'LED Backlight Strip Replacement', price: 1899, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Fixes dark spots & black screens.' },
             { id: 'tv-mainboard', name: 'TV Motherboard / Main Board Repair', price: 2999, image: '/images/chip_icon.png', desc: 'Firmware & logic restoration.' },
-            { id: 'tv-panel', name: 'Panel / Open Cell COF Bonding', price: 4999, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Fixes horizontal/vertical lines.' },
-        ]
+            { id: 'tv-panel', name: 'Panel / Open Cell COF Bonding', price: 4999, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Fixes horizontal/vertical lines.' }
+        ],
+        inclusions: [
+            'Panel polarization and voltage testing',
+            'Firmware check and software cache clear',
+            'Internal cleaning and dust removal',
+            'Genuine LED backlight strip arrays'
+        ],
+        exclusions: [
+            'Physical screen crack restoration (replacement only)',
+            'Major liquid spill panel damage restoration',
+            'External HDMI / cable wiring work'
+        ],
+        reviews: [
+            { user: 'Arun M., Banjara Hills', text: 'My Sony OLED had no picture. Technician replaced the T-CON board and it is perfect. Saved me a lot of money!' },
+            { user: 'Priya S., Hitech City', text: 'Backlight issue fixed in 2 hours for my Mi TV. Very professional and tidy work.' }
+        ],
+        spotlight: {
+            title: 'Display & Optic Experts',
+            desc: 'Modern TV panels are incredibly delicate. Our technicians use clean-room techniques and precision diagnostic tools to handle everything from software glitches to micro-soldering on motherboards.'
+        }
     },
     'Microwave Oven Repair': {
         icon: '/images/microwave_icon.png',
@@ -235,8 +292,27 @@ export const SERVICE_DATA_MAP = {
             { id: 'mw-magnetron', name: 'Magnetron Replacement (Core Heating)', price: 1199, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Restores powerful heating to your microwave by replacing the microwave generator with an original high-frequency magnetron.' },
             { id: 'mw-pcb', name: 'Touchpad & Logical Board Repair', price: 1499, image: '/images/chip_icon.png', desc: 'Fixes non-responsive buttons or auto-start issues by restoring the capacitive touch circuits or main logice board.' },
             { id: 'mw-transformer', name: 'High-Voltage Transformer Repair', price: 1299, image: '/images/electrical_wiring_3d.png', desc: 'Solves loud humming noises and heating failures by addressing the high-voltage power delivery system.' },
-            { id: 'mw-motor', name: 'Turntable Motor & Drive Fix', price: 599, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Ensures even heating by fixing the rotating plate mechanism and glass tray alignment.' },
-        ]
+            { id: 'mw-motor', name: 'Turntable Motor & Drive Fix', price: 599, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Ensures even heating by fixing the rotating plate mechanism and glass tray alignment.' }
+        ],
+        inclusions: [
+            'Full radiation leakage safety check',
+            'High-voltage electrical circuit audit',
+            'Chamber sterilization and grease removal',
+            'Genuine safety-rated spare parts'
+        ],
+        exclusions: [
+            'Turntable glass plate replacement',
+            'Cavity body denting/painting',
+            'Burned cavity restoration (safety risk)'
+        ],
+        reviews: [
+            { user: 'Vikram S., Gachibowli', text: 'Microwave was sparking inside. Technician cleaned the waveguide and it is now safe to use. Very helpful advice!' },
+            { user: 'Anjali D., Miyapur', text: 'Touchpad was not working. They fixed it on the spot. Professional and timely service.' }
+        ],
+        spotlight: {
+            title: 'Microwave Safety Specialists',
+            desc: 'Microwave repair involves high-voltage risks. We follow strict safety protocols, including radiation leak testing after every repair, to ensure your kitchen appliance is 100% safe for your family.'
+        }
     },
     'Dishwasher Repair': {
         icon: '/images/dishwasher_icon.png',
@@ -275,8 +351,27 @@ export const SERVICE_DATA_MAP = {
         subServices: [
             { id: 'dw-visit', name: 'Dishwasher Diagnostic Visit', price: 299, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'System scan & leak site inspection.' },
             { id: 'dw-clean', name: 'Professional Deep Descaling', price: 699, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Anti-bacterial & hard water restoration.' },
-            { id: 'dw-pump', name: 'Drain / Wash Pump Restoration', price: 2199, image: '/images/dishwasher_repair_3d.png', desc: 'Fixes drainage & cleaning issues.' },
-        ]
+            { id: 'dw-pump', name: 'Drain / Wash Pump Restoration', price: 2199, image: '/images/dishwasher_repair_3d.png', desc: 'Fixes drainage & cleaning issues.' }
+        ],
+        inclusions: [
+            'Deep chemical descaling and sanitization',
+            'Spray arm and filter de-clogging service',
+            'Full hydraulic leak pressure testing',
+            'Genuine OEM-certified pump components'
+        ],
+        exclusions: [
+            'Inner cabinet basket replacement costs',
+            'Full outer body panel restoration',
+            'Kitchen plumbing or inlet water line work'
+        ],
+        reviews: [
+            { user: 'Rahul V., Kondapur', text: 'My Bosch dishwasher had an E15 error. The technician fixed the leak and descaled the unit. Dishes are sparkling now!' },
+            { user: 'Meera G., Madhapur', text: 'Excellent service for my IFB dishwasher. Very professional and the cost was exactly as quoted.' }
+        ],
+        spotlight: {
+            title: 'Hydraulic System Experts',
+            desc: 'Dishwashers rely on complex water pressure and thermal dynamics. Our experts focus on restoring factory-level spray pressure and chemical efficiency to ensure hygienic cleaning every cycle.'
+        }
     },
     'Coffee Machine Repair': {
         icon: '/images/blender_icon.png',
@@ -431,8 +526,27 @@ export const SERVICE_DATA_MAP = {
         subServices: [
             { id: 'ro-service', name: 'Full Filtration Service (All Filters)', price: 1299, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Sediment, Carbon & Post-filter swap.' },
             { id: 'ro-membrane', name: 'RO Membrane Replacement', price: 1899, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Restores TDS level to pure standards.' },
-            { id: 'ro-pump', name: 'Bo booster Pump Restoration', price: 1599, image: '/images/img_icons8_com_3d_fluency_94_forward_png.png', desc: 'Fixes low pressure & flow issues.' },
-        ]
+            { id: 'ro-pump', name: 'Bo booster Pump Restoration', price: 1599, image: '/images/img_icons8_com_3d_fluency_94_forward_png.png', desc: 'Fixes low pressure & flow issues.' }
+        ],
+        inclusions: [
+            'Full 7-stage filter set evaluation',
+            'Precision TDS level and pH audit',
+            'Internal tank sanitization and descaling',
+            'High-grade pure-flow authentic filters'
+        ],
+        exclusions: [
+            'External pre-filter housing replacement',
+            'Main water inlet plumbing repairs',
+            'UV lamp or LED indicator replacement'
+        ],
+        reviews: [
+            { user: 'Sowmya B., Miyapur', text: 'Water tasted slightly salty. Technician replaced the membrane and now the TDS is perfect. Very ethical work!' },
+            { user: 'Rakesh P., Dilsukhnagar', text: 'On-time service for my Aquaguard. Explained the filter stages clearly. Highly satisfied with the results.' }
+        ],
+        spotlight: {
+            title: 'Water Chemistry Specialists',
+            desc: 'We don’t just swap filters. Our RO experts understand the science of water purification, ensuring your drinking water meets WHO safety standards for mineral balance and purity.'
+        }
     },
     'Geyser & Water Heater Repair': {
         icon: '/images/geyser_icon.png',
@@ -470,8 +584,27 @@ export const SERVICE_DATA_MAP = {
         subServices: [
             { id: 'geyser-service', name: 'Geyser Descaling & AMC', price: 599, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Internal tank & element cleaning.' },
             { id: 'geyser-element', name: 'Heating Element Replacement', price: 999, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Heavy-duty copper element with warranty.' },
-            { id: 'geyser-thermostat', name: 'Thermostat & Safety Cut-off', price: 499, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Fixes overheating & power issues.' },
-        ]
+            { id: 'geyser-thermostat', name: 'Thermostat & Safety Cut-off', price: 499, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Fixes overheating & power issues.' }
+        ],
+        inclusions: [
+            'Full heating element efficiency audit',
+            'Inlet/Outlet pressure valve calibration',
+            'Electrical earthing and safety check',
+            'Genuine heavy-duty copper components'
+        ],
+        exclusions: [
+            'Main water supply pipeline repair',
+            'Wall mounting structural reinforcement',
+            'Full storage tank replacement'
+        ],
+        reviews: [
+            { user: 'Arun L., Begumpet', text: 'Geyser was tripping the MCB. Tech found a leakage in the element and fixed it on the spot. Very safe and efficient.' },
+            { user: 'Sita M., Gachibowli', text: 'Professional descaling for my AO Smith. Now water heats up much faster. Saved me from a cold winter morning!' }
+        ],
+        spotlight: {
+            title: 'Thermal Safety Engineering',
+            desc: 'Geyser repairs involve high-pressure water and high-voltage electricity. Our technicians prioritize a rigid 10-point safety protocol to ensure 100% shock-proof and leak-proof operation.'
+        }
     },
     'Kitchen Chimney Service': {
         icon: '/images/chimney_icon.png',
@@ -509,8 +642,27 @@ export const SERVICE_DATA_MAP = {
         subServices: [
             { id: 'ch-clean', name: 'Chimney Deep Chemical Cleaning', price: 899, image: '/images/img_icons8_com_3d_fluency_94_empty_box_png.png', desc: 'Includes oil degreasing & blower clean.' },
             { id: 'ch-motor', name: 'Chimney Motor Restoration', price: 2499, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Copper winding & suction tuning.' },
-            { id: 'ch-visit', name: 'Chimney Diagnostic Visit', price: 299, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Suction test & board inspection.' },
-        ]
+            { id: 'ch-visit', name: 'Chimney Diagnostic Visit', price: 299, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Suction test & board inspection.' }
+        ],
+        inclusions: [
+            'Deep chemical degreasing of mesh filters',
+            'Internal blower and motor health audit',
+            'Dynamic suction peak-performance test',
+            'Oil-collector cup sterilization'
+        ],
+        exclusions: [
+            'Full ducting pipe installation cost',
+            'Outer cosmetic body paint/polishing',
+            'Remote control unit replacement'
+        ],
+        reviews: [
+            { user: 'Suresh N., Manikonda', text: 'Chimney suction was very weak. After deep cleaning, it is pulling smoke perfectly. Mess-free and professional service.' },
+            { user: 'Ananya S., Kukatpally', text: 'Great job cleaning my Faber chimney. They removed all the grease without making a mess. Worth every rupee.' }
+        ],
+        spotlight: {
+            title: 'Aerodynamic Suction Experts',
+            desc: 'Kitchen chimneys lose efficiency as oil clogs the blower and filters. We use industrial-grade degreasers and jet cleaning to restore factory-level suction, keeping your kitchen smoke-free.'
+        }
     },
     'Laptop & Desktop Repair': {
         icon: '/images/laptop_icon.png',
@@ -962,13 +1114,13 @@ export const SERVICE_DATA_MAP = {
             { t: 'Sawdust Near Furniture', i: 'fas fa-dumpster', d: 'Surface spray and internal injection.' }
         ],
         subServices: [
-            { id: 'tm-check', name: 'Termite Site Inspection', price: 0, image: '/assets/Images/pest-control/termite-control.png', desc: 'Free diagnostic & damage audit.' },
-            { id: 'tm-treat', name: 'Full-House Warranty Treat', price: 4999, image: '/assets/Images/pest-control/termite-control.png', desc: 'Includes 5-year protection & warranty.' },
+            { id: 'tm-check', name: 'Termite Site Inspection', price: 0, image: '/assets/Images/pest-control/termite-control.jpeg', desc: 'Free diagnostic & damage audit.' },
+            { id: 'tm-treat', name: 'Full-House Warranty Treat', price: 4999, image: '/assets/Images/pest-control/termite-control.jpeg', desc: 'Includes 5-year protection & warranty.' },
         ]
     },
     'Woodborer Control': {
         icon: '/images/service_icon.png',
-        photo: '/assets/Images/pest-control/woodborder-control.png',
+        photo: '/assets/Images/pest-control/woodborder-control.jpeg',
         desc: 'Is your expensive wooden furniture turning into powder? Our <strong>Professional Woodborer Control in Hyderabad</strong> targets the larvae deep within the wood using specialized syringes and oil-based preservatives.',
         highlights: [
             '✦ Precision Syringe Injection',
@@ -1000,13 +1152,13 @@ export const SERVICE_DATA_MAP = {
             { t: 'Clicking Sound in Wood', i: 'fas fa-volume-low', d: 'Deep saturation of larval galleries.' }
         ],
         subServices: [
-            { id: 'wb-single', name: 'Single Furniture Protect', price: 899, image: '/assets/Images/pest-control/woodborder-control.png', desc: 'Larval treatment for 1 wardrobe/unit.' },
-            { id: 'wb-full', name: 'Complete Wooden Home Pack', price: 2499, image: '/assets/Images/pest-control/woodborder-control.png', desc: 'Covers all wooden assets with warranty.' },
+            { id: 'wb-single', name: 'Single Furniture Protect', price: 899, image: '/assets/Images/pest-control/woodborder-control.jpeg', desc: 'Larval treatment for 1 wardrobe/unit.' },
+            { id: 'wb-full', name: 'Complete Wooden Home Pack', price: 2499, image: '/assets/Images/pest-control/woodborder-control.jpeg', desc: 'Covers all wooden assets with warranty.' },
         ]
     },
     'Commercial Pest Control': {
         icon: '/images/service_icon.png',
-        photo: '/assets/Images/pest-control/commercial-pest-control.png',
+        photo: '/assets/Images/pest-control/commercial-pest-control.jpeg',
         desc: 'Maintain hygiene and compliance with our <strong>B2B Commercial Pest Control in Hyderabad</strong>. We serve restaurants, IT parks, warehouses, and hospitals with integrated pest management (IPM) strategies.',
         highlights: [
             '✦ Integrated Pest Management (IPM)',
@@ -1038,13 +1190,13 @@ export const SERVICE_DATA_MAP = {
             { t: 'Restaurant Hygiene Audit', i: 'fas fa-utensils', d: 'Night-time sanitation and barrier spray.' }
         ],
         subServices: [
-            { id: 'com-inspect', name: 'B2B Compliance Audit', price: 0, image: '/assets/Images/pest-control/commercial-pest-control.png', desc: 'FSSAI/HACCP readiness check.' },
-            { id: 'com-quarterly', name: 'Quarterly Shield Contract', price: 14999, image: '/assets/Images/pest-control/commercial-pest-control.png', desc: '4 services per year with auditing.' },
+            { id: 'com-inspect', name: 'B2B Compliance Audit', price: 0, image: '/assets/Images/pest-control/commercial-pest-control.jpeg', desc: 'FSSAI/HACCP readiness check.' },
+            { id: 'com-quarterly', name: 'Quarterly Shield Contract', price: 14999, image: '/assets/Images/pest-control/commercial-pest-control.jpeg', desc: '4 services per year with auditing.' },
         ]
     },
     'Bed Bugs Control': {
         icon: '/images/service_icon.png',
-        photo: '/assets/Images/pest-control/bed-bugs.png',
+        photo: '/assets/Images/pest-control/bed-bugs.jpeg',
         desc: 'Regain your sleep with our <strong>Advanced Bed Bug Eradication in Hyderabad</strong>. We use a combination of hot steam treatment and targeted insecticide sprays to kill bed bugs and their eggs instantly.',
         highlights: [
             '✦ Two-Visit Intensive Treatment',
@@ -1076,13 +1228,32 @@ export const SERVICE_DATA_MAP = {
             { t: 'Infested Sofa / Chairs', i: 'fas fa-couch', d: 'Full furniture treatment and barrier coating.' }
         ],
         subServices: [
-            { id: 'bb-treat', name: 'Full-House Terminate (2 Visit)', price: 1299, image: '/assets/Images/pest-control/bed-bugs.png', desc: 'Lethal treatment for bedroom area.' },
-            { id: 'bb-check', name: 'Professional Audit & Map', price: 0, image: '/assets/Images/pest-control/bed-bugs.png', desc: 'Free site inspection for hideouts.' },
-        ]
+            { id: 'bb-treat', name: 'Full-House Terminate (2 Visit)', price: 1299, image: '/assets/Images/pest-control/bed-bugs.jpeg', desc: 'Lethal treatment for bedroom area.' },
+            { id: 'bb-check', name: 'Professional Audit & Map', price: 0, image: '/assets/Images/pest-control/bed-bugs.jpeg', desc: 'Free site inspection for hideouts.' }
+        ],
+        inclusions: [
+            'Intensive two-visit eradication cycle',
+            'High-temperature steam sanitization',
+            'Scent-free human-safe chemical spray',
+            'Full furniture and crevice injection'
+        ],
+        exclusions: [
+            'Heavy structural furniture dismantling',
+            'Off-site luggage sanitization',
+            'Full laundry/dry-cleaning service'
+        ],
+        reviews: [
+            { user: 'Sanjay B., Kompally', text: 'Had a severe bed bug issue. The two-visit treatment worked like a charm. Finally sleeping in peace!' },
+            { user: 'Reema K., Madhapur', text: 'Professional and thorough. They sanitized the mattresses and sprayed all corners. Highly effective.' }
+        ],
+        spotlight: {
+            title: 'Sleep-Safe Sanitization',
+            desc: 'Bed bug eradication is about breaking the egg cycle. Our technicians use a scientific multi-stage approach combining thermal and chemical treatments to ensure your home is bug-free for good.'
+        }
     },
     'Cockroach Control': {
         icon: '/images/service_icon.png',
-        photo: '/assets/Images/pest-control/cock-roch-control.png',
+        photo: '/assets/Images/pest-control/cock-roch-control.jpeg',
         desc: 'Say goodbye to pests with our <strong>Professional Cockroach Gel Treatment in Hyderabad</strong>. Our odorless gel technology works through a "Cascade Effect" where one cockroach infects the whole nest, ensuring 100% elimination.',
         highlights: [
             '✦ Odorless Gel Baiting Technology',
@@ -1114,13 +1285,32 @@ export const SERVICE_DATA_MAP = {
             { t: 'Egg Cases behind Fridge', i: 'fas fa-egg', d: 'Physical removal and residual spray coating.' }
         ],
         subServices: [
-            { id: 'cc-basic', name: 'Kitchen & Bathroom Gel', price: 699, image: '/assets/Images/pest-control/cock-roch-control.png', desc: 'Effective for targeted kitchen area.' },
-            { id: 'cc-full', name: 'Complete Home Protection', price: 999, image: '/assets/Images/pest-control/cock-roch-control.png', desc: 'Full house gel treatment & drainage spray.' },
-        ]
+            { id: 'cc-basic', name: 'Kitchen & Bathroom Gel', price: 699, image: '/assets/Images/pest-control/cock-roch-control.jpeg', desc: 'Effective for targeted kitchen area.' },
+            { id: 'cc-full', name: 'Complete Home Protection', price: 999, image: '/assets/Images/pest-control/cock-roch-control.jpeg', desc: 'Full house gel treatment & drainage spray.' }
+        ],
+        inclusions: [
+            'Odorless gel baiting in all cabinets',
+            'High-pressure drainage perimeter spray',
+            'Egg-case removal and barrier coating',
+            'Pantry and food-area safety audit'
+        ],
+        exclusions: [
+            'External yard or garden pest control',
+            'Major structural sealing of wall cracks',
+            'Post-treatment cleaning of cabinets'
+        ],
+        reviews: [
+            { user: 'Amit G., Manikonda', text: 'The gel treatment is amazing. No smell at all and within 3 days all cockroaches were gone. Very tidy work.' },
+            { user: 'Lakshmi V., Tarnaka', text: 'Excellent service. They reached all the difficult corners behind the fridge and oven. No more pests!' }
+        ],
+        spotlight: {
+            title: 'Cascade Elimination Tech',
+            desc: 'Our roach control utilizes advanced baiting logic. We use non-repellent gels that cockroaches carry back to their nests, triggering a lethal chain reaction that eliminates the entire colony.'
+        }
     },
     'Invisible Grille': {
         icon: '/images/service_icon.png',
-        photo: 'https://placehold.co/800x600/f8f9fa/343a40?text=Invisible+Grille',
+        photo: '/artifacts/invisible_grille_balcony_1774010770896.png',
         desc: 'Ensure your family\'s safety without compromising on the view with our <strong>Invisible Grille</strong> installation in Hyderabad. Made of high-tensile marine-grade stainless steel cables, they offer unblocked balcony views and maximum child safety.',
         highlights: [
             '✦ 316 Grade Stainless Steel Cables',
@@ -1142,11 +1332,30 @@ export const SERVICE_DATA_MAP = {
         subServices: [
             { id: 'ig-balcony', name: 'Balcony Invisible Grille', price: 150, desc: 'Per Square Foot including installation' },
             { id: 'ig-window', name: 'Window Safety Grille', price: 130, desc: 'Per Square Foot for windows' }
-        ]
+        ],
+        inclusions: [
+            'Marine-grade 316 stainless steel cables',
+            'Anti-uv nylon/teflon protective coating',
+            'High-tension cable stress testing',
+            'Professional rust-proof mounting hardware'
+        ],
+        exclusions: [
+            'Major balcony structural repairs',
+            'Painting of wall frames after install',
+            'Removal of old heavy iron grilles'
+        ],
+        reviews: [
+            { user: 'Vamsi T., Hitech City', text: 'Installed invisible grilles in my 15th-floor balcony. Safe for my kids and the view is still amazing!' },
+            { user: 'Divya S., Financial Dist', text: 'Very neat installation. The cables are strong and practically invisible from a distance.' }
+        ],
+        spotlight: {
+            title: 'High-Tensile Safety Engineering',
+            desc: 'Our invisible grilles use aero-grade cables capable of withstanding over 400kg of impact. We combine transparency with extreme strength to secure your high-rise home without the cage-like feel.'
+        }
     },
     'Mosquito Mesh': {
         icon: '/images/service_icon.png',
-        photo: 'https://placehold.co/800x600/f8f9fa/343a40?text=Mosquito+Mesh',
+        photo: 'https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=1200&auto=format&fit=crop',
         desc: 'Protect your home from dengue and malaria with our premium <strong>Mosquito Mesh</strong> solutions in Hyderabad. We offer roller, pleated, and Velcro meshes customized for your doors and windows.',
         highlights: [
             '✦ Pleated, Roller & Magnetic Options',
@@ -1172,7 +1381,7 @@ export const SERVICE_DATA_MAP = {
     },
     'Honeycomb Blinds': {
         icon: '/images/service_icon.png',
-        photo: 'https://placehold.co/800x600/f8f9fa/343a40?text=Honeycomb+Blinds',
+        photo: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
         desc: 'Upgrade your interiors with our elegant <strong>Honeycomb Blinds</strong>. The unique cellular design provides excellent insulation, noise reduction, and light control for your bedroom and living spaces.',
         highlights: [
             '✦ Energy Efficient Cellular Design',
@@ -1198,7 +1407,7 @@ export const SERVICE_DATA_MAP = {
     },
     'Zip Screen': {
         icon: '/images/service_icon.png',
-        photo: 'https://placehold.co/800x600/f8f9fa/343a40?text=Zip+Screen',
+        photo: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop',
         desc: 'Enjoy outdoor living securely with our automated <strong>Zip Screen systems</strong>. Providing ultimate protection from sun, wind, rain, and insects, zip blinds are perfect for patios, balconies, and semi-open areas.',
         highlights: [
             '✦ Advanced Zip-Lock Technology',
@@ -1223,7 +1432,7 @@ export const SERVICE_DATA_MAP = {
     },
     'Modern Pergola': {
         icon: '/images/service_icon.png',
-        photo: 'https://placehold.co/800x600/f8f9fa/343a40?text=Modern+Pergola',
+        photo: 'https://images.unsplash.com/photo-1588102377317-062e7aa23a41?q=80&w=1200&auto=format&fit=crop',
         desc: 'Transform your terrace or garden with a <strong>Modern Louvered Pergola</strong>. Our automated bioclimatic pergolas offer adjustable sunlight and waterproof roofing at the touch of a button.',
         highlights: [
             '✦ Bioclimatic Louvered Roof',
@@ -1248,7 +1457,7 @@ export const SERVICE_DATA_MAP = {
     },
     'Safety Mesh': {
         icon: '/images/service_icon.png',
-        photo: 'https://placehold.co/800x600/f8f9fa/343a40?text=Safety+Mesh',
+        photo: 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop',
         desc: 'Our <strong>Stainless Steel Safety Mesh</strong> provides robust security against intruders without the jail-like look of traditional iron grills. Perfect for premium villas and high-security zones.',
         highlights: [
             '✦ 304/316 Grade Bulletproof Mesh',
@@ -1328,8 +1537,27 @@ export const SERVICE_DATA_MAP = {
         ],
         subServices: [
             { id: 'pb-minor', name: 'Minor Plumbing Fix (Tap/Valve)', price: 149, category: 'Water & Leakage Fixes', image: '/images/istock_plumber_1372970823.jpg', desc: 'Fixing loose handles or replacing washers.' },
-            { id: 'pb-declog', name: 'Drainage Jet De-clogging', price: 499, category: 'Drainage Solutions', image: '/images/kitchen_repair_blog.png', desc: 'Clearing main drain line blockages.' },
-        ]
+            { id: 'pb-declog', name: 'Drainage Jet De-clogging', price: 499, category: 'Drainage Solutions', image: '/images/kitchen_repair_blog.png', desc: 'Clearing main drain line blockages.' }
+        ],
+        inclusions: [
+            'Leak detection and site pressure audit',
+            'Full fixture and valve health check',
+            'High-grade teflon and washer sealing',
+            'OEM / Jaquar-grade spare components'
+        ],
+        exclusions: [
+            'Underground main water line excavation',
+            'Large-scale bathroom redesign/tiling',
+            'Sewer line structural replacement'
+        ],
+        reviews: [
+            { user: 'Santhosh K., Kondapur', text: 'Prompt response for my bathroom leak. Fixed the hidden pipe burst in 45 mins. Very professional tools used.' },
+            { user: 'Bala G., Jubilee Hills', text: 'Professional tap and mixer installation for my kitchen. Neat work and very polite plumber.' }
+        ],
+        spotlight: {
+            title: 'Hydraulic Flow Masters',
+            desc: 'Plumbing is more than just stopping leaks. Our experts focus on flow dynamics and hydraulic pressure to ensure your fixtures last longer and your water consumption is optimized.'
+        }
     },
     'Electrical work': {
         icon: '/images/lightning_bolt_icon.png',
@@ -1358,8 +1586,27 @@ export const SERVICE_DATA_MAP = {
         ],
         subServices: [
             { id: 'el-minor', name: 'Switch/Socket Replacement', price: 99, category: 'Electrical Repairs', image: '/images/electrical_repair_blog.png', desc: 'Repairing or swapping faulty electrical points.' },
-            { id: 'el-fan', name: 'Ceiling Fan Service/Assembly', price: 199, category: 'Appliance Fitting', image: '/images/electrical_wiring_3d.png', desc: 'Testing motor winding and regulator sync.' },
-        ]
+            { id: 'el-fan', name: 'Ceiling Fan Service/Assembly', price: 199, category: 'Appliance Fitting', image: '/images/electrical_wiring_3d.png', desc: 'Testing motor winding and regulator sync.' }
+        ],
+        inclusions: [
+            'Full continuity and earthing safety test',
+            'Circuit load and voltage audit',
+            'Fire-retardant genuine wiring parts',
+            '180-day warranty on all electrical labor'
+        ],
+        exclusions: [
+            'Concealed conduit wall cutting (civil)',
+            'Full house internal wiring cabling cost',
+            'Energy meter board replacement'
+        ],
+        reviews: [
+            { user: 'Raghav M., Uppal', text: 'My TV unit was flickering. Tech found a loose neutral in the DB box. Very safe and efficient work.' },
+            { user: 'Sumathi P., Miyapur', text: 'Installed 4 new AC points and fixed my inverter. Professional cabling and very clean installation.' }
+        ],
+        spotlight: {
+            title: 'Precision Power Engineering',
+            desc: 'Electrical safety is non-negotiable. Our electricians use calibrated multimeters to ensure your home’s circuitry is balanced and protected against power surges and shorts.'
+        }
     },
     'Carpenter work': {
         icon: '/images/raw_githubusercontent_com_microsoft_fluentui_emoji_main_assets_hammer_20and_20wrench_3d_hammer_and_wrench_3d_png.png',
@@ -1388,8 +1635,27 @@ export const SERVICE_DATA_MAP = {
         ],
         subServices: [
             { id: 'cp-hinge', name: 'Door Hinge/Lock Fix', price: 149, category: 'Woodwork & Hardware', image: '/images/happy-young-handyman-carpenter-in-workshop-smiling.jpg', desc: 'Solving alignment or locking issues.' },
-            { id: 'cp-assembly', name: 'Furniture Assembly (Small)', price: 499, category: 'Modular Assembly', image: '/images/repairman-using-tools-to-fix-oven.jpg', desc: 'Setting up tables, chairs or small units.' },
-        ]
+            { id: 'cp-assembly', name: 'Furniture Assembly (Small)', price: 499, category: 'Modular Assembly', image: '/images/repairman-using-tools-to-fix-oven.jpg', desc: 'Setting up tables, chairs or small units.' }
+        ],
+        inclusions: [
+            'Hardware alignment and leveling audit',
+            'Joint reinforcement and gluing service',
+            'Polishing and minor scratch touch-up',
+            'Premium Godrej/Hettich grade hardware'
+        ],
+        exclusions: [
+            'Full wood carving or antique work',
+            'Major outdoor structural wood building',
+            'Painting of large wardrobe units'
+        ],
+        reviews: [
+            { user: 'Vivek S., Dilshuknagar', text: 'Wardrobe doors were sagging. Carpenter aligned them perfectly and fixed the loose handles in 30 mins.' },
+            { user: 'Anjali R., Gachibowli', text: 'Professional assembly of my IKEA study table. Very neat work and followed all instructions correctly.' }
+        ],
+        spotlight: {
+            title: 'Craftsmanship & Precision',
+            desc: 'Modern modular furniture requires precise hardware alignment. Our carpenters specialize in European-style hinges and channels, ensuring your furniture remains functional and silent for years.'
+        }
     }
 };
 
@@ -1426,5 +1692,24 @@ export const DEFAULT_SERVICE = {
         { t: 'Unusual Mechanical Noise', i: 'fas fa-volume-up', d: 'Bearing calibration and motor vibration dampening.' },
         { t: 'Water Leakage Fault', i: 'fas fa-tint-slash', d: 'Precision seal audit and drainage system de-clogging.' },
         { t: 'Performance Efficiency Drop', i: 'fas fa-chart-line-down', d: 'Component restoration and calibration.' }
-    ]
+    ],
+    inclusions: [
+        'Complete diagnostic and safety audit',
+        'OEM-grade genuine spare parts',
+        'Transparent upfront pricing model',
+        'Post-service quality verification'
+    ],
+    exclusions: [
+        'Major structural body replacement',
+        'Third-party software modification',
+        'Off-site deep lab restoration'
+    ],
+    reviews: [
+        { user: 'Rakesh V., Hyderabad', text: 'Excellent and professional service. The technician was on time and fixed the issue effectively.' },
+        { user: 'Sowmya L., Hyderabad', text: 'Very trustworthy and ethical work. Price was fair and service was top-notch.' }
+    ],
+    spotlight: {
+        title: 'Certified Excellence Standards',
+        desc: 'At Charminar Repairs, we follow a rigorous certification process for every technician. We ensure that your home appliances are handled by experts who understand the engineering behind the brand.'
+    }
 };

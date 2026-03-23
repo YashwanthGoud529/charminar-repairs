@@ -94,7 +94,7 @@ const ServiceAreasContent = ({ locations }) => {
                             const locationSlug = loc.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                             return (
                                 <div key={idx} className="col-6 col-md-4 col-lg-3">
-                                    <Link href={`/appliance-repair-in-${locationSlug}/`} className="text-decoration-none">
+                                    <Link href={`/service-areas/${locationSlug}/`} className="text-decoration-none">
                                         <div className="loc-card-v premium shadow-sm bg-white border border-light p-4">
                                             <div className="d-flex justify-content-between align-items-center mb-3">
                                                 <div className="status-dot"></div>

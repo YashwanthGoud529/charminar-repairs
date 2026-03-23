@@ -125,43 +125,39 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#673ab7" />
-        {/* Preconnect for third-party domains */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://img.icons8.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         
-        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-        <link rel="dns-prefetch" href="https://img.icons8.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
-        {/* Preload LCP image (logo) */}
-        <link rel="preload" href="/images/charminar-repairs-logo.png" as="image" type="image/png" />
+        {/* FontAwesome - High Reliability Link */}
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        />
         
-        {/* Preload and non-blocking CSS */}
-        {/* Bootstrap CSS imported via globals.css or layout.jsx */}
-        
-        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        {/* Preload Logo for LCP */}
+        <link rel="preload" href="/images/charminar-repairs-logo.png" as="image" />
         
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WBWPP63W');`,
-          }}
-        />
       </head>
       <body className="home">
-        {/* Google Tag Manager (noscript) */}
+        {/* Google Tag Manager (Script version handled by next/script for optimization) */}
+        <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+                __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WBWPP63W');`,
+            }}
+        />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WBWPP63W"
@@ -171,7 +167,7 @@ export default function RootLayout({ children }) {
             title="Google Tag Manager"
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        
         <StyledJsxRegistry>
           <Providers>
             <MainLayoutWrapper>

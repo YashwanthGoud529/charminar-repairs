@@ -41,11 +41,11 @@ const AdminSidebar = ({ activeTab, onTabChange, onLogout, isOpen, onClose }) => 
                         <span className="fw-bold">Manage Services</span>
                     </div>
                     <div
-                        className={`admin-nav-item w-100 ${activeTab === 'applications' ? 'active' : ''}`}
-                        onClick={() => onTabChange('applications')}
+                        className={`admin-nav-item w-100 ${activeTab === 'partners' ? 'active' : ''}`}
+                        onClick={() => onTabChange('partners')}
                     >
-                        <img src="/images/img_icons8_com_3d_fluency_94_conference_png.png" alt="applications" width="30" height="30" />
-                        <span className="fw-bold">Career Applications</span>
+                        <img src="/images/img_icons8_com_3d_fluency_94_conference_png.png" alt="partners" width="30" height="30" />
+                        <span className="fw-bold">Verified Partners</span>
                     </div>
 
                     <div className="sidebar-divider my-3 opacity-25"></div>

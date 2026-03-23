@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -118,17 +119,30 @@ const MostBookedServices = () => {
                     }}
                     style={{ padding: '10px 0' }}
                 >
-                    {SERVICES.map(service => (
+                    {SERVICES.map((service, index) => (
                         <SwiperSlide key={service.id}>
                             <Link href={service.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <div className="shared-carousel-card most-booked-card" style={{ cursor: 'pointer' }}>
-                                    <div className="img-wrapper">
-                                        <img src={service.image} alt={service.alt} loading="lazy" />
+                                    <div className="img-wrapper" style={{ position: 'relative', height: '200px', width: '100%' }}>
+                                        <Image 
+                                            src={service.image} 
+                                            alt={service.alt} 
+                                            fill
+                                            style={{ objectFit: 'cover', borderRadius: '8px' }}
+                                            sizes="(max-width: 600px) 66vw, (max-width: 1024px) 40vw, 20vw"
+                                            priority={index < 4}
+                                        />
                                     </div>
                                     <div className="service-details">
                                         <h3 className="service-title">{service.title}</h3>
                                         <div className="service-rating">
-                                            <img src="/assets/Images/star.png" alt="star" className="rating-star" /> {service.rating}
+                                            <Image 
+                                                src="/assets/Images/star.png" 
+                                                alt="star" 
+                                                width={14} 
+                                                height={14} 
+                                                className="rating-star" 
+                                            /> {service.rating}
                                         </div>
                                         <div className="service-price">
                                             {service.price}

@@ -29,6 +29,12 @@ export const SERVICE_CANONICAL_MAP = {
     'Electrical work': 'electrical-services',
     'Carpenter work': 'carpenter-services',
     'Bird Netting': 'bird-netting',
+    'Invisible Grille': 'invisible-grille',
+    'Mosquito Mesh': 'mosquito-mesh',
+    'Honeycomb Blinds': 'honeycomb-blinds',
+    'Zip Screen': 'zip-screen',
+    'Modern Pergola': 'modern-pergola',
+    'Safety Mesh': 'safety-mesh',
 };
 
 export const CANONICAL_SLUGS = Object.values(SERVICE_CANONICAL_MAP);
@@ -41,7 +47,8 @@ export const HOME_PAGE_SLUGS = [
     'pedicure-service', 'decor-installation', 'washing-machine-checkup',
     'mosquito-control', 'termite-control', 'woodborer-control', 'commercial-pest-control',
     'bed-bugs-control', 'cockroach-control',
-    'plumbing-services', 'electrical-services', 'carpenter-services', 'bird-netting'
+    'plumbing-services', 'electrical-services', 'carpenter-services', 'bird-netting',
+    'invisible-grille', 'mosquito-mesh', 'honeycomb-blinds', 'zip-screen', 'modern-pergola', 'safety-mesh'
 ];
 
 export const getServiceSlug = (name) => {

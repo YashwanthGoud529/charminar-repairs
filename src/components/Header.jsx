@@ -118,6 +118,7 @@ const Header = () => {
                                 <li><Link href="/service-areas" className={isActive('/service-areas') ? 'active' : ''}>Areas</Link></li>
                                 <li><Link href="/blog" className={isActive('/blog') ? 'active' : ''}>Blog</Link></li>
                                 <li><Link href="/contact-us" className={isActive('/contact-us') ? 'active' : ''}>Contact</Link></li>
+                                <li className="ms-lg-3"><Link href="/careers" className="partner-btn-v3"><i className="fas fa-handshake"></i> Want to be a Partner?</Link></li>
                             </ul>
                         </div>
 
@@ -201,6 +202,7 @@ const Header = () => {
                         <li><Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)}>Pricing Card</Link></li>
                         <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link></li>
                         <li><Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>Contact Experts</Link></li>
+                        <li className="mt-4"><Link href="/careers" className="partner-btn-v3 w-100 justify-content-center" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-handshake"></i> Want to be a Partner?</Link></li>
                     </ul>
                 </div>
             </div>

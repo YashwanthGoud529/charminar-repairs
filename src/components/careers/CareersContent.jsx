@@ -13,9 +13,12 @@ const CareersContent = ({ careersSchema }) => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
+        whatsapp: '',
         specialization: '',
         experience: '',
-        location: ''
+        location: '',
+        upi: '',
+        password: '' // For login later
     });
 
     const hyderabadAreas = [
@@ -45,54 +48,18 @@ const CareersContent = ({ careersSchema }) => {
     ].sort();
 
     const jobs = [
-        {
-            title: "Washing Machine Specialist",
-            icon: "/images/washing_machine_icon.png",
-            desc: "Expert solutions for all types of washing machines across Hyderabad.",
-            category: "Technical"
-        },
-        {
-            title: "Refrigerator Repair Pro",
-            icon: "/images/refrigerator_icon.png",
-            desc: "Join our team of fridge experts fixing all major brands and models.",
-            category: "Technical"
-        },
-        {
-            title: "AC Technical Expert",
-            icon: "/images/ac_icon.png",
-            desc: "Specialized in installation, gas charging, and maintenance of AC units.",
-            category: "Technical"
-        },
-        {
-            title: "TV Repair Specialist",
-            icon: "/images/tv_icon.png",
-            desc: "Fixing display and sound issues for LED/LCD and Smart TVs.",
-            category: "Technical"
-        },
-        {
-            title: "Electrical Wiring Expert",
-            icon: "/images/img_icons8_com_fluency_94_electrical_sensor_png.png",
-            desc: "Safe and reliable house wiring and electrical repairs.",
-            category: "Technical"
-        },
-        {
-            title: "Microwave Oven Expert",
-            icon: "/images/microwave_icon.png",
-            desc: "Handling heating and circuit issues for all microwave types.",
-            category: "Technical"
-        },
-        {
-            title: "Dishwasher Specialist",
-            icon: "/images/dishwasher_icon.png",
-            desc: "Restoring efficiency to modern kitchens with expert dishwasher repair.",
-            category: "Technical"
-        },
-        {
-            title: "AMC Coordinator",
-            icon: "/images/gas_stove_icon.png",
-            desc: "Managing preventive maintenance contracts for loyal clients.",
-            category: "Admin"
-        }
+        { title: 'Washing Machine Specialist', icon: 'fas fa-soap', color: '#03a9f4', category: 'Technical' },
+        { title: 'Refrigerator Repair Pro', icon: 'fas fa-snowflake', color: '#2196f3', category: 'Technical' },
+        { title: 'AC Technical Expert', icon: 'fas fa-wind', color: '#00bcd4', category: 'Technical' },
+        { title: 'TV Repair Specialist', icon: 'fas fa-tv', color: '#607d8b', category: 'Technical' },
+        { title: 'Electrical Wiring Expert', icon: 'fas fa-bolt', color: '#ffc107', category: 'Technical' },
+        { title: 'Microwave/Oven Expert', icon: 'fas fa-cloud-sun', color: '#ff5722', category: 'Technical' },
+        { title: 'Water Purifier Specialist', icon: 'fas fa-faucet-drip', color: '#009688', category: 'Technical' },
+        { title: 'Dishwasher Technician', icon: 'fas fa-utensils', color: '#3f51b5', category: 'Technical' },
+        { title: 'Kitchen Chimney Pro', icon: 'fas fa-fan', color: '#795548', category: 'Technical' },
+        { title: 'Geyser & Heater Expert', icon: 'fas fa-hot-tub-person', color: '#f44336', category: 'Technical' },
+        { title: 'Laptop & IT Support', icon: 'fas fa-laptop', color: '#673ab7', category: 'Technical' },
+        { title: 'Solar Water Heater Tech', icon: 'fas fa-sun', color: '#ff9800', category: 'Technical' }
     ];
 
     const handleSubmit = async (e) => {
@@ -100,16 +67,19 @@ const CareersContent = ({ careersSchema }) => {
         setFormStatus('submitting');
         
         try {
-            await addDoc(collection(db, 'job_applications'), {
+            await addDoc(collection(db, 'partners'), {
                 ...formData,
                 date: new Date().toLocaleString(),
                 createdAt: serverTimestamp(),
-                status: 'Pending'
+                status: 'Applied',
+                isVerified: false,
+                rating: 5.0,
+                jobsCompleted: 0
             });
 
             setFormStatus('');
-            toast.success("Application submitted successfully!");
-            setFormData({ name: '', phone: '', specialization: '', experience: '', location: '' });
+            toast.success("Registration successful! You can now login to your partner portal.");
+            setFormData({ name: '', phone: '', whatsapp: '', specialization: '', experience: '', location: '', upi: '', password: '' });
         } catch (error) {
             console.error('Error submitting application:', error);
             setFormStatus('');
@@ -119,116 +89,198 @@ const CareersContent = ({ careersSchema }) => {
     const isSubmitting = formStatus === 'submitting';
 
     return (
-        <main className="careers-page-v3">
+        <main className="careers-page-v3 bg-light min-vh-100">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(careersSchema) }}
             />
             
             <PageHero
-                title="Elevate Your Career with Charminar Repairs"
-                subtitle="Join the most trusted appliance repair network in Hyderabad. We're looking for passionate experts to serve our 50,000+ happy customers across the city."
-                breadcrumb="Join Our Team"
+                title="Empower Your Service Business"
+                subtitle="Join Hyderabad's most transparent and reliable repair network. Empowering 500+ local experts with steady high-ticket bookings and seamless digital management."
+                breadcrumb="Partner Program"
             />
 
-            <section className="careers-main py-5 mt-5">
-                <div className="container-fluid px-lg-5">
-                    <div className="row g-5">
-                        <div className="col-xl-8">
-                            <div className="section-head mb-5">
-                                <h2 className="display-6 fw-bold text-dark">Open <span className="text-orange">Positions</span></h2>
-                                <p className="text-muted">Strategic roles available for expert technicians in all Hyderabad areas.</p>
+            <section className="careers-main py-5">
+                <div className="container px-4 px-lg-0">
+                    {/* Top Stats/Status bar */}
+                    <div className="bg-white p-4 rounded-4 shadow-sm border mb-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between gap-4">
+                        <div className="d-flex align-items-center gap-4">
+                            <div className="p-3 bg-primary bg-opacity-10 rounded-circle"><i className="fas fa-users text-primary fs-4"></i></div>
+                            <div>
+                                <h6 className="fw-bold mb-0">500+ Active Partners</h6>
+                                <p className="text-muted small mb-0">Across Hyderabad & Secunderabad</p>
                             </div>
-                            
-                            <div className="row g-4">
+                        </div>
+                        <div className="d-flex align-items-center gap-4">
+                            <div className="p-3 bg-success bg-opacity-10 rounded-circle"><i className="fas fa-wallet text-success fs-4"></i></div>
+                            <div>
+                                <h6 className="fw-bold mb-0">₹45,000+ Avg. Earnings</h6>
+                                <p className="text-muted small mb-0">Top technicians earn significantly more</p>
+                            </div>
+                        </div>
+                        <Link href="/partner/login" className="btn btn-outline-dark fw-bold px-4 py-3" style={{ borderRadius: '12px' }}>
+                            <i className="fas fa-user-circle me-2"></i> Partner Login
+                        </Link>
+                    </div>
+
+                    <div className="row g-5">
+                        <div className="col-xl-7">
+                                <div className="section-head mb-5">
+                                    <h2 className="display-6 fw-bold text-dark">Why <span className="text-primary">Join Us?</span></h2>
+                                <p className="text-muted fs-5">We provide a high-growth ecosystem for professional technicians.</p>
+                            </div>
+
+                            <div className="row g-4 mb-5">
+                                {[
+                                    { t: 'Zero Marketing Spend', d: 'Stop paying for expensive ads. We handle the 50,000+ monthly traffic.', i: 'fas fa-chart-line', c: 'bg-primary' },
+                                    { t: 'Instant Digital Payments', d: 'Receive settlements within 24-48 hours. No manual follow-ups needed.', i: 'fas fa-wallet', c: 'bg-success' },
+                                    { t: 'Flexible Area Control', d: 'Choose your preferred working radius. No mandatory travel.', i: 'fas fa-map-marker-alt', c: 'bg-warning' },
+                                    { t: 'Training & Support', d: 'Access deep-tech training in modern appliances and 24/7 support.', i: 'fas fa-graduation-cap', c: 'bg-danger' }
+                                ].map((b, idx) => (
+                                    <div key={idx} className="col-md-6">
+                                        <div className="bg-white p-4 p-lg-5 rounded-4 border h-100 shadow-sm hover-translate transition">
+                                            <div className={`${b.c} bg-opacity-10 p-4 d-inline-block rounded-circle mb-4`}>
+                                                <i className={`${b.i} text-${b.c.split('-')[1]} fs-3`}></i>
+                                            </div>
+                                            <h4 className="fw-bold mb-3">{b.t}</h4>
+                                            <p className="text-muted fs-6 mb-0">{b.d}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="bg-dark text-white p-5 rounded-4 shadow-lg position-relative overflow-hidden mb-5 gradient-dark-card border border-warning border-opacity-25">
+                                <div className="z-2 position-relative">
+                                    <h3 className="fw-bold mb-3 d-flex align-items-center gap-3">
+                                        <div className="bg-warning bg-opacity-10 p-3 rounded-circle">
+                                            <i className="fas fa-rocket text-warning"></i>
+                                        </div>
+                                        Partner Growth Track
+                                    </h3>
+                                    <p className="text-white-50 mb-4 fs-5 max-w-lg">Become a "Gold-Certified" partner and unlock early access to luxury appliance bookings.</p>
+                                    <div className="d-flex flex-wrap gap-4">
+                                        <div className="badge bg-white bg-opacity-10 py-3 px-4 rounded-pill d-flex align-items-center gap-2 fs-6"><i className="fas fa-check-circle text-success font-size-medium"></i> Verified Profile</div>
+                                        <div className="badge bg-white bg-opacity-10 py-3 px-4 rounded-pill d-flex align-items-center gap-2 fs-6"><i className="fas fa-check-circle text-success font-size-medium"></i> Performance Bonus</div>
+                                        <div className="badge bg-white bg-opacity-10 py-3 px-4 rounded-pill d-flex align-items-center gap-2 fs-6"><i className="fas fa-check-circle text-success font-size-medium"></i> Gear Support</div>
+                                    </div>
+                                </div>
+                                <div className="position-absolute top-50 end-0 translate-middle-y opacity-10 pe-5 d-none d-lg-block">
+                                    <i className="fas fa-handshake fa-8x"></i>
+                                </div>
+                            </div>
+
+                            <h4 className="fw-bold mb-4">Required Expertise</h4>
+                            <div className="row g-3">
                                 {jobs.map((job, idx) => (
-                                    <div key={idx} className="col-md-6 col-xl-3">
-                                        <div className="premium-job-card p-4 border rounded shadow-sm hover-premium h-100 d-flex flex-column">
-                                            <div className="card-icon mb-3">
-                                                <img src={job.icon} alt={job.title} width="50" height="50" />
+                                    <div key={idx} className="col-6 col-md-4">
+                                        <div className="bg-white p-3 border rounded-3 shadow-sm d-flex align-items-center gap-3 hover-shadow transition h-100">
+                                            <div className="p-2 rounded-2 d-flex align-items-center justify-content-center" style={{ background: `${job.color}15`, color: job.color, width: 40, height: 40 }}>
+                                                <i className={job.icon}></i>
                                             </div>
-                                            <h5 className="fw-bold mb-2" style={{ fontSize: '1.1rem' }}>{job.title}</h5>
-                                            <p className="text-muted small mb-4 flex-grow-1">{job.desc}</p>
-                                            <div className="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
-                                                <span className="badge-category">{job.category}</span>
-                                                <a href="#apply-form" className="apply-link">Apply Now <i className="fas fa-arrow-right ms-1"></i></a>
-                                            </div>
+                                            <span className="small fw-bold text-dark">{job.title}</span>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="col-xl-4">
+                        <div className="col-xl-5">
                             <div className="sticky-top" style={{ top: '120px' }} id="apply-form">
-                                <div className="application-glass-card p-5 border rounded shadow-lg overflow-hidden position-relative">
-                                    <div className="glass-overlay"></div>
-                                    <div className="position-relative z-index-1">
-                                        <h3 className="fw-bold mb-4 text-dark">Quick Application</h3>
-                                        <form onSubmit={handleSubmit} className="custom-form">
-                                            <div className="form-floating mb-3">
-                                                <input 
-                                                    type="text" 
-                                                    className="form-control" 
-                                                    id="userName" 
-                                                    placeholder="Name" 
-                                                    required 
-                                                    value={formData.name}
-                                                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                                                />
-                                                <label htmlFor="userName">Full Name</label>
+                                <div className="application-glass-card bg-white p-4 p-lg-5 rounded-4 shadow-2xl border-0">
+                                    <div className="text-center mb-5">
+                                        <div className="d-inline-flex bg-primary bg-opacity-10 p-4 rounded-circle mb-4">
+                                            <i className="fas fa-users-cog fs-1 text-primary"></i>
+                                        </div>
+                                        <h2 className="fw-bold text-dark mb-2">Partner Onboarding</h2>
+                                        <p className="text-muted fs-5">Start your professional growth today.</p>
+                                    </div>
+                                        <div className="form-floating mb-3">
+                                            <input 
+                                                type="text" 
+                                                className="form-control" 
+                                                id="userName" 
+                                                placeholder="Name" 
+                                                required 
+                                                value={formData.name}
+                                                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                                            />
+                                            <label htmlFor="userName">Full Name</label>
+                                        </div>
+                                        <div className="row g-2 mb-3">
+                                            <div className="col-md-6">
+                                                <div className="form-floating">
+                                                    <input 
+                                                        type="tel" 
+                                                        className="form-control" 
+                                                        id="userPhone" 
+                                                        placeholder="800..." 
+                                                        required 
+                                                        value={formData.phone}
+                                                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                                                    />
+                                                    <label htmlFor="userPhone">Mobile No.</label>
+                                                </div>
                                             </div>
-                                            <div className="form-floating mb-3">
-                                                <input 
-                                                    type="tel" 
-                                                    className="form-control" 
-                                                    id="userPhone" 
-                                                    placeholder="800..." 
-                                                    required 
-                                                    value={formData.phone}
-                                                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                                                />
-                                                <label htmlFor="userPhone">Mobile Number</label>
+                                            <div className="col-md-6">
+                                                <div className="form-floating">
+                                                    <input 
+                                                        type="tel" 
+                                                        className="form-control" 
+                                                        id="userWhatsapp" 
+                                                        placeholder="800..." 
+                                                        value={formData.whatsapp}
+                                                        onChange={(e) => setFormData({...formData, whatsapp: e.target.value})}
+                                                    />
+                                                    <label htmlFor="userWhatsapp">WhatsApp No.</label>
+                                                </div>
                                             </div>
-                                            <div className="form-floating mb-3">
-                                                <select 
-                                                    className="form-select" 
-                                                    id="specialization" 
-                                                    required
-                                                    value={formData.specialization}
-                                                    onChange={(e) => setFormData({...formData, specialization: e.target.value})}
-                                                >
-                                                    <option value="">Select Category</option>
-                                                    <option value="Washing Machine">Washing Machine Repair</option>
-                                                    <option value="Fridge">Refrigerator Repair</option>
-                                                    <option value="AC">AC Repair</option>
-                                                    <option value="TV">TV Repair</option>
-                                                    <option value="Electrical">House Wiring</option>
-                                                    <option value="Other">Other Specialist</option>
-                                                </select>
-                                                <label htmlFor="specialization">Your Specialty</label>
-                                            </div>
-                                            <div className="form-floating mb-3">
-                                                <input 
-                                                    type="text" 
-                                                    className="form-control" 
-                                                    id="userArea" 
-                                                    list="area-list"
-                                                    placeholder="Select Area" 
-                                                    required 
-                                                    value={formData.location}
-                                                    onChange={(e) => setFormData({...formData, location: e.target.value})}
-                                                />
-                                                <label htmlFor="userArea">Hyderabad Area (Malkajgiri, Medchal, etc.)</label>
-                                                <datalist id="area-list">
-                                                    {hyderabadAreas.map((area, i) => (
-                                                        <option key={i} value={area} />
-                                                    ))}
-                                                </datalist>
-                                            </div>
+                                        </div>
 
-                                            <div className="form-group mb-4">
-                                                <div className="form-floating mb-3">
+                                        <div className="form-floating mb-3">
+                                            <select 
+                                                className="form-select" 
+                                                id="specialization" 
+                                                required
+                                                value={formData.specialization}
+                                                onChange={(e) => setFormData({...formData, specialization: e.target.value})}
+                                            >
+                                                <option value="">Select Primary Specialty</option>
+                                                <option value="Washing Machine">Washing Machine Specialist</option>
+                                                <option value="Fridge">Refrigerator Repair Pro</option>
+                                                <option value="AC">AC Technical Expert</option>
+                                                <option value="TV">TV Repair Specialist</option>
+                                                <option value="Electrical">House Wiring Expert</option>
+                                                <option value="Microwave">Microwave/Oven Expert</option>
+                                                <option value="Water Purifier">Water Purifier Specialist</option>
+                                                <option value="Dishwasher">Dishwasher Technical</option>
+                                                <option value="Other">Other Specialist</option>
+                                            </select>
+                                            <label htmlFor="specialization">Category Expertise</label>
+                                        </div>
+
+                                        <div className="form-floating mb-3">
+                                            <input 
+                                                type="text" 
+                                                className="form-control" 
+                                                id="userArea" 
+                                                list="area-list"
+                                                placeholder="Select Home Area" 
+                                                required 
+                                                value={formData.location}
+                                                onChange={(e) => setFormData({...formData, location: e.target.value})}
+                                            />
+                                            <label htmlFor="userArea">Operation Area (Hyderabad)</label>
+                                            <datalist id="area-list">
+                                                {hyderabadAreas.map((area, i) => (
+                                                    <option key={i} value={area} />
+                                                ))}
+                                            </datalist>
+                                        </div>
+
+                                        <div className="row g-2 mb-3">
+                                            <div className="col-md-6">
+                                                <div className="form-floating">
                                                     <select 
                                                         className="form-select" 
                                                         id="exp" 
@@ -236,24 +288,50 @@ const CareersContent = ({ careersSchema }) => {
                                                         value={formData.experience}
                                                         onChange={(e) => setFormData({...formData, experience: e.target.value})}
                                                     >
-                                                        <option value="">Experience Level</option>
-                                                        <option value="Fresher">Fresher</option>
+                                                        <option value="">Exp Level</option>
                                                         <option value="1-2 Years">1-2 Years</option>
                                                         <option value="3-5 Years">3-5 Years</option>
                                                         <option value="5-10 Years">5-10 Years</option>
-                                                        <option value="10+ Years">Expert (10+)</option>
+                                                        <option value="10+ Years">Master</option>
                                                     </select>
-                                                    <label htmlFor="exp">Exp. Level</label>
+                                                    <label htmlFor="exp">Experience</label>
                                                 </div>
                                             </div>
-
-                                            <div className="col-12 text-center mt-3 pt-2">
-                                                <button type="submit" className="btn-submit-premium w-100" disabled={isSubmitting}>
-                                                    {isSubmitting ? 'SENDING...' : 'SUBMIT APPLICATION'}
-                                                </button>
+                                            <div className="col-md-6">
+                                                <div className="form-floating">
+                                                    <input 
+                                                        type="text" 
+                                                        className="form-control" 
+                                                        id="userUpi" 
+                                                        placeholder="UPI ID" 
+                                                        value={formData.upi}
+                                                        onChange={(e) => setFormData({...formData, upi: e.target.value})}
+                                                    />
+                                                    <label htmlFor="userUpi">UPI ID (Payments)</label>
+                                                </div>
                                             </div>
-                                        </form>
-                                    </div>
+                                        </div>
+
+                                        <div className="form-floating mb-4">
+                                            <input 
+                                                type="password" 
+                                                className="form-control" 
+                                                id="userPass" 
+                                                placeholder="Password" 
+                                                required 
+                                                value={formData.password}
+                                                onChange={(e) => setFormData({...formData, password: e.target.value})}
+                                            />
+                                            <label htmlFor="userPass">Create Password (For Login)</label>
+                                        </div>
+
+                                        <button type="submit" className="btn btn-primary w-100 py-3 fw-bold shadow-lg" disabled={isSubmitting} style={{ borderRadius: '12px', fontSize: '16px' }}>
+                                            {isSubmitting ? (
+                                                <span className="d-flex align-items-center justify-content-center gap-2 font-size-medium"><i className="fas fa-spinner fa-spin"></i> Registering...</span>
+                                            ) : 'REGISTER AS PARTNER'}
+                                        </button>
+                                        <p className="text-center text-muted border-top pt-3 small mt-3 mb-0">Join 500+ professionals earning ₹45k-₹80k monthly.</p>
+
                                 </div>
                             </div>
                         </div>

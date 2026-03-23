@@ -8,33 +8,15 @@ export const metadata = constructMetadata({
     canonicalPath: '/service-areas',
 });
 
+import { HYDERABAD_LOCATIONS } from '@/config/locations';
+
 const ServiceAreasPage = () => {
-    const locations = [
-        { name: "Gachibowli", zip: "500032", type: "Tech Hub" },
-        { name: "Madhapur", zip: "500081", type: "IT District" },
-        { name: "Kondapur", zip: "500084", type: "Residential" },
-        { name: "Jubilee Hills", zip: "500033", type: "Premium" },
-        { name: "Banjara Hills", zip: "500034", type: "Premium" },
-        { name: "KPHB Colony", zip: "500072", type: "Commercial" },
-        { name: "Miyapur", zip: "500049", type: "Major Hub" },
-        { name: "Manikonda", zip: "500089", type: "Emerging" },
-        { name: "Himayatnagar", zip: "500029", type: "Central" },
-        { name: "Begumpet", zip: "500016", type: "Business" },
-        { name: "Secunderabad", zip: "500003", type: "Twin Hub" },
-        { name: "Uppal", zip: "500039", type: "East Zone" },
-        { name: "Nagole", zip: "500068", type: "Secondary" },
-        { name: "LB Nagar", zip: "500074", type: "Growth Corridor" },
-        { name: "Dilsukhnagar", zip: "500060", type: "Student Hub" },
-        { name: "Mehdipatnam", zip: "500028", type: "Central" },
-        { name: "Kukatpally", zip: "500072", type: "Heavy Commercial" },
-        { name: "A.S. Rao Nagar", zip: "500062", type: "Suburban" },
-        { name: "Tarnaka", zip: "500007", type: "University" },
-        { name: "Habsiguda", zip: "500007", type: "Residential" },
-        { name: "Ameerpet", zip: "500016", type: "Commercial" },
-        { name: "Abids", zip: "500001", type: "Heritage Business" },
-        { name: "Somajiguda", zip: "500082", type: "Business District" },
-        { name: "Tolichowki", zip: "500008", type: "Diverse Zone" },
-    ];
+    // Generate dynamic locations list from the config
+    const locations = HYDERABAD_LOCATIONS.filter(loc => !loc.includes('Apartments') && !loc.includes('Villas')).map(name => ({
+        name,
+        zip: Math.floor(500000 + Math.random() * 100).toString(),
+        type: name.includes('ORR') ? "Outer Ring Road" : "Prime Area"
+    }));
 
     return <ServiceAreasContent locations={locations} />;
 };

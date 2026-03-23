@@ -44,7 +44,7 @@ const AdminPage = () => {
     const router = useRouter();
     // We will use handleSeedData which is already defined and robust.
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [applications, setApplications] = useState([]);
+    const [partners, setPartners] = useState([]);
     const [activeTab, setActiveTab] = useState('leads');
     const [leads, setLeads] = useState([]);
     const [bookings, setBookings] = useState([]);
@@ -53,10 +53,10 @@ const AdminPage = () => {
 
     // Pagination state
     const [leadsPage, setLeadsPage] = useState(1);
-    const [appsPage, setAppsPage] = useState(1);
+    const [partnersPage, setPartnersPage] = useState(1);
     const [bookingsPage, setBookingsPage] = useState(1);
 
-    // Career Applications filters
+    // Career Applications/Partner filters
     const [filterName, setFilterName] = useState('');
     const [filterLocation, setFilterLocation] = useState('');
     const [filterStatus, setFilterStatus] = useState('');
@@ -84,6 +84,8 @@ const AdminPage = () => {
     const [editingServiceItem, setEditingServiceItem] = useState(null);
     const [newServiceItem, setNewServiceItem] = useState({ name: '', price: '', desc: '' });
     const [dbCategories, setDbCategories] = useState([]);
+    const [selectedPartner, setSelectedPartner] = useState(null);
+    const [isPartnerModalOpen, setIsPartnerModalOpen] = useState(false);
 
     const serviceCategories = dbCategories.length > 0 ? dbCategories : Object.keys(SERVICE_DATA_MAP).map(catName => ({
         name: catName,
@@ -96,11 +98,11 @@ const AdminPage = () => {
     ];
 
     useEffect(() => {
-        // Real-time Applications
-        const qApp = query(collection(db, 'job_applications'), orderBy('createdAt', 'desc'));
-        const unsubscribeApp = onSnapshot(qApp, (snapshot) => {
+        // Real-time Partners
+        const qPartner = query(collection(db, 'partners'), orderBy('createdAt', 'desc'));
+        const unsubscribePartner = onSnapshot(qPartner, (snapshot) => {
             const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-            setApplications(data);
+            setPartners(data);
         });
 
         // Real-time Leads
@@ -136,7 +138,7 @@ const AdminPage = () => {
             router.push('/admin/login');
         }
 
-        return () => { unsubscribeApp(); unsubscribeLeads(); unsubscribeBookings(); unsubscribeCats(); };
+        return () => { unsubscribePartner(); unsubscribeLeads(); unsubscribeBookings(); unsubscribeCats(); };
     }, [router]);
 
     const handleTabChange = (tab) => {
@@ -154,7 +156,7 @@ const AdminPage = () => {
             setSelectedServiceCategory('');
             setServiceItems([]);
         } else {
-            setAppsPage(1);
+            setPartnersPage(1);
             setFilterName('');
             setFilterLocation('');
             setFilterStatus('');
@@ -331,21 +333,21 @@ const AdminPage = () => {
     const totalLeadsPages = Math.max(1, Math.ceil(filteredLeads.length / PAGE_SIZE));
     const paginatedLeads = filteredLeads.slice((leadsPage - 1) * PAGE_SIZE, leadsPage * PAGE_SIZE);
 
-    // Filtered applications
-    const filteredApps = applications.filter(app => {
+    // Filtered partners
+    const filteredPartners = partners.filter(p => {
         const nameMatch = filterName === '' ||
-            (app.name || '').toLowerCase().includes(filterName.toLowerCase());
+            (p.name || '').toLowerCase().includes(filterName.toLowerCase());
         const specialtyMatch = filterSpecialty === '' ||
-            (app.specialization || '').includes(filterSpecialty);
+            (p.specialization || '').includes(filterSpecialty);
         const locationMatch = filterLocation === '' ||
-            (app.location || '').toLowerCase().includes(filterLocation.toLowerCase());
+            (p.location || '').toLowerCase().includes(filterLocation.toLowerCase());
         const statusMatch = filterStatus === '' ||
-            (app.status || 'Pending') === filterStatus;
+            (p.status || 'Applied') === filterStatus;
         return nameMatch && specialtyMatch && locationMatch && statusMatch;
     });
 
-    const totalAppsPages = Math.max(1, Math.ceil(filteredApps.length / PAGE_SIZE));
-    const paginatedApps = filteredApps.slice((appsPage - 1) * PAGE_SIZE, appsPage * PAGE_SIZE);
+    const totalPartnersPages = Math.max(1, Math.ceil(filteredPartners.length / PAGE_SIZE));
+    const paginatedPartners = filteredPartners.slice((partnersPage - 1) * PAGE_SIZE, partnersPage * PAGE_SIZE);
 
     // Filtered bookings
     const totalBookingsPages = Math.max(1, Math.ceil(bookings.length / PAGE_SIZE));
@@ -376,7 +378,7 @@ const AdminPage = () => {
                         <h1 className="fw-extrabold text-dark-blue display-6 mb-2 tracking-tight">
                             {activeTab === 'leads' ? 'Service Leads' : 
                              activeTab === 'bookings' ? 'Cart Orders' : 
-                             activeTab === 'applications' ? 'Career Applications' : 'Service Management'}
+                             activeTab === 'partners' ? 'Partner Network' : 'Service Management'}
                             <span className="text-orange ms-2">Hub</span>
                         </h1>
                         <p className="text-muted fs-5 mb-0 d-flex align-items-center gap-2">
@@ -440,11 +442,11 @@ const AdminPage = () => {
                             <>
                                 <div className="stat-card">
                                     <div className="stat-icon blue">
-                                        <img src="/images/group_icon.png" alt="applicants" width="40" height="40" />
+                                        <img src="/images/group_icon.png" alt="partners" width="40" height="40" />
                                     </div>
                                     <div className="stat-info">
-                                        <h4>TOTAL APPLICANTS</h4>
-                                        <h2>{applications.length}</h2>
+                                        <h4>TOTAL PARTNERS</h4>
+                                        <h2>{partners.length}</h2>
                                     </div>
                                 </div>
                                 <div className="stat-card">
@@ -452,17 +454,17 @@ const AdminPage = () => {
                                         <img src="/images/clock_icon.png" alt="pending" width="40" height="40" />
                                     </div>
                                     <div className="stat-info">
-                                        <h4>PENDING REVIEWS</h4>
-                                        <h2>{applications.filter(a => !a.status || a.status === 'Pending').length}</h2>
+                                        <h4>PENDING APPROVAL</h4>
+                                        <h2>{partners.filter(a => a.status === 'Applied').length}</h2>
                                     </div>
                                 </div>
                                 <div className="stat-card text-success">
                                     <div className="stat-icon green">
-                                        <img src="/images/ok_icon.png" alt="hired" width="40" height="40" />
+                                        <img src="/images/ok_icon.png" alt="verified" width="40" height="40" />
                                     </div>
                                     <div className="stat-info">
-                                        <h4>HIRED EXPERTS</h4>
-                                        <h2>{applications.filter(a => a.status === 'Hired').length}</h2>
+                                        <h4>VERIFIED EXPERTS</h4>
+                                        <h2>{partners.filter(a => a.isVerified).length}</h2>
                                     </div>
                                 </div>
                             </>
@@ -472,13 +474,13 @@ const AdminPage = () => {
 
                 <div className="table-card admin-dashboard" style={{ display: activeTab === 'services' ? 'none' : 'block' }}>
                     <div className="table-header">
-                        <h3>{activeTab === 'leads' ? 'Recent Service Leads' : activeTab === 'bookings' ? 'Cart Orders' : 'Career Applications'}</h3>
+                        <h3>{activeTab === 'leads' ? 'Recent Service Leads' : activeTab === 'bookings' ? 'Cart Orders' : 'Service Expert Network'}</h3>
                         <div className="d-flex align-items-center gap-2">
                             <span className="badge bg-light text-dark px-3 py-2 border" style={{borderRadius: 8}}>
-                                {activeTab === 'leads' ? filteredLeads.length : activeTab === 'bookings' ? bookings.length : filteredApps.length} Records
+                                {activeTab === 'leads' ? filteredLeads.length : activeTab === 'bookings' ? bookings.length : filteredPartners.length} Records
                             </span>
                             <span className="badge border px-3 py-2" style={{borderRadius: 8, background: 'linear-gradient(135deg,#FF512F,#F09819)', color: '#fff', fontSize: 12}}>
-                                Page {activeTab === 'leads' ? leadsPage : activeTab === 'bookings' ? bookingsPage : appsPage} / {activeTab === 'leads' ? totalLeadsPages : activeTab === 'bookings' ? totalBookingsPages : totalAppsPages}
+                                Page {activeTab === 'leads' ? leadsPage : activeTab === 'bookings' ? bookingsPage : partnersPage} / {activeTab === 'leads' ? totalLeadsPages : activeTab === 'bookings' ? totalBookingsPages : totalPartnersPages}
                             </span>
                         </div>
                     </div>
@@ -539,38 +541,43 @@ const AdminPage = () => {
                         </div>
                     )}
 
-                    {/* Career Applications Filters */}
-                    {activeTab === 'applications' && (
+                    {/* Partner Network Filters */}
+                    {activeTab === 'partners' && (
                         <div className="admin-filter-bar">
                             <div className="filter-item">
-                                <label>👤 Name</label>
+                                <label>👤 Expert Name</label>
                                 <input
                                     type="text"
                                     placeholder="Search name..."
                                     value={filterName}
-                                    onChange={e => { setFilterName(e.target.value); setAppsPage(1); }}
+                                    onChange={e => { setFilterName(e.target.value); setPartnersPage(1); }}
                                     className="filter-input"
                                 />
                             </div>
                             <div className="filter-item">
-                                <label>🎯 Specialty</label>
+                                <label>🎯 Category</label>
                                 <select 
                                     className="filter-input"
                                     value={filterSpecialty}
-                                    onChange={e => { setFilterSpecialty(e.target.value); setAppsPage(1); }}
+                                    onChange={e => { setFilterSpecialty(e.target.value); setPartnersPage(1); }}
                                 >
-                                    <option value="">All Specialty</option>
-                                    {specialtyOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                                    <option value="">All Categories</option>
+                                    <option value="Washing Machine">Washing Machine</option>
+                                    <option value="Fridge">Fridge</option>
+                                    <option value="AC">AC</option>
+                                    <option value="TV">TV</option>
+                                    <option value="Electrical">Electrical</option>
+                                    <option value="Water Purifier">Water Purifier</option>
                                 </select>
                             </div>
                             <div className="filter-item">
-                                <label>📍 Location</label>
+                                <label>📍 Home Area</label>
                                 <input
                                     type="text"
                                     list="hyderabad-areas-apps"
                                     placeholder="Search location..."
                                     value={filterLocation}
-                                    onChange={e => { setFilterLocation(e.target.value); setAppsPage(1); }}
+                                    onChange={e => { setFilterLocation(e.target.value); setPartnersPage(1); }}
                                     className="filter-input"
                                     autoComplete="off"
                                 />
@@ -579,20 +586,20 @@ const AdminPage = () => {
                                 </datalist>
                             </div>
                             <div className="filter-item">
-                                <label>⚡ Status</label>
+                                <label>⚡ Work Status</label>
                                 <select
                                     value={filterStatus}
-                                    onChange={e => { setFilterStatus(e.target.value); setAppsPage(1); }}
+                                    onChange={e => { setFilterStatus(e.target.value); setPartnersPage(1); }}
                                     className="filter-input"
                                 >
                                     <option value="">All Status</option>
-                                    <option value="Pending">Pending</option>
-                                    <option value="Hired">Hired</option>
+                                    <option value="Applied">Applied</option>
+                                    <option value="Approved">Approved</option>
                                     <option value="Rejected">Rejected</option>
                                 </select>
                             </div>
                             {(filterName || filterSpecialty || filterLocation || filterStatus) && (
-                                <button className="filter-clear-btn" onClick={() => { setFilterName(''); setFilterSpecialty(''); setFilterLocation(''); setFilterStatus(''); setAppsPage(1); }}>
+                                <button className="filter-clear-btn" onClick={() => { setFilterName(''); setFilterSpecialty(''); setFilterLocation(''); setFilterStatus(''); setPartnersPage(1); }}>
                                     ✕ Clear
                                 </button>
                             )}
@@ -736,34 +743,56 @@ const AdminPage = () => {
                                     <thead className="bg-light-blue fw-bold text-dark">
                                         <tr>
                                             <th className="py-3 px-4">Applied Date</th>
-                                            <th className="py-3 px-4">Applicant Profile</th>
-                                            <th className="py-3 px-4">Contact Info</th>
-                                            <th className="py-3 px-4">Specialization</th>
-                                            <th className="py-3 px-4">Location</th>
-                                            <th className="py-3 px-4 text-center">Decision</th>
+                                            <th className="py-3 px-4">Expert Profile</th>
+                                            <th className="py-3 px-4">Technical Details</th>
+                                            <th className="py-3 px-4">Payment &amp; Loc</th>
+                                            <th className="py-3 px-4 text-center">Admin Controls</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {paginatedApps.map((app) => (
-                                            <tr key={app.id} className="animate-fade-in">
-                                                <td className="py-3 px-4 text-muted small fw-bold">{app.date}</td>
+                                        {paginatedPartners.map((p) => (
+                                            <tr key={p.id} className="animate-fade-in">
                                                 <td className="py-3 px-4">
-                                                    <div className="fw-bold text-dark mb-1">{app.name}</div>
-                                                    <span className={`badge-status shadow-sm border ${app.status === 'Hired' ? 'bg-success text-white border-success' : app.status === 'Rejected' ? 'bg-danger text-white border-danger' : 'bg-warning text-dark border-warning'}`}>
-                                                        {app.status || 'Under Review'}
-                                                    </span>
+                                                    <div className="text-muted small fw-bold mb-1">{p.date}</div>
+                                                    {p.isVerified ? 
+                                                        <span className="badge bg-soft-success text-success border border-success-subtle rounded-pill small px-2">Verified Expert</span> : 
+                                                        <span className="badge bg-soft-warning text-warning border border-warning-subtle rounded-pill small px-2">Pending Verify</span>
+                                                    }
                                                 </td>
-                                                <td className="py-3 px-4 text-orange fw-bold">{app.phone}</td>
                                                 <td className="py-3 px-4">
-                                                    <div className="fw-bold text-primary">{app.specialization}</div>
-                                                    <div className="text-muted small">{app.experience} Experience</div>
+                                                    <div className="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+                                                        {p.name}
+                                                        {p.isVerified && <i className="fas fa-check-circle text-primary small"></i>}
+                                                    </div>
+                                                    <div className="text-orange small fw-bold d-flex align-items-center gap-2">
+                                                        {p.phone}
+                                                        {p.whatsapp && <a href={`https://wa.me/91${p.whatsapp}`} target="_blank"><i className="fab fa-whatsapp text-success"></i></a>}
+                                                    </div>
                                                 </td>
-                                                <td className="py-3 px-4 text-muted small font-inter">{app.location}</td>
+                                                <td className="py-3 px-4">
+                                                    <div className="fw-bold text-primary">{p.specialization}</div>
+                                                    <div className="text-muted small">
+                                                       {p.experience} Exp | ★ {p.rating || '5.0'}
+                                                    </div>
+                                                </td>
+                                                <td className="py-3 px-4">
+                                                    <div className="fw-bold text-dark-blue small mb-1">{p.location}</div>
+                                                    <div className="text-muted small line-clamp-1" style={{maxWidth: '120px'}} title={p.upi}>UPI: {p.upi || 'N/A'}</div>
+                                                </td>
                                                 <td className="py-3 px-4 text-center">
                                                     <div className="d-flex gap-2 justify-content-center">
-                                                        <button className="btn-icon-admin success shadow-sm" onClick={() => updateStatus('job_applications', app.id, 'Hired')} title="Hire"><img src="/images/ok_icon.png" alt="check" width="18" height="18" /></button>
-                                                        <button className="btn-icon-admin delete shadow-sm" onClick={() => updateStatus('job_applications', app.id, 'Rejected')} title="Reject"><img src="/images/img_icons8_com_3d_fluency_94_cancel_png.png" alt="cancel" width="18" height="18" /></button>
-                                                        <button className="btn-icon-admin shadow-sm" onClick={() => deleteItem('job_applications', app.id)} title="Delete Record"><img src="/images/trash_icon.png" alt="trash" width="18" height="18" /></button>
+                                                        <button 
+                                                            className="btn-icon-admin edit shadow-sm" 
+                                                            onClick={() => { setSelectedPartner(p); setIsPartnerModalOpen(true); }} 
+                                                            title="View Full Details"
+                                                        >
+                                                            <i className="fas fa-eye text-primary"></i>
+                                                        </button>
+                                                        {!p.isVerified && (
+                                                            <button className="btn-icon-admin success shadow-sm" onClick={() => updateDoc(doc(db, 'partners', p.id), { isVerified: true, status: 'Approved' })} title="Verify & Approve"><img src="/images/ok_icon.png" alt="check" width="18" height="18" /></button>
+                                                        )}
+                                                        <button className="btn-icon-admin delete shadow-sm" onClick={() => updateStatus('partners', p.id, 'Rejected')} title="Reject Partner"><img src="/images/img_icons8_com_3d_fluency_94_cancel_png.png" alt="cancel" width="18" height="18" /></button>
+                                                        <button className="btn-icon-admin shadow-sm" onClick={() => deleteItem('partners', p.id)} title="Delete Record Permanently"><img src="/images/trash_icon.png" alt="trash" width="18" height="18" /></button>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -773,7 +802,7 @@ const AdminPage = () => {
                             )}
                         </table>
 
-                        {((activeTab === 'applications' && filteredApps.length === 0) || (activeTab === 'leads' && filteredLeads.length === 0) || (activeTab === 'bookings' && bookings.length === 0)) && (
+                        {((activeTab === 'partners' && filteredPartners.length === 0) || (activeTab === 'leads' && filteredLeads.length === 0) || (activeTab === 'bookings' && bookings.length === 0)) && (
                             <div className="text-center py-5">
                                 <img src="/images/img_icons8_com_3d_fluency_94_empty_box_png.png" alt="empty" style={{width: 48, height: 48, opacity: 0.7}} className="mb-3" />
                                 <p className="text-muted m-0 fw-bold">No records found here.</p>
@@ -796,11 +825,11 @@ const AdminPage = () => {
                             onPageChange={setBookingsPage}
                         />
                     )}
-                    {activeTab === 'applications' && (
+                    {activeTab === 'partners' && (
                         <Pagination
-                            currentPage={appsPage}
-                            totalPages={totalAppsPages}
-                            onPageChange={setAppsPage}
+                            currentPage={partnersPage}
+                            totalPages={totalPartnersPages}
+                            onPageChange={setPartnersPage}
                         />
                     )}
                 </div>
@@ -1017,8 +1046,78 @@ const AdminPage = () => {
                     </div>
                 </div>
             )}
-        </div>
-    );
-};
+                {/* Partner Detail Modal */}
+                {isPartnerModalOpen && selectedPartner && (
+                    <div className="modal-overlay-admin" onClick={() => setIsPartnerModalOpen(false)}>
+                        <div className="modal-content-admin p-0 rounded-4 overflow-hidden border-0 shadow-lg position-relative" onClick={e => e.stopPropagation()} style={{maxWidth: '650px'}}>
+                            <div className="bg-dark p-5 text-white position-relative overflow-hidden">
+                                <button className="btn-close btn-close-white position-absolute" style={{top: '25px', right: '25px', zIndex: 10}} onClick={() => setIsPartnerModalOpen(false)}></button>
+                                <div className="d-flex align-items-center gap-4 position-relative z-2">
+                                     <div className="p-3 bg-primary rounded-circle shadow-lg border border-white border-opacity-10">
+                                         <i className="fas fa-user-tie fa-3x"></i>
+                                     </div>
+                                     <div>
+                                         <h2 className="fw-black mb-1">{selectedPartner.name}</h2>
+                                         <span className={`badge ${selectedPartner.isVerified ? 'bg-success' : 'bg-warning'} px-3 py-2 rounded-pill shadow-sm`}>
+                                             {selectedPartner.isVerified ? 'VERIFIED EXPERT' : 'PENDING REVIEW'}
+                                         </span>
+                                     </div>
+                                </div>
+                                <div className="position-absolute end-0 top-0 opacity-10 pe-5 pt-4">
+                                     <i className="fas fa-shield-alt fa-8x"></i>
+                                </div>
+                            </div>
+                            <div className="p-5 bg-white">
+                                <div className="row g-4 mb-5">
+                                    <div className="col-md-6">
+                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-phone me-1"></i> CONTACT NUMBER</div>
+                                            <div className="fw-extrabold text-dark fs-5">{selectedPartner.phone}</div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fab fa-whatsapp me-1"></i> WHATSAPP</div>
+                                            <div className="fw-extrabold text-success fs-5">{selectedPartner.whatsapp || 'N/A'}</div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-tools me-1"></i> SPECIALTY</div>
+                                            <div className="fw-extrabold text-primary fs-5">{selectedPartner.specialization}</div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-map-marker-alt me-1"></i> WORK LOCATION</div>
+                                            <div className="fw-extrabold text-dark-blue fs-5">{selectedPartner.location}</div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-star me-1"></i> PERFORMANCE RATING</div>
+                                            <div className="fw-extrabold text-warning fs-5">★ {selectedPartner.rating || '5.0'} / 5.0</div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                            <div className="text-muted small fw-bold mb-1 opacity-75"><i className="fas fa-wallet me-1"></i> PAYMENT UPI</div>
+                                            <div className="fw-extrabold text-dark fs-5 truncate">{selectedPartner.upi || 'Not Set'}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="d-flex gap-3">
+                                   {!selectedPartner.isVerified && (
+                                       <button className="btn btn-success flex-grow-1 py-3 fw-bold rounded-3 shadow-md border-0" onClick={() => { updateDoc(doc(db, 'partners', selectedPartner.id), { isVerified: true, status: 'Approved' }); setIsPartnerModalOpen(false); }}>VERIFY & APPROVE</button>
+                                   )}
+                                   <button className="btn btn-outline-danger py-3 fw-bold px-4 rounded-3" onClick={() => { deleteItem('partners', selectedPartner.id); setIsPartnerModalOpen(false); }}>DELETE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+        );
+    };
 
 export default AdminPage;
