@@ -147,7 +147,8 @@ export default async function ServiceLocationPage({ params }) {
     if (!serviceName) return notFound();
 
     // Redirect to canonical URL if needed
-    const canonicalServiceSlug = SERVICE_CANONICAL_MAP[serviceName];
+    // Safety: only redirect if we have a valid canonical slug target
+    const canonicalServiceSlug = SERVICE_CANONICAL_MAP[serviceName] || serviceSlug;
     const locSlug = location ? toSlug(location) : null;
     const currentCanonical = locSlug 
         ? `${canonicalServiceSlug}-in-${locSlug}`
@@ -183,45 +184,24 @@ export default async function ServiceLocationPage({ params }) {
         'provider': {
             '@type': 'LocalBusiness',
             'name': 'Charminar Repairs',
-            'image': '/images/charminar-repairs-logo.png',
             'telephone': '+91-8008615049',
-            'priceRange': '₹100 - ₹5000',
-            'url': 'https://www.charminarrepairs.com',
             'address': {
                 '@type': 'PostalAddress',
                 'streetAddress': 'Karwan',
-                'addressLocality': location || 'Hyderabad',
+                'addressLocality': 'Hyderabad',
                 'addressRegion': 'Telangana',
-                'postalCode': '500006',
                 'addressCountry': 'IN'
-            },
-            'geo': {
-                '@type': 'GeoCoordinates',
-                'latitude': '17.3850',
-                'longitude': '78.4867'
-            },
-            'openingHoursSpecification': {
-                '@type': 'OpeningHoursSpecification',
-                'dayOfWeek': ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-                'opens': '07:00',
-                'closes': '22:00'
-            },
-            'aggregateRating': {
-                '@type': 'AggregateRating',
-                'ratingValue': '4.9',
-                'reviewCount': '10241'
             }
-        },
-        'areaServed': { '@type': 'City', 'name': locLabel },
-        'termsOfService': '180-day service warranty on all repairs',
+        }
     };
 
     return (
-        <div style={{ backgroundColor: '#fcfcfc' }}>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-            
+        <div style={{ backgroundColor: '#fdfdfd' }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Breadcrumbs service={serviceName} location={location} />
-
             <ServiceTemplate
                 title={`${serviceName}${locSuffix}`}
                 description={`Premium doorstep ${serviceName.toLowerCase()} service with certified experts.`}
@@ -229,43 +209,17 @@ export default async function ServiceLocationPage({ params }) {
                 longDescription={longDescription}
                 slug={slug}
             />
-
-            <AboutService serviceName={serviceName} locationLabel={location} />
-
+            <AboutService serviceName={serviceName} locationLabel={loc} />
+            <LocalReviews serviceName={serviceName} locationLabel={loc} />
+            <NearbyLocations serviceSlug={serviceSlug} serviceName={serviceName} currentLocation={location} />
             <FAQ 
-                title={`${serviceName} in ${locLabel} — Frequently Asked Questions`}
+                title={`${serviceName} in ${locLabel} - FAQ`}
                 items={[
-                    {
-                        question: `How much does ${serviceName.toLowerCase()} cost in ${locLabel}?`,
-                        answer: `${serviceName} in ${locLabel} starts at just ₹100 at Charminar Repairs. Our technician performs a free diagnosis on arrival and provides a transparent, no-obligation quote before starting any repair. You only pay after you're satisfied.`
-                    },
-                    {
-                        question: `How quickly can you send a technician to ${loc}?`,
-                        answer: `In ${locLabel}, we typically dispatch a certified technician within 60 minutes of booking. Call us on +91-8008615049 or book online, and we'll confirm your slot instantly. Same-day service is available for most areas in ${loc}.`
-                    },
-                    {
-                        question: `Is the ${serviceName.toLowerCase()} covered under any warranty?`,
-                        answer: `Yes! Every ${serviceName.toLowerCase()} performed by Charminar Repairs in ${locLabel} comes with a comprehensive 180-day service warranty on both parts and labour. If the same issue recurs within 180 days, we fix it absolutely free of charge.`
-                    },
-                    {
-                        question: `Which brands do you repair in ${loc}?`,
-                        answer: `Our technicians in ${locLabel} are trained to service all major brands including LG, Samsung, Whirlpool, IFB, Bosch, Godrej, Haier, Panasonic, Voltas, Daikin, and more. We carry genuine OEM spare parts for all models.`
-                    },
-                    {
-                        question: `Do you offer doorstep service in ${loc}?`,
-                        answer: `Absolutely! Charminar Repairs offers 100% doorstep ${serviceName.toLowerCase()} service across all areas of ${locLabel}. Our technician comes to your home or office — no need to carry your appliance anywhere. We're available 7 AM to 10 PM, 7 days a week including weekends.`
-                    },
-                    {
-                        question: `Why choose Charminar Repairs for ${serviceName.toLowerCase()} in ${locLabel}?`,
-                        answer: `Charminar Repairs is ${loc}'s most trusted appliance repair company with 10,000+ satisfied customers. We offer certified & background-verified technicians, 180-day warranty, genuine spare parts, transparent pricing from ₹100, and 60-minute arrival — all backed by our 100% satisfaction guarantee.`
-                    },
+                    { question: `How much does ${serviceName.toLowerCase()} cost in ${locLabel}?`, answer: `Service visits start at just ₹100. The full repair cost depends on the specific fault and parts replaced.` },
+                    { question: `Do you provide same-day ${serviceName.toLowerCase()} in ${loc}?`, answer: `Yes, we guarantee same-day doorstep service across ${loc} within 60 minutes of booking.` },
+                    { question: "Is there a warranty on repairs?", answer: "Yes, we provide a 180-day comprehensive warranty on all parts and labour." }
                 ]}
             />
-
-            <LocalReviews serviceName={serviceName} locationLabel={location} />
-
-            <NearbyLocations serviceSlug={canonicalServiceSlug || serviceSlug} serviceName={serviceName} currentLocation={location} />
         </div>
     );
 }
-

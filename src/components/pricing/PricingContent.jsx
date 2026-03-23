@@ -39,10 +39,16 @@ const PricingContent = () => {
                 const { db } = await import('@/lib/firebase');
                 const { SERVICE_DATA_MAP } = await import('@/config/serviceData');
 
-                const categories = Object.keys(SERVICE_DATA_MAP).map(catName => ({
-                    name: catName,
-                    slug: catName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-                }));
+                const seenSlugs = new Set();
+                const categories = Object.keys(SERVICE_DATA_MAP).map(catName => {
+                   const slug = catName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                   if (seenSlugs.has(slug)) return null;
+                   seenSlugs.add(slug);
+                   return {
+                       name: catName,
+                       slug: slug
+                   };
+                }).filter(Boolean);
 
                 // Parallel synchronization for all categories
                 const fetchPromises = categories.map(async (cat) => {

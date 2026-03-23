@@ -9,22 +9,37 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import './CarouselShared.css';
 
-const ALL_SERVICES = [
-    { id: 1, image: '/assets/Images/all-services/refrigerator_repair.png', title: 'Refrigerator', slug: '/refrigerator-repairing' },
-    { id: 2, image: '/assets/Images/all-services/washing_machine_repair.png', title: 'Washing Machine', slug: '/washing-machine-repairing' },
-    { id: 3, image: '/assets/Images/all-services/ac_repair_professional.png', title: 'Air Conditioner', slug: '/ac-repairing' },
-    { id: 4, image: '/assets/Images/all-services/tv_repair_professional.png', title: 'Television', slug: '/television-repairing' },
-    { id: 5, image: '/assets/Images/all-services/microwave_repair_professional.png', title: 'Microwave Oven', slug: '/microwave-repairing' },
-    { id: 6, image: '/assets/Images/all-services/ro_purifier_repair_professional.png', title: 'Water Purifier (RO)', slug: '/water-purifier-servicing' },
-    { id: 7, image: '/assets/Images/all-services/geyser_repair_professional.png', title: 'Geyser & Water Heater', slug: '/geyser-repairing' },
-    { id: 8, image: '/images/home-appliances-technician-installing-a-stove.jpg', title: 'Gas Stove & Hob', slug: '/gas-stove-repairing' },
-    { id: 9, image: '/images/istock_a_2248380132.jpg', title: 'Kitchen Chimney', slug: '/kitchen-chimney-servicing' },
-    { id: 10, image: '/images/close-up-of-handyman-in-special-clothing-repairing-dishwasher-in-modern-kitchen.jpg', title: 'Dishwasher', slug: '/dishwasher-repairing' },
-    { id: 11, image: '/images/repairman-checking-professional-coffee-maker-in-cafe.jpg', title: 'Coffee Machine', slug: '/coffee-machine-repairing' },
-    { id: 12, image: '/images/auto-repairman-talking-on-the-phone-while-using-laptop-in-a-workshop-.jpg', title: 'Laptop & Desktop', slug: '/laptop-repairing' }
+import { SERVICE_CANONICAL_MAP } from '@/config/services';
+import { SERVICE_DATA_MAP } from '@/config/serviceData';
+
+const ALL_SECTION_KEYS = [
+    'Refrigerator Repair',
+    'Washing Machine Repair',
+    'Air Conditioner Repair',
+    'Television Repair',
+    'Microwave Oven Repair',
+    'Water Purifier (RO) Service',
+    'Geyser & Water Heater Repair',
+    'Gas Stove & Hob Repair',
+    'Kitchen Chimney Service',
+    'Dishwasher Repair',
+    'Coffee Machine Repair',
+    'Vacuum Cleaner Repair'
 ];
 
 const AllServicesList = () => {
+    const services = ALL_SECTION_KEYS.map(key => {
+        const data = SERVICE_DATA_MAP[key];
+        const slug = SERVICE_CANONICAL_MAP[key];
+        if (!data || !slug) return null;
+        return {
+            id: key,
+            title: key,
+            image: data.photo,
+            slug: `/${slug}/`
+        };
+    }).filter(Boolean);
+
     return (
         <section className="shared-carousel-section py-5 bg-light-soft">
             <div className="container custom-container">
@@ -41,7 +56,7 @@ const AllServicesList = () => {
                     }}
                     className="all-services-swiper"
                 >
-                    {ALL_SERVICES.map(service => (
+                    {services.map(service => (
                         <SwiperSlide key={service.id}>
                             <Link href={service.slug} className="text-decoration-none">
                                 <div className="shared-carousel-card most-booked-card hover-lift">

@@ -1,6 +1,7 @@
 import { HYDERABAD_LOCATIONS } from '@/config/locations';
 import { CANONICAL_SLUGS } from '@/config/services';
 import { SERVICE_DATA_MAP } from '@/config/serviceData';
+import { blogs as allBlogs } from '@/lib/blogs';
 
 export const dynamic = 'force-static';
 
@@ -13,7 +14,14 @@ const toSlug = (str) =>
 
 const CHUNK_SIZE = 5000;
 
-// Gather all slugs once
+// Sort inputs to ensure stable chunking across parallel sitemap requests
+const sortedLocations = [...HYDERABAD_LOCATIONS].sort();
+const sortedBlogs = [...allBlogs].sort((a, b) => a.slug.localeCompare(b.slug));
+
+// Gather unique main categories
+const uniqueCanonicalSlugs = [...new Set(CANONICAL_SLUGS)].sort();
+
+// Gather all unique sub-services
 const subServiceSlugs = [];
 Object.values(SERVICE_DATA_MAP).forEach(service => {
   if (service.subServices) {
@@ -23,12 +31,18 @@ Object.values(SERVICE_DATA_MAP).forEach(service => {
   }
 });
 
-const ALL_SERVICE_SLUGS = [...CANONICAL_SLUGS, ...subServiceSlugs];
+const ALL_SERVICE_SLUGS = [...new Set([...uniqueCanonicalSlugs, ...subServiceSlugs])].sort();
 
 export async function generateSitemaps() {
-  const allPermutations = ALL_SERVICE_SLUGS.length * HYDERABAD_LOCATIONS.length;
-  // Total includes statics, main services, area hubs, and localized pages
-  const totalUrls = allPermutations + 10 + CANONICAL_SLUGS.length + HYDERABAD_LOCATIONS.length;
+  const allPermutations = ALL_SERVICE_SLUGS.length * sortedLocations.length;
+  // Total includes 10 statics, unique categories, unique areas, blogs, and permutations
+  const totalUrls = 
+    10 + 
+    uniqueCanonicalSlugs.length + 
+    sortedLocations.length + 
+    sortedBlogs.length + 
+    allPermutations;
+
   const numChunks = Math.ceil(totalUrls / CHUNK_SIZE);
   
   return Array.from({ length: numChunks }, (_, i) => ({ id: i }));
@@ -49,24 +63,31 @@ export default async function sitemap({ id }) {
     priority: 1.0,
   }));
 
-  const serviceRoutes = CANONICAL_SLUGS.map((slug) => ({
+  const serviceRoutes = uniqueCanonicalSlugs.map((slug) => ({
     url: `${baseUrl}/${slug}/`,
     lastModified,
     changeFrequency: 'weekly',
     priority: 0.9,
   }));
 
-  const areaLandingRoutes = HYDERABAD_LOCATIONS.map((loc) => ({
+  const areaLandingRoutes = sortedLocations.map((loc) => ({
     url: `${baseUrl}/service-areas/${toSlug(loc)}/`,
     lastModified,
     changeFrequency: 'monthly',
     priority: 0.6,
   }));
 
+  const blogRoutes = sortedBlogs.map((blog) => ({
+    url: `${baseUrl}/blog/${blog.slug}/`,
+    lastModified,
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
   // 2. massive Local permutations
   const locationServiceRoutes = [];
   for (const slug of ALL_SERVICE_SLUGS) {
-    for (const location of HYDERABAD_LOCATIONS) {
+    for (const location of sortedLocations) {
       locationServiceRoutes.push({
         url: `${baseUrl}/${slug}-in-${toSlug(location)}/`,
         lastModified,
@@ -76,11 +97,12 @@ export default async function sitemap({ id }) {
     }
   }
 
-  // Combine ALL into a massive list
+  // Combine ALL into a massive list (Order MUST be stable across all chunks)
   const allRoutes = [
     ...staticRoutes,
     ...serviceRoutes,
     ...areaLandingRoutes,
+    ...blogRoutes,
     ...locationServiceRoutes,
   ];
 

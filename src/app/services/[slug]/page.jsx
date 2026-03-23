@@ -4,23 +4,41 @@ import Breadcrumbs from '@/components/services/Breadcrumbs';
 import AboutService from '@/components/services/AboutService';
 import LocalReviews from '@/components/services/LocalReviews';
 import NearbyLocations from '@/components/services/NearbyLocations';
-import { notFound, redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { HYDERABAD_LOCATIONS } from '@/config/locations';
 import { SERVICE_CANONICAL_MAP, CANONICAL_SLUGS, HOME_PAGE_SLUGS } from '@/config/services';
 import { constructMetadata } from '@/components/seo/constructMetadata';
 import FAQ from '@/components/shared/FAQ';
 import { SERVICE_DATA_MAP } from '@/config/serviceData';
 
-// ─── Slug to Title Resolution (Copy from [slug]/page.jsx) ───────────────────
-const SLUG_TO_TITLE = {
-    ...Object.entries(SERVICE_CANONICAL_MAP).reduce((acc, [title, slug]) => ({ ...acc, [slug]: title }), {}),
-    'ac-repairing': 'Air Conditioner Repair',
-    'air-conditioner-service': 'Air Conditioner Repair',
-    'fridge-repairing': 'Refrigerator Repair',
-    'washing-machine-repairing': 'Washing Machine Repair',
-    'ro-repairing': 'Water Purifier (RO) Service',
-    'geyser-repairing': 'Geyser & Water Heater Repair',
+// ─── Slug to Title Resolution (Sync with [slug]/page.jsx) ───────────────────
+const buildSlugMap = () => {
+    const map = {
+        ...Object.entries(SERVICE_CANONICAL_MAP).reduce((acc, [title, slug]) => ({ ...acc, [slug]: title }), {}),
+        'ac-repairing': 'Air Conditioner Repair',
+        'air-conditioner-service': 'Air Conditioner Repair',
+        'fridge-repairing': 'Refrigerator Repair',
+        'refrigerator-repairing': 'Refrigerator Repair',
+        'washing-machine-repairing': 'Washing Machine Repair',
+        'ro-repairing': 'Water Purifier (RO) Service',
+        'water-purifier-servicing': 'Water Purifier (RO) Service',
+        'geyser-repairing': 'Geyser & Water Heater Repair',
+        'chimney-repairing': 'Kitchen Chimney Service',
+    };
+
+    // Add all sub-services from data map
+    Object.values(SERVICE_DATA_MAP).forEach(service => {
+        if (service.subServices) {
+            service.subServices.forEach(sub => {
+                map[sub.id] = sub.name;
+            });
+        }
+    });
+
+    return map;
 };
+
+const SLUG_TO_TITLE = buildSlugMap();
 
 const toSlug = (str) =>
     str

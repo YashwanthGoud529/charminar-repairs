@@ -124,10 +124,10 @@ export default function RootLayout({ children }) {
     <html lang="en-IN" className={`${outfit.variable}`}>
       <head>
         <meta charSet="utf-8" />
-        <meta name="theme-color" content="#673ab7" />
+        {/* <meta name="theme-color" content="#673ab7" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://img.icons8.com" />
+        <link rel="preconnect" href="https://img.icons8.com" /> */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         
         {/* Preload Logo for LCP */}

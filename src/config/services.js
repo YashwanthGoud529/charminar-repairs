@@ -1,4 +1,19 @@
 export const SERVICE_CANONICAL_MAP = {
+    // --- Major Appliances ---
+    'Air Conditioner Repair': 'ac-repairing',
+    'Refrigerator Repair': 'refrigerator-repairing',
+    'Washing Machine Repair': 'washing-machine-repairing',
+    'Television Repair': 'tv-repairing',
+    'Microwave Oven Repair': 'microwave-repairing',
+    'Water Purifier (RO) Service': 'water-purifier-servicing',
+    'Geyser & Water Heater Repair': 'geyser-repairing',
+    'Kitchen Chimney Service': 'chimney-repairing',
+    'Gas Stove & Hob Repair': 'gas-stove-repairing',
+    'Dishwasher Repair': 'dishwasher-repairing',
+    'Coffee Machine Repair': 'coffee-machine-repairing',
+    'Vacuum Cleaner Repair': 'vacuum-cleaner-repairing',
+
+    // --- Special Names used in UI components ---
     'Professional Appliance Repair': 'appliance-repair-services',
     'AC Repairing': 'ac-repairing',
     'Refrigerator Repairing': 'refrigerator-repairing',
@@ -48,9 +63,6 @@ export const SERVICE_CANONICAL_MAP = {
     'Foam-jet AC service': 'foam-jet-ac-service',
     'Intense bathroom cleaning': 'bathroom-cleaning',
     'Intense cleaning (2 bathrooms)': 'bathroom-cleaning',
-    'Water Purifier (RO) Service': 'water-purifier-servicing',
-    'Geyser & Water Heater Repair': 'geyser-repairing',
-    'Kitchen Chimney Service': 'chimney-repairing',
 };
 
 export const CANONICAL_SLUGS = Object.values(SERVICE_CANONICAL_MAP);
