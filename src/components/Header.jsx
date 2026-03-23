@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { SERVICE_CANONICAL_MAP } from '@/config/services';
+import { SERVICE_DATA_MAP } from '@/config/serviceData';
 import { useCartStore } from '@/store/cartStore';
 import LocationSelector from '@/components/shared/LocationSelector';
 
