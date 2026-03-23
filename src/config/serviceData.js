@@ -90,6 +90,10 @@ export const SERVICE_DATA_MAP = {
             '✦ 100% Satisfaction Guarantee',
         ],
         specializations: ['Minor Repairs', 'Instant Help', 'Home Maintenance'],
+        subServices: [
+            { id: 'insta-fix', name: 'Instant Handyman Visit', price: 99, image: '/assets/Images/most-booked/insta-help.jpg', desc: 'Doorstep visit for quick minor home repairs.' },
+            { id: 'insta-electric', name: 'Minor Electrical Fix', price: 149, image: '/assets/Images/most-booked/insta-help.jpg', desc: 'Fixing of switches, sockets or bulbs.' }
+        ]
     },
     'Foam-jet AC service': {
         icon: '/assets/Images/most-booked/foam-jet-ac-service.jpg',
@@ -104,6 +108,10 @@ export const SERVICE_DATA_MAP = {
             '✦ Free 15-Point Safety & Performance Audit',
         ],
         specializations: ['Deep Cleaning', 'Energy Efficiency', 'Odor Control'],
+        subServices: [
+            { id: 'foam-jet-ac', name: 'Foam-jet AC Service', price: 650, image: '/assets/Images/most-booked/foam-jet-ac-service.jpg', desc: '2X deeper cleaning for maximum cooling performance.' },
+            { id: 'foam-jet-combo', name: 'AC Foam-jet + Jet Wash', price: 1199, image: '/assets/Images/most-booked/foam-jet-ac-service.jpg', desc: 'Complete indoor & outdoor deep restoration.' }
+        ]
     },
     'Intense bathroom cleaning': {
         icon: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg',
@@ -118,6 +126,10 @@ export const SERVICE_DATA_MAP = {
             '✦ 100% Guaranteed Mirror-Like Finish',
         ],
         specializations: ['De-scaling', 'Sanitization', 'Stain Removal'],
+        subServices: [
+            { id: 'bath-intense', name: 'Intense Bathroom Cleaning', price: 699, image: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg', desc: '1-bathroom deep cleaning with machines.' },
+            { id: 'bath-premium', name: 'Premium Bathroom Restoration', price: 999, image: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg', desc: 'Detailed scrubbing and descaling with polish.' }
+        ]
     },
     'Air Conditioner Repair': {
         globalDiscount: 16,

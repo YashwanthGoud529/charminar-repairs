@@ -28,7 +28,7 @@ const AdBanner = () => {
                     </div>
 
                     {/* Ultra-Modern Floating Pill Badge */}
-                    <div className="position-absolute w-100 d-flex justify-content-center px-3" style={{ bottom: '25px', pointerEvents: 'none', zIndex: 10 }}>
+                    {/* <div className="position-absolute w-100 d-flex justify-content-center px-3" style={{ bottom: '25px', pointerEvents: 'none', zIndex: 10 }}>
                         <div 
                             className="d-flex align-items-center gap-3 px-4 py-2 rounded-pill shadow-lg" 
                             style={{ 
@@ -53,7 +53,7 @@ const AdBanner = () => {
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

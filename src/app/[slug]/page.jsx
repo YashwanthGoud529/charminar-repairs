@@ -21,10 +21,22 @@ const buildSlugMap = () => {
         'fridge-repairing': 'Refrigerator Repair',
         'refrigerator-repairing': 'Refrigerator Repair',
         'washing-machine-repairing': 'Washing Machine Repair',
+        'television-repairing': 'Television Repair',
+        'tv-repairing': 'Television Repair',
+        'tv-repair': 'Television Repair',
         'ro-repairing': 'Water Purifier (RO) Service',
         'water-purifier-servicing': 'Water Purifier (RO) Service',
         'geyser-repairing': 'Geyser & Water Heater Repair',
         'chimney-repairing': 'Kitchen Chimney Service',
+        'kitchen-chimney-servicing': 'Kitchen Chimney Service',
+        'microwave-repairing': 'Microwave Oven Repair',
+        'pest-control-services': 'Pest Control Services',
+        'home-repair-services': 'Home Repair Services',
+        'appliance-repair-services': 'Home Repair Services',
+        'all-services-hyderabad': 'Explore Our Services',
+        'bathroom-cleaning': 'Intense bathroom cleaning', // Match key in SERVICE_DATA_MAP
+        'insta-help': 'Insta Help',
+        'foam-jet-ac-service': 'Foam-jet AC service',
     };
 
     // Add all sub-services from data map
