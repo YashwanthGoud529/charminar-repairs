@@ -29,7 +29,14 @@ const Header = () => {
     const [displayText, setDisplayText] = useState('');
     const [showCursor, setShowCursor] = useState(true);
 
-    const ALL_SERVICES = Object.entries(SERVICE_CANONICAL_MAP).map(([name, slug]) => ({ name, slug }));
+    // Search list includes canonical names AND data-rich service names
+    const ALL_SERVICES = [
+        ...Object.entries(SERVICE_CANONICAL_MAP).map(([name, slug]) => ({ name, slug })),
+        ...Object.keys(SERVICE_DATA_MAP).map(name => ({ name, slug: SERVICE_CANONICAL_MAP[name] || name.toLowerCase().replace(/[^a-z0-9]+/g, '-') }))
+    ].reduce((acc, current) => {
+        if (!acc.find(item => item.name === current.name)) acc.push(current);
+        return acc;
+    }, []);
 
     useEffect(() => {
         const cursorInterval = setInterval(() => setShowCursor(prev => !prev), 500);

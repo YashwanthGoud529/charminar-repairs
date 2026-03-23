@@ -34,9 +34,9 @@ const buildSlugMap = () => {
         'home-repair-services': 'Home Repair Services',
         'appliance-repair-services': 'Home Repair Services',
         'all-services-hyderabad': 'Explore Our Services',
-        'bathroom-cleaning': 'Intense bathroom cleaning', // Match key in SERVICE_DATA_MAP
+        'bathroom-cleaning': 'Intense Bathroom Cleaning', // Match key in SERVICE_DATA_MAP
         'insta-help': 'Insta Help',
-        'foam-jet-ac-service': 'Foam-jet AC service',
+        'foam-jet-ac-service': 'Foam-jet AC Service',
     };
 
     // Add all sub-services from data map

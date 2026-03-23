@@ -77,60 +77,6 @@ export const SERVICE_DATA_MAP = {
             { id: 'expl-all', name: 'View Full Rate Card', price: 0, category: 'Menu', image: '/images/logo.png', desc: 'Explore all repair items and service rates.' }
         ]
     },
-    'Insta Help': {
-        icon: '/assets/Images/most-booked/insta-help.jpg',
-        photo: '/assets/Images/most-booked/insta-help.jpg',
-        desc: 'Professional <strong>Insta Help home services in Hyderabad</strong>. Whether it’s a quick electrical fix, minor plumbing leak, or urgent furniture repair — we provide instant doorstep assistance within 60 minutes.',
-        highlights: [
-            '✦ Rapid 60-Minute Doorstep Response',
-            '✦ Background-Verified Expert Handy-men',
-            '✦ Fixes Starting from just ₹99',
-            '✦ Tool-Equipped Professionals for Any Task',
-            '✦ Major Localities in Hyderabad Covered',
-            '✦ 100% Satisfaction Guarantee',
-        ],
-        specializations: ['Minor Repairs', 'Instant Help', 'Home Maintenance'],
-        subServices: [
-            { id: 'insta-fix', name: 'Instant Handyman Visit', price: 99, image: '/assets/Images/most-booked/insta-help.jpg', desc: 'Doorstep visit for quick minor home repairs.' },
-            { id: 'insta-electric', name: 'Minor Electrical Fix', price: 149, image: '/assets/Images/most-booked/insta-help.jpg', desc: 'Fixing of switches, sockets or bulbs.' }
-        ]
-    },
-    'Foam-jet AC service': {
-        icon: '/assets/Images/most-booked/foam-jet-ac-service.jpg',
-        photo: '/assets/Images/most-booked/foam-jet-ac-service.jpg',
-        desc: 'Experience advanced cooling with our <strong>Foam-jet AC Service in Hyderabad</strong>. We use high-pressure foam technology to deep-clean your AC coils, removing stubborn dirt and bacteria for 2X better cooling.',
-        highlights: [
-            '✦ Advanced 2X Deep Foam Cleaning Technology',
-            '✦ Increases Cooling Efficiency by up to 30%',
-            '✦ Reduces Electricity Consumption Significantly',
-            '✦ Kills 99.9% Bacteria & Odor Removal',
-            '✦ Full Jet Wash for Indoor & Outdoor Units',
-            '✦ Free 15-Point Safety & Performance Audit',
-        ],
-        specializations: ['Deep Cleaning', 'Energy Efficiency', 'Odor Control'],
-        subServices: [
-            { id: 'foam-jet-ac', name: 'Foam-jet AC Service', price: 650, image: '/assets/Images/most-booked/foam-jet-ac-service.jpg', desc: '2X deeper cleaning for maximum cooling performance.' },
-            { id: 'foam-jet-combo', name: 'AC Foam-jet + Jet Wash', price: 1199, image: '/assets/Images/most-booked/foam-jet-ac-service.jpg', desc: 'Complete indoor & outdoor deep restoration.' }
-        ]
-    },
-    'Intense bathroom cleaning': {
-        icon: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg',
-        photo: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg',
-        desc: 'Restore your bathroom to hospital-grade hygiene with our <strong>Intense Bathroom Cleaning in Hyderabad</strong>. We use professional-grade anti-bacterial agents and mechanized tools to remove deep stains and hard-water scales.',
-        highlights: [
-            '✦ Mechanized Surface & Tile Scrubbing',
-            '✦ Deep Hard-Water Stain & Pitted Scale Removal',
-            '✦ Hospital-Grade Sanitization of All Fixtures',
-            '✦ Mirror, Exhaust Fan & Grout Deep Cleaning',
-            '✦ Eco-Friendly, Fragrant Disinfectants Used',
-            '✦ 100% Guaranteed Mirror-Like Finish',
-        ],
-        specializations: ['De-scaling', 'Sanitization', 'Stain Removal'],
-        subServices: [
-            { id: 'bath-intense', name: 'Intense Bathroom Cleaning', price: 699, image: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg', desc: '1-bathroom deep cleaning with machines.' },
-            { id: 'bath-premium', name: 'Premium Bathroom Restoration', price: 999, image: '/assets/Images/most-booked/intense-bathroom-cleaning.jpg', desc: 'Detailed scrubbing and descaling with polish.' }
-        ]
-    },
     'Air Conditioner Repair': {
         globalDiscount: 16,
         icon: '/images/ac_icon.png',

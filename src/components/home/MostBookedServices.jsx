@@ -14,8 +14,8 @@ import { SERVICE_DATA_MAP } from '@/config/serviceData';
 
 const MOST_BOOKED_KEYS = [
     'Insta Help',
-    'Foam-jet AC service',
-    'Intense bathroom cleaning',
+    'Foam-jet AC Service',
+    'Intense Bathroom Cleaning',
     'Air Conditioner Repair',
     'Refrigerator Repair',
     'Washing Machine Repair',

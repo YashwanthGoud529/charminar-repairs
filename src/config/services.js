@@ -60,8 +60,8 @@ export const SERVICE_CANONICAL_MAP = {
 
     // --- Most Booked Section Mapping ---
     'Insta Help': 'insta-help',
-    'Foam-jet AC service': 'foam-jet-ac-service',
-    'Intense bathroom cleaning': 'bathroom-cleaning',
+    'Foam-jet AC Service': 'foam-jet-ac-service',
+    'Intense Bathroom Cleaning': 'bathroom-cleaning',
     'Intense cleaning (2 bathrooms)': 'bathroom-cleaning',
 };
 

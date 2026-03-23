@@ -91,7 +91,11 @@ const ServiceAreasContent = ({ locations }) => {
 
                     <div className="row g-4">
                         {locations.map((loc, idx) => {
-                            const locationSlug = loc.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                            const locationSlug = loc.name
+                                .toLowerCase()
+                                .replace(/[''`]/g, '')
+                                .replace(/[^a-z0-9]+/g, '-')
+                                .replace(/(^-|-$)/g, '');
                             return (
                                 <div key={idx} className="col-6 col-md-4 col-lg-3">
                                     <Link href={`/service-areas/${locationSlug}/`} className="text-decoration-none">
