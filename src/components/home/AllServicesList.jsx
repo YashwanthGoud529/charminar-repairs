@@ -26,9 +26,9 @@ const ALL_SERVICES = [
 
 const AllServicesList = () => {
     return (
-        <section className="shared-carousel-section" style={{ paddingTop: '50px', paddingBottom: '70px', backgroundColor: '#f8f8f8' }}>
-            <div className="container" style={{ maxWidth: '100%' }}>
-                <h2 className="shared-carousel-title" style={{ marginBottom: '32px' }}>Explore Our Services</h2>
+        <section className="shared-carousel-section py-5 bg-light-soft">
+            <div className="container custom-container">
+                <h2 className="shared-carousel-title mb-4">Explore Our Services</h2>
                 
                 <Swiper
                     modules={[Navigation]}
@@ -39,26 +39,22 @@ const AllServicesList = () => {
                         600: { slidesPerView: 2.5, spaceBetween: 20 },
                         1024: { slidesPerView: 4.5, spaceBetween: 20 },
                     }}
-                    style={{ padding: '10px 0' }}
+                    className="all-services-swiper"
                 >
                     {ALL_SERVICES.map(service => (
                         <SwiperSlide key={service.id}>
-                            <Link href={service.slug} style={{ textDecoration: 'none' }}>
-                                <div className="shared-carousel-card most-booked-card" style={{ cursor: 'pointer' }}>
-                                    <div className="img-wrapper" style={{ marginBottom: '16px', position: 'relative', height: '230px' }}>
+                            <Link href={service.slug} className="text-decoration-none">
+                                <div className="shared-carousel-card most-booked-card hover-lift">
+                                    <div className="img-wrapper safety-img-wrap" style={{ position: 'relative', height: '230px', marginBottom: '16px' }}>
                                         <Image 
                                             src={service.image} 
                                             alt={service.title} 
                                             fill
-                                            style={{ 
-                                                borderRadius: '8px', 
-                                                objectFit: 'cover',
-                                                boxShadow: '0 4px 15px rgba(0,0,0,0.06)'
-                                            }} 
+                                            className="rounded-3 shadow-sm object-fit-cover"
                                             sizes="(max-width: 600px) 66vw, (max-width: 1024px) 40vw, 20vw"
                                         />
                                     </div>
-                                    <h3 className="service-title" style={{ fontSize: '15px', color: '#333', textAlign: 'center', fontWeight: '500' }}>{service.title}</h3>
+                                    <h3 className="service-title text-center mt-2" style={{ fontSize: '15px', color: '#333', fontWeight: '500' }}>{service.title}</h3>
                                 </div>
                             </Link>
                         </SwiperSlide>

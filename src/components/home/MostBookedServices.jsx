@@ -104,9 +104,9 @@ const SERVICES = [
 
 const MostBookedServices = () => {
     return (
-        <section className="shared-carousel-section" style={{ paddingTop: '50px', paddingBottom: '30px', backgroundColor: '#f8f8f8' }}>
-            <div className="container">
-                <h2 className="shared-carousel-title" style={{ marginBottom: '32px' }}>Most booked services</h2>
+        <section className="shared-carousel-section py-5 bg-light-soft">
+            <div className="container custom-container">
+                <h2 className="shared-carousel-title mb-4">Most booked services</h2>
 
                 <Swiper
                     modules={[Navigation]}
@@ -117,18 +117,18 @@ const MostBookedServices = () => {
                         600: { slidesPerView: 2.5, spaceBetween: 20 },
                         1024: { slidesPerView: 4.5, spaceBetween: 20 },
                     }}
-                    style={{ padding: '10px 0' }}
+                    className="most-booked-swiper"
                 >
                     {SERVICES.map((service, index) => (
                         <SwiperSlide key={service.id}>
-                            <Link href={service.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                <div className="shared-carousel-card most-booked-card" style={{ cursor: 'pointer' }}>
-                                    <div className="img-wrapper" style={{ position: 'relative', height: '200px', width: '100%' }}>
+                            <Link href={service.slug} className="text-decoration-none color-inherit">
+                                <div className="shared-carousel-card most-booked-card hover-lift">
+                                    <div className="img-wrapper safety-img-wrap" style={{ position: 'relative', height: '200px', width: '100%' }}>
                                         <Image 
                                             src={service.image} 
                                             alt={service.alt} 
                                             fill
-                                            style={{ objectFit: 'cover', borderRadius: '8px' }}
+                                            className="rounded-3 object-fit-cover"
                                             sizes="(max-width: 600px) 66vw, (max-width: 1024px) 40vw, 20vw"
                                             priority={index < 4}
                                         />
