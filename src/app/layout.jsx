@@ -1,9 +1,9 @@
 import './globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Script from 'next/script';
-import ClientScripts from '../components/ClientScripts';
 import MainLayoutWrapper from '@/components/shared/MainLayoutWrapper';
 import ScrollToTop from '@/components/shared/ScrollToTop';
+import FontAwesomeLoader from '@/components/shared/FontAwesomeLoader';
 import Providers from './providers';
 import { Outfit } from 'next/font/google';
 import { constructMetadata } from '@/components/seo/constructMetadata';
@@ -128,11 +128,6 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-        {/* Font Awesome — loaded async to eliminate render-blocking */}
-        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onLoad={(e) => { e.currentTarget.media = 'all'; }} crossOrigin="anonymous" />
-        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
-
         {/* Preload Logo for LCP */}
         <link rel="preload" href="/images/charminar-repairs-logo.jpeg" as="image" />
 
@@ -174,6 +169,7 @@ export default function RootLayout({ children }) {
           </Providers>
         </StyledJsxRegistry>
 
+        <FontAwesomeLoader />
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" strategy="lazyOnload" />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9089863982371941" crossOrigin="anonymous" strategy="lazyOnload" />
       </body>

@@ -20,7 +20,7 @@ const PEST_SERVICES = [
 
 const PestControl = () => {
     return (
-        <section className="shared-carousel-section" style={{ paddingTop: '50px', paddingBottom: '70px', backgroundColor: '#fff' }}>
+        <section className="shared-carousel-section container" style={{ paddingTop: '50px', paddingBottom: '70px', backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '100%' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '32px', gap: '16px' }}>
                     <Link href="/pest-control-services/" className="text-decoration-none color-inherit">

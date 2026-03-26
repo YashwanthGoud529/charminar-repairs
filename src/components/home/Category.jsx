@@ -23,7 +23,7 @@ const CATEGORY_ITEMS = [
 
 const Category = () => {
     return (
-        <section className="shared-carousel-section" style={{ paddingTop: '50px', paddingBottom: '50px', }}>
+        <section className="shared-carousel-section container" style={{ paddingTop: '50px', paddingBottom: '50px', }}>
             <div className="container" style={{ maxWidth: '100%' }}>
                 <Link href="/all-services-hyderabad/" className="text-decoration-none color-inherit">
                     <h2 className="shared-carousel-title" style={{ paddingLeft: '15px', cursor: 'pointer' }}>Category</h2>
