@@ -22,8 +22,8 @@ const AdBanner = () => {
                             src="/assets/Images/packers-mover-banner.png" 
                             alt="Shifting Anywhere Anytime" 
                             fill
+                            loading="lazy"
                             className="object-fit-cover"
-                            priority
                         />
                     </div>
 

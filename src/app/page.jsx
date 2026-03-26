@@ -1,8 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-
-const Hero = dynamic(() => import('@/components/home/Hero'), { ssr: true });
-const Category = dynamic(() => import('@/components/home/Category'), { ssr: true });
+import Hero from '@/components/home/Hero';
+import Category from '@/components/home/Category';
 const MostBookedServices = dynamic(() => import('@/components/home/MostBookedServices'), { ssr: true });
 const AdBanner = dynamic(() => import('@/components/home/AdBanner'), { ssr: true });
 const AllServicesList = dynamic(() => import('@/components/home/AllServicesList'), { ssr: true });

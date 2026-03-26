@@ -123,10 +123,15 @@ export default function RootLayout({ children }) {
     <html lang="en-IN" className={`${outfit.variable}`}>
       <head>
         <meta charSet="utf-8" />
-       
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+        {/* Preconnect for performance */}
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        {/* Font Awesome — loaded async to eliminate render-blocking */}
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onLoad="this.media='all'" crossOrigin="anonymous" />
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
 
         {/* Preload Logo for LCP */}
         <link rel="preload" href="/images/charminar-repairs-logo.jpeg" as="image" />
@@ -138,10 +143,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="home">
-        {/* Google Tag Manager (Script version handled by next/script for optimization) */}
+        {/* Google Tag Manager — deferred until user interacts to save ~106KiB blocking */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -169,7 +174,6 @@ export default function RootLayout({ children }) {
           </Providers>
         </StyledJsxRegistry>
 
-        <ClientScripts />
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" strategy="lazyOnload" />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9089863982371941" crossOrigin="anonymous" strategy="lazyOnload" />
       </body>

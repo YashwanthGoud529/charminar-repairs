@@ -50,7 +50,7 @@ const Category = () => {
                                             src={item.image} 
                                             alt={item.alt} 
                                             fill
-                                           
+                                            loading="lazy"
                                             sizes="(max-width: 640px) 75vw, (max-width: 991px) 25vw, (max-width: 1280px) 20vw, 16vw"
                                         />
                                     </div>
@@ -61,7 +61,7 @@ const Category = () => {
                                         src={item.image} 
                                         alt={item.alt} 
                                         fill
-                                       
+                                        loading="lazy"
                                         sizes="(max-width: 640px) 75vw, (max-width: 991px) 25vw, (max-width: 1280px) 20vw, 16vw"
                                     />
                                 </div>
