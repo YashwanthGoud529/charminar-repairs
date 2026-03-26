@@ -1,5 +1,4 @@
 import './globals.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Script from 'next/script';
 import ClientScripts from '../components/ClientScripts';
 import MainLayoutWrapper from '@/components/shared/MainLayoutWrapper';
@@ -132,6 +131,11 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossOrigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onLoad="this.media='all'" crossOrigin="anonymous" />
         <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
+
+        {/* Bootstrap CSS — async to avoid render-blocking */}
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" media="print" onLoad="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" /></noscript>
 
         {/* Preload Logo for LCP */}
         <link rel="preload" href="/images/charminar-repairs-logo.jpeg" as="image" />

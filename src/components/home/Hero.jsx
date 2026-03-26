@@ -49,8 +49,8 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    {/* Right: Collage */}
-                    <div className="col-lg-6">
+                    {/* Right: Collage — hidden on mobile, lazy on desktop */}
+                    <div className="col-lg-6 d-none d-lg-block">
                         <div className="hero-collage-v3">
                             <div className="collage-col collage-col-left">
                                 <div className="collage-item collage-item-tall">
@@ -61,28 +61,31 @@ const Hero = () => {
                                         height={400} 
                                         className="img-fluid rounded-3"
                                         priority
+                                        sizes="(max-width: 1024px) 0vw, 22vw"
                                     />
                                 </div>
-                                <div className="collage-item collage-item-short ">
+                                <div className="collage-item collage-item-short">
                                     <Image 
                                         src="/images/service_kitchen_repair.png" 
                                         alt="Kitchen Repair" 
                                         width={280} 
                                         height={180} 
                                         className="img-fluid rounded-3"
-                                        priority
+                                        loading="lazy"
+                                        sizes="(max-width: 1024px) 0vw, 22vw"
                                     />
                                 </div>
                             </div>
                             <div className="collage-col collage-col-right">
-                                <div className="collage-item collage-item-short ">
+                                <div className="collage-item collage-item-short">
                                     <Image 
                                         src="/images/service_massage.png" 
                                         alt="Massage Services" 
                                         width={280} 
                                         height={180} 
                                         className="img-fluid rounded-3"
-                                        priority
+                                        loading="lazy"
+                                        sizes="(max-width: 1024px) 0vw, 22vw"
                                     />
                                 </div>
                                 <div className="collage-item collage-item-tall">
@@ -92,7 +95,8 @@ const Hero = () => {
                                         width={280} 
                                         height={400} 
                                         className="img-fluid rounded-3"
-                                        priority
+                                        loading="lazy"
+                                        sizes="(max-width: 1024px) 0vw, 22vw"
                                     />
                                 </div>
                             </div>
