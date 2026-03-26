@@ -165,13 +165,22 @@ const Header = () => {
                             </div>
 
                             <div className="nav-actions-v3">
+                                <a href="tel:+918008615049" className="call-btn-v3 d-none d-lg-flex align-items-center gap-2 text-decoration-none">
+                                    <div className="icon-box-colorful icon-box-green shadow-sm">
+                                        <i className="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div className="d-flex flex-column">
+                                        <span className="text-muted x-small fw-medium" style={{ lineHeight: 1 }}>24/7 Support</span>
+                                        <span className="text-dark fw-black small" style={{ lineHeight: 1 }}>80086 15049</span>
+                                    </div>
+                                </a>
                                 <Link href="/cart" className="icon-box-colorful icon-box-purple position-relative" aria-label="View Cart">
                                     <i className="fas fa-shopping-cart fs-6"></i>
                                     {cartItems.length > 0 && <span className="cart-badge-v3">{cartItems.length}</span>}
                                 </Link>
-                                <Link href="/admin" className="icon-box-colorful icon-box-indigo" aria-label="Profile">
-                                    <i className="fas fa-user-shield fs-6"></i>
-                                </Link>
+                                <a href="tel:+918008615049" className="icon-box-colorful icon-box-green d-lg-none" aria-label="Call Now">
+                                    <i className="fas fa-phone-alt"></i>
+                                </a>
                                 <button className="icon-box-colorful icon-box-blue d-lg-none" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                                     <i className={isMobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
                                 </button>

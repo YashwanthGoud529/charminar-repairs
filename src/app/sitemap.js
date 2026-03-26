@@ -12,39 +12,56 @@ const toSlug = (str) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 
-const CHUNK_SIZE = 5000;
+const CHUNK_SIZE = 45000;
 
-// Sort inputs to ensure stable chunking across parallel sitemap requests
-const sortedLocations = [...HYDERABAD_LOCATIONS].sort();
-const sortedBlogs = [...allBlogs].sort((a, b) => a.slug.localeCompare(b.slug));
+// ─── Sitemap Logic ────────────────────────────────────────────────────────────
 
-// Gather unique main categories
-const uniqueCanonicalSlugs = [...new Set(CANONICAL_SLUGS)].sort();
-
-// Gather all unique sub-services
-const subServiceSlugs = [];
-Object.values(SERVICE_DATA_MAP).forEach(service => {
-  if (service.subServices) {
-    service.subServices.forEach(sub => {
-      subServiceSlugs.push(sub.id);
+// 1. Get All Permutations (including brands and near-me)
+function getAllPermutationSlugs() {
+    // Unique canonical slugs and sub-services
+    const uniqueCanonicalSlugs = [...new Set(CANONICAL_SLUGS)].sort();
+    const subServiceSlugs = [];
+    Object.values(SERVICE_DATA_MAP).forEach(service => {
+        service.subServices?.forEach(sub => subServiceSlugs.push(sub.id));
     });
-  }
-});
 
-const ALL_SERVICE_SLUGS = [...new Set([...uniqueCanonicalSlugs, ...subServiceSlugs])].sort();
+    const baseServiceSlugs = [...new Set([...uniqueCanonicalSlugs, ...subServiceSlugs])].sort();
+    
+    // Add Brands for major services
+    const brandServiceSlugs = [];
+    const MAJOR_SERVICES = ['ac-repairing', 'refrigerator-repairing', 'washing-machine-repairing', 'tv-repairing', 'microwave-repairing'];
+    
+    Object.entries(SERVICE_CANONICAL_MAP).forEach(([name, slug]) => {
+        if (MAJOR_SERVICES.includes(slug)) {
+            const brands = SERVICE_DATA_MAP[name]?.brands || [];
+            brands.forEach(b => {
+                const bSlug = toSlug(b);
+                brandServiceSlugs.push(`${bSlug}-${slug}`);
+            });
+        }
+    });
+
+    const allBaseSlugs = [...new Set([...baseServiceSlugs, ...brandServiceSlugs])].sort();
+    
+    // Add "near-me" versions
+    const nearMeSlugs = allBaseSlugs.map(s => `${s}-near-me`);
+    const allSearchableSlugs = [...allBaseSlugs, ...nearMeSlugs];
+
+    return allSearchableSlugs;
+}
 
 export async function generateSitemaps() {
-  const allPermutations = ALL_SERVICE_SLUGS.length * sortedLocations.length;
-  // Total includes 10 statics, unique categories, unique areas, blogs, and permutations
-  const totalUrls = 
-    10 + 
-    uniqueCanonicalSlugs.length + 
-    sortedLocations.length + 
-    sortedBlogs.length + 
-    allPermutations;
+  const allSearchableSlugs = getAllPermutationSlugs();
+  const sortedLocations = [...HYDERABAD_LOCATIONS, 'Hyderabad'].sort();
+  const sortedBlogs = [...allBlogs].sort((a, b) => a.slug.localeCompare(b.slug));
+
+  const allPermutations = allSearchableSlugs.length * sortedLocations.length;
+  
+  // Base URLs: 10 static + categories + locations + blogs
+  const baseCount = 10 + allSearchableSlugs.length + sortedLocations.length + sortedBlogs.length;
+  const totalUrls = baseCount + allPermutations;
 
   const numChunks = Math.ceil(totalUrls / CHUNK_SIZE);
-  
   return Array.from({ length: numChunks }, (_, i) => ({ id: i }));
 }
 
@@ -52,6 +69,9 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.charminarrepair
 
 export default async function sitemap({ id }) {
   const lastModified = new Date();
+  const allSearchableSlugs = getAllPermutationSlugs();
+  const sortedLocations = [...HYDERABAD_LOCATIONS, 'Hyderabad'].sort();
+  const sortedBlogs = [...allBlogs].sort((a, b) => a.slug.localeCompare(b.slug));
 
   // 1. Base components
   const staticRoutes = [
@@ -61,7 +81,7 @@ export default async function sitemap({ id }) {
     url: `${baseUrl}${route}/`, lastModified, changeFrequency: 'daily', priority: 1.0,
   }));
 
-  const serviceRoutes = uniqueCanonicalSlugs.map((slug) => ({
+  const serviceRoutes = allSearchableSlugs.map((slug) => ({
     url: `${baseUrl}/${slug}/`, lastModified, changeFrequency: 'weekly', priority: 0.9,
   }));
 
@@ -80,19 +100,19 @@ export default async function sitemap({ id }) {
     ...blogRoutes,
   ];
 
-  // 2. Optimized massive permutation slicing
-  const allPermutationsCount = ALL_SERVICE_SLUGS.length * sortedLocations.length;
+  // 2. Permutation slicing
+  const allPermutationsCount = allSearchableSlugs.length * sortedLocations.length;
   const globalStart = id * CHUNK_SIZE;
   const globalEnd = (id + 1) * CHUNK_SIZE;
 
   const routes = [];
 
-  // Add relevant base routes
+  // Add relevant base routes for this chunk
   if (globalStart < baseRoutes.length) {
     routes.push(...baseRoutes.slice(globalStart, globalEnd));
   }
 
-  // Calculate permutation range for this chunk
+  // Calculate permutation range
   const permStart = Math.max(0, globalStart - baseRoutes.length);
   const permEnd = Math.max(0, globalEnd - baseRoutes.length);
 
@@ -100,7 +120,7 @@ export default async function sitemap({ id }) {
     const serviceIndex = Math.floor(i / sortedLocations.length);
     const locationIndex = i % sortedLocations.length;
     
-    const slug = ALL_SERVICE_SLUGS[serviceIndex];
+    const slug = allSearchableSlugs[serviceIndex];
     const loc = sortedLocations[locationIndex];
     
     routes.push({

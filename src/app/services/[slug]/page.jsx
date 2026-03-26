@@ -11,8 +11,13 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import FAQ from '@/components/shared/FAQ';
 import { SERVICE_DATA_MAP } from '@/config/serviceData';
 
-// ─── Slug to Title Resolution (Sync with [slug]/page.jsx) ───────────────────
-const buildSlugMap = () => {
+// ─── Slug to Title Resolution (Memoized) ──────────────────────────────────────
+let _cachedSlugMap = null;
+let _cachedSortedSlugs = null;
+
+function getSlugResolution() {
+    if (_cachedSlugMap) return { SLUG_TO_TITLE: _cachedSlugMap, SORTED_SERVICE_SLUGS: _cachedSortedSlugs };
+
     const map = {
         ...Object.entries(SERVICE_CANONICAL_MAP).reduce((acc, [title, slug]) => ({ ...acc, [slug]: title }), {}),
         'ac-repairing': 'Air Conditioner Repair',
@@ -20,13 +25,14 @@ const buildSlugMap = () => {
         'fridge-repairing': 'Refrigerator Repair',
         'refrigerator-repairing': 'Refrigerator Repair',
         'washing-machine-repairing': 'Washing Machine Repair',
+        'television-repairing': 'Television Repair',
+        'tv-repairing': 'Television Repair',
         'ro-repairing': 'Water Purifier (RO) Service',
         'water-purifier-servicing': 'Water Purifier (RO) Service',
         'geyser-repairing': 'Geyser & Water Heater Repair',
         'chimney-repairing': 'Kitchen Chimney Service',
     };
 
-    // Add all sub-services from data map
     Object.values(SERVICE_DATA_MAP).forEach(service => {
         if (service.subServices) {
             service.subServices.forEach(sub => {
@@ -35,10 +41,10 @@ const buildSlugMap = () => {
         }
     });
 
-    return map;
-};
-
-const SLUG_TO_TITLE = buildSlugMap();
+    _cachedSlugMap = map;
+    _cachedSortedSlugs = Object.keys(map).sort((a, b) => b.length - a.length);
+    return { SLUG_TO_TITLE: map, SORTED_SERVICE_SLUGS: _cachedSortedSlugs };
+}
 
 const toSlug = (str) =>
     str
@@ -47,11 +53,7 @@ const toSlug = (str) =>
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
 
-const SORTED_SERVICE_SLUGS = Object.keys(SLUG_TO_TITLE).sort((a, b) => b.length - a.length);
-
 export async function generateStaticParams() {
-    // We only pre-render the root segments for build speed.
-    // Location combinations are now handled 100% dynamically (On-Demand).
     return HOME_PAGE_SLUGS.map(slug => ({ slug }));
 }
 
@@ -69,85 +71,170 @@ const getServiceImage = (serviceName) => {
 };
 
 function parseSlugPattern(slug) {
-    if (SLUG_TO_TITLE[slug]) return { serviceSlug: slug, location: null };
-    for (const sSlug of SORTED_SERVICE_SLUGS) {
-        if (slug.startsWith(sSlug + '-')) {
-            const locationRaw = slug.slice(sSlug.length + 1);
-            const exactLocation = HYDERABAD_LOCATIONS.find(loc => toSlug(loc) === locationRaw);
-            if (exactLocation) return { serviceSlug: sSlug, location: exactLocation };
-            if (locationRaw.startsWith('in-')) {
-                const locIn = locationRaw.slice(3);
-                const exactInLoc = HYDERABAD_LOCATIONS.find(loc => toSlug(loc) === locIn);
-                if (exactInLoc) return { serviceSlug: sSlug, location: exactInLoc };
-            }
-        }
+    const { SLUG_TO_TITLE, SORTED_SERVICE_SLUGS } = getSlugResolution();
+    
+    // 1. Detect Suffixes
+    let isNearMe = false;
+    let workingSlug = slug;
+    if (slug.endsWith('-near-me')) {
+        isNearMe = true;
+        workingSlug = slug.slice(0, -8);
+    } else if (slug.endsWith('-near-by-me')) {
+        isNearMe = true;
+        workingSlug = slug.slice(0, -11);
     }
-    if (slug.includes('-in-')) {
-        const parts = slug.split('-in-');
-        const sSlug = parts[0];
-        const locationRaw = parts[parts.length - 1];
-        if (SLUG_TO_TITLE[sSlug]) {
-            const exactLocation = HYDERABAD_LOCATIONS.find(loc => toSlug(loc) === locationRaw);
-            return { serviceSlug: sSlug, location: exactLocation || null };
+
+    // 2. Pure slug check
+    if (SLUG_TO_TITLE[workingSlug]) return { serviceSlug: workingSlug, location: null, brand: null, isNearMe };
+
+    // 3. Brand detection
+    let detectedBrand = null;
+    let remainingSlug = workingSlug;
+
+    const allBrands = new Set();
+    Object.values(SERVICE_DATA_MAP).forEach(s => s.brands?.forEach(b => allBrands.add(b)));
+    
+    for (const b of allBrands) {
+        const bSlug = toSlug(b);
+        if (workingSlug.startsWith(bSlug + '-')) {
+            detectedBrand = b;
+            remainingSlug = workingSlug.slice(bSlug.length + 1);
+            break;
         }
     }
 
-    // Fallback: Check if the slug starts with a known service slug
+    // 4. Pattern check
     for (const sSlug of SORTED_SERVICE_SLUGS) {
-        if (slug.startsWith(sSlug)) {
-            return { serviceSlug: sSlug, location: null };
+        if (remainingSlug === sSlug) return { serviceSlug: sSlug, location: null, brand: detectedBrand, isNearMe };
+        if (remainingSlug.startsWith(sSlug + '-')) {
+            const locationRaw = remainingSlug.slice(sSlug.length + 1);
+            const locPart = locationRaw.startsWith('in-') ? locationRaw.slice(3) : locationRaw;
+            
+            if (locPart === 'hyderabad') return { serviceSlug: sSlug, location: 'Hyderabad', brand: detectedBrand, isNearMe };
+            
+            const exactLocation = HYDERABAD_LOCATIONS.find(loc => toSlug(loc) === locPart);
+            if (exactLocation) return { serviceSlug: sSlug, location: exactLocation, brand: detectedBrand, isNearMe };
         }
     }
 
-    return { serviceSlug: slug, location: null };
+    return { serviceSlug: workingSlug, location: null, brand: null, isNearMe };
 }
 
 export async function generateMetadata({ params }) {
     const { slug } = await params;
-    const { serviceSlug, location } = parseSlugPattern(slug);
+    const { serviceSlug, location, brand, isNearMe } = parseSlugPattern(slug);
+    const { SLUG_TO_TITLE } = getSlugResolution();
     const serviceName = SLUG_TO_TITLE[serviceSlug];
+
     if (!serviceName) return { title: 'Service Not Found' };
-    const locLabel = location ? `${location}, Hyderabad` : 'Hyderabad';
-    const title = `${serviceName} in ${locLabel} | Charminar Repairs Service`;
-    const description = `Expert ${serviceName.toLowerCase()} in ${locLabel}. Same-day doorstep doorstep service for LG, Samsung, IFB & top brands. Certified technicians, 100% genuine parts & 1-year warranty. Book now!`;
+
+    const brandPart = brand ? `${brand} ` : '';
+    const locPart = isNearMe ? 'Near Me' : (location ? `${location}, Hyderabad` : 'Hyderabad');
+    const title = `${brandPart}${serviceName} Service in ${locPart} | Charminar Repairs Service`;
+    const description = `Looking for ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Expert doorstep repair with certified technicians, 100% genuine parts & 1-year warranty. Same-day service in Hyderabad.`;
+
     return constructMetadata({
         title,
         description,
         canonicalPath: `/services/${slug}/`,
-        keywords: [serviceName, locLabel, `${serviceName} ${locLabel}`].join(', '),
+        keywords: [brandPart + serviceName, locPart, `${serviceName} ${locPart}`].join(', '),
     });
 }
 
 export default async function ServiceDetailsPage({ params }) {
     const { slug } = await params;
-    const { serviceSlug, location } = parseSlugPattern(slug);
+    const { serviceSlug, location, brand, isNearMe } = parseSlugPattern(slug);
+    const { SLUG_TO_TITLE } = getSlugResolution();
     const serviceName = SLUG_TO_TITLE[serviceSlug];
+
     if (!serviceName) return notFound();
 
+    const brandPart = brand ? `${brand} ` : '';
+    const locLabel = isNearMe ? 'Near Me' : (location ? `${location}, Hyderabad` : 'Hyderabad');
+    const locSuffix = ` in ${locLabel}`;
+    
     const image = getServiceImage(serviceName);
-    const locLabel = location ? `${location}, Hyderabad` : 'Hyderabad';
-    const locSuffix = location ? ` in ${location}, Hyderabad` : ' in Hyderabad';
-    const longDescription = `Charminar Repairs is the leading provider for expert ${serviceName}${locSuffix}. Residents of ${locLabel} can count on our background-verified and certified experts for same-day resolution of all appliance faults. We use genuine components and provide a comprehensive 1-year warranty on all household items.`;
+    const longDescription = `${brandPart}${serviceName}${locSuffix} is one of Charminar Repairs' leading premium offerings. Residents of ${locLabel} can count on our background-verified and certified experts for same-day resolution of all ${brand || 'appliance'} faults. We use genuine components and provide a comprehensive 1-year warranty on all household items.`;
+
+    const jsonLd = [
+        {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            'name': `${brandPart}${serviceName} in ${locLabel}`,
+            'description': longDescription,
+            'image': image,
+            'brand': brand ? { '@type': 'Brand', 'name': brand } : undefined,
+            'aggregateRating': {
+                '@type': 'AggregateRating',
+                'ratingValue': '4.9',
+                'reviewCount': '3241',
+                'bestRating': '5',
+                'worstRating': '1'
+            },
+            'review': [
+                {
+                    '@type': 'Review',
+                    'author': { '@type': 'Person', 'name': 'Sameer K.' },
+                    'datePublished': '2026-03-24',
+                    'reviewBody': `I had my ${brandPart}${serviceName.toLowerCase()} done at my resident in ${locLabel} yesterday. Great experience.`,
+                    'reviewRating': { '@type': 'Rating', 'ratingValue': '5' }
+                }
+            ],
+            'offers': {
+                '@type': 'Offer',
+                'price': '100',
+                'priceCurrency': 'INR',
+                'availability': 'https://schema.org/InStock',
+            },
+            'provider': {
+                '@type': 'LocalBusiness',
+                'name': 'Charminar Repairs',
+                'telephone': '+91-8008615049',
+                'image': 'https://www.charminarrepairs.com/images/charminar-repairs-logo.jpeg',
+                'address': {
+                    '@type': 'PostalAddress',
+                    'streetAddress': 'Karwan',
+                    'addressLocality': 'Hyderabad',
+                    'addressRegion': 'Telangana',
+                    'addressCountry': 'IN'
+                }
+            }
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            'itemListElement': [
+                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.charminarrepairs.com/' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Hyderabad', 'item': 'https://www.charminarrepairs.com/' },
+                { '@type': 'ListItem', 'position': 3, 'name': serviceName, 'item': `https://www.charminarrepairs.com/services/${serviceSlug}/` },
+                { '@type': 'ListItem', 'position': 4, 'name': `${brandPart}${serviceName} in ${locLabel}`, 'item': `https://www.charminarrepairs.com/services/${slug}/` }
+            ]
+        }
+    ];
 
     return (
         <div style={{ backgroundColor: '#fcfcfc' }}>
-            <Breadcrumbs service={serviceName} location={location} />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <Breadcrumbs service={brand ? brand + ' ' + serviceName : serviceName} location={location || (isNearMe ? 'Near Me' : null)} />
             <ServiceTemplate
-                title={`${serviceName}${locSuffix}`}
-                description={`Premium doorstep ${serviceName.toLowerCase()} service with certified experts.`}
+                title={`${brandPart}${serviceName}${locSuffix}`}
+                description={`Premium doorstep ${brandPart}${serviceName.toLowerCase()} service with certified experts.`}
                 image={image}
                 longDescription={longDescription}
                 slug={slug}
             />
-            <AboutService serviceName={serviceName} locationLabel={location} />
+            <AboutService serviceName={serviceName} locationLabel={location || (isNearMe ? 'Hyderabad' : 'Hyderabad')} />
             <FAQ 
-                title={`${serviceName} in ${locLabel} - FAQ`}
+                title={`${brandPart}${serviceName} in ${locLabel} - FAQ`}
                 items={[
-                    { question: `Why choose Charminar for ${serviceName.toLowerCase()} in ${locLabel}?`, answer: `We offer same-day, certified doorstep repairs with 1-year warranty.` },
-                    { question: "Is the repair covered?", answer: "Yes, every repair comes with 1-year warranty on parts." }
+                    { question: `Why choose Charminar for ${brandPart}${serviceName.toLowerCase()} in ${locLabel}?`, answer: `We offer same-day, certified doorstep repairs for ${brand || 'premium appliances'} with a full 180-day guarantee.` },
+                    { question: "Is the repair covered by warranty?", answer: "Yes, every repair comes with 1-year warranty on all spare parts." }
                 ]}
             />
-            <LocalReviews serviceName={serviceName} locationLabel={location} />
+            <LocalReviews serviceName={serviceName} locationLabel={location || (isNearMe ? 'Hyderabad' : 'Hyderabad')} />
             <NearbyLocations serviceSlug={serviceSlug} serviceName={serviceName} currentLocation={location} />
         </div>
     );

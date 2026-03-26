@@ -76,5 +76,19 @@ export const HOME_PAGE_SLUGS = [
 ];
 
 export const getServiceSlug = (serviceName) => {
-    return SERVICE_CANONICAL_MAP[serviceName] || null;
+    // Exact match first
+    if (SERVICE_CANONICAL_MAP[serviceName]) return SERVICE_CANONICAL_MAP[serviceName];
+
+    // Check if it starts with any brand and remove it
+    const brands = ['Samsung', 'LG', 'Whirlpool', 'IFB', 'Bosch', 'Haier', 'Godrej', 'Panasonic', 'Videocon', 'Sony', 'Daikin', 'Voltas', 'Blue Star', 'Hitachi', 'Carrier', 'O General', 'Lloyd', 'Mi', 'Xiaomi', 'TCL', 'OnePlus', 'Vu', 'Philips', 'Hisense', 'Toshiba', 'BPL', 'Bajaj', 'Morphy Richards', 'Dyson', 'Kent', 'Aquaguard', 'Eureka Forbes', 'Prestige', 'Pigeon', 'Usha', 'Singer', 'Singer', 'V-Guard', 'Havells', 'Crompton', 'Kirloskar', 'Texmo', 'Grundfos'];
+    
+    let cleanName = serviceName;
+    for (const b of brands) {
+        if (serviceName.startsWith(b + ' ')) {
+            cleanName = serviceName.slice(b.length + 1);
+            break;
+        }
+    }
+
+    return SERVICE_CANONICAL_MAP[cleanName] || SERVICE_CANONICAL_MAP['Professional Appliance Repair'] || 'all-services-hyderabad';
 };

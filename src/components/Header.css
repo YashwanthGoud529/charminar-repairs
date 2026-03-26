@@ -362,7 +362,29 @@
     backdrop-filter: blur(4px);
 }
 
-.mobile-overlay-v3.show {
-    opacity: 1;
-    visibility: visible;
+.call-btn-v3 {
+    margin-right: 15px;
+    padding: 0 12px;
+    transition: all 0.3s;
+}
+
+.call-btn-v3:hover {
+    transform: translateY(-2px);
+}
+
+.call-btn-v3 .icon-box-colorful {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 13px !important;
+}
+
+.call-btn-v3 .fw-black {
+    font-size: 15px !important;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 1200px) {
+    .call-btn-v3 {
+        display: none !important;
+    }
 }

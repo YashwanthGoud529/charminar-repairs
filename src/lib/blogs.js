@@ -194,7 +194,7 @@ export const blogs = [
             
             <p>We use advanced diagnostic tools to pinpoint the fault, saving you the cost of a full panel replacement where possible.</p>
         `,
-        image: "/images/ac_repair_blog.png", 
+        image: "/images/ac_repair_blog.png",
         date: "March 06, 2026",
         category: "Television",
         tags: ["TV Repair", "LED TV Service", "Somajiguda", "Panel Repair", "Electronics"]
