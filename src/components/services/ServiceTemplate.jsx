@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SERVICE_DATA_MAP, DEFAULT_SERVICE } from '@/config/serviceData';
 import { useCartStore } from '@/store/cartStore';
 import { db } from '@/lib/firebase';
@@ -283,7 +284,14 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                     </div>
                                 </div>
                                 <div className="col-md-5 d-none d-md-block position-relative">
-                                    <img src={svc.photo || '/images/ac-repair.png'} className="w-100 h-100 object-fit-cover" alt={baseTitle} />
+                                    <Image 
+                                        src={svc.photo || '/images/ac-repair.png'} 
+                                        className="w-100 h-100 object-fit-cover rounded-end" 
+                                        alt={`${baseTitle} in ${displayLocation}`}
+                                        fill
+                                        priority
+                                        sizes="(max-width: 768px) 100vw, 40vw"
+                                    />
                                     <div className="hero-image-overlay"></div>
                                     <div className="hero-guarantee-badge">
                                         <div className="hero-guarantee-icon-circle">
@@ -326,14 +334,8 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                             </div>
                         </div>
 
-                        {isLoadingDynamic ? (
-                            <div className="text-center py-5 bg-white shadow-sm border service-category-card">
-                                <div className="spinner-border text-primary spinner-border-sm" role="status"></div>
-                                <p className="mt-2 text-muted fw-bold">Loading services...</p>
-                            </div>
-                        ) : (
-                            <div className="services-list-container">
-                                {activeCategories.map(cat => (
+                        <div className="services-list-container">
+                            {activeCategories.map(cat => (
                                     <div key={cat} id={`category-${cat.replace(/\s+/g, '-')}`} className="mb-4 bg-white shadow-sm p-4 border service-category-card">
                                         <h3 className="fw-bold mb-4 pb-2 fs-4 text-dark border-bottom">{cat}</h3>
                                         <div className="d-flex flex-column">
@@ -384,10 +386,9 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                     </div>
                                 ))}
                             </div>
-                        )}
+                        </div>
                     </div>
                 </div>
-            </div>
 
             {isModalOpen && selectedService && (
                 <div className={`modal d-block details-modal-overlay ${isModalActive ? 'active' : ''}`}>
