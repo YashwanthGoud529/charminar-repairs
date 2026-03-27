@@ -132,7 +132,21 @@ const Footer = () => {
                              </ul>
                          </div>
 
-                         <div className="col-lg-4 col-md-4">
+                         <div className="col-lg-3 col-md-4 col-6">
+                             <h2 className="widget-title">Top Localities</h2>
+                             <ul className="list-unstyled links-list">
+                                 <li><Link href="/ac-repairing-in-gachibowli/">Gachibowli</Link></li>
+                                 <li><Link href="/washing-machine-repairing-in-madhapur/">Madhapur</Link></li>
+                                 <li><Link href="/refrigerator-repairing-in-banjara-hills/">Banjara Hills</Link></li>
+                                 <li><Link href="/tv-repairing-in-jubilee-hills/">Jubilee Hills</Link></li>
+                                 <li><Link href="/ac-repairing-in-kukatpally/">Kukatpally</Link></li>
+                                 <li><Link href="/washing-machine-repairing-in-kondapur/">Kondapur</Link></li>
+                                 <li><Link href="/refrigerator-repairing-in-miyapur/">Miyapur</Link></li>
+                                 <li><Link href="/all-services-hyderabad/" className="fw-bold" style={{color: '#ff6b00'}}>Browse All Areas <ArrowRightIcon /></Link></li>
+                             </ul>
+                         </div>
+
+                         <div className="col-lg-3 col-md-4">
                              <h2 className="widget-title">Business Hours</h2>
                              <div className="hours-card p-4">
                                  <div className="d-flex justify-content-between mb-2">

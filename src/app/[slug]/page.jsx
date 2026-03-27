@@ -64,6 +64,17 @@ const toSlug = (str) =>
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
 
+const getServiceImage = (serviceName) => {
+    const serviceData = SERVICE_DATA_MAP[serviceName];
+    if (serviceData?.photo) return serviceData.photo;
+    const fallbackMap = {
+        'Air Conditioner Repair': '/images/ac.png',
+        'Refrigerator Repair': '/images/Refrigerator.png',
+        'Washing Machine Repair': '/images/Laundry.png',
+    };
+    return fallbackMap[serviceName] || '/images/ac-repair.png';
+};
+
 // ─── Parse slug: Handle brand, service, location, and suffixes ───────────────
 function parseSlugPattern(slug) {
     const { SLUG_TO_TITLE, SORTED_SERVICE_SLUGS } = getSlugResolution();

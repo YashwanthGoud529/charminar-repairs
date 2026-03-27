@@ -25,7 +25,8 @@ const Hero = () => {
                     {/* Left: Content */}
                     <div className="col-lg-6 pb-5 pb-lg-0 text-start">
                         <h1 className="hero-title-v3">
-                            Home services at your<br />doorstep
+                            Expert Appliance <br />
+                            <span className="text-orange">Repair in Hyderabad</span>
                         </h1>
 
                         <div className="service-selector-card-v3  mt-4">

@@ -41,6 +41,13 @@ const AdminSidebar = ({ activeTab, onTabChange, onLogout, isOpen, onClose }) => 
                         <span className="fw-bold">Manage Services</span>
                     </div>
                     <div
+                        className={`admin-nav-item w-100 ${activeTab === 'stats' ? 'active' : ''}`}
+                        onClick={() => onTabChange('stats')}
+                    >
+                        <img src="/images/img_icons8_com_3d_fluency_94_line_chart_png.png" alt="stats" width="30" height="30" />
+                        <span className="fw-bold">Page Counts</span>
+                    </div>
+                    <div
                         className={`admin-nav-item w-100 ${activeTab === 'partners' ? 'active' : ''}`}
                         onClick={() => onTabChange('partners')}
                     >

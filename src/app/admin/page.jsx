@@ -11,6 +11,7 @@ import Pagination from '@/components/admin/Pagination';
 import AdminSidebar from '@/components/admin/AdminSidebar';
 import AdminHeader from '@/components/admin/AdminHeader';
 import { SERVICE_DATA_MAP } from '@/config/serviceData';
+import AdminPageStats from '@/components/admin/AdminPageStats';
 
 const PAGE_SIZE = 8;
 
@@ -150,6 +151,8 @@ const AdminPage = () => {
             setToDate('');
             setFilterAppliance('');
             setFilterLeadLocation('');
+        } else if (tab === 'stats') {
+            // No specific state reset for stats
         } else if (tab === 'bookings') {
             setBookingsPage(1);
         } else if (tab === 'services') {
@@ -372,7 +375,11 @@ const AdminPage = () => {
             <main className="admin-content">
                 <AdminHeader onMenuClick={() => setSidebarOpen(true)} />
 
-                {/* Dashboard Header */}
+                {activeTab === 'stats' ? (
+                    <AdminPageStats />
+                ) : (
+                    <>
+                        {/* Dashboard Header */}
                 <div className="dashboard-hero-banner mb-4 animate-fade-in d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4">
                     <div className="hero-text-content">
                         <h1 className="fw-extrabold text-dark-blue display-6 mb-2 tracking-tight">
@@ -980,6 +987,8 @@ const AdminPage = () => {
                             )}
                         </div>
                     </div>
+                )}
+                    </>
                 )}
             </main>
 

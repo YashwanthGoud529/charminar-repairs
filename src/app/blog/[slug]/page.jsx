@@ -50,8 +50,37 @@ const BlogDetailPage = async ({ params }) => {
         .filter(b => b.id !== blog.id && !recommendedBlogs.find(r => r.id === b.id))
         .slice(0, 4);
 
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        'headline': blog.title,
+        'description': blog.excerpt,
+        'image': blog.image,
+        'datePublished': '2026-03-27T18:00:00+05:30',
+        'author': {
+            '@type': 'Organization',
+            'name': 'Charminar Repairs Technical Hub'
+        },
+        'publisher': {
+            '@type': 'Organization',
+            'name': 'Charminar Repairs',
+            'logo': {
+                '@type': 'ImageObject',
+                'url': 'https://www.charminarrepairs.com/images/charminar-repairs-logo.jpeg'
+            }
+        },
+        'mainEntityOfPage': {
+            '@type': 'WebPage',
+            '@id': `https://www.charminarrepairs.com/blog/${slug}`
+        }
+    };
+
     return (
         <main className="blog-detail-page bg-light-soft pb-5">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <PageHero 
                 title={blog.title}
                 subtitle={blog.category}
