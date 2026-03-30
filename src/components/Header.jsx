@@ -117,7 +117,15 @@ const Header = () => {
                         <div className="nav-left-v3">
                             <div className="logo-section-v3">
                                 <Link href="/">
-                                    <img src="/images/charminar-repairs-logo.jpeg" alt="Charminar Repairs" className="main-logo-v3" width="120" height="40" loading="eager" />
+                                    <img 
+                                        src="/images/charminar-repairs-logo.jpeg" 
+                                        alt="Charminar Repairs" 
+                                        className="main-logo-v3" 
+                                        width="161" 
+                                        height="71" 
+                                        style={{ width: '161px', height: '71px' }}
+                                        fetchpriority="high"
+                                    />
                                 </Link>
                             </div>
                             <ul className="nav-list-v3 d-none d-xl-flex">
@@ -181,7 +189,11 @@ const Header = () => {
                                 <a href="tel:+918008615049" className="icon-box-colorful icon-box-green d-lg-none" aria-label="Call Now">
                                     <i className="fas fa-phone-alt"></i>
                                 </a>
-                                <button className="icon-box-colorful icon-box-blue d-lg-none" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                                <button 
+                                    className="icon-box-colorful icon-box-blue d-lg-none" 
+                                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                    aria-label={isMobileMenuOpen ? "Close Navigation Menu" : "Open Navigation Menu"}
+                                >
                                     <i className={isMobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
                                 </button>
                             </div>
@@ -193,7 +205,7 @@ const Header = () => {
             {/* Mobile Sidebar */}
             <div className={`mobile-sidebar-v3 ${isMobileMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-sidebar-header-v3">
-                    <img src="/images/charminar-repairs-logo.jpeg" alt="Logo" height="30" />
+                    <img src="/images/charminar-repairs-logo.jpeg" alt="Logo" width="120" height="53" style={{ height: 'auto' }} />
                     <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close Menu">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
                     </button>

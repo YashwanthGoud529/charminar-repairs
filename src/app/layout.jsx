@@ -3,6 +3,7 @@ import Script from 'next/script';
 import MainLayoutWrapper from '@/components/shared/MainLayoutWrapper';
 import ScrollToTop from '@/components/shared/ScrollToTop';
 import FontAwesomeLoader from '@/components/shared/FontAwesomeLoader';
+import ThirdPartyScripts from '@/components/shared/ThirdPartyScripts';
 import Providers from './providers';
 import { Outfit } from 'next/font/google';
 import { constructMetadata } from '@/components/seo/constructMetadata';
@@ -150,28 +151,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="home">
-        {/* Google Tag Manager — deferred until user interacts to save ~106KiB blocking */}
-        <Script
-          id="gtm-script"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-WBWPP63W');`,
-          }}
-        />
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WBWPP63W"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-            title="Google Tag Manager"
-          />
-        </noscript>
-
         <StyledJsxRegistry>
           <Providers>
             <MainLayoutWrapper>
@@ -181,9 +160,9 @@ export default function RootLayout({ children }) {
           </Providers>
         </StyledJsxRegistry>
 
+        <ThirdPartyScripts />
         <FontAwesomeLoader />
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" strategy="lazyOnload" />
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9089863982371941" crossOrigin="anonymous" strategy="lazyOnload" />
       </body>
     </html>
   );

@@ -37,7 +37,7 @@ const Hero = () => {
                                         <div className="service-icon-wrap-v3">
                                             <Image 
                                                 src={service.icon} 
-                                                alt={service.title} 
+                                                alt={`Expert ${service.title} Service`} 
                                                 width={48} 
                                                 height={48}
                                                 priority={index < 4}

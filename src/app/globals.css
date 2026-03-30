@@ -6,7 +6,7 @@
   --secondary: #0c1228; /* Premium Midnight */
   --secondary-light: #1a2238;
   --text-main: #1e293b;
-  --text-muted: #64748b;
+  --text-muted: #475569; /* Darkened for accessibility (Contrast Ratio) */
   --bg-light: #fbfcff;
   --bg-white: #ffffff;
   --glass: rgba(255, 255, 255, 0.8);

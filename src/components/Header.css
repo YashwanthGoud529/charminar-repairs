@@ -3,6 +3,7 @@
     background: #fff;
     position: relative;
     z-index: 1030;
+    min-height: 80px; /* Reserved space for CLS */
     border-bottom: 1px solid rgba(0,0,0,0.05);
     transition: all 0.3s;
 }

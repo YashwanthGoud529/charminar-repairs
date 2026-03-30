@@ -64,7 +64,7 @@ const MostBookedServices = () => {
                                     <div className="img-wrapper safety-img-wrap" style={{ position: 'relative', height: '200px', width: '100%' }}>
                                         <Image 
                                             src={service.image} 
-                                            alt={service.title} 
+                                            alt={`Top-rated ${service.title} in Hyderabad`} 
                                             fill
                                             className="rounded-3 object-fit-cover"
                                             sizes="(max-width: 600px) 66vw, (max-width: 1024px) 40vw, 20vw"
