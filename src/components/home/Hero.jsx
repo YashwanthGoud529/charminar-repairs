@@ -23,7 +23,7 @@ const Hero = () => {
             <div className="container">
                 <div className="row align-items-center">
                     {/* Left: Content */}
-                    <div className="col-lg-6 pb-5 pb-lg-0 text-start">
+                    <div className="col-lg-6 pb-5 pb-lg-0 text-start mobile-center animate-fade-in-up">
                         <h1 className="hero-title-v3">
                             Expert Appliance <br />
                             <span className="text-orange">Repair in Hyderabad</span>

@@ -55,56 +55,56 @@ const Footer = () => {
 
              {/* Main Footer Content */}
              <div className="footer-main py-5">
-                 <div className="container-fluid px-lg-5">
+                 <div className="container-fluid px-lg-5 text-start mobile-center">
                      <div className="row g-4">
                          <div className="col-lg-3 col-md-6">
-                             <h2 className="widget-title">Contact Us</h2>
+                             <h2 className="widget-title mobile-center">Contact Us</h2>
                              <ul className="list-unstyled contact-list">
                                  <li className="mb-4">
-                                     <div className="d-flex align-items-center gap-3">
+                                     <div className="d-flex align-items-center gap-3 mobile-center">
                                          <div className="icon-box-colorful icon-box-green shadow-sm">
                                             <i className="fas fa-map-marker-alt"></i>
                                          </div>
-                                         <p className="mb-0 text-white" style={{ opacity: 0.8, fontSize: '15px' }}>Karwan, Hyderabad, Telangana 500006</p>
+                                         <p className="mb-0 text-white" style={{ opacity: 0.8, fontSize: '15px' }}>{BRAND.address}</p>
                                      </div>
                                  </li>
                                  <li className="mb-4">
-                                     <div className="d-flex align-items-center gap-3">
+                                     <div className="d-flex align-items-center gap-3 mobile-center">
                                          <div className="icon-box-colorful icon-box-blue shadow-sm">
                                             <i className="fas fa-phone-alt"></i>
                                          </div>
-                                         <div className="d-flex flex-column">
-                                             <a href="tel:8008615049" className="text-white text-decoration-none hover-orange fw-bold">8008615049</a>
+                                         <div className="d-flex flex-column text-start mobile-center">
+                                             <a href={`tel:${BRAND.phone}`} className="text-white text-decoration-none hover-orange fw-bold">{BRAND.phoneDisplay}</a>
                                          </div>
                                      </div>
                                  </li>
                                  <li className="mb-4">
-                                     <div className="d-flex align-items-center gap-3">
+                                     <div className="d-flex align-items-center gap-3 mobile-center">
                                          <div className="icon-box-colorful icon-box-purple shadow-sm">
                                             <i className="fas fa-envelope"></i>
                                          </div>
-                                         <a href="mailto:contact@charminarrepairs.com" className="text-white text-decoration-none hover-orange">contact@charminarrepairs.com</a>
+                                         <a href={`mailto:${BRAND.email}`} className="text-white text-decoration-none hover-orange">{BRAND.email}</a>
                                      </div>
                                  </li>
                              </ul>
-                             <div className="social-links-footer mt-4 d-flex gap-3">
-                                 <a href="https://facebook.com/charminarrepairs" target="_blank" rel="noopener noreferrer" className="icon-box-colorful icon-box-blue" aria-label="Follow on Facebook">
+                             <div className="social-links-footer mt-4 d-flex gap-3 mobile-center">
+                                 <a href={`https://facebook.com/${BRAND.social.facebook}`} target="_blank" rel="noopener noreferrer" className="icon-box-colorful icon-box-blue" aria-label="Follow on Facebook">
                                      <i className="fab fa-facebook-f"></i>
                                  </a>
-                                 <a href="https://instagram.com/charminarrepairs" target="_blank" rel="noopener noreferrer" className="icon-box-colorful icon-box-purple" aria-label="Follow on Instagram">
+                                 <a href={`https://instagram.com/${BRAND.social.instagram}`} target="_blank" rel="noopener noreferrer" className="icon-box-colorful icon-box-purple" aria-label="Follow on Instagram">
                                      <i className="fab fa-instagram"></i>
                                  </a>
-                                 <a href="https://twitter.com/charminarrepairs" target="_blank" rel="noopener noreferrer" className="icon-box-colorful icon-box-indigo" aria-label="Follow on Twitter">
+                                 <a href={`https://twitter.com/${BRAND.social.twitter}`} target="_blank" rel="noopener noreferrer" className="icon-box-colorful icon-box-indigo" aria-label="Follow on Twitter">
                                      <i className="fab fa-twitter"></i>
                                  </a>
-                                 <a href="https://wa.me/918008615049" target="_blank" rel="noopener noreferrer" className="icon-box-colorful icon-box-green" aria-label="Chat on WhatsApp">
+                                 <a href={`https://wa.me/91${BRAND.phone}`} target="_blank" rel="noopener noreferrer" className="icon-box-colorful icon-box-green" aria-label="Chat on WhatsApp">
                                      <i className="fab fa-whatsapp"></i>
                                  </a>
                              </div>
                          </div>
 
                          <div className="col-lg-2 col-md-4 col-6">
-                             <h2 className="widget-title">Quick Links</h2>
+                             <h2 className="widget-title mobile-center">Quick Links</h2>
                              <ul className="list-unstyled links-list">
                                  <li><Link href="/">Home</Link></li>
                                  <li><Link href="/about-us/">About Us</Link></li>
@@ -117,7 +117,7 @@ const Footer = () => {
                          </div>
 
                          <div className="col-lg-3 col-md-4 col-6">
-                             <h2 className="widget-title">All Services</h2>
+                             <h2 className="widget-title mobile-center">All Services</h2>
                              <ul className="list-unstyled links-list">
                                  <li><Link href="/washing-machine-repairing/">Washing Machine</Link></li>
                                  <li><Link href="/ac-repairing/">AC Repair Service</Link></li>
@@ -133,7 +133,7 @@ const Footer = () => {
                          </div>
 
                          <div className="col-lg-3 col-md-4 col-6">
-                             <h2 className="widget-title">Top Localities</h2>
+                             <h2 className="widget-title mobile-center">Top Localities</h2>
                              <ul className="list-unstyled links-list">
                                  <li><Link href="/ac-repairing-in-gachibowli/">Gachibowli</Link></li>
                                  <li><Link href="/washing-machine-repairing-in-madhapur/">Madhapur</Link></li>
@@ -147,8 +147,8 @@ const Footer = () => {
                          </div>
 
                          <div className="col-lg-3 col-md-4">
-                             <h2 className="widget-title">Business Hours</h2>
-                             <div className="hours-card p-4">
+                             <h2 className="widget-title mobile-center">Business Hours</h2>
+                             <div className="hours-card p-4 hover-lift">
                                  <div className="d-flex justify-content-between mb-2">
                                      <span className="text-white opacity-75 small">Mon - Fri:</span>
                                      <span className="text-white fw-bold small">9:00am - 9:00pm</span>
@@ -160,8 +160,8 @@ const Footer = () => {
                                  <p className="text-white opacity-40 small mb-0 font-italic">Doorstep repairs across 50+ Hyderabad districts.</p>
                              </div>
                              <div className="mt-4">
-                                 <a href="tel:8008615049" className="btn btn-primary w-100 py-3 fw-bold shadow-lg" style={{ borderRadius: '12px', background: '#ff6b00', borderColor: '#ff6b00' }}>
-                                     URGENT SUPPORT: 8008615049
+                                 <a href={`tel:${BRAND.phone}`} className="btn btn-primary w-100 py-3 fw-bold shadow-lg hover-lift" style={{ borderRadius: '12px', background: '#ff6b00', borderColor: '#ff6b00' }}>
+                                     URGENT SUPPORT: {BRAND.phone}
                                  </a>
                              </div>
                          </div>
@@ -175,7 +175,7 @@ const Footer = () => {
                     <div className="row align-items-center">
                         <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             <p className="mb-0 text-white" style={{ fontSize: '13px', opacity: 0.6 }}>
-                                &copy; {new Date().getFullYear()} Charminar Repairs Service. All Rights Reserved.
+                                &copy; {new Date().getFullYear()} {BRAND.name}. All Rights Reserved.
                             </p>
                         </div>
                         <div className="col-md-6 text-center text-md-end">

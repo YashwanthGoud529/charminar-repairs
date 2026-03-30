@@ -1,13 +1,15 @@
+import { BRAND } from "@/config/branding";
+
 export function constructMetadata({
-  title = "Appliance Repair Hyderabad | Charminar Repairs Service",
-  description = "Expert appliance repair in Hyderabad. Certified service for ACs, fridges & washers. 1-Year Warranty. Book same-day repair.",
-  image = "/images/social-share.jpg",
-  icons = "/favicon.png",
+  title = `Appliance Repair Hyderabad | ${BRAND.name}`,
+  description = `Expert appliance repair in Hyderabad. Certified service for ACs, fridges & washers. 1-Year Warranty. Book same-day repair with ${BRAND.name}.`,
+  image = "/images/social-share.png",
+  icons = "/favicon.ico",
   canonicalPath = "/",
   noIndex = false,
-  keywords = "appliance repair Hyderabad, washing machine repair Hyderabad, AC repair Hyderabad, refrigerator repair Hyderabad, microwave repair Hyderabad, TV repair Hyderabad, doorstep repair Hyderabad, same-day repair service, Charminar Repairs Hyderabad, appliance service center Hyderabad",
+  keywords = `appliance repair Hyderabad, washing machine repair Hyderabad, AC repair Hyderabad, refrigerator repair Hyderabad, microwave repair Hyderabad, TV repair Hyderabad, doorstep repair Hyderabad, same-day repair service, ${BRAND.name} Hyderabad, appliance service center Hyderabad`,
 }) {
-  const baseUrl = "https://www.charminarrepairs.com";
+  const baseUrl = `https://www.lunarrepairs.com`; // Update to BRAND.domain if needed
   let path = canonicalPath;
   if (path !== "/" && !path.endsWith("/")) {
     path += "/";
@@ -19,9 +21,9 @@ export function constructMetadata({
     title,
     description,
     keywords,
-    authors: [{ name: "Charminar Repairs", url: baseUrl }],
-    creator: "Charminar Repairs",
-    publisher: "Charminar Repairs",
+    authors: [{ name: BRAND.name, url: baseUrl }],
+    creator: BRAND.name,
+    publisher: BRAND.name,
     category: "Home Services",
     metadataBase: new URL(baseUrl),
     alternates: {
@@ -62,17 +64,17 @@ export function constructMetadata({
           width: 1200,
           height: 630,
           alt: title,
-          type: "image/jpeg",
+          type: "image/png",
         },
       ],
-      siteName: "Charminar Repairs",
+      siteName: BRAND.name,
       locale: "en_IN",
       countryName: "India",
     },
     twitter: {
       card: "summary_large_image",
-      site: "@charminarrepairs",
-      creator: "@charminarrepairs",
+      site: `@${BRAND.social.twitter}`,
+      creator: `@${BRAND.social.twitter}`,
       title,
       description,
       images: [ogImageUrl],
@@ -86,7 +88,7 @@ export function constructMetadata({
       "revisit-after": "7 days",
       rating: "General",
       language: "en",
-      "copyright": `© ${new Date().getFullYear()} Charminar Repairs. All Rights Reserved.`,
+      "copyright": `© ${new Date().getFullYear()} ${BRAND.name}. All Rights Reserved.`,
     },
   };
 

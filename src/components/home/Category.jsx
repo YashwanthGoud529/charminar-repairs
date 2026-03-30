@@ -26,7 +26,7 @@ const Category = () => {
         <section className="shared-carousel-section container" style={{ paddingTop: '50px', paddingBottom: '50px', }}>
             <div className="container" style={{ maxWidth: '100%' }}>
                 <Link href="/all-services-hyderabad/" className="text-decoration-none color-inherit">
-                    <h2 className="shared-carousel-title" style={{ paddingLeft: '15px', cursor: 'pointer' }}>Category</h2>
+                    <h2 className="shared-carousel-title animate-fade-in-up" style={{ paddingLeft: '15px', cursor: 'pointer' }}>Category</h2>
                 </Link>
                 
                 <Swiper
@@ -45,7 +45,7 @@ const Category = () => {
                         <SwiperSlide key={item.id}>
                             {item.slug ? (
                                 <Link href={item.slug} className="text-decoration-none">
-                                    <div className="shared-carousel-card default-card" style={{ position: 'relative', height: '240px' }}>
+                                    <div className="shared-carousel-card default-card hover-lift" style={{ position: 'relative', height: '240px' }}>
                                         <Image 
                                             src={item.image} 
                                             alt={item.alt} 
@@ -56,7 +56,7 @@ const Category = () => {
                                     </div>
                                 </Link>
                             ) : (
-                                <div className="shared-carousel-card default-card" style={{ cursor: 'default', position: 'relative', height: '240px', objectFit: 'cover' }}>
+                                <div className="shared-carousel-card default-card hover-lift" style={{ cursor: 'default', position: 'relative', height: '240px', objectFit: 'cover' }}>
                                     <Image 
                                         src={item.image} 
                                         alt={item.alt} 

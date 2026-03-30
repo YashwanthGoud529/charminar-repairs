@@ -1,5 +1,5 @@
 import { HYDERABAD_LOCATIONS } from '@/config/locations';
-import { CANONICAL_SLUGS } from '@/config/services';
+import { CANONICAL_SLUGS, SERVICE_CANONICAL_MAP } from '@/config/services';
 import { SERVICE_DATA_MAP } from '@/config/serviceData';
 import { blogs as allBlogs } from '@/lib/blogs';
 

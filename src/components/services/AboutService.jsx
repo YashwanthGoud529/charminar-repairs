@@ -1,14 +1,14 @@
-import React from 'react';
 import { SERVICE_DATA_MAP, DEFAULT_SERVICE } from '@/config/serviceData';
+import { BRAND } from '@/config/branding';
 import './AboutService.css';
 
 const COMPANY = {
-    name: 'Charminar Repairs',
-    phone: '8008615049',
-    phoneDisplay: '+91-8008615049',
+    name: BRAND.name,
+    phone: BRAND.phone,
+    phoneDisplay: BRAND.phoneDisplay,
     warranty: '180',
     priceStart: '100',
-    location: 'Karwan, Hyderabad, Telangana 500006',
+    location: BRAND.address,
 };
 
 // --- SVG Icons Components ---
