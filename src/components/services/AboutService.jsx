@@ -1,3 +1,4 @@
+import React from 'react';
 import { SERVICE_DATA_MAP, DEFAULT_SERVICE } from '@/config/serviceData';
 import { BRAND } from '@/config/branding';
 import './AboutService.css';
