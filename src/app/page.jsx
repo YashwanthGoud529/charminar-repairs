@@ -1,14 +1,52 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Hero from '@/components/home/Hero';
-import Category from '@/components/home/Category';
 import { BRAND } from '@/config/branding';
+import Skeleton from '@/components/shared/Skeleton';
+import LazySection from '@/components/shared/LazySection';
 
-const MostBookedServices = dynamic(() => import('@/components/home/MostBookedServices'), { ssr: true });
-const AdBanner = dynamic(() => import('@/components/home/AdBanner'), { ssr: true });
-const AllServicesList = dynamic(() => import('@/components/home/AllServicesList'), { ssr: true });
-const PestControl = dynamic(() => import('@/components/home/PestControl'), { ssr: true });
-const HomeSafety = dynamic(() => import('@/components/home/HomeSafety'), { ssr: true });
+// Premium Fallbacks
+const SectionSkeleton = () => (
+    <section className="py-5 bg-light-soft overflow-hidden">
+        <div className="container custom-container">
+            <Skeleton width="280px" height="32px" className="mb-4" />
+            <div className="row g-4 flex-nowrap">
+                {[1, 2, 3, 4].map(i => (
+                    <div key={i} className="col-10 col-md-3">
+                        <Skeleton height="240px" borderRadius="12px" className="mb-3" />
+                        <Skeleton width="80%" height="20px" className="mb-2" />
+                        <Skeleton width="40%" height="16px" />
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+);
+
+const Category = dynamic(() => import('@/components/home/Category'), { 
+    loading: () => <div className="container py-4"><Skeleton height="200px" /></div>,
+    ssr: true 
+});
+const MostBookedServices = dynamic(() => import('@/components/home/MostBookedServices'), { 
+    loading: () => <SectionSkeleton />,
+    ssr: true 
+});
+const AdBanner = dynamic(() => import('@/components/home/AdBanner'), { 
+    loading: () => <div className="container py-4"><Skeleton height="150px" borderRadius="12px" /></div>,
+    ssr: true 
+});
+const AllServicesList = dynamic(() => import('@/components/home/AllServicesList'), { 
+    loading: () => <SectionSkeleton />,
+    ssr: true 
+});
+const PestControl = dynamic(() => import('@/components/home/PestControl'), { 
+    loading: () => <SectionSkeleton />,
+    ssr: true 
+});
+const HomeSafety = dynamic(() => import('@/components/home/HomeSafety'), { 
+    loading: () => <SectionSkeleton />,
+    ssr: true 
+});
 
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
@@ -67,7 +105,10 @@ export default function Home() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <Hero />
-            <Category />
+            
+            <LazySection fallback={<div className="container py-4"><Skeleton height="200px" /></div>}>
+                <Category />
+            </LazySection>
             
             {/* SEO Content Section to boost word count and keyword consistency */}
             <section className="seo-content-boost py-5 bg-white">
@@ -126,11 +167,26 @@ export default function Home() {
                 </div>
             </section>
 
-            <MostBookedServices />
-            <AdBanner />
-            <AllServicesList />
-            <PestControl />
-            <HomeSafety />
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <MostBookedServices />
+            </LazySection>
+
+            <LazySection fallback={<div className="container py-4"><Skeleton height="150px" borderRadius="12px" /></div>}>
+                <AdBanner />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <AllServicesList />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <PestControl />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <HomeSafety />
+            </LazySection>
         </main>
     );
 }

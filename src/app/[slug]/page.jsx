@@ -1,16 +1,71 @@
-import React from 'react';
+import dynamic from 'next/dynamic';
+import { notFound, redirect } from 'next/navigation';
 import ServiceTemplate from '@/components/services/ServiceTemplate';
 import Breadcrumbs from '@/components/services/Breadcrumbs';
-import AboutService from '@/components/services/AboutService';
-import LocalReviews from '@/components/services/LocalReviews';
-import NearbyLocations from '@/components/services/NearbyLocations';
-import { notFound, redirect } from 'next/navigation';
+import Skeleton from '@/components/shared/Skeleton';
+import LazySection from '@/components/shared/LazySection';
+
 import { HYDERABAD_LOCATIONS } from '@/config/locations';
 import { SERVICE_CANONICAL_MAP, CANONICAL_SLUGS, HOME_PAGE_SLUGS } from '@/config/services';
 import { constructMetadata } from '@/components/seo/constructMetadata';
-import FAQ from '@/components/shared/FAQ';
-
 import { SERVICE_DATA_MAP } from '@/config/serviceData';
+
+// Premium Fallbacks for Service Sections
+const AboutServiceSkeleton = () => (
+    <section className="py-5 bg-white">
+        <div className="container custom-container px-lg-4">
+            <div className="row g-5">
+                <div className="col-lg-8">
+                    <Skeleton width="40%" height="24px" className="mb-3" />
+                    <Skeleton width="90%" height="48px" className="mb-4" />
+                    <Skeleton width="100%" height="20px" className="mb-2" />
+                    <Skeleton width="100%" height="20px" className="mb-2" />
+                    <Skeleton width="100%" height="20px" className="mb-5" />
+                    <div className="row g-3">
+                        {[1, 2, 3].map(i => (
+                            <div key={i} className="col-md-4">
+                                <Skeleton height="120px" borderRadius="12px" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="col-lg-4">
+                    <Skeleton height="400px" borderRadius="12px" />
+                </div>
+            </div>
+        </div>
+    </section>
+);
+
+const SectionTitleSkeleton = () => (
+    <div className="container py-5 text-center">
+        <Skeleton width="300px" height="32px" className="mx-auto mb-4" />
+        <div className="row g-4">
+            {[1, 2, 3].map(i => (
+                <div key={i} className="col-md-4">
+                    <Skeleton height="150px" borderRadius="12px" />
+                </div>
+            ))}
+        </div>
+    </div>
+);
+
+const AboutService = dynamic(() => import('@/components/services/AboutService'), { 
+    loading: () => <AboutServiceSkeleton />,
+    ssr: true 
+});
+const LocalReviews = dynamic(() => import('@/components/services/LocalReviews'), { 
+    loading: () => <SectionTitleSkeleton />,
+    ssr: false 
+});
+const NearbyLocations = dynamic(() => import('@/components/services/NearbyLocations'), { 
+    loading: () => <div className="container py-4"><Skeleton height="100px" /></div>,
+    ssr: true 
+});
+const FAQ = dynamic(() => import('@/components/shared/FAQ'), { 
+    loading: () => <div className="container py-5"><Skeleton height="300px" borderRadius="12px" /></div>,
+    ssr: true 
+});
 
 // ─── Slug to Title Resolution (Memoized) ──────────────────────────────────────
 let _cachedSlugMap = null;
@@ -288,17 +343,28 @@ export default async function ServiceLocationPage({ params }) {
                 longDescription={longDescription}
                 slug={slug}
             />
-            <AboutService serviceName={serviceName} locationLabel={loc} />
-            <LocalReviews serviceName={serviceName} locationLabel={loc} />
-            <NearbyLocations serviceSlug={serviceSlug} serviceName={serviceName} currentLocation={location} />
-            <FAQ 
-                title={`${brandPart}${serviceName} in ${locLabel} - FAQ`}
-                items={[
-                    { question: `How much does ${brandPart}${serviceName.toLowerCase()} cost ${isNearMe ? 'near me' : `in ${loc}`}?`, answer: `Service visits for ${brand || 'all appliances'} start at just ₹100. The full repair cost depends on the specific fault and parts replaced.` },
-                    { question: `Do you provide same-day ${brandPart}${serviceName.toLowerCase()} in ${loc}?`, answer: `Yes, we guarantee same-day doorstep service across ${loc} within 60 minutes of booking.` },
-                    { question: "Is there a warranty on repairs?", answer: "Yes, we provide a 180-day comprehensive warranty on all parts and labour." }
-                ]}
-            />
+            <LazySection fallback={<AboutServiceSkeleton />}>
+                <AboutService serviceName={serviceName} locationLabel={loc} />
+            </LazySection>
+            
+            <LazySection fallback={<SectionTitleSkeleton />}>
+                <LocalReviews serviceName={serviceName} locationLabel={loc} />
+            </LazySection>
+            
+            <LazySection fallback={<div className="container py-4"><Skeleton height="100px" /></div>}>
+                <NearbyLocations serviceSlug={serviceSlug} serviceName={serviceName} currentLocation={location} />
+            </LazySection>
+            
+            <LazySection fallback={<div className="container py-5"><Skeleton height="300px" borderRadius="12px" /></div>}>
+                <FAQ 
+                    title={`${brandPart}${serviceName} in ${locLabel} - FAQ`}
+                    items={[
+                        { question: `How much does ${brandPart}${serviceName.toLowerCase()} cost ${isNearMe ? 'near me' : `in ${loc}`}?`, answer: `Service visits for ${brand || 'all appliances'} start at just ₹100. The full repair cost depends on the specific fault and parts replaced.` },
+                        { question: `Do you provide same-day ${brandPart}${serviceName.toLowerCase()} in ${loc}?`, answer: `Yes, we guarantee same-day doorstep service across ${loc} within 60 minutes of booking.` },
+                        { question: "Is there a warranty on repairs?", answer: "Yes, we provide a 180-day comprehensive warranty on all parts and labour." }
+                    ]}
+                />
+            </LazySection>
         </div>
     );
 }
