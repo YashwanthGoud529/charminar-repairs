@@ -1,17 +1,23 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 const PageHero = ({ title, subtitle, breadcrumb, bgImage = '/images/About-Hero-BG.jpg', icon }) => {
     return (
         <section className="inner-hero">
             <div className="hero-overlay"></div>
             {/* Dynamic 3D Asset for Inner Pages */}
-            <img
-                src={icon || "/images/ac.png"}
-                alt="3D Maintenance"
-                className="floating-asset"
-            />
+            <div className="floating-asset-container">
+                <Image
+                    src={icon || "/images/ac.png"}
+                    alt={`Expert ${title} Illustration`}
+                    width={300}
+                    height={300}
+                    className="floating-asset"
+                    priority
+                />
+            </div>
 
             <div className="container custom-container d-flex flex-column justify-content-center h-100 pb-4">
                 <div className="row text-start align-items-center">
@@ -127,15 +133,24 @@ const PageHero = ({ title, subtitle, breadcrumb, bgImage = '/images/About-Hero-B
                     border-radius: 10px !important;
                 }
 
-                .floating-asset {
+                .floating-asset-container {
                     position: absolute !important;
                     right: 8% !important;
                     top: 50% !important;
                     transform: translateY(-50%) rotate(-5deg) !important;
                     width: 300px !important;
+                    height: 300px !important;
                     opacity: 0.12 !important;
                     filter: drop-shadow(0 0 30px rgba(103, 58, 183, 0.3)) !important;
                     animation: float-inner 8s infinite ease-in-out !important;
+                    pointer-events: none !important;
+                    z-index: 5 !important;
+                }
+
+                .floating-asset {
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: contain !important;
                 }
 
                 @keyframes float-inner {

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const BlogList = ({ blogs }) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -21,7 +22,7 @@ const BlogList = ({ blogs }) => {
 
     // --- SVG Chevron Icon ---
     const ChevronRightIcon = () => (
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="ms-1">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="ms-1" aria-hidden="true">
             <path d="M9 18l6-6-6-6"/>
         </svg>
     );
@@ -38,8 +39,15 @@ const BlogList = ({ blogs }) => {
                                 border: '1px solid #eef2f6',
                                 transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
                             }}>
-                                <div className="blog-image" style={{ height: '240px', overflow: 'hidden' }}>
-                                    <img src={blog.image} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+                                <div className="blog-image" style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
+                                    <Image 
+                                        src={blog.image} 
+                                        alt={blog.title} 
+                                        fill
+                                        style={{ objectFit: 'cover' }} 
+                                        loading="lazy" 
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
                                 </div>
                                 <div className="p-4 pt-4">
                                     <div className="d-flex align-items-center gap-3 mb-3">
@@ -58,7 +66,12 @@ const BlogList = ({ blogs }) => {
                                     </div>
                                     <h3 className="h5 fw-800 mb-3 font-outfit" style={{ lineHeight: '1.4', color: '#0c1228', fontWeight: '800' }}>{blog.title}</h3>
                                     <p className="text-muted mb-4 font-inter" style={{ lineHeight: '1.6', fontSize: '14px', height: '68px', overflow: 'hidden' }}>{blog.excerpt}</p>
-                                    <Link href={`/blog/${blog.id}/`} className="text-orange fw-bold small text-decoration-none d-flex align-items-center cursor-pointer font-outfit" style={{ color: '#ff6b00', letterSpacing: '0.5px' }}>
+                                    <Link 
+                                        href={`/blog/${blog.id}/`} 
+                                        className="text-orange fw-bold small text-decoration-none d-flex align-items-center cursor-pointer font-outfit" 
+                                        style={{ color: '#ff6b00', letterSpacing: '0.5px' }}
+                                        aria-label={`Read more about ${blog.title}`}
+                                    >
                                         READ MORE <ChevronRightIcon />
                                     </Link>
                                 </div>

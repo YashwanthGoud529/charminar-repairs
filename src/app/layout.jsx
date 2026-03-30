@@ -1,4 +1,5 @@
 import './globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Script from 'next/script';
 import MainLayoutWrapper from '@/components/shared/MainLayoutWrapper';
 import ScrollToTop from '@/components/shared/ScrollToTop';
@@ -133,16 +134,6 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/assets/Images/appliance/icons/ac.jpg" as="image" />
         <link rel="preload" href="/assets/Images/appliance/icons/washing-machine.jpg" as="image" />
         <link rel="preload" href="/assets/Images/appliance/icons/fridge.jpg" as="image" />
-
-        {/* Non-blocking Bootstrap CSS to improve FCP */}
-        <link 
-          rel="stylesheet" 
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-          crossOrigin="anonymous"
-          media="print"
-          onLoad="this.media='all'"
-        />
 
         {/* JSON-LD Structured Data */}
         <script

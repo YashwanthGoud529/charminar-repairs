@@ -88,15 +88,17 @@ const LocationSelector = () => {
                     <div className="location-search-box">
                         <SearchIcon />
                         <input
+                            id="location-search-input"
                             type="text"
                             className="location-search-input"
                             placeholder="Search your area..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             autoFocus
+                            aria-label="Search for your area in Hyderabad"
                         />
                         {searchTerm && (
-                            <button className="location-clear-btn d-flex align-items-center justify-content-center" onClick={() => setSearchTerm('')}>
+                            <button className="location-clear-btn d-flex align-items-center justify-content-center" onClick={() => setSearchTerm('')} aria-label="Clear area search">
                                 <TimesIcon />
                             </button>
                         )}
@@ -104,7 +106,7 @@ const LocationSelector = () => {
 
                     {!searchTerm && (
                         <div className="location-group-label" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                            <img src="/assets/Images/star.png" alt="star" style={{ width: '11px', height: '11px', objectFit: 'contain' }} /> Popular Areas
+                            <img src="/assets/Images/star.png" alt="" aria-hidden="true" style={{ width: '11px', height: '11px', objectFit: 'contain' }} /> Popular Areas
                         </div>
                     )}
                     {searchTerm && filteredLocations.length === 0 && (
