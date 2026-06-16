@@ -23,7 +23,7 @@ const TermsContent = () => {
 
                             <section className="mb-5">
                                 <h3 className="fw-bold mb-4">2. Warranty Policy</h3>
-                                <p className="text-muted">We provide a 1-year warranty on genuine spare parts replaced by our technicians. This warranty covers the specific part replaced and the labor associated with it. It does not cover new issues or physical damage caused by the user.</p>
+                                <p className="text-muted">We provide a 180-day warranty on genuine spare parts replaced by our technicians. This warranty covers the specific part replaced and the labor associated with it. It does not cover new issues or physical damage caused by the user.</p>
                             </section>
 
                             <section className="mb-5">

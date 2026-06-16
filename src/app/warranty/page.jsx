@@ -4,13 +4,13 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Warranty & Guarantee | Charminar Repairs – 30-Day Service Warranty',
-    description: 'Every repair by Charminar Repairs comes with a 30-day service warranty and 90-day parts warranty. Your satisfaction is guaranteed.',
+    title: 'Warranty & Guarantee | Charminar Repairs – 180-Day Service Warranty',
+    description: 'Every repair by Charminar Repairs comes with a 180-day service warranty and 90-day parts warranty. Your satisfaction is guaranteed.',
     canonicalPath: '/warranty',
 });
 
 const warranties = [
-    { icon: '🔧', title: '30-Day Service Warranty', color: '#673ab7', desc: 'If the same issue reappears within 30 days of our repair, we will fix it at zero cost — no questions asked.' },
+    { icon: '🔧', title: '180-Day Service Warranty', color: '#673ab7', desc: 'If the same issue reappears within 180 days of our repair, we will fix it at zero cost — no questions asked.' },
     { icon: '🔩', title: '90-Day Parts Warranty', color: '#0ea5e9', desc: 'All replacement spare parts carry a 90-day manufacturer-backed warranty. Defective parts are replaced for free.' },
     { icon: '💯', title: '100% Satisfaction Promise', color: '#10b981', desc: 'Not satisfied with the repair? We will revisit, reassess, and make it right. Your trust is our priority.' },
     { icon: '📋', title: 'Transparent Quotation', color: '#f59e0b', desc: 'We quote before we start. You approve before we touch anything. No hidden fees, ever.' },

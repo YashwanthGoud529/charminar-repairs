@@ -225,6 +225,8 @@
 .social-btn.bg-instagram:hover { background: #e1306c; }
 .social-btn.bg-twitter:hover { background: #1da1f2; }
 .social-btn.bg-whatsapp:hover { background: #25d366; }
+.social-btn.bg-linkedin:hover { background: #0077b5; }
+.social-btn.bg-youtube:hover { background: #ff0000; }
 
 /* Emergency Box */
 .emergency-helpline-box {
@@ -388,6 +390,30 @@
 
 .text-orange {
     color: #ff6b00 !important;
+}
+
+/* Address element reset — browser default is italic */
+address.contact-info-block {
+    font-style: normal;
+}
+
+/* Footer small utility classes (replaces inline styles) */
+.footer-ext-icon {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.footer-hours {
+    font-size: 11px;
+}
+
+.footer-emergency-label {
+    letter-spacing: 0.5px;
+    font-size: 11px;
+}
+
+.footer-emergency-phone {
+    font-size: 15px;
 }
 
 .placeholder-muted-custom::placeholder {

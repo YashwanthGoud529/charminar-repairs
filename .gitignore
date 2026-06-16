@@ -6,3 +6,4 @@ tmp/
 build_output.txt
 .env*
 out
+*.zip

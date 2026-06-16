@@ -67,7 +67,7 @@ const Footer = () => {
                                 <p className="tagline-text opacity-75">{BRAND.tagline}</p>
                             </div>
                             
-                            <div className="contact-info-block mb-4">
+                            <address className="contact-info-block mb-4" itemScope itemType="https://schema.org/LocalBusiness">
                                 <ul className="list-unstyled contact-list">
                                     <li className="mb-3 d-flex align-items-start gap-3">
                                         <div className="icon-badge bg-primary-soft text-primary">
@@ -75,8 +75,11 @@ const Footer = () => {
                                         </div>
                                         <div>
                                             <a href="https://maps.google.com/?q=Karwan,+Hyderabad,+Telangana+500006" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none hover-orange block-desc small">
-                                                {BRAND.address}
-                                                <i className="fas fa-external-link-alt ms-1" style={{ fontSize: '10px', opacity: 0.5 }}></i>
+                                                <span itemProp="streetAddress">Karwan</span>,{' '}
+                                                <span itemProp="addressLocality">Hyderabad</span>,{' '}
+                                                <span itemProp="addressRegion">Telangana</span>{' '}
+                                                <span itemProp="postalCode">500006</span>
+                                                <i className="fas fa-external-link-alt ms-1 footer-ext-icon"></i>
                                             </a>
                                         </div>
                                     </li>
@@ -86,12 +89,12 @@ const Footer = () => {
                                         </div>
                                         <div>
                                             <div className="d-flex align-items-center gap-2">
-                                                <a href={`tel:${BRAND.phone}`} className="text-white text-decoration-none hover-orange fw-bold small">{BRAND.phoneDisplay}</a>
+                                                <a href={`tel:+91${BRAND.phone}`} className="text-white text-decoration-none hover-orange fw-bold small" itemProp="telephone">+91-{BRAND.phone}</a>
                                                 <span className="badge-pulse-green">
                                                     <span className="dot"></span>Open Now
                                                 </span>
                                             </div>
-                                            <span className="text-muted small d-block" style={{ fontSize: '11px' }}>Daily: 8:00 AM – 9:00 PM</span>
+                                            <span className="text-muted small d-block footer-hours">Daily: 8:00 AM – 9:00 PM</span>
                                         </div>
                                     </li>
                                     <li className="mb-3 d-flex align-items-start gap-3">
@@ -99,27 +102,33 @@ const Footer = () => {
                                             <i className="fas fa-envelope"></i>
                                         </div>
                                         <div>
-                                            <a href={`mailto:${BRAND.email}`} className="text-white text-decoration-none hover-orange small">{BRAND.email}</a>
+                                            <a href={`mailto:${BRAND.email}`} className="text-white text-decoration-none hover-orange small" itemProp="email">{BRAND.email}</a>
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
+                            </address>
 
                             {/* Social Media Proof */}
                             <div className="social-links-footer mb-4">
                                 <h5 className="widget-subtitle mb-2 small text-uppercase fw-bold text-white opacity-75">Connect With Us</h5>
-                                <div className="d-flex gap-2">
+                                <div className="d-flex gap-2 flex-wrap">
                                     <a href={`https://facebook.com/${BRAND.social.facebook}`} target="_blank" rel="noopener noreferrer" className="social-btn bg-facebook" aria-label="Facebook">
                                         <i className="fab fa-facebook-f"></i>
                                     </a>
                                     <a href={`https://instagram.com/${BRAND.social.instagram}`} target="_blank" rel="noopener noreferrer" className="social-btn bg-instagram" aria-label="Instagram">
                                         <i className="fab fa-instagram"></i>
                                     </a>
-                                    <a href={`https://twitter.com/${BRAND.social.twitter}`} target="_blank" rel="noopener noreferrer" className="social-btn bg-twitter" aria-label="Twitter">
+                                    <a href={`https://twitter.com/${BRAND.social.twitter}`} target="_blank" rel="noopener noreferrer" className="social-btn bg-twitter" aria-label="X (Twitter)">
                                         <i className="fab fa-x-twitter"></i>
                                     </a>
                                     <a href={`https://wa.me/91${BRAND.phone}`} target="_blank" rel="noopener noreferrer" className="social-btn bg-whatsapp" aria-label="WhatsApp">
                                         <i className="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/charminarrepairs" target="_blank" rel="noopener noreferrer" className="social-btn bg-linkedin" aria-label="LinkedIn">
+                                        <i className="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/@charminarrepairs" target="_blank" rel="noopener noreferrer" className="social-btn bg-youtube" aria-label="YouTube">
+                                        <i className="fab fa-youtube"></i>
                                     </a>
                                 </div>
                             </div>
@@ -131,8 +140,8 @@ const Footer = () => {
                                         <i className="fas fa-headset text-danger"></i>
                                     </div>
                                     <div>
-                                        <span className="small text-danger fw-bold d-block text-uppercase" style={{ letterSpacing: '0.5px', fontSize: '11px' }}>24/7 Emergency Support</span>
-                                        <a href={`tel:${BRAND.phone}`} className="text-white text-decoration-none fw-bold hover-orange" style={{ fontSize: '15px' }}>+91-{BRAND.phone}</a>
+                                        <span className="small text-danger fw-bold d-block text-uppercase footer-emergency-label">24/7 Emergency Support</span>
+                                        <a href={`tel:+91${BRAND.phone}`} className="text-white text-decoration-none fw-bold hover-orange footer-emergency-phone">+91-{BRAND.phone}</a>
                                     </div>
                                 </div>
                             </div>
@@ -175,11 +184,11 @@ const Footer = () => {
                                 <li><Link href="/tv-repairing/">Television</Link></li>
                                 <li><Link href="/laptop-repairing/">Laptop Repair</Link></li>
                                 <li><Link href="/geyser-repairing/">Geyser</Link></li>
-                                <li><Link href="/water-purifier-repairing/">Water Purifier</Link></li>
+                                <li><Link href="/water-purifier-servicing/">Water Purifier</Link></li>
                                 <li><Link href="/gas-stove-repairing/">Gas Stove</Link></li>
                                 <li><Link href="/chimney-repairing/">Kitchen Chimney</Link></li>
                                 <li><Link href="/deep-home-cleaning/">Deep Home Cleaning</Link></li>
-                                <li><Link href="/pest-control/">Pest Control</Link></li>
+                                <li><Link href="/pest-control-services/">Pest Control</Link></li>
                                 <li><Link href="/packers-and-movers/">Packers &amp; Movers</Link></li>
                                 <li><Link href="/charminar-wheels/">Charminar Wheels</Link></li>
                             </ul>
@@ -290,7 +299,7 @@ const Footer = () => {
                                 </div>
                                 <div className="col-6 d-flex align-items-center gap-2">
                                     <i className="fas fa-check-circle text-success"></i>
-                                    <span className="small text-white opacity-75">Up to 1-Year Service Warranty</span>
+                                    <span className="small text-white opacity-75">Up to 180-Day Service Warranty</span>
                                 </div>
                                 <div className="col-6 d-flex align-items-center gap-2">
                                     <i className="fas fa-check-circle text-success"></i>

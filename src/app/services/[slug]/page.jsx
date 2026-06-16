@@ -290,7 +290,7 @@ export async function generateMetadata({ params }) {
         } else if (type === 'it') {
             description = `Looking for professional ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Get same-day doorstep IT hardware repairs, WiFi router setups, range extenders, and smart home configuration by certified IT engineers in Hyderabad.`;
         } else {
-            description = `Looking for ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Expert doorstep repair with certified technicians, 100% genuine parts & 1-year warranty. Same-day service in Hyderabad.`;
+            description = `Looking for ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Expert doorstep repair with certified technicians, 100% genuine parts & 180-day warranty. Same-day service in Hyderabad.`;
         }
     }
 
@@ -332,7 +332,7 @@ export default async function ServiceDetailsPage({ params }) {
     } else if (type === 'it') {
         longDescription = `${brandPart}${serviceName} in ${locLabel} is the leading home IT and office setup solution by Charminar Repairs! Residents and professionals in ${locLabel} trust our background-verified, certified network and device engineers for router installation, range extender setup, PC hardware repairs, and smart home integration. We optimize your connection and troubleshoot device issues to ensure a smooth, high-speed experience. We cover all Hyderabad districts with transparent pricing.`;
     } else {
-        longDescription = `${brandPart}${serviceName}${locSuffix} is one of Charminar Repairs' leading premium offerings. Residents of ${locLabel} can count on our background-verified and certified experts for same-day resolution of all ${brand || 'appliance'} faults. We use genuine components and provide a comprehensive 1-year warranty on all household items.`;
+        longDescription = `${brandPart}${serviceName}${locSuffix} is one of Charminar Repairs' leading premium offerings. Residents of ${locLabel} can count on our background-verified and certified experts for same-day resolution of all ${brand || 'appliance'} faults. We use genuine components and provide a comprehensive 180-day warranty on all household items.`;
     }
 
     // Deterministic Review Count for SEO diversity

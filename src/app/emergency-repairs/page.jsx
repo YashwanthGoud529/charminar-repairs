@@ -22,7 +22,7 @@ const steps = [
     { no: 1, title: 'Call or WhatsApp Us', desc: 'Dial 8008615049 or send "EMERGENCY" on WhatsApp. Our emergency line is open 7 AM – 11 PM.' },
     { no: 2, title: 'Technician Dispatched', desc: 'Nearest available certified technician is dispatched to your location within 30 minutes of your call.' },
     { no: 3, title: 'On-Site in 2 Hours', desc: 'We guarantee arrival within 2 hours in central Hyderabad. Outlying areas within 3 hours.' },
-    { no: 4, title: 'Fix & Warranty', desc: 'Issue resolved on the spot in most cases. 30-day warranty applies even on emergency repairs.' },
+    { no: 4, title: 'Fix & Warranty', desc: 'Issue resolved on the spot in most cases. 180-day warranty applies even on emergency repairs.' },
 ];
 
 export default function EmergencyRepairsPage() {

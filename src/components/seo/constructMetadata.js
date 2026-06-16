@@ -2,7 +2,7 @@ import { BRAND } from "@/config/branding";
 
 export function constructMetadata({
   title = `Appliance Repair Hyderabad | ${BRAND.name}`,
-  description = `Expert appliance repair in Hyderabad. Certified service for ACs, fridges & washers. 1-Year Warranty. Book same-day repair with ${BRAND.name}.`,
+  description = `Expert appliance repair in Hyderabad. Certified service for ACs, fridges & washers. 180-Day Warranty. Book same-day repair with ${BRAND.name}.`,
   image = "/images/social-share.png",
   icons = "/favicon.ico",
   canonicalPath = "/",

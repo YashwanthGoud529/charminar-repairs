@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata = constructMetadata({
     title: 'How It Works | Charminar Repairs – Book a Repair in 3 Easy Steps',
-    description: 'See how Charminar Repairs works — book online, get a certified technician at your door, and enjoy a 30-day repair warranty.',
+    description: 'See how Charminar Repairs works — book online, get a certified technician at your door, and enjoy a 180-day repair warranty.',
     canonicalPath: '/how-it-works',
 });
 
@@ -14,7 +14,7 @@ const steps = [
     { no: '02', title: 'Technician Assigned', icon: '👨‍🔧', color: '#0ea5e9', desc: 'A certified, background-verified technician is assigned to your booking. You\'ll receive their name, photo, and live ETA before they arrive.' },
     { no: '03', title: 'Diagnosis & Quotation', icon: '🔍', color: '#f59e0b', desc: 'The technician inspects the appliance and provides a transparent price quote. No hidden charges. You decide whether to proceed.' },
     { no: '04', title: 'Repair Done', icon: '✅', color: '#10b981', desc: 'Once approved, our expert completes the repair using genuine spare parts. Most repairs are done in a single visit under 60 minutes.' },
-    { no: '05', title: 'Pay & Get Warranty', icon: '🛡️', color: '#ef4444', desc: 'Pay conveniently via UPI, card, or cash. Every repair comes with a 30-day service warranty and 90-day parts warranty.' },
+    { no: '05', title: 'Pay & Get Warranty', icon: '🛡️', color: '#ef4444', desc: 'Pay conveniently via UPI, card, or cash. Every repair comes with a 180-day service warranty and 90-day parts warranty.' },
     { no: '06', title: 'Rate Your Experience', icon: '⭐', color: '#8b5cf6', desc: 'Share feedback on WhatsApp or Google. We monitor every job to ensure you\'re 100% satisfied.' },
 ];
 
@@ -22,7 +22,7 @@ const guarantees = [
     { icon: '⏱️', title: 'Same-Day Service', desc: 'Book before 12 PM for same-day repair in most Hyderabad localities.' },
     { icon: '💰', title: 'Price Transparency', desc: 'See the full cost before we start. No surprise charges, ever.' },
     { icon: '🔐', title: 'Background-Checked Engineers', desc: 'Every technician is police-verified, certified, and uniformed.' },
-    { icon: '🏆', title: '30-Day Warranty', desc: 'All repairs guaranteed. If it fails within 30 days, we fix it free.' },
+    { icon: '🏆', title: '180-Day Warranty', desc: 'All repairs guaranteed. If it fails within 180 days, we fix it free.' },
 ];
 
 export default function HowItWorksPage() {

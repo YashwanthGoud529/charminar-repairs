@@ -9,7 +9,7 @@ const POPULAR_LOCATIONS = [
     'Madhapur', 'Hitech City', 'Gachibowli', 'Banjara Hills', 'Jubilee Hills',
     'Kondapur', 'Ameerpet', 'Kukatpally', 'Mehdipatnam', 'Miyapur',
     'Secunderabad', 'Dilsukhnagar', 'Uppal', 'ECIL', 'Bowenpally',
-    'Kompally', 'Bachupally', 'Madinaguda', 'Madhapur', 'LB Nagar'
+    'Kompally', 'Bachupally', 'Madinaguda', 'LB Nagar'
 ];
 
 const LocationSelector = () => {

@@ -50,14 +50,9 @@ function getAllPermutationSlugs() {
     return allSearchableSlugs;
 }
 
-export async function generateSitemaps() {
-  // We no longer need chunks as we are reducing the total URL count drastically
-  return [{ id: 0 }];
-}
-
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.charminarrepairs.com';
 
-export default async function sitemap({ id }) {
+export default async function sitemap() {
   const lastModified = new Date();
   
   // 1. Get All Unique Canonical Slugs

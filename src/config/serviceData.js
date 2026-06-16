@@ -114,7 +114,7 @@ export const SERVICE_DATA_MAP = {
             '✦ Deep Jet Cleaning (Indoor + Outdoor Unit)',
             '✦ Water Leakage & Drain Line Unclogging',
             '✦ Same-Day Doorstep Service in Hyderabad',
-            '✦ 1-Year Warranty on Parts & Labour'
+            '✦ 180-Day Warranty on Parts & Labour'
         ],
         brands: ['Voltas', 'LG', 'Samsung', 'Daikin', 'Blue Star', 'Hitachi', 'Carrier', 'Panasonic', 'O General', 'Lloyd', 'Godrej', 'Haier'],
         specializations: [
@@ -242,7 +242,7 @@ export const SERVICE_DATA_MAP = {
             '✦ PCB / Control Board Error Code Fix',
             '✦ Spin Cycle Failure & Vibration Issues',
             '✦ Door Lock, Lid Switch & Hinge Repair',
-            '✦ 1-Year Service Warranty — All Parts',
+            '✦ 180-Day Service Warranty — All Parts',
         ],
         brands: ['Samsung', 'LG', 'Whirlpool', 'IFB', 'Bosch', 'Haier', 'Godrej', 'Panasonic', 'Videocon', 'Onida', 'Siemens', 'Electrolux'],
         specializations: [
@@ -812,13 +812,13 @@ export const SERVICE_DATA_MAP = {
     'Professional Appliance Repair': {
         icon: '/images/service_icon.png',
         photo: '/images/unsplash_1621905251189.jpg',
-        desc: 'Professional home appliance repair services in Hyderabad. Our background-verified, certified technicians bring OEM spare parts to your doorstep and fix your appliance right the first time — backed by a 1-year warranty on all parts and labour.',
+        desc: 'Professional home appliance repair services in Hyderabad. Our background-verified, certified technicians bring OEM spare parts to your doorstep and fix your appliance right the first time — backed by a 180-day warranty on all parts and labour.',
         highlights: [
             '✦ Certified & Background-Verified Technicians',
             '✦ Same-Day Doorstep Service in Hyderabad',
             '✦ OEM / Genuine Spare Parts Only',
             '✦ Transparent, Upfront Pricing — No Surprises',
-            '✦ 1-Year Warranty on Parts & Labour',
+            '✦ 180-Day Warranty on Parts & Labour',
             '✦ 2-Hour Response Time Guarantee',
             '✦ Post-Service Quality Inspection',
             '✦ All Major Brands Covered',
@@ -1231,7 +1231,7 @@ export const SERVICE_DATA_MAP = {
             '✦ Surface protection Coating',
             '✦ Odorless & Stain-Free Process',
             '✦ 100% Effective Larvicide',
-            '✦ 1-Year Comprehensive Warranty',
+            '✦ 180-Day Comprehensive Warranty',
             '✦ Certified Pest Control Experts',
         ],
         brands: ['Bayer', 'Adbright', 'Dr. Fixit'],
@@ -2063,6 +2063,52 @@ export const SERVICE_DATA_MAP = {
         spotlight: {
             title: 'Verified Moving Partners',
             desc: 'All our movers undergo strict background checks, vehicle audits, and packing certifications. We guarantee a stress-free shifting experience with dedicated support coordinators.'
+        },
+        'Air Cooler Repair': {
+            globalDiscount: 10,
+            icon: '/images/ac_icon.png',
+            photo: '/images/ac-repair.png',
+            desc: 'Is your <strong>air cooler not throwing cool air</strong>, leaking water, or having motor issues? At <strong>Charminar Repairs</strong>, our certified technicians perform quick doorstep diagnostics and servicing on all types of desert and personal coolers across <strong>Hyderabad</strong>.',
+            highlights: [
+                '✦ Desert & Personal Cooler Repair',
+                '✦ Fan Motor & Pump Repair/Replacement',
+                '✦ Cooling Pad (Honey-Comb / Wood-Wool) Changes',
+                '✦ Water Leakage & Body Damage Restoration',
+                '✦ Electrical Wiring & Switch Troubleshooting',
+                '✦ Same-Day Doorstep Service in Hyderabad',
+                '✦ 180-Day Warranty on Spares & Service'
+            ],
+            brands: ['Symphony', 'Kenstar', 'Bajaj', 'Orient', 'Crompton', 'Usha', 'Havells', 'Hindware'],
+            specializations: [
+                'Fan Motor Restoration', 'Submersible Pump Swaps', 'Honey-Comb Pad Cleaning',
+                'Wiring & Safety Audits', 'Water Distribution Checks'
+            ],
+            restorationFramework: [
+                { title: 'Fan Motor Torque & Alignment', icon: 'fas fa-fan' },
+                { title: 'Submersible Pump Water Distribution', icon: 'fas fa-droplet' },
+                { title: 'Honey-Comb Pad Descaling', icon: 'fas fa-wind' },
+                { title: 'Electrical Control Switch & Safety Audit', icon: 'fas fa-microchip' }
+            ],
+            faultResolution: [
+                { t: 'Cooler Not Throwing Cool Air', i: 'fas fa-temperature-up', d: 'Water pump check and pad clearing/replacement.' },
+                { t: 'Water Leakage Underneath', i: 'fas fa-droplet-slash', d: 'Tank inspection and hose replacement.' },
+                { t: 'Fan Motor Not Spinning', i: 'fas fa-rotate', d: 'Motor winding diagnostics and capacitor replacement.' }
+            ],
+            subServices: [
+                { id: 'cooler-visit', name: 'Air Cooler Diagnostic Visit', price: 199, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Complete safety and mechanical checkup of pump, motor, and pads.' },
+                { id: 'cooler-pump', name: 'Cooler Pump Replacement', price: 499, image: '/images/gas_1.png', desc: 'Installation of high-lift submersible pump to restore water flow.' },
+                { id: 'cooler-motor', name: 'Fan Motor Repair / Swap', price: 899, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Fixes noisy operations or motor failures.' }
+            ],
+            inclusions: [
+                'Thorough inspection of motor, pump, and pads',
+                '180-day warranty on all parts replaced',
+                'Post-service testing for cooling performance'
+            ],
+            exclusions: [
+                'Cost of new cooling pads if replaced',
+                'Complete body/tank replacement',
+                'External power socket repairs'
+            ]
         }
     }
 };
@@ -2070,13 +2116,13 @@ export const SERVICE_DATA_MAP = {
 export const DEFAULT_SERVICE = {
     icon: '/images/service_icon.png',
     photo: '/images/unsplash_1621905251189.jpg',
-    desc: 'Professional home appliance repair services in Hyderabad. Our background-verified, certified technicians bring OEM spare parts to your doorstep and fix your appliance right the first time — backed by a 1-year warranty on all parts and labour.',
+    desc: 'Professional home appliance repair services in Hyderabad. Our background-verified, certified technicians bring OEM spare parts to your doorstep and fix your appliance right the first time — backed by a 180-day warranty on all parts and labour.',
     highlights: [
         '✦ Certified & Background-Verified Technicians',
         '✦ Same-Day Doorstep Service in Hyderabad',
         '✦ OEM / Genuine Spare Parts Only',
         '✦ Transparent, Upfront Pricing — No Surprises',
-        '✦ 1-Year Warranty on Parts & Labour',
+        '✦ 180-Day Warranty on Parts & Labour',
         '✦ 2-Hour Response Time Guarantee',
         '✦ Post-Service Quality Inspection',
         '✦ All Major Brands Covered',
@@ -3321,7 +3367,7 @@ Object.assign(SERVICE_DATA_MAP, {
             '✦ Emergency Locksmith & Lock Repair Support',
             '✦ High-Quality Equipment & Standard Installation Processes',
             '✦ Certified, Background-Verified Field Engineers',
-            '✦ Up to 1-Year Warranty on Hardware & Installations',
+            '✦ Up to 180-Day Warranty on Hardware & Installations',
             '✦ Same-Day Diagnostic & Setup Visits across Hyderabad'
         ],
         brands: ['Hikvision', 'CP Plus', 'Dahua', 'Yale', 'Godrej', 'Dr. Fixit', 'Berger Homeshield', 'Link Locks'],
@@ -3472,7 +3518,7 @@ Object.assign(SERVICE_DATA_MAP, {
             '✦ Smart Phone Live Feed App Configuration',
             '✦ Background-Verified, Professional Security Techs',
             '✦ Transparent Pricing with Zero Hidden Charges',
-            '✦ Up to 1-Year Warranty on Hardware Installations'
+            '✦ Up to 180-Day Warranty on Hardware Installations'
         ],
         brands: ['CP Plus', 'Hikvision', 'Dahua', 'Sony', 'Panasonic', 'EZVIZ'],
         specializations: ['Dome Mounting', 'Bullet Installation', 'IP Camera Setup', 'NVR Routing', 'Power Supply Setup'],
@@ -4105,7 +4151,7 @@ Object.assign(SERVICE_DATA_MAP, {
             'Design consultation before work begins',
             'Premium grade materials from trusted brands',
             'Clean workmanship with site protection sheets',
-            '1-year warranty on installation workmanship'
+            '180-day warranty on installation workmanship'
         ],
         exclusions: [
             'Cost of hardware fittings and handles (quoted separately)',
@@ -4147,7 +4193,7 @@ Object.assign(SERVICE_DATA_MAP, {
             'Site inspection before work',
             'Eco-friendly fertilizers and plant-safe chemicals',
             'Waterproofing quality check after curing',
-            '1-year warranty on waterproofing coat'
+            '180-day warranty on waterproofing coat'
         ],
         exclusions: [
             'Cost of plants, soil, and garden accessories',
@@ -4355,7 +4401,7 @@ Object.assign(SERVICE_DATA_MAP, {
             'Certified fire safety engineer for installation',
             'ISI/CE-certified safety equipment',
             'Compliance checklist and report provided',
-            '1-year warranty on installed equipment'
+            '180-day warranty on installed equipment'
         ],
         exclusions: [
             'Large-scale fire suppression system design',

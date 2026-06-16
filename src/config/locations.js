@@ -15,7 +15,7 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   // ============ WEST HYDERABAD (IT Hub) ============
   'Madhapur', 'Hitech City', 'Gachibowli', 'Kondapur', 'Kothaguda', 'Hafeezpet', 'Miyapur', 'Chandanagar', 'Madinaguda', 'Deepthisri Nagar', 'Allwyn Colony', 'Nallagandla',
   'Nanakramguda', 'Financial District', 'Kokapet', 'Narsingi', 'Puppalguda', 'Manikonda', 'Alkapur Township', 'Lanco Hills Road', 'Wipro Circle', 'Q-City Area', 'Financial District Phase 2',
-  'Tellapur', 'Nallagandla', 'Serilingampally', 'Gulmohar Colony', 'APHB Colony', 'BHEL', 'Beeramguda', 'Isnapur', 'Patancheru', 'Lingampally', 'Tara Nagar',
+  'Tellapur', 'Serilingampally', 'Gulmohar Colony', 'APHB Colony', 'BHEL', 'Beeramguda', 'Isnapur', 'Patancheru', 'Lingampally', 'Tara Nagar',
   'Mokila', 'Shankarpally', 'Kollur', 'Osman Nagar', 'Velimela', 'Gundlapochampally', 'Aminpur', 'Tellapur Road', 'Radha Krishna Nagar', 'Vattinagulapally',
   
   // ============ SECUNDERABAD & NORTH ============
@@ -27,8 +27,8 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   
   // ============ MALKAJGIRI & EAST ============
   'Malkajgiri', 'Safilguda', 'Anandbagh', 'Neredmet', 'Old Neredmet', 'Vinayak Nagar', 'Goutham Nagar', 'Moula Ali', 'Kushaiguda', 'HB Colony', 'AS Rao Nagar', 'Kamala Nagar', 'Dr AS Rao Nagar',
-  'Uppal', 'Habsiguda', 'Ramanthapur', 'Nacharam', 'Mallapur', 'Chengicherla', 'Boduppal', 'Nagole', 'Bandlaguda', 'Nagaram', 'Dammaiguda', 'Peerzadiguda', 'Laxmi Nagar',
-  'Kapra', 'ECIL', 'Sainikpuri', 'Yapral', 'Radhika Theatre Area', 'Vayupuri', 'Saket', 'Kapra Lake Area', 'Cherlapally', 'Rampally',
+  'Uppal', 'Habsiguda', 'Ramanthapur', 'Nacharam', 'Mallapur', 'Chengicherla', 'Boduppal', 'Nagole', 'Nagaram', 'Dammaiguda', 'Peerzadiguda', 'Laxmi Nagar',
+  'Kapra', 'ECIL', 'Radhika Theatre Area', 'Saket', 'Kapra Lake Area', 'Cherlapally', 'Rampally',
   'L.B. Nagar', 'Vanasthalipuram', 'Hayathnagar', 'Champapet', 'Karmanghat', 'Bairamalguda', 'Hastinapuram', 'Auto Nagar', 'Mansoorabad', 'Nagole Road', 'RK Puram LB Nagar',
   
   // ============ MEDCHAL & NORTH DIST ============
@@ -107,7 +107,7 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
 
   // ============ ADDITIONAL EXPANDED GATED COMMUNITIES (INSIDE ORR) ============
   'My Home Vipina', 'My Home Apas', 'My Home Akruti', 'My Home Tyaza', 'My Home Ankura', 'My Home Alluri',
-  'Aparna CyberHeights', 'Aparna CyberZon', 'Aparna Kanopy Marigold', 'Aparna Astute', 'Aparna Urvi', 'Aparna Synergy',
+  'Aparna CyberHeights', 'Aparna Kanopy Marigold', 'Aparna Astute', 'Aparna Urvi', 'Aparna Synergy',
   'Prestige Ivy League', 'Prestige Tranquil', 'Prestige Vaishnavi Orchard', 'Prestige Royal Woods', 'The Prestige City Bellagio',
   'Rajapushpa Imperia', 'Rajapushpa Eterna', 'Rajapushpa Open Skies', 'Lansum Eldorado', 'Jayabheri Temple Tree',
   'Jayabheri Silicon County', 'Jayabheri Meadows', 'Vasavi Brindavanam', 'Vasavi Waterfront', 'Vasavi Nandanam',
@@ -122,7 +122,7 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   'Aliens Space Station 1 Tellapur', 'Sattva Sunrise', 'Sattva Necklace Pride', 'Avasa Hills',
 
   // ============ ADDITIONAL MICRO-LOCALITIES (INSIDE ORR) ============
-  'Financial District Phase 1', 'Financial District Phase 2', 'Kokapet Golden Mile', 'Kokapet Golden Mile Road',
+  'Financial District Phase 1', 'Kokapet Golden Mile', 'Kokapet Golden Mile Road',
   'Kokapet Lake Road', 'Gachibowli Stadium Road', 'Gachibowli DLF Road', 'Nanakramguda IT Enclave',
   'Puppalguda Golden Temple Area', 'Manikonda Ou Colony', 'Manikonda Puppalguda Road', 'Narsingi Circle Area',
   'Narsingi Puppalguda Road', 'Tellapur Lake Front Area', 'Tellapur Station Road', 'Nallagandla HUDA Layout',
@@ -159,7 +159,7 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   'Chandrayangutta X Roads', 'Falaknuma Palace Area', 'Shalibanda Old City Area', 'Moghalpura Old City Area',
   'Yakutpura Old City Area', 'Dabeerpura Railway Station Area', 'Charminar Heritage Area', 'Madina Market Area',
   'Patharghatti Old City', 'Kishan Bagh Park Area', 'Bahadurpura Nehru Zoo Park', 'Puranapul Bridge Area',
-  'Moinabad Chevella Highway', 'TSPA Junction Bandlaguda', 'Appa Junction ORR Entry', 'Kokapet Golden Mile Road',
+  'Moinabad Chevella Highway', 'TSPA Junction Bandlaguda', 'Appa Junction ORR Entry',
   'Kollur ORR Service Road', 'Nanakramguda Financial District Exit', 'Patancheru GMR Airport Road', 'Patancheru ICRISAT Area',
   'Patancheru Industrial Area Phase 1', 'Pashamylaram Industrial Estate', 'Isnapur X Roads Patancheru', 'Beeramguda Temple Area',
   'BHEL Township Area', 'Lingampally Railway Station Area', 'Miyapur Allwyn Colony', 'Miyapur HMT Swarnapuri Colony',
@@ -185,7 +185,7 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   'Kothapet Chaitanyapuri Metro Area', 'Dilsukhnagar Bus Depot Area', 'Malakpet Railway Station Area', 'Saidabad Singareni Colony',
   'Santosh Nagar Colony', 'Kanchanbagh Midhani Area', 'Chandrayangutta Police Station Area', 'Falaknuma Railway Station Area',
   'Shah Ali Banda Clock Tower Area', 'Moghalpura Sports Complex Area', 'Yakutpura Station Road', 'Darulshifa Area',
-  'Purani Haveli Museum Area', 'Noorkhan Bazaar Area', 'Kishan Bagh Palace Area', 'Bahadurpura Nehru Zoo Park',
+  'Purani Haveli Museum Area', 'Noorkhan Bazaar Area', 'Kishan Bagh Palace Area',
   'Puranapul Karwan Road', 'Attapur Happy Homes Area', 'Rajendranagar ICAR Area', 'Bandlaguda Jagir Suncity Area',
   'Peerancheru PBEL City Road', 'Gandipet Chaitanya Bharathi Institute', 'Kokapet Golden Mile Layout', 'Narsingi Gandipet Road',
   'Manikonda Puppalguda Golden Temple', 'Puppalguda Neknampur Lake Area', 'Alkapur Township Neknampur Area', 'Gachibowli ORR Exit Area',
@@ -203,43 +203,43 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   'My Home Raka', 'My Home Nishada Area', 'My Home Sayuk Tellapur', 'My Home Tarkshya Gachibowli',
   'Aparna Kanopy YellowBells', 'Aparna Cyber4 Kondapur', 'Aparna CyberShine Nallagandla', 'Aparna CyberLife Nallagandla',
   'Aparna Avani', 'Aparna Dharani', 'Aparna Sudharma', 'Aparna Elite',
-  'Prestige City Bellagio Rajendranagar', 'Prestige High Fields Gachibowli', 'Prestige Clairemont Area',
+  'Prestige City Bellagio Rajendranagar', 'Prestige Clairemont Area',
   'Prestige Tranquil Kokapet', 'Prestige Vaishnavi Orchard Area', 'Prestige Beverly Hills Kokapet',
   'Rajapushpa Provincia Narsingi', 'Rajapushpa Imperia Tellapur', 'Rajapushpa Atria Kokapet',
   'Vasavi Atlantis Narsingi', 'Vasavi Metropolis Uppal', 'Vasavi Solitaire Heights Gachibowli',
   'Vasavi Urban Bachupally', 'Vasavi Waterfront Gachibowli', 'Vasavi Nandanam Area',
   'Lansum Eldorado Gandipet', 'Lansum Etania Gachibowli', 'Lansum Oxygen Area',
-  'DSR Skymarq Kokapet', 'DSR Skymarq Villas', 'DSR The Twins Nanakramguda', 'DSR Skydrum Kokapet',
+  'DSR Skymarq Villas', 'DSR The Twins Nanakramguda', 'DSR Skydrum Kokapet',
   'Incor One City Kukatpally', 'Incor Lake City Area', 'Incor Lake City Patancheru',
   'Candeur Crescent Nallagandla', 'Candeur Signature Tellapur', 'Candeur 40 Miyapur', 'Candeur Lakescape Tellapur',
   'SMR Vinay Iconia Kondapur', 'SMR Vinay Metropolitan Miyapur', 'SMR Vinay Boulder Conclave Area',
-  'ASBL Spire Gachibowli', 'ASBL Lakeside Kokapet', 'ASBL Loft Financial District', 'ASBL Spectra Gachibowli',
-  'Honer Aquantis Gachibowli', 'Honer Vivantis Gachibowli', 'Honer Signatis Kukatpally',
+  'ASBL Spire Gachibowli', 'ASBL Lakeside Kokapet', 'ASBL Spectra Gachibowli',
+  'Honer Aquantis Gachibowli', 'Honer Vivantis Gachibowli',
   'Sattva Necklace Pride Kavadiguda', 'Sattva Magnus Shaikpet', 'Sattva H Lites Area',
-  'Hallmark Vicinia Narsingi', 'Hallmark Sunnyside Area', 'Hallmark Treasor Kokapet',
+  'Hallmark Sunnyside Area',
   'Muppas Melody Tellapur', 'Muppas Indraprastha Gachibowli', 'Muppas Green Meadows Area',
   'Rainbow Vistas Rock Garden Moosapet', 'Rainbow Vistas Phase 2', 'Rainbow Vistas Central Park',
   'Lodha Belleza Kukatpally', 'Lodha Meridian Kukatpally', 'Lodha Enclave Area',
   'Aliens Space Station Tellapur', 'Aliens Space Station 1 Kokapet',
   'Ramky One Galaxia Nallagandla', 'Ramky One Kosmos Nallagandla', 'Ramky Towers Gachibowli',
-  'Aditya Imperial Heights Hafeezpet', 'Aditya Empress Towers Shaikpet',
-  'Kalpataru Residency Sanath Nagar', 'Kalpataru Avante Sanath Nagar',
-  'Triad Elite', 'Summit Gated Villas Tellapur', 'Provident Kenworth Rajendranagar', 'PBEL City Peerancheru',
+  'Aditya Empress Towers Shaikpet',
+  'Kalpataru Avante Sanath Nagar',
+  'Triad Elite', 'Summit Gated Villas Tellapur', 'Provident Kenworth Rajendranagar',
   'Pacifica Hillcrest Financial District', 'Poddar Residency', 'Kohinoor Apartments', 'Fortune Fields Madhapur',
   
   // ============ MORE MICRO-AREAS, EXTENDED SUBURBS & LOCATIONS ============
   'Neknampur', 'Neknampur Village', 'Neknampur Lake Road', 'Puppalguda Neknampur',
   'Hydershakote', 'Hydershakote Village', 'Bandlaguda Jagir Hydershakote',
   'Kismatpur Village', 'Kismatpur Gandipet', 'Kismatpur Bandlaguda Jagir',
-  'Peerancheru Village', 'Peerancheru TSPA Junction', 'TSPA Junction Area',
+  'Peerancheru Village', 'TSPA Junction Area',
   'Gandipet Lake Road', 'Gandipet CBIT Road', 'Ocean Park Road Gandipet',
   'Gopanpally Village', 'Gopanpally Thanda Area', 'Gopanpally Wipro Road',
   'Gowlidoddy Village', 'Gowlidoddy Wipro Circle', 'Q-City Gowlidoddy',
-  'Nallagandla HUDA Layout', 'Nallagandla Citizen Hospital Road', 'Nallagandla Lake Road',
+  'Nallagandla Citizen Hospital Road', 'Nallagandla Lake Road',
   'Tellapur Lake Road', 'Tellapur Station Road Area', 'Tellapur ORR Exit Area',
-  'Kollur Village', 'Kollur ORR Service Road', 'Kollur IT Corridor',
+  'Kollur Village', 'Kollur IT Corridor',
   'Vattinagulapally Village', 'Vattinagulapally Kokapet', 'Vattinagulapally ORR Area',
-  'Mokila Village', 'Mokila Shankarpally Road', 'Shankarpally Station Road',
+  'Mokila Village', 'Shankarpally Station Road',
   'Narsingi Outer Ring Road', 'Narsingi Puppalguda Link Road', 'Narsingi Junction Circle',
   'Manikonda OU Colony Area', 'Manikonda Puppalguda Golden Temple Area', 'Manikonda Marichettu Tree Junction',
   'Alkapur Township Sector 2', 'Alkapur Township Sector 3', 'Alkapur Township Sector 4',
@@ -247,12 +247,12 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   'Maheshwaram Gated Communities', 'Maheshwaram Gated Villas', 'Maheshwaram Town Area',
   'Kothur Industrial Area', 'Kothur Gated Communities', 'Kothur Village',
   'Kondapur Botanical Garden Road', 'Kondapur RTO Office Area', 'Kondapur Chirec School Road',
-  'Madhapur Kavuri Hills Road', 'Madhapur Image Gardens Road', 'Madhapur Metro Station Area',
+  'Madhapur Image Gardens Road',
   'Hitech City Mindspace Road', 'Hitech City Cyber Towers Junction', 'Hitech City IKEA Road',
   'Kukatpally Housing Board Phase 9', 'KPHB Phase 9 Road', 'KPHB Phase 6 Colony',
   'Nizampet Road Metro Area', 'Nizampet Vertex Pride Road', 'Nizampet Village Road',
   'Pragathi Nagar Lake Area', 'Pragathi Nagar Katih Circle Road', 'Pragathi Nagar Kukatpally',
-  'Bachupally Mallampet Cross Road', 'Bachupally SLG Hospital Area', 'Bachupally Miyapur Main Road',
+  'Bachupally Mallampet Cross Road', 'Bachupally Miyapur Main Road',
   'Bowrampet IT Corridor', 'Bowrampet Gated Communities', 'Bowrampet Oakridge Road',
   'Mallampet Medical College Road', 'Mallampet Gated Communities', 'Mallampet Outer Ring Road',
   'Dundigal Base Road', 'Dundigal Air Force Academy Road', 'Dundigal Gandimaisamma Road',
@@ -275,7 +275,7 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   'Shamshabad ORR Exit 7', 'Tukkuguda ORR Exit 8', 'Adibatla ORR Exit 9', 'Bongloor ORR Exit 10', 'Pedda Amberpet ORR Exit 11',
   'Ghatkesar ORR Exit 12', 'Keesara ORR Exit 13', 'Shamirpet ORR Exit 14', 'Medchal ORR Exit 15', 'Dundigal ORR Exit 16',
   'Bowrampet ORR Exit 17', 'Mallampet ORR Exit 18', 'Patancheru ORR Exit 19', 'Kokapet ORR Service Road', 'Tellapur ORR Service Road',
-  'Kollur ORR Service Road', 'Nanakramguda ORR Service Road', 'Financial District ORR Service Road', 'Puppalguda ORR Service Road',
+  'Nanakramguda ORR Service Road', 'Financial District ORR Service Road', 'Puppalguda ORR Service Road',
   'Narsingi ORR Service Road', 'Bandlaguda Jagir ORR Service Road', 'Peerancheru ORR Service Road', 'Rajendranagar ORR Service Road',
 
   // ============ MICRO LANES & SUB-LOCALITIES (BANJARA HILLS / JUBILEE HILLS) ============
@@ -352,7 +352,7 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   'Nizampet Balaji Nagar', 'Nizampet SV Nagar Colony', 'Nizampet Sarada Colony',
 
   // ============ MICRO AREAS - UPPAL & HABSIGUDA ============
-  'Uppal Canalside Road', 'Uppal Bhagayath Layout', 'Uppal Phase 1 Colony', 'Uppal Phase 2 Colony',
+  'Uppal Canalside Road', 'Uppal Phase 1 Colony', 'Uppal Phase 2 Colony',
   'Uppal Nagar Colony', 'Uppal Shiva Nagar Colony', 'Uppal Sai Nagar Colony',
   'Uppal Srinivasa Nagar Colony', 'Uppal Nagole Road Colony', 'Uppal Medipally Road',
   'Habsiguda Street No 2', 'Habsiguda Street No 3', 'Habsiguda Street No 4', 'Habsiguda Street No 5',
@@ -515,7 +515,7 @@ export const HYDERABAD_LOCATIONS = Array.from(new Set([
   'Kulcharam', 'Nyalkal', 'Narsapur Sangareddy', 'Vatpally', 'Hathnoora',
 
   // ============ MEDCHAL–MALKAJGIRI DISTRICT EXTRA TOWNS ============
-  'Medchal Town', 'Medchal MDO Office Area', 'Medchal Bypass Road', 'Alwal Bus Depot Area',
+  'Medchal MDO Office Area', 'Medchal Bypass Road', 'Alwal Bus Depot Area',
   'Bhongir Road Area', 'Yacharam', 'Ghatkesar Town', 'Keesara Town', 'Bibinagar Town',
   'Pocharam Village', 'Turkapally Village', 'Thumkunta Town', 'Hakimpet Town',
 

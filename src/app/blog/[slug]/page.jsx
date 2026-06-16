@@ -165,7 +165,7 @@ const BlogDetailPage = async ({ params }) => {
                                 <h4 className="fw-black mb-3">Instant Booking</h4>
                                 <p className="small opacity-75 mb-4">Professional repair service at your doorstep across Hyderabad.</p>
                                 <a href="tel:8008615049" className="btn btn-light w-100 py-3 fw-black text-purple" style={{ borderRadius: '8px' }}>
-                                    CALL ENGINEEER
+                                    CALL ENGINEER
                                 </a>
                             </div>
 

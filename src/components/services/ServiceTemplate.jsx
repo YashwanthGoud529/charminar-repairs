@@ -553,7 +553,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
 
                         <div className="row g-2 g-md-2 mb-4 service-trust-badges-row px-1">
                             {[
-                                { title: '30 Days Warranty', desc: 'No Additional Charges' },
+                                { title: '180-Day Warranty', desc: 'No Additional Charges' },
                                 { title: 'Rated Experts', desc: 'Repairing on-time' },
                                 { title: 'Zero Inspection', desc: 'With No Charges' },
                                 { title: 'Genuine Parts', desc: 'Reliable Components' }

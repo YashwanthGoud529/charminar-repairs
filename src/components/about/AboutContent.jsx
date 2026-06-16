@@ -45,7 +45,7 @@ const AboutContent = ({ aboutSchema }) => {
                                     { text: "Upfront pricing with 100% transparency", bold: "Fixed Quotes", icon: "/images/ok_icon.png" },
                                     { text: "Strategic units in every major Hyderabad zone", bold: "Rapid Dispatch", icon: "/images/truck_icon.png" },
                                     { text: "Manufacturer-certified master technicians", bold: "Certified Masters", icon: "/images/diploma_icon.png" },
-                                    { text: "Comprehensive 1-Year platinum warranty", bold: "Secured Quality", icon: "/images/prize_icon.svg" }
+                                    { text: "Comprehensive 180-Day platinum warranty", bold: "Secured Quality", icon: "/images/prize_icon.svg" }
                                 ].map((item, i) => (
                                     <div key={i} className="col-md-6">
                                         <div className="premium-mini-card">

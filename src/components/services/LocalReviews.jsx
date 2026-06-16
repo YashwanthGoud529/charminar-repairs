@@ -78,7 +78,7 @@ const LocalReviews = ({ serviceName, locationLabel }) => {
 
     let review2Text = `Brilliant service from Charminar Repairs! The doorstep visit was on time, and they used original spare parts. My appliance feels as good as new. Best ${serviceName.toLowerCase()} in Hyderabad.`;
     let review1Text = `I had my ${serviceName.toLowerCase()} done at my resident in ${loc} yesterday. The technician CH and team were professional, punctual, and highly skilled. They resolved the sudden problem within 45 minutes!`;
-    let review3Text = `Expert and certified professionals. They explained the problem clearly and gave a transparent quote before starting. Very happy with the 1-year warranty too.`;
+    let review3Text = `Expert and certified professionals. They explained the problem clearly and gave a transparent quote before starting. Very happy with the 180-day warranty too.`;
 
     if (type === 'cleaning') {
         review1Text = `Great deep cleaning service! The team arrived on time, was extremely polite, and cleaned every corner of the house. Super happy with the spotless results.`;

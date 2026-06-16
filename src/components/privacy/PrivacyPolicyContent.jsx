@@ -53,7 +53,7 @@ const PrivacyPolicyContent = () => {
                                 <section className="mb-5">
                                     <h2 className="h4 fw-bold mb-4" style={{ color: '#0c1228' }}>4. Data Security & Retention</h2>
                                     <p className="text-muted leading-relaxed">
-                                        Your privacy is our priority. Our systems are secured with encryption and firewall technologies. We maintain a 100% SECURE booking experience. We retain your data only for the time necessary to fulfill your service and 1-year warranty requirements.
+                                        Your privacy is our priority. Our systems are secured with encryption and firewall technologies. We maintain a 100% SECURE booking experience. We retain your data only for the time necessary to fulfill your service and 180-day warranty requirements.
                                     </p>
                                 </section>
 

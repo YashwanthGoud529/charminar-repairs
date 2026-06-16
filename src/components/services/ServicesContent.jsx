@@ -30,7 +30,7 @@ const ServicesContent = ({ serviceListSchema, services }) => {
             {/* Unified Page Hero */}
             <PageHero
                 title="Professional Appliance Repair Services"
-                subtitle="From high-end cooling systems to essential kitchen tools, Charminar Repairs provides expert fixes with genuine parts and a 1-year warranty across Hyderabad."
+                subtitle="From high-end cooling systems to essential kitchen tools, Charminar Repairs provides expert fixes with genuine parts and a 180-day warranty across Hyderabad."
                 breadcrumb="Our Services"
             />
 
@@ -109,12 +109,12 @@ const ServicesContent = ({ serviceListSchema, services }) => {
                             </p>
                         </div>
                         <div className="col-lg-6">
-                            <h3 className="font-outfit">Elite Deployment Strategy & 1-Year Protection</h3>
+                            <h3 className="font-outfit">Elite Deployment Strategy & 180-Day Protection</h3>
                             <p className="font-inter">
                                 Our <strong>managed doorstep service</strong> is engineered for zero friction. From the moment you secure your booking, our system dispatches a <strong>certified repair engineer</strong> equipped with advanced sensor diagnostics and <strong>OEM-serialized components</strong>. We don't just solve the symptom; we identify the root cause of the failure to prevent future recurrence.
                             </p>
                             <p className="font-inter">
-                                Covering every sector from <strong>Hi-Tech City to Charminar</strong>, our decentralized technical hubs ensure a rapid arrival window. Every intervention is backed by our <strong>Platinum 1-Year Performance Warranty</strong>, covering both internal technical components and high-precision labor—giving you permanent peace of mind.
+                                Covering every sector from <strong>Hi-Tech City to Charminar</strong>, our decentralized technical hubs ensure a rapid arrival window. Every intervention is backed by our <strong>Platinum 180-Day Performance Warranty</strong>, covering both internal technical components and high-precision labor—giving you permanent peace of mind.
                             </p>
                         </div>
                     </div>

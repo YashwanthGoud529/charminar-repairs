@@ -6,20 +6,28 @@ import ScrollToTop from '@/components/shared/ScrollToTop';
 import FontAwesomeLoader from '@/components/shared/FontAwesomeLoader';
 import ThirdPartyScripts from '@/components/shared/ThirdPartyScripts';
 import Providers from './providers';
-import { Outfit } from 'next/font/google';
+import { Outfit, Inter } from 'next/font/google';
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
 const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-outfit',
+  weight: ['300', '400', '500', '600', '700', '800'],
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+  weight: ['400', '500', '600', '700', '800'],
 });
 
 export const metadata = constructMetadata({
   title: 'Appliance Repair Hyderabad | Charminar Repairs Service',
-  description: 'Trusted appliance repair in Hyderabad. Certified service for ACs, fridges & washers. 1-Year Warranty. Book same-day repair.',
+  description: 'Trusted appliance repair in Hyderabad. Certified service for ACs, fridges & washers. 180-Day Warranty. Book same-day repair.',
   canonicalPath: '/',
-  keywords: 'appliance repair Hyderabad, washing machine repair Hyderabad, AC repair Hyderabad, refrigerator repair Hyderabad, microwave repair Hyderabad, TV repair Hyderabad, same-day appliance repair, doorstep repair Hyderabad, Charminar Repairs, home appliance service center Hyderabad, 1 year warranty repair',
+  keywords: 'appliance repair Hyderabad, washing machine repair Hyderabad, AC repair Hyderabad, refrigerator repair Hyderabad, microwave repair Hyderabad, TV repair Hyderabad, same-day appliance repair, doorstep repair Hyderabad, Charminar Repairs, home appliance service center Hyderabad, 180-day warranty repair',
 });
 
 import StyledJsxRegistry from './registry';
@@ -46,7 +54,10 @@ const organizationSchema = {
       "priceRange": "₹₹",
       "sameAs": [
         "https://www.facebook.com/charminarrepairs",
-        "https://www.instagram.com/charminarrepairs"
+        "https://www.instagram.com/charminarrepairs",
+        "https://www.linkedin.com/company/charminarrepairs",
+        "https://www.youtube.com/@charminarrepairs",
+        "https://twitter.com/charminarrepairs"
       ]
     },
     {
@@ -70,6 +81,7 @@ const organizationSchema = {
         'https://www.instagram.com/charminarrepairs',
         'https://twitter.com/charminarrepairs',
         'https://www.youtube.com/@charminarrepairs',
+        'https://www.linkedin.com/company/charminarrepairs',
         'https://g.co/kgs/charminarrepairs',
       ],
       contactPoint: [
@@ -100,7 +112,7 @@ const organizationSchema = {
       '@id': 'https://www.charminarrepairs.com/#website',
       url: 'https://www.charminarrepairs.com',
       name: 'Charminar Repairs',
-      description: 'Professional home appliance repair service in Hyderabad with same-day service and 1-year warranty.',
+      description: 'Professional home appliance repair service in Hyderabad with same-day service and 180-day warranty.',
       publisher: {
         '@id': 'https://www.charminarrepairs.com/#organization',
       },
@@ -121,7 +133,7 @@ const organizationSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" className={`${outfit.variable}`}>
+    <html lang="en-IN" className={`${outfit.variable} ${inter.variable}`}>
       <head>
         <meta charSet="utf-8" />
 

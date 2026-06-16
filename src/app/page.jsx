@@ -40,10 +40,10 @@ import SpecializedCleaningUtility from '@/components/home/SpecializedCleaningUti
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
 export const metadata = constructMetadata({
-    title: `Appliance Repair Hyderabad | Trusted ${BRAND.name}`,
-    description: `Top-rated appliance repair in Hyderabad. Expert service for AC, Fridge & Washing Machine. Same-day doorstep repair with 1-year warranty. Book now with ${BRAND.name}!`,
+    title: `AC, Washing Machine & Appliance Repair Hyderabad | ${BRAND.name}`,
+    description: `Trusted AC, washing machine & appliance repair in Hyderabad. Certified same-day doorstep service with 180-day warranty. Book now — ${BRAND.name}!`,
     canonicalPath: '/',
-    keywords: `appliance repair hyderabad, home services hyderabad, ac repair hyderabad, refrigerator repair hyderabad, washing machine repair hyderabad, tv repair hyderabad, microwave repair hyderabad, ${BRAND.shortName} hyderabad`
+    keywords: `appliance repair hyderabad, ac repair hyderabad, washing machine repair hyderabad, refrigerator repair hyderabad, home services hyderabad, tv repair hyderabad, microwave repair hyderabad, same-day appliance service hyderabad, ${BRAND.shortName} hyderabad`
 });
 
 export default function Home() {
@@ -65,7 +65,7 @@ export default function Home() {
                 name: 'Do you provide a warranty on repairs?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Absolutely! We provide a comprehensive 1-year warranty on all genuine spare parts replaced by our technicians, ensuring peace of mind.'
+                    text: 'Absolutely! We provide a comprehensive 180-day warranty on all genuine spare parts replaced by our technicians, ensuring peace of mind.'
                 }
             },
             {

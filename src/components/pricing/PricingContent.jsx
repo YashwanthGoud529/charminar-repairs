@@ -217,7 +217,7 @@ const PricingContent = () => {
                                     <h4 className="fw-black mb-4">Why Us?</h4>
                                     {[
                                         { title: "Standard Pricing", desc: "No random quotes. Fixed rate card.", icon: "fa-tags" },
-                                        { title: "1-Year Warranty", desc: "Labor and genuine spares covered.", icon: "fa-certificate" },
+                                        { title: "180-Day Warranty", desc: "Labor and genuine spares covered.", icon: "fa-certificate" },
                                         { title: "Verified Experts", desc: "Background checked technicians.", icon: "fa-user-check" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="d-flex gap-3 mb-4">

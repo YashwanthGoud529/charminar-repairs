@@ -20,7 +20,7 @@ const stats = [
 
 const reviews = [
     { name: 'Rajesh Kumar', area: 'Banjara Hills', rating: 5, service: 'AC Repair', date: 'May 2025', text: 'Excellent service! The technician arrived within 2 hours, diagnosed the issue instantly, and fixed my Daikin AC at a very reasonable price. Will definitely use again.' },
-    { name: 'Priya Sharma', area: 'Kondapur', rating: 5, service: 'Washing Machine Repair', date: 'May 2025', text: 'Very professional. They called before arriving, wore shoe covers inside the house, and fixed the drum motor in under an hour. 30-day warranty is a bonus!' },
+    { name: 'Priya Sharma', area: 'Kondapur', rating: 5, service: 'Washing Machine Repair', date: 'May 2025', text: 'Very professional. They called before arriving, wore shoe covers inside the house, and fixed the drum motor in under an hour. 180-day warranty is a bonus!' },
     { name: 'Mohammed Imran', area: 'Madhapur', rating: 5, service: 'Refrigerator Repair', date: 'April 2025', text: 'My LG fridge was not cooling. They replaced the compressor with a genuine part and gave 90 days warranty on it. Transparent pricing, no surprises.' },
     { name: 'Sunita Reddy', area: 'Gachibowli', rating: 5, service: 'Deep Home Cleaning', date: 'April 2025', text: 'Wow! My 3BHK looks brand new. The team was punctual, brought all their own equipment, and worked nonstop for 6 hours. Highly recommended!' },
     { name: 'Amit Verma', area: 'Jubilee Hills', rating: 5, service: 'TV Repair', date: 'March 2025', text: 'Samsung LED TV display issue resolved same day. The engineer was knowledgeable and explained the problem clearly. Reasonable charge.' },

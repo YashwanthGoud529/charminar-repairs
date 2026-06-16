@@ -23,7 +23,7 @@ const faqs = [
         { q: 'Do you charge extra for same-day or emergency visits?', a: 'Emergency visits may carry a nominal surge of ₹50–₹150 depending on urgency and distance.' },
     ]},
     { cat: 'Warranty & Quality', icon: '🛡️', items: [
-        { q: 'Do repairs come with a warranty?', a: 'Yes. All repairs carry a 30-day service warranty and 90-day warranty on replaced spare parts.' },
+        { q: 'Do repairs come with a warranty?', a: 'Yes. All repairs carry a 180-day service warranty and 90-day warranty on replaced spare parts.' },
         { q: 'What if the appliance breaks again within warranty?', a: 'We will revisit and fix it at zero additional cost. No questions asked.' },
         { q: 'Are your technicians certified?', a: 'All our engineers are certified, background-verified, and trained on specific brands and appliance categories.' },
     ]},

@@ -217,6 +217,11 @@ function getSlugResolution() {
         'charminar-wheels': 'Charminar Auto Care',
         'doorstep-car-bike-wash': 'Charminar Auto Care',
         'packers-and-movers': 'Packers and Movers',
+        'laptop-repairing': 'Laptop & Desktop Repair',
+        'washing-machine-checkup': 'Automatic Machine Check-up',
+        'pedicure-service': 'British Rose Pedicure',
+        'men-haircut': 'Haircut for Men',
+        'air-cooler-servicing': 'Air Cooler Repair',
     };
 
     Object.values(SERVICE_DATA_MAP).forEach(service => {
