@@ -2,24 +2,24 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './CarouselShared.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SERVICE_CANONICAL_MAP } from '@/config/services';
+import { SERVICE_CANONICAL_MAP, toCDN } from '@/config/services';
 
 const CATEGORY_ITEMS = [
     { id: 1, image: '/assets/Images/category/appliance-repair.jpeg', alt: 'Appliance Repair', slug: `/${SERVICE_CANONICAL_MAP['Professional Appliance Repair']}` },
-    { id: 2, image: '/assets/Images/category/floor-polish.jpeg', alt: 'Floor Polish', slug: '/bathroom-cleaning' },
+    { id: 2, image: '/assets/Images/category/floor-polish.jpeg', alt: 'Floor Polish', slug: `/${SERVICE_CANONICAL_MAP['Floor Polishing']}/` },
     { id: 3, image: '/assets/Images/category/hair-saloon.jpeg', alt: 'Hair Saloon', slug: `/${SERVICE_CANONICAL_MAP['Haircut for Men']}` },
     { id: 4, image: '/assets/Images/category/home-painting.jpeg', alt: 'Home Painting', slug: `/${SERVICE_CANONICAL_MAP['Decor Installation']}` },
-    { id: 5, image: '/assets/Images/category/packers-movers.jpeg', alt: 'Packers Movers', slug: null },
+    { id: 5, image: '/assets/Images/category/packers-movers.jpeg', alt: 'Packers Movers', slug: '/packers-and-movers/' },
     { id: 6, image: '/assets/Images/category/pest-control.jpeg', alt: 'Pest Control', slug: `/${SERVICE_CANONICAL_MAP['Cockroach Control']}` },
     { id: 7, image: '/assets/Images/category/plumber.jpeg', alt: 'Plumber', slug: `/${SERVICE_CANONICAL_MAP['Plumbing Work']}` },
     { id: 8, image: '/assets/Images/category/relax-men.jpeg', alt: 'Men Salon', slug: `/${SERVICE_CANONICAL_MAP['Haircut for Men']}` },
-];
+].map(item => ({ ...item, image: toCDN(item.image) }));
 
 const Category = () => {
     return (
@@ -30,8 +30,14 @@ const Category = () => {
                 </Link>
                 
                 <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     navigation
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
+                    speed={1000}
                     spaceBetween={16}
                     slidesPerView={1.2}
                     breakpoints={{

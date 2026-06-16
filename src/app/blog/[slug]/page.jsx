@@ -81,7 +81,7 @@ const BlogDetailPage = async ({ params }) => {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <PageHero 
+            <PageHero
                 title={blog.title}
                 subtitle={blog.category}
                 breadcrumb="Insights"
@@ -201,7 +201,7 @@ const BlogDetailPage = async ({ params }) => {
                 .btn-purple { background: #673ab7; color: white; }
                 
                 .blog-article-premium {
-                    border-radius: 8px;
+                    border-radius: 4px;
                 }
 
                 .hub-blob {
@@ -212,7 +212,7 @@ const BlogDetailPage = async ({ params }) => {
                 }
 
                 .next-article-card, .sidebar-rec {
-                    border-radius: 8px;
+                    border-radius: 4px;
                     transition: all 0.3s;
                 }
 

@@ -129,17 +129,46 @@ const Header = () => {
                                     />
                                 </Link>
                             </div>
-                            <ul className="nav-list-v3 d-none d-xl-flex">
+                             <ul className="nav-list-v3 d-none d-xl-flex">
+                                <li className="nav-item-dropdown-v3">
+                                    <Link href="/all-services-hyderabad/" className={isActive('/all-services-hyderabad') ? 'active' : ''}>
+                                        Services <i className="fas fa-chevron-down ms-1" style={{ fontSize: '10px' }}></i>
+                                    </Link>
+                                    <div className="mega-dropdown-v3">
+                                        <div className="dropdown-col-v3">
+                                            <h4>Appliance Repair</h4>
+                                            <ul>
+                                                <li><Link href="/ac-repairing/">AC Repair</Link></li>
+                                                <li><Link href="/refrigerator-repairing/">Refrigerator Repair</Link></li>
+                                                <li><Link href="/washing-machine-repairing/">Washing Machine</Link></li>
+                                                <li><Link href="/tv-repairing/">TV Repair</Link></li>
+                                                <li><Link href="/microwave-repairing/">Microwave Repair</Link></li>
+                                                <li><Link href="/geyser-repairing/">Geyser Repair</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="dropdown-col-v3">
+                                            <h4>Home & Utility</h4>
+                                            <ul>
+                                                <li><Link href="/floor-polishing/">Floor Polishing</Link></li>
+                                                <li><Link href="/packers-and-movers/">Packers & Movers</Link></li>
+                                                <li><Link href="/cleaning-sanitization-services/">Cleaning & Sanitization</Link></li>
+                                                <li><Link href="/safety-home-protection/">Safety & Protection</Link></li>
+                                                <li><Link href="/home-it-office-setup/">Home IT & Office</Link></li>
+                                                <li><Link href="/premium-pest-control/">Premium Pest Control</Link></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
                                 <li><Link href="/about-us" className={isActive('/about-us') ? 'active' : ''}>About</Link></li>
                                 <li><Link href="/pricing" className={isActive('/pricing') ? 'active' : ''}>Pricing</Link></li>
-                                <li><Link href="/service-areas" className={isActive('/service-areas') ? 'active' : ''}>Areas</Link></li>
+                                {/* <li><Link href="/service-areas" className={isActive('/service-areas') ? 'active' : ''}>Areas</Link></li> */}
                                 <li><Link href="/blog" className={isActive('/blog') ? 'active' : ''}>Blog</Link></li>
                                 <li><Link href="/contact-us" className={isActive('/contact-us') ? 'active' : ''}>Contact</Link></li>
                                 <li className="ms-lg-3">
                                     <Link href="/careers" className="partner-btn-v3 d-flex align-items-center gap-2">
-                                        <div className="icon-box-colorful icon-box-orange p-1 bg-white-opacity shadow-sm" style={{ width: '24px', height: '24px', minWidth: '24px' }}>
+                                        {/* <div className="icon-box-colorful icon-box-orange p-1 bg-white-opacity shadow-sm" style={{ width: '24px', height: '24px', minWidth: '24px' }}>
                                             <i className="fas fa-handshake" style={{ fontSize: '12px' }}></i>
-                                        </div>
+                                        </div> */}
                                         <span>Want to be a Partner?</span>
                                     </Link>
                                 </li>
@@ -185,10 +214,10 @@ const Header = () => {
                                         <span className="text-dark fw-black small" style={{ lineHeight: 1 }}>80086 15049</span>
                                     </div>
                                 </a>
-                                <Link href="/cart" className="icon-box-colorful icon-box-purple position-relative" aria-label="View shopping cart with repairs">
+                                {/* <Link href="/cart" className="icon-box-colorful icon-box-purple position-relative" aria-label="View shopping cart with repairs">
                                     <i className="fas fa-shopping-cart fs-6"></i>
                                     {cartItems.length > 0 && <span className="cart-badge-v3">{cartItems.length}</span>}
-                                </Link>
+                                </Link> */}
                                 <a href="tel:+918008615049" className="icon-box-colorful icon-box-green d-lg-none" aria-label="Call Charminar Repairs directly">
                                     <i className="fas fa-phone-alt"></i>
                                 </a>
@@ -247,7 +276,7 @@ const Header = () => {
                     </div>
                     <ul className="mobile-nav-list-v3">
                         <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
-                        <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
+                        <li><Link href="/all-services-hyderabad/" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
                         <li><Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)}>Pricing Card</Link></li>
                         <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link></li>
                         <li><Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>Contact Experts</Link></li>

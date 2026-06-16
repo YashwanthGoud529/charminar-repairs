@@ -18,10 +18,10 @@
 .service-selector-card-v3 {
     background: #fff;
     border: 1px solid #e0e0e0;
-    border-radius: 12px;
+    border-radius: 4px;
     padding: 32px;
     max-width: 580px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .service-card-title-v3 {
@@ -56,9 +56,10 @@
     width: 100%;
     aspect-ratio: 5/3;
     background: #f8f8f8;
-    border-radius: 12px;
+    border-radius: 4px;
     display: flex;
-    align-items: center; /* Centered icons */
+    align-items: center;
+    /* Centered icons */
     justify-content: center;
     padding: 10px;
     transition: background 0.2s;
@@ -100,10 +101,10 @@
 }
 
 .collage-item {
-    border-radius: 12px;
+    border-radius: 0px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .collage-item img {
@@ -120,6 +121,7 @@
 .collage-col-left .collage-item-tall {
     height: 55%;
 }
+
 .collage-col-left .collage-item-short {
     height: 40%;
 }
@@ -127,6 +129,7 @@
 .collage-col-right .collage-item-short {
     height: 40%;
 }
+
 .collage-col-right .collage-item-tall {
     height: 55%;
 }
@@ -137,12 +140,15 @@
         font-size: 36px;
         text-align: center;
     }
+
     .service-selector-card-v3 {
         margin: 0 auto;
     }
+
     .service-card-title-v3 {
         text-align: center;
     }
+
     .hero-collage-v3 {
         display: none;
     }
@@ -155,3 +161,6 @@
 }
 
 
+.rounded-3 {
+    border-radius: 4px !important;
+}

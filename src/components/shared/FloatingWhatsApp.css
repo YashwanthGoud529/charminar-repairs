@@ -34,8 +34,15 @@
 }
 
 @keyframes whatsappPulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    100% { transform: scale(1.6); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
 }
 
 .whatsapp-tooltip-v4 {
@@ -44,7 +51,7 @@
     background: #0c1228;
     color: #fff;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 13px;
     font-weight: 700;
     white-space: nowrap;
@@ -52,7 +59,7 @@
     visibility: hidden;
     transform: translateX(10px);
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .whatsapp-tooltip-v4::after {
@@ -74,12 +81,14 @@
 
 @media (max-width: 768px) {
     .floating-whatsapp-v4 {
-        bottom: 100px; /* Stay above mobile nav / cart bar if exists */
+        bottom: 100px;
+        /* Stay above mobile nav / cart bar if exists */
         right: 20px;
         width: 50px;
         height: 50px;
         font-size: 26px;
     }
+
     .whatsapp-tooltip-v4 {
         display: none;
     }

@@ -9,8 +9,11 @@ export function constructMetadata({
   noIndex = false,
   keywords = `appliance repair Hyderabad, washing machine repair Hyderabad, AC repair Hyderabad, refrigerator repair Hyderabad, microwave repair Hyderabad, TV repair Hyderabad, doorstep repair Hyderabad, same-day repair service, ${BRAND.name} Hyderabad, appliance service center Hyderabad`,
 }) {
-  const baseUrl = `https://www.lunarrepairs.com`; // Update to BRAND.domain if needed
-  let path = canonicalPath;
+  const baseUrl = BRAND.domain ? (BRAND.domain.startsWith('http') ? BRAND.domain : `https://www.${BRAND.domain}`) : 'https://www.charminarrepairs.com';
+  let path = canonicalPath || "/";
+  if (!path.startsWith("/")) {
+    path = "/" + path;
+  }
   if (path !== "/" && !path.endsWith("/")) {
     path += "/";
   }

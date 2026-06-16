@@ -23,30 +23,19 @@ const SectionSkeleton = () => (
     </section>
 );
 
-const Category = dynamic(() => import('@/components/home/Category'), { 
-    loading: () => <div className="container py-4"><Skeleton height="200px" /></div>,
-    ssr: true 
-});
-const MostBookedServices = dynamic(() => import('@/components/home/MostBookedServices'), { 
-    loading: () => <SectionSkeleton />,
-    ssr: true 
-});
-const AdBanner = dynamic(() => import('@/components/home/AdBanner'), { 
-    loading: () => <div className="container py-4"><Skeleton height="150px" borderRadius="12px" /></div>,
-    ssr: true 
-});
-const AllServicesList = dynamic(() => import('@/components/home/AllServicesList'), { 
-    loading: () => <SectionSkeleton />,
-    ssr: true 
-});
-const PestControl = dynamic(() => import('@/components/home/PestControl'), { 
-    loading: () => <SectionSkeleton />,
-    ssr: true 
-});
-const HomeSafety = dynamic(() => import('@/components/home/HomeSafety'), { 
-    loading: () => <SectionSkeleton />,
-    ssr: true 
-});
+import Category from '@/components/home/Category';
+import MostBookedServices from '@/components/home/MostBookedServices';
+import AdBanner from '@/components/home/AdBanner';
+import AllServicesList from '@/components/home/AllServicesList';
+import PestControl from '@/components/home/PestControl';
+import HomeSafety from '@/components/home/HomeSafety';
+import FloorPolishing from '@/components/home/FloorPolishing';
+import CleaningServices from '@/components/home/CleaningServices';
+import VehicleWash from '@/components/home/VehicleWash';
+import SafetyHomeProtection from '@/components/home/SafetyHomeProtection';
+import HomeITSetup from '@/components/home/HomeITSetup';
+import PremiumPestControl from '@/components/home/PremiumPestControl';
+import SpecializedCleaningUtility from '@/components/home/SpecializedCleaningUtility';
 
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
@@ -186,6 +175,34 @@ export default function Home() {
 
             <LazySection fallback={<SectionSkeleton />}>
                 <HomeSafety />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <FloorPolishing />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <CleaningServices />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <VehicleWash />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <SafetyHomeProtection />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <HomeITSetup />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <PremiumPestControl />
+            </LazySection>
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <SpecializedCleaningUtility />
             </LazySection>
         </main>
     );

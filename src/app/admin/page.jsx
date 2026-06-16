@@ -394,7 +394,7 @@ const AdminPage = () => {
                              <span className="small opacity-75 fw-medium">Network is buzzing with activity!</span>
                         </p>
                     </div>
-                    <div className="d-flex align-items-center gap-3 bg-white p-3 rounded-4 shadow-sm border border-white-50 premium-hover">
+                    <div className="d-flex align-items-center gap-3 bg-white p-3 rounded shadow-sm border border-white-50 premium-hover">
                         <div className="text-end d-none d-md-block">
                             <div className="fw-extrabold text-dark-blue fs-6">Operations Center</div>
                             <div className="small text-success fw-bold d-flex align-items-center justify-content-end gap-2 mt-1">
@@ -406,8 +406,8 @@ const AdminPage = () => {
                             </div>
                         </div>
                         <div className="profile-img-wrapper position-relative">
-                            <img src="/images/worker_icon.png" width="52" height="52" className="rounded-circle shadow-md border-2 border-white p-1" alt="admin" />
-                            <div className="position-absolute bottom-0 end-0 bg-success border border-white border-2 rounded-circle" style={{width: 14, height: 14}}></div>
+                            <img src="/images/worker_icon.png" width="52" height="52" className="rounded shadow-md border-2 border-white p-1" alt="admin" />
+                            <div className="position-absolute bottom-0 end-0 bg-success border border-white border-2 rounded" style={{width: 14, height: 14}}></div>
                         </div>
                     </div>
                 </div>
@@ -483,10 +483,10 @@ const AdminPage = () => {
                     <div className="table-header">
                         <h3>{activeTab === 'leads' ? 'Recent Service Leads' : activeTab === 'bookings' ? 'Cart Orders' : 'Service Expert Network'}</h3>
                         <div className="d-flex align-items-center gap-2">
-                            <span className="badge bg-light text-dark px-3 py-2 border" style={{borderRadius: 8}}>
+                            <span className="badge bg-light text-dark px-3 py-2 border">
                                 {activeTab === 'leads' ? filteredLeads.length : activeTab === 'bookings' ? bookings.length : filteredPartners.length} Records
                             </span>
-                            <span className="badge border px-3 py-2" style={{borderRadius: 8, background: 'linear-gradient(135deg,#FF512F,#F09819)', color: '#fff', fontSize: 12}}>
+                            <span className="badge border px-3 py-2" style={{background: 'linear-gradient(135deg,#FF512F,#F09819)', color: '#fff', fontSize: 12}}>
                                 Page {activeTab === 'leads' ? leadsPage : activeTab === 'bookings' ? bookingsPage : partnersPage} / {activeTab === 'leads' ? totalLeadsPages : activeTab === 'bookings' ? totalBookingsPages : totalPartnersPages}
                             </span>
                         </div>
@@ -720,7 +720,7 @@ const AdminPage = () => {
                                                             <span>₹{b.tipAmount}</span>
                                                         </div>
                                                     )}
-                                                    <div className="fw-extrabold text-dark-blue d-flex justify-content-between align-items-center mt-2 p-2 bg-light-soft rounded-3">
+                                                    <div className="fw-extrabold text-dark-blue d-flex justify-content-between align-items-center mt-2 p-2 bg-light-soft rounded">
                                                         <span>Grand Total:</span>
                                                         <span className="text-orange fs-5">₹{b.totalPrice}</span>
                                                     </div>
@@ -844,10 +844,10 @@ const AdminPage = () => {
                 {/* Service Management UI */}
                 {activeTab === 'services' && (
                     <div className="services-container mt-4 animate-fade-in">
-                        <div className="card shadow-md border-0 p-4 rounded-3 overflow-hidden position-relative">
+                        <div className="card shadow-md border-0 p-4 rounded overflow-hidden position-relative">
                             <div className="card-header-gradient p-4 m-n4 mb-4 d-flex justify-content-between align-items-center bg-dark text-white shadow-lg border-bottom border-warning">
                                 <div className="d-flex align-items-center gap-3">
-                                    <div className="bg-orange p-2 rounded-3 shadow-sm">
+                                    <div className="bg-orange p-2 rounded shadow-sm">
                                         <img src="/images/gear_icon.svg" width="32" height="32" alt="gear" />
                                     </div>
                                     <div>
@@ -884,7 +884,7 @@ const AdminPage = () => {
                                 <label className="form-label fw-bold text-dark-blue mb-3 fs-5">Select Service Category</label>
                                 <div className="row g-3">
                                     <div className="col-md-6">
-                                        <div className="input-group input-group-lg shadow-sm rounded-3 overflow-hidden">
+                                        <div className="input-group input-group-lg shadow-sm rounded overflow-hidden">
                                             <span className="input-group-text bg-white border-end-0">
                                                 <img src="/images/search_icon.png" width="20" alt="search" />
                                             </span>
@@ -906,7 +906,7 @@ const AdminPage = () => {
                                     </div>
                                     <div className="col-md-6 d-flex align-items-center">
                                         {selectedServiceCategory && (
-                                            <div className="badge bg-soft-primary text-primary px-3 py-2 fs-6 rounded-pill border border-primary">
+                                            <div className="badge bg-soft-primary text-primary px-3 py-2 fs-6 rounded border border-primary">
                                                 Active: <span className="fw-bold">{serviceCategories.find(c => c.slug === selectedServiceCategory)?.name}</span>
                                             </div>
                                         )}
@@ -915,7 +915,7 @@ const AdminPage = () => {
                             </div>
 
                             {!selectedServiceCategory ? (
-                                <div className="text-center py-6 bg-light-soft rounded-3 border-2 border-dashed border-primary-subtle">
+                                <div className="text-center py-6 bg-light-soft rounded border-2 border-dashed border-primary-subtle">
                                     <div className="mb-4">
                                         <img src="/images/gear_icon.svg" width="100" alt="select-category" className="opacity-75 floating-anim" />
                                     </div>
@@ -923,7 +923,7 @@ const AdminPage = () => {
                                     <p className="text-muted mx-auto" style={{maxWidth: '400px'}}>Select a service from the dropdown above to manage its specific repair items, pricing, and descriptions.</p>
                                 </div>
                             ) : (
-                                <div className="table-responsive service-table-wrapper rounded-3 shadow-sm border">
+                                <div className="table-responsive service-table-wrapper rounded shadow-sm border">
                                     <table className="table table-hover align-middle mb-0">
                                         <thead className="bg-light-blue text-dark fw-bold">
                                             <tr>
@@ -995,7 +995,7 @@ const AdminPage = () => {
             {/* Service Modal */}
             {serviceModalOpen && (
                 <div className="admin-modal-overlay d-flex align-items-center justify-content-center">
-                    <div className="admin-modal-content premium-modal rounded-3 animate-slide-up bg-white shadow-2xl overflow-hidden border-0" style={{maxWidth: '550px', width: '90%'}}>
+                    <div className="admin-modal-content premium-modal rounded animate-slide-up bg-white shadow-2xl overflow-hidden border-0" style={{maxWidth: '550px', width: '90%'}}>
                         <div className="modal-header-gradient p-4 text-white d-flex justify-content-between align-items-center bg-dark">
                             <div>
                                 <h4 className="fw-extrabold mb-0">{editingServiceItem ? 'Edit Service Details' : 'Add New Service Item'}</h4>
@@ -1007,7 +1007,7 @@ const AdminPage = () => {
                             <div className="form-floating mb-4">
                                 <input 
                                     type="text" 
-                                    className="form-control rounded-3 border-2" 
+                                    className="form-control rounded border-2" 
                                     id="serviceName"
                                     placeholder="Service Name"
                                     value={newServiceItem.name}
@@ -1018,7 +1018,7 @@ const AdminPage = () => {
                             <div className="form-floating mb-4">
                                 <input 
                                     type="number" 
-                                    className="form-control rounded-3 border-2" 
+                                    className="form-control rounded border-2" 
                                     id="servicePrice"
                                     placeholder="Price"
                                     value={newServiceItem.price}
@@ -1028,7 +1028,7 @@ const AdminPage = () => {
                             </div>
                             <div className="form-floating mb-4">
                                 <textarea 
-                                    className="form-control rounded-3 border-2" 
+                                    className="form-control rounded border-2" 
                                     id="serviceDesc"
                                     placeholder="Description"
                                     style={{ height: '120px' }}
@@ -1039,9 +1039,9 @@ const AdminPage = () => {
                             </div>
                         </div>
                         <div className="modal-footer p-4 bg-light d-flex gap-3">
-                            <button className="btn btn-outline-secondary flex-grow-1 py-3 fw-bold rounded-4 border-2" onClick={() => setServiceModalOpen(false)}>Discard</button>
+                            <button className="btn btn-outline-secondary flex-grow-1 py-3 fw-bold rounded border-2" onClick={() => setServiceModalOpen(false)}>Discard</button>
                             <button 
-                                className="btn btn-primary flex-grow-1 py-3 fw-bold rounded-4 shadow-lg" 
+                                className="btn btn-primary flex-grow-1 py-3 fw-bold rounded shadow-lg" 
                                 onClick={handleSaveServiceItem}
                                 disabled={isSavingService || !newServiceItem.name || !newServiceItem.price}
                             >
@@ -1058,16 +1058,16 @@ const AdminPage = () => {
                 {/* Partner Detail Modal */}
                 {isPartnerModalOpen && selectedPartner && (
                     <div className="modal-overlay-admin" onClick={() => setIsPartnerModalOpen(false)}>
-                        <div className="modal-content-admin p-0 rounded-4 overflow-hidden border-0 shadow-lg position-relative" onClick={e => e.stopPropagation()} style={{maxWidth: '650px'}}>
+                        <div className="modal-content-admin p-0 rounded overflow-hidden border-0 shadow-lg position-relative" onClick={e => e.stopPropagation()} style={{maxWidth: '650px'}}>
                             <div className="bg-dark p-5 text-white position-relative overflow-hidden">
                                 <button className="btn-close btn-close-white position-absolute" style={{top: '25px', right: '25px', zIndex: 10}} onClick={() => setIsPartnerModalOpen(false)}></button>
                                 <div className="d-flex align-items-center gap-4 position-relative z-2">
-                                     <div className="p-3 bg-primary rounded-circle shadow-lg border border-white border-opacity-10 d-flex align-items-center justify-content-center" style={{ width: '80px', height: '80px' }}>
+                                     <div className="p-3 bg-primary rounded shadow-lg border border-white border-opacity-10 d-flex align-items-center justify-content-center" style={{ width: '80px', height: '80px' }}>
                                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                                  </div>
                                      <div>
                                          <h2 className="fw-black mb-1">{selectedPartner.name}</h2>
-                                         <span className={`badge ${selectedPartner.isVerified ? 'bg-success' : 'bg-warning'} px-3 py-2 rounded-pill shadow-sm`}>
+                                         <span className={`badge ${selectedPartner.isVerified ? 'bg-success' : 'bg-warning'} px-3 py-2 rounded shadow-sm`}>
                                              {selectedPartner.isVerified ? 'VERIFIED EXPERT' : 'PENDING REVIEW'}
                                          </span>
                                      </div>
@@ -1079,37 +1079,37 @@ const AdminPage = () => {
                             <div className="p-5 bg-white">
                                 <div className="row g-4 mb-5">
                                     <div className="col-md-6">
-                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                        <div className="p-3 border rounded bg-light bg-opacity-50 h-100">
                                             <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> CONTACT</div>
                                             <div className="fw-extrabold text-dark fs-5">{selectedPartner.phone}</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
-                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                        <div className="p-3 border rounded bg-light bg-opacity-50 h-100">
                                             <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884 0 2.225.569 3.847 1.606 5.62l-.993 3.635 3.791-.994-1.35 1.041zm11.057-7.477c-.313-.156-1.853-.915-2.14-.1.021-.286-.141-.43-.162-.482-.046-.117-.183-.248-.454-.313-.156-.217-.655-.156-.915-.286-.021-.033-.124-.132-.231-.24-.448-.454-.515-.558-.871-1.03-.518-.686-.689-.81-.979-1.22-.29-.41-.03-.701.071-.851.101-.15.228-.35.342-.48.113-.13.15-.224.227-.374.077-.15.038-.281-.019-.393-.057-.113-.513-1.236-.704-1.697-.186-.446-.363-.385-.513-.392-.132-.007-.284-.009-.437-.009-.153 0-.401.057-.611.286-.21.229-.801.782-.801 1.905 0 1.124.815 2.208.929 2.361.114.153 1.605 2.45 3.886 3.432.543.234.966.374 1.296.479.544.173 1.04.149 1.431.09.435-.066 1.341-.548 1.531-1.077.19-.529.19-.982.132-1.077-.059-.095-.213-.151-.527-.308z"/></svg> WHATSAPP</div>
                                             <div className="fw-extrabold text-success fs-5">{selectedPartner.whatsapp || 'N/A'}</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
-                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                        <div className="p-3 border rounded bg-light bg-opacity-50 h-100">
                                             <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> SPECIALTY</div>
                                             <div className="fw-extrabold text-primary fs-5">{selectedPartner.specialization}</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
-                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                        <div className="p-3 border rounded bg-light bg-opacity-50 h-100">
                                             <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="12" r="3"/></svg> LOCATION</div>
                                             <div className="fw-extrabold text-dark-blue fs-5">{selectedPartner.location}</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
-                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                        <div className="p-3 border rounded bg-light bg-opacity-50 h-100">
                                             <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> RATING</div>
                                             <div className="fw-extrabold text-warning fs-5">★ {selectedPartner.rating || '5.0'} / 5.0</div>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
-                                        <div className="p-3 border rounded-4 bg-light bg-opacity-50 h-100">
+                                        <div className="p-3 border rounded bg-light bg-opacity-50 h-100">
                                             <div className="text-muted small fw-bold mb-1 opacity-75 d-flex align-items-center gap-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h0M2 9.5h20"/></svg> PAYMENT UPI</div>
                                             <div className="fw-extrabold text-dark fs-5 truncate">{selectedPartner.upi || 'Not Set'}</div>
                                         </div>
@@ -1117,9 +1117,9 @@ const AdminPage = () => {
                                 </div>
                                 <div className="d-flex gap-3">
                                    {!selectedPartner.isVerified && (
-                                       <button className="btn btn-success flex-grow-1 py-3 fw-bold rounded-3 shadow-md border-0" onClick={() => { updateDoc(doc(db, 'partners', selectedPartner.id), { isVerified: true, status: 'Approved' }); setIsPartnerModalOpen(false); }}>VERIFY & APPROVE</button>
+                                       <button className="btn btn-success flex-grow-1 py-3 fw-bold rounded shadow-md border-0" onClick={() => { updateDoc(doc(db, 'partners', selectedPartner.id), { isVerified: true, status: 'Approved' }); setIsPartnerModalOpen(false); }}>VERIFY & APPROVE</button>
                                    )}
-                                   <button className="btn btn-outline-danger py-3 fw-bold px-4 rounded-3" onClick={() => { deleteItem('partners', selectedPartner.id); setIsPartnerModalOpen(false); }}>DELETE</button>
+                                   <button className="btn btn-outline-danger py-3 fw-bold px-4 rounded" onClick={() => { deleteItem('partners', selectedPartner.id); setIsPartnerModalOpen(false); }}>DELETE</button>
                                 </div>
                             </div>
                         </div>

@@ -106,7 +106,7 @@ const ServiceAreasContent = ({ locations }) => {
                                             </div>
                                             <h6 className="loc-title fw-bold text-dark mb-1">{loc.name}</h6>
                                             <div className="loc-tag text-muted small">{loc.type}</div>
-                                            
+
                                             <div className="mt-4 pt-4 border-top d-flex align-items-center gap-2 text-purple small fw-bold">
                                                 BOOK THIS AREA <i className="fas fa-arrow-right" style={{ fontSize: '10px' }}></i>
                                             </div>
@@ -157,7 +157,7 @@ const ServiceAreasContent = ({ locations }) => {
                 }
 
                 .premium-summary-card {
-                    border-radius: 8px;
+                    border-radius: 4px;
                     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                     height: 100%;
                 }
@@ -178,7 +178,7 @@ const ServiceAreasContent = ({ locations }) => {
                 .feature-item-logistics {
                     display: flex;
                     gap: 20px;
-                    border-radius: 8px;
+                    border-radius: 4px;
                     align-items: center;
                     transition: all 0.3s;
                 }
@@ -186,7 +186,7 @@ const ServiceAreasContent = ({ locations }) => {
                 .log-icon-box {
                     width: 50px;
                     height: 50px;
-                    border-radius: 8px;
+                    border-radius: 4px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -194,12 +194,12 @@ const ServiceAreasContent = ({ locations }) => {
                 }
 
                 .map-frame-premium {
-                    border-radius: 8px;
+                    border-radius: 4px;
                     border: 1px solid rgba(0,0,0,0.05);
                 }
 
                 .loc-card-v {
-                    border-radius: 8px;
+                    border-radius: 4px;
                     transition: all 0.2s;
                     cursor: pointer;
                 }

@@ -2,17 +2,19 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './CarouselShared.css';
+
+import { toCDN } from '@/config/services';
 
 const OFFERS = [
     { id: 1, image: '/images/offer_1.jpg', alt: 'Offer 1' },
     { id: 2, image: '/images/offer_2.jpg', alt: 'Offer 2' },
     { id: 3, image: '/images/offer_3.jpg', alt: 'Offer 3' },
     { id: 4, image: '/images/offer_4.jpg', alt: 'Offer 4' },
-];
+].map(offer => ({ ...offer, image: toCDN(offer.image) }));
 
 const OffersAndDiscounts = () => {
     return (
@@ -21,8 +23,14 @@ const OffersAndDiscounts = () => {
                 <h2 className="shared-carousel-title">Offers & discounts</h2>
                 
                 <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     navigation
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
+                    speed={1000}
                     spaceBetween={16}
                     slidesPerView={1}
                     breakpoints={{

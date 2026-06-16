@@ -21,7 +21,7 @@ const LocationSelector = () => {
     const filteredLocations = searchTerm.trim()
         ? HYDERABAD_LOCATIONS.filter(loc =>
             loc.toLowerCase().includes(searchTerm.toLowerCase())
-          ).slice(0, 30)
+        ).slice(0, 30)
         : POPULAR_LOCATIONS;
 
     // Close dropdown on outside click
@@ -45,31 +45,31 @@ const LocationSelector = () => {
     // --- SVG Icons ---
     const ChevronDownIcon = ({ className = "" }) => (
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-            <path d="M6 9l6 6 6-6"/>
+            <path d="M6 9l6 6 6-6" />
         </svg>
     );
 
     const SearchIcon = () => (
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="location-search-icon">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
     );
 
     const TimesIcon = () => (
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 6L6 18M6 6l12 12"/>
+            <path d="M18 6L6 18M6 6l12 12" />
         </svg>
     );
 
     const MapMarkerIcon = () => (
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="location-item-dot">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="12" r="3"/>
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="12" r="3" />
         </svg>
     );
 
     const CheckIcon = () => (
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="location-check ms-auto">
-            <polyline points="20 6 9 17 4 12"/>
+            <polyline points="20 6 9 17 4 12" />
         </svg>
     );
 
@@ -153,7 +153,7 @@ const LocationSelector = () => {
                     color: #1e293b;
                     font-weight: 600;
                     padding: 12px 16px 12px 12px;
-                    border-radius: 8px;
+                    border-radius: 4px;
                     background: transparent;
                     transition: background 0.2s;
                     font-size: 15px;
@@ -188,7 +188,7 @@ const LocationSelector = () => {
                     left: 0;
                     width: 290px;
                     background: #fff;
-                    border-radius: 8px;
+                    border-radius: 4px;
                     z-index: 9999;
                     overflow: hidden;
                     border: 1px solid #e2e8f0;

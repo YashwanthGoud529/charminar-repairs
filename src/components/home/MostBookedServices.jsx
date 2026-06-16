@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './CarouselShared.css'; // Shared CSS
@@ -47,8 +47,14 @@ const MostBookedServices = () => {
                 </Link>
 
                 <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     navigation
+                    autoplay={{
+                        delay: 4000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
+                    speed={1000}
                     spaceBetween={16}
                     slidesPerView={1.5}
                     breakpoints={{

@@ -4,7 +4,8 @@
 
 .banner-inner {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    border-radius: 8px; /* Fixed to 8px */
+    border-radius: 4px;
+    /* Fixed to 8px */
     position: relative;
     overflow: hidden;
 }
@@ -33,7 +34,7 @@
     background: #ff6b00;
     color: #fff !important;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 700;
     transition: all 0.3s ease;
     white-space: nowrap;
@@ -49,6 +50,7 @@
     .banner-inner {
         text-align: center;
     }
+
     .btn-book-now {
         margin-top: 20px;
         width: 100%;

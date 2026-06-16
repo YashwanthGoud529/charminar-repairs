@@ -6,12 +6,12 @@ import PageHero from '@/components/shared/PageHero';
 const RefundContent = () => {
     return (
         <main className="refund-page pb-5">
-            <PageHero 
-                title="Refund & Cancellation" 
+            <PageHero
+                title="Refund & Cancellation"
                 subtitle="Our transparent policy on service cancellations and refunds."
                 breadcrumb="Refund Policy"
             />
-            
+
             <div className="container py-5">
                 <div className="row justify-content-center">
                     <div className="col-lg-10">
@@ -48,7 +48,7 @@ const RefundContent = () => {
             </div>
 
             <style jsx>{`
-                .rounded-8 { border-radius: 8px; }
+                .rounded-8 { border-radius: 4px; }
             `}</style>
         </main>
     );

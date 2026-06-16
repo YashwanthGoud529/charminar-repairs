@@ -3,8 +3,8 @@
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+    border-radius: 4px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 991px) {
@@ -25,7 +25,7 @@
     font-weight: 800;
     color: #ffffff !important;
     margin-bottom: 8px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .booking-card .card-subtitle {
@@ -45,14 +45,14 @@
     margin-bottom: 12px;
 }
 
-.booking-card input, 
-.booking-card select, 
+.booking-card input,
+.booking-card select,
 .booking-card textarea {
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 12px 16px;
-    border-radius: 8px;
+    border-radius: 4px;
     color: #ffffff;
     font-size: 14px;
     font-weight: 500;
@@ -60,7 +60,7 @@
     font-family: inherit;
 }
 
-.booking-card input::placeholder, 
+.booking-card input::placeholder,
 .booking-card textarea::placeholder {
     color: rgba(255, 255, 255, 0.75) !important;
     opacity: 1;
@@ -86,18 +86,24 @@
     cursor: pointer;
 }
 
-.booking-card textarea { resize: none; }
+.booking-card textarea {
+    resize: none;
+}
 
-.booking-card input:focus, 
-.booking-card select:focus, 
+.booking-card input:focus,
+.booking-card select:focus,
 .booking-card textarea:focus {
     outline: none;
     border-color: #ff6b00;
     background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 0 20px rgba(255, 107, 0, 0.2), inset 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.booking-card select option { background: #0c1228; color: #fff; padding: 10px; }
+.booking-card select option {
+    background: #0c1228;
+    color: #fff;
+    padding: 10px;
+}
 
 .btn-submit {
     width: 100%;
@@ -105,7 +111,7 @@
     color: #fff !important;
     padding: 16px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
@@ -115,7 +121,7 @@
     box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
 }
 
-.btn-submit:hover { 
+.btn-submit:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 30px rgba(255, 107, 0, 0.3);
 }

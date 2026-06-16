@@ -52,7 +52,7 @@ export default function Loading() {
                     height: 160px;
                     background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 100%);
                     transform: rotate(45deg);
-                    border-radius: 8px;
+                    border-radius: 4px;
                     z-index: 1;
                 }
                 

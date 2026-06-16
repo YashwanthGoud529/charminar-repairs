@@ -9,7 +9,7 @@ const AboutContent = ({ aboutSchema }) => {
     // --- SVG Phone Icon ---
     const PhoneAltIcon = () => (
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" className="text-purple">
-            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
         </svg>
     );
 
@@ -39,7 +39,7 @@ const AboutContent = ({ aboutSchema }) => {
                             <p className="mb-5 fs-5 text-muted lh-base">
                                 For over a decade, we have pioneered the standard for doorstep technical care in Hyderabad. Our approach combines traditional engineering mastery with modern diagnostic precision to ensure your appliances perform at factory-spec efficiency.
                             </p>
-                            
+
                             <div className="row g-4 mb-5">
                                 {[
                                     { text: "Upfront pricing with 100% transparency", bold: "Fixed Quotes", icon: "/images/ok_icon.png" },
@@ -81,7 +81,7 @@ const AboutContent = ({ aboutSchema }) => {
                                 <img src="/images/unsplash_1581091226825.png" alt="Engineering" className="main-img shadow-2xl" />
                                 <div className="floating-stat-card shadow-2xl">
                                     <div className="stat-num">13+</div>
-                                    <div className="stat-label">YEARS OF<br/>TRUST</div>
+                                    <div className="stat-label">YEARS OF<br />TRUST</div>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +230,7 @@ const AboutContent = ({ aboutSchema }) => {
                     width: 48px;
                     height: 48px;
                     background: #f8faff;
-                    border-radius: 8px;
+                    border-radius: 4px;
                     display: flex;
                     align-items: center;
                     justify-content: center;

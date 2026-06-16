@@ -24,7 +24,8 @@
     width: 100%;
     background-color: #f8fafc;
     border: 1px solid #eeeeee;
-    border-radius: 8px; /* Fixed 8px Radius */
+    border-radius: 4px;
+    /* Fixed 8px Radius */
     padding: 14px 20px;
     font-size: 15px;
     font-weight: 600;
@@ -36,7 +37,8 @@
 .premium-input:focus,
 .premium-select:focus {
     background-color: #ffffff;
-    border-color: #673ab7 !important; /* Cart Primary Purple */
+    border-color: #673ab7 !important;
+    /* Cart Primary Purple */
     box-shadow: 0 0 0 4px rgba(103, 58, 183, 0.1) !important;
 }
 
@@ -46,10 +48,12 @@
 }
 
 .btn-premium-action {
-    background-color: #673ab7; /* Cart Primary Purple */
+    background-color: #673ab7;
+    /* Cart Primary Purple */
     color: #ffffff;
     border: none;
-    border-radius: 8px; /* Fixed 8px Radius */
+    border-radius: 4px;
+    /* Fixed 8px Radius */
     padding: 18px 30px;
     font-size: 16px;
     font-weight: 700;
@@ -61,7 +65,8 @@
 }
 
 .btn-premium-action:hover {
-    background-color: #5e35b1; /* Cart Purple Hover */
+    background-color: #5e35b1;
+    /* Cart Purple Hover */
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(103, 58, 183, 0.2);
 }

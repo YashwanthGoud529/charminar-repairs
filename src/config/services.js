@@ -51,18 +51,103 @@ export const SERVICE_CANONICAL_MAP = {
     'Electrical work': 'electrical-work',
     'Carpenter work': 'carpenter-work',
 
+    'Floor Polishing': 'floor-polishing',
+    'Mosaic Floor Polishing': 'mosaic-floor-polishing',
+    'Indian Marble Floor Polishing': 'indian-marble-floor-polishing',
+    'Italian Marble Floor Polishing': 'italian-marble-floor-polishing',
+    'Italian Marble floor Polishing': 'italian-marble-floor-polishing',
+    'Granite Floor Polishing': 'granite-floor-polishing',
+    'Packers and Movers': 'packers-and-movers',
+    'Packers & Movers': 'packers-and-movers',
+
+    // --- Home Cleaning ---
+    'Deep Home Cleaning': 'deep-home-cleaning',
+    'Empty Home Cleaning': 'empty-home-cleaning',
+    'Interior Home Cleaning': 'interior-home-cleaning',
+    'Kitchen Cleaning': 'kitchen-cleaning',
+    'Bathroom Cleaning': 'bathroom-cleaning',
+    'Windows And Door Cleaning': 'windows-and-door-cleaning',
+    'Balcony Cleaning': 'balcony-cleaning',
+
+    // --- Commercial Cleaning ---
+    'Hotel Cleaning': 'hotel-cleaning',
+    'Water Tank Cleaning': 'water-tank-cleaning',
+    'Office Cleaning': 'office-cleaning',
+    'After Party Cleaning': 'after-party-cleaning',
+    'Commercial Cleaning': 'commercial-cleaning',
+    'Villa Cleaning': 'villa-cleaning',
+
+    // --- Furniture Cleaning ---
+    'Sofa Cleaning': 'sofa-cleaning',
+    'Carpet Cleaning': 'carpet-cleaning',
+    'Mattress Cleaning': 'mattress-cleaning',
+    'Chair Cleaning': 'chair-cleaning',
+    'Microwave Cleaning': 'microwave-cleaning',
+    'Refrigerator Cleaning': 'refrigerator-cleaning',
+    'Cabinet Cleaning': 'cabinet-cleaning',
+
+    // --- Sanitization Service ---
+    'Home Sanitization': 'home-sanitization',
+    'Office Sanitization': 'office-sanitization',
+    'Vehicle Sanitization': 'vehicle-sanitization',
+    'Commercial Sanitization': 'commercial-sanitization',
+    'Cleaning & Sanitization': 'cleaning-sanitization-services',
+
+    // --- Doorstep Wash ---
+    'Charminar Auto Care': 'charminar-wheels',
+    'Doorstep Car & Bike Wash': 'charminar-wheels',
+    'Doorstep Bike Eco Wash': 'wash-bike-eco',
+    'Doorstep Bike Premium Wash': 'wash-bike-prem',
+    'Doorstep Bike Premium Foam Wash & Polish': 'wash-bike-prem',
+    'Car Exterior Wash & Vacuum': 'wash-car-std',
+    'Hatchback/Sedan Exterior Foam Wash & Vacuum': 'wash-car-std',
+    'SUV Premium Wash & Polish': 'wash-car-suv',
+    'SUV Premium Foam Wash & Interior Polish': 'wash-car-suv',
+    'STANDARD (Spadex Steam Wash)': 'charminar-wheels-standard',
+    'PREMIUM (Standard & Spadex Elite)': 'charminar-wheels-premium',
+    'SPADEX PRO (Elite Package)': 'charminar-wheels-pro',
+
     // --- Category Hubs for Local SEO ---
     'Pest Control Services': 'pest-control-services',
     'Home Repair Services': 'home-repair-services',
     'Most Booked Services': 'most-booked-services',
     'Appliance Repair Services': 'appliance-repair-services',
     'Explore Our Services': 'all-services-hyderabad',
+    'Safety & Home Protection': 'safety-home-protection',
+    'Home IT & Office Setup': 'home-it-office-setup',
+    'Premium Pest Control Options': 'premium-pest-control',
+    'Specialized Cleaning & Utility Services': 'specialized-cleaning-utility',
+
+    // --- Safety & Home Protection Subservices ---
+    'CCTV Camera Installation & Maintenance': 'safety-cctv',
+    'Smart Door Lock Installation': 'safety-smartlock',
+    'Wall Waterproofing & Crack Sealing': 'safety-waterproofing',
+    'Emergency Locksmith Service': 'safety-locksmith',
+
+    // --- Home IT & Office Setup Subservices ---
+    'WiFi Router Setup & Range Extender Installation': 'it-wifi',
+    'Desktop PC & Printer Repair': 'it-pcrepair',
+    'Smart Home Setup & Hub Integration': 'it-smarthome',
+    'Laptop Software Setup & OS Installation': 'it-laptopsoft',
+
+    // --- Premium Pest Control Options Subservices ---
+    'Rodent & Rat Control': 'pest-rodent',
+    'Beehive & Wasp Nest Removal': 'pest-beehive',
+    'Pre-Construction Anti-Termite Treatment': 'pest-termite',
+    'Complete Ant Control & Prevention': 'pest-ant',
+
+    // --- Specialized Cleaning & Utility Services Subservices ---
+    'Septic Tank & Drainage Cleaning': 'clean-septictank',
+    'High-Rise Facade Window Cleaning': 'clean-facade',
+    'Water Tank & Sump Deep Cleaning': 'clean-watertank',
+    'Kitchen & Bathroom Deep Scrubbing': 'clean-scrubbing',
+
 
     // --- Most Booked Section Mapping ---
     'Insta Help': 'insta-help',
     'Foam-jet AC Service': 'foam-jet-ac-service',
-    'Intense Bathroom Cleaning': 'bathroom-cleaning',
-    'Intense cleaning (2 bathrooms)': 'bathroom-cleaning',
+    'Intense Bathroom Cleaning': 'intense-bathroom-cleaning',
+    'Intense cleaning (2 bathrooms)': 'intense-bathroom-cleaning',
 };
 
 export const CANONICAL_SLUGS = Object.values(SERVICE_CANONICAL_MAP);
@@ -91,4 +176,19 @@ export const getServiceSlug = (serviceName) => {
     }
 
     return SERVICE_CANONICAL_MAP[cleanName] || SERVICE_CANONICAL_MAP['Professional Appliance Repair'] || 'all-services-hyderabad';
+};
+
+export const CDN_PREFIX = 'https://cdn.jsdelivr.net/gh/YashwanthGoud529/charminar-repairs@main/public';
+
+export const toCDN = (path) => {
+    if (!path) return path;
+    if (path.startsWith('http://') || path.startsWith('https://')) return path;
+    // In development mode, load images locally to avoid 404s before they are pushed to GitHub
+    if (process.env.NODE_ENV === 'development') {
+        return path;
+    }
+    if (path.startsWith('/images') || path.startsWith('/assets')) {
+        return `${CDN_PREFIX}${path}`;
+    }
+    return path;
 };

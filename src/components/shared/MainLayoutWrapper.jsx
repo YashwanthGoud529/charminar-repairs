@@ -27,7 +27,7 @@ export default function MainLayoutWrapper({ children }) {
             <main id="content">
                 {children}
             </main>
-            <CartBar />
+            {/* <CartBar /> */}
             <FloatingWhatsApp />
             <LazySection threshold={0.01} rootMargin="200px">
                 <Footer />

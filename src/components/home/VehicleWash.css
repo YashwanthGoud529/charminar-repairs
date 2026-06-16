@@ -1,0 +1,134 @@
+.vehicle-wash-section {
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+.wash-card-wrapper {
+    background: #fff;
+    border: 1px solid #edf2f7;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.wash-card-wrapper:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border-color: rgba(103, 58, 183, 0.15);
+}
+
+.wash-img-container {
+    position: relative;
+    height: 190px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wash-card-img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wash-card-wrapper:hover .wash-card-img {
+    transform: scale(1.06);
+}
+
+.wash-card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    border-left: 3px solid #ff6b00;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.wash-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.wash-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.wash-card-desc {
+    font-size: 13px;
+    color: #718096;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 38px;
+}
+
+.wash-card-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #f7fafc;
+}
+
+.wash-card-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.wash-price-label {
+    font-size: 10px;
+    color: #a0aec0;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.wash-price-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: #2d3748;
+}
+
+.wash-book-btn {
+    background: #ff6b00;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.wash-card-wrapper:hover .wash-book-btn {
+    background: #e53e3e;
+    box-shadow: 0 4px 10px rgba(229, 62, 62, 0.2);
+}
+
+@media (max-width: 768px) {
+    .wash-img-container {
+        height: 150px;
+    }
+    .wash-card-body {
+        padding: 15px;
+    }
+    .wash-card-title {
+        font-size: 14px;
+    }
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { blogs as allBlogs } from '@/lib/blogs';
 import PageHero from '@/components/shared/PageHero';
@@ -8,16 +8,32 @@ import '@/components/home/LatestBlogs.css';
 
 const BlogListPage = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
-    
+    const [currentPage, setCurrentPage] = useState(1);
+
     const categories = ['All', ...new Set(allBlogs.map(b => b.category))];
-    
-    const filteredBlogs = selectedCategory === 'All' 
-        ? allBlogs 
+
+    const filteredBlogs = selectedCategory === 'All'
+        ? allBlogs
         : allBlogs.filter(b => b.category === selectedCategory);
+
+    const PAGE_SIZE = 8;
+    const totalPages = Math.ceil(filteredBlogs.length / PAGE_SIZE);
+    const paginatedBlogs = filteredBlogs.slice(
+        (currentPage - 1) * PAGE_SIZE,
+        currentPage * PAGE_SIZE
+    );
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [currentPage]);
+    const handleCategoryChange = (cat) => {
+        setSelectedCategory(cat);
+        setCurrentPage(1);
+    };
 
     return (
         <main className="blog-list-page bg-light-soft min-vh-100">
-            <PageHero 
+            <PageHero
                 title="Technical Repair Insights"
                 subtitle="Expert guidance, maintenance protocols, and appliance safety insights curated for premium households in Hyderabad. Stay ahead with Charminar Repairs."
                 breadcrumb="Expert Blog"
@@ -36,12 +52,11 @@ const BlogListPage = () => {
                         {categories.map(cat => (
                             <button
                                 key={cat}
-                                onClick={() => setSelectedCategory(cat)}
-                                className={`btn px-4 py-2 fw-bold transition-all border ${
-                                    selectedCategory === cat 
-                                    ? 'bg-purple text-white border-purple shadow-lg' 
-                                    : 'bg-white text-muted border-light shadow-sm'
-                                }`}
+                                onClick={() => handleCategoryChange(cat)}
+                                className={`btn px-4 py-2 fw-bold transition-all border ${selectedCategory === cat
+                                        ? 'bg-purple text-white border-purple shadow-lg'
+                                        : 'bg-white text-muted border-light shadow-sm'
+                                    }`}
                                 style={{ borderRadius: '8px' }}
                             >
                                 {cat}
@@ -50,14 +65,14 @@ const BlogListPage = () => {
                     </div>
 
                     <div className="row g-4">
-                        {filteredBlogs.map((blog) => (
+                        {paginatedBlogs.map((blog) => (
                             <div key={blog.id} className="col-lg-4 col-md-6">
                                 <Link href={`/blog/${blog.slug}`} className="text-decoration-none h-100 d-block">
                                     <article className="premium-blog-card h-100 bg-white shadow-sm border border-light overflow-hidden">
                                         <div className="blog-img-box">
-                                            <img 
-                                                src={blog.image} 
-                                                alt={blog.title} 
+                                            <img
+                                                src={blog.image}
+                                                alt={blog.title}
                                                 loading="lazy"
                                             />
                                             <div className="blog-cat-tag">{blog.category}</div>
@@ -78,6 +93,52 @@ const BlogListPage = () => {
                             </div>
                         ))}
                     </div>
+
+                    {/* Pagination Controls */}
+                    {totalPages > 1 && (
+                        <div className="d-flex justify-content-center align-items-center gap-2 mt-5 flex-wrap">
+                            <button
+                                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                                disabled={currentPage === 1}
+                                className={`btn px-4 py-2 border transition-all ${
+                                    currentPage === 1
+                                        ? 'bg-white text-muted border-light opacity-50 cursor-not-allowed'
+                                        : 'bg-white text-purple border-light hover-lift shadow-sm'
+                                }`}
+                                style={{ borderRadius: '8px', minWidth: '90px' }}
+                            >
+                                <i className="fas fa-chevron-left me-1"></i> Prev
+                            </button>
+                            
+                            {Array.from({ length: totalPages }, (_, idx) => idx + 1).map(pageNum => (
+                                <button
+                                    key={pageNum}
+                                    onClick={() => setCurrentPage(pageNum)}
+                                    className={`btn px-3.5 py-2 border transition-all ${
+                                        currentPage === pageNum
+                                            ? 'bg-purple text-white border-purple shadow-lg fw-bold'
+                                            : 'bg-white text-muted border-light hover-lift shadow-sm'
+                                    }`}
+                                    style={{ borderRadius: '8px', minWidth: '40px' }}
+                                >
+                                    {pageNum}
+                                </button>
+                            ))}
+                            
+                            <button
+                                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                                disabled={currentPage === totalPages}
+                                className={`btn px-4 py-2 border transition-all ${
+                                    currentPage === totalPages
+                                        ? 'bg-white text-muted border-light opacity-50 cursor-not-allowed'
+                                        : 'bg-white text-purple border-light hover-lift shadow-sm'
+                                }`}
+                                style={{ borderRadius: '8px', minWidth: '90px' }}
+                            >
+                                Next <i className="fas fa-chevron-right ms-1"></i>
+                            </button>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -91,7 +152,7 @@ const BlogListPage = () => {
                 .bg-soft-purple { background: rgba(103, 58, 183, 0.08); }
 
                 .premium-blog-card {
-                    border-radius: 8px;
+                    border-radius: 4px;
                     transition: all 0.3s;
                 }
 
@@ -125,7 +186,7 @@ const BlogListPage = () => {
                     background: #673ab7;
                     color: white;
                     padding: 4px 12px;
-                    border-radius: 8px;
+                    border-radius: 4px;
                     font-size: 11px;
                     font-weight: 800;
                     text-transform: uppercase;
@@ -142,6 +203,16 @@ const BlogListPage = () => {
                     -webkit-line-clamp: 3;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
+                }
+                .hover-lift {
+                    transition: transform 0.2s, box-shadow 0.2s;
+                }
+                .hover-lift:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(103, 58, 183, 0.15) !important;
+                }
+                .cursor-not-allowed {
+                    cursor: not-allowed;
                 }
             `}</style>
         </main>

@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './CarouselShared.css';
@@ -24,7 +24,12 @@ const ALL_SECTION_KEYS = [
     'Kitchen Chimney Service',
     'Dishwasher Repair',
     'Coffee Machine Repair',
-    'Vacuum Cleaner Repair'
+    'Vacuum Cleaner Repair',
+    'Floor Polishing',
+    'Safety & Home Protection',
+    'Home IT & Office Setup',
+    'Premium Pest Control Options',
+    'Specialized Cleaning & Utility Services'
 ];
 
 const AllServicesList = () => {
@@ -46,8 +51,14 @@ const AllServicesList = () => {
                 <h2 className="shared-carousel-title mb-4">Explore Our Services</h2>
                 
                 <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     navigation
+                    autoplay={{
+                        delay: 9000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
+                    speed={1000}
                     spaceBetween={16}
                     slidesPerView={1.5}
                     breakpoints={{

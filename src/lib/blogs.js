@@ -29,8 +29,8 @@ export const blogs = [
             <h2>Professional Doorstep Repair Services</h2>
             <p>If your machine is already making loud noises, failing to drain, or displaying error codes, don't wait for the problem to worsen. <strong>Charminar Repairs</strong> provides instant doorstep solutions in <strong>Hitech City</strong> and surrounding areas. We specialize in servicing all major brands, including LG, Samsung, IFB, and Bosch, ensuring your appliance is restored to factory performance quickly.</p>
         `,
-        image: "/images/washing_machine_blog.png",
-        date: "March 14, 2026",
+        image: "/images/blog_washing_machine.png",
+        date: "June 14, 2026",
         category: "Washing Machine",
         tags: ["Washing Machine Repair", "Hard Water Solutions", "Hyderabad Appliances", "Gachibowli", "Maintenance Tips"]
     },
@@ -61,8 +61,8 @@ export const blogs = [
                 <li>Testing of water inlet valves and pressure switches.</li>
             </ol>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "March 13, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 13, 2026",
         category: "Dishwasher",
         tags: ["Dishwasher Repair", "Kitchen Appliances", "Madhapur", "Banjara Hills", "Charminar Repairs"]
     },
@@ -94,8 +94,8 @@ export const blogs = [
             </ul>
             <p>From MCB replacements to complete rewiring, trust <strong>Charminar Repairs</strong> in <strong>Begumpet</strong> and beyond.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "March 10, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 10, 2026",
         category: "Electrical",
         tags: ["Electrical Safety", "Electrician Services", "Jubilee Hills", "Wiring Repair", "Home Safety"]
     },
@@ -120,8 +120,8 @@ export const blogs = [
             <h2>Signs Your Fridge Needs Professional Attention</h2>
             <p>If your refrigerator is running but not cooling, or if you hear a clicking sound near the compressor, it’s time to call <strong>Charminar Repairs</strong>. We handle gas refilling, compressor replacement, and PCB repairs for all brands including Samsung, Whirlpool, and Haier.</p>
         `,
-        image: "/images/refrigerator_blog.png",
-        date: "March 09, 2026",
+        image: "/images/blog_refrigerator.png",
+        date: "June 09, 2026",
         category: "Refrigerator",
         tags: ["Refrigerator Repair", "Summer Tips", "Cooling Issues", "Kukatpally", "Fridge Maintenance"]
     },
@@ -146,8 +146,8 @@ export const blogs = [
             <h2>Serving Hyderabad's IT Corridor</h2>
             <p>We understand the urgency of AC breakdowns in corporate offices and homes. We serve all major IT parks and residential complexes in <strong>Financial District</strong> and <strong>Nanakramguda</strong> with 2-hour response times. Our technicians are trained to handle Split AC, Window AC, and Inverter AC models.</p>
         `,
-        image: "/images/ac_repair_blog.png",
-        date: "March 08, 2026",
+        image: "/images/blog_ac_repair.png",
+        date: "June 08, 2026",
         category: "AC Repair",
         tags: ["AC Repair", "Air Conditioning Service", "Gachibowli", "Financial District", "Gas Filling"]
     },
@@ -170,8 +170,8 @@ export const blogs = [
             
             <p>Safety is our priority. Avoid DIY repairs on microwaves due to high voltage retention. Trust the certified technicians at <strong>Charminar Repairs</strong> for safe and effective repairs.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "March 07, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 07, 2026",
         category: "Microwave",
         tags: ["Microwave Repair", "Kitchen Appliances", "Ameerpet", "Magnetron Replacement", "SR Nagar"]
     },
@@ -194,8 +194,8 @@ export const blogs = [
             
             <p>We use advanced diagnostic tools to pinpoint the fault, saving you the cost of a full panel replacement where possible.</p>
         `,
-        image: "/images/ac_repair_blog.png",
-        date: "March 06, 2026",
+        image: "/images/blog_ac_repair.png",
+        date: "June 06, 2026",
         category: "Television",
         tags: ["TV Repair", "LED TV Service", "Somajiguda", "Panel Repair", "Electronics"]
     },
@@ -218,8 +218,8 @@ export const blogs = [
             
             <p>Our plans cover everything from AC gas top-ups to electrical circuit checks. Contact <strong>Charminar Repairs</strong> to customize an AMC package that fits your home's needs.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "March 05, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 05, 2026",
         category: "Maintenance",
         tags: ["AMC", "Annual Maintenance", "Tarnaka", "Home Services", "Preventive Care"]
     },
@@ -242,8 +242,8 @@ export const blogs = [
             
             <p>Don't ignore signs like water dripping from the overflow pipe or rumbling noises inside the tank. Call <strong>Charminar Repairs</strong> for immediate assistance.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "March 04, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 04, 2026",
         category: "Geyser",
         tags: ["Geyser Repair", "Water Heater", "Habsiguda", "Safety Tips", "Appliance Care"]
     },
@@ -266,8 +266,8 @@ export const blogs = [
             
             <p>We use genuine spare parts to ensure your gas stove operates safely. Trust <strong>Charminar Repairs</strong> for all your kitchen safety needs.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "March 03, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 03, 2026",
         category: "Gas Stove",
         tags: ["Gas Stove Repair", "Kitchen Safety", "Malkajgiri", "Hob Service", "Hyderabad"]
     },
@@ -290,8 +290,8 @@ export const blogs = [
             
             <p>Ignoring these noises can lead to permanent drum damage. Schedule a repair with <strong>Charminar Repairs</strong> to prevent costly replacements.</p>
         `,
-        image: "/images/washing_machine_blog.png",
-        date: "March 02, 2026",
+        image: "/images/blog_washing_machine.png",
+        date: "June 02, 2026",
         category: "Washing Machine",
         tags: ["Washing Machine Noise", "Drum Repair", "Manikonda", "Bearing Replacement", "Hyderabad"]
     },
@@ -314,8 +314,8 @@ export const blogs = [
             
             <p>We first fix the leak and then refill the gas to ensure a permanent solution. Contact <strong>Charminar Repairs</strong> for professional fridge servicing.</p>
         `,
-        image: "/images/refrigerator_blog.png",
-        date: "March 01, 2026",
+        image: "/images/blog_refrigerator.png",
+        date: "June 01, 2026",
         category: "Refrigerator",
         tags: ["Fridge Gas Filling", "Refrigerant Leak", "Chandanagar", "Cooling Problem", "Hyderabad"]
     },
@@ -338,8 +338,8 @@ export const blogs = [
             
             <p>Our technicians can restore your smart TV's functionality, ensuring you can stream your favorite shows without interruption. Trust <strong>Charminar Repairs</strong> for expert electronics care.</p>
         `,
-        image: "/images/ac_repair_blog.png",
-        date: "Feb 28, 2026",
+        image: "/images/blog_ac_repair.png",
+        date: "June 28, 2026",
         category: "Television",
         tags: ["Smart TV Repair", "WiFi Issues", "Lingampally", "Software Update", "Hyderabad"]
     },
@@ -362,8 +362,8 @@ export const blogs = [
             
             <p>Once identified, we seal the leak or replace the faulty component (copper coil, flare nut) before refilling. Trust <strong>Charminar Repairs</strong> for honest and durable AC services.</p>
         `,
-        image: "/images/ac_repair_blog.png",
-        date: "Feb 27, 2026",
+        image: "/images/blog_ac_repair.png",
+        date: "June 27, 2026",
         category: "AC Repair",
         tags: ["AC Gas Leak", "Nitrogen Testing", "Miyapur", "Cooling Solution", "Hyderabad"]
     },
@@ -386,8 +386,8 @@ export const blogs = [
             
             <p>We clean, repair, or replace the control membrane to restore full functionality. Avoid forceful pressing of buttons; call <strong>Charminar Repairs</strong> for a gentle fix.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "Feb 26, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 26, 2026",
         category: "Microwave",
         tags: ["Microwave Touchpad", "Control Panel Repair", "Nizampet", "Kitchen Repair", "Hyderabad"]
     },
@@ -410,8 +410,8 @@ export const blogs = [
             
             <p>If these steps don't work, the drain pump motor may be defective. <strong>Charminar Repairs</strong> provides genuine pump replacements to get your dishwasher running dry again.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "Feb 25, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 25, 2026",
         category: "Dishwasher",
         tags: ["Dishwasher Draining", "Appliance Repair", "Pragathi Nagar", "DIY Tips", "Hyderabad"]
     },
@@ -434,8 +434,8 @@ export const blogs = [
             
             <p>If you experience shocks from switches or appliances, turn off the main power and call <strong>Charminar Repairs</strong> immediately for a safety audit.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "Feb 24, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 24, 2026",
         category: "Electrical",
         tags: ["Monsoon Safety", "Short Circuit", "Bachupally", "Electrical Wiring", "Hyderabad"]
     },
@@ -458,8 +458,8 @@ export const blogs = [
             
             <p>Regular servicing keeps your vacuum running like new. Contact <strong>Charminar Repairs</strong> for professional appliance care.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "Feb 23, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 23, 2026",
         category: "Vacuum Cleaner",
         tags: ["Vacuum Cleaner Repair", "HEPA Filter", "Kompally", "Suction Loss", "Hyderabad"]
     },
@@ -482,8 +482,8 @@ export const blogs = [
             
             <p>We use food-safe descaling agents that are tough on limescale but safe for your machine. Trust <strong>Charminar Repairs</strong> for your morning brew maintenance.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "Feb 22, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 22, 2026",
         category: "Coffee Machine",
         tags: ["Coffee Machine Repair", "Descaling", "Sainikpuri", "Kitchen Appliances", "Hyderabad"]
     },
@@ -506,8 +506,8 @@ export const blogs = [
             
             <p>If resetting the machine doesn't clear the code, you may have a sensor or PCB failure. Call <strong>Charminar Repairs</strong> for accurate diagnostics.</p>
         `,
-        image: "/images/washing_machine_blog.png",
-        date: "Feb 21, 2026",
+        image: "/images/blog_washing_machine.png",
+        date: "June 21, 2026",
         category: "Washing Machine",
         tags: ["Error Codes", "Washing Machine Troubleshoot", "Karkhana", "Sensor Repair", "Hyderabad"]
     },
@@ -529,8 +529,8 @@ export const blogs = [
             
             <p>Keep your creativity flowing with regular maintenance from <strong>Charminar Repairs</strong>.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "Feb 20, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 20, 2026",
         category: "Sewing Machine",
         tags: ["Sewing Machine Repair", "Timing Calibration", "Banjara Hills", "Motor Repair", "Hyderabad"]
     },
@@ -552,8 +552,8 @@ export const blogs = [
             
             <p>Ensure your family breathes pure air. Schedule your air purifier service with <strong>Charminar Repairs</strong> today.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "Feb 19, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 19, 2026",
         category: "Air Purifier",
         tags: ["Air Purifier Service", "HEPA Filter", "Himayatnagar", "Air Quality", "Hyderabad"]
     },
@@ -575,8 +575,8 @@ export const blogs = [
             
             <p>Don't replace your vacuum—repair it! <strong>Charminar Repairs</strong> offers cost-effective solutions.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "Feb 18, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 18, 2026",
         category: "Vacuum Cleaner",
         tags: ["Vacuum Repair", "Suction Power", "Barkatpura", "Dyson Repair", "Hyderabad"]
     },
@@ -598,8 +598,8 @@ export const blogs = [
             
             <p>Your safety is our priority. Do not use a faulty microwave. Contact <strong>Charminar Repairs</strong> for a comprehensive safety audit.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "Feb 17, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 17, 2026",
         category: "Microwave",
         tags: ["Microwave Safety", "Inspection", "Narayanguda", "Radiation Leak", "Hyderabad"]
     },
@@ -622,8 +622,8 @@ export const blogs = [
             
             <p>We measure the door closure force and replace the gasket to ensure an airtight seal. Trust <strong>Charminar Repairs</strong> to keep your energy bills low.</p>
         `,
-        image: "/images/refrigerator_blog.png",
-        date: "Feb 16, 2026",
+        image: "/images/blog_refrigerator.png",
+        date: "June 16, 2026",
         category: "Refrigerator",
         tags: ["Door Gasket", "Energy Saving", "Vidyanagar", "Fridge Seal", "Hyderabad"]
     },
@@ -646,8 +646,8 @@ export const blogs = [
             
             <p>We understand how essential your laptop is for work. <strong>Charminar Repairs</strong> offers quick turnaround times for all major brands.</p>
         `,
-        image: "/images/electrical_repair_blog.png",
-        date: "Feb 15, 2026",
+        image: "/images/blog_electrical.png",
+        date: "June 15, 2026",
         category: "Laptop",
         tags: ["Laptop Repair", "MacBook Service", "Madhapur", "Screen Replacement", "Hyderabad"]
     },
@@ -670,8 +670,8 @@ export const blogs = [
             
             <p>We clean air traps, replace faulty sensors, and repair PCB tracks to restore automatic water level control. Choose <strong>Charminar Repairs</strong> for precise electronic repairs.</p>
         `,
-        image: "/images/washing_machine_blog.png",
-        date: "Feb 14, 2026",
+        image: "/images/blog_washing_machine.png",
+        date: "June 14, 2026",
         category: "Washing Machine",
         tags: ["Sensor Repair", "Overfilling", "Jubilee Hills", "PCB Repair", "Hyderabad"]
     },
@@ -694,8 +694,8 @@ export const blogs = [
             
             <p>A clean AC consumes less power and cools faster. Prepare for the heat with <strong>Charminar Repairs</strong>.</p>
         `,
-        image: "/images/ac_repair_blog.png",
-        date: "Feb 13, 2026",
+        image: "/images/blog_ac_repair.png",
+        date: "June 13, 2026",
         category: "AC Repair",
         tags: ["AC Jet Cleaning", "Deep Service", "Secunderabad", "Cooling Efficiency", "Hyderabad"]
     },
@@ -718,8 +718,8 @@ export const blogs = [
             
             <p>Enjoy a smoke-free kitchen. Schedule your quarterly chimney service with <strong>Charminar Repairs</strong>.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "Feb 12, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 12, 2026",
         category: "Chimney",
         tags: ["Chimney Cleaning", "Kitchen Maintenance", "Banjara Hills", "Grease Removal", "Hyderabad"]
     },
@@ -742,8 +742,8 @@ export const blogs = [
             
             <p>We provide comprehensive AMC services that include regular filter changes and UV lamp checks. Trust <strong>Charminar Repairs</strong> for safe drinking water.</p>
         `,
-        image: "/images/refrigerator_blog.png",
-        date: "Feb 11, 2026",
+        image: "/images/blog_refrigerator.png",
+        date: "June 11, 2026",
         category: "Water Purifier",
         tags: ["RO Service", "Water Purifier Repair", "Uppal", "Filter Change", "Hyderabad"]
     },
@@ -765,8 +765,8 @@ export const blogs = [
             
             <p>Don't let a broken mixer slow you down. Contact <strong>Charminar Repairs</strong> for same-day service.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "Feb 10, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 10, 2026",
         category: "Blender",
         tags: ["Mixer Grinder Repair", "Motor Winding", "Madhapur", "Kitchen Appliances", "Hyderabad"]
     },
@@ -789,8 +789,8 @@ export const blogs = [
             
             <p>Get back to slicing, dicing, and kneading with help from <strong>Charminar Repairs</strong>.</p>
         `,
-        image: "/images/kitchen_repair_blog.png",
-        date: "Feb 07, 2026",
+        image: "/images/blog_kitchen_repair.png",
+        date: "June 07, 2026",
         category: "Food Processor",
         tags: ["Food Processor Repair", "Kitchen Gadgets", "Gachibowli", "Motor Service", "Hyderabad"]
     },
@@ -813,9 +813,329 @@ export const blogs = [
             
             <p>We service ice cream freezers, display freezers, and chest freezers. Call <strong>Charminar Repairs</strong> for reliable commercial support.</p>
         `,
-        image: "/images/refrigerator_blog.png",
-        date: "Feb 06, 2026",
+        image: "/images/blog_refrigerator.png",
+        date: "June 06, 2026",
         category: "Deep Freezer",
         tags: ["Deep Freezer Repair", "Commercial Appliances", "Jubilee Hills", "Emergency Repair", "Hyderabad"]
+    },
+    {
+        id: 34,
+        slug: "termite-control-pest-treatment-hyderabad-homes",
+        title: "Ultimate Guide to Termite Control & Pest Treatment in Hyderabad Homes",
+        excerpt: "Protect your wooden furniture and family from pests using odorless, licensed treatments from Charminar Repairs.",
+        metaDescription: "Learn how to eradicate termites and pests from your Hyderabad home. Expert tips from licensed technicians at Charminar Repairs in Jubilee Hills and Madhapur.",
+        content: `
+            <p>Pest infestations can cause massive structural and health damage to homes in <strong>Hyderabad</strong>. Whether it's drywood termites attacking your modular kitchen in <strong>Jubilee Hills</strong> or cockroaches breeding in drains in <strong>Madhapur</strong>, early intervention is key. <strong>Charminar Repairs</strong> offers certified solutions.</p>
+            
+            <h2>Why Professional Pest Control is Essential</h2>
+            <p>Many homeowners rely on over-the-counter sprays, but these only kill visible insects while leaving nests untouched. Our government-licensed technicians target the root colonies using advanced protocols:</p>
+            <ul>
+                <li><strong>Drill-Fill-Seal Tech:</strong> For subterranean termites, we drill floor junctions and inject non-repellent chemicals to wipe out the colony.</li>
+                <li><strong>Odorless Cascade Gel:</strong> For cockroach infestations, we place safe, food-grade gel baits in cabinet corners. Roaches carry the gel back, infecting the nest.</li>
+                <li><strong>Larvacidal Spraying:</strong> We spray water logging points to eliminate mosquito breeding grounds, preventing Dengue and Malaria.</li>
+            </ul>
+            
+            <p>Ensure your family's safety with odorless and pet-friendly treatments. Contact <strong>Charminar Repairs</strong> for same-day inspection.</p>
+        `,
+        image: "/images/blog_pest_control.png",
+        date: "June 15, 2026",
+        category: "Pest Control",
+        tags: ["Pest Control", "Termite Treatment", "Hyderabad Pests", "Licensed Treatment"]
+    },
+    {
+        id: 35,
+        slug: "deep-home-cleaning-guide-moving-hyderabad",
+        title: "Deep Home Cleaning Checklist for Moving Into Your New Hyderabad Flat",
+        excerpt: "A comprehensive checklist for deep home cleaning, floor scrubbing, and disinfection before moving into your new home.",
+        metaDescription: "Make your new flat hygienic and sparkling. Here is the ultimate deep home cleaning checklist from Charminar Repairs for residents shifting in Gachibowli and Kondapur.",
+        content: `
+            <p>Moving into a new flat in <strong>Gachibowli</strong> or <strong>Kondapur</strong> is exciting, but it's crucial to deep clean and sanitize the space before unpacking. A clean house is a healthy house, and <strong>Charminar Repairs</strong> is here to help you get started.</p>
+            
+            <h2>Your Pre-Move Cleaning Checklist</h2>
+            <p>To ensure no dust or germs remain from previous occupants, follow this step-by-step framework:</p>
+            <ol>
+                <li><strong>Ceiling & High-Reach Dusting:</strong> Vacuum cobwebs, high rafters, and fan blades using telescopic poles.</li>
+                <li><strong>Kitchen Degreasing:</strong> Deep scrub tiles, slabs, and cabinet interiors to remove accumulated grease and oil stains.</li>
+                <li><strong>Bathroom Descaling:</strong> Clean tiles and fixtures with eco-safe descalers to remove hard water marks.</li>
+                <li><strong>Floor Scrubbing:</strong> Use a mechanical floor scrubber to buff out scuffs and restore original tile luster.</li>
+                <li><strong>Disinfection:</strong> Wipe all light switches, door handles, and remote controls with hospital-grade sanitizers.</li>
+            </ol>
+            
+            <p>Let our professional cleaners handle the scrubbing so you can focus on the moving logistics. Book a deep home cleaning session with <strong>Charminar Repairs</strong> today.</p>
+        `,
+        image: "/images/blog_cleaning.png",
+        date: "June 18, 2026",
+        category: "Home Cleaning",
+        tags: ["Home Cleaning", "Deep Cleaning", "Move-in Clean", "Hygiene Services"]
+    },
+    {
+        id: 36,
+        slug: "italian-marble-floor-polishing-gloss-restoration",
+        title: "Italian Marble & Floor Polishing: Restoring That Premium Liquid Gloss",
+        excerpt: "Understand how diamond grit abrasives and crystallization shields remove floor scratches and restore a majestic reflection.",
+        metaDescription: "Learn how to restore dull, scratched Italian marble and mosaic floors in Hyderabad. Expert floor polishing guide from Charminar Repairs floor care team.",
+        content: `
+            <p>Luxury stone floors like Italian marble deserve premium care to maintain their high-end aesthetic. Over time, heavy foot traffic, acid spills, and dust scuffs make marble lose its shine. <strong>Charminar Repairs</strong> floor care team provides diamond polishing solutions in <strong>Hyderabad</strong>.</p>
+            
+            <h2>The Restoration & Polishing Process</h2>
+            <p>We use state-of-the-art wet-sanding technology to restore the glossy reflection without generating dust inside your home:</p>
+            <ul>
+                <li><strong>Diamond Grit Honing:</strong> We run floor grinding machines starting from 400 grit up to ultra-fine 8000 grit to shave off fine scratches and even out the surface.</li>
+                <li><strong>Joint Refilling:</strong> Cracks and grout lines are color-matched and filled with high-grade epoxy resin.</li>
+                <li><strong>Crystallization Shield:</strong> We apply a fluorosilicate crystallization compound to chemically seal the stone pores, making it stain-resistant.</li>
+                <li><strong>High-Speed Buffing:</strong> Buffing with imported wax creates a beautiful, liquid-glass mirror finish.</li>
+            </ul>
+            
+            <p>Protect your luxury flooring investment. Call <strong>Charminar Repairs</strong> in <strong>Banjara Hills</strong> or <strong>Gachibowli</strong> for a free gloss audit.</p>
+        `,
+        image: "/images/blog_floor_polishing.png",
+        date: "June 20, 2026",
+        category: "Floor Polishing",
+        tags: ["Floor Polishing", "Marble Polishing", "Crystallization Shield", "Stone Care"]
+    },
+    {
+        id: 37,
+        slug: "doorstep-steam-car-bike-wash-detailing",
+        title: "Charminar Wheels: Why Mobile Steam Detailing is the Future of Car Care",
+        excerpt: "Discover why doorstep high-pressure steam and snow foam wash keep your vehicle pristine without scratch risks.",
+        metaDescription: "Doorstep car detailing and bike wash in Hyderabad. Explore how Charminar Wheels uses mobile steam wash vans to deliver premium detailing at your doorstep.",
+        content: `
+            <p>Your vehicle is one of your most valuable assets, but daily driving through dusty <strong>Hyderabad</strong> traffic can quickly dull its paint. <strong>Charminar Wheels</strong> brings a fully-equipped mobile detailing van directly to your driveway, saving you hours of waiting at a traditional service station.</p>
+            
+            <h2>Benefits of High-Pressure Doorstep Steam Detailing</h2>
+            <p>Traditional water-hose washes use up to 150 liters of water and often cause paint swirl marks. Here is how our eco-friendly steam system differs:</p>
+            <ul>
+                <li><strong>Water Conservation:</strong> High-pressure steam consumes 90% less water, using just 10-15 liters per car wash.</li>
+                <li><strong>Swirl-Free Exterior:</strong> Snow foam and high-pressure steam gently lift dirt particles, eliminating scratch risks.</li>
+                <li><strong>Interior Sanitization:</strong> Hot steam sterilizes upholstery, dashboard panels, and AC vents, killing odor-producing bacteria.</li>
+                <li><strong>Engine Bay Dressing:</strong> Steam safely degreases engine compartments without risking electrical damage.</li>
+            </ul>
+            
+            <p>We serve premium residential societies across <strong>Financial District</strong>, <strong>Madhapur</strong>, and <strong>Kukatpally</strong>. Watch your car shine with <strong>Charminar Wheels</strong>.</p>
+        `,
+        image: "/images/blog_vehicle_detailing.png",
+        date: "June 22, 2026",
+        category: "Vehicle Detailing",
+        tags: ["Vehicle Wash", "Car Detailing", "Steam Wash", "Doorstep Detail"]
+    },
+    {
+        id: 38,
+        slug: "packers-movers-shifting-checklist-hyderabad",
+        title: "Packers & Movers Guide: How to Shift Homes Stress-Free in Hyderabad",
+        excerpt: "The complete guide to packing glassware, choosing covered trucks, and ensuring damage-free relocation in Hyderabad.",
+        metaDescription: "Expert packing and moving checklist for local shifting in Hyderabad. Learn how to relocate stress-free with Charminar Repairs Packers and Movers.",
+        content: `
+            <p>Shifting your household or office in a bustling city like <strong>Hyderabad</strong> can be overwhelming. From organizing files to packing fragile kitchen glassware, proper planning is essential. <strong>Charminar Repairs Packers & Movers</strong> provides a stress-free relocation guide.</p>
+            
+            <h2>Your Relocation Shifting Framework</h2>
+            <p>A successful, damage-free move relies on strict step-by-step protocols:</p>
+            <ul>
+                <li><strong>Multi-Layer Packing:</strong> Wrap heavy furniture and electronic appliances in high-density foam sheets and stretch wrap. Fragile items should be individually bubble-wrapped.</li>
+                <li><strong>Closed Containers:</strong> Always opt for closed, waterproof moving trucks to protect your belongings from rain and highway dust.</li>
+                <li><strong>Move Coordinator:</strong> Work with a dedicated move manager who handles transit tracking and coordinates the crew.</li>
+                <li><strong>Unpacking Setup:</strong> Organize boxes by room tags so the unpacking crew can place and assemble your beds and tables in the correct spaces instantly.</li>
+            </ul>
+            
+            <p>Enjoy a zero-damage relocation guarantee with transit insurance cover. Book your move with <strong>Charminar Repairs Packers & Movers</strong> today.</p>
+        `,
+        image: "/images/blog_packers_movers.png",
+        date: "June 25, 2026",
+        category: "Packers & Movers",
+        tags: ["Packers and Movers", "Home Relocation", "Local Shifting", "Transit Safety"]
+    },
+    {
+        id: 39,
+        slug: "plumbing-guide-water-leaks-clogs-hyderabad",
+        title: "Pro Plumbing Guide: Solving Clogs, Low Pressure & Water Leaks in Hyderabad Homes",
+        excerpt: "Discover how to diagnose bathroom leaks, clean choked lines, and ensure smooth water pressure with Charminar Repairs.",
+        metaDescription: "Solve plumbing problems in your Hyderabad home. Charminar Repairs offers expert advice for leaky faucets, drain clogs, and water pump repair in Madhapur and Jubilee Hills.",
+        content: `
+            <p>Plumbing issues like dripping faucets, slow drains, and low shower pressure are common nuisances in <strong>Hyderabad</strong> homes. In localities like <strong>Madhapur</strong> and <strong>Jubilee Hills</strong>, scaling from hard water can block internal pipelines, leading to reduced flow and eventual pipe corrosion. <strong>Charminar Repairs</strong> offers certified plumbing technicians to keep your water systems running smoothly.</p>
+
+            <h2>Common Household Plumbing Faults</h2>
+            <p>Most plumbing calls in Hyderabad involve three key issues:</p>
+            <ul>
+                <li><strong>Clogged Drains:</strong> Food scraps, hair, and soap scum accumulate in kitchen and bathroom traps, creating tough blockages. We use specialized drain snakes to clear them without damaging pipes.</li>
+                <li><strong>Low Water Pressure:</strong> Hard water scaling inside pipes and aerators reduces flow. We descale fixtures and inspect water pumps to restore proper flow.</li>
+                <li><strong>Hidden Water Leaks:</strong> Dampness on walls is a sign of concealed pipe leakage. Our plumbers use non-invasive acoustic sensors to locate leaks before they damage your plaster.</li>
+            </ul>
+
+            <h2>Preventive Maintenance Tips</h2>
+            <ul>
+                <li><strong>Install Strainers:</strong> Place mesh strainers in all sinks and shower drains to catch hair and food particles.</li>
+                <li><strong>Regular Aerator Cleaning:</strong> Unscrew and soak tap aerators in white vinegar once a month to dissolve mineral scaling.</li>
+                <li><strong>Monitor Main Valves:</strong> Ensure your main water valves function properly so you can shut off water quickly during an emergency.</li>
+            </ul>
+
+            <p>Don't let minor leaks lead to structural dampness and mold. Contact <strong>Charminar Repairs</strong> for rapid, doorstep plumbing services.</p>
+        `,
+        image: "/images/blog_plumbing.png",
+        date: "June 28, 2026",
+        category: "Plumbing",
+        tags: ["Plumbing Work", "Leak Repair", "Drain Clogs", "Hyderabad Plumber"]
+    },
+    {
+        id: 40,
+        slug: "carpentry-guide-furniture-repair-woodwork",
+        title: "Expert Carpentry Guide: Furniture Repair, Custom Woodwork & Door Installation",
+        excerpt: "Learn how professional carpenters restore wooden furniture, repair sliding hinges, and install secure locks in Hyderabad.",
+        metaDescription: "Professional carpentry and wood repair services in Hyderabad. Charminar Repairs offers hinge replacement, door alignment, and custom furniture polishing in Gachibowli.",
+        content: `
+            <p>High-quality woodwork adds elegance and functionality to your home. However, Hyderabad's seasonal humidity fluctuations can cause wooden doors to warp, hinges to squeak, and cabinet drawers to jam. <strong>Charminar Repairs</strong> provides skilled carpentry services in <strong>Gachibowli</strong> and surrounding areas to restore your woodwork.</p>
+
+            <h2>Key Carpentry Repairs for Modern Apartments</h2>
+            <p>Modern modular homes require precision handling. Common repair requests include:</p>
+            <ul>
+                <li><strong>Cabinet Hinge Replacement:</strong> Kitchen and wardrobe doors often sag due to loose hydraulic hinges. We replace them with high-durability soft-close hinges.</li>
+                <li><strong>Door Alignment & Lock Fit:</strong> Warped doors don't close smoothly or fit their latches properly. We plane the edges and install premium security locks.</li>
+                <li><strong>Furniture Re-polishing:</strong> Wooden tables and sofas lose their luster over time. We sand and apply polyurethane coatings to restore a high-gloss finish.</li>
+            </ul>
+
+            <h2>Why Hire Professional Carpenters?</h2>
+            <p>Modular furniture utilizes engineered wood like MDF or plywood, which requires specific fastening techniques to prevent chipping. Our carpenters bring professional power tools, high-grade adhesives, and specialized fasteners to ensure a clean, sturdy finish every time.</p>
+
+            <p>From minor hinge adjustments to major furniture assembly, trust <strong>Charminar Repairs</strong> for reliable woodwork solutions.</p>
+        `,
+        image: "/images/blog_carpentry.png",
+        date: "June 30, 2026",
+        category: "Carpentry",
+        tags: ["Carpenter Services", "Furniture Repair", "Door Alignment", "Gachibowli Woodwork"]
+    },
+    {
+        id: 41,
+        slug: "balcony-bird-netting-safety-mesh-pigeon-proofing",
+        title: "Balcony Bird Netting & Safety Meshes: Pigeon-Proofing Your Hyderabad Apartment",
+        excerpt: "Protect your balcony from pigeon droppings and secure your windows with high-tensile HDPE bird netting and invisible grilles.",
+        metaDescription: "Pigeon-proof your balcony with professional bird netting in Hyderabad. Charminar Repairs offers high-tensile, UV-stabilized HDPE netting and safety mesh solutions.",
+        content: `
+            <p>Pigeons nesting in balconies have become a widespread issue for high-rise apartment residents in <strong>Hyderabad</strong>. Beyond the constant noise and mess, pigeon droppings carry harmful pathogens like histoplasmosis and salmonella, posing severe respiratory risks. <strong>Charminar Repairs</strong> offers premium, durable bird netting and safety mesh installations to keep your balconies clean and safe.</p>
+
+            <h2>Types of Balcony Protection Systems</h2>
+            <p>Depending on your aesthetic preference and safety needs, we install:</p>
+            <ul>
+                <li><strong>HDPE Bird Netting:</strong> Made from high-density polyethylene, these UV-resistant nets are highly durable, weatherproof, and nearly invisible from a distance.</li>
+                <li><strong>Invisible Grilles:</strong> High-tensile stainless steel cables wrapped in protective nylon. They offer excellent safety for children and pets without blocking your views.</li>
+                <li><strong>Mosquito Meshes:</strong> Durable fiberglass or steel meshes installed on window frames to keep out mosquitoes, flies, and dust.</li>
+            </ul>
+
+            <h2>Professional Installation Standards</h2>
+            <p>We use heavy-duty stainless steel wall hooks and wire ropes to tension the nets perfectly, ensuring there are no gaps for birds to slip through. Our technicians follow rigorous safety protocols for high-rise installations, ensuring a secure fit that lasts for years.</p>
+
+            <p>Reclaim your balcony today. Book a free inspection with <strong>Charminar Repairs</strong> for bird netting and safety mesh solutions.</p>
+        `,
+        image: "/images/blog_bird_netting.png",
+        date: "June 02, 2026",
+        category: "Bird Netting",
+        tags: ["Bird Netting", "Pigeon Proofing", "Balcony Safety", "Invisible Grilles"]
+    },
+    {
+        id: 42,
+        slug: "air-cooler-servicing-pad-cleaning-motor-repair",
+        title: "Air Cooler Servicing: Honeycomb Pad Cleaning & Fan Motor Restoration",
+        excerpt: "Beat the summer heat by getting your desert or personal air cooler serviced with fresh cooling pads, pump cleaning, and motor oiling.",
+        metaDescription: "Prepare your air cooler for Hyderabad summers. Charminar Repairs offers doorstep cooling pad replacement, water pump cleaning, and motor repair services.",
+        content: `
+            <p>As summer temperatures climb in <strong>Hyderabad</strong>, an air cooler is an affordable and efficient way to stay comfortable. However, a cooler stored away for months accumulates heavy dust, mold, and scale deposits on its pads, which reduces airflow and causes musty odors. <strong>Charminar Repairs</strong> provides expert doorstep air cooler servicing to restore refreshing, chilled airflow.</p>
+
+            <h2>Essential Cooler Maintenance Checklist</h2>
+            <p>To ensure optimal cooling efficiency, our technicians perform a complete checkup:</p>
+            <ul>
+                <li><strong>Cooling Pad Inspection:</strong> Clogged wood-wool or honeycomb pads restrict airflow. We clean them or replace them with fresh, high-density pads for maximum evaporation.</li>
+                <li><strong>Water Pump & Distributor Cleaning:</strong> Scale deposits from tap water frequently clog the water pump or distributor channels, leading to dry spots on pads. We desale the pump and clear the channels.</li>
+            </ul>
+
+            <h2>Preventing Health Hazards</h2>
+            <p>Standing water inside the cooler tank is a breeding ground for mosquitoes and bacteria. During our service, we deep clean and sanitize the tank to ensure the air blowing into your home is clean and hygienic.</p>
+
+            <p>Ensure your cooler delivers maximum chill this summer. Book an expert cooler service with <strong>Charminar Repairs</strong> today.</p>
+        `,
+        image: "/images/blog_ac_repair.png",
+        date: "June 05, 2026",
+        category: "Air Cooler",
+        tags: ["Air Cooler Service", "Cooling Pad Change", "Water Pump Repair", "Summer Prep"]
+    },
+    {
+        id: 43,
+        slug: "sofa-carpet-deep-cleaning-stain-removal-hyderabad",
+        title: "Sofa & Carpet Deep Cleaning: Extracting Dust Mites, Stains & Odors",
+        excerpt: "Restore the premium look of your fabric furniture with professional shampooing, high-suction extraction, and eco-friendly sanitization.",
+        metaDescription: "Restore your fabric sofa and carpet in Hyderabad. Charminar Repairs offers professional dry cleaning, shampooing, and stain extraction services in Kondapur.",
+        content: `
+            <p>Fabric sofas and carpets are beautiful additions to modern living rooms, but they easily trap dust, food crumbs, pet dander, and sweat. Over time, these particles sink deep into the fibers, leading to discoloration, bad odors, and dust mite infestations. <strong>Charminar Repairs</strong> provides deep vacuuming and shampooing services in <strong>Kondapur</strong> and across Hyderabad to revive your upholstery.</p>
+
+            <h2>Our Multi-Stage Upholstery Deep Cleaning Process</h2>
+            <p>We use professional-grade spray-extraction machines to clean deep inside the cushions without soaking them:</p>
+            <ul>
+                <li><strong>High-Suction Dry Vacuuming:</strong> We remove loose dirt, dust, and pet hair from all crevices.</li>
+                <li><strong>Shampooing & Scrubbing:</strong> We apply eco-friendly, fabric-safe shampoo to lift stubborn grease and sweat stains.</li>
+                <li><strong>Stain Spot Treatment:</strong> Hard stains like coffee, ink, or oil are treated with specific chemical spotters.</li>
+                <li><strong>Water Extraction:</strong> High-powered extraction pulls out the dirty water, cleaning solution, and allergens, leaving the fabric 90% dry.</li>
+            </ul>
+
+            <h2>Benefits of Regular Cleaning</h2>
+            <p>Regular shampooing not only preserves the premium appearance of your furniture but also improves indoor air quality by removing airborne dust traps. We recommend deep cleaning your fabric sofa and carpets every six months.</p>
+
+            <p>Give your sofa a brand-new look and feel. Schedule an upholstery cleaning session with <strong>Charminar Repairs</strong> today.</p>
+        `,
+        image: "/images/blog_cleaning.png",
+        date: "June 08, 2026",
+        category: "Furniture Cleaning",
+        tags: ["Sofa Cleaning", "Carpet Deep Clean", "Stain Extraction", "Fabric Sanitization"]
+    },
+    {
+        id: 44,
+        slug: "doorstep-salon-men-haircut-pedicure-massage",
+        title: "Doorstep Salon for Men: Premium Haircuts, Pedicures & Stress Relief Massages",
+        excerpt: "Experience luxury grooming and relaxation in the comfort of your home. Haircuts, hair color, manicures, and massages by verified stylists.",
+        metaDescription: "Get premium salon services at home in Hyderabad. Charminar Repairs offers professional haircuts, pedicures, and massage therapies for men at your doorstep.",
+        content: `
+            <p>Busy schedules and long waiting times at the salon can make grooming feel like a chore. At <strong>Charminar Repairs</strong>, we bring a complete luxury salon experience directly to your home in <strong>Hyderabad</strong>. Our background-verified, certified stylists carry sanitized tools and premium products to deliver professional haircuts, facials, pedicures, and stress-relieving massages in your living room.</p>
+
+            <h2>Our Premium At-Home Grooming Menu</h2>
+            <p>We offer a comprehensive range of personal care services designed specifically for men:</p>
+            <ul>
+                <li><strong>Precision Haircuts & Beard Styling:</strong> Customized styles tailored to your facial structure, finished with a relaxing head massage.</li>
+                <li><strong>Detoxifying Facials & De-tan:</strong> Deep cleansing and exfoliating treatments using premium skincare brands to reverse sun damage and pollution.</li>
+                <li><strong>Hygienic Pedicures & Manicures:</strong> Relaxing nail trim, cuticle care, scrub, and massage to keep your hands and feet clean and healthy.</li>
+                <li><strong>Therapeutic Body Massages:</strong> Swedish or deep-tissue massages by certified therapists to relieve muscle tension and melt away stress.</li>
+            </ul>
+
+            <h2>Hygienic and Mess-Free Setup</h2>
+            <p>Safety and hygiene are our top priorities. Our stylists use disposable towels, capes, and sheets, and disinfect all metal tools before use. We set up in a corner of your home and clean up completely after the service, leaving your space spotless.</p>
+
+            <p>Experience hassle-free grooming. Book your doorstep salon session with <strong>Charminar Repairs</strong> today.</p>
+        `,
+        image: "/images/blog_men_salon.png",
+        date: "June 12, 2026",
+        category: "Men Salon",
+        tags: ["Men Salon at Home", "Haircut at Home", "Pedicure for Men", "Doorstep Massage"]
+    },
+    {
+        id: 45,
+        slug: "home-painting-decor-installation-ideas-hyderabad",
+        title: "Wall Painting & Decor Installation: Elevating Your Home Aesthetics",
+        excerpt: "A complete guide to choosing the right wall finishes, color schemes, and wall hanging installations for Hyderabad homes.",
+        metaDescription: "Professional wall painting and home decor installation services in Hyderabad. Charminar Repairs offers dust-free painting, wall mountings, and interior decor setups.",
+        content: `
+            <p>A fresh coat of paint and well-arranged wall decor can completely transform the vibe of your home. Whether you're moving into a new apartment or looking to refresh your current living room, choosing the right finishes and securing wall hangings properly is essential. <strong>Charminar Repairs</strong> provides professional wall painting and decor installation services across <strong>Hyderabad</strong>.</p>
+
+            <h2>Dust-Free Wall Painting Process</h2>
+            <p>Traditional painting can be messy and time-consuming. We follow a clean, structured painting protocol:</p>
+            <ul>
+                <li><strong>Surface Preparation:</strong> We scrape loose paint, sand rough spots, and apply high-adhesion putty to fill cracks.</li>
+                <li><strong>Wall Priming:</strong> A coat of primer is applied to seal the surface and ensure uniform paint absorption.</li>
+                <li><strong>Precision Painting:</strong> We apply two coats of premium emulsion paint using dust-free vacuum sanding and rolling equipment.</li>
+                <li><strong>Clean-up & Protection:</strong> We mask all floors and furniture before starting and clean up thoroughly upon completion.</li>
+            </ul>
+
+            <h2>Professional Decor Mounting & Assembly</h2>
+            <p>Hanging heavy mirrors, TV mounts, art galleries, and floating shelves requires accurate measurement and heavy-duty anchors. Our technicians inspect your wall type (brick, concrete, or drywall) and use appropriate rawlplugs and drills to mount items securely, preventing accidents.</p>
+
+            <p>Get a stunning, hassle-free makeover for your home. Book a wall painting and decor consultation with <strong>Charminar Repairs</strong> today.</p>
+        `,
+        image: "/images/blog_decor.png",
+        date: "June 15, 2026",
+        category: "Decor",
+        tags: ["Wall Painting", "Decor Installation", "Home Decor", "Wall Mounting"]
     }
 ];

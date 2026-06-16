@@ -51,29 +51,36 @@ function getAllPermutationSlugs() {
 }
 
 export async function generateSitemaps() {
-  const allSearchableSlugs = getAllPermutationSlugs();
-  const sortedLocations = [...HYDERABAD_LOCATIONS, 'Hyderabad'].sort();
-  const sortedBlogs = [...allBlogs].sort((a, b) => a.slug.localeCompare(b.slug));
-
-  const allPermutations = allSearchableSlugs.length * sortedLocations.length;
-  
-  // Base URLs: 10 static + categories + locations + blogs
-  const baseCount = 10 + allSearchableSlugs.length + sortedLocations.length + sortedBlogs.length;
-  const totalUrls = baseCount + allPermutations;
-
-  const numChunks = Math.ceil(totalUrls / CHUNK_SIZE);
-  return Array.from({ length: numChunks }, (_, i) => ({ id: i }));
+  // We no longer need chunks as we are reducing the total URL count drastically
+  return [{ id: 0 }];
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.charminarrepairs.com';
 
 export default async function sitemap({ id }) {
   const lastModified = new Date();
-  const allSearchableSlugs = getAllPermutationSlugs();
-  const sortedLocations = [...HYDERABAD_LOCATIONS, 'Hyderabad'].sort();
-  const sortedBlogs = [...allBlogs].sort((a, b) => a.slug.localeCompare(b.slug));
+  
+  // 1. Get All Unique Canonical Slugs
+  const uniqueCanonicalSlugs = [...new Set(CANONICAL_SLUGS)].sort();
+  const subServiceSlugs = [];
+  Object.values(SERVICE_DATA_MAP).forEach(service => {
+      service.subServices?.forEach(sub => subServiceSlugs.push(sub.id));
+  });
 
-  // 1. Base components
+  const baseServiceSlugs = [...new Set([...uniqueCanonicalSlugs, ...subServiceSlugs])].sort();
+  
+  // 2. Add Brands for ALL appliance services (where brands exist)
+  const brandServiceSlugs = [];
+  Object.entries(SERVICE_CANONICAL_MAP).forEach(([name, slug]) => {
+      const brands = SERVICE_DATA_MAP[name]?.brands || [];
+      brands.forEach(b => {
+          brandServiceSlugs.push(`${toSlug(b)}-${slug}`);
+      });
+  });
+
+  const allMainSlugs = [...new Set([...baseServiceSlugs, ...brandServiceSlugs])].sort();
+
+  // 3. Static Routes
   const staticRoutes = [
     '', '/about-us', '/service-areas', '/careers', '/privacy-policy',
     '/terms-of-service', '/refund-policy', '/contact-us', '/blog', '/pricing',
@@ -81,55 +88,29 @@ export default async function sitemap({ id }) {
     url: `${baseUrl}${route}/`, lastModified, changeFrequency: 'daily', priority: 1.0,
   }));
 
-  const serviceRoutes = allSearchableSlugs.map((slug) => ({
+  // 4. Service Routes (Mainly Hyderabad-focused)
+  const serviceRoutes = allMainSlugs.map((slug) => ({
     url: `${baseUrl}/${slug}/`, lastModified, changeFrequency: 'weekly', priority: 0.9,
   }));
 
-  const areaLandingRoutes = sortedLocations.map((loc) => ({
-    url: `${baseUrl}/service-areas/${toSlug(loc)}/`, lastModified, changeFrequency: 'monthly', priority: 0.6,
+  // 5. Limited Location Landing Pages (just the top-level area categories)
+  // We only include/index the area list pages to avoid micro-location page duplication
+  const areaLandingRoutes = [
+    '/service-areas/',
+  ].map((route) => ({
+    url: `${baseUrl}${route}/`, lastModified, changeFrequency: 'monthly', priority: 0.6,
   }));
 
+  // 6. Blog Routes
+  const sortedBlogs = [...allBlogs].sort((a, b) => a.slug.localeCompare(b.slug));
   const blogRoutes = sortedBlogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}/`, lastModified, changeFrequency: 'weekly', priority: 0.8,
   }));
 
-  const baseRoutes = [
+  return [
     ...staticRoutes,
     ...serviceRoutes,
     ...areaLandingRoutes,
     ...blogRoutes,
   ];
-
-  // 2. Permutation slicing
-  const allPermutationsCount = allSearchableSlugs.length * sortedLocations.length;
-  const globalStart = id * CHUNK_SIZE;
-  const globalEnd = (id + 1) * CHUNK_SIZE;
-
-  const routes = [];
-
-  // Add relevant base routes for this chunk
-  if (globalStart < baseRoutes.length) {
-    routes.push(...baseRoutes.slice(globalStart, globalEnd));
-  }
-
-  // Calculate permutation range
-  const permStart = Math.max(0, globalStart - baseRoutes.length);
-  const permEnd = Math.max(0, globalEnd - baseRoutes.length);
-
-  for (let i = permStart; i < Math.min(permEnd, allPermutationsCount); i++) {
-    const serviceIndex = Math.floor(i / sortedLocations.length);
-    const locationIndex = i % sortedLocations.length;
-    
-    const slug = allSearchableSlugs[serviceIndex];
-    const loc = sortedLocations[locationIndex];
-    
-    routes.push({
-      url: `${baseUrl}/${slug}-in-${toSlug(loc)}/`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    });
-  }
-
-  return routes;
 }

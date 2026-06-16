@@ -1,9 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AdBanner = () => {
+    const [isHovered, setIsHovered] = useState(false);
+
     // --- SVG Rocket Icon ---
     const RocketIcon = () => (
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" className="text-white">
@@ -14,18 +17,78 @@ const AdBanner = () => {
     return (
         <section className="ad-banner-section position-relative container" style={{ paddingBottom: '20px', paddingTop: '20px' }}>
             <div className="container" style={{ maxWidth: '100%' }}>
-                <div className="position-relative" style={{ borderRadius: '8px', overflow: 'hidden', width: '100%', margin: '0 auto', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-                    
-                    {/* The Original Background Image */}
-                    <div style={{ position: 'relative', width: '100%', aspectRatio: '1200 / 400' }}>
-                        <Image 
-                            src="/assets/Images/packers-mover-banner.png" 
-                            alt="Shifting Anywhere Anytime" 
-                            fill
-                            loading="lazy"
-                            className="object-fit-cover"
+                <Link href="/packers-and-movers/" className="text-decoration-none">
+                    <div 
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        className="position-relative overflow-hidden" 
+                        style={{ 
+                            borderRadius: '4px', 
+                            width: '100%', 
+                            margin: '0 auto', 
+                            boxShadow: isHovered ? '0 15px 35px rgba(0,0,0,0.15)' : '0 10px 30px rgba(0,0,0,0.1)', 
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease',
+                            aspectRatio: '1200 / 400',
+                            background: '#a2b8f7'
+                        }}
+                    >
+                        {/* The Original Background Image */}
+                        <div style={{ position: 'absolute', top: 0, right: 0, width: '100%', height: '100%' }}>
+                            <Image 
+                                src="/assets/Images/packers-mover-banner.png" 
+                                alt="Shifting Anywhere Anytime" 
+                                fill
+                                loading="lazy"
+                                className="object-fit-cover"
+                            />
+                        </div>
+
+                        {/* CSS Mask to cover the left side text & coming soon of the image */}
+                        <div 
+                            className="position-absolute top-0 start-0 h-100" 
+                            style={{ 
+                                width: '58%', 
+                                background: 'linear-gradient(90deg, #a2b8f7 0%, #a5bbf7 85%, rgba(165, 187, 247, 0) 100%)',
+                                zIndex: 1
+                            }}
                         />
+
+                        {/* Real HTML Text rendered on the left */}
+                        <div 
+                            className="position-absolute top-0 start-0 h-100 d-flex flex-column justify-content-center text-start" 
+                            style={{ 
+                                width: '50%', 
+                                paddingLeft: '8%',
+                                zIndex: 2
+                            }}
+                        >
+                            <h2 
+                                className="fw-black mb-1" 
+                                style={{ 
+                                    fontSize: 'clamp(14px, 3.2vw, 38px)', 
+                                    lineHeight: '1.15',
+                                    color: '#1e1b4b',
+                                    letterSpacing: '-0.5px',
+                                    fontFamily: "'Outfit', sans-serif"
+                                }}
+                            >
+                                SHIFTING ANYWHERE,<br />ANYTIME!
+                            </h2>
+                            <p 
+                                className="fw-bold mb-0" 
+                                style={{ 
+                                    fontSize: 'clamp(10px, 1.8vw, 22px)', 
+                                    color: '#4f46e5',
+                                    opacity: 0.9,
+                                    fontFamily: "'Inter', sans-serif"
+                                }}
+                            >
+                                Fast and Safe Always
+                            </p>
+                        </div>
                     </div>
+                </Link>
 
                     {/* Ultra-Modern Floating Pill Badge */}
                     {/* <div className="position-absolute w-100 d-flex justify-content-center px-3" style={{ bottom: '25px', pointerEvents: 'none', zIndex: 10 }}>
@@ -54,8 +117,6 @@ const AdBanner = () => {
                             </div>
                         </div>
                     </div> */}
-
-                </div>
             </div>
         </section>
     );

@@ -5,7 +5,7 @@ import { HYDERABAD_LOCATIONS } from '@/config/locations';
 const NearbyLocations = ({ serviceSlug, serviceName, currentLocation }) => {
     // Get 8 random locations to suggest
     const suggestedLocations = HYDERABAD_LOCATIONS
-        .filter(l => l !== currentLocation)
+        .filter(l => l.toLowerCase().trim() !== (currentLocation || '').toLowerCase().trim())
         .sort(() => 0.5 - Math.random())
         .slice(0, 8);
 

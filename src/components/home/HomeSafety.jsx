@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './CarouselShared.css';
@@ -34,8 +34,14 @@ const HomeSafety = () => {
                 </div>
                 
                 <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     navigation
+                    autoplay={{
+                        delay: 6000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
+                    speed={1000}
                     spaceBetween={16}
                     slidesPerView={1.5}
                     breakpoints={{
@@ -60,7 +66,8 @@ const HomeSafety = () => {
                                             src={service.image} 
                                             alt={service.title} 
                                             fill
-                                            className="rounded-3 shadow-sm object-fit-cover"
+                                            className="shadow-sm object-fit-cover"
+                                            style={{ borderRadius: '4px' }}
                                             sizes="(max-width: 600px) 66vw, (max-width: 1024px) 40vw, 20vw"
                                         />
                                     </div>

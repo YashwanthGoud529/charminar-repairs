@@ -6,12 +6,12 @@ import PageHero from '@/components/shared/PageHero';
 const TermsContent = () => {
     return (
         <main className="terms-page pb-5">
-            <PageHero 
-                title="Terms of Service" 
+            <PageHero
+                title="Terms of Service"
                 subtitle="Guidelines and agreements for our appliance repair services."
                 breadcrumb="Terms of Service"
             />
-            
+
             <div className="container py-5">
                 <div className="row justify-content-center">
                     <div className="col-lg-10">
@@ -46,7 +46,7 @@ const TermsContent = () => {
             </div>
 
             <style jsx>{`
-                .rounded-8 { border-radius: 8px; }
+                .rounded-8 { border-radius: 4px; }
             `}</style>
         </main>
     );

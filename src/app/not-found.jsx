@@ -14,7 +14,7 @@ export default function NotFound() {
                             <h1 className="fw-black text-purple mb-4 display-2" style={{ fontFamily: 'var(--font-outfit), sans-serif' }}>Oops! Page Not Found</h1>
                             <p className="text-muted mb-5 fs-5">The URL you're trying to reach doesn't exist or has been moved. Let's get you back to fixing your home appliances!</p>
                         </div>
-                        
+
                         <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5">
                             <Link href="/" className="btn btn-purple px-5 py-3 fw-bold shadow-sm" style={{ borderRadius: '8px' }}>
                                 Back to Direct Center
@@ -42,7 +42,7 @@ export default function NotFound() {
                 .btn-purple:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(103, 58, 183, 0.2); color: white; }
                 .btn-outline-purple { color: #673ab7; border: 2px solid #673ab7; transition: all 0.3s; }
                 .btn-outline-purple:hover { background: #673ab7; color: white; transform: translateY(-3px); }
-                .badge-premium { background: rgba(103, 58, 183, 0.08); color: #673ab7; padding: 10px 24px; border-radius: 8px; font-weight: 800; font-size: 14px; letter-spacing: 1px; display: inline-block; }
+                .badge-premium { background: rgba(103, 58, 183, 0.08); color: #673ab7; padding: 10px 24px; border-radius: 4px; font-weight: 800; font-size: 14px; letter-spacing: 1px; display: inline-block; }
                 .hover-purple:hover { color: #673ab7 !important; }
                 .transition-all { transition: all 0.3s; }
             `}</style>

@@ -117,19 +117,351 @@ const WHY_CHOOSE = [
     { icon: <RupeeIcon />, title: 'Pay After Repair', desc: 'No advance payment. Pay only when you\'re 100% satisfied with the repair.' },
 ];
 
+const getServiceType = (serviceName) => {
+    const name = serviceName.toLowerCase();
+    if (
+        name.includes('cleaning') || 
+        name.includes('sanitization') || 
+        name.includes('wash') || 
+        name.includes('wheels') ||
+        name.includes('scrub') ||
+        name.includes('scrubbing') ||
+        name.includes('facade') ||
+        name.includes('septic') ||
+        name.includes('drainage') ||
+        name.includes('tank') ||
+        name.includes('sump')
+    ) {
+        if (name.includes('wash') || name.includes('wheels') || name.includes('auto') || name.includes('car')) {
+            return 'vehicle';
+        }
+        return 'cleaning';
+    }
+    if (name.includes('polish') || name.includes('polishing')) {
+        return 'polishing';
+    }
+    if (
+        name.includes('pest') || 
+        name.includes('control') || 
+        name.includes('termite') || 
+        name.includes('woodborer') || 
+        name.includes('bugs') || 
+        name.includes('cockroach') || 
+        name.includes('mosquito') ||
+        name.includes('rodent') ||
+        name.includes('rat') ||
+        name.includes('beehive') ||
+        name.includes('wasp') ||
+        name.includes('ant')
+    ) {
+        return 'pest';
+    }
+    if (name.includes('movers') || name.includes('packers') || name.includes('shifting')) {
+        return 'movers';
+    }
+    if (
+        name.includes('safety') || 
+        name.includes('cctv') || 
+        name.includes('security') || 
+        name.includes('lock') || 
+        name.includes('locksmith') || 
+        name.includes('waterproofing') || 
+        name.includes('waterproof') || 
+        name.includes('grille') || 
+        name.includes('mesh') || 
+        name.includes('netting')
+    ) {
+        return 'safety';
+    }
+    if (
+        name.includes('it-') || 
+        name.includes('wifi') || 
+        name.includes('router') || 
+        name.includes('pc') || 
+        name.includes('computer') || 
+        name.includes('printer') || 
+        name.includes('software') || 
+        name.includes('smarthome') || 
+        name.includes('laptop') || 
+        name.includes('tech') ||
+        name.includes('office setup') ||
+        name.includes('it & office')
+    ) {
+        return 'it';
+    }
+    return 'repair';
+};
+
 const AboutService = ({ serviceName, locationLabel }) => {
     const loc = locationLabel || 'Hyderabad';
-    const locFull = locationLabel ? `${locationLabel}, Hyderabad` : 'Hyderabad';
+    // Avoid "Hyderabad, Hyderabad" duplication when locationLabel is already "Hyderabad"
+    const locFull = (!locationLabel || locationLabel.toLowerCase().trim() === 'hyderabad') ? 'Hyderabad' : `${locationLabel}, Hyderabad`;
+    
+    // Robust case-insensitive and slug-matching lookup
+    const findServiceData = (name) => {
+        if (!name) return DEFAULT_SERVICE;
+        
+        // Exact match first
+        if (SERVICE_DATA_MAP[name]) return SERVICE_DATA_MAP[name];
+        
+        // Case-insensitive match
+        const lowerName = name.toLowerCase().trim();
+        for (const [key, val] of Object.entries(SERVICE_DATA_MAP)) {
+            if (key.toLowerCase().trim() === lowerName) {
+                return val;
+            }
+        }
+        
+        // Match by slug
+        const slugifiedName = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        for (const [key, val] of Object.entries(SERVICE_DATA_MAP)) {
+            const keySlug = key.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            if (keySlug === slugifiedName) {
+                return val;
+            }
+        }
+        
+        return DEFAULT_SERVICE;
+    };
+
+    const sData = findServiceData(serviceName);
+    const commonIssues = sData.faultResolution || [];
+    const type = getServiceType(serviceName);
+
+    // Tailored fallbacks for brands based on service type
+    const defaultBrandsMap = {
+        repair: ['Samsung', 'LG', 'Whirlpool', 'Bosch', 'IFB', 'Godrej', 'Panasonic', 'Haier', 'Sony', 'Philips'],
+        cleaning: ['Taski Chemicals', 'Karcher Vacuum', '3M Scrubbers', 'Diversey Disinfectants', 'Eco-friendly Agents'],
+        polishing: ['3M Abrasives', 'Klindex Systems', 'Taski Crystallizers', 'Diamond Grit Pads'],
+        pest: ['Bayer Chemicals', 'Syngenta Solutions', 'UPL Formulations', 'Odorless Gel Baits'],
+        vehicle: ['3M Car Care', 'Meguiar\'s Polish', 'Turtle Wax', 'Bosch Pressure Washers', 'Active Foam'],
+        movers: ['Multi-layer Bubble Wrap', 'Closed Container Trucks', 'Corrugated Sheets', 'Heavy Duty Tape'],
+        safety: ['CP Plus', 'Hikvision', 'Dahua', 'Yale', 'Godrej Smart Locks', 'Berger Damp Shield', 'Dr. Fixit'],
+        it: ['TP-Link', 'Netgear', 'D-Link', 'Asus', 'HP', 'Dell', 'Lenovo', 'Apple', 'Logitech', 'Microsoft']
+    };
+
+    const sBrands = sData.brands || defaultBrandsMap[type] || defaultBrandsMap.repair;
+    const brandsText = sBrands?.slice(0, 6).join(', ') || 'LG, Samsung, Whirlpool, Bosch, IFB';
+
+    // Tailored fallbacks for descriptions based on service type
+    const baseDesc = sData.desc || '';
+    let displayDesc = baseDesc;
+    if (sData === DEFAULT_SERVICE) {
+        if (type === 'cleaning') {
+            displayDesc = `Premium professional ${serviceName.toLowerCase()} services in Hyderabad. Our background-verified, certified cleaning experts use eco-safe agents and modern equipment to sanitize and restore cleanliness to your spaces.`;
+        } else if (type === 'polishing') {
+            displayDesc = `Professional ${serviceName.toLowerCase()} services in Hyderabad. Our floor care experts perform multi-stage grinding, honing, and crystallization to restore a high-gloss mirror shine.`;
+        } else if (type === 'pest') {
+            displayDesc = `Licensed and certified ${serviceName.toLowerCase()} treatments in Hyderabad. Our government-licensed specialists apply odorless, kids-safe, and pet-safe chemicals to eliminate infestations.`;
+        } else if (type === 'vehicle') {
+            displayDesc = `Doorstep ${serviceName.toLowerCase()} detailing and washing in Hyderabad. We bring our own water and power to deliver a clean, snow-foam polished look to your car or bike.`;
+        } else if (type === 'movers') {
+            displayDesc = `Stress-free ${serviceName.toLowerCase()} services in Hyderabad. Our ISO-certified packing and shifting teams ensure damage-free transit and dedicated support.`;
+        }
+    }
+
+    let step2Desc = `Our ${loc} technician arrives on time and diagnoses the exact issue at no extra cost.`;
+    let step3Desc = `Most ${serviceName.toLowerCase()} issues in ${loc} are resolved on the spot using premium tools.`;
+    let step3Title = 'On-Spot Service';
+    let step4Desc = `Every ${serviceName.toLowerCase()} in ${loc} comes with a satisfaction guarantee and support.`;
+
+    if (type === 'repair') {
+        step2Desc = `Our ${loc} technician arrives on time and diagnoses the exact issue with your appliance at no extra cost.`;
+        step3Desc = `Most ${serviceName.toLowerCase()} issues in ${loc} are fixed on the spot using 100% genuine spare parts.`;
+        step3Title = 'On-Spot Repair';
+        step4Desc = `Every ${serviceName.toLowerCase()} in ${loc} comes with a ${COMPANY.warranty}-day service warranty and free post-repair support.`;
+    } else if (type === 'cleaning') {
+        step2Desc = `Our ${loc} cleaning experts arrive fully equipped to assess the site requirements.`;
+        step3Desc = `The team executes deep cleaning and sanitization using premium eco-safe agents and machinery.`;
+        step3Title = 'Deep Cleaning';
+        step4Desc = `We ensure 100% satisfaction with a free re-service policy if you're not completely happy.`;
+    } else if (type === 'polishing') {
+        step2Desc = `Our floor care specialists inspect the stone type and scratch depth to choose correct abrasives.`;
+        step3Desc = `We perform multi-stage diamond grinding, honing, and crystallization on your floors.`;
+        step3Title = 'Mirror-Shine Buffing';
+        step4Desc = `Get a dust-repellent high-gloss protection shield with long-lasting reflection.`;
+    } else if (type === 'pest') {
+        step2Desc = `Licensed pest controllers inspect your property to locate nests and entry points.`;
+        step3Desc = `We apply safe, odorless gel baits and residual sprays targeting colonies.`;
+        step3Title = 'Targeted Treatment';
+        step4Desc = `Backed by our 90-day protection guarantee with a free retreat if pests return.`;
+    } else if (type === 'vehicle') {
+        step2Desc = `Our mobile wash van arrives at your doorstep with power, water, and tools.`;
+        step3Desc = `We perform snow foam wash, interior vacuuming, and dashboard detailing.`;
+        step3Title = 'Premium Detailing';
+        step4Desc = `Your vehicle is returned to you looking pristine, glossy, and fully sanitized.`;
+    } else if (type === 'movers') {
+        step2Desc = `Our relocation manager performs a survey to catalog items and plan packing.`;
+        step3Desc = `We pack items in multi-layer bubble wraps and transport them in closed trucks.`;
+        step3Title = 'Safe Relocation';
+        step4Desc = `We help unload, unpack, and set up your furniture in your new home safely.`;
+    } else if (type === 'safety') {
+        step2Desc = `Our ${loc} security specialist arrives on time and inspects your property layout or safety needs.`;
+        step3Desc = `We install your security hardware, lay cables, mount locks, or seal wall cracks precisely.`;
+        step3Title = 'Precision Installation';
+        step4Desc = `Get a complete tutorial on using your security systems, backed by our comprehensive warranty.`;
+    } else if (type === 'it') {
+        step2Desc = `Our ${loc} IT engineer arrives on time and diagnoses your devices or network settings.`;
+        step3Desc = `We configure your router/extenders, replace PC parts, or sync your smart home hubs.`;
+        step3Title = 'Tech Integration';
+        step4Desc = `Your devices are connected to high-speed networks and fully tested for performance.`;
+    }
 
     const PROCESS_STEPS = [
         { step: '01', icon: <PhoneIcon />, title: 'Book a Service', desc: `Call ${COMPANY.phoneDisplay} or book online to schedule your ${serviceName.toLowerCase()} in ${loc}. Takes less than 2 minutes.` },
-        { step: '02', icon: <SearchIcon />, title: 'Free Diagnosis', desc: `Our ${loc} technician arrives on time and diagnoses the exact issue with your appliance at no extra cost.` },
-        { step: '03', icon: <ToolsIcon />, title: 'On-Spot Repair', desc: `Most ${serviceName.toLowerCase()} issues in ${loc} are fixed on the spot using 100% genuine spare parts.` },
-        { step: '04', icon: <CheckCircleIcon />, title: 'Warranty & Support', desc: `Every ${serviceName.toLowerCase()} in ${loc} comes with a ${COMPANY.warranty}-day service warranty and free post-repair support.` },
+        { step: '02', icon: <SearchIcon />, title: type === 'repair' ? 'Free Diagnosis' : 'Professional Inspection', desc: step2Desc },
+        { step: '03', icon: <ToolsIcon />, title: step3Title, desc: step3Desc },
+        { step: '04', icon: <CheckCircleIcon />, title: 'Satisfaction & Support', desc: step4Desc },
     ];
-    const sData = SERVICE_DATA_MAP[serviceName] || DEFAULT_SERVICE;
-    const commonIssues = sData.faultResolution || [];
-    const brandsText = sData.brands?.slice(0, 6).join(', ') || 'LG, Samsung, Whirlpool, Bosch, IFB';
+
+    let introText = (
+        <p className="as-intro-desc mt-3">
+            At <strong>Charminar Repairs</strong>, we offer expert <strong>{serviceName}</strong> services to
+            restore your appliance's functionality quickly and affordably in <strong>{locFull}</strong>.
+            Whether it's a sudden breakdown, noisy operation, or error codes — our certified technicians
+            handle <strong>{brandsText}</strong> — and more — with same-day doorstep service starting at just <strong>₹{COMPANY.priceStart}</strong>.
+        </p>
+    );
+
+    if (type === 'cleaning') {
+        introText = (
+            <p className="as-intro-desc mt-3">
+                At <strong>Charminar Repairs</strong>, we provide premium <strong>{serviceName}</strong> to
+                restore cleanliness and hygiene to your living spaces in <strong>{locFull}</strong>.
+                Our trained and certified cleaning teams use professional equipment and eco-safe agents such as <strong>{brandsText}</strong> to
+                eliminate dirt, grease, and stains — delivering a spotless, hygienic finish starting at just <strong>₹{COMPANY.priceStart}</strong>.
+            </p>
+        );
+    } else if (type === 'polishing') {
+        introText = (
+            <p className="as-intro-desc mt-3">
+                At <strong>Charminar Repairs</strong>, we deliver high-gloss <strong>{serviceName}</strong> to
+                restore the premium mirror finish of your floors in <strong>{locFull}</strong>.
+                Our specialists use diamond abrasive pads and crystallization shields on stones including <strong>{brandsText}</strong>,
+                removing all scratch marks and restoring a majestic liquid-glass reflection.
+            </p>
+        );
+    } else if (type === 'pest') {
+        introText = (
+            <p className="as-intro-desc mt-3">
+                At <strong>Charminar Repairs</strong>, we provide certified <strong>{serviceName}</strong> to
+                protect your home and family from disease-carrying pests in <strong>{locFull}</strong>.
+                Our licensed pest controllers apply odorless, pet-safe gel baits and barrier sprays from top brands like <strong>{brandsText}</strong> to
+                completely eradicate infestations with a 90-day protection guarantee.
+            </p>
+        );
+    } else if (type === 'vehicle') {
+        introText = (
+            <p className="as-intro-desc mt-3">
+                At <strong>Charminar Auto Care</strong>, we provide professional doorstep <strong>{serviceName}</strong> to
+                restore your vehicle's premium shine in <strong>{locFull}</strong>.
+                We arrive with mobile detailing vans equipped with high-pressure steam, active foam wash, and machine polishers using premium brands like <strong>{brandsText}</strong>.
+            </p>
+        );
+    } else if (type === 'movers') {
+        introText = (
+            <p className="as-intro-desc mt-3">
+                At <strong>Charminar Repairs</strong>, we provide expert <strong>{serviceName}</strong> to
+                ensure a completely stress-free relocation experience in <strong>{locFull}</strong>.
+                Our ISO-certified teams handle packing, loading, transport, and setup using professional equipment including <strong>{brandsText}</strong>.
+            </p>
+        );
+    } else if (type === 'safety') {
+        introText = (
+            <p className="as-intro-desc mt-3">
+                At <strong>Charminar Repairs</strong>, we offer premium <strong>{serviceName}</strong> to
+                protect and secure your home or business in <strong>{locFull}</strong>.
+                Our background-verified security specialists configure high-definition surveillance systems, biometric smart locks, and waterproof barriers from leading brands like <strong>{brandsText}</strong>, starting at just <strong>₹{sData.price || COMPANY.priceStart}</strong>.
+            </p>
+        );
+    } else if (type === 'it') {
+        introText = (
+            <p className="as-intro-desc mt-3">
+                At <strong>Charminar Repairs</strong>, we offer professional <strong>{serviceName}</strong> to
+                optimize your digital workspace and home connectivity in <strong>{locFull}</strong>.
+                Our certified IT engineers configure routers, set up range extenders, upgrade PC hardware, and integrate smart home devices using top brands like <strong>{brandsText}</strong>, starting at just <strong>₹{sData.price || COMPANY.priceStart}</strong>.
+            </p>
+        );
+    }
+
+    let sectionSubText = `Thousands of residents in ${locFull} trust ${COMPANY.name} for their appliance repairs. Here's what makes us different:`;
+    if (type === 'cleaning') {
+        sectionSubText = `Thousands of households and businesses in ${locFull} trust ${COMPANY.name} for their hygiene and deep cleaning needs. Here's what makes us different:`;
+    } else if (type === 'polishing') {
+        sectionSubText = `Thousands of property owners in ${locFull} trust ${COMPANY.name} for their stone floor restoration and polishing. Here's what makes us different:`;
+    } else if (type === 'pest') {
+        sectionSubText = `Thousands of residents in ${locFull} trust ${COMPANY.name} for their safe, licensed pest control treatments. Here's what makes us different:`;
+    } else if (type === 'vehicle') {
+        sectionSubText = `Thousands of vehicle owners in ${locFull} trust Charminar Auto Care for premium doorstep washing and detailing. Here's what makes us different:`;
+    } else if (type === 'movers') {
+        sectionSubText = `Thousands of families and offices in ${locFull} trust ${COMPANY.name} for secure, damage-free shifting. Here's what makes us different:`;
+    } else if (type === 'safety') {
+        sectionSubText = `Thousands of families and businesses in ${locFull} trust ${COMPANY.name} for home protection and security setups. Here's what makes us different:`;
+    } else if (type === 'it') {
+        sectionSubText = `Thousands of remote workers and offices in ${locFull} trust ${COMPANY.name} for professional IT and office networking. Here's what makes us different:`;
+    }
+
+    let whyChooseList = [
+        { icon: <UserShieldIcon />, title: 'Certified Technicians', desc: 'Background-verified experts trained for all major brands and models.' },
+        { icon: <BoltIcon />, title: 'Same-Day Service', desc: 'Book by 5 PM and get doorstep service within 60 minutes of booking.' },
+        { icon: <TagIcon />, title: 'Starts at ₹100', desc: 'Transparent flat-rate pricing with zero hidden charges — ever.' },
+        { icon: <CogIcon />, title: 'Genuine Spare Parts', desc: 'OEM-approved components for long-lasting, reliable repairs.' },
+        { icon: <ShieldIcon />, title: '180-Day Warranty', desc: 'Every repair is backed by our 180-day service warranty, free of charge.' },
+        { icon: <RupeeIcon />, title: 'Pay After Repair', desc: 'No advance payment. Pay only when you\'re 100% satisfied with the repair.' },
+    ];
+
+    if (type !== 'repair') {
+        whyChooseList = [
+            { icon: <UserShieldIcon />, title: 'Verified Experts', desc: 'Background-verified, certified professionals trained to deliver peak results.' },
+            { icon: <BoltIcon />, title: 'Same-Day Booking', desc: 'Flexible scheduling with same-day priority availability.' },
+            { icon: <TagIcon />, title: 'Best Local Rates', desc: 'Transparent flat-rate upfront pricing with no hidden surcharges.' },
+            { icon: <CogIcon />, title: type === 'safety' || type === 'it' ? 'Premium Hardware' : 'Premium Products', desc: type === 'safety' || type === 'it' ? 'We use OEM-approved wiring, robust mounts, and authentic hardware accessories.' : 'We use professional-grade, eco-friendly products and state-of-the-art machinery.' },
+            { icon: <ShieldIcon />, title: 'Satisfaction Guarantee', desc: '100% satisfaction guarantee. If you are not happy, we will make it right.' },
+            { icon: <RupeeIcon />, title: 'Pay After Service', desc: 'No advance payment required. Pay only after completion and your 100% satisfaction.' },
+        ];
+    }
+
+    let issuesTitle = `Common ${serviceName} Issues We Fix in ${loc}`;
+    let issuesSub = `Our certified technicians quickly diagnose and repair all of these common problems.`;
+    if (type === 'cleaning') {
+        issuesTitle = `Common ${serviceName} Problems We Resolve in ${loc}`;
+        issuesSub = `Our certified experts quickly resolve and address all of these common cleaning issues.`;
+    } else if (type === 'pest') {
+        issuesTitle = `Common ${serviceName} Infestations We Eradicate in ${loc}`;
+        issuesSub = `Our licensed controllers quickly eradicate all of these common pest problems.`;
+    } else if (type === 'polishing') {
+        issuesTitle = `Common ${serviceName} Flaws We Restore in ${loc}`;
+        issuesSub = `Our floor care specialists quickly restore and polish all of these common stone flaws.`;
+    } else if (type === 'vehicle') {
+        issuesTitle = `Common ${serviceName} Detailing Challenges We Solve in ${loc}`;
+        issuesSub = `Our detailing technicians quickly solve and polish all of these common vehicle wash challenges.`;
+    } else if (type === 'movers') {
+        issuesTitle = `Relocation Challenges We Solve in ${loc}`;
+        issuesSub = `Our shifting teams solve all of these common relocation problems.`;
+    } else if (type === 'safety') {
+        issuesTitle = `Common ${serviceName} Challenges We Address in ${loc}`;
+        issuesSub = `Our certified security engineers quickly resolve and install solutions for all of these safety needs.`;
+    } else if (type === 'it') {
+        issuesTitle = `Common ${serviceName} Problems We Solve in ${loc}`;
+        issuesSub = `Our certified IT engineers rapidly diagnose and fix all of these tech and networking issues.`;
+    }
+
+    let processTitle = `Our ${serviceName} Repair Process in ${loc}`;
+    if (type === 'cleaning') {
+        processTitle = `Our ${serviceName} Cleaning Process in ${loc}`;
+    } else if (type === 'pest') {
+        processTitle = `Our ${serviceName} Treatment Process in ${loc}`;
+    } else if (type === 'polishing') {
+        processTitle = `Our ${serviceName} Polishing Process in ${loc}`;
+    } else if (type === 'vehicle') {
+        processTitle = `Our ${serviceName} Detailing Process in ${loc}`;
+    } else if (type === 'movers') {
+        processTitle = `Our ${serviceName} Relocation Process in ${loc}`;
+    } else if (type === 'safety') {
+        processTitle = `Our ${serviceName} Installation Process in ${loc}`;
+    } else if (type === 'it') {
+        processTitle = `Our ${serviceName} Setup Process in ${loc}`;
+    }
 
     return (
         <div className="about-service-wrapper">
@@ -145,22 +477,16 @@ const AboutService = ({ serviceName, locationLabel }) => {
                             </h2>
                             <div
                                 className="as-intro-desc"
-                                dangerouslySetInnerHTML={{ __html: sData.desc.replace(/Hyderabad/g, locFull) }}
+                                dangerouslySetInnerHTML={{ __html: displayDesc.replace(/Hyderabad/g, locFull) }}
                             />
-                            <p className="as-intro-desc mt-3">
-                                At <strong>Charminar Repairs</strong>, we offer expert <strong>{serviceName.toLowerCase()}</strong> to
-                                restore your appliance's functionality quickly and affordably in <strong>{locFull}</strong>.
-                                Whether it's a sudden breakdown, noisy operation, or error codes — our certified technicians
-                                ensure your <strong>{brandsText}</strong> — and more — are repaired efficiently with same-day
-                                doorstep service starting at just <strong>₹{COMPANY.priceStart}</strong>.
-                            </p>
+                            {introText}
                             <div className="as-intro-cta-row">
                                 <a href={`tel:${COMPANY.phone}`} className="as-cta-btn as-cta-primary">
                                     <span className="me-2"><PhoneIcon /></span> Call {COMPANY.phoneDisplay}
                                 </a>
                                 <div className="as-badge-row">
-                                    <span className="as-trust-badge"><ShieldIcon /> {COMPANY.warranty}-Day Warranty</span>
-                                    <span className="as-trust-badge"><TagIcon /> From ₹{COMPANY.priceStart}</span>
+                                    <span className="as-trust-badge"><ShieldIcon /> {type === 'repair' ? `${COMPANY.warranty}-Day Warranty` : 'Satisfaction Guaranteed'}</span>
+                                    <span className="as-trust-badge"><TagIcon /> From ₹{sData.price || COMPANY.priceStart}</span>
                                     <span className="as-trust-badge"><BoltIcon /> 60-Min Arrival</span>
                                 </div>
                             </div>
@@ -178,8 +504,8 @@ const AboutService = ({ serviceName, locationLabel }) => {
                             </div>
                             <div className="as-stat-card">
                                 <div className="as-stat-icon"><ShieldIcon /></div>
-                                <div className="as-stat-num">{COMPANY.warranty} Days</div>
-                                <div className="as-stat-label">Service Warranty</div>
+                                <div className="as-stat-num">{type === 'pest' ? '90 Days' : (type === 'repair' ? `${COMPANY.warranty} Days` : 'Satisfaction')}</div>
+                                <div className="as-stat-label">{type === 'repair' || type === 'pest' ? 'Warranty Period' : 'Guaranteed Care'}</div>
                             </div>
                             <div className="as-stat-card">
                                 <div className="as-stat-icon"><StarIcon /></div>
@@ -198,12 +524,11 @@ const AboutService = ({ serviceName, locationLabel }) => {
                         <div className="as-eyebrow">Our Promise</div>
                         <h2 className="as-section-title">Why Choose Our {serviceName} Experts in {loc}?</h2>
                         <p className="as-section-sub">
-                            Thousands of residents in <strong>{locFull}</strong> trust {COMPANY.name} for their appliance repairs.
-                            Here's what makes us different:
+                            {sectionSubText}
                         </p>
                     </div>
                     <div className="as-why-grid">
-                        {WHY_CHOOSE.map((item, idx) => (
+                        {whyChooseList.map((item, idx) => (
                             <div key={idx} className="as-why-card">
                                 <div className="as-why-icon-wrap">
                                     {item.icon}
@@ -222,8 +547,8 @@ const AboutService = ({ serviceName, locationLabel }) => {
                     <div className="container custom-container px-lg-4">
                         <div className="as-section-head">
                             <div className="as-eyebrow">Fault Diagnosis</div>
-                            <h2 className="as-section-title">Common {serviceName} Issues We Fix in {loc}</h2>
-                            <p className="as-section-sub">Our certified technicians quickly diagnose and repair all of these common problems.</p>
+                            <h2 className="as-section-title">{issuesTitle}</h2>
+                            <p className="as-section-sub">{issuesSub}</p>
                         </div>
                         <div className="as-issues-grid">
                             {commonIssues.map((issue, idx) => (
@@ -250,7 +575,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
                 <div className="container custom-container px-lg-4">
                     <div className="as-section-head">
                         <div className="as-eyebrow">How It Works</div>
-                        <h2 className="as-section-title">Our {serviceName} Repair Process in {loc}</h2>
+                        <h2 className="as-section-title">{processTitle}</h2>
                         <p className="as-section-sub">Simple, fast, and transparent — from booking to warranty.</p>
                     </div>
                     <div className="as-process-track">
@@ -274,20 +599,31 @@ const AboutService = ({ serviceName, locationLabel }) => {
                 <div className="container custom-container px-lg-4">
                     <div className="as-spec-grid">
                         {/* Technical Specializations */}
-                        {sData.specializations && (
+                        {sData.specializations && sData.specializations.length > 0 && (
                                 <div className="as-spec-card">
                                     <h3 className="as-spec-title">
-                                        <span className="me-2 text-primary"><MedalIcon /></span> Performance Audit
+                                        <span className="me-2 text-primary"><MedalIcon /></span> Professional Specializations
                                     </h3>
                                     <div className="as-spec-framework-list mt-4 d-flex flex-column gap-3">
-                                        {sData.restorationFramework?.map((item, i) => (
-                                            <div key={i} className="d-flex align-items-center gap-3 p-3 bg-white border rounded-3 shadow-sm hover-lift">
-                                                <div className="as-framework-icon text-orange">
-                                                    <IconMapper iconName={item.icon} />
+                                        {sData.restorationFramework && sData.restorationFramework.length > 0 ? (
+                                            sData.restorationFramework.map((item, i) => (
+                                                <div key={i} className="d-flex align-items-center gap-3 p-3 bg-white border rounded-3 shadow-sm hover-lift">
+                                                    <div className="as-framework-icon text-orange">
+                                                        <IconMapper iconName={item.icon || 'check'} />
+                                                    </div>
+                                                    <span className="fw-bold text-dark-blue small">{item.title}</span>
                                                 </div>
-                                                <span className="fw-bold text-dark-blue small">{item.title}</span>
-                                            </div>
-                                        ))}
+                                            ))
+                                        ) : (
+                                            sData.specializations.map((spec, i) => (
+                                                <div key={i} className="d-flex align-items-center gap-3 p-3 bg-white border rounded-3 shadow-sm hover-lift">
+                                                    <div className="as-framework-icon text-primary">
+                                                        <IconMapper iconName="check" />
+                                                    </div>
+                                                    <span className="fw-bold text-dark-blue small">{spec}</span>
+                                                </div>
+                                            ))
+                                        )}
                                     </div>
                                 </div>
                         )}

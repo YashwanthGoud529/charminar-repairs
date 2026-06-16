@@ -4,10 +4,12 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './CarouselShared.css';
+
+import { toCDN } from '@/config/services';
 
 const PEST_SERVICES = [
     { id: 1, image: '/assets/Images/pest-control/mosquitos-controls.jpeg', title: 'Mosquitoes Control', slug: '/mosquito-control' },
@@ -16,7 +18,7 @@ const PEST_SERVICES = [
     { id: 4, image: '/assets/Images/pest-control/commercial-pest-control.jpeg', title: 'Commercial Pest Control', slug: '/commercial-pest-control' },
     { id: 5, image: '/assets/Images/pest-control/bed-bugs.jpeg', title: 'Bed Bugs Control', slug: '/bed-bugs-control' },
     { id: 6, image: '/assets/Images/pest-control/cock-roch-control.jpeg', title: 'Cockroach Control', slug: '/cockroach-control' }
-];
+].map(service => ({ ...service, image: toCDN(service.image) }));
 
 const PestControl = () => {
     return (
@@ -30,15 +32,21 @@ const PestControl = () => {
                         backgroundColor: '#98f5a6',
                         color: '#111',
                         padding: '4px 16px',
-                        borderRadius: '20px',
+                        borderRadius: '4px',
                         fontSize: '14px',
                         fontWeight: '600'
                     }}>Licensed Company</span>
                 </div>
 
                 <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     navigation
+                    autoplay={{
+                        delay: 7000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
+                    speed={1000}
                     spaceBetween={16}
                     slidesPerView={1.5}
                     breakpoints={{
@@ -57,7 +65,7 @@ const PestControl = () => {
                                             alt={service.title}
                                             fill
                                             style={{
-                                                borderRadius: '8px',
+                                                borderRadius: '4px',
                                                 objectFit: 'cover',
                                                 boxShadow: '0 4px 15px rgba(0,0,0,0.06)'
                                             }}

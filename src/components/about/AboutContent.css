@@ -28,7 +28,7 @@
 
 .btn-premium-purple {
     background: #673ab7 !important;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 800;
 }
 
@@ -39,15 +39,20 @@
 
 .floating-stat-card {
     background: #673ab7 !important;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .vision-card-premium:hover {
     border-color: #673ab7 !important;
 }
 
-.text-purple { color: #673ab7 !important; }
-.bg-purple { background: #673ab7 !important; }
+.text-purple {
+    color: #673ab7 !important;
+}
+
+.bg-purple {
+    background: #673ab7 !important;
+}
 
 /* Ensure About Protocol is visible */
 .bg-repair-purple {
@@ -55,11 +60,11 @@
 }
 
 .protocol-card {
-    border-radius: 8px;
+    border-radius: 4px;
     transition: all 0.3s;
 }
 
 .protocol-card:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     transform: translateY(-5px);
 }
