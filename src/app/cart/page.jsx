@@ -6,6 +6,8 @@ import Link from 'next/link';
 import LocationSelector from '@/components/shared/LocationSelector';
 import toast from 'react-hot-toast';
 import './cart.css';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export default function CartPage() {
     const { 
@@ -95,40 +97,33 @@ export default function CartPage() {
 
         setStatus('loading');
         try {
-            const res = await fetch('/api/bookings', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    items: cartItems,
-                    totalPrice: getFinalTotal(),
-                    subtotal: getTotalPrice(),
-                    tipAmount: tipAmount,
-                    location: selectedLocation,
-                    customerName: formData.name,
-                    phone: formData.phone,
-                    address: formData.address,
-                    selectedSlot: {
-                        date: dates[selectedDate]?.full,
-                        time: selectedSlot
-                    }
-                })
+            const docRef = await addDoc(collection(db, 'bookings'), {
+                items: cartItems,
+                totalPrice: getFinalTotal(),
+                subtotal: getTotalPrice(),
+                tipAmount: tipAmount,
+                location: selectedLocation,
+                customerName: formData.name,
+                phone: formData.phone,
+                address: formData.address || '',
+                selectedSlot: {
+                    date: dates[selectedDate]?.full,
+                    time: selectedSlot
+                },
+                status: 'Pending',
+                createdAt: serverTimestamp()
             });
-            const data = await res.json();
-            if (data.success) {
-                setStatus('success');
-                toast.success('Booking Confirmed Successfully!');
-                setTimeout(() => {
-                    clearCart();
-                    setStatus('idle');
-                    window.location.href = '/';
-                }, 3000);
-            } else {
-                toast.error('Booking failed. Please try again.');
+
+            setStatus('success');
+            toast.success('Booking Confirmed Successfully!');
+            setTimeout(() => {
+                clearCart();
                 setStatus('idle');
-            }
+                window.location.href = '/';
+            }, 3000);
         } catch (err) {
             console.error(err);
-            toast.error('Network error. Please try again.');
+            toast.error('Failed to place booking. Please try again.');
             setStatus('idle');
         }
     };

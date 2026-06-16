@@ -185,7 +185,7 @@ export async function generateStaticParams() {
     return HOME_PAGE_SLUGS.map(slug => ({ slug }));
 }
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 const getServiceImage = (serviceName) => {
     const serviceData = SERVICE_DATA_MAP[serviceName];

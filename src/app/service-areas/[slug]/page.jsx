@@ -15,6 +15,15 @@ const toSlug = (str) =>
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
 
+export async function generateStaticParams() {
+    return HYDERABAD_LOCATIONS.map(loc => ({
+        slug: toSlug(loc)
+    }));
+}
+
+export const dynamicParams = false;
+
+
 export async function generateMetadata({ params }) {
     const { slug } = await params;
     

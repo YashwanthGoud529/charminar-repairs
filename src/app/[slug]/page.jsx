@@ -239,6 +239,44 @@ const toSlug = (str) =>
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
 
+export async function generateStaticParams() {
+    const uniqueCanonicalSlugs = Array.from(new Set(CANONICAL_SLUGS));
+    const uniqueHomePageSlugs = Array.from(new Set(HOME_PAGE_SLUGS));
+    
+    const params = [];
+    
+    // 1. Add all base canonical service slugs
+    uniqueCanonicalSlugs.forEach(slug => {
+        if (slug) params.push({ slug });
+    });
+    
+    // 2. Add service-location combinations for top services
+    uniqueHomePageSlugs.forEach(serviceSlug => {
+        HYDERABAD_LOCATIONS.forEach(loc => {
+            const locSlug = toSlug(loc);
+            params.push({ slug: `${serviceSlug}-in-${locSlug}` });
+        });
+        params.push({ slug: `${serviceSlug}-near-me` });
+    });
+
+    // 3. Add other custom paths
+    const customSlugs = [
+        'all-services-hyderabad',
+        'cleaning-sanitization-services',
+        'charminar-wheels',
+        'floor-polishing',
+        'packers-and-movers'
+    ];
+    customSlugs.forEach(slug => {
+        params.push({ slug });
+    });
+    
+    return params;
+}
+
+export const dynamicParams = false;
+
+
 const getServiceImage = (serviceName) => {
     const serviceData = SERVICE_DATA_MAP[serviceName];
     if (serviceData?.photo) return serviceData.photo;

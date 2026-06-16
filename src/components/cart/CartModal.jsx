@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { useCartStore } from '@/store/cartStore';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 // --- SVG Icons Components ---
 const LocationDotIcon = ({ size = 14, className = "" }) => (
@@ -80,28 +82,24 @@ const CartModal = () => {
         
         setStatus('loading');
         try {
-            const res = await fetch('/api/bookings', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    items: cartItems,
-                    totalPrice: getTotalPrice(),
-                    location: selectedLocation,
-                    customerName: formData.name,
-                    phone: formData.phone,
-                    address: formData.address
-                })
+            const docRef = await addDoc(collection(db, 'bookings'), {
+                items: cartItems,
+                totalPrice: getTotalPrice(),
+                location: selectedLocation,
+                customerName: formData.name,
+                phone: formData.phone,
+                address: formData.address || '',
+                status: 'Pending',
+                createdAt: serverTimestamp()
             });
-            const data = await res.json();
-            if (data.success) {
-                setStatus('success');
-                setTimeout(() => {
-                    clearCart();
-                    setCartOpen(false);
-                    setStatus('idle');
-                    setStep('cart');
-                }, 3000);
-            }
+
+            setStatus('success');
+            setTimeout(() => {
+                clearCart();
+                setCartOpen(false);
+                setStatus('idle');
+                setStep('cart');
+            }, 3000);
         } catch (err) {
             console.error(err);
             setStatus('idle');

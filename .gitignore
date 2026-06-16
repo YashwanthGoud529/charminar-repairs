@@ -5,3 +5,4 @@ node_modules
 tmp/
 build_output.txt
 .env*
+out
