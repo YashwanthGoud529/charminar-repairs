@@ -132,7 +132,7 @@ const Header = () => {
                              <ul className="nav-list-v3 d-none d-xl-flex">
                                 <li className="nav-item-dropdown-v3">
                                     <Link href="/all-services-hyderabad/" className={isActive('/all-services-hyderabad') ? 'active' : ''}>
-                                        Services <i className="fas fa-chevron-down ms-1" style={{ fontSize: '10px' }}></i>
+                                        <i className="fas fa-tools" style={{ fontSize: '14px', opacity: 0.85 }}></i> Services <i className="fas fa-chevron-down ms-1" style={{ fontSize: '10px' }}></i>
                                     </Link>
                                     <div className="mega-dropdown-v3">
                                         <div className="dropdown-col-v3">
@@ -159,11 +159,11 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </li>
-                                <li><Link href="/about-us" className={isActive('/about-us') ? 'active' : ''}>About</Link></li>
-                                <li><Link href="/pricing" className={isActive('/pricing') ? 'active' : ''}>Pricing</Link></li>
+                                <li><Link href="/about-us" className={isActive('/about-us') ? 'active' : ''}><i className="fas fa-info-circle" style={{ fontSize: '14px', opacity: 0.85 }}></i> About</Link></li>
+                                <li><Link href="/pricing" className={isActive('/pricing') ? 'active' : ''}><i className="fas fa-tags" style={{ fontSize: '14px', opacity: 0.85 }}></i> Pricing</Link></li>
                                 {/* <li><Link href="/service-areas" className={isActive('/service-areas') ? 'active' : ''}>Areas</Link></li> */}
-                                <li><Link href="/blog" className={isActive('/blog') ? 'active' : ''}>Blog</Link></li>
-                                <li><Link href="/contact-us" className={isActive('/contact-us') ? 'active' : ''}>Contact</Link></li>
+                                <li><Link href="/blog" className={isActive('/blog') ? 'active' : ''}><i className="fas fa-blog" style={{ fontSize: '14px', opacity: 0.85 }}></i> Blog</Link></li>
+                                <li><Link href="/contact-us" className={isActive('/contact-us') ? 'active' : ''}><i className="fas fa-envelope" style={{ fontSize: '14px', opacity: 0.85 }}></i> Contact</Link></li>
                                 <li className="ms-lg-3">
                                     <Link href="/careers" className="partner-btn-v3 d-flex align-items-center gap-2">
                                         {/* <div className="icon-box-colorful icon-box-orange p-1 bg-white-opacity shadow-sm" style={{ width: '24px', height: '24px', minWidth: '24px' }}>
@@ -242,7 +242,7 @@ const Header = () => {
                         alt="Charminar Repairs Logo" 
                         width={120} 
                         height={53} 
-                        style={{ height: 'auto', width: 'auto' }} 
+                        style={{ height: '45px', width: 'auto', objectFit: 'contain' }} 
                     />
                     <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close navigation sidebar">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
@@ -275,11 +275,11 @@ const Header = () => {
                         <LocationSelector />
                     </div>
                     <ul className="mobile-nav-list-v3">
-                        <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
-                        <li><Link href="/all-services-hyderabad/" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
-                        <li><Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)}>Pricing Card</Link></li>
-                        <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link></li>
-                        <li><Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>Contact Experts</Link></li>
+                        <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-home me-2.5" style={{ width: '20px' }}></i>Home</Link></li>
+                        <li><Link href="/all-services-hyderabad/" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-tools me-2.5" style={{ width: '20px' }}></i>Services</Link></li>
+                        <li><Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-tags me-2.5" style={{ width: '20px' }}></i>Pricing Card</Link></li>
+                        <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-info-circle me-2.5" style={{ width: '20px' }}></i>About Us</Link></li>
+                        <li><Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-envelope me-2.5" style={{ width: '20px' }}></i>Contact Experts</Link></li>
                         <li className="mt-4">
                             <Link href="/careers" className="partner-btn-v3 w-100 justify-content-center" onClick={() => setIsMobileMenuOpen(false)}>
                                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" className="me-2"><path d="M11 11.53c.18 0 .34-.02.47-.07.13-.04.22-.09.28-.14.06-.05.09-.13.09-.23V7.09c0-.23-.17-.38-.5-.45a1 1 0 0 1-.77-.32c-.06-.07-.12-.17-.18-.32C9.8 4.7 9.3 3 8 3c-1 0-1.7 1.1-1.7 1.8 0 .5.3.9.7 1.1s.1.1.2.2c.4.2.8.5.8 1.1v2.8c0 .3.1.5.3.7.2.2.4.3.7.3zm8.3-2.1c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7V4.5c0-.8-.3-1.5-.9-2-.6-.6-1.3-.9-2.1-.9H16.1c-.8 0-1.5.3-2.1.9-.6.6-.9 1.3-.9 2.1v2.9c0 .3.1.5.3.7.2.2.5.3.7.3s.5-.1.7-.3c.2-.2.3-.4.3-.7V4.5c0-.3.1-.5.3-.7.2-.2.5-.3.7-.3s.5.1.7.3c.2.2.3.5.3.7v3.9c0 .3.1.5.3.7s.5.3.7.3zm-5 8.1c.3 0 .5-.1.7-.3s.3-.4.3-.7v-2.8c0-.3-.1-.5-.3-.7s-.5-.3-.7-.3-.5.1-.7.3-.3.4-.3.7v2.8c0 .3.1.5.3.7s.5.3.7.3zM15 11c-.5 0-1 .2-1.4.6-.4.4-.6.9-.6 1.4v6c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h4c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4v-6c0-.5-.2-1-.6-1.4-.4-.4-.9-.6-1.4-.6h-4zm-4-4c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2v10c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V13c0-1.1-.9-2-2-2h-2V9c0-1.1-.9-2-2-2h-4zm-7.3 1.1c.2-.2.3-.5.3-.7V4.5c0-.8-.3-1.5-.9-2-.6-.6-1.3-.9-2.1-.9H2.3c-.8 0-1.5.3-2.1.9-.6.6-.9 1.3-.9 2.1v2.9c0 .3.1.5.3.7s.5.3.8.3.5-.1.7-.3c.2-.2.3-.4.3-.7V4.5c0-.3.1-.5.3-.7s.5-.3.7-.3.5.1.7.3c.2.2.3.5.3.7v3.9c0 .3.1.5.3.7s.5.2.7.2zM2.3 8.3c-.3 0-.5.1-.7.3s-.3.4-.3.7v2.8c0 .3.1.5.3.7s.5.3.7.3.5-.1.7-.3.3-.4.3-.7v-2.8c0-.3-.1-.5-.3-.7s-.5-.3-.7-.3z" /></svg>

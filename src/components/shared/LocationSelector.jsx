@@ -61,8 +61,8 @@ const LocationSelector = () => {
         </svg>
     );
 
-    const MapMarkerIcon = () => (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="location-item-dot">
+    const MapMarkerIcon = ({ size = 14, className = "location-item-dot", style = {} }) => (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="12" r="3" />
         </svg>
     );
@@ -76,7 +76,7 @@ const LocationSelector = () => {
     return (
         <div className="location-selector-wrapper" ref={dropdownRef}>
             <div className="location-display" onClick={() => setIsOpen(!isOpen)}>
-                <img src="https://img.icons8.com/3d-fluency/94/map-marker.png" alt="Location" className="location-pin-icon" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
+                <MapMarkerIcon size={18} className="location-pin-icon" style={{ color: '#673ab7', stroke: '#673ab7' }} />
                 <span title={selectedLocation} className="location-label">
                     {selectedLocation || 'Select Location'}
                 </span>

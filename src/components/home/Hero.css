@@ -143,17 +143,30 @@
 
 
 @media (max-width: 991px) {
+    .hero-section-v3 {
+        min-height: auto;
+        padding: 20px 0;
+    }
+
     .hero-title-v3 {
         font-size: 36px;
         text-align: center;
+        margin-bottom: 16px;
     }
 
     .service-selector-card-v3 {
         margin: 0 auto;
+        padding: 16px;
     }
 
     .service-card-title-v3 {
         text-align: center;
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
+
+    .service-grid-v3 {
+        gap: 12px;
     }
 
     .hero-collage-v3 {

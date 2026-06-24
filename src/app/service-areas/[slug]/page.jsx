@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import PageHero from '@/components/shared/PageHero';
 import { HYDERABAD_LOCATIONS } from '@/config/locations';
-import { SERVICE_CANONICAL_MAP } from '@/config/services';
+import { SERVICE_CANONICAL_MAP, HOME_PAGE_SLUGS } from '@/config/services';
 import { constructMetadata } from '@/components/seo/constructMetadata';
 import './LocationPage.css';
 
@@ -46,11 +46,14 @@ const LocationServicePage = async ({ params }) => {
     if (!matchedLoc) return notFound();
 
     // Group services into categories
-    const relevantServices = Object.entries(SERVICE_CANONICAL_MAP).map(([name, sSlug]) => ({
-        name,
-        slug: sSlug,
-        link: `/${sSlug}-in-${slug}/`
-    }));
+    const relevantServices = Object.entries(SERVICE_CANONICAL_MAP).map(([name, sSlug]) => {
+        const hasLocationPage = HOME_PAGE_SLUGS.includes(sSlug);
+        return {
+            name,
+            slug: sSlug,
+            link: hasLocationPage ? `/${sSlug}-in-${slug}/` : `/${sSlug}/`
+        };
+    });
 
     return (
         <main className="location-service-page bg-light min-vh-100 pb-5">

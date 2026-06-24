@@ -1,0 +1,12 @@
+# Disable directory indexes to prevent 403 / folder browsing issues
+Options -Indexes
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect non-HTTPS to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Handle 404 errors by serving Next.js static 404 page
+ErrorDocument 404 /404.html

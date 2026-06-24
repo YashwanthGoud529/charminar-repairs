@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Script from 'next/script';
 import MainLayoutWrapper from '@/components/shared/MainLayoutWrapper';
 import ScrollToTop from '@/components/shared/ScrollToTop';
-import FontAwesomeLoader from '@/components/shared/FontAwesomeLoader';
 import ThirdPartyScripts from '@/components/shared/ThirdPartyScripts';
 import Providers from './providers';
 import { Outfit, Inter } from 'next/font/google';
@@ -141,6 +140,15 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
+        {/* Load Font Awesome stylesheet statically */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+
         {/* Preload Critical Assets for better LCP */}
         <link rel="preload" href="/images/charminar-repairs-logo.jpeg" as="image" />
         <link rel="preload" href="/assets/Images/appliance/icons/ac.jpg" as="image" />
@@ -164,7 +172,6 @@ export default function RootLayout({ children }) {
         </StyledJsxRegistry>
 
         <ThirdPartyScripts />
-        <FontAwesomeLoader />
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" strategy="lazyOnload" />
       </body>
     </html>

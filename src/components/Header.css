@@ -50,6 +50,9 @@
 }
 
 .nav-list-v3 a {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
     text-decoration: none;
     color: #475569;
     font-size: 15px;
@@ -257,6 +260,12 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-sidebar-header-v3 img {
+    height: 45px !important;
+    width: auto !important;
+    object-fit: contain;
 }
 
 .mobile-nav-list-v3 {

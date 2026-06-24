@@ -245,12 +245,16 @@ const toSlug = (str) =>
         .replace(/(^-|-$)/g, '');
 
 export async function generateStaticParams() {
-    const uniqueCanonicalSlugs = Array.from(new Set(CANONICAL_SLUGS));
+    const { SLUG_TO_TITLE } = getSlugResolution();
+    const uniqueCanonicalSlugs = Array.from(new Set([
+        ...CANONICAL_SLUGS,
+        ...Object.keys(SLUG_TO_TITLE)
+    ]));
     const uniqueHomePageSlugs = Array.from(new Set(HOME_PAGE_SLUGS));
     
     const params = [];
     
-    // 1. Add all base canonical service slugs
+    // 1. Add all base canonical & alias service slugs
     uniqueCanonicalSlugs.forEach(slug => {
         if (slug) params.push({ slug });
     });
@@ -573,9 +577,11 @@ export default async function ServiceLocationPage({ params }) {
                         <LocalReviews serviceName={serviceName} locationLabel={loc} />
                     </LazySection>
                     
-                    <LazySection fallback={<div className="container py-4"><Skeleton height="100px" /></div>}>
-                        <NearbyLocations serviceSlug={serviceSlug} serviceName={serviceName} currentLocation={location} />
-                    </LazySection>
+                    {HOME_PAGE_SLUGS.includes(canonicalBase) && (
+                        <LazySection fallback={<div className="container py-4"><Skeleton height="100px" /></div>}>
+                            <NearbyLocations serviceSlug={canonicalBase} serviceName={serviceName} currentLocation={location} />
+                        </LazySection>
+                    )}
                     
                     <LazySection fallback={<div className="container py-5"><Skeleton height="300px" borderRadius="12px" /></div>}>
                         <PackersMoversFAQSection location={locLabel || 'Hyderabad'} />
@@ -598,9 +604,11 @@ export default async function ServiceLocationPage({ params }) {
                         <LocalReviews serviceName={serviceName} locationLabel={loc} />
                     </LazySection>
                     
-                    <LazySection fallback={<div className="container py-4"><Skeleton height="100px" /></div>}>
-                        <NearbyLocations serviceSlug={serviceSlug} serviceName={serviceName} currentLocation={location} />
-                    </LazySection>
+                    {HOME_PAGE_SLUGS.includes(canonicalBase) && (
+                        <LazySection fallback={<div className="container py-4"><Skeleton height="100px" /></div>}>
+                            <NearbyLocations serviceSlug={canonicalBase} serviceName={serviceName} currentLocation={location} />
+                        </LazySection>
+                    )}
                     
                     <LazySection fallback={<div className="container py-5"><Skeleton height="300px" borderRadius="12px" /></div>}>
                         <FAQ 
