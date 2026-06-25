@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
 function calcReadTime(content = '') {
     const wordsPerMinute = 200;
@@ -14,60 +15,37 @@ function calcReadTime(content = '') {
 
 const PAGE_SIZE = 8;
 
-export default function BlogListClient({ allBlogs }) {
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [currentPage, setCurrentPage] = useState(1);
+function BlogListClientContent({ allBlogs }) {
+    const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
 
-    // Sync state with URL search params on mount
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const params = new URLSearchParams(window.location.search);
-            const category = params.get('category');
-            const page = params.get('page');
-            if (category) {
-                setSelectedCategory(category);
-            }
-            if (page) {
-                const parsedPage = parseInt(page, 10);
-                if (!isNaN(parsedPage)) {
-                    setCurrentPage(parsedPage);
-                }
-            }
-        }
-    }, []);
+    const selectedCategory = searchParams.get('category') || 'All';
+    const pageStr = searchParams.get('page') || '1';
+    const currentPage = parseInt(pageStr, 10) || 1;
 
-    // Update URL when category or page changes
     const handleCategoryChange = (cat) => {
-        setSelectedCategory(cat);
-        setCurrentPage(1);
-        
-        if (typeof window !== 'undefined') {
-            const params = new URLSearchParams(window.location.search);
-            if (cat === 'All') {
-                params.delete('category');
-            } else {
-                params.set('category', cat);
-            }
-            params.delete('page');
-            const newUrl = `${window.location.pathname}${params.toString() ? `?${params.toString()}` : ''}`;
-            window.history.pushState(null, '', newUrl);
+        const params = new URLSearchParams(searchParams.toString());
+        if (cat === 'All') {
+            params.delete('category');
+        } else {
+            params.set('category', cat);
         }
+        params.delete('page');
+        
+        router.push(`${pathname}${params.toString() ? `?${params.toString()}` : ''}`);
     };
 
     const handlePageChange = (page) => {
-        setCurrentPage(page);
-        
-        if (typeof window !== 'undefined') {
-            const params = new URLSearchParams(window.location.search);
-            if (page === 1) {
-                params.delete('page');
-            } else {
-                params.set('page', String(page));
-            }
-            const newUrl = `${window.location.pathname}${params.toString() ? `?${params.toString()}` : ''}`;
-            window.history.pushState(null, '', newUrl);
-            window.scrollTo({ top: 300, behavior: 'smooth' });
+        const params = new URLSearchParams(searchParams.toString());
+        if (page === 1) {
+            params.delete('page');
+        } else {
+            params.set('page', String(page));
         }
+        
+        router.push(`${pathname}${params.toString() ? `?${params.toString()}` : ''}`);
+        window.scrollTo({ top: 300, behavior: 'smooth' });
     };
 
     const categories = ['All', ...new Set(allBlogs.map(b => b.category))];
@@ -117,10 +95,9 @@ export default function BlogListClient({ allBlogs }) {
                                     <Image
                                         src={blog.image}
                                         alt={blog.title}
-                                        width={400}
-                                        height={220}
+                                        fill
+                                        style={{ objectFit: 'cover' }}
                                         loading="lazy"
-                                        className="w-100 h-100 object-fit-cover"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     />
                                     <div className="blog-cat-tag">{blog.category}</div>
@@ -189,5 +166,13 @@ export default function BlogListClient({ allBlogs }) {
                 </div>
             )}
         </div>
+    );
+}
+
+export default function BlogListClient({ allBlogs }) {
+    return (
+        <Suspense fallback={<div className="text-center py-5">Loading blog list...</div>}>
+            <BlogListClientContent allBlogs={allBlogs} />
+        </Suspense>
     );
 }
