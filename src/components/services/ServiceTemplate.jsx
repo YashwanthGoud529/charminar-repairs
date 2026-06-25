@@ -58,6 +58,25 @@ const TimesIcon = ({ size = 20, className = "" }) => (
     </svg>
 );
 
+const isIcon = (url) => {
+    if (!url) return true;
+    const lower = url.toLowerCase();
+    return (
+        lower.includes('icons8') ||
+        lower.includes('_icon') ||
+        lower.includes('_3d') ||
+        lower.includes('favicon') ||
+        lower.includes('logo.png') ||
+        lower.includes('lightning') ||
+        lower.includes('gas_1') ||
+        lower.includes('electrical_wiring') ||
+        lower.includes('chip_icon') ||
+        lower.includes('check_mark') ||
+        lower.includes('empty_box') ||
+        lower.includes('forward_png')
+    );
+};
+
 const ServiceTemplate = ({ title, description, image, longDescription, slug }) => {
     const baseTitle = title ? title.split(' in ')[0].trim() : '';
     const locationPart = title && title.includes(' in ') ? title.split(' in ')[1].split(',')[0].trim() : '';
@@ -590,76 +609,48 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                         {groupedItems[cat].map((sub, i) => {
                                             const itemId = sub.docId || sub.id;
                                             const cartItem = cartItems.find(item => item.id === itemId);
-                                            const discount = svc.globalDiscount || 20; // fallback to 20% if not defined
+                                            const discount = svc.globalDiscount || 20;
                                             const originalPrice = discount > 0 ? Math.round(sub.price / (1 - discount / 100)) : null;
-                                            return (
-                                                <div key={i} className="col-lg-4 col-md-6 col-12">
-                                                    <div className="shared-carousel-card most-booked-card hover-lift d-flex flex-column h-100 bg-white p-3 border" style={{ borderRadius: '8px', boxShadow: '0 2px 6px rgba(0,0,0,0.04)' }}>
-                                                        {/* Image wrapper commented out for future dynamic loading */}
-                                                        {/* 
-                                                             <div className="img-wrapper safety-img-wrap" style={{ position: 'relative', width: '100%', aspectRatio: '1 / 1', borderRadius: '4px', overflow: 'hidden' }} onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
-                                                                 {discount > 0 && (
-                                                                     <div className="discount-tag" style={{ borderTopLeftRadius: '4px' }}>
-                                                                         <span className="get-instant">Get Instant</span>
-                                                                         <span className="percentage">{discount}%</span>
-                                                                         <span className="off-text">OFF</span>
-                                                                         <span className="booking-text">On First Booking</span>
-                                                                     </div>
-                                                                 )}
-                                                                 <img 
-                                                                     src={sub.image || svc.photo || '/images/ac-repair.png'} 
-                                                                     alt={sub.name} 
-                                                                     className="w-100 h-100 object-fit-cover" 
-                                                                     style={{ borderRadius: '4px', cursor: 'pointer' }} 
-                                                                 />
-                                                             </div> 
-                                                             */}
+                                            return <div key={i} className="col-lg-4 col-md-6 col-12">
+                                                    <div className="premium-service-card d-flex flex-column h-100">
                                                         <div className="d-flex flex-column flex-grow-1 text-start">
                                                             {discount > 0 && (
                                                                 <div className="mb-2">
-                                                                    <span className="badge fw-bold" style={{ fontSize: '10px', padding: '4px 8px', backgroundColor: '#e8f5e9', color: '#2e7d32', borderRadius: '4px' }}>
+                                                                    <span className="service-card-discount-badge">
                                                                         Get {discount}% OFF on First Booking
                                                                     </span>
                                                                 </div>
                                                             )}
 
-                                                            <h3 className="service-title text-start mt-1 mb-2" style={{ fontSize: '16px', color: '#1a1a1a', fontWeight: '700', cursor: 'pointer' }} onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
+                                                            <h3 className="service-card-title text-start" onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
                                                                 {sub.name}
                                                             </h3>
 
-                                                            {/* {sub.desc && (
-                                                                     <p className="text-secondary text-start mb-3" style={{ fontSize: '12.5px', lineHeight: '1.5', minHeight: '40px' }}>
-                                                                         {sub.desc}
-                                                                     </p>
-                                                                 )} */}
-
-                                                            <div className="d-flex align-items-center justify-content-between mt-auto pt-2 border-top">
-                                                                <div className="d-flex align-items-baseline gap-1">
-                                                                    <span className="fw-black text-dark fs-5">₹{sub.price}</span>
-                                                                    {sub.unit && <span className="text-muted small" style={{ fontSize: '11px' }}>{sub.unit}</span>}
+                                                            <div className="service-card-price-row mb-3">
+                                                                <div className="service-card-price-container">
+                                                                    <span className="service-card-price">₹{sub.price}</span>
+                                                                    {sub.unit && <span className="service-card-unit">{sub.unit}</span>}
                                                                     {originalPrice && (
-                                                                        <span className="text-muted text-decoration-line-through ms-1" style={{ fontSize: '11px' }}>₹{originalPrice}</span>
+                                                                        <span className="service-card-original-price">₹{originalPrice}</span>
                                                                     )}
                                                                 </div>
+                                                            </div>
 
-                                                                <div className="d-flex align-items-center gap-3">
-                                                                    <div className="hover-underline cursor-pointer small fw-bold" style={{ color: '#024dbe', fontSize: '12px', fontWeight: '600' }} onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
-                                                                        View details
-                                                                    </div>
-
-                                                                    <button
-                                                                        className="btn bg-white shadow-sm fw-bold py-1 px-3 hover-lift"
-                                                                        style={{ fontSize: '12px', border: '1.5px solid #24b24b', color: '#24b24b', borderRadius: '4px' }}
-                                                                        onClick={() => handleBookDirectly(sub)}
-                                                                    >
-                                                                        BOOK
-                                                                    </button>
+                                                            <div className="service-card-action-row d-flex align-items-center justify-content-between mt-auto pt-2 border-top">
+                                                                <div className="service-card-details-link" onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
+                                                                    View details
                                                                 </div>
+
+                                                                <button
+                                                                    className="btn service-card-book-btn"
+                                                                    onClick={() => handleBookDirectly(sub)}
+                                                                >
+                                                                    BOOK
+                                                                </button>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            );
+                                                </div>;
                                         })}
                                     </div>
                                 </div>
@@ -681,7 +672,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                 <div className="row g-0 h-100">
                                     <div className="col-lg-5 d-none d-lg-block bg-dark h-100">
                                         <div className="h-100 position-relative">
-                                            <img src={selectedService.image || svc.photo || '/images/washing-machine.png'} className="w-100 h-100 object-fit-cover opacity-75" alt={selectedService.name} />
+                                            <img src={(!isIcon(selectedService.image) && selectedService.image) || svc.photo || '/images/washing-machine.png'} className="w-100 h-100 object-fit-cover opacity-75" alt={selectedService.name} />
                                             <div className="position-absolute bottom-0 start-0 w-100 p-5 bg-gradient-to-t from-black to-transparent">
                                                 <h3 className="text-white fw-black fs-1 mb-2">{selectedService.name}</h3>
                                                 <div className="d-flex align-items-center gap-2 mb-4">

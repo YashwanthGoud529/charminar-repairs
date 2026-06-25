@@ -7,6 +7,7 @@ import ThirdPartyScripts from '@/components/shared/ThirdPartyScripts';
 import Providers from './providers';
 import { Poppins } from 'next/font/google';
 import { constructMetadata } from '@/components/seo/constructMetadata';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -161,6 +162,7 @@ export default function RootLayout({ children }) {
               {children}
             </MainLayoutWrapper>
             <ScrollToTop />
+            <SpeedInsights />
           </Providers>
         </StyledJsxRegistry>
 
