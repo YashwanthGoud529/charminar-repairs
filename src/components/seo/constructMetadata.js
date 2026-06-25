@@ -9,7 +9,7 @@ export function constructMetadata({
   noIndex = false,
   keywords = `appliance repair Hyderabad, washing machine repair Hyderabad, AC repair Hyderabad, refrigerator repair Hyderabad, microwave repair Hyderabad, TV repair Hyderabad, doorstep repair Hyderabad, same-day repair service, ${BRAND.name} Hyderabad, appliance service center Hyderabad`,
 }) {
-  const baseUrl = BRAND.domain ? (BRAND.domain.startsWith('http') ? BRAND.domain : `https://www.${BRAND.domain}`) : 'https://www.charminarrepairs.com';
+  const baseUrl = BRAND.domain ? (BRAND.domain.startsWith('http') ? BRAND.domain : `https://www.${BRAND.domain}`) : 'https://www.meehelper.com';
   let path = canonicalPath || "/";
   if (!path.startsWith("/")) {
     path = "/" + path;
@@ -39,11 +39,12 @@ export function constructMetadata({
     },
     icons: {
       icon: [
-        { url: "/favicon.png", sizes: "any" },
+        { url: "/favicon.ico", type: "image/svg+xml" },
+        { url: "/favicon.ico", sizes: "any" },
         { url: "/favicon.ico", type: "image/x-icon" },
       ],
       shortcut: "/favicon.ico",
-      apple: "/favicon.png",
+      apple: "/favicon.ico",
     },
     verification: {
       google: "G890JVgjNGQLlwfuIJk-m2NrJAug5qhi7bcnvAeXExY",

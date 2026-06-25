@@ -37,9 +37,9 @@
 .premium-input:focus,
 .premium-select:focus {
     background-color: #ffffff;
-    border-color: #673ab7 !important;
+    border-color: #024dbe !important;
     /* Cart Primary Purple */
-    box-shadow: 0 0 0 4px rgba(103, 58, 183, 0.1) !important;
+    box-shadow: 0 0 0 4px rgba(2, 77, 190, 0.1) !important;
 }
 
 .premium-input::placeholder {
@@ -48,7 +48,7 @@
 }
 
 .btn-premium-action {
-    background-color: #673ab7;
+    background-color: #024dbe;
     /* Cart Primary Purple */
     color: #ffffff;
     border: none;
@@ -65,10 +65,10 @@
 }
 
 .btn-premium-action:hover {
-    background-color: #5e35b1;
+    background-color: #013c96;
     /* Cart Purple Hover */
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(103, 58, 183, 0.2);
+    box-shadow: 0 8px 20px rgba(2, 77, 190, 0.2);
 }
 
 .btn-premium-action:active {

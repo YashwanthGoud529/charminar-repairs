@@ -7,7 +7,8 @@ const FAQ = ({
     title = "Frequently Asked Questions", 
     subtitle = "Got questions? We've got answers about our repair services in Hyderabad.",
     compact = false,
-    onViewAllClick = null
+    onViewAllClick = null,
+    bgColor = "gray"
 }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -29,8 +30,10 @@ const FAQ = ({
         setActiveIndex(activeIndex === index ? -1 : index);
     };
 
+    const backgroundVal = bgColor === 'white' ? '#ffffff' : '#f8fafc';
+
     return (
-        <section className={`faq-section d-block w-100 ${compact ? 'faq-compact' : ''}`} style={{ backgroundColor: '#f8fafc', padding: compact ? '40px 0' : '80px 0' }}>
+        <section className={`faq-section d-block w-100 ${compact ? 'faq-compact' : ''}`} style={{ backgroundColor: backgroundVal, padding: compact ? '40px 0' : '80px 0' }}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -46,7 +49,7 @@ const FAQ = ({
                             {items.map((item, index) => (
                                 <div key={index} className={`faq-item ${compact ? 'mb-2' : 'mb-4'} shadow-sm ${activeIndex === index ? 'active' : ''}`} style={{
                                     backgroundColor: '#fff',
-                                    borderRadius: compact ? '4px' : '16px',
+                                    borderRadius: '4px',
                                     border: activeIndex === index ? (compact ? '1.5px solid #ff6b00' : '2px solid #ff6b00') : '1px solid #eef2f6',
                                     overflow: 'hidden',
                                     transition: 'all 0.3s ease'

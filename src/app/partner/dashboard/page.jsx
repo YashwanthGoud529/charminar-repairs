@@ -88,7 +88,7 @@ const PartnerDashboard = () => {
             {/* Header */}
             <header className="bg-white shadow-sm py-3 px-4 sticky-top">
                 <div className="container d-flex justify-content-between align-items-center">
-                    <img src="/images/charminar-repairs-logo.jpeg" alt="Logo" width="120" />
+                    <img src="/logo.png" alt="Logo" width="120" />
                     <div className="d-flex align-items-center gap-3">
                         <span className="small text-muted d-none d-md-block">Welcome, <strong>{partner?.name}</strong></span>
                         <button onClick={handleLogout} className="btn btn-outline-danger btn-sm rounded-pill px-3">Logout</button>

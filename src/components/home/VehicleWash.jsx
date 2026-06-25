@@ -12,24 +12,25 @@ import './CarouselShared.css';
 import { toCDN } from '@/config/services';
 
 const VEHICLE_WASH_SERVICES = [
-    { id: 'wash-bike-eco', title: 'Doorstep Bike Eco Wash', price: 299, desc: 'Pressure jet wash, body cleaning, and dry wipe. Ideal for daily commuters.', image: '/images/bike-wash.png', badge: 'Eco Wash' },
-    { id: 'wash-bike-prem', title: 'Doorstep Bike Premium Wash', price: 499, desc: 'Active snow foam wash, tyre dressing, dashboard wax polish, and chain lubrication.', image: '/images/bike-wash.png', badge: 'Foam & Polish' },
-    { id: 'wash-car-std', title: 'Car Exterior Wash & Vacuum', price: 799, desc: 'Snow foam wash, tire dressing, interior high-suction vacuum, and floor mat cleaning.', image: '/images/car-wash.png', badge: 'Best Seller' },
-    { id: 'wash-car-suv', title: 'SUV Premium Wash & Polish', price: 1199, desc: 'Complete snow foam wash, interior vacuuming, dashboard polish, and alloy polish.', image: '/images/car-wash.png', badge: 'Premium Care' },
-    { id: 'charminar-wheels-standard', title: 'STANDARD (Spadex Steam Wash)', price: 1499, desc: 'Full Exterior Steam Wash, total interiors steam wash, vacuuming and anti-bacterial treatment.', image: '/images/car-wash.png', badge: 'Spadex Steam' },
-    { id: 'charminar-wheels-premium', title: 'PREMIUM (Standard & Spadex Elite)', price: 2499, desc: 'Interiors Deep cleaning (4 layers), engine bay steam wash dressing, seats and roof steaming.', image: '/images/car-wash.png', badge: 'Spadex Elite' },
-    { id: 'charminar-wheels-pro', title: 'SPADEX PRO (Elite Package)', price: 3699, desc: 'Spadex Standard + Spadex Premium + Full Body Buffing & Polishing with machine.', image: '/images/car-wash.png', badge: 'Spadex Pro' }
+    { id: 'wash-bike-eco', title: 'Doorstep Bike Eco Wash', price: 299, desc: 'Pressure jet wash, body cleaning, and dry wipe. Ideal for daily commuters.', image: '/images/bike-wash-eco.png', badge: 'Eco Wash' },
+    { id: 'wash-bike-prem', title: 'Doorstep Bike Premium Wash', price: 499, desc: 'Active snow foam wash, tyre dressing, dashboard wax polish, and chain lubrication.', image: '/images/bike-wash-premium.png', badge: 'Foam & Polish' },
+    { id: 'wash-car-std', title: 'Car Exterior Wash & Vacuum', price: 799, desc: 'Snow foam wash, tire dressing, interior high-suction vacuum, and floor mat cleaning.', image: '/images/car-wash-standard.png', badge: 'Best Seller' },
+    { id: 'wash-car-suv', title: 'SUV Premium Wash & Polish', price: 1199, desc: 'Complete snow foam wash, interior vacuuming, dashboard polish, and alloy polish.', image: '/images/car-wash-suv.png', badge: 'Premium Care' },
+    { id: 'meehelper-wheels-standard', title: 'STANDARD (Spadex Steam Wash)', price: 1499, desc: 'Full Exterior Steam Wash, total interiors steam wash, vacuuming and anti-bacterial treatment.', image: '/images/steam-wash-standard.png', badge: 'Spadex Steam' },
+    { id: 'meehelper-wheels-premium', title: 'PREMIUM (Standard & Spadex Elite)', price: 2499, desc: 'Interiors Deep cleaning (4 layers), engine bay steam wash dressing, seats and roof steaming.', image: '/images/steam-wash-premium.png', badge: 'Spadex Elite' },
+    { id: 'meehelper-wheels-pro', title: 'SPADEX PRO (Elite Package)', price: 3699, desc: 'Spadex Standard + Spadex Premium + Full Body Buffing & Polishing with machine.', image: '/images/steam-wash-pro.png', badge: 'Spadex Pro' }
 ].map(item => ({
     ...item,
     image: toCDN(item.image)
 }));
 
-const VehicleWash = () => {
+const VehicleWash = ({ bgColor }) => {
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
     return (
-        <section className="shared-carousel-section vehicle-wash-section py-5 bg-light-soft">
+        <section className={`shared-carousel-section vehicle-wash-section py-5 ${bgClass}`}>
             <div className="container custom-container">
                 <div className="d-flex align-items-center mb-4 gap-3">
-                    <h2 className="shared-carousel-title mb-0">Charminar Auto Care</h2>
+                    <h2 className="shared-carousel-title mb-0">MeeHelper Auto Care</h2>
                     <span className="section-status-pill" style={{ background: '#ff6b00', color: '#fff' }}>Doorstep Detailing</span>
                 </div>
 

@@ -28,9 +28,9 @@ const ClientScripts = () => {
                             "position": "right"
                         },
                         "brandSetting": {
-                            "brandName": "Charminar Repairs",
+                            "brandName": "MeeHelper",
                             "brandSubTitle": "Appliance Repair Specialists | Hyderabad",
-                            "brandImg": "/images/charminar-repairs-logo.jpeg",
+                            "brandImg": "/logo.png",
                             "welcomeText": "Hi there!<br>Need expert appliance repair services? We're here to help!",
                             "messageText": "Hi, I need service for my %0A- [Appliance Type: Washing Machine/AC/Fridge etc.]%0A- [Issue Description]%0A- [Location in Hyderabad]",
                             "backgroundColor": "#090956",
@@ -38,7 +38,7 @@ const ClientScripts = () => {
                             "borderRadius": "25",
                             "autoShow": false,
                             "phoneNumber": "918008615049",
-                            "welcomeTextUser": "Hi Charminar Repairs! I came across your appliance repair service and need assistance with:"
+                            "welcomeTextUser": "Hi MeeHelper! I came across your appliance repair service and need assistance with:"
                         }
                     };
                     if (typeof window.CreateWhatsappChatWidget === 'function') {

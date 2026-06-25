@@ -24,7 +24,9 @@ const AdminPageStats = () => {
             const uniqueCanonicalSlugs = [...new Set(CANONICAL_SLUGS)].sort();
             const subServiceSlugs = [];
             Object.values(SERVICE_DATA_MAP).forEach((service) => {
-                service.subServices?.forEach((sub) => subServiceSlugs.push(sub.id));
+                if (service && service.subServices) {
+                    service.subServices.forEach((sub) => subServiceSlugs.push(sub.id));
+                }
             });
 
             const baseServiceSlugs = [...new Set([...uniqueCanonicalSlugs, ...subServiceSlugs])].sort();
@@ -148,7 +150,7 @@ const AdminPageStats = () => {
                 <div className="col-md-3">
                     <div className="stat-card shadow-sm border-0 premium-hover h-100">
                         <div className="stat-icon green">
-                            <img src="/favicon.png" alt="blogs" width="36" height="36" />
+                            <img src="/favicon.ico" alt="blogs" width="36" height="36" />
                         </div>
                         <div className="stat-info">
                             <h4>Blog Posts</h4>
@@ -201,7 +203,7 @@ const AdminPageStats = () => {
                                 <div className="col-lg-5 d-none d-lg-block">
                                     <div className="hex-grid-container opacity-25">
                                         {/* Abstract background elements could go here */}
-                                        <img src="/images/charminar-repairs-logo.jpeg" className="rounded-4 shadow-lg w-100" alt="Cover" style={{filter: 'grayscale(1) brightness(0.5)'}} />
+                                        <img src="/logo.png" className="rounded-4 shadow-lg w-100" alt="Cover" style={{filter: 'grayscale(1) brightness(0.5)'}} />
                                     </div>
                                 </div>
                             </div>

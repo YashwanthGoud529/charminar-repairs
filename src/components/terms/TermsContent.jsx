@@ -18,7 +18,7 @@ const TermsContent = () => {
                         <div className="bg-white p-4 p-md-5 shadow-sm rounded-8">
                             <section className="mb-5">
                                 <h3 className="fw-bold mb-4">1. Service Agreement</h3>
-                                <p className="text-muted">By booking a service with Charminar Repairs, you agree to the terms outlined here. Our technicians provide doorstep repair services for home appliances in Hyderabad and Secunderabad.</p>
+                                <p className="text-muted">By booking a service with MeeHelper, you agree to the terms outlined here. Our technicians provide doorstep repair services for home appliances in Hyderabad and Secunderabad.</p>
                             </section>
 
                             <section className="mb-5">
@@ -38,7 +38,7 @@ const TermsContent = () => {
 
                             <section className="mb-5">
                                 <h3 className="fw-bold mb-4">5. Liability</h3>
-                                <p className="text-muted">Charminar Repairs is not liable for any pre-existing issues found during inspection or for damages resulting from appliances that were already in a state of critical failure.</p>
+                                <p className="text-muted">MeeHelper is not liable for any pre-existing issues found during inspection or for damages resulting from appliances that were already in a state of critical failure.</p>
                             </section>
                         </div>
                     </div>

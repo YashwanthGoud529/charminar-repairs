@@ -2,7 +2,7 @@
 
 .service-areas-intl {
     background-color: #f8fafc;
-    font-family: 'Outfit', var(--font-inter), sans-serif;
+    font-family: var(--font-main);
 }
 
 /* --- Quick Summary Grid --- */

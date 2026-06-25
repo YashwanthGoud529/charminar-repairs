@@ -11,7 +11,7 @@
 
 .hero-title-v3 {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 800;
     color: #212121;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -180,7 +180,69 @@
     }
 }
 
+@media (max-width: 420px) {
+    .service-grid-v3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+
 
 .rounded-3 {
     border-radius: 4px !important;
 }
+
+/* Hero CTA Buttons */
+.hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background: #ff6b00;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 26px;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.3);
+    white-space: nowrap;
+}
+
+.hero-btn-primary:hover {
+    background: #e05e00;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.4);
+    color: #ffffff;
+}
+
+.hero-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    color: #024dbe;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 2px solid #024dbe;
+    text-decoration: none;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.hero-btn-secondary:hover {
+    background: #024dbe;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(2, 77, 190, 0.25);
+}
+
+@media (max-width: 576px) {
+    .hero-btn-primary,
+    .hero-btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}

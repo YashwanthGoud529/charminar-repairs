@@ -22,7 +22,9 @@ function getAllPermutationSlugs() {
     const uniqueCanonicalSlugs = [...new Set(CANONICAL_SLUGS)].sort();
     const subServiceSlugs = [];
     Object.values(SERVICE_DATA_MAP).forEach(service => {
-        service.subServices?.forEach(sub => subServiceSlugs.push(sub.id));
+        if (service && service.subServices) {
+            service.subServices.forEach(sub => subServiceSlugs.push(sub.id));
+        }
     });
 
     const baseServiceSlugs = [...new Set([...uniqueCanonicalSlugs, ...subServiceSlugs])].sort();
@@ -50,7 +52,7 @@ function getAllPermutationSlugs() {
     return allSearchableSlugs;
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.charminarrepairs.com';
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.meehelper.com';
 
 export default async function sitemap() {
   const lastModified = new Date();
@@ -59,7 +61,9 @@ export default async function sitemap() {
   const uniqueCanonicalSlugs = [...new Set(CANONICAL_SLUGS)].sort();
   const subServiceSlugs = [];
   Object.values(SERVICE_DATA_MAP).forEach(service => {
-      service.subServices?.forEach(sub => subServiceSlugs.push(sub.id));
+      if (service && service.subServices) {
+          service.subServices.forEach(sub => subServiceSlugs.push(sub.id));
+      }
   });
 
   const baseServiceSlugs = [...new Set([...uniqueCanonicalSlugs, ...subServiceSlugs])].sort();

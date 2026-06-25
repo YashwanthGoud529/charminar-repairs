@@ -4,10 +4,10 @@ export const blogs = [
         id: 1,
         slug: "guide-to-washing-machine-maintenance-hyderabad",
         title: "Expert Guide to Washing Machine Maintenance & Repair in Hyderabad",
-        excerpt: "Learn how Charminar Repairs handles the impact of hard water on appliances across Gachibowli and Kondapur localities.",
-        metaDescription: "Protect your washing machine from Hyderabad's hard water. Expert maintenance tips from Charminar Repairs for residents in Gachibowli, Kondapur, and Hitech City. Prevent scale buildup today.",
+        excerpt: "Learn how MeeHelper handles the impact of hard water on appliances across Gachibowli and Kondapur localities.",
+        metaDescription: "Protect your washing machine from Hyderabad's hard water. Expert maintenance tips from MeeHelper for residents in Gachibowli, Kondapur, and Hitech City. Prevent scale buildup today.",
         content: `
-            <p><strong>Charminar Repairs</strong> understands that residents of <strong>Hyderabad</strong> face unique challenges when it comes to appliance longevity. One of the most significant factors is the hard water prevalent in many residential zones, which can drastically reduce the lifespan of your washing machine.</p>
+            <p><strong>MeeHelper</strong> understands that residents of <strong>Hyderabad</strong> face unique challenges when it comes to appliance longevity. One of the most significant factors is the hard water prevalent in many residential zones, which can drastically reduce the lifespan of your washing machine.</p>
             
             <h2>The Impact of Hard Water on Appliances</h2>
             <p>Hard water contains high mineral content, specifically calcium and magnesium, which leads to scale buildup in your washing machine's drum, pipes, and heating elements. If left untreated, this crystalline layer can cause heating element failure and drainage blockages. Our technicians consistently see these issues in areas like <strong>Gachibowli</strong>, <strong>Miyapur</strong>, and <strong>Kondapur</strong>, where water hardness levels are particularly high.</p>
@@ -27,7 +27,7 @@ export const blogs = [
             </ul>
 
             <h2>Professional Doorstep Repair Services</h2>
-            <p>If your machine is already making loud noises, failing to drain, or displaying error codes, don't wait for the problem to worsen. <strong>Charminar Repairs</strong> provides instant doorstep solutions in <strong>Hitech City</strong> and surrounding areas. We specialize in servicing all major brands, including LG, Samsung, IFB, and Bosch, ensuring your appliance is restored to factory performance quickly.</p>
+            <p>If your machine is already making loud noises, failing to drain, or displaying error codes, don't wait for the problem to worsen. <strong>MeeHelper</strong> provides instant doorstep solutions in <strong>Hitech City</strong> and surrounding areas. We specialize in servicing all major brands, including LG, Samsung, IFB, and Bosch, ensuring your appliance is restored to factory performance quickly.</p>
         `,
         image: "/images/blog_washing_machine.png",
         date: "June 14, 2026",
@@ -38,10 +38,10 @@ export const blogs = [
         id: 2,
         slug: "professional-dishwasher-repair-essential-guide",
         title: "Why Professional Dishwasher Repair is Essential for Hyderabad Homes",
-        excerpt: "Discover why local Hyderabad residents trust Charminar Repairs for budget-friendly, instant doorstep solutions.",
-        metaDescription: "Expert dishwasher repair services in Hyderabad. Charminar Repairs offers professional fixes for spray arms, heating elements, and drainage issues in Madhapur and Banjara Hills.",
+        excerpt: "Discover why local Hyderabad residents trust MeeHelper for budget-friendly, instant doorstep solutions.",
+        metaDescription: "Expert dishwasher repair services in Hyderabad. MeeHelper offers professional fixes for spray arms, heating elements, and drainage issues in Madhapur and Banjara Hills.",
         content: `
-            <p>A dishwasher is no longer a luxury but a necessity for busy families in <strong>Hyderabad</strong>, particularly in tech hubs like <strong>Madhapur</strong>. When it stops cleaning effectively or leaves dishes wet, it can disrupt your entire kitchen routine. <strong>Charminar Repairs</strong> is here to help restore your convenience.</p>
+            <p>A dishwasher is no longer a luxury but a necessity for busy families in <strong>Hyderabad</strong>, particularly in tech hubs like <strong>Madhapur</strong>. When it stops cleaning effectively or leaves dishes wet, it can disrupt your entire kitchen routine. <strong>MeeHelper</strong> is here to help restore your convenience.</p>
 
             <h2>Common Dishwasher Faults in Indian Kitchens</h2>
             <p>Indian cooking involves heavy use of spices and oils, which can wreak havoc on dishwasher components. Common issues we encounter include:</p>
@@ -52,7 +52,7 @@ export const blogs = [
             </ul>
             <p>Many residents in <strong>Banjara Hills</strong> attempt DIY fixes, but modern dishwashers are complex electronic machines that require certified expertise to avoid voiding the warranty.</p>
 
-            <h2>Why Choose Charminar Repairs?</h2>
+            <h2>Why Choose MeeHelper?</h2>
             <p>Our team specializes in multi-brand technical mastery. We use genuine components to ensure your dishwasher doesn't just work, but performs optimally for years to come. We provide comprehensive services from <strong>Secunderabad</strong> to <strong>Mehdipatnam</strong>.</p>
             <p>Our process includes:</p>
             <ol>
@@ -64,16 +64,16 @@ export const blogs = [
         image: "/images/blog_kitchen_repair.png",
         date: "June 13, 2026",
         category: "Dishwasher",
-        tags: ["Dishwasher Repair", "Kitchen Appliances", "Madhapur", "Banjara Hills", "Charminar Repairs"]
+        tags: ["Dishwasher Repair", "Kitchen Appliances", "Madhapur", "Banjara Hills", "MeeHelper"]
     },
     {
         id: 3,
         slug: "electrical-safety-hyderabad-homes-guide",
         title: "Critical Guide: Electrical Safety & Wiring Checks in Hyderabad",
-        excerpt: "Ensure your building's safety with periodic wiring checks. Your guide to finding expert Charminar Repairs electricians near you.",
-        metaDescription: "Ensure electrical safety in your Hyderabad home. Charminar Repairs offers 25-point safety checks, wiring repairs, and short circuit prevention in Abids, Koti, and Jubilee Hills.",
+        excerpt: "Ensure your building's safety with periodic wiring checks. Your guide to finding expert MeeHelper electricians near you.",
+        metaDescription: "Ensure electrical safety in your Hyderabad home. MeeHelper offers 25-point safety checks, wiring repairs, and short circuit prevention in Abids, Koti, and Jubilee Hills.",
         content: `
-            <p>Electrical safety is paramount for every household. At <strong>Charminar Repairs</strong>, we've observed that many older buildings in established areas like <strong>Abids</strong> and <strong>Koti</strong> have outdated wiring that cannot handle the load of modern heavy appliances like ACs and geysers.</p>
+            <p>Electrical safety is paramount for every household. At <strong>MeeHelper</strong>, we've observed that many older buildings in established areas like <strong>Abids</strong> and <strong>Koti</strong> have outdated wiring that cannot handle the load of modern heavy appliances like ACs and geysers.</p>
 
             <h2>Warning Signs for Hyderabad Homeowners</h2>
             <p>Identifying electrical hazards early can prevent fires and equipment damage. Be on the lookout for:</p>
@@ -92,7 +92,7 @@ export const blogs = [
                 <li>Crystalline power cable integrity to prevent short circuits.</li>
                 <li>Proper grounding (earthing) to protect your family and devices.</li>
             </ul>
-            <p>From MCB replacements to complete rewiring, trust <strong>Charminar Repairs</strong> in <strong>Begumpet</strong> and beyond.</p>
+            <p>From MCB replacements to complete rewiring, trust <strong>MeeHelper</strong> in <strong>Begumpet</strong> and beyond.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 10, 2026",
@@ -103,10 +103,10 @@ export const blogs = [
         id: 4,
         slug: "refrigerator-cooling-issues-hyderabad-summer",
         title: "Preventing Refrigerator Cooling Issues During Hyderabad Summer",
-        excerpt: "How to keep your food fresh during Hyderabad's summer peaks with expert advice from Charminar Repairs.",
-        metaDescription: "Prevent refrigerator breakdowns this summer. Expert fridge repair and cooling solutions from Charminar Repairs in Kukatpally, Uppal, and across Hyderabad. Tips to improve cooling efficiency.",
+        excerpt: "How to keep your food fresh during Hyderabad's summer peaks with expert advice from MeeHelper.",
+        metaDescription: "Prevent refrigerator breakdowns this summer. Expert fridge repair and cooling solutions from MeeHelper in Kukatpally, Uppal, and across Hyderabad. Tips to improve cooling efficiency.",
         content: `
-            <p>Summer in <strong>Hyderabad</strong> can be brutal on your refrigerator. As temperatures climb in densely populated areas like <strong>Kukatpally</strong>, your compressor has to work double-time to maintain optimal temperatures. <strong>Charminar Repairs</strong> recommends periodic checks before the peak heat sets in to avoid food spoilage.</p>
+            <p>Summer in <strong>Hyderabad</strong> can be brutal on your refrigerator. As temperatures climb in densely populated areas like <strong>Kukatpally</strong>, your compressor has to work double-time to maintain optimal temperatures. <strong>MeeHelper</strong> recommends periodic checks before the peak heat sets in to avoid food spoilage.</p>
             
             <h2>Summer Care Checklist</h2>
             <p>Follow these steps to ensure your fridge stays cool efficiently:</p>
@@ -118,7 +118,7 @@ export const blogs = [
             </ul>
             
             <h2>Signs Your Fridge Needs Professional Attention</h2>
-            <p>If your refrigerator is running but not cooling, or if you hear a clicking sound near the compressor, it’s time to call <strong>Charminar Repairs</strong>. We handle gas refilling, compressor replacement, and PCB repairs for all brands including Samsung, Whirlpool, and Haier.</p>
+            <p>If your refrigerator is running but not cooling, or if you hear a clicking sound near the compressor, it’s time to call <strong>MeeHelper</strong>. We handle gas refilling, compressor replacement, and PCB repairs for all brands including Samsung, Whirlpool, and Haier.</p>
         `,
         image: "/images/blog_refrigerator.png",
         date: "June 09, 2026",
@@ -129,10 +129,10 @@ export const blogs = [
         id: 5,
         slug: "ac-repair-gachibowli-servicing-guide",
         title: "Elite AC Servicing & Repair: Your Complete Diagnostic Guide",
-        excerpt: "Charminar Repairs provides the most comprehensive AC repair in Gachibowli and beyond.",
-        metaDescription: "Top-rated AC repair and servicing in Gachibowli, Financial District, and Nanakramguda. Charminar Repairs offers gas filling, jet cleaning, and PCB repair with 2-hour response times.",
+        excerpt: "MeeHelper provides the most comprehensive AC repair in Gachibowli and beyond.",
+        metaDescription: "Top-rated AC repair and servicing in Gachibowli, Financial District, and Nanakramguda. MeeHelper offers gas filling, jet cleaning, and PCB repair with 2-hour response times.",
         content: `
-            <p>Is your AC blowing warm air or making strange noises? <strong>Charminar Repairs</strong> offers a full diagnostic scan using advanced sensors to find the root cause in <strong>Gachibowli</strong>. Whether it's a gas leak, a faulty capacitor, or a PCB failure, we fix it right the first time.</p>
+            <p>Is your AC blowing warm air or making strange noises? <strong>MeeHelper</strong> offers a full diagnostic scan using advanced sensors to find the root cause in <strong>Gachibowli</strong>. Whether it's a gas leak, a faulty capacitor, or a PCB failure, we fix it right the first time.</p>
             
             <h2>Our 25-Point Diagnostic Service</h2>
             <p>We don't just clean your AC; we analyze it. Our comprehensive service includes:</p>
@@ -155,10 +155,10 @@ export const blogs = [
         id: 6,
         slug: "microwave-repair-hightech-solutions",
         title: "Microwave Repair Guide: High-Tech Solutions for Heating Problems",
-        excerpt: "Expert magnetron replacement and control panel fixes by Charminar Repairs in Hyderabad.",
+        excerpt: "Expert magnetron replacement and control panel fixes by MeeHelper in Hyderabad.",
         metaDescription: "Expert microwave repair services in Hyderabad. We fix magnetron failures, touchpad issues, and heating problems. Serving Ameerpet, SR Nagar, and nearby areas.",
         content: `
-            <p>A microwave that doesn't heat is essentially a useless kitchen appliance. <strong>Charminar Repairs</strong> provides high-voltage capacitor and magnetron replacements for all major brands in <strong>Hyderabad</strong>, including <strong>Ameerpet</strong> and <strong>SR Nagar</strong>.</p>
+            <p>A microwave that doesn't heat is essentially a useless kitchen appliance. <strong>MeeHelper</strong> provides high-voltage capacitor and magnetron replacements for all major brands in <strong>Hyderabad</strong>, including <strong>Ameerpet</strong> and <strong>SR Nagar</strong>.</p>
             
             <h2>Common Microwave Faults</h2>
             <p>Microwave ovens are complex high-voltage devices. Common issues we resolve include:</p>
@@ -168,7 +168,7 @@ export const blogs = [
                 <li><strong>Turntable Not Rotating:</strong> Usually a motor issue that prevents even heating.</li>
             </ul>
             
-            <p>Safety is our priority. Avoid DIY repairs on microwaves due to high voltage retention. Trust the certified technicians at <strong>Charminar Repairs</strong> for safe and effective repairs.</p>
+            <p>Safety is our priority. Avoid DIY repairs on microwaves due to high voltage retention. Trust the certified technicians at <strong>MeeHelper</strong> for safe and effective repairs.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 07, 2026",
@@ -179,10 +179,10 @@ export const blogs = [
         id: 7,
         slug: "television-display-panel-repair-guide",
         title: "Television Panel Repair: Fixing Lines, Screens & Board Failures",
-        excerpt: "Don't replace your TV yet. Charminar Repairs can fix display panel damage and T-CON board failures.",
+        excerpt: "Don't replace your TV yet. MeeHelper can fix display panel damage and T-CON board failures.",
         metaDescription: "Affordable LED and Smart TV repair services in Hyderabad. Expert solutions for lines on screen, black patches, and sound issues. Serving Somajiguda and Panjagutta.",
         content: `
-            <p>Before you consider buying a new TV, let <strong>Charminar Repairs</strong> inspect it. We handle LED, OLED, and 4K TV repairs across <strong>Hyderabad</strong>, with specialized technicians in <strong>Somajiguda</strong> and <strong>Panjagutta</strong>.</p>
+            <p>Before you consider buying a new TV, let <strong>MeeHelper</strong> inspect it. We handle LED, OLED, and 4K TV repairs across <strong>Hyderabad</strong>, with specialized technicians in <strong>Somajiguda</strong> and <strong>Panjagutta</strong>.</p>
             
             <h2>Diagnosing TV Screen Issues</h2>
             <p>Modern televisions often suffer from issues that can be repaired cost-effectively:</p>
@@ -204,9 +204,9 @@ export const blogs = [
         slug: "annual-maintenance-contracts-benefits",
         title: "Why Annual Maintenance Contracts (AMC) Save You Money",
         excerpt: "Affordable regular appliance checks ensure longevity and peace of mind.",
-        metaDescription: "Secure your home appliances with Charminar Repairs Annual Maintenance Contracts (AMC) in Hyderabad. Preventive care for ACs, Washing Machines, and Geysers in Tarnaka and Nagole.",
+        metaDescription: "Secure your home appliances with MeeHelper Annual Maintenance Contracts (AMC) in Hyderabad. Preventive care for ACs, Washing Machines, and Geysers in Tarnaka and Nagole.",
         content: `
-            <p>Stop waiting for appliances to break down unexpectedly. With a <strong>Charminar Repairs</strong> AMC, we perform routine health checks to catch issues early. Available for all <strong>Hyderabad</strong> homes from <strong>Tarnaka</strong> to <strong>Nagole</strong>, our AMC plans are designed for peace of mind.</p>
+            <p>Stop waiting for appliances to break down unexpectedly. With a <strong>MeeHelper</strong> AMC, we perform routine health checks to catch issues early. Available for all <strong>Hyderabad</strong> homes from <strong>Tarnaka</strong> to <strong>Nagole</strong>, our AMC plans are designed for peace of mind.</p>
             
             <h2>Benefits of Our AMC Plans</h2>
             <p>A small investment today saves thousands in future repairs:</p>
@@ -216,7 +216,7 @@ export const blogs = [
                 <li><strong>Extended Lifespan:</strong> Regular tune-ups ensure your AC, Fridge, and Washing Machine run efficiently for longer.</li>
             </ul>
             
-            <p>Our plans cover everything from AC gas top-ups to electrical circuit checks. Contact <strong>Charminar Repairs</strong> to customize an AMC package that fits your home's needs.</p>
+            <p>Our plans cover everything from AC gas top-ups to electrical circuit checks. Contact <strong>MeeHelper</strong> to customize an AMC package that fits your home's needs.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 05, 2026",
@@ -227,10 +227,10 @@ export const blogs = [
         id: 9,
         slug: "geyser-safety-water-heater-tips",
         title: "Geyser Safety: Preventing Leaks and Electrical Faults",
-        excerpt: "Safe and efficient geyser repair services by Charminar Repairs in Hyderabad.",
+        excerpt: "Safe and efficient geyser repair services by MeeHelper in Hyderabad.",
         metaDescription: "Professional geyser repair and safety inspection services in Hyderabad. We fix leaks, heating element issues, and thermostat failures. Serving Habsiguda and surrounding areas.",
         content: `
-            <p>Cold showers? Or worse, a leaking geyser in <strong>Habsiguda</strong>? <strong>Charminar Repairs</strong> provides anode rod replacement and heating element fixes with safety in mind across <strong>Hyderabad</strong>.</p>
+            <p>Cold showers? Or worse, a leaking geyser in <strong>Habsiguda</strong>? <strong>MeeHelper</strong> provides anode rod replacement and heating element fixes with safety in mind across <strong>Hyderabad</strong>.</p>
             
             <h2>Essential Geyser Maintenance</h2>
             <p>Water heaters are prone to scaling and pressure buildup. Key maintenance points include:</p>
@@ -240,7 +240,7 @@ export const blogs = [
                 <li><strong>Thermostat Calibration:</strong> Ensure your geyser isn't overheating, which wastes energy and poses a scalding risk.</li>
             </ul>
             
-            <p>Don't ignore signs like water dripping from the overflow pipe or rumbling noises inside the tank. Call <strong>Charminar Repairs</strong> for immediate assistance.</p>
+            <p>Don't ignore signs like water dripping from the overflow pipe or rumbling noises inside the tank. Call <strong>MeeHelper</strong> for immediate assistance.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 04, 2026",
@@ -254,7 +254,7 @@ export const blogs = [
         excerpt: "Immediate technical intervention for gas leaks and flame optimization in Hyderabad.",
         metaDescription: "Certified gas stove and hob repair services in Hyderabad. We fix ignition issues, blocked burners, and gas leaks. Safe and reliable service in Malkajgiri and Alwal.",
         content: `
-            <p>A gas leak is a major safety hazard that requires immediate attention. <strong>Charminar Repairs</strong> offers certified technical assistance for all hob and stove brands in <strong>Hyderabad</strong>, including <strong>Malkajgiri</strong> and <strong>Alwal</strong>.</p>
+            <p>A gas leak is a major safety hazard that requires immediate attention. <strong>MeeHelper</strong> offers certified technical assistance for all hob and stove brands in <strong>Hyderabad</strong>, including <strong>Malkajgiri</strong> and <strong>Alwal</strong>.</p>
             
             <h2>Common Gas Stove Issues</h2>
             <p>Efficiency and safety go hand in hand. We resolve:</p>
@@ -264,7 +264,7 @@ export const blogs = [
                 <li><strong>Gas Odor:</strong> If you smell gas, turn off the main supply immediately and call our experts for leak detection.</li>
             </ul>
             
-            <p>We use genuine spare parts to ensure your gas stove operates safely. Trust <strong>Charminar Repairs</strong> for all your kitchen safety needs.</p>
+            <p>We use genuine spare parts to ensure your gas stove operates safely. Trust <strong>MeeHelper</strong> for all your kitchen safety needs.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 03, 2026",
@@ -276,9 +276,9 @@ export const blogs = [
         slug: "washing-machine-loud-noise-troubleshooting",
         title: "Why Is My Washing Machine Noisy? Drum and Bearing Fixes",
         excerpt: "Technician's guide to troubleshooting excessive vibration and loud spin cycles.",
-        metaDescription: "Is your washing machine making loud noises? Charminar Repairs provides expert bearing replacement and drum repair services in Manikonda and Hyderabad.",
+        metaDescription: "Is your washing machine making loud noises? MeeHelper provides expert bearing replacement and drum repair services in Manikonda and Hyderabad.",
         content: `
-            <p>Loud banging during a spin cycle often means a bearing issue. <strong>Charminar Repairs</strong> can restore your machine in <strong>Manikonda</strong> to quiet operation today.</p>
+            <p>Loud banging during a spin cycle often means a bearing issue. <strong>MeeHelper</strong> can restore your machine in <strong>Manikonda</strong> to quiet operation today.</p>
             
             <h2>Causes of Excessive Noise</h2>
             <p>A noisy washing machine is a sign of mechanical distress:</p>
@@ -288,7 +288,7 @@ export const blogs = [
                 <li><strong>Foreign Objects:</strong> Coins or buttons trapped between the inner and outer tubs can cause a rattling sound.</li>
             </ul>
             
-            <p>Ignoring these noises can lead to permanent drum damage. Schedule a repair with <strong>Charminar Repairs</strong> to prevent costly replacements.</p>
+            <p>Ignoring these noises can lead to permanent drum damage. Schedule a repair with <strong>MeeHelper</strong> to prevent costly replacements.</p>
         `,
         image: "/images/blog_washing_machine.png",
         date: "June 02, 2026",
@@ -302,7 +302,7 @@ export const blogs = [
         excerpt: "Expert refrigerant leak detection and charging in Hyderabad.",
         metaDescription: "Professional refrigerator gas refilling and leak detection services in Chandanagar, Hyderabad. We use certified R-600a and R-134a refrigerants for optimal cooling.",
         content: `
-            <p>If your fridge is running but not cooling in <strong>Chandanagar</strong>, it might need a gas top-up. <strong>Charminar Repairs</strong> uses certified R-600a/R-134a gases for optimal cooling efficiency.</p>
+            <p>If your fridge is running but not cooling in <strong>Chandanagar</strong>, it might need a gas top-up. <strong>MeeHelper</strong> uses certified R-600a/R-134a gases for optimal cooling efficiency.</p>
             
             <h2>Symptoms of Low Refrigerant</h2>
             <p>Unlike common belief, refrigerant doesn't get "used up"—it leaks out. Signs include:</p>
@@ -312,7 +312,7 @@ export const blogs = [
                 <li><strong>Continuous Running:</strong> The compressor runs non-stop trying to reach the set temperature.</li>
             </ul>
             
-            <p>We first fix the leak and then refill the gas to ensure a permanent solution. Contact <strong>Charminar Repairs</strong> for professional fridge servicing.</p>
+            <p>We first fix the leak and then refill the gas to ensure a permanent solution. Contact <strong>MeeHelper</strong> for professional fridge servicing.</p>
         `,
         image: "/images/blog_refrigerator.png",
         date: "June 01, 2026",
@@ -326,7 +326,7 @@ export const blogs = [
         excerpt: "Software updates and firmware fixes for your Android and 4K TVs in Hyderabad.",
         metaDescription: "Fix Smart TV WiFi connectivity issues and software bugs in Hyderabad. Expert repairs for Sony, Samsung, and LG TVs in Lingampally and Patancheru.",
         content: `
-            <p>Is your Netflix lagging or are apps crashing? <strong>Charminar Repairs</strong> handles motherboard and WiFi module repairs for all smart TV brands in <strong>Lingampally</strong> and <strong>Patancheru</strong>.</p>
+            <p>Is your Netflix lagging or are apps crashing? <strong>MeeHelper</strong> handles motherboard and WiFi module repairs for all smart TV brands in <strong>Lingampally</strong> and <strong>Patancheru</strong>.</p>
             
             <h2>Troubleshooting Smart TV Connectivity</h2>
             <p>Smart TVs are essentially large computers. Common software issues include:</p>
@@ -336,7 +336,7 @@ export const blogs = [
                 <li><strong>Mainboard Issues:</strong> Hardware faults on the mainboard can disrupt internet connectivity and port functions.</li>
             </ul>
             
-            <p>Our technicians can restore your smart TV's functionality, ensuring you can stream your favorite shows without interruption. Trust <strong>Charminar Repairs</strong> for expert electronics care.</p>
+            <p>Our technicians can restore your smart TV's functionality, ensuring you can stream your favorite shows without interruption. Trust <strong>MeeHelper</strong> for expert electronics care.</p>
         `,
         image: "/images/blog_ac_repair.png",
         date: "June 28, 2026",
@@ -350,7 +350,7 @@ export const blogs = [
         excerpt: "Advanced nitrogen testing and leak sealing for AC units in Hyderabad.",
         metaDescription: "Professional AC gas leak detection using nitrogen pressure testing in Miyapur, Hyderabad. Permanent solutions for split and window AC gas leaks.",
         content: `
-            <p>Don't just refill gas; find the leak! <strong>Charminar Repairs</strong> uses professional nitrogen pressure testing in <strong>Miyapur</strong> to ensure a permanent fix for your AC cooling issues.</p>
+            <p>Don't just refill gas; find the leak! <strong>MeeHelper</strong> uses professional nitrogen pressure testing in <strong>Miyapur</strong> to ensure a permanent fix for your AC cooling issues.</p>
             
             <h2>The Science of Leak Detection</h2>
             <p>Simply topping up gas is a temporary solution. We employ scientific methods:</p>
@@ -360,7 +360,7 @@ export const blogs = [
                 <li><strong>Electronic Sniffers:</strong> High-sensitivity detectors pinpoint leaks in indoor and outdoor units.</li>
             </ul>
             
-            <p>Once identified, we seal the leak or replace the faulty component (copper coil, flare nut) before refilling. Trust <strong>Charminar Repairs</strong> for honest and durable AC services.</p>
+            <p>Once identified, we seal the leak or replace the faulty component (copper coil, flare nut) before refilling. Trust <strong>MeeHelper</strong> for honest and durable AC services.</p>
         `,
         image: "/images/blog_ac_repair.png",
         date: "June 27, 2026",
@@ -374,7 +374,7 @@ export const blogs = [
         excerpt: "Restore full functionality to your microwave oven's interface.",
         metaDescription: "Microwave touchpad and control panel repair services in Hyderabad. Fix unresponsive buttons and display errors in Nizampet and nearby areas.",
         content: `
-            <p>Touchpad issues are common in humid conditions after rains in <strong>Hyderabad</strong>. <strong>Charminar Repairs</strong> provides PCB-level repairs for microwave interfaces in <strong>Nizampet</strong>.</p>
+            <p>Touchpad issues are common in humid conditions after rains in <strong>Hyderabad</strong>. <strong>MeeHelper</strong> provides PCB-level repairs for microwave interfaces in <strong>Nizampet</strong>.</p>
             
             <h2>Why Touchpads Fail</h2>
             <p>The membrane switch panel is sensitive to moisture and grease:</p>
@@ -384,7 +384,7 @@ export const blogs = [
                 <li><strong>Control Board Failure:</strong> The main PCB may not be registering inputs due to a processor fault.</li>
             </ul>
             
-            <p>We clean, repair, or replace the control membrane to restore full functionality. Avoid forceful pressing of buttons; call <strong>Charminar Repairs</strong> for a gentle fix.</p>
+            <p>We clean, repair, or replace the control membrane to restore full functionality. Avoid forceful pressing of buttons; call <strong>MeeHelper</strong> for a gentle fix.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 26, 2026",
@@ -395,10 +395,10 @@ export const blogs = [
         id: 16,
         slug: "dishwasher-drainage-problems-fix-hyderabad",
         title: "Dishwasher Not Draining? Check These 3 Things First",
-        excerpt: "Simple homeowner tips and when to call Charminar Repairs.",
+        excerpt: "Simple homeowner tips and when to call MeeHelper.",
         metaDescription: "Solve dishwasher drainage problems in Hyderabad. Expert tips for unclogging filters and pumps. Professional repair services available in Pragathi Nagar.",
         content: `
-            <p>Standing water in your dishwasher? Check the filter and drain hose. If the pump has failed, <strong>Charminar Repairs</strong> offers instant replacement in <strong>Pragathi Nagar</strong>.</p>
+            <p>Standing water in your dishwasher? Check the filter and drain hose. If the pump has failed, <strong>MeeHelper</strong> offers instant replacement in <strong>Pragathi Nagar</strong>.</p>
             
             <h2>DIY Checks Before Calling a Pro</h2>
             <p>Save time with these quick checks:</p>
@@ -408,7 +408,7 @@ export const blogs = [
                 <li><strong>Air Gap/Clog:</strong> Check if the air gap (if installed) is clear of debris.</li>
             </ul>
             
-            <p>If these steps don't work, the drain pump motor may be defective. <strong>Charminar Repairs</strong> provides genuine pump replacements to get your dishwasher running dry again.</p>
+            <p>If these steps don't work, the drain pump motor may be defective. <strong>MeeHelper</strong> provides genuine pump replacements to get your dishwasher running dry again.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 25, 2026",
@@ -422,7 +422,7 @@ export const blogs = [
         excerpt: "Essential waterproofing and wiring tips for Hyderabad's rainy months.",
         metaDescription: "Monsoon electrical safety tips and repair services in Hyderabad. Waterproof your wiring and prevent short circuits in Bachupally and Bowenpally.",
         content: `
-            <p>Moisture is the enemy of electricity. <strong>Charminar Repairs</strong> offers specialized monsoon checks to prevent short circuits in <strong>Bachupally</strong> and <strong>Bowenpally</strong>.</p>
+            <p>Moisture is the enemy of electricity. <strong>MeeHelper</strong> offers specialized monsoon checks to prevent short circuits in <strong>Bachupally</strong> and <strong>Bowenpally</strong>.</p>
             
             <h2>Monsoon Electrical Checklist</h2>
             <p>Heavy rains pose specific threats to home electrical systems:</p>
@@ -432,7 +432,7 @@ export const blogs = [
                 <li><strong>Voltage Stabilizers:</strong> Power fluctuations are common during storms. Use stabilizers for ACs and Fridge.</li>
             </ul>
             
-            <p>If you experience shocks from switches or appliances, turn off the main power and call <strong>Charminar Repairs</strong> immediately for a safety audit.</p>
+            <p>If you experience shocks from switches or appliances, turn off the main power and call <strong>MeeHelper</strong> immediately for a safety audit.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 24, 2026",
@@ -444,9 +444,9 @@ export const blogs = [
         slug: "vacuum-cleaner-suction-loss-fix-expert",
         title: "Vacuum Cleaner Suction Loss: HEPA Filter and Motor Care",
         excerpt: "Professional maintenance for Dyson, Philips, and other major brands.",
-        metaDescription: "Restore your vacuum cleaner's suction power with Charminar Repairs in Kompally. HEPA filter cleaning and motor repair services available.",
+        metaDescription: "Restore your vacuum cleaner's suction power with MeeHelper in Kompally. HEPA filter cleaning and motor repair services available.",
         content: `
-            <p>A dusty vacuum is a weak vacuum. <strong>Charminar Repairs</strong> provides deep cleaning and impeller repair for all vacuum types in <strong>Kompally</strong>.</p>
+            <p>A dusty vacuum is a weak vacuum. <strong>MeeHelper</strong> provides deep cleaning and impeller repair for all vacuum types in <strong>Kompally</strong>.</p>
             
             <h2>Restoring Suction Power</h2>
             <p>Loss of suction is usually due to airflow blockage:</p>
@@ -456,7 +456,7 @@ export const blogs = [
                 <li><strong>Hose Blockages:</strong> We clear hair and debris lodged deep inside the suction hose.</li>
             </ul>
             
-            <p>Regular servicing keeps your vacuum running like new. Contact <strong>Charminar Repairs</strong> for professional appliance care.</p>
+            <p>Regular servicing keeps your vacuum running like new. Contact <strong>MeeHelper</strong> for professional appliance care.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 23, 2026",
@@ -468,9 +468,9 @@ export const blogs = [
         slug: "coffee-machine-descaling-importance-guide",
         title: "Why You Must Descale Your Coffee Machine Monthly",
         excerpt: "Professional descaling services for espresso and bean-to-cup machines.",
-        metaDescription: "Professional coffee machine descaling and repair in Sainikpuri, Hyderabad. Improve coffee taste and machine longevity with Charminar Repairs.",
+        metaDescription: "Professional coffee machine descaling and repair in Sainikpuri, Hyderabad. Improve coffee taste and machine longevity with MeeHelper.",
         content: `
-            <p>Mineral buildup ruins the taste and pressure of your coffee in <strong>Sainikpuri</strong>. <strong>Charminar Repairs</strong> offers professional descaling and sensor calibration.</p>
+            <p>Mineral buildup ruins the taste and pressure of your coffee in <strong>Sainikpuri</strong>. <strong>MeeHelper</strong> offers professional descaling and sensor calibration.</p>
             
             <h2>The Importance of Descaling</h2>
             <p>Hyderabad's water quality demands regular descaling:</p>
@@ -480,7 +480,7 @@ export const blogs = [
                 <li><strong>Flow Sensors:</strong> Blocked sensors can cause the machine to stop brewing mid-cycle.</li>
             </ul>
             
-            <p>We use food-safe descaling agents that are tough on limescale but safe for your machine. Trust <strong>Charminar Repairs</strong> for your morning brew maintenance.</p>
+            <p>We use food-safe descaling agents that are tough on limescale but safe for your machine. Trust <strong>MeeHelper</strong> for your morning brew maintenance.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 22, 2026",
@@ -492,9 +492,9 @@ export const blogs = [
         slug: "washing-machine-electronic-error-codes-guide",
         title: "Understanding Washing Machine Error Codes: E1, dE, OE Explained",
         excerpt: "A quick guide for Hyderabad residents on what those codes mean.",
-        metaDescription: "Confused by washing machine error codes? Charminar Repairs explains E1, OE, and dE errors. Fast repair services available in Karkhana, Hyderabad.",
+        metaDescription: "Confused by washing machine error codes? MeeHelper explains E1, OE, and dE errors. Fast repair services available in Karkhana, Hyderabad.",
         content: `
-            <p>Error codes can be confusing for residents in <strong>Karkhana</strong>. <strong>Charminar Repairs</strong> technicians are experts at deciphering and fixing sensor-level faults instantly.</p>
+            <p>Error codes can be confusing for residents in <strong>Karkhana</strong>. <strong>MeeHelper</strong> technicians are experts at deciphering and fixing sensor-level faults instantly.</p>
             
             <h2>Common Error Code Meanings</h2>
             <ul>
@@ -504,7 +504,7 @@ export const blogs = [
                 <li><strong>UE:</strong> Unbalanced load. Pause the machine and redistribute the clothes evenly.</li>
             </ul>
             
-            <p>If resetting the machine doesn't clear the code, you may have a sensor or PCB failure. Call <strong>Charminar Repairs</strong> for accurate diagnostics.</p>
+            <p>If resetting the machine doesn't clear the code, you may have a sensor or PCB failure. Call <strong>MeeHelper</strong> for accurate diagnostics.</p>
         `,
         image: "/images/blog_washing_machine.png",
         date: "June 21, 2026",
@@ -518,7 +518,7 @@ export const blogs = [
         excerpt: "Expert calibration for domestic and industrial machines in Hyderabad.",
         metaDescription: "Expert sewing machine repair and timing calibration in Banjara Hills, Hyderabad. Fixing skipped stitches and motor issues for all brands.",
         content: `
-            <p>Skipped stitches in your boutique in <strong>Banjara Hills</strong>? <strong>Charminar Repairs</strong> provides timing alignment and motor repairs for all sewing machine brands.</p>
+            <p>Skipped stitches in your boutique in <strong>Banjara Hills</strong>? <strong>MeeHelper</strong> provides timing alignment and motor repairs for all sewing machine brands.</p>
             
             <h2>Common Sewing Machine Problems</h2>
             <ul>
@@ -527,7 +527,7 @@ export const blogs = [
                 <li><strong>Motor Failures:</strong> We repair or replace carbon brushes and motors for smooth operation.</li>
             </ul>
             
-            <p>Keep your creativity flowing with regular maintenance from <strong>Charminar Repairs</strong>.</p>
+            <p>Keep your creativity flowing with regular maintenance from <strong>MeeHelper</strong>.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 20, 2026",
@@ -538,10 +538,10 @@ export const blogs = [
         id: 22,
         slug: "air-purifier-filter-maintenance-guide-hyderabad",
         title: "Clean Air Protocol: Air Purifier Filter Maintenance Guide",
-        excerpt: "Breathe easier with expert HEPA filter care from Charminar Repairs in Hyderabad.",
-        metaDescription: "Air purifier maintenance and filter replacement services in Himayatnagar, Hyderabad. Breathe clean air with Charminar Repairs' expert care.",
+        excerpt: "Breathe easier with expert HEPA filter care from MeeHelper in Hyderabad.",
+        metaDescription: "Air purifier maintenance and filter replacement services in Himayatnagar, Hyderabad. Breathe clean air with MeeHelper' expert care.",
         content: `
-            <p>A clogged filter makes your air purifier useless. <strong>Charminar Repairs</strong> offers specialized HEPA and carbon filter deep cleaning for all major brands across <strong>Hyderabad</strong>, including <strong>Himayatnagar</strong>.</p>
+            <p>A clogged filter makes your air purifier useless. <strong>MeeHelper</strong> offers specialized HEPA and carbon filter deep cleaning for all major brands across <strong>Hyderabad</strong>, including <strong>Himayatnagar</strong>.</p>
             
             <h2>Maintaining Air Quality</h2>
             <ul>
@@ -550,7 +550,7 @@ export const blogs = [
                 <li><strong>Sensor Cleaning:</strong> Dust on air quality sensors can give false readings. We clean optical sensors for accurate data.</li>
             </ul>
             
-            <p>Ensure your family breathes pure air. Schedule your air purifier service with <strong>Charminar Repairs</strong> today.</p>
+            <p>Ensure your family breathes pure air. Schedule your air purifier service with <strong>MeeHelper</strong> today.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 19, 2026",
@@ -561,10 +561,10 @@ export const blogs = [
         id: 23,
         slug: "vacuum-cleaner-suction-repair-tips-hyderabad",
         title: "Vacuum Suction Loss: Professional Repair Tips",
-        excerpt: "Restore your vacuum's cleaning power with Charminar Repairs technical insights.",
-        metaDescription: "Professional vacuum cleaner repair services in Barkatpura, Hyderabad. Fix suction loss, motor noise, and brush roll issues with Charminar Repairs.",
+        excerpt: "Restore your vacuum's cleaning power with MeeHelper technical insights.",
+        metaDescription: "Professional vacuum cleaner repair services in Barkatpura, Hyderabad. Fix suction loss, motor noise, and brush roll issues with MeeHelper.",
         content: `
-            <p>Losing suction usually means a hairline crack in the hose or a motor impeller failure. <strong>Charminar Repairs</strong> provides instant diagnostics for Dyson and Philips vacuums in <strong>Hyderabad</strong> areas like <strong>Barkatpura</strong>.</p>
+            <p>Losing suction usually means a hairline crack in the hose or a motor impeller failure. <strong>MeeHelper</strong> provides instant diagnostics for Dyson and Philips vacuums in <strong>Hyderabad</strong> areas like <strong>Barkatpura</strong>.</p>
             
             <h2>Expert Troubleshooting</h2>
             <ul>
@@ -573,7 +573,7 @@ export const blogs = [
                 <li><strong>Motor Impeller:</strong> A damaged fan in the motor reduces airflow. We replace the impeller assembly.</li>
             </ul>
             
-            <p>Don't replace your vacuum—repair it! <strong>Charminar Repairs</strong> offers cost-effective solutions.</p>
+            <p>Don't replace your vacuum—repair it! <strong>MeeHelper</strong> offers cost-effective solutions.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 18, 2026",
@@ -585,9 +585,9 @@ export const blogs = [
         slug: "microwave-safety-inspection-hyderabad-expert",
         title: "Microwave Safety: 5 Signs You Need an Urgent Inspection",
         excerpt: "Preventing hazards with certified microwave technical scans in Hyderabad.",
-        metaDescription: "Certified microwave safety inspection in Narayanguda, Hyderabad. We check for radiation leaks, sparking, and door seal integrity. Book Charminar Repairs now.",
+        metaDescription: "Certified microwave safety inspection in Narayanguda, Hyderabad. We check for radiation leaks, sparking, and door seal integrity. Book MeeHelper now.",
         content: `
-            <p>Sparking or a burnt smell are critical signs in <strong>Narayanguda</strong>. <strong>Charminar Repairs</strong> performs 25-point safety inspections on all microwave convection ovens in <strong>Hyderabad</strong>.</p>
+            <p>Sparking or a burnt smell are critical signs in <strong>Narayanguda</strong>. <strong>MeeHelper</strong> performs 25-point safety inspections on all microwave convection ovens in <strong>Hyderabad</strong>.</p>
             
             <h2>Warning Signs of Microwave Danger</h2>
             <ul>
@@ -596,7 +596,7 @@ export const blogs = [
                 <li><strong>Door Seal Damage:</strong> A loose door can leak microwaves. We test the seal integrity with specialized equipment.</li>
             </ul>
             
-            <p>Your safety is our priority. Do not use a faulty microwave. Contact <strong>Charminar Repairs</strong> for a comprehensive safety audit.</p>
+            <p>Your safety is our priority. Do not use a faulty microwave. Contact <strong>MeeHelper</strong> for a comprehensive safety audit.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 17, 2026",
@@ -608,9 +608,9 @@ export const blogs = [
         slug: "refrigerator-door-seal-replacement-guide-hyderabad",
         title: "Saving Energy: Refrigerator Door Seal Replacement Guide",
         excerpt: "How a simple gasket fix can lower your electricity bills in Hyderabad.",
-        metaDescription: "Refrigerator door seal replacement services in Vidyanagar, Hyderabad. Stop cold air leaks and save electricity with Charminar Repairs' gasket fitting.",
+        metaDescription: "Refrigerator door seal replacement services in Vidyanagar, Hyderabad. Stop cold air leaks and save electricity with MeeHelper' gasket fitting.",
         content: `
-            <p>A leaky door gasket makes your fridge work harder in <strong>Vidyanagar</strong>. <strong>Charminar Repairs</strong> replaces worn-out seals with original magnetic gaskets for all Samsung and LG models.</p>
+            <p>A leaky door gasket makes your fridge work harder in <strong>Vidyanagar</strong>. <strong>MeeHelper</strong> replaces worn-out seals with original magnetic gaskets for all Samsung and LG models.</p>
             
             <h2>Why Gaskets Fail</h2>
             <p>Over time, rubber gaskets dry out and crack:</p>
@@ -620,7 +620,7 @@ export const blogs = [
                 <li><strong>Food Spoilage:</strong> Inconsistent temperatures can shorten the shelf life of perishables.</li>
             </ul>
             
-            <p>We measure the door closure force and replace the gasket to ensure an airtight seal. Trust <strong>Charminar Repairs</strong> to keep your energy bills low.</p>
+            <p>We measure the door closure force and replace the gasket to ensure an airtight seal. Trust <strong>MeeHelper</strong> to keep your energy bills low.</p>
         `,
         image: "/images/blog_refrigerator.png",
         date: "June 16, 2026",
@@ -631,8 +631,8 @@ export const blogs = [
         id: 26,
         slug: "laptop-repair-hyderabad-expert-services",
         title: "Expert Laptop Repair in Hyderabad: Screen, Battery & More",
-        excerpt: "Get your laptop fixed today by the pros at Charminar Repairs.",
-        metaDescription: "Fast and reliable laptop repair services in Madhapur and Hitech City. Screen replacement, battery upgrade, and liquid damage repair by Charminar Repairs.",
+        excerpt: "Get your laptop fixed today by the pros at MeeHelper.",
+        metaDescription: "Fast and reliable laptop repair services in Madhapur and Hitech City. Screen replacement, battery upgrade, and liquid damage repair by MeeHelper.",
         content: `
             <p>From Dell to MacBook, our experts in <strong>Madhapur</strong> handle all laptop hardware and software issues with precision. Facing a black screen or slow performance in <strong>Hitech City</strong>? Call us now.</p>
             
@@ -644,7 +644,7 @@ export const blogs = [
                 <li><strong>OS Installation:</strong> Windows and macOS installation and virus removal.</li>
             </ul>
             
-            <p>We understand how essential your laptop is for work. <strong>Charminar Repairs</strong> offers quick turnaround times for all major brands.</p>
+            <p>We understand how essential your laptop is for work. <strong>MeeHelper</strong> offers quick turnaround times for all major brands.</p>
         `,
         image: "/images/blog_electrical.png",
         date: "June 15, 2026",
@@ -656,9 +656,9 @@ export const blogs = [
         slug: "washing-machine-sensor-failure-signs",
         title: "Washing Machine Sensor Failure: Is Your Machine Overfilling?",
         excerpt: "Understanding pressure switch and sensor issues in modern front-load machines.",
-        metaDescription: "Washing machine overfilling? Charminar Repairs provides pressure sensor and PCB repair services in Jubilee Hills, Hyderabad. Fix water level issues today.",
+        metaDescription: "Washing machine overfilling? MeeHelper provides pressure sensor and PCB repair services in Jubilee Hills, Hyderabad. Fix water level issues today.",
         content: `
-            <p>Water overflowing in <strong>Jubilee Hills</strong>? It might be a pressure sensor fault. <strong>Charminar Repairs</strong> provides expert PCB and sensor level repairs across <strong>Hyderabad</strong>.</p>
+            <p>Water overflowing in <strong>Jubilee Hills</strong>? It might be a pressure sensor fault. <strong>MeeHelper</strong> provides expert PCB and sensor level repairs across <strong>Hyderabad</strong>.</p>
             
             <h2>How Sensors Work</h2>
             <p>Modern machines use pressure switches or flow meters to detect water levels:</p>
@@ -668,7 +668,7 @@ export const blogs = [
                 <li><strong>Leak Detection:</strong> Some machines stop working if the AquaStop sensor detects a leak in the base.</li>
             </ul>
             
-            <p>We clean air traps, replace faulty sensors, and repair PCB tracks to restore automatic water level control. Choose <strong>Charminar Repairs</strong> for precise electronic repairs.</p>
+            <p>We clean air traps, replace faulty sensors, and repair PCB tracks to restore automatic water level control. Choose <strong>MeeHelper</strong> for precise electronic repairs.</p>
         `,
         image: "/images/blog_washing_machine.png",
         date: "June 14, 2026",
@@ -680,9 +680,9 @@ export const blogs = [
         slug: "ac-repair-secunderabad-jet-cleaning",
         title: "Why AC Jet Cleaning is Essential Before Hyderabad Summers",
         excerpt: "Deep jet cleaning services for split and window ACs in Secunderabad.",
-        metaDescription: "Professional AC jet cleaning services in Secunderabad. Remove deep-seated dust and improve cooling efficiency. Book Charminar Repairs for pre-summer service.",
+        metaDescription: "Professional AC jet cleaning services in Secunderabad. Remove deep-seated dust and improve cooling efficiency. Book MeeHelper for pre-summer service.",
         content: `
-            <p>Dust from <strong>Secunderabad</strong> traffic can clog your AC coils. <strong>Charminar Repairs</strong> offers deep jet cleaning to improve cooling efficiency and air quality.</p>
+            <p>Dust from <strong>Secunderabad</strong> traffic can clog your AC coils. <strong>MeeHelper</strong> offers deep jet cleaning to improve cooling efficiency and air quality.</p>
             
             <h2>The Jet Cleaning Process</h2>
             <p>Standard servicing isn't enough for heavily clogged units. Our jet cleaning includes:</p>
@@ -692,7 +692,7 @@ export const blogs = [
                 <li><strong>Drain Pan Clearing:</strong> Ensuring the condensate water flows freely to prevent leaks.</li>
             </ul>
             
-            <p>A clean AC consumes less power and cools faster. Prepare for the heat with <strong>Charminar Repairs</strong>.</p>
+            <p>A clean AC consumes less power and cools faster. Prepare for the heat with <strong>MeeHelper</strong>.</p>
         `,
         image: "/images/blog_ac_repair.png",
         date: "June 13, 2026",
@@ -704,9 +704,9 @@ export const blogs = [
         slug: "kitchen-chimney-cleaning-hyderabad-guide",
         title: "Kitchen Chimney Cleaning: Removing Tough Grease and Oil",
         excerpt: "Professional chimney service in Hyderabad to keep your kitchen smoke-free.",
-        metaDescription: "Expert kitchen chimney cleaning and repair in Banjara Hills, Hyderabad. Remove oil buildup and restore suction power with Charminar Repairs.",
+        metaDescription: "Expert kitchen chimney cleaning and repair in Banjara Hills, Hyderabad. Remove oil buildup and restore suction power with MeeHelper.",
         content: `
-            <p>Oily chimney filters in <strong>Banjara Hills</strong>? <strong>Charminar Repairs</strong> provides deep chemical cleaning for hobs and chimneys to restore maximum suction.</p>
+            <p>Oily chimney filters in <strong>Banjara Hills</strong>? <strong>MeeHelper</strong> provides deep chemical cleaning for hobs and chimneys to restore maximum suction.</p>
             
             <h2>The Importance of Chimney Maintenance</h2>
             <p>Oil accumulation is a fire hazard and reduces efficiency:</p>
@@ -716,7 +716,7 @@ export const blogs = [
                 <li><strong>Motor Check:</strong> Lubricating the motor and checking the capacitor for optimal fan speed.</li>
             </ul>
             
-            <p>Enjoy a smoke-free kitchen. Schedule your quarterly chimney service with <strong>Charminar Repairs</strong>.</p>
+            <p>Enjoy a smoke-free kitchen. Schedule your quarterly chimney service with <strong>MeeHelper</strong>.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 12, 2026",
@@ -728,9 +728,9 @@ export const blogs = [
         slug: "ro-water-purifier-service-hyderabad",
         title: "RO Water Purifier Service: When to Change Your Filters?",
         excerpt: "Ensuring pure drinking water for your family in Hyderabad.",
-        metaDescription: "RO water purifier service and filter replacement in Uppal, Hyderabad. Kent, Aquaguard, and Livpure service experts at Charminar Repairs.",
+        metaDescription: "RO water purifier service and filter replacement in Uppal, Hyderabad. Kent, Aquaguard, and Livpure service experts at MeeHelper.",
         content: `
-            <p>High TDS levels in <strong>Uppal</strong>? <strong>Charminar Repairs</strong> provides expert RO membrane and filter replacements for Kent, Aquaguard, and more across <strong>Hyderabad</strong>.</p>
+            <p>High TDS levels in <strong>Uppal</strong>? <strong>MeeHelper</strong> provides expert RO membrane and filter replacements for Kent, Aquaguard, and more across <strong>Hyderabad</strong>.</p>
             
             <h2>Understanding Filter Life</h2>
             <p>Clean water is vital for health. Don't ignore these signs:</p>
@@ -740,7 +740,7 @@ export const blogs = [
                 <li><strong>TDS Meter Reading:</strong> If the TDS level rises above acceptable limits, the membrane has failed.</li>
             </ul>
             
-            <p>We provide comprehensive AMC services that include regular filter changes and UV lamp checks. Trust <strong>Charminar Repairs</strong> for safe drinking water.</p>
+            <p>We provide comprehensive AMC services that include regular filter changes and UV lamp checks. Trust <strong>MeeHelper</strong> for safe drinking water.</p>
         `,
         image: "/images/blog_refrigerator.png",
         date: "June 11, 2026",
@@ -754,7 +754,7 @@ export const blogs = [
         excerpt: "Professional repair for Preethi, Sujata, and other heavy-duty mixers in Hyderabad.",
         metaDescription: "Mixer grinder repair services in Madhapur, Hyderabad. We fix motor jams, replace couplers, and service blades for Preethi, Sujata, and Philips models.",
         content: `
-            <p>A jammed mixer grinder can halt your kitchen prep in <strong>Madhapur</strong>. <strong>Charminar Repairs</strong> provides instant motor winding and blade replacement services across <strong>Hyderabad</strong>.</p>
+            <p>A jammed mixer grinder can halt your kitchen prep in <strong>Madhapur</strong>. <strong>MeeHelper</strong> provides instant motor winding and blade replacement services across <strong>Hyderabad</strong>.</p>
             
             <h2>Common Mixer Faults</h2>
             <ul>
@@ -763,7 +763,7 @@ export const blogs = [
                 <li><strong>Dull Blades:</strong> We sharpen or replace stainless steel blades for smooth chutneys and batters.</li>
             </ul>
             
-            <p>Don't let a broken mixer slow you down. Contact <strong>Charminar Repairs</strong> for same-day service.</p>
+            <p>Don't let a broken mixer slow you down. Contact <strong>MeeHelper</strong> for same-day service.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 10, 2026",
@@ -777,7 +777,7 @@ export const blogs = [
         excerpt: "Restoring your kitchen's versatility with expert food processor fixes in Hyderabad.",
         metaDescription: "Expert food processor repair in Gachibowli, Hyderabad. We fix motor issues, blade attachments, and drive shafts for all major brands.",
         content: `
-            <p>Facing motor overload issues in <strong>Gachibowli</strong>? <strong>Charminar Repairs</strong> offers precision gear and motor replacement for all food processor models.</p>
+            <p>Facing motor overload issues in <strong>Gachibowli</strong>? <strong>MeeHelper</strong> offers precision gear and motor replacement for all food processor models.</p>
             
             <h2>Servicing Multi-Functional Appliances</h2>
             <p>Food processors are complex due to their attachments:</p>
@@ -787,7 +787,7 @@ export const blogs = [
                 <li><strong>Attachment Fitting:</strong> We replace broken locking pins on jars and lids.</li>
             </ul>
             
-            <p>Get back to slicing, dicing, and kneading with help from <strong>Charminar Repairs</strong>.</p>
+            <p>Get back to slicing, dicing, and kneading with help from <strong>MeeHelper</strong>.</p>
         `,
         image: "/images/blog_kitchen_repair.png",
         date: "June 07, 2026",
@@ -799,9 +799,9 @@ export const blogs = [
         slug: "deep-freezer-chest-repair-business",
         title: "Commercial Deep Freezer Repair: Preventing Stock Loss",
         excerpt: "Emergency 24/7 repair services for businesses and hotels in Hyderabad.",
-        metaDescription: "24/7 commercial deep freezer repair in Jubilee Hills, Hyderabad. Prevent stock loss with Charminar Repairs' emergency compressor and gas leak services.",
+        metaDescription: "24/7 commercial deep freezer repair in Jubilee Hills, Hyderabad. Prevent stock loss with MeeHelper' emergency compressor and gas leak services.",
         content: `
-            <p>A breakdown of your deep freezer in <strong>Jubilee Hills</strong> can lead to massive stock loss. <strong>Charminar Repairs</strong> provides priority tech support for all commercial cooling units.</p>
+            <p>A breakdown of your deep freezer in <strong>Jubilee Hills</strong> can lead to massive stock loss. <strong>MeeHelper</strong> provides priority tech support for all commercial cooling units.</p>
             
             <h2>Commercial Refrigeration Solutions</h2>
             <p>Time is money for business owners:</p>
@@ -811,7 +811,7 @@ export const blogs = [
                 <li><strong>Thermostat Calibration:</strong> We ensure the temperature stays at -18°C or below for food safety.</li>
             </ul>
             
-            <p>We service ice cream freezers, display freezers, and chest freezers. Call <strong>Charminar Repairs</strong> for reliable commercial support.</p>
+            <p>We service ice cream freezers, display freezers, and chest freezers. Call <strong>MeeHelper</strong> for reliable commercial support.</p>
         `,
         image: "/images/blog_refrigerator.png",
         date: "June 06, 2026",
@@ -822,10 +822,10 @@ export const blogs = [
         id: 34,
         slug: "termite-control-pest-treatment-hyderabad-homes",
         title: "Ultimate Guide to Termite Control & Pest Treatment in Hyderabad Homes",
-        excerpt: "Protect your wooden furniture and family from pests using odorless, licensed treatments from Charminar Repairs.",
-        metaDescription: "Learn how to eradicate termites and pests from your Hyderabad home. Expert tips from licensed technicians at Charminar Repairs in Jubilee Hills and Madhapur.",
+        excerpt: "Protect your wooden furniture and family from pests using odorless, licensed treatments from MeeHelper.",
+        metaDescription: "Learn how to eradicate termites and pests from your Hyderabad home. Expert tips from licensed technicians at MeeHelper in Jubilee Hills and Madhapur.",
         content: `
-            <p>Pest infestations can cause massive structural and health damage to homes in <strong>Hyderabad</strong>. Whether it's drywood termites attacking your modular kitchen in <strong>Jubilee Hills</strong> or cockroaches breeding in drains in <strong>Madhapur</strong>, early intervention is key. <strong>Charminar Repairs</strong> offers certified solutions.</p>
+            <p>Pest infestations can cause massive structural and health damage to homes in <strong>Hyderabad</strong>. Whether it's drywood termites attacking your modular kitchen in <strong>Jubilee Hills</strong> or cockroaches breeding in drains in <strong>Madhapur</strong>, early intervention is key. <strong>MeeHelper</strong> offers certified solutions.</p>
             
             <h2>Why Professional Pest Control is Essential</h2>
             <p>Many homeowners rely on over-the-counter sprays, but these only kill visible insects while leaving nests untouched. Our government-licensed technicians target the root colonies using advanced protocols:</p>
@@ -835,7 +835,7 @@ export const blogs = [
                 <li><strong>Larvacidal Spraying:</strong> We spray water logging points to eliminate mosquito breeding grounds, preventing Dengue and Malaria.</li>
             </ul>
             
-            <p>Ensure your family's safety with odorless and pet-friendly treatments. Contact <strong>Charminar Repairs</strong> for same-day inspection.</p>
+            <p>Ensure your family's safety with odorless and pet-friendly treatments. Contact <strong>MeeHelper</strong> for same-day inspection.</p>
         `,
         image: "/images/blog_pest_control.png",
         date: "June 15, 2026",
@@ -847,9 +847,9 @@ export const blogs = [
         slug: "deep-home-cleaning-guide-moving-hyderabad",
         title: "Deep Home Cleaning Checklist for Moving Into Your New Hyderabad Flat",
         excerpt: "A comprehensive checklist for deep home cleaning, floor scrubbing, and disinfection before moving into your new home.",
-        metaDescription: "Make your new flat hygienic and sparkling. Here is the ultimate deep home cleaning checklist from Charminar Repairs for residents shifting in Gachibowli and Kondapur.",
+        metaDescription: "Make your new flat hygienic and sparkling. Here is the ultimate deep home cleaning checklist from MeeHelper for residents shifting in Gachibowli and Kondapur.",
         content: `
-            <p>Moving into a new flat in <strong>Gachibowli</strong> or <strong>Kondapur</strong> is exciting, but it's crucial to deep clean and sanitize the space before unpacking. A clean house is a healthy house, and <strong>Charminar Repairs</strong> is here to help you get started.</p>
+            <p>Moving into a new flat in <strong>Gachibowli</strong> or <strong>Kondapur</strong> is exciting, but it's crucial to deep clean and sanitize the space before unpacking. A clean house is a healthy house, and <strong>MeeHelper</strong> is here to help you get started.</p>
             
             <h2>Your Pre-Move Cleaning Checklist</h2>
             <p>To ensure no dust or germs remain from previous occupants, follow this step-by-step framework:</p>
@@ -861,7 +861,7 @@ export const blogs = [
                 <li><strong>Disinfection:</strong> Wipe all light switches, door handles, and remote controls with hospital-grade sanitizers.</li>
             </ol>
             
-            <p>Let our professional cleaners handle the scrubbing so you can focus on the moving logistics. Book a deep home cleaning session with <strong>Charminar Repairs</strong> today.</p>
+            <p>Let our professional cleaners handle the scrubbing so you can focus on the moving logistics. Book a deep home cleaning session with <strong>MeeHelper</strong> today.</p>
         `,
         image: "/images/blog_cleaning.png",
         date: "June 18, 2026",
@@ -873,9 +873,9 @@ export const blogs = [
         slug: "italian-marble-floor-polishing-gloss-restoration",
         title: "Italian Marble & Floor Polishing: Restoring That Premium Liquid Gloss",
         excerpt: "Understand how diamond grit abrasives and crystallization shields remove floor scratches and restore a majestic reflection.",
-        metaDescription: "Learn how to restore dull, scratched Italian marble and mosaic floors in Hyderabad. Expert floor polishing guide from Charminar Repairs floor care team.",
+        metaDescription: "Learn how to restore dull, scratched Italian marble and mosaic floors in Hyderabad. Expert floor polishing guide from MeeHelper floor care team.",
         content: `
-            <p>Luxury stone floors like Italian marble deserve premium care to maintain their high-end aesthetic. Over time, heavy foot traffic, acid spills, and dust scuffs make marble lose its shine. <strong>Charminar Repairs</strong> floor care team provides diamond polishing solutions in <strong>Hyderabad</strong>.</p>
+            <p>Luxury stone floors like Italian marble deserve premium care to maintain their high-end aesthetic. Over time, heavy foot traffic, acid spills, and dust scuffs make marble lose its shine. <strong>MeeHelper</strong> floor care team provides diamond polishing solutions in <strong>Hyderabad</strong>.</p>
             
             <h2>The Restoration & Polishing Process</h2>
             <p>We use state-of-the-art wet-sanding technology to restore the glossy reflection without generating dust inside your home:</p>
@@ -886,7 +886,7 @@ export const blogs = [
                 <li><strong>High-Speed Buffing:</strong> Buffing with imported wax creates a beautiful, liquid-glass mirror finish.</li>
             </ul>
             
-            <p>Protect your luxury flooring investment. Call <strong>Charminar Repairs</strong> in <strong>Banjara Hills</strong> or <strong>Gachibowli</strong> for a free gloss audit.</p>
+            <p>Protect your luxury flooring investment. Call <strong>MeeHelper</strong> in <strong>Banjara Hills</strong> or <strong>Gachibowli</strong> for a free gloss audit.</p>
         `,
         image: "/images/blog_floor_polishing.png",
         date: "June 20, 2026",
@@ -896,11 +896,11 @@ export const blogs = [
     {
         id: 37,
         slug: "doorstep-steam-car-bike-wash-detailing",
-        title: "Charminar Wheels: Why Mobile Steam Detailing is the Future of Car Care",
+        title: "MeeHelper Wheels: Why Mobile Steam Detailing is the Future of Car Care",
         excerpt: "Discover why doorstep high-pressure steam and snow foam wash keep your vehicle pristine without scratch risks.",
-        metaDescription: "Doorstep car detailing and bike wash in Hyderabad. Explore how Charminar Wheels uses mobile steam wash vans to deliver premium detailing at your doorstep.",
+        metaDescription: "Doorstep car detailing and bike wash in Hyderabad. Explore how MeeHelper Wheels uses mobile steam wash vans to deliver premium detailing at your doorstep.",
         content: `
-            <p>Your vehicle is one of your most valuable assets, but daily driving through dusty <strong>Hyderabad</strong> traffic can quickly dull its paint. <strong>Charminar Wheels</strong> brings a fully-equipped mobile detailing van directly to your driveway, saving you hours of waiting at a traditional service station.</p>
+            <p>Your vehicle is one of your most valuable assets, but daily driving through dusty <strong>Hyderabad</strong> traffic can quickly dull its paint. <strong>MeeHelper Wheels</strong> brings a fully-equipped mobile detailing van directly to your driveway, saving you hours of waiting at a traditional service station.</p>
             
             <h2>Benefits of High-Pressure Doorstep Steam Detailing</h2>
             <p>Traditional water-hose washes use up to 150 liters of water and often cause paint swirl marks. Here is how our eco-friendly steam system differs:</p>
@@ -911,7 +911,7 @@ export const blogs = [
                 <li><strong>Engine Bay Dressing:</strong> Steam safely degreases engine compartments without risking electrical damage.</li>
             </ul>
             
-            <p>We serve premium residential societies across <strong>Financial District</strong>, <strong>Madhapur</strong>, and <strong>Kukatpally</strong>. Watch your car shine with <strong>Charminar Wheels</strong>.</p>
+            <p>We serve premium residential societies across <strong>Financial District</strong>, <strong>Madhapur</strong>, and <strong>Kukatpally</strong>. Watch your car shine with <strong>MeeHelper Wheels</strong>.</p>
         `,
         image: "/images/blog_vehicle_detailing.png",
         date: "June 22, 2026",
@@ -923,9 +923,9 @@ export const blogs = [
         slug: "packers-movers-shifting-checklist-hyderabad",
         title: "Packers & Movers Guide: How to Shift Homes Stress-Free in Hyderabad",
         excerpt: "The complete guide to packing glassware, choosing covered trucks, and ensuring damage-free relocation in Hyderabad.",
-        metaDescription: "Expert packing and moving checklist for local shifting in Hyderabad. Learn how to relocate stress-free with Charminar Repairs Packers and Movers.",
+        metaDescription: "Expert packing and moving checklist for local shifting in Hyderabad. Learn how to relocate stress-free with MeeHelper Packers and Movers.",
         content: `
-            <p>Shifting your household or office in a bustling city like <strong>Hyderabad</strong> can be overwhelming. From organizing files to packing fragile kitchen glassware, proper planning is essential. <strong>Charminar Repairs Packers & Movers</strong> provides a stress-free relocation guide.</p>
+            <p>Shifting your household or office in a bustling city like <strong>Hyderabad</strong> can be overwhelming. From organizing files to packing fragile kitchen glassware, proper planning is essential. <strong>MeeHelper Packers & Movers</strong> provides a stress-free relocation guide.</p>
             
             <h2>Your Relocation Shifting Framework</h2>
             <p>A successful, damage-free move relies on strict step-by-step protocols:</p>
@@ -936,7 +936,7 @@ export const blogs = [
                 <li><strong>Unpacking Setup:</strong> Organize boxes by room tags so the unpacking crew can place and assemble your beds and tables in the correct spaces instantly.</li>
             </ul>
             
-            <p>Enjoy a zero-damage relocation guarantee with transit insurance cover. Book your move with <strong>Charminar Repairs Packers & Movers</strong> today.</p>
+            <p>Enjoy a zero-damage relocation guarantee with transit insurance cover. Book your move with <strong>MeeHelper Packers & Movers</strong> today.</p>
         `,
         image: "/images/blog_packers_movers.png",
         date: "June 25, 2026",
@@ -947,10 +947,10 @@ export const blogs = [
         id: 39,
         slug: "plumbing-guide-water-leaks-clogs-hyderabad",
         title: "Pro Plumbing Guide: Solving Clogs, Low Pressure & Water Leaks in Hyderabad Homes",
-        excerpt: "Discover how to diagnose bathroom leaks, clean choked lines, and ensure smooth water pressure with Charminar Repairs.",
-        metaDescription: "Solve plumbing problems in your Hyderabad home. Charminar Repairs offers expert advice for leaky faucets, drain clogs, and water pump repair in Madhapur and Jubilee Hills.",
+        excerpt: "Discover how to diagnose bathroom leaks, clean choked lines, and ensure smooth water pressure with MeeHelper.",
+        metaDescription: "Solve plumbing problems in your Hyderabad home. MeeHelper offers expert advice for leaky faucets, drain clogs, and water pump repair in Madhapur and Jubilee Hills.",
         content: `
-            <p>Plumbing issues like dripping faucets, slow drains, and low shower pressure are common nuisances in <strong>Hyderabad</strong> homes. In localities like <strong>Madhapur</strong> and <strong>Jubilee Hills</strong>, scaling from hard water can block internal pipelines, leading to reduced flow and eventual pipe corrosion. <strong>Charminar Repairs</strong> offers certified plumbing technicians to keep your water systems running smoothly.</p>
+            <p>Plumbing issues like dripping faucets, slow drains, and low shower pressure are common nuisances in <strong>Hyderabad</strong> homes. In localities like <strong>Madhapur</strong> and <strong>Jubilee Hills</strong>, scaling from hard water can block internal pipelines, leading to reduced flow and eventual pipe corrosion. <strong>MeeHelper</strong> offers certified plumbing technicians to keep your water systems running smoothly.</p>
 
             <h2>Common Household Plumbing Faults</h2>
             <p>Most plumbing calls in Hyderabad involve three key issues:</p>
@@ -967,7 +967,7 @@ export const blogs = [
                 <li><strong>Monitor Main Valves:</strong> Ensure your main water valves function properly so you can shut off water quickly during an emergency.</li>
             </ul>
 
-            <p>Don't let minor leaks lead to structural dampness and mold. Contact <strong>Charminar Repairs</strong> for rapid, doorstep plumbing services.</p>
+            <p>Don't let minor leaks lead to structural dampness and mold. Contact <strong>MeeHelper</strong> for rapid, doorstep plumbing services.</p>
         `,
         image: "/images/blog_plumbing.png",
         date: "June 28, 2026",
@@ -979,9 +979,9 @@ export const blogs = [
         slug: "carpentry-guide-furniture-repair-woodwork",
         title: "Expert Carpentry Guide: Furniture Repair, Custom Woodwork & Door Installation",
         excerpt: "Learn how professional carpenters restore wooden furniture, repair sliding hinges, and install secure locks in Hyderabad.",
-        metaDescription: "Professional carpentry and wood repair services in Hyderabad. Charminar Repairs offers hinge replacement, door alignment, and custom furniture polishing in Gachibowli.",
+        metaDescription: "Professional carpentry and wood repair services in Hyderabad. MeeHelper offers hinge replacement, door alignment, and custom furniture polishing in Gachibowli.",
         content: `
-            <p>High-quality woodwork adds elegance and functionality to your home. However, Hyderabad's seasonal humidity fluctuations can cause wooden doors to warp, hinges to squeak, and cabinet drawers to jam. <strong>Charminar Repairs</strong> provides skilled carpentry services in <strong>Gachibowli</strong> and surrounding areas to restore your woodwork.</p>
+            <p>High-quality woodwork adds elegance and functionality to your home. However, Hyderabad's seasonal humidity fluctuations can cause wooden doors to warp, hinges to squeak, and cabinet drawers to jam. <strong>MeeHelper</strong> provides skilled carpentry services in <strong>Gachibowli</strong> and surrounding areas to restore your woodwork.</p>
 
             <h2>Key Carpentry Repairs for Modern Apartments</h2>
             <p>Modern modular homes require precision handling. Common repair requests include:</p>
@@ -994,7 +994,7 @@ export const blogs = [
             <h2>Why Hire Professional Carpenters?</h2>
             <p>Modular furniture utilizes engineered wood like MDF or plywood, which requires specific fastening techniques to prevent chipping. Our carpenters bring professional power tools, high-grade adhesives, and specialized fasteners to ensure a clean, sturdy finish every time.</p>
 
-            <p>From minor hinge adjustments to major furniture assembly, trust <strong>Charminar Repairs</strong> for reliable woodwork solutions.</p>
+            <p>From minor hinge adjustments to major furniture assembly, trust <strong>MeeHelper</strong> for reliable woodwork solutions.</p>
         `,
         image: "/images/blog_carpentry.png",
         date: "June 30, 2026",
@@ -1006,9 +1006,9 @@ export const blogs = [
         slug: "balcony-bird-netting-safety-mesh-pigeon-proofing",
         title: "Balcony Bird Netting & Safety Meshes: Pigeon-Proofing Your Hyderabad Apartment",
         excerpt: "Protect your balcony from pigeon droppings and secure your windows with high-tensile HDPE bird netting and invisible grilles.",
-        metaDescription: "Pigeon-proof your balcony with professional bird netting in Hyderabad. Charminar Repairs offers high-tensile, UV-stabilized HDPE netting and safety mesh solutions.",
+        metaDescription: "Pigeon-proof your balcony with professional bird netting in Hyderabad. MeeHelper offers high-tensile, UV-stabilized HDPE netting and safety mesh solutions.",
         content: `
-            <p>Pigeons nesting in balconies have become a widespread issue for high-rise apartment residents in <strong>Hyderabad</strong>. Beyond the constant noise and mess, pigeon droppings carry harmful pathogens like histoplasmosis and salmonella, posing severe respiratory risks. <strong>Charminar Repairs</strong> offers premium, durable bird netting and safety mesh installations to keep your balconies clean and safe.</p>
+            <p>Pigeons nesting in balconies have become a widespread issue for high-rise apartment residents in <strong>Hyderabad</strong>. Beyond the constant noise and mess, pigeon droppings carry harmful pathogens like histoplasmosis and salmonella, posing severe respiratory risks. <strong>MeeHelper</strong> offers premium, durable bird netting and safety mesh installations to keep your balconies clean and safe.</p>
 
             <h2>Types of Balcony Protection Systems</h2>
             <p>Depending on your aesthetic preference and safety needs, we install:</p>
@@ -1021,7 +1021,7 @@ export const blogs = [
             <h2>Professional Installation Standards</h2>
             <p>We use heavy-duty stainless steel wall hooks and wire ropes to tension the nets perfectly, ensuring there are no gaps for birds to slip through. Our technicians follow rigorous safety protocols for high-rise installations, ensuring a secure fit that lasts for years.</p>
 
-            <p>Reclaim your balcony today. Book a free inspection with <strong>Charminar Repairs</strong> for bird netting and safety mesh solutions.</p>
+            <p>Reclaim your balcony today. Book a free inspection with <strong>MeeHelper</strong> for bird netting and safety mesh solutions.</p>
         `,
         image: "/images/blog_bird_netting.png",
         date: "June 02, 2026",
@@ -1033,9 +1033,9 @@ export const blogs = [
         slug: "air-cooler-servicing-pad-cleaning-motor-repair",
         title: "Air Cooler Servicing: Honeycomb Pad Cleaning & Fan Motor Restoration",
         excerpt: "Beat the summer heat by getting your desert or personal air cooler serviced with fresh cooling pads, pump cleaning, and motor oiling.",
-        metaDescription: "Prepare your air cooler for Hyderabad summers. Charminar Repairs offers doorstep cooling pad replacement, water pump cleaning, and motor repair services.",
+        metaDescription: "Prepare your air cooler for Hyderabad summers. MeeHelper offers doorstep cooling pad replacement, water pump cleaning, and motor repair services.",
         content: `
-            <p>As summer temperatures climb in <strong>Hyderabad</strong>, an air cooler is an affordable and efficient way to stay comfortable. However, a cooler stored away for months accumulates heavy dust, mold, and scale deposits on its pads, which reduces airflow and causes musty odors. <strong>Charminar Repairs</strong> provides expert doorstep air cooler servicing to restore refreshing, chilled airflow.</p>
+            <p>As summer temperatures climb in <strong>Hyderabad</strong>, an air cooler is an affordable and efficient way to stay comfortable. However, a cooler stored away for months accumulates heavy dust, mold, and scale deposits on its pads, which reduces airflow and causes musty odors. <strong>MeeHelper</strong> provides expert doorstep air cooler servicing to restore refreshing, chilled airflow.</p>
 
             <h2>Essential Cooler Maintenance Checklist</h2>
             <p>To ensure optimal cooling efficiency, our technicians perform a complete checkup:</p>
@@ -1047,7 +1047,7 @@ export const blogs = [
             <h2>Preventing Health Hazards</h2>
             <p>Standing water inside the cooler tank is a breeding ground for mosquitoes and bacteria. During our service, we deep clean and sanitize the tank to ensure the air blowing into your home is clean and hygienic.</p>
 
-            <p>Ensure your cooler delivers maximum chill this summer. Book an expert cooler service with <strong>Charminar Repairs</strong> today.</p>
+            <p>Ensure your cooler delivers maximum chill this summer. Book an expert cooler service with <strong>MeeHelper</strong> today.</p>
         `,
         image: "/images/blog_ac_repair.png",
         date: "June 05, 2026",
@@ -1059,9 +1059,9 @@ export const blogs = [
         slug: "sofa-carpet-deep-cleaning-stain-removal-hyderabad",
         title: "Sofa & Carpet Deep Cleaning: Extracting Dust Mites, Stains & Odors",
         excerpt: "Restore the premium look of your fabric furniture with professional shampooing, high-suction extraction, and eco-friendly sanitization.",
-        metaDescription: "Restore your fabric sofa and carpet in Hyderabad. Charminar Repairs offers professional dry cleaning, shampooing, and stain extraction services in Kondapur.",
+        metaDescription: "Restore your fabric sofa and carpet in Hyderabad. MeeHelper offers professional dry cleaning, shampooing, and stain extraction services in Kondapur.",
         content: `
-            <p>Fabric sofas and carpets are beautiful additions to modern living rooms, but they easily trap dust, food crumbs, pet dander, and sweat. Over time, these particles sink deep into the fibers, leading to discoloration, bad odors, and dust mite infestations. <strong>Charminar Repairs</strong> provides deep vacuuming and shampooing services in <strong>Kondapur</strong> and across Hyderabad to revive your upholstery.</p>
+            <p>Fabric sofas and carpets are beautiful additions to modern living rooms, but they easily trap dust, food crumbs, pet dander, and sweat. Over time, these particles sink deep into the fibers, leading to discoloration, bad odors, and dust mite infestations. <strong>MeeHelper</strong> provides deep vacuuming and shampooing services in <strong>Kondapur</strong> and across Hyderabad to revive your upholstery.</p>
 
             <h2>Our Multi-Stage Upholstery Deep Cleaning Process</h2>
             <p>We use professional-grade spray-extraction machines to clean deep inside the cushions without soaking them:</p>
@@ -1075,7 +1075,7 @@ export const blogs = [
             <h2>Benefits of Regular Cleaning</h2>
             <p>Regular shampooing not only preserves the premium appearance of your furniture but also improves indoor air quality by removing airborne dust traps. We recommend deep cleaning your fabric sofa and carpets every six months.</p>
 
-            <p>Give your sofa a brand-new look and feel. Schedule an upholstery cleaning session with <strong>Charminar Repairs</strong> today.</p>
+            <p>Give your sofa a brand-new look and feel. Schedule an upholstery cleaning session with <strong>MeeHelper</strong> today.</p>
         `,
         image: "/images/blog_cleaning.png",
         date: "June 08, 2026",
@@ -1087,9 +1087,9 @@ export const blogs = [
         slug: "doorstep-salon-men-haircut-pedicure-massage",
         title: "Doorstep Salon for Men: Premium Haircuts, Pedicures & Stress Relief Massages",
         excerpt: "Experience luxury grooming and relaxation in the comfort of your home. Haircuts, hair color, manicures, and massages by verified stylists.",
-        metaDescription: "Get premium salon services at home in Hyderabad. Charminar Repairs offers professional haircuts, pedicures, and massage therapies for men at your doorstep.",
+        metaDescription: "Get premium salon services at home in Hyderabad. MeeHelper offers professional haircuts, pedicures, and massage therapies for men at your doorstep.",
         content: `
-            <p>Busy schedules and long waiting times at the salon can make grooming feel like a chore. At <strong>Charminar Repairs</strong>, we bring a complete luxury salon experience directly to your home in <strong>Hyderabad</strong>. Our background-verified, certified stylists carry sanitized tools and premium products to deliver professional haircuts, facials, pedicures, and stress-relieving massages in your living room.</p>
+            <p>Busy schedules and long waiting times at the salon can make grooming feel like a chore. At <strong>MeeHelper</strong>, we bring a complete luxury salon experience directly to your home in <strong>Hyderabad</strong>. Our background-verified, certified stylists carry sanitized tools and premium products to deliver professional haircuts, facials, pedicures, and stress-relieving massages in your living room.</p>
 
             <h2>Our Premium At-Home Grooming Menu</h2>
             <p>We offer a comprehensive range of personal care services designed specifically for men:</p>
@@ -1103,7 +1103,7 @@ export const blogs = [
             <h2>Hygienic and Mess-Free Setup</h2>
             <p>Safety and hygiene are our top priorities. Our stylists use disposable towels, capes, and sheets, and disinfect all metal tools before use. We set up in a corner of your home and clean up completely after the service, leaving your space spotless.</p>
 
-            <p>Experience hassle-free grooming. Book your doorstep salon session with <strong>Charminar Repairs</strong> today.</p>
+            <p>Experience hassle-free grooming. Book your doorstep salon session with <strong>MeeHelper</strong> today.</p>
         `,
         image: "/images/blog_men_salon.png",
         date: "June 12, 2026",
@@ -1115,9 +1115,9 @@ export const blogs = [
         slug: "home-painting-decor-installation-ideas-hyderabad",
         title: "Wall Painting & Decor Installation: Elevating Your Home Aesthetics",
         excerpt: "A complete guide to choosing the right wall finishes, color schemes, and wall hanging installations for Hyderabad homes.",
-        metaDescription: "Professional wall painting and home decor installation services in Hyderabad. Charminar Repairs offers dust-free painting, wall mountings, and interior decor setups.",
+        metaDescription: "Professional wall painting and home decor installation services in Hyderabad. MeeHelper offers dust-free painting, wall mountings, and interior decor setups.",
         content: `
-            <p>A fresh coat of paint and well-arranged wall decor can completely transform the vibe of your home. Whether you're moving into a new apartment or looking to refresh your current living room, choosing the right finishes and securing wall hangings properly is essential. <strong>Charminar Repairs</strong> provides professional wall painting and decor installation services across <strong>Hyderabad</strong>.</p>
+            <p>A fresh coat of paint and well-arranged wall decor can completely transform the vibe of your home. Whether you're moving into a new apartment or looking to refresh your current living room, choosing the right finishes and securing wall hangings properly is essential. <strong>MeeHelper</strong> provides professional wall painting and decor installation services across <strong>Hyderabad</strong>.</p>
 
             <h2>Dust-Free Wall Painting Process</h2>
             <p>Traditional painting can be messy and time-consuming. We follow a clean, structured painting protocol:</p>
@@ -1131,7 +1131,7 @@ export const blogs = [
             <h2>Professional Decor Mounting & Assembly</h2>
             <p>Hanging heavy mirrors, TV mounts, art galleries, and floating shelves requires accurate measurement and heavy-duty anchors. Our technicians inspect your wall type (brick, concrete, or drywall) and use appropriate rawlplugs and drills to mount items securely, preventing accidents.</p>
 
-            <p>Get a stunning, hassle-free makeover for your home. Book a wall painting and decor consultation with <strong>Charminar Repairs</strong> today.</p>
+            <p>Get a stunning, hassle-free makeover for your home. Book a wall painting and decor consultation with <strong>MeeHelper</strong> today.</p>
         `,
         image: "/images/blog_decor.png",
         date: "June 15, 2026",

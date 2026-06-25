@@ -7,7 +7,7 @@ body {
     display: flex;
     min-height: 100vh;
     background: #f8fafc;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-main);
     color: #334155;
     font-size: 13px; /* Smaller base font size */
 }
@@ -723,7 +723,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-main);
 }
 
 .login-card {

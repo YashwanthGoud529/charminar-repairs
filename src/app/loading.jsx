@@ -8,7 +8,7 @@ export default function Loading() {
                 <div className="loader-ring-bg"></div>
                 <div className="loader-ring"></div>
                 <div className="loader-circle">
-                    <img src="/images/charminar-repairs-logo.jpeg" alt="Charminar Repairs Logo" className="loader-logo" />
+                    <img src="/logo.png" alt="MeeHelper Logo" className="loader-logo" />
                 </div>
             </div>
 

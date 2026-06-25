@@ -1,7 +1,7 @@
 /* Packers & Movers Custom Styling matching reference UI */
 
 .packers-movers-template {
-    font-family: 'Inter', 'Outfit', sans-serif;
+    font-family: var(--font-main);
     color: #334155;
     background-color: #f8fafc;
 }

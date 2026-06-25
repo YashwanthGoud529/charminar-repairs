@@ -1,10 +1,10 @@
 /* ═══════════════════════════════════════════════════
    ABOUT SERVICE — PREMIUM UI
-   Brand color: #673ab7  Accent: #f7365e
+   Brand color: #024dbe  Accent: #f7365e
 ═══════════════════════════════════════════════════ */
 
 .about-service-wrapper {
-    font-family: var(--font-main, 'Outfit', sans-serif);
+    font-family: var(--font-main);
 }
 
 /* ─── Shared Section Helpers ─────────────────────── */
@@ -14,10 +14,10 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #673ab7;
-    background: rgba(103, 58, 183, 0.08);
+    color: #024dbe;
+    background: rgba(2, 77, 190, 0.08);
     padding: 4px 14px;
-    border-radius: 20px;
+    border-radius: 4px;
     margin-bottom: 14px;
 }
 
@@ -57,25 +57,25 @@
 }
 
 .as-cta-primary {
-    background: linear-gradient(135deg, #673ab7, #8e24aa);
+    background: linear-gradient(135deg, #024dbe, #013c96);
     color: #fff;
-    box-shadow: 0 8px 25px rgba(103, 58, 183, 0.3);
+    box-shadow: 0 8px 25px rgba(2, 77, 190, 0.3);
 }
 
 .as-cta-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 35px rgba(103, 58, 183, 0.4);
+    box-shadow: 0 14px 35px rgba(2, 77, 190, 0.4);
     color: #fff;
 }
 
 .as-cta-outline {
     background: transparent;
-    color: #673ab7;
-    border: 2px solid #673ab7;
+    color: #024dbe;
+    border: 2px solid #024dbe;
 }
 
 .as-cta-outline:hover {
-    background: #673ab7;
+    background: #024dbe;
     color: #fff;
     transform: translateY(-2px);
 }
@@ -86,7 +86,7 @@
 ═══════════════════════════════════════════════════ */
 .as-intro-section {
     padding: 70px 0;
-    background: #fff;
+    background: #f8fafc;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -132,11 +132,11 @@
     gap: 6px;
     font-size: 12px;
     font-weight: 700;
-    color: #673ab7;
-    background: rgba(103, 58, 183, 0.07);
-    border: 1px solid rgba(103, 58, 183, 0.15);
+    color: #024dbe;
+    background: rgba(2, 77, 190, 0.07);
+    border: 1px solid rgba(2, 77, 190, 0.15);
     padding: 6px 12px;
-    border-radius: 20px;
+    border-radius: 4px;
 }
 
 /* Stats Grid */
@@ -149,8 +149,8 @@
 }
 
 .as-stat-card {
-    background: linear-gradient(135deg, #f8f4ff, #fff);
-    border: 1px solid rgba(103, 58, 183, 0.12);
+    background: linear-gradient(135deg, #f0f7ff, #fff);
+    border: 1px solid rgba(2, 77, 190, 0.12);
     border-radius: 4px;
     padding: 22px 16px;
     text-align: center;
@@ -159,15 +159,15 @@
 
 .as-stat-card:hover {
     transform: translateY(-4px);
-    border-color: #673ab7;
-    box-shadow: 0 12px 30px rgba(103, 58, 183, 0.12);
+    border-color: #024dbe;
+    box-shadow: 0 12px 30px rgba(2, 77, 190, 0.12);
 }
 
 .as-stat-icon {
     width: 42px;
     height: 42px;
-    background: linear-gradient(135deg, #673ab7, #8e24aa);
-    border-radius: 10px;
+    background: linear-gradient(135deg, #024dbe, #013c96);
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,8 +198,8 @@
 ═══════════════════════════════════════════════════ */
 .as-why-section {
     padding: 80px 0;
-    background: linear-gradient(180deg, #f8f4ff 0%, #fafbff 100%);
-    border-top: 1px solid rgba(103, 58, 183, 0.07);
+    background: #ffffff;
+    border-top: 1px solid rgba(2, 77, 190, 0.07);
 }
 
 .as-why-grid {
@@ -210,7 +210,7 @@
 
 .as-why-card {
     background: #fff;
-    border: 1px solid rgba(103, 58, 183, 0.1);
+    border: 1px solid rgba(2, 77, 190, 0.1);
     border-radius: 4px;
     padding: 30px 24px;
     text-align: center;
@@ -226,7 +226,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #673ab7, #f7365e);
+    background: linear-gradient(90deg, #024dbe, #f7365e);
     transform: scaleX(0);
     transition: transform 0.4s ease;
     transform-origin: left;
@@ -238,14 +238,14 @@
 
 .as-why-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(103, 58, 183, 0.12);
-    border-color: rgba(103, 58, 183, 0.25);
+    box-shadow: 0 20px 50px rgba(2, 77, 190, 0.12);
+    border-color: rgba(2, 77, 190, 0.25);
 }
 
 .as-why-icon-wrap {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #673ab7, #8e24aa);
+    background: linear-gradient(135deg, #024dbe, #013c96);
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -280,7 +280,7 @@
 ═══════════════════════════════════════════════════ */
 .as-issues-section {
     padding: 80px 0;
-    background: #fff;
+    background: #f8fafc;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -303,21 +303,21 @@
 }
 
 .as-issue-card:hover {
-    border-color: rgba(103, 58, 183, 0.3);
-    background: #f8f4ff;
+    border-color: rgba(2, 77, 190, 0.3);
+    background: #f0f7ff;
     transform: translateX(4px);
-    box-shadow: 0 8px 25px rgba(103, 58, 183, 0.08);
+    box-shadow: 0 8px 25px rgba(2, 77, 190, 0.08);
 }
 
 .as-issue-icon {
     width: 46px;
     height: 46px;
-    background: linear-gradient(135deg, rgba(103, 58, 183, 0.12), rgba(103, 58, 183, 0.06));
-    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(2, 77, 190, 0.12), rgba(2, 77, 190, 0.06));
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #673ab7;
+    color: #024dbe;
     font-size: 18px;
     flex-shrink: 0;
 }
@@ -347,7 +347,7 @@
     background: rgba(5, 150, 105, 0.09);
     border: 1px solid rgba(5, 150, 105, 0.2);
     padding: 3px 10px;
-    border-radius: 20px;
+    border-radius: 4px;
     white-space: nowrap;
     align-self: center;
     flex-shrink: 0;
@@ -359,7 +359,7 @@
 ═══════════════════════════════════════════════════ */
 .as-process-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #0c1228 0%, #1a1040 100%);
+    background: linear-gradient(135deg, #0c1228 0%, #051b3a 100%);
     border-top: none;
 }
 
@@ -372,8 +372,8 @@
 }
 
 .as-process-section .as-eyebrow {
-    background: rgba(103, 58, 183, 0.3);
-    color: #c4a9f3;
+    background: rgba(2, 77, 190, 0.3);
+    color: #93c5fd;
 }
 
 .as-process-track {
@@ -395,14 +395,14 @@
     right: -50%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, #673ab7, rgba(103, 58, 183, 0.2));
+    background: linear-gradient(90deg, #024dbe, rgba(2, 77, 190, 0.2));
     z-index: 0;
 }
 
 .as-process-num {
     font-size: 48px;
     font-weight: 900;
-    color: rgba(103, 58, 183, 0.25);
+    color: rgba(2, 77, 190, 0.25);
     line-height: 1;
     margin-bottom: 12px;
     font-family: var(--font-main);
@@ -411,7 +411,7 @@
 .as-process-icon-wrap {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #673ab7, #8e24aa);
+    background: linear-gradient(135deg, #024dbe, #013c96);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -421,7 +421,7 @@
     margin: 0 auto 20px;
     position: relative;
     z-index: 1;
-    box-shadow: 0 0 0 6px rgba(103, 58, 183, 0.2), 0 10px 30px rgba(103, 58, 183, 0.4);
+    box-shadow: 0 0 0 6px rgba(2, 77, 190, 0.2), 0 10px 30px rgba(2, 77, 190, 0.4);
     transition: transform 0.3s;
 }
 
@@ -449,7 +449,7 @@
 ═══════════════════════════════════════════════════ */
 .as-spec-section {
     padding: 80px 0;
-    background: #f8fafc;
+    background: #ffffff;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -475,7 +475,7 @@
 }
 
 .as-spec-title i {
-    color: #673ab7;
+    color: #024dbe;
 }
 
 .as-spec-tags {
@@ -487,22 +487,22 @@
 .as-spec-tag {
     font-size: 12.5px;
     font-weight: 600;
-    color: #673ab7;
-    background: rgba(103, 58, 183, 0.07);
-    border: 1px solid rgba(103, 58, 183, 0.15);
+    color: #024dbe;
+    background: rgba(2, 77, 190, 0.07);
+    border: 1px solid rgba(2, 77, 190, 0.15);
     padding: 7px 14px;
-    border-radius: 20px;
+    border-radius: 4px;
     transition: all 0.2s;
 }
 
 .as-spec-tag:hover {
-    background: #673ab7;
+    background: #024dbe;
     color: #fff;
     transform: translateY(-2px);
 }
 
 .as-coverage-card {
-    background: linear-gradient(135deg, #0c1228, #1a1040);
+    background: linear-gradient(135deg, #0c1228, #051b3a);
     border-color: transparent;
     color: #fff;
 }
@@ -512,7 +512,7 @@
 }
 
 .as-coverage-card .as-spec-title i {
-    color: #c4a9f3;
+    color: #93c5fd;
 }
 
 .as-spec-desc {
@@ -538,7 +538,7 @@
 }
 
 .as-cov-item i {
-    color: #673ab7;
+    color: #024dbe;
     font-size: 14px;
 }
 

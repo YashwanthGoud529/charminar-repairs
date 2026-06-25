@@ -32,7 +32,8 @@ const ALL_SECTION_KEYS = [
     'Specialized Cleaning & Utility Services'
 ];
 
-const AllServicesList = () => {
+const AllServicesList = ({ bgColor }) => {
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
     const services = ALL_SECTION_KEYS.map(key => {
         const data = SERVICE_DATA_MAP[key];
         const slug = SERVICE_CANONICAL_MAP[key];
@@ -46,7 +47,7 @@ const AllServicesList = () => {
     }).filter(Boolean);
 
     return (
-        <section className="shared-carousel-section py-5 bg-light-soft">
+        <section className={`shared-carousel-section py-5 ${bgClass}`}>
             <div className="container custom-container">
                 <h2 className="shared-carousel-title mb-4">Explore Our Services</h2>
                 

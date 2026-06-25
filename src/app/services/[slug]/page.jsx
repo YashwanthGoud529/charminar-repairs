@@ -27,15 +27,37 @@ function getSlugResolution() {
         'washing-machine-repairing': 'Washing Machine Repair',
         'television-repairing': 'Television Repair',
         'tv-repairing': 'Television Repair',
+        'tv-repair': 'Television Repair',
         'ro-repairing': 'Water Purifier (RO) Service',
         'water-purifier-servicing': 'Water Purifier (RO) Service',
         'geyser-repairing': 'Geyser & Water Heater Repair',
         'chimney-repairing': 'Kitchen Chimney Service',
+        'kitchen-chimney-servicing': 'Kitchen Chimney Service',
+        'microwave-repairing': 'Microwave Oven Repair',
+        'pest-control-services': 'Pest Control Services',
+        'home-repair-services': 'Home Repair Services',
+        'appliance-repair-services': 'Home Repair Services',
+        'all-services-hyderabad': 'Explore Our Services',
+        'bathroom-cleaning': 'Bathroom Cleaning',
+        'intense-bathroom-cleaning': 'Intense Bathroom Cleaning',
+        'insta-help': 'Insta Help',
+        'meehelper-wheels': 'MeeHelper Auto Care',
+        'doorstep-car-bike-wash': 'MeeHelper Auto Care',
         'packers-and-movers': 'Packers and Movers',
+        'laptop-repairing': 'Laptop & Desktop Repair',
+        'washing-machine-checkup': 'Automatic Machine Check-up',
+        'pedicure-service': 'British Rose Pedicure',
+        'men-haircut': 'Haircut for Men',
+        'air-cooler-servicing': 'Air Cooler Repair',
+        'plumbing-work': 'Plumbing Work',
+        'gas-stove-repairing': 'Gas Stove & Hob Repair',
+        'dishwasher-repairing': 'Dishwasher Repair',
+        'coffee-machine-repairing': 'Coffee Machine Repair',
+        'vacuum-cleaner-repairing': 'Vacuum Cleaner Repair',
     };
 
     Object.values(SERVICE_DATA_MAP).forEach(service => {
-        if (service.subServices) {
+        if (service && service.subServices) {
             service.subServices.forEach(sub => {
                 map[sub.id] = sub.name;
             });
@@ -220,7 +242,7 @@ function parseSlugPattern(slug) {
     let remainingSlug = workingSlug;
 
     const allBrands = new Set();
-    Object.values(SERVICE_DATA_MAP).forEach(s => s.brands?.forEach(b => allBrands.add(b)));
+    Object.values(SERVICE_DATA_MAP).forEach(s => s && s.brands?.forEach(b => allBrands.add(b)));
     
     for (const b of allBrands) {
         const bSlug = toSlug(b);
@@ -258,35 +280,35 @@ export async function generateMetadata({ params }) {
 
     const brandPart = brand ? `${brand} ` : '';
     const locPart = isNearMe ? 'Near Me' : (location ? `${location}, Hyderabad` : 'Hyderabad');
-    let title = `${brandPart}${serviceName} Service in ${locPart} | Charminar Repairs Service`;
+    let title = `${brandPart}${serviceName} Service in ${locPart} | MeeHelper Service`;
     
     const type = getServiceType(serviceName);
     let description = '';
     if (serviceSlug === 'all-services-hyderabad') {
-        title = `All Home Services & Appliance Repair in ${locPart} | Charminar Repairs`;
-        description = `Looking for top-rated doorstep services? Charminar Repairs offers professional appliance repairs, home cleaning, pest control, auto care, and maintenance services in ${locPart}. Certified experts and guaranteed warranty. Book now!`;
+        title = `All Home Services & Appliance Repair in ${locPart} | MeeHelper`;
+        description = `Looking for top-rated doorstep services? MeeHelper offers professional appliance repairs, home cleaning, pest control, auto care, and maintenance services in ${locPart}. Certified experts and guaranteed warranty. Book now!`;
     } else if (serviceSlug === 'cleaning-sanitization-services') {
-        title = `Professional Home & Office Cleaning Services in ${locPart} | Charminar Repairs`;
+        title = `Professional Home & Office Cleaning Services in ${locPart} | MeeHelper`;
         description = `Keep your space sparkling & germ-free with professional cleaning & sanitization services in ${locPart}. We provide deep home cleaning, sofa sanitizing, office disinfection, and kitchen scrubbing. 100% hygienic, safe & certified cleaners.`;
-    } else if (serviceSlug === 'charminar-wheels') {
-        title = `Doorstep Car Wash & Premium Auto Detailing in ${locPart} | Charminar Auto Care`;
-        description = `Pamper your vehicle with ${locPart}'s premium doorstep car & bike wash. Charminar Auto Care offers Spadex eco-friendly steam washing, deep interior vacuuming, paint buffing, and body polishing. We bring our own power & water! Book today.`;
+    } else if (serviceSlug === 'meehelper-wheels') {
+        title = `Doorstep Car Wash & Premium Auto Detailing in ${locPart} | MeeHelper Auto Care`;
+        description = `Pamper your vehicle with ${locPart}'s premium doorstep car & bike wash. MeeHelper Auto Care offers Spadex eco-friendly steam washing, deep interior vacuuming, paint buffing, and body polishing. We bring our own power & water! Book today.`;
     } else if (serviceSlug === 'floor-polishing') {
-        title = `Professional Marble & Floor Polishing Services in ${locPart} | Charminar Repairs`;
+        title = `Professional Marble & Floor Polishing Services in ${locPart} | MeeHelper`;
         description = `Restore your floors to a premium, mirror-like shine! Get expert marble, granite, and mosaic floor polishing in ${locPart}. We use multi-stage diamond grit grinding & crystallization shield for long-lasting gloss protection.`;
     } else {
         if (type === 'cleaning') {
-            description = `Looking for professional ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Charminar Repairs provides deep home cleaning, sanitizing, and scrubbing services across Hyderabad. Certified cleaners, eco-safe agents, 100% satisfaction.`;
+            description = `Looking for professional ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? MeeHelper provides deep home cleaning, sanitizing, and scrubbing services across Hyderabad. Certified cleaners, eco-safe agents, 100% satisfaction.`;
         } else if (type === 'polishing') {
-            description = `Looking for professional ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Charminar Repairs provides expert diamond floor grinding, crystallization, and mirror finish services across Hyderabad. Get high-gloss restoration same-day.`;
+            description = `Looking for professional ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? MeeHelper provides expert diamond floor grinding, crystallization, and mirror finish services across Hyderabad. Get high-gloss restoration same-day.`;
         } else if (type === 'pest') {
             description = `Looking for premium ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Get government-licensed, safe, and odorless pest control treatments in Hyderabad. Protect your home with a 90-day guarantee.`;
         } else if (type === 'vehicle') {
-            description = `Looking for doorstep ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Charminar Auto Care offers premium steam washing, interior vacuuming, and body polishing at your doorstep. We bring water & power.`;
+            description = `Looking for doorstep ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? MeeHelper Auto Care offers premium steam washing, interior vacuuming, and body polishing at your doorstep. We bring water & power.`;
         } else if (type === 'movers') {
             description = `Looking for reliable ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Get safe, stress-free shifting with ISO-certified packing and moving teams in Hyderabad. Secure transport in closed trucks.`;
         } else if (type === 'safety') {
-            description = `Looking for professional ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Charminar Repairs offers expert security camera setup, smart door lock installations, and wall waterproofing across Hyderabad. Safe & certified technicians.`;
+            description = `Looking for professional ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? MeeHelper offers expert security camera setup, smart door lock installations, and wall waterproofing across Hyderabad. Safe & certified technicians.`;
         } else if (type === 'it') {
             description = `Looking for professional ${brandPart.toLowerCase()}${serviceName.toLowerCase()} ${isNearMe ? 'near you' : `in ${locPart}`}? Get same-day doorstep IT hardware repairs, WiFi router setups, range extenders, and smart home configuration by certified IT engineers in Hyderabad.`;
         } else {
@@ -294,10 +316,14 @@ export async function generateMetadata({ params }) {
         }
     }
 
+    const parentService = SERVICE_DATA_MAP[serviceName];
+    const serviceImage = parentService?.photo || parentService?.image || undefined;
+
     return constructMetadata({
         title,
         description,
         canonicalPath: `/${slug}/`,
+        image: serviceImage,
         keywords: [brandPart + serviceName, locPart, `${serviceName} ${locPart}`].join(', '),
     });
 }
@@ -318,21 +344,21 @@ export default async function ServiceDetailsPage({ params }) {
     const type = getServiceType(serviceName);
     let longDescription = '';
     if (type === 'cleaning') {
-        longDescription = `${brandPart}${serviceName} in ${locLabel} is one of Charminar Repairs' most trusted hygiene solutions! Residents in ${locLabel} can count on our background-verified, certified cleaners for same-day doorstep sanitization and deep cleaning. We use eco-friendly, family-safe cleaning agents and follow a detailed check-list to ensure your home or office space is sparkling clean. We cover all Hyderabad districts with 60-minute response times and a 100% satisfaction guarantee.`;
+        longDescription = `${brandPart}${serviceName} in ${locLabel} is one of MeeHelper' most trusted hygiene solutions! Residents in ${locLabel} can count on our background-verified, certified cleaners for same-day doorstep sanitization and deep cleaning. We use eco-friendly, family-safe cleaning agents and follow a detailed check-list to ensure your home or office space is sparkling clean. We cover all Hyderabad districts with 60-minute response times and a 100% satisfaction guarantee.`;
     } else if (type === 'polishing') {
-        longDescription = `${brandPart}${serviceName} in ${locLabel} is the premier stone restoration service by Charminar Repairs! Residents in ${locLabel} trust our background-verified experts for professional floor grinding, crystallization, and mirror-shine polishing. We use multi-stage diamond grit abrasives and eco-safe sealants to remove all scratches and restore your floor's premium gloss. We cover all Hyderabad districts with guaranteed workmanship.`;
+        longDescription = `${brandPart}${serviceName} in ${locLabel} is the premier stone restoration service by MeeHelper! Residents in ${locLabel} trust our background-verified experts for professional floor grinding, crystallization, and mirror-shine polishing. We use multi-stage diamond grit abrasives and eco-safe sealants to remove all scratches and restore your floor's premium gloss. We cover all Hyderabad districts with guaranteed workmanship.`;
     } else if (type === 'pest') {
         longDescription = `${brandPart}${serviceName} in ${locLabel} is a certified integrated pest management solution! Residents in ${locLabel} trust our government-licensed pest control experts for safe, odorless, and eco-friendly treatments against termites, cockroaches, rodents, bed bugs, and mosquitoes. We follow advanced injection and baiting protocols with a 90-day protection guarantee.`;
     } else if (type === 'vehicle') {
-        longDescription = `${brandPart}${serviceName} in ${locLabel} is the ultimate doorstep vehicle detailing and steam wash service! Vehicle owners in ${locLabel} trust Charminar Auto Care for active snow foam wash, interior vacuuming, dashboard dressing, and paint buffing using premium compounds. We bring our own power and water to your doorstep.`;
+        longDescription = `${brandPart}${serviceName} in ${locLabel} is the ultimate doorstep vehicle detailing and steam wash service! Vehicle owners in ${locLabel} trust MeeHelper Auto Care for active snow foam wash, interior vacuuming, dashboard dressing, and paint buffing using premium compounds. We bring our own power and water to your doorstep.`;
     } else if (type === 'movers') {
         longDescription = `${brandPart}${serviceName} in ${locLabel} is a seamless and secure relocation service! Residents and offices in ${locLabel} trust our ISO-certified packing and shifting teams for zero-damage transit. We provide high-quality multi-layer bubble wrap, closed container trucks, and transit insurance for complete peace of mind.`;
     } else if (type === 'safety') {
-        longDescription = `${brandPart}${serviceName} in ${locLabel} is the premier security and home protection service by Charminar Repairs! Residents and businesses in ${locLabel} trust our background-verified, certified security engineers for same-day CCTV camera installation, smart door lock fitting, and wall waterproofing. We use professional-grade hardware and configure seamless app-based monitoring to ensure your property remains secure. We cover all Hyderabad districts with a 100% safety guarantee.`;
+        longDescription = `${brandPart}${serviceName} in ${locLabel} is the premier security and home protection service by MeeHelper! Residents and businesses in ${locLabel} trust our background-verified, certified security engineers for same-day CCTV camera installation, smart door lock fitting, and wall waterproofing. We use professional-grade hardware and configure seamless app-based monitoring to ensure your property remains secure. We cover all Hyderabad districts with a 100% safety guarantee.`;
     } else if (type === 'it') {
-        longDescription = `${brandPart}${serviceName} in ${locLabel} is the leading home IT and office setup solution by Charminar Repairs! Residents and professionals in ${locLabel} trust our background-verified, certified network and device engineers for router installation, range extender setup, PC hardware repairs, and smart home integration. We optimize your connection and troubleshoot device issues to ensure a smooth, high-speed experience. We cover all Hyderabad districts with transparent pricing.`;
+        longDescription = `${brandPart}${serviceName} in ${locLabel} is the leading home IT and office setup solution by MeeHelper! Residents and professionals in ${locLabel} trust our background-verified, certified network and device engineers for router installation, range extender setup, PC hardware repairs, and smart home integration. We optimize your connection and troubleshoot device issues to ensure a smooth, high-speed experience. We cover all Hyderabad districts with transparent pricing.`;
     } else {
-        longDescription = `${brandPart}${serviceName}${locSuffix} is one of Charminar Repairs' leading premium offerings. Residents of ${locLabel} can count on our background-verified and certified experts for same-day resolution of all ${brand || 'appliance'} faults. We use genuine components and provide a comprehensive 180-day warranty on all household items.`;
+        longDescription = `${brandPart}${serviceName}${locSuffix} is one of MeeHelper' leading premium offerings. Residents of ${locLabel} can count on our background-verified and certified experts for same-day resolution of all ${brand || 'appliance'} faults. We use genuine components and provide a comprehensive 180-day warranty on all household items.`;
     }
 
     // Deterministic Review Count for SEO diversity
@@ -376,9 +402,9 @@ export default async function ServiceDetailsPage({ params }) {
             },
             'provider': {
                 '@type': 'LocalBusiness',
-                'name': 'Charminar Repairs',
+                'name': 'MeeHelper',
                 'telephone': '+91-8008615049',
-                'image': 'https://www.charminarrepairs.com/images/charminar-repairs-logo.jpeg',
+                'image': 'https://www.meehelper.com/logo.png',
                 'areaServed': location || 'Hyderabad',
                 'address': {
                     '@type': 'PostalAddress',
@@ -393,10 +419,10 @@ export default async function ServiceDetailsPage({ params }) {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.charminarrepairs.com/' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Hyderabad', 'item': 'https://www.charminarrepairs.com/' },
-                { '@type': 'ListItem', 'position': 3, 'name': serviceName, 'item': `https://www.charminarrepairs.com/services/${serviceSlug}/` },
-                { '@type': 'ListItem', 'position': 4, 'name': `${brandPart}${serviceName} in ${locLabel}`, 'item': `https://www.charminarrepairs.com/services/${slug}/` }
+                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.meehelper.com/' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Hyderabad', 'item': 'https://www.meehelper.com/' },
+                { '@type': 'ListItem', 'position': 3, 'name': serviceName, 'item': `https://www.meehelper.com/services/${serviceSlug}/` },
+                { '@type': 'ListItem', 'position': 4, 'name': `${brandPart}${serviceName} in ${locLabel}`, 'item': `https://www.meehelper.com/services/${slug}/` }
             ]
         }
     ];
@@ -419,9 +445,10 @@ export default async function ServiceDetailsPage({ params }) {
             <FAQ 
                 title={`${brandPart}${serviceName} in ${locLabel} - FAQ`}
                 items={getFAQItems(serviceName, type, brand, locLabel, isNearMe, brandPart)}
+                bgColor="gray"
             />
-            <LocalReviews serviceName={serviceName} locationLabel={location || (isNearMe ? 'Hyderabad' : 'Hyderabad')} />
-            <NearbyLocations serviceSlug={serviceSlug} serviceName={serviceName} currentLocation={location} />
+            <LocalReviews serviceName={serviceName} locationLabel={location || (isNearMe ? 'Hyderabad' : 'Hyderabad')} bgColor="white" />
+            <NearbyLocations serviceSlug={serviceSlug} serviceName={serviceName} currentLocation={location} bgColor="gray" />
         </div>
     );
 }

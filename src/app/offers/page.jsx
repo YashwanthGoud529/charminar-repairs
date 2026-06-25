@@ -4,13 +4,13 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Offers & Coupons | Charminar Repairs – Discounts on Appliance Repair',
-    description: 'Save on appliance repair, cleaning, and home services in Hyderabad. Check current offers, coupon codes, and seasonal deals from Charminar Repairs.',
+    title: 'Offers & Coupons | MeeHelper – Discounts on Appliance Repair',
+    description: 'Save on appliance repair, cleaning, and home services in Hyderabad. Check current offers, coupon codes, and seasonal deals from MeeHelper.',
     canonicalPath: '/offers',
 });
 
 const offers = [
-    { code: 'FIRST100', discount: '₹100 Off', title: 'First Booking Discount', desc: 'Get ₹100 off on your very first repair booking with us. Valid on all appliance types.', validity: '31 Dec 2025', minOrder: '₹499', color: '#673ab7', tag: 'New Customer' },
+    { code: 'FIRST100', discount: '₹100 Off', title: 'First Booking Discount', desc: 'Get ₹100 off on your very first repair booking with us. Valid on all appliance types.', validity: '31 Dec 2025', minOrder: '₹499', color: '#024dbe', tag: 'New Customer' },
     { code: 'SUMMER25', discount: '25% Off', title: 'Summer AC Service Offer', desc: 'Beat the heat! Get 25% off on all AC repairs, gas refills, and servicing during summer months.', validity: '30 Jun 2025', minOrder: '₹999', color: '#f59e0b', tag: 'Seasonal' },
     { code: 'CLEANPRO', discount: '15% Off', title: 'Deep Cleaning Special', desc: 'Book any home deep cleaning package and get 15% off. Includes bathroom, kitchen, and full home options.', validity: '30 Sep 2025', minOrder: '₹1,999', color: '#10b981', tag: 'Cleaning' },
     { code: 'AMCNOW', discount: '20% Off', title: 'AMC First Year Discount', desc: 'Sign up for any Annual Maintenance Contract and get 20% off the first year. Applicable on all plans.', validity: '31 Mar 2026', minOrder: 'AMC Purchase', color: '#0ea5e9', tag: 'AMC' },
@@ -59,7 +59,7 @@ export default function OffersPage() {
                         <span style={{ fontSize: 22 }}>ℹ️</span>
                         <div>
                             <strong style={{ fontSize: 14, color: '#0c1228' }}>Terms & Conditions Apply</strong>
-                            <p style={{ fontSize: 12.5, color: '#64748b', margin: '6px 0 0', lineHeight: 1.6 }}>Coupons cannot be combined with other offers. One coupon per booking. Charminar Repairs reserves the right to modify or withdraw offers without prior notice. Discounts apply on service charges only, not spare parts.</p>
+                            <p style={{ fontSize: 12.5, color: '#64748b', margin: '6px 0 0', lineHeight: 1.6 }}>Coupons cannot be combined with other offers. One coupon per booking. MeeHelper reserves the right to modify or withdraw offers without prior notice. Discounts apply on service charges only, not spare parts.</p>
                         </div>
                     </div>
                 </div>

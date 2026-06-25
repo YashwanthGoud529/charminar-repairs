@@ -30,7 +30,7 @@ const ServicesContent = ({ serviceListSchema, services }) => {
             {/* Unified Page Hero */}
             <PageHero
                 title="Professional Appliance Repair Services"
-                subtitle="From high-end cooling systems to essential kitchen tools, Charminar Repairs provides expert fixes with genuine parts and a 180-day warranty across Hyderabad."
+                subtitle="From high-end cooling systems to essential kitchen tools, MeeHelper provides expert fixes with genuine parts and a 180-day warranty across Hyderabad."
                 breadcrumb="Our Services"
             />
 
@@ -67,7 +67,7 @@ const ServicesContent = ({ serviceListSchema, services }) => {
                             Our Professional <span className="highlight">Appliance Repair</span> Services
                         </h2>
                         <p className="text-muted mx-auto fs-5 section-desc pt-3">
-                            Charminar Repairs offers <strong>comprehensive restoration</strong> for all major home appliances. Our <strong>Hyderabad-wide technical network</strong> ensures that an <strong>expert engineer</strong> is deployed to your doorstep within 90 minutes.
+                            MeeHelper offers <strong>comprehensive restoration</strong> for all major home appliances. Our <strong>Hyderabad-wide technical network</strong> ensures that an <strong>expert engineer</strong> is deployed to your doorstep within 90 minutes.
                         </p>
                     </div>
                     <div className="row g-4 justify-content-center">
@@ -102,7 +102,7 @@ const ServicesContent = ({ serviceListSchema, services }) => {
                         <div className="col-lg-6">
                             <h3 className="font-outfit">Strategic Repair Infrastructure in Hyderabad</h3>
                             <p className="font-inter">
-                                When a critical home appliance fails, it disrupts your entire daily workflow. You need more than a temporary patch; you need <strong>precision engineering solutions</strong> from a technical partner you can rely on. <strong>Charminar Repairs</strong> has scaled to become Hyderabad's premier appliance restoration hub by prioritizing <strong>diagnostic accuracy</strong> and <strong>logistical efficiency</strong>.
+                                When a critical home appliance fails, it disrupts your entire daily workflow. You need more than a temporary patch; you need <strong>precision engineering solutions</strong> from a technical partner you can rely on. <strong>MeeHelper</strong> has scaled to become Hyderabad's premier appliance restoration hub by prioritizing <strong>diagnostic accuracy</strong> and <strong>logistical efficiency</strong>.
                             </p>
                             <p className="font-inter">
                                 Our technical specialized wings handle complex <strong>inverter PCB diagnostics</strong>, <strong>refrigerant chemical balancing</strong>, and <strong>structural motor winding restoration</strong>. We bridge the gap between expensive brand service centers and unverified local repairmen, offering a <strong>factory-standard experience</strong> at competitive market rates.

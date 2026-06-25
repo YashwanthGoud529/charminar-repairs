@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const AdBanner = () => {
+const AdBanner = ({ bgColor }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     // --- SVG Rocket Icon ---
@@ -14,9 +14,11 @@ const AdBanner = () => {
         </svg>
     );
 
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
+
     return (
-        <section className="ad-banner-section position-relative container" style={{ paddingBottom: '20px', paddingTop: '20px' }}>
-            <div className="container" style={{ maxWidth: '100%' }}>
+        <section className={`ad-banner-section position-relative w-100 ${bgClass}`} style={{ paddingBottom: '20px', paddingTop: '20px' }}>
+            <div className="container">
                 <Link href="/packers-and-movers/" className="text-decoration-none">
                     <div 
                         onMouseEnter={() => setIsHovered(true)}

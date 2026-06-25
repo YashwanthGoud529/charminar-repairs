@@ -83,7 +83,7 @@
 
 .cart-bar-subtext-v4 {
     font-size: 12px;
-    color: #673ab7;
+    color: #024dbe;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
@@ -91,7 +91,7 @@
 }
 
 .cart-bar-btn-v4 {
-    background: #673ab7;
+    background: #024dbe;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -105,7 +105,7 @@
 }
 
 .cart-bar-btn-v4:hover {
-    background: #5e35b1;
+    background: #013c96;
     transform: translateY(-1px);
 }
 

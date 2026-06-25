@@ -3,8 +3,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import RefundContent from '@/components/refund/RefundContent';
 
 export const metadata = constructMetadata({
-    title: 'Refund & Cancellation Policy | Charminar Repairs',
-    description: 'Information about refunds and service cancellations for Charminar Repairs in Hyderabad.',
+    title: 'Refund & Cancellation Policy | MeeHelper',
+    description: 'Information about refunds and service cancellations for MeeHelper in Hyderabad.',
     canonicalPath: '/refund-policy',
 });
 

@@ -56,7 +56,7 @@ const PartnerLogin = () => {
                     <div className="col-md-5">
                         <div className="login-card p-5 shadow-lg border-0 rounded-4 bg-white">
                             <div className="text-center mb-4">
-                                <img src="/images/charminar-repairs-logo.jpeg" alt="Logo" width="150" className="mb-4" />
+                                <img src="/logo.png" alt="Logo" width="150" className="mb-4" />
                                 <h2 className="fw-bold">Partner <span className="text-primary">Portal</span></h2>
                                 <p className="text-muted">Manage your profile & service bookings</p>
                             </div>

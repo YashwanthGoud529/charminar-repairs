@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
     }
 
     return constructMetadata({
-        title: `${blog.title} | Charminar Repairs Hyderabad`,
+        title: `${blog.title} | MeeHelper Hyderabad`,
         description: blog.excerpt,
         canonicalPath: `/blog/${slug}`,
     });
@@ -59,19 +59,19 @@ const BlogDetailPage = async ({ params }) => {
         'datePublished': '2026-03-27T18:00:00+05:30',
         'author': {
             '@type': 'Organization',
-            'name': 'Charminar Repairs Technical Hub'
+            'name': 'MeeHelper Technical Hub'
         },
         'publisher': {
             '@type': 'Organization',
-            'name': 'Charminar Repairs',
+            'name': 'MeeHelper',
             'logo': {
                 '@type': 'ImageObject',
-                'url': 'https://www.charminarrepairs.com/images/charminar-repairs-logo.jpeg'
+                'url': 'https://www.meehelper.com/logo.png'
             }
         },
         'mainEntityOfPage': {
             '@type': 'WebPage',
-            '@id': `https://www.charminarrepairs.com/blog/${slug}`
+            '@id': `https://www.meehelper.com/blog/${slug}`
         }
     };
 
@@ -94,7 +94,7 @@ const BlogDetailPage = async ({ params }) => {
                         <article className="blog-article-premium bg-white p-4 p-md-5 shadow-sm border border-light">
                             <div className="mb-4">
                                 <div className="d-flex align-items-center gap-2 mb-3">
-                                    <span className="badge bg-soft-purple text-purple px-4 py-2 fw-bold" style={{ borderRadius: '8px' }}>TECHNICAL GUIDE</span>
+                                    <span className="badge bg-soft-blue text-purple px-4 py-2 fw-bold" style={{ borderRadius: '4px' }}>TECHNICAL GUIDE</span>
                                 </div>
                                 <h1 className="fw-black text-dark mb-4 fs-1">
                                     {blog.title}
@@ -115,7 +115,7 @@ const BlogDetailPage = async ({ params }) => {
                                 </div>
                             </div>
 
-                            <div className="blog-featured-img-v2 mb-5 rounded-3 overflow-hidden shadow-lg" style={{ borderRadius: '8px' }}>
+                            <div className="blog-featured-img-v2 mb-5 rounded-3 overflow-hidden shadow-lg" style={{ borderRadius: '4px' }}>
                                 <img src={blog.image} alt={blog.title} className="w-100" style={{ maxHeight: '500px', objectFit: 'cover' }} />
                             </div>
 
@@ -128,7 +128,7 @@ const BlogDetailPage = async ({ params }) => {
                                     <h3 className="fw-black mb-3 h2">Broken Appliance?</h3>
                                     <p className="opacity-75 fs-5 mb-4">Our background-verified master technicians in <strong>Hyderabad</strong> are ready for same-day inspection.</p>
                                     <div className="d-flex flex-wrap gap-3">
-                                        <a href="tel:8008615049" className="btn btn-primary px-5 py-3 fw-bold rounded-3" style={{ background: '#673ab7', borderColor: '#673ab7' }}>
+                                        <a href="tel:8008615049" className="btn btn-primary px-5 py-3 fw-bold rounded-3" style={{ background: '#024dbe', borderColor: '#024dbe' }}>
                                             CALL 8008615049
                                         </a>
                                         <Link href="/contact-us" className="btn btn-outline-light px-5 py-3 fw-black rounded-3 border-2">
@@ -145,7 +145,7 @@ const BlogDetailPage = async ({ params }) => {
                                 <div key={nextBlog.id} className="col-md-6">
                                     <Link href={`/blog/${nextBlog.slug}`} className="text-decoration-none h-100 d-block">
                                         <div className="next-article-card p-3 bg-white shadow-sm border border-light h-100 d-flex gap-3 align-items-center">
-                                            <img src={nextBlog.image} width="100" height="80" className="object-fit-cover rounded-3" style={{ borderRadius: '8px' }} alt="next" />
+                                            <img src={nextBlog.image} width="100" height="80" className="object-fit-cover rounded-3" style={{ borderRadius: '4px' }} alt="next" />
                                             <div>
                                                 <h6 className="fw-bold text-dark mb-1 small line-clamp-2">{nextBlog.title}</h6>
                                                 <span className="text-purple x-small fw-bold">{nextBlog.category}</span>
@@ -164,7 +164,7 @@ const BlogDetailPage = async ({ params }) => {
                                 <i className="fas fa-tools fa-3x mb-4 opacity-50"></i>
                                 <h4 className="fw-black mb-3">Instant Booking</h4>
                                 <p className="small opacity-75 mb-4">Professional repair service at your doorstep across Hyderabad.</p>
-                                <a href="tel:8008615049" className="btn btn-light w-100 py-3 fw-black text-purple" style={{ borderRadius: '8px' }}>
+                                <a href="tel:8008615049" className="btn btn-light w-100 py-3 fw-black text-purple" style={{ borderRadius: '4px' }}>
                                     CALL ENGINEER
                                 </a>
                             </div>
@@ -175,7 +175,7 @@ const BlogDetailPage = async ({ params }) => {
                                     {recommendedBlogs.slice(0, 6).map(rec => (
                                         <Link key={rec.id} href={`/blog/${rec.slug}`} className="text-decoration-none">
                                             <div className="rec-item-v2 d-flex gap-3 align-items-start">
-                                                <img src={rec.image} width="80" height="60" className="rounded-3 object-fit-cover" alt="rec" style={{ borderRadius: '8px' }} />
+                                                <img src={rec.image} width="80" height="60" className="rounded-3 object-fit-cover" alt="rec" style={{ borderRadius: '4px' }} />
                                                 <div>
                                                     <h6 className="fw-bold text-dark mb-1 small line-clamp-2">{rec.title}</h6>
                                                     <span className="x-small text-muted">{rec.category}</span>
@@ -193,12 +193,12 @@ const BlogDetailPage = async ({ params }) => {
             <BookBanner />
 
             <style id="blog-detail-refined">{`
-                .blog-detail-page { font-family: var(--font-outfit), sans-serif; }
+                .blog-detail-page { font-family: var(--font-main), sans-serif; }
                 .fw-black { font-weight: 900; }
-                .text-purple { color: #673ab7; }
-                .bg-purple { background: #673ab7; }
-                .bg-soft-purple { background: rgba(103, 58, 183, 0.08); }
-                .btn-purple { background: #673ab7; color: white; }
+                .text-purple { color: #024dbe; }
+                .bg-purple { background: #024dbe; }
+                .bg-soft-blue { background: rgba(2, 77, 190, 0.08); }
+                .btn-purple { background: #024dbe; color: white; }
                 
                 .blog-article-premium {
                     border-radius: 4px;
@@ -207,7 +207,7 @@ const BlogDetailPage = async ({ params }) => {
                 .hub-blob {
                     width: 300px;
                     height: 300px;
-                    background: radial-gradient(circle, rgba(103, 58, 183, 0.2) 0%, transparent 70%);
+                    background: radial-gradient(circle, rgba(2, 77, 190, 0.2) 0%, transparent 70%);
                     z-index: 0;
                 }
 
@@ -218,7 +218,7 @@ const BlogDetailPage = async ({ params }) => {
 
                 .next-article-card:hover {
                     transform: translateX(5px);
-                    border-color: #673ab7 !important;
+                    border-color: #024dbe !important;
                 }
 
                 .line-clamp-2 {

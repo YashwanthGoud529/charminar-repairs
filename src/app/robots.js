@@ -8,6 +8,7 @@ export default function robots() {
         allow: '/',
         disallow: [
           '/admin/',
+          '/partner/',
           '/api/',
           '/_next/',
           '/cart/',
@@ -15,7 +16,7 @@ export default function robots() {
         ],
       },
     ],
-    sitemap: 'https://www.charminarrepairs.com/sitemap.xml',
-    host: 'https://www.charminarrepairs.com'
+    sitemap: 'https://www.meehelper.com/sitemap.xml',
+    host: 'https://www.meehelper.com'
   };
 }

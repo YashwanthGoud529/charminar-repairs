@@ -3,22 +3,22 @@
  * Update these values to change the brand identity globally.
  */
 export const BRAND = {
-    name: "Charminar Repairs",
-    legalName: "Charminar Repairs Service",
-    shortName: "Charminar Repairs",
-    domain: "charminarrepairs.com",
-    tagline: "Hyderabad's Trusted Home Service Platform",
+    name: "MeeHelper",
+    legalName: "MeeHelper Home Services",
+    shortName: "MeeHelper",
+    domain: "meehelper.com",
+    tagline: "Mee Intiki, MeeHelper — Your Trusted Home Partner",
     phone: "8008615049",
     phoneDisplay: "+91-8008615049",
-    email: "contact@charminarrepairs.com",
+    email: "support@meehelper.com",
     address: "Karwan, Hyderabad, Telangana 500006",
     social: {
-        facebook: "charminarrepairs",
-        instagram: "charminarrepairs",
-        twitter: "charminarrepairs",
+        facebook: "meehelper",
+        instagram: "meehelper",
+        twitter: "meehelper",
     },
     schema: {
         foundingDate: "2013-05-15",
-        logo: "/images/charminar-repairs-logo.jpeg",
+        logo: "/logo.png",
     }
 };

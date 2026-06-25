@@ -3,16 +3,16 @@ import PageHero from '@/components/shared/PageHero';
 import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
-const GOOGLE_REVIEW_URL = 'https://www.google.com/search?q=charminar+appliance+repairs,+hyderabad#mpd=~13980744700618605071/customers/reviewsa';
+const GOOGLE_REVIEW_URL = 'https://www.google.com/search?q=meehelper+home+services,+hyderabad#mpd=~13980744700618605071/customers/reviewsa';
 
 export const metadata = constructMetadata({
-    title: 'Customer Reviews & Ratings | Charminar Repairs Hyderabad',
-    description: 'Read verified customer reviews for Charminar Repairs. 10,000+ happy customers across Hyderabad rate us 4.8/5 for appliance repair, cleaning, and home services.',
+    title: 'Customer Reviews & Ratings | MeeHelper Hyderabad',
+    description: 'Read verified customer reviews for MeeHelper. 10,000+ happy customers across Hyderabad rate us 4.8/5 for appliance repair, cleaning, and home services.',
     canonicalPath: '/reviews',
 });
 
 const stats = [
-    { label: 'Happy Customers', value: '10,000+', icon: '😊', color: '#673ab7' },
+    { label: 'Happy Customers', value: '10,000+', icon: '😊', color: '#024dbe' },
     { label: 'Average Rating', value: '4.8 / 5', icon: '⭐', color: '#f59e0b' },
     { label: 'Jobs Completed', value: '35,000+', icon: '✅', color: '#10b981' },
     { label: 'Repeat Customers', value: '78%', icon: '🔁', color: '#0ea5e9' },
@@ -32,7 +32,7 @@ const reviews = [
 
 const StarRating = ({ rating }) => (
     <div style={{ display: 'flex', gap: 2 }}>
-        {[1,2,3,4,5].map(s => (
+        {[1, 2, 3, 4, 5].map(s => (
             <span key={s} style={{ color: s <= rating ? '#f59e0b' : '#e2e8f0', fontSize: 14 }}>★</span>
         ))}
     </div>
@@ -71,7 +71,7 @@ export default function ReviewsPage() {
                             <div key={i} style={{ background: '#fff', border: '1px solid #e8eaf0', borderRadius: 4, padding: '22px 20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                     <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                                        <div style={{ width: 40, height: 40, background: '#673ab7', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 800, fontSize: 16, flexShrink: 0 }}>
+                                        <div style={{ width: 40, height: 40, background: '#024dbe', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 800, fontSize: 16, flexShrink: 0 }}>
                                             {r.name.charAt(0)}
                                         </div>
                                         <div>
@@ -79,7 +79,7 @@ export default function ReviewsPage() {
                                             <div style={{ fontSize: 12, color: '#94a3b8' }}>{r.area}</div>
                                         </div>
                                     </div>
-                                    <span style={{ fontSize: 10, background: '#f3e8ff', color: '#673ab7', padding: '2px 8px', borderRadius: 4, fontWeight: 700, whiteSpace: 'nowrap' }}>{r.service}</span>
+                                    <span style={{ fontSize: 10, background: '#f3e8ff', color: '#024dbe', padding: '2px 8px', borderRadius: 4, fontWeight: 700, whiteSpace: 'nowrap' }}>{r.service}</span>
                                 </div>
                                 <StarRating rating={r.rating} />
                                 <p style={{ color: '#475569', fontSize: 13, lineHeight: 1.65, margin: 0 }}>"{r.text}"</p>
@@ -90,7 +90,7 @@ export default function ReviewsPage() {
 
                     <div style={{ textAlign: 'center', marginTop: 48 }}>
                         <p style={{ color: '#64748b', fontSize: 13, marginBottom: 16 }}>Want to share your experience?</p>
-                        <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer" style={{ background: '#673ab7', color: '#fff', padding: '12px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14, display: 'inline-block' }}>Leave a Google Review ⭐</a>
+                        <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer" style={{ background: '#024dbe', color: '#fff', padding: '12px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14, display: 'inline-block' }}>Leave a Google Review ⭐</a>
                     </div>
                 </div>
             </section>

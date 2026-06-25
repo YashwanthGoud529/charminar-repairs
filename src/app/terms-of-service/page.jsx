@@ -3,8 +3,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import TermsContent from '@/components/terms/TermsContent';
 
 export const metadata = constructMetadata({
-    title: 'Terms of Service | Charminar Repairs Hyderabad',
-    description: 'Read the terms and conditions for using Charminar Repairs appliance repair services in Hyderabad.',
+    title: 'Terms of Service | MeeHelper Hyderabad',
+    description: 'Read the terms and conditions for using MeeHelper appliance repair services in Hyderabad.',
     canonicalPath: '/terms-of-service',
 });
 

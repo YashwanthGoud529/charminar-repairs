@@ -4,8 +4,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Join as a Technician | Charminar Repairs – Work With Us in Hyderabad',
-    description: 'Join Charminar Repairs as a certified field technician. Earn ₹25,000–₹60,000/month, flexible timings, and grow your career in home services.',
+    title: 'Join as a Technician | MeeHelper – Work With Us in Hyderabad',
+    description: 'Join MeeHelper as a certified field technician. Earn ₹25,000–₹60,000/month, flexible timings, and grow your career in home services.',
     canonicalPath: '/join-as-technician',
 });
 
@@ -43,7 +43,7 @@ export default function JoinAsTechnicianPage() {
             <section style={{ padding: '60px 0 0' }}>
                 <div className="container" style={{ maxWidth: 1100 }}>
                     <h2 style={{ textAlign: 'center', fontWeight: 800, fontSize: 24, color: '#0c1228', marginBottom: 8 }}>Why Work With Us?</h2>
-                    <p style={{ textAlign: 'center', color: '#64748b', fontSize: 14, marginBottom: 36 }}>Join 150+ certified technicians earning well and growing their careers with Charminar Repairs</p>
+                    <p style={{ textAlign: 'center', color: '#64748b', fontSize: 14, marginBottom: 36 }}>Join 150+ certified technicians earning well and growing their careers with MeeHelper</p>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
                         {perks.map((p, i) => (
                             <div key={i} style={{ background: '#fff', border: '1px solid #e8eaf0', borderRadius: 4, padding: '24px 20px' }}>
@@ -75,7 +75,7 @@ export default function JoinAsTechnicianPage() {
                                     <div style={{ fontSize: 11, color: '#94a3b8' }}>Openings</div>
                                     <div style={{ fontWeight: 800, fontSize: 16, color: '#10b981' }}>{r.openings}</div>
                                 </div>
-                                <Link href="/contact-us/" style={{ background: '#673ab7', color: '#fff', padding: '8px 20px', borderRadius: 4, fontWeight: 700, fontSize: 13, flexShrink: 0 }}>Apply Now</Link>
+                                <Link href="/contact-us/" style={{ background: '#024dbe', color: '#fff', padding: '8px 20px', borderRadius: 4, fontWeight: 700, fontSize: 13, flexShrink: 0 }}>Apply Now</Link>
                             </div>
                         ))}
                     </div>
@@ -89,18 +89,18 @@ export default function JoinAsTechnicianPage() {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20, marginBottom: 40 }}>
                         {process.map((s, i) => (
                             <div key={i} style={{ background: '#fff', border: '1px solid #e8eaf0', borderRadius: 4, padding: '24px 20px', textAlign: 'center' }}>
-                                <div style={{ width: 40, height: 40, background: '#f3e8ff', color: '#673ab7', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 18, margin: '0 auto 14px' }}>{s.no}</div>
+                                <div style={{ width: 40, height: 40, background: '#f3e8ff', color: '#024dbe', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 18, margin: '0 auto 14px' }}>{s.no}</div>
                                 <h4 style={{ fontWeight: 800, fontSize: 14, color: '#0c1228', marginBottom: 8 }}>{s.title}</h4>
                                 <p style={{ fontSize: 12.5, color: '#475569', margin: 0, lineHeight: 1.6 }}>{s.desc}</p>
                             </div>
                         ))}
                     </div>
-                    <div style={{ background: '#673ab7', borderRadius: 4, padding: '32px', textAlign: 'center', color: '#fff' }}>
+                    <div style={{ background: '#024dbe', borderRadius: 4, padding: '32px', textAlign: 'center', color: '#fff' }}>
                         <h3 style={{ fontWeight: 800, marginBottom: 6 }}>Ready to Start Earning?</h3>
                         <p style={{ opacity: 0.85, fontSize: 14, marginBottom: 20 }}>WhatsApp your name and experience to us. Our HR team will respond within 24 hours.</p>
                         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
                             <a href="https://wa.me/918008615049?text=Hi%2C%20I%20want%20to%20join%20as%20a%20technician" target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '11px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>WhatsApp to Apply</a>
-                            <a href="mailto:hr@charminarrepairs.com" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)', padding: '11px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>Email Your Resume</a>
+                            <a href="mailto:hr@meehelper.com" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)', padding: '11px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>Email Your Resume</a>
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,9 @@
 /* AboutPage Main Styles - Strictly Purple */
 :root {
-    --primary-purple: #673ab7;
-    --primary-gradient: linear-gradient(135deg, #673ab7 0%, #5e35b1 100%);
+    --primary-purple: #024dbe;
+    --primary-gradient: linear-gradient(135deg, #024dbe 0%, #013c96 100%);
     --secondary-gradient: linear-gradient(135deg, #0c122b 0%, #1a254d 100%);
-    --vibrant-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --vibrant-gradient: linear-gradient(135deg, #024dbe 0%, #06b6d4 100%);
     --success-gradient: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
 }
 
@@ -17,46 +17,46 @@
 }
 
 .section-tag {
-    color: #673ab7 !important;
-    border-left: 3px solid #673ab7 !important;
+    color: #024dbe !important;
+    border-left: 3px solid #024dbe !important;
 }
 
 .premium-mini-card:hover {
-    border-color: rgba(103, 58, 183, 0.4) !important;
-    box-shadow: 0 15px 30px rgba(103, 58, 183, 0.1);
+    border-color: rgba(2, 77, 190, 0.4) !important;
+    box-shadow: 0 15px 30px rgba(2, 77, 190, 0.1);
 }
 
 .btn-premium-purple {
-    background: #673ab7 !important;
+    background: #024dbe !important;
     border-radius: 4px;
     font-weight: 800;
 }
 
 .btn-premium-purple:hover {
-    background: #5e35b1 !important;
-    box-shadow: 0 15px 30px rgba(103, 58, 183, 0.3) !important;
+    background: #013c96 !important;
+    box-shadow: 0 15px 30px rgba(2, 77, 190, 0.3) !important;
 }
 
 .floating-stat-card {
-    background: #673ab7 !important;
+    background: #024dbe !important;
     border-radius: 4px;
 }
 
 .vision-card-premium:hover {
-    border-color: #673ab7 !important;
+    border-color: #024dbe !important;
 }
 
 .text-purple {
-    color: #673ab7 !important;
+    color: #024dbe !important;
 }
 
 .bg-purple {
-    background: #673ab7 !important;
+    background: #024dbe !important;
 }
 
 /* Ensure About Protocol is visible */
 .bg-repair-purple {
-    background: #673ab7 !important;
+    background: #024dbe !important;
 }
 
 .protocol-card {
@@ -67,4 +67,98 @@
 .protocol-card:hover {
     background: rgba(255, 255, 255, 0.05);
     transform: translateY(-5px);
+}
+
+/* ── Swiper Carousel Custom Styles for Ecosystem ── */
+.swiper-container-relative {
+    position: relative;
+    width: 100%;
+}
+
+.about-ecosystem-swiper {
+    position: relative;
+    padding: 10px 4px 30px 4px;
+}
+
+.about-ecosystem-swiper .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.about-ecosystem-swiper .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+/* Custom Swiper Navigation Buttons matching premium theme */
+.about-ecosystem-swiper .swiper-button-next,
+.about-ecosystem-swiper .swiper-button-prev {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50%;
+    top: 50% !important;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(2, 77, 190, 0.15) !important;
+    box-shadow: 0 4px 14px rgba(2, 77, 190, 0.08) !important;
+    color: #024dbe !important;
+    transition: all 0.25s ease !important;
+    z-index: 10;
+}
+
+.about-ecosystem-swiper .swiper-button-next {
+    right: -22px !important;
+}
+
+.about-ecosystem-swiper .swiper-button-prev {
+    left: -22px !important;
+}
+
+/* Remove default svg inside swiper navigation */
+.about-ecosystem-swiper .swiper-button-next svg,
+.about-ecosystem-swiper .swiper-button-prev svg {
+    display: none !important;
+}
+
+.about-ecosystem-swiper .swiper-button-next::after {
+    content: '\f054' !important;
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 13px !important;
+}
+
+.about-ecosystem-swiper .swiper-button-prev::after {
+    content: '\f053' !important;
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 13px !important;
+}
+
+.about-ecosystem-swiper .swiper-button-next:hover,
+.about-ecosystem-swiper .swiper-button-prev:hover {
+    background: #024dbe !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    box-shadow: 0 6px 20px rgba(2, 77, 190, 0.3) !important;
+}
+
+/* Shift arrow on hover */
+.about-ecosystem-swiper .swiper-button-next:hover::after {
+    transform: translateX(1px);
+}
+
+.about-ecosystem-swiper .swiper-button-prev:hover::after {
+    transform: translateX(-1px);
+}
+
+/* Media queries for positioning navigation buttons on smaller viewports */
+@media (max-width: 768px) {
+    .about-ecosystem-swiper .swiper-button-next {
+        right: 0px !important;
+    }
+    .about-ecosystem-swiper .swiper-button-prev {
+        left: 0px !important;
+    }
 }

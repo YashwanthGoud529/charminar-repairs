@@ -79,7 +79,7 @@ const PageHero = ({ title, subtitle, breadcrumb, bgImage = '/images/About-Hero-B
                 }
 
                 .crumb-link {
-                    color: #673ab7 !important;
+                    color: #024dbe !important;
                     text-decoration: none !important;
                     font-weight: 800 !important;
                     font-size: 0.75rem !important;
@@ -95,7 +95,7 @@ const PageHero = ({ title, subtitle, breadcrumb, bgImage = '/images/About-Hero-B
                 }
 
                 .page-title {
-                    font-family: var(--font-outfit), sans-serif !important;
+                    font-family: var(--font-main), sans-serif !important;
                     font-size: 3rem !important;
                     font-weight: 950 !important;
                     color: #ffffff !important;
@@ -109,13 +109,13 @@ const PageHero = ({ title, subtitle, breadcrumb, bgImage = '/images/About-Hero-B
                     color: rgba(255, 255, 255, 0.85) !important;
                     max-width: 850px !important;
                     line-height: 1.6 !important;
-                    font-family: var(--font-outfit), sans-serif !important;
+                    font-family: var(--font-main), sans-serif !important;
                 }
 
                 .hero-accent-line {
                     width: 70px !important;
                     height: 5px !important;
-                    background: #673ab7 !important;
+                    background: #024dbe !important;
                     margin-top: 28px !important;
                     border-radius: 10px !important;
                     position: relative !important;
@@ -141,7 +141,7 @@ const PageHero = ({ title, subtitle, breadcrumb, bgImage = '/images/About-Hero-B
                     width: 300px !important;
                     height: 300px !important;
                     opacity: 0.12 !important;
-                    filter: drop-shadow(0 0 30px rgba(103, 58, 183, 0.3)) !important;
+                    filter: drop-shadow(0 0 30px rgba(2, 77, 190, 0.3)) !important;
                     animation: float-inner 8s infinite ease-in-out !important;
                     pointer-events: none !important;
                     z-index: 5 !important;

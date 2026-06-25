@@ -24,9 +24,10 @@ const SAFETY_SERVICES = [
     slug: `/${SERVICE_CANONICAL_MAP[title]}`
 }));
 
-const HomeSafety = () => {
+const HomeSafety = ({ bgColor }) => {
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
     return (
-        <section className="home-safety-carousel py-5 bg-light-soft" style={{ borderRadius: '12px' }}>
+        <section className={`home-safety-carousel py-5 ${bgClass}`} style={{ borderRadius: '4px' }}>
             <div className="container custom-container">
                 <div className="d-flex align-items-center mb-4">
                     <h2 className="shared-carousel-title mb-0">Home Repair Services</h2>

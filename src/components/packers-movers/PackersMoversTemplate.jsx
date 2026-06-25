@@ -128,7 +128,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
         if (!finalQuote) return;
         
         let labelSuffix = doorstepWash ? ` + Doorstep Wash/Sanitization` : '';
-        const message = `Hello Charminar Repairs, I want to book Packers & Movers service:\n- Type: ${finalQuote.label} (${shiftingCategory})${labelSuffix}\n- From: ${pickupLocation}\n- To: ${dropLocation}\n- Estimated Price: ₹${finalQuote.totalPrice}\n- Date: ${shiftingDate}\n- Phone: ${phoneNumber}`;
+        const message = `Hello MeeHelper, I want to book Packers & Movers service:\n- Type: ${finalQuote.label} (${shiftingCategory})${labelSuffix}\n- From: ${pickupLocation}\n- To: ${dropLocation}\n- Estimated Price: ₹${finalQuote.totalPrice}\n- Date: ${shiftingDate}\n- Phone: ${phoneNumber}`;
         const encodedMessage = encodeURIComponent(message);
         window.open(`https://wa.me/918008615049?text=${encodedMessage}`, '_blank');
 
@@ -445,7 +445,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                             <span className="text-primary fw-bold text-uppercase tracking-wider small">★ #1 Relocation Partners</span>
                             <h2 className="fw-black text-dark mt-2 mb-3 fs-2">Best Packers and Movers in {displayLocation}</h2>
                             <p className="text-secondary small lh-lg mb-4">
-                                The hustling city of {displayLocation} attracts thousands of working professionals throughout the year. Choosing efficient packers and movers in {displayLocation} becomes a necessity for these working professionals. For seamless and quick residential and commercial relocations, <strong>Charminar Repairs</strong> is here to help you. We are noted for our reliability and for executing high-quality relocations. We have a team of highly skilled professionals who are experts in providing customised moving plans that suit your unique needs. On our user-friendly platform, you can choose from a wide range of moving services and get price quotations instantly. Our transparent pricing, premium packing, and flexible moving options enable us to establish trust among our customers. Choose Charminar Repairs and enjoy a pleasant and hassle-free moving experience.
+                                The hustling city of {displayLocation} attracts thousands of working professionals throughout the year. Choosing efficient packers and movers in {displayLocation} becomes a necessity for these working professionals. For seamless and quick residential and commercial relocations, <strong>MeeHelper</strong> is here to help you. We are noted for our reliability and for executing high-quality relocations. We have a team of highly skilled professionals who are experts in providing customised moving plans that suit your unique needs. On our user-friendly platform, you can choose from a wide range of moving services and get price quotations instantly. Our transparent pricing, premium packing, and flexible moving options enable us to establish trust among our customers. Choose MeeHelper and enjoy a pleasant and hassle-free moving experience.
                             </p>
                         </div>
                         <div className="col-lg-5">
@@ -482,15 +482,15 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                 <div className="container custom-container px-lg-4 text-center">
                     <div className="mb-5">
                         <span className="text-primary fw-bold text-uppercase tracking-wider">Our Shifting Portfolio</span>
-                        <h2 className="fw-black text-dark mt-2 fs-2">What are the Different Services offered by Charminar Repairs?</h2>
-                        <p className="text-muted">At Charminar Repairs, we offer a wide range of packers and movers services in {displayLocation}. From residential moves to commercial relocations, our experts are proficient in handling every type and aspect of moving.</p>
+                        <h2 className="fw-black text-dark mt-2 fs-2">What are the Different Services offered by MeeHelper?</h2>
+                        <p className="text-muted">At MeeHelper, we offer a wide range of packers and movers services in {displayLocation}. From residential moves to commercial relocations, our experts are proficient in handling every type and aspect of moving.</p>
                     </div>
                     <div className="row g-4">
                         {[
-                            { title: 'House Shifting Services', desc: 'Charminar Repairs is one of the best options for home-shifting services. Our professional workforce is capable of carefully loading, packing, moving, and organising your home with the highest care and convenience. We use only high-quality packing material, which ensures the protection of your belongings during transit. We are also versatile in terms of post-shifting services such as product reassembly and appliance installation.', img: '/images/house-relocation-new.png' },
-                            { title: 'Car Transport Services', desc: 'If you are moving far within the city or moving to another city that is far from your current location, it is only logical to hire a car relocator. For car transportation services, Charminar Repairs is a well-known brand. Our flexible booking policy is ideal for transferring vehicles from one place to another on a timeline that is convenient for you. Our team of specialists will carefully pack and move your car, ensuring that it arrives at the destination on schedule.', img: '/images/vehicle_shifting_1780746074228.png' },
-                            { title: 'Bike Shifting Services', desc: 'For shifting a bike, one must have ample experience. At Charminar Repairs, our workers are well-known for providing excellent bike-shifting services. Our team of professionals are very competent in packaging and transporting expensive sports motorcycles to your next adventure destination. With a commitment to providing excellent service and the use of high-grade materials, we ensure that your favourite bike is delivered scratch-free and on schedule.', img: '/images/packers_mover_banner_v2_1780745477698.png' },
-                            { title: 'City Tempo Services', desc: 'City tempo service is an excellent option for transporting fewer items. In addition, it is less expensive than renting a fully functional vehicle and can handle traffic well. We can help with your relocations with its well-maintained fleet of tempo travellers, which includes Chota Hathi and TATA Ace. Contact Charminar Repairs for a smooth and affordable shifting experience.', img: '/images/packing_unpacking_1780746091063.png' },
+                            { title: 'House Shifting Services', desc: 'MeeHelper is one of the best options for home-shifting services. Our professional workforce is capable of carefully loading, packing, moving, and organising your home with the highest care and convenience. We use only high-quality packing material, which ensures the protection of your belongings during transit. We are also versatile in terms of post-shifting services such as product reassembly and appliance installation.', img: '/images/house-relocation-new.png' },
+                            { title: 'Car Transport Services', desc: 'If you are moving far within the city or moving to another city that is far from your current location, it is only logical to hire a car relocator. For car transportation services, MeeHelper is a well-known brand. Our flexible booking policy is ideal for transferring vehicles from one place to another on a timeline that is convenient for you. Our team of specialists will carefully pack and move your car, ensuring that it arrives at the destination on schedule.', img: '/images/vehicle_shifting_1780746074228.png' },
+                            { title: 'Bike Shifting Services', desc: 'For shifting a bike, one must have ample experience. At MeeHelper, our workers are well-known for providing excellent bike-shifting services. Our team of professionals are very competent in packaging and transporting expensive sports motorcycles to your next adventure destination. With a commitment to providing excellent service and the use of high-grade materials, we ensure that your favourite bike is delivered scratch-free and on schedule.', img: '/images/packers_mover_banner_v2_1780745477698.png' },
+                            { title: 'City Tempo Services', desc: 'City tempo service is an excellent option for transporting fewer items. In addition, it is less expensive than renting a fully functional vehicle and can handle traffic well. We can help with your relocations with its well-maintained fleet of tempo travellers, which includes Chota Hathi and TATA Ace. Contact MeeHelper for a smooth and affordable shifting experience.', img: '/images/packing_unpacking_1780746091063.png' },
                             { title: 'Office Shifting Services', desc: 'Office moves typically cause a pause in regular business operations. The relocation procedure needs to be quick and effective. We provide the most efficient and speedy office-shifting services. Before transferring everything to your new workplace, the team of professionals carefully packs all of the bulky equipment, furniture, laptops, servers, and documents. Upon reaching the new workplace, we will also unpack and organise the place before leaving and we also make sure your business is not affected during the move.', img: '/images/office_shifting_1780746056579.png' }
                         ].map((svc, idx) => (
                             <div key={idx} className={idx < 3 ? "col-md-4" : "col-md-6"}>
@@ -514,7 +514,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                 <div className="container custom-container px-lg-4">
                     <div className="text-center mb-5">
                         <span className="text-primary fw-bold text-uppercase tracking-wider">Simple Booking Steps</span>
-                        <h2 className="fw-black text-dark mt-2 fs-2">How to Book Charminar Repairs Packers and Movers Near {displayLocation}?</h2>
+                        <h2 className="fw-black text-dark mt-2 fs-2">How to Book MeeHelper Packers and Movers Near {displayLocation}?</h2>
                         <p className="text-muted">With our carefully designed platform, we have simplified the process of booking. We provide a convenient booking experience for everyone. Here is a guide to booking shifting in {displayLocation} – for both local and intercity moves!</p>
                     </div>
                     <div className="row g-4">
@@ -525,7 +525,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                                 </h4>
                                 <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
                                     {[
-                                        { step: '1', title: 'Visit Website/App', desc: 'Access Charminar Repairs’s platform for your booking.' },
+                                        { step: '1', title: 'Visit Website/App', desc: 'Access MeeHelper’s platform for your booking.' },
                                         { step: '2', title: 'Select Shifting Location', desc: 'Enter the elements of your move, such as your current locality and new address.' },
                                         { step: '3', title: 'Add Inventory', desc: 'Select or select items you expect us to move.' },
                                         { step: '4', title: 'Enter Shifting Date and Time', desc: 'Select the preferred date and time for shifting.' },
@@ -581,13 +581,13 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                 <div className="container custom-container px-lg-4 text-center">
                     <div className="mb-5">
                         <span className="text-primary fw-bold text-uppercase tracking-wider">Reliable & Insured Moving</span>
-                        <h2 className="fw-black text-dark mt-2 fs-2">Why Charminar Repairs's Packers & Movers in {displayLocation}?</h2>
+                        <h2 className="fw-black text-dark mt-2 fs-2">Why MeeHelper's Packers & Movers in {displayLocation}?</h2>
                         <p className="text-muted">We are dedicated to offering our clients the most outstanding moving experience possible, guaranteeing a smooth and stress-free move.</p>
                     </div>
                     <div className="row g-4 text-start">
                         {[
                             { title: 'Lowest Price Guarantee', desc: 'We take pride in our lowest price guarantee policy. Our platform provides instant and accurate pricing with zero hidden charges or last-minute surprise fees. The process is completely free from intermediaries, eliminating unnecessary costs.' },
-                            { title: 'Best Quality Service', desc: 'At Charminar Repairs, we put quality over everything else. We provide premium packing materials for every booking. Our skilled labourers execute each booking with dedication, ensuring a high standard of protection throughout transit.' },
+                            { title: 'Best Quality Service', desc: 'At MeeHelper, we put quality over everything else. We provide premium packing materials for every booking. Our skilled labourers execute each booking with dedication, ensuring a high standard of protection throughout transit.' },
                             { title: 'Reschedule Your Shifting Anytime', desc: 'We understand that plans can change due to last-minute meetings or trips. Therefore, we offer a free rescheduling option if the shifting date is altered up to 48 hours before the scheduled time slot.' },
                             { title: 'Support Assistance', desc: 'Reach out to our dedicated customer support team 24/7. We are available on live chat and phone to handle every query, clear doubts, and coordinate your move seamlessly.' },
                             { title: 'Professional Labour', desc: 'Our ground crew is the backbone of every moving operation. Hired through vetting and rigorously trained, we have specialists for car, bike, residential, commercial, and tempo relocations. They also handle reassembly and appliance setup.' }
@@ -613,7 +613,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                 <div className="container custom-container px-lg-4 text-center">
                     <div className="mb-5">
                         <span className="text-primary fw-bold text-uppercase tracking-wider">Step-by-Step Relocation Flow</span>
-                        <h2 className="fw-black text-dark mt-2 fs-2">What is the Process for Charminar Repairs Home Shifting Services?</h2>
+                        <h2 className="fw-black text-dark mt-2 fs-2">What is the Process for MeeHelper Home Shifting Services?</h2>
                         <p className="text-muted">We have streamlined the entire process. Our professional workforce is punctual and careful at every step of the move.</p>
                     </div>
                     <div className="row g-4 text-start">
@@ -637,12 +637,12 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                 </div>
             </section>
 
-            {/* CHARMINAR REPAIRS RATES TABLES */}
+            {/* MEEHELPER RATES TABLES */}
             <section className="py-5 bg-light-soft border-top border-bottom">
                 <div className="container custom-container px-lg-4 text-center">
                     <div className="mb-5">
                         <span className="text-primary fw-bold text-uppercase tracking-wider">Transaprent Pricing</span>
-                        <h2 className="fw-black text-dark mt-2 fs-2">Charminar Repairs's Packers and Movers Charges in {displayLocation}</h2>
+                        <h2 className="fw-black text-dark mt-2 fs-2">MeeHelper's Packers and Movers Charges in {displayLocation}</h2>
                         <p className="text-muted">Below are the transparent starting prices for local and intercity house shifting services.</p>
                     </div>
 
@@ -760,7 +760,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                     <div className="mb-5">
                         <span className="text-primary fw-bold text-uppercase tracking-wider">Pricing transparency</span>
                         <h2 className="fw-black text-dark mt-2 fs-2">Factors Affecting Shifting Costs in {displayLocation}</h2>
-                        <p className="text-muted">While Charminar Repairs guarantees the best deal, the following variables influence the final quotation breakdown.</p>
+                        <p className="text-muted">While MeeHelper guarantees the best deal, the following variables influence the final quotation breakdown.</p>
                     </div>
                     <div className="row g-4 text-start">
                         {[
@@ -793,7 +793,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                 <div className="container custom-container px-lg-4 text-center">
                     <div className="mb-5">
                         <span className="text-primary fw-bold text-uppercase tracking-wider">Premium Safe Packing</span>
-                        <h2 className="fw-black text-dark mt-2 fs-2">What Packaging Materials are used by Charminar Repairs?</h2>
+                        <h2 className="fw-black text-dark mt-2 fs-2">What Packaging Materials are used by MeeHelper?</h2>
                         <p className="text-muted">We maintain heavy focus on packaging quality to completely avoid accidents or damage during transit.</p>
                     </div>
                     <div className="row g-4 text-start justify-content-center">
@@ -826,7 +826,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                     <div className="mb-5">
                         <span className="text-primary fw-bold text-uppercase tracking-wider">Supplementary Services</span>
                         <h2 className="fw-black text-dark mt-2 fs-2">Need an Extra Hand? Supplementary Services</h2>
-                        <p className="text-muted">Need more than just packing and shifting? Charminar Repairs offers licensed engineering services for your convenience.</p>
+                        <p className="text-muted">Need more than just packing and shifting? MeeHelper offers licensed engineering services for your convenience.</p>
                     </div>
                     <div className="row g-4 text-start justify-content-center">
                         {[
@@ -856,7 +856,7 @@ const PackersMoversTemplate = ({ displayLocation }) => {
                 <div className="container custom-container px-lg-4 max-w-4xl mx-auto">
                     <h3 className="fw-black text-dark mb-3 fs-3">Conclusion</h3>
                     <p className="text-secondary small lh-lg mb-0">
-                        To sum up, <strong>Charminar Repairs</strong> is the best packer and mover in {displayLocation}. We are known for our reliable and efficient moving services, which are affordable. We are an excellent choice for a hassle-free moving experience. Our team of experts is experienced and well-trained in every aspect of relocating. The customer support team is well aware of the delays and troubles that may occur during the move and can handle them efficiently. For our wide variety of moving services, including home, office and vehicle shifting, we offer transparent and instant pricing that establishes trust among our customers. Making a hassle-free journey for you is the goal of Charminar Repairs packers and movers in {displayLocation}. Book us for your upcoming move!
+                        To sum up, <strong>MeeHelper</strong> is the best packer and mover in {displayLocation}. We are known for our reliable and efficient moving services, which are affordable. We are an excellent choice for a hassle-free moving experience. Our team of experts is experienced and well-trained in every aspect of relocating. The customer support team is well aware of the delays and troubles that may occur during the move and can handle them efficiently. For our wide variety of moving services, including home, office and vehicle shifting, we offer transparent and instant pricing that establishes trust among our customers. Making a hassle-free journey for you is the goal of MeeHelper packers and movers in {displayLocation}. Book us for your upcoming move!
                     </p>
                 </div>
             </section>

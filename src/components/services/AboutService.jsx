@@ -316,7 +316,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
 
     let introText = (
         <p className="as-intro-desc mt-3">
-            At <strong>Charminar Repairs</strong>, we offer expert <strong>{serviceName}</strong> services to
+            At <strong>MeeHelper</strong>, we offer expert <strong>{serviceName}</strong> services to
             restore your appliance's functionality quickly and affordably in <strong>{locFull}</strong>.
             Whether it's a sudden breakdown, noisy operation, or error codes — our certified technicians
             handle <strong>{brandsText}</strong> — and more — with same-day doorstep service starting at just <strong>₹{COMPANY.priceStart}</strong>.
@@ -326,7 +326,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
     if (type === 'cleaning') {
         introText = (
             <p className="as-intro-desc mt-3">
-                At <strong>Charminar Repairs</strong>, we provide premium <strong>{serviceName}</strong> to
+                At <strong>MeeHelper</strong>, we provide premium <strong>{serviceName}</strong> to
                 restore cleanliness and hygiene to your living spaces in <strong>{locFull}</strong>.
                 Our trained and certified cleaning teams use professional equipment and eco-safe agents such as <strong>{brandsText}</strong> to
                 eliminate dirt, grease, and stains — delivering a spotless, hygienic finish starting at just <strong>₹{COMPANY.priceStart}</strong>.
@@ -335,7 +335,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
     } else if (type === 'polishing') {
         introText = (
             <p className="as-intro-desc mt-3">
-                At <strong>Charminar Repairs</strong>, we deliver high-gloss <strong>{serviceName}</strong> to
+                At <strong>MeeHelper</strong>, we deliver high-gloss <strong>{serviceName}</strong> to
                 restore the premium mirror finish of your floors in <strong>{locFull}</strong>.
                 Our specialists use diamond abrasive pads and crystallization shields on stones including <strong>{brandsText}</strong>,
                 removing all scratch marks and restoring a majestic liquid-glass reflection.
@@ -344,7 +344,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
     } else if (type === 'pest') {
         introText = (
             <p className="as-intro-desc mt-3">
-                At <strong>Charminar Repairs</strong>, we provide certified <strong>{serviceName}</strong> to
+                At <strong>MeeHelper</strong>, we provide certified <strong>{serviceName}</strong> to
                 protect your home and family from disease-carrying pests in <strong>{locFull}</strong>.
                 Our licensed pest controllers apply odorless, pet-safe gel baits and barrier sprays from top brands like <strong>{brandsText}</strong> to
                 completely eradicate infestations with a 90-day protection guarantee.
@@ -353,7 +353,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
     } else if (type === 'vehicle') {
         introText = (
             <p className="as-intro-desc mt-3">
-                At <strong>Charminar Auto Care</strong>, we provide professional doorstep <strong>{serviceName}</strong> to
+                At <strong>MeeHelper Auto Care</strong>, we provide professional doorstep <strong>{serviceName}</strong> to
                 restore your vehicle's premium shine in <strong>{locFull}</strong>.
                 We arrive with mobile detailing vans equipped with high-pressure steam, active foam wash, and machine polishers using premium brands like <strong>{brandsText}</strong>.
             </p>
@@ -361,7 +361,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
     } else if (type === 'movers') {
         introText = (
             <p className="as-intro-desc mt-3">
-                At <strong>Charminar Repairs</strong>, we provide expert <strong>{serviceName}</strong> to
+                At <strong>MeeHelper</strong>, we provide expert <strong>{serviceName}</strong> to
                 ensure a completely stress-free relocation experience in <strong>{locFull}</strong>.
                 Our ISO-certified teams handle packing, loading, transport, and setup using professional equipment including <strong>{brandsText}</strong>.
             </p>
@@ -369,7 +369,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
     } else if (type === 'safety') {
         introText = (
             <p className="as-intro-desc mt-3">
-                At <strong>Charminar Repairs</strong>, we offer premium <strong>{serviceName}</strong> to
+                At <strong>MeeHelper</strong>, we offer premium <strong>{serviceName}</strong> to
                 protect and secure your home or business in <strong>{locFull}</strong>.
                 Our background-verified security specialists configure high-definition surveillance systems, biometric smart locks, and waterproof barriers from leading brands like <strong>{brandsText}</strong>, starting at just <strong>₹{sData.price || COMPANY.priceStart}</strong>.
             </p>
@@ -377,7 +377,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
     } else if (type === 'it') {
         introText = (
             <p className="as-intro-desc mt-3">
-                At <strong>Charminar Repairs</strong>, we offer professional <strong>{serviceName}</strong> to
+                At <strong>MeeHelper</strong>, we offer professional <strong>{serviceName}</strong> to
                 optimize your digital workspace and home connectivity in <strong>{locFull}</strong>.
                 Our certified IT engineers configure routers, set up range extenders, upgrade PC hardware, and integrate smart home devices using top brands like <strong>{brandsText}</strong>, starting at just <strong>₹{sData.price || COMPANY.priceStart}</strong>.
             </p>
@@ -392,7 +392,7 @@ const AboutService = ({ serviceName, locationLabel }) => {
     } else if (type === 'pest') {
         sectionSubText = `Thousands of residents in ${locFull} trust ${COMPANY.name} for their safe, licensed pest control treatments. Here's what makes us different:`;
     } else if (type === 'vehicle') {
-        sectionSubText = `Thousands of vehicle owners in ${locFull} trust Charminar Auto Care for premium doorstep washing and detailing. Here's what makes us different:`;
+        sectionSubText = `Thousands of vehicle owners in ${locFull} trust MeeHelper Auto Care for premium doorstep washing and detailing. Here's what makes us different:`;
     } else if (type === 'movers') {
         sectionSubText = `Thousands of families and offices in ${locFull} trust ${COMPANY.name} for secure, damage-free shifting. Here's what makes us different:`;
     } else if (type === 'safety') {

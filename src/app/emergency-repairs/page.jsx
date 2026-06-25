@@ -4,7 +4,7 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Emergency Repairs Hyderabad | Charminar Repairs – 2-Hour Response',
+    title: 'Emergency Repairs Hyderabad | MeeHelper – 2-Hour Response',
     description: 'AC breakdown? Fridge not cooling? We offer emergency appliance repair across Hyderabad with a 2-hour guaranteed response time.',
     canonicalPath: '/emergency-repairs',
 });

@@ -4,8 +4,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Corporate & Bulk Services | Charminar Repairs Hyderabad',
-    description: 'Charminar Repairs offers corporate service contracts for offices, housing societies, hotels, and commercial properties across Hyderabad.',
+    title: 'Corporate & Bulk Services | MeeHelper Hyderabad',
+    description: 'MeeHelper offers corporate service contracts for offices, housing societies, hotels, and commercial properties across Hyderabad.',
     canonicalPath: '/corporate',
 });
 
@@ -77,11 +77,11 @@ export default function CorporatePage() {
                             <div key={i} style={{ background: '#fff', border: '1px solid #e8eaf0', borderRadius: 4, padding: '10px 20px', fontSize: 13, fontWeight: 600, color: '#374151' }}>{c}</div>
                         ))}
                     </div>
-                    <div style={{ background: '#673ab7', borderRadius: 4, padding: '32px', textAlign: 'center', color: '#fff' }}>
+                    <div style={{ background: '#024dbe', borderRadius: 4, padding: '32px', textAlign: 'center', color: '#fff' }}>
                         <h3 style={{ fontWeight: 800, marginBottom: 8 }}>Get a Custom Quote for Your Business</h3>
                         <p style={{ opacity: 0.85, fontSize: 14, marginBottom: 20 }}>Tell us about your property and we'll design a maintenance plan that fits your needs and budget.</p>
                         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Link href="/contact-us/" style={{ background: '#fff', color: '#673ab7', padding: '11px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>Request a Quote</Link>
+                            <Link href="/contact-us/" style={{ background: '#fff', color: '#024dbe', padding: '11px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>Request a Quote</Link>
                             <a href="tel:8008615049" style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.4)', color: '#fff', padding: '11px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>Call 8008615049</a>
                         </div>
                     </div>

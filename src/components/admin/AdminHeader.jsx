@@ -19,7 +19,7 @@ const AdminHeader = ({ onMenuClick }) => {
                 <div className="d-flex align-items-center gap-2">
                     <img src="/favicon.ico" width="24" height="24" alt="logo" className="opacity-75" />
                     <div className="d-none d-lg-block text-dark fw-900 tracking-tighter font-outfit">
-                        <span style={{ color: '#ff6b00' }}>CHARMINAR</span> ADMIN
+                        <span style={{ color: '#ff6b00' }}>MEEHELPER</span> ADMIN
                     </div>
                 </div>
             </div>

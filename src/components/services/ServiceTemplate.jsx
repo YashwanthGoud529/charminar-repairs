@@ -12,49 +12,49 @@ import './ServiceTemplate.css';
 // --- SVG Icons Components ---
 const ChevronRightIcon = ({ size = 10, className = "" }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M9 18l6-6-6-6"/>
+        <path d="M9 18l6-6-6-6" />
     </svg>
 );
 
 const PhoneIcon = ({ size = 18, className = "" }) => (
     <svg width={size} height={size} fill="currentColor" viewBox="0 0 24 24" className={className}>
-        <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
     </svg>
 );
 
 const CrownIcon = () => (
     <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" className="me-1">
-        <path d="M5 16h14v2H5zm14-8l-3.5 3.5-3.5-3.5-3.5 3.5L5 8V5h14v3z"/>
+        <path d="M5 16h14v2H5zm14-8l-3.5 3.5-3.5-3.5-3.5 3.5L5 8V5h14v3z" />
     </svg>
 );
 
 const ShieldCheckIcon = ({ size = 16, className = "" }) => (
     <svg width={size} height={size} fill="currentColor" viewBox="0 0 24 24" className={className}>
-        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
     </svg>
 );
 
 const CheckIcon = ({ size = 14, className = "" }) => (
     <svg width={size} height={size} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M20 6L9 17l-5-5"/>
+        <path d="M20 6L9 17l-5-5" />
     </svg>
 );
 
 const PlusCircleIcon = () => (
     <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-success opacity-75">
-        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+        <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" />
     </svg>
 );
 
 const MinusCircleIcon = () => (
     <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-danger opacity-75">
-        <circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/>
+        <circle cx="12" cy="12" r="10" /><line x1="8" y1="12" x2="16" y2="12" />
     </svg>
 );
 
 const TimesIcon = ({ size = 20, className = "" }) => (
     <svg width={size} height={size} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M18 6L6 18M6 6l12 12"/>
+        <path d="M18 6L6 18M6 6l12 12" />
     </svg>
 );
 
@@ -93,7 +93,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
         if (!titleText) return { name: '', data: null };
         const lowerTitle = titleText.toLowerCase().trim();
         const slugifiedTitle = titleText.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        
+
         // Match keys
         for (const [key, val] of Object.entries(SERVICE_DATA_MAP)) {
             const keyLower = key.toLowerCase().trim();
@@ -102,7 +102,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                 return { name: key, data: val };
             }
         }
-        
+
         // Match sub-services
         for (const [key, val] of Object.entries(SERVICE_DATA_MAP)) {
             const hasSub = val.subServices?.some(sub => {
@@ -114,7 +114,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                 return { name: key, data: val };
             }
         }
-        
+
         return { name: titleText, data: null };
     };
 
@@ -140,8 +140,8 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                 const items = snap.docs.map(d => {
                     const data = d.data();
                     const localSvc = (foundLocalSvc?.subServices || []).find(ls => ls.id === data.id);
-                    return { 
-                        docId: d.id, 
+                    return {
+                        docId: d.id,
                         ...data,
                         image: data.image || localSvc?.image
                     };
@@ -165,7 +165,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
 
     const getProfessionalCategoryName = (categoryName, serviceName) => {
         const svc = (serviceName || '').toLowerCase();
-        
+
         // AC
         if (svc.includes('air conditioner') || svc.includes('ac repair')) {
             if (categoryName === 'Repair & Gas Refill') return 'AC Repair & Gas Charging';
@@ -274,20 +274,20 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
     }, {});
 
     const activeCategories = Object.keys(groupedItems).sort((a, b) => {
-        const order = { 
+        const order = {
             // Super Saver Packages
             'Super Saver Packages': 1, 'AC Service Packages': 1, 'Refrigerator Packages': 1, 'Washing Machine Packages': 1, 'TV Service Packages': 1, 'Microwave Packages': 1, 'RO Service Packages': 1, 'Geyser Service Packages': 1, 'Chimney Cleaning Packages': 1, 'Stove Service Packages': 1, 'Dishwasher Packages': 1, 'Vacuum Service Packages': 1, 'Floor Polishing Packages': 1,
-            
+
             // Service Options
             'Service Options': 2, 'AC Servicing & Cleaning': 2, 'Refrigerator Servicing': 2, 'Washing Machine Servicing': 2, 'TV Installation & Setup': 2, 'Microwave Servicing': 2, 'RO Filter & Membrane Service': 2, 'Geyser Cleaning & Servicing': 2, 'Chimney Servicing & De-greasing': 2, 'Stove Cleaning & Maintenance': 2, 'Dishwasher Cleaning & Descaling': 2, 'Vacuum Servicing & Filters': 2, 'Floor Grinding & Restoration': 2,
-            
+
             // Repair & Gas Refill
             'Repair & Gas Refill': 3, 'AC Repair & Gas Charging': 3, 'Refrigerator Repair & Gas Charging': 3, 'Washing Machine Repair': 3, 'TV Display & Board Repairs': 3, 'Microwave Repair & Magnetron Fix': 3, 'RO Repair & Pump Swap': 3, 'Geyser Repair & Elements': 3, 'Chimney Repair & Parts': 3, 'Stove & Hob Repair Works': 3, 'Dishwasher Repair & Pump Fix': 3, 'Vacuum Repair & Motor Fix': 3, 'Floor Polishing Services': 3,
-            
+
             // Installation & Uninstallation
             'Installation & Uninstallation': 4, 'AC Installation & Removal': 4, 'Refrigerator Installation': 4, 'Washing Machine Installation': 4, 'TV Mounting & Unmounting': 4, 'Microwave Installation': 4, 'RO Installation & Removal': 4, 'Geyser Installation & Removal': 4, 'Chimney Installation & Removal': 4, 'Stove Installation & Setup': 4, 'Dishwasher Installation': 4, 'Vacuum Installation': 4, 'Epoxy & Grout Filling': 4,
-            
-            'Other Services': 5 
+
+            'Other Services': 5
         };
         return (order[a] || 99) - (order[b] || 99);
     });
@@ -309,7 +309,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
     };
 
     const handleBookDirectly = (sub) => {
-        const message = `Hello Charminar Repairs, I want to book the service: ${sub.name} in ${displayLocation} for ₹${sub.price}.`;
+        const message = `Hello MeeHelper, I want to book the service: ${sub.name} in ${displayLocation} for ₹${sub.price}.`;
         const encodedMessage = encodeURIComponent(message);
         window.open(`https://wa.me/918008615049?text=${encodedMessage}`, '_blank');
     };
@@ -317,9 +317,9 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
     const getServiceType = (serviceName) => {
         const name = (serviceName || '').toLowerCase();
         if (
-            name.includes('cleaning') || 
-            name.includes('sanitization') || 
-            name.includes('wash') || 
+            name.includes('cleaning') ||
+            name.includes('sanitization') ||
+            name.includes('wash') ||
             name.includes('wheels') ||
             name.includes('scrub') ||
             name.includes('scrubbing') ||
@@ -336,12 +336,12 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
         }
         if (name.includes('polish') || name.includes('polishing')) return 'polishing';
         if (
-            name.includes('pest') || 
-            name.includes('control') || 
-            name.includes('termite') || 
-            name.includes('woodborer') || 
-            name.includes('bugs') || 
-            name.includes('cockroach') || 
+            name.includes('pest') ||
+            name.includes('control') ||
+            name.includes('termite') ||
+            name.includes('woodborer') ||
+            name.includes('bugs') ||
+            name.includes('cockroach') ||
             name.includes('mosquito') ||
             name.includes('rodent') ||
             name.includes('rat') ||
@@ -353,29 +353,29 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
         }
         if (name.includes('movers') || name.includes('packers') || name.includes('shifting')) return 'shifting';
         if (
-            name.includes('safety') || 
-            name.includes('cctv') || 
-            name.includes('security') || 
-            name.includes('lock') || 
-            name.includes('locksmith') || 
-            name.includes('waterproofing') || 
-            name.includes('waterproof') || 
-            name.includes('grille') || 
-            name.includes('mesh') || 
+            name.includes('safety') ||
+            name.includes('cctv') ||
+            name.includes('security') ||
+            name.includes('lock') ||
+            name.includes('locksmith') ||
+            name.includes('waterproofing') ||
+            name.includes('waterproof') ||
+            name.includes('grille') ||
+            name.includes('mesh') ||
             name.includes('netting')
         ) {
             return 'safety';
         }
         if (
-            name.includes('it-') || 
-            name.includes('wifi') || 
-            name.includes('router') || 
-            name.includes('pc') || 
-            name.includes('computer') || 
-            name.includes('printer') || 
-            name.includes('software') || 
-            name.includes('smarthome') || 
-            name.includes('laptop') || 
+            name.includes('it-') ||
+            name.includes('wifi') ||
+            name.includes('router') ||
+            name.includes('pc') ||
+            name.includes('computer') ||
+            name.includes('printer') ||
+            name.includes('software') ||
+            name.includes('smarthome') ||
+            name.includes('laptop') ||
             name.includes('tech') ||
             name.includes('office setup') ||
             name.includes('it & office')
@@ -387,13 +387,13 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
 
     const type = getServiceType(parentSvcName);
     const heroActionText = type === 'cleaning' ? 'Expert Cleaning in'
-                         : type === 'polishing' ? 'Floor Polishing in'
-                         : type === 'pest control' ? 'Pest Control in'
-                         : type === 'detailing' ? 'Auto Detailing in'
-                         : type === 'shifting' ? 'Packers & Movers in'
-                         : type === 'safety' ? 'Security & Protection in'
-                         : type === 'it' ? 'Home IT & Tech Setup in'
-                         : 'Expert Repairs in';
+        : type === 'polishing' ? 'Floor Polishing in'
+            : type === 'pest control' ? 'Pest Control in'
+                : type === 'detailing' ? 'Auto Detailing in'
+                    : type === 'shifting' ? 'Packers & Movers in'
+                        : type === 'safety' ? 'Security & Protection in'
+                            : type === 'it' ? 'Home IT & Tech Setup in'
+                                : 'Expert Repairs in';
 
     const prices = displayItems.map(item => Number(item.price) || 0).filter(p => p > 0);
     const minPrice = prices.length > 0 ? Math.min(...prices) : 149;
@@ -404,12 +404,12 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
     const guaranteeText = type === 'repairs' ? 'Guaranteed Repairs' : 'Guaranteed Care';
 
     return (
-        <main className="service-detail-page service-detail-page-main bg-light pb-5">
+        <main className="service-detail-page service-detail-page-main bg-white pb-5">
             <div className="container custom-container px-lg-4 px-3">
                 <nav className="mb-4 d-flex align-items-center gap-2" style={{ fontSize: '13px' }}>
                     <Link href="/" className="text-muted text-decoration-none hover-dark">Home</Link>
                     <ChevronRightIcon size={8} className="text-muted" />
-                    <span className="text-primary fw-bold" style={{ color: '#673ab7' }}>{baseTitle} in {displayLocation}</span>
+                    <span className="text-primary fw-bold" style={{ color: '#024dbe' }}>{baseTitle} in {displayLocation}</span>
                 </nav>
 
                 <div className="row g-4 position-relative">
@@ -511,7 +511,7 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                     </div>
                                     <h2 className="fw-black pb-3 text-dark d-md-block d-none hero-main-title">
                                         {heroActionText}<br />
-                                        <span className="hero-title-highlight" style={{ color: '#673ab7' }}>{displayLocation}</span>
+                                        <span className="hero-title-highlight" style={{ color: '#024dbe' }}>{displayLocation}</span>
                                     </h2>
                                     <p className="text-secondary mb-4 d-md-block d-none hero-description">
                                         {heroDescription}
@@ -532,9 +532,9 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                     </div>
                                 </div>
                                 <div className="col-md-5 d-none d-md-block position-relative">
-                                    <Image 
-                                        src={svc.photo || '/images/ac-repair.png'} 
-                                        className="w-50 h-50 object-fit-cover rounded-end" 
+                                    <Image
+                                        src={svc.photo || '/images/ac-repair.png'}
+                                        className="w-50 h-50 object-fit-cover rounded-end"
                                         alt={`${baseTitle} in ${displayLocation}`}
                                         fill
                                         priority
@@ -584,19 +584,19 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
 
                         <div className="services-list-container">
                             {activeCategories.map(cat => (
-                                    <div key={cat} id={`category-${cat.replace(/\s+/g, '-')}`} className="mb-4 bg-white shadow-sm p-4 border service-category-card" style={{ borderRadius: '4px' }}>
-                                        <h3 className="fw-bold mb-4 pb-2 fs-4 text-dark border-bottom">{cat}</h3>
-                                        <div className="row g-4">
-                                            {groupedItems[cat].map((sub, i) => {
-                                                const itemId = sub.docId || sub.id;
-                                                const cartItem = cartItems.find(item => item.id === itemId);
-                                                const discount = svc.globalDiscount || 20; // fallback to 20% if not defined
-                                                const originalPrice = discount > 0 ? Math.round(sub.price / (1 - discount / 100)) : null;
-                                                return (
-                                                    <div key={i} className="col-lg-4 col-md-6 col-12">
-                                                         <div className="shared-carousel-card most-booked-card hover-lift d-flex flex-column h-100 bg-white p-3 border" style={{ borderRadius: '8px', boxShadow: '0 2px 6px rgba(0,0,0,0.04)' }}>
-                                                             {/* Image wrapper commented out for future dynamic loading */}
-                                                             {/* 
+                                <div key={cat} id={`category-${cat.replace(/\s+/g, '-')}`} className="mb-4 bg-white shadow-sm p-4 border service-category-card" style={{ borderRadius: '4px' }}>
+                                    <h3 className="fw-bold mb-4 pb-2 fs-4 text-dark border-bottom">{cat}</h3>
+                                    <div className="row g-4">
+                                        {groupedItems[cat].map((sub, i) => {
+                                            const itemId = sub.docId || sub.id;
+                                            const cartItem = cartItems.find(item => item.id === itemId);
+                                            const discount = svc.globalDiscount || 20; // fallback to 20% if not defined
+                                            const originalPrice = discount > 0 ? Math.round(sub.price / (1 - discount / 100)) : null;
+                                            return (
+                                                <div key={i} className="col-lg-4 col-md-6 col-12">
+                                                    <div className="shared-carousel-card most-booked-card hover-lift d-flex flex-column h-100 bg-white p-3 border" style={{ borderRadius: '8px', boxShadow: '0 2px 6px rgba(0,0,0,0.04)' }}>
+                                                        {/* Image wrapper commented out for future dynamic loading */}
+                                                        {/* 
                                                              <div className="img-wrapper safety-img-wrap" style={{ position: 'relative', width: '100%', aspectRatio: '1 / 1', borderRadius: '4px', overflow: 'hidden' }} onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
                                                                  {discount > 0 && (
                                                                      <div className="discount-tag" style={{ borderTopLeftRadius: '4px' }}>
@@ -614,60 +614,60 @@ const ServiceTemplate = ({ title, description, image, longDescription, slug }) =
                                                                  />
                                                              </div> 
                                                              */}
-                                                             <div className="d-flex flex-column flex-grow-1 text-start">
-                                                                 {discount > 0 && (
-                                                                     <div className="mb-2">
-                                                                         <span className="badge fw-bold" style={{ fontSize: '10px', padding: '4px 8px', backgroundColor: '#e8f5e9', color: '#2e7d32', borderRadius: '4px' }}>
-                                                                             Get {discount}% OFF on First Booking
-                                                                         </span>
-                                                                     </div>
-                                                                 )}
-                                                                 
-                                                                 <h3 className="service-title text-start mt-1 mb-2" style={{ fontSize: '16px', color: '#1a1a1a', fontWeight: '700', cursor: 'pointer' }} onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
-                                                                     {sub.name}
-                                                                 </h3>
-                                                                 
-                                                                 {/* {sub.desc && (
+                                                        <div className="d-flex flex-column flex-grow-1 text-start">
+                                                            {discount > 0 && (
+                                                                <div className="mb-2">
+                                                                    <span className="badge fw-bold" style={{ fontSize: '10px', padding: '4px 8px', backgroundColor: '#e8f5e9', color: '#2e7d32', borderRadius: '4px' }}>
+                                                                        Get {discount}% OFF on First Booking
+                                                                    </span>
+                                                                </div>
+                                                            )}
+
+                                                            <h3 className="service-title text-start mt-1 mb-2" style={{ fontSize: '16px', color: '#1a1a1a', fontWeight: '700', cursor: 'pointer' }} onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
+                                                                {sub.name}
+                                                            </h3>
+
+                                                            {/* {sub.desc && (
                                                                      <p className="text-secondary text-start mb-3" style={{ fontSize: '12.5px', lineHeight: '1.5', minHeight: '40px' }}>
                                                                          {sub.desc}
                                                                      </p>
                                                                  )} */}
-                                                                 
-                                                                 <div className="d-flex align-items-center justify-content-between mt-auto pt-2 border-top">
-                                                                     <div className="d-flex align-items-baseline gap-1">
-                                                                         <span className="fw-black text-dark fs-5">₹{sub.price}</span>
-                                                                         {sub.unit && <span className="text-muted small" style={{ fontSize: '11px' }}>{sub.unit}</span>}
-                                                                         {originalPrice && (
-                                                                             <span className="text-muted text-decoration-line-through ms-1" style={{ fontSize: '11px' }}>₹{originalPrice}</span>
-                                                                         )}
-                                                                     </div>
-                                                                     
-                                                                     <div className="d-flex align-items-center gap-3">
-                                                                         <div className="hover-underline cursor-pointer small fw-bold" style={{ color: '#673ab7', fontSize: '12px', fontWeight: '600' }} onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
-                                                                             View details
-                                                                         </div>
-                                                                         
-                                                                         <button 
-                                                                             className="btn bg-white shadow-sm fw-bold py-1 px-3 hover-lift" 
-                                                                             style={{ fontSize: '12px', border: '1.5px solid #24b24b', color: '#24b24b', borderRadius: '4px' }} 
-                                                                             onClick={() => handleBookDirectly(sub)}
-                                                                         >
-                                                                             BOOK
-                                                                         </button>
-                                                                     </div>
-                                                                 </div>
-                                                             </div>
-                                                         </div>
+
+                                                            <div className="d-flex align-items-center justify-content-between mt-auto pt-2 border-top">
+                                                                <div className="d-flex align-items-baseline gap-1">
+                                                                    <span className="fw-black text-dark fs-5">₹{sub.price}</span>
+                                                                    {sub.unit && <span className="text-muted small" style={{ fontSize: '11px' }}>{sub.unit}</span>}
+                                                                    {originalPrice && (
+                                                                        <span className="text-muted text-decoration-line-through ms-1" style={{ fontSize: '11px' }}>₹{originalPrice}</span>
+                                                                    )}
+                                                                </div>
+
+                                                                <div className="d-flex align-items-center gap-3">
+                                                                    <div className="hover-underline cursor-pointer small fw-bold" style={{ color: '#024dbe', fontSize: '12px', fontWeight: '600' }} onClick={() => { setSelectedService({ ...sub, category: cat }); setIsModalOpen(true); }}>
+                                                                        View details
+                                                                    </div>
+
+                                                                    <button
+                                                                        className="btn bg-white shadow-sm fw-bold py-1 px-3 hover-lift"
+                                                                        style={{ fontSize: '12px', border: '1.5px solid #24b24b', color: '#24b24b', borderRadius: '4px' }}
+                                                                        onClick={() => handleBookDirectly(sub)}
+                                                                    >
+                                                                        BOOK
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                );
-                                            })}
-                                        </div>
+                                                </div>
+                                            );
+                                        })}
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
+            </div>
 
             {isModalOpen && selectedService && (
                 <div className={`modal d-block details-modal-overlay ${isModalActive ? 'active' : ''}`}>

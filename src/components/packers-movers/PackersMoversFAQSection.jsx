@@ -86,7 +86,7 @@ const PACKERS_MOVERS_FAQS = [
     }
 ];
 
-const PackersMoversFAQSection = ({ location = "Hyderabad" }) => {
+const PackersMoversFAQSection = ({ location = "Hyderabad", bgColor }) => {
     // Map questions dynamically to include the specific location name
     const localizedFAQs = PACKERS_MOVERS_FAQS.map(item => {
         let question = item.question;
@@ -105,6 +105,7 @@ const PackersMoversFAQSection = ({ location = "Hyderabad" }) => {
                 title={`Packers and Movers in ${location} - FAQ`}
                 items={localizedFAQs}
                 compact={true}
+                bgColor={bgColor}
             />
         </div>
     );

@@ -32,8 +32,8 @@ export async function generateMetadata({ params }) {
     if (!matchedLoc) return { title: 'Location Not Found' };
 
     return constructMetadata({
-        title: `Appliance Repair Services in ${matchedLoc}, Hyderabad | Charminar Repairs`,
-        description: `Looking for appliance repair in ${matchedLoc}? From AC and Refrigerator to Washing Machine and TV repair, Charminar Repairs offers 100% doorstep services in ${matchedLoc} with a 2-hour arrival guarantee. Book now for expert service!`,
+        title: `Appliance Repair Services in ${matchedLoc}, Hyderabad | MeeHelper`,
+        description: `Looking for appliance repair in ${matchedLoc}? From AC and Refrigerator to Washing Machine and TV repair, MeeHelper offers 100% doorstep services in ${matchedLoc} with a 2-hour arrival guarantee. Book now for expert service!`,
         canonicalPath: `/service-areas/${slug}/`,
     });
 }
@@ -69,7 +69,7 @@ const LocationServicePage = async ({ params }) => {
                         <div className="col-lg-7">
                             <span className="badge bg-primary bg-opacity-10 text-primary px-3 py-2 mb-3">HYDERABAD LOCALITY HUB</span>
                             <h2 className="fw-bold text-dark display-6 mb-3">Home Restoration Near {matchedLoc}</h2>
-                            <p className="text-muted fs-5">Charminar Repairs is your trusted partner for high-performance appliance repair in the <strong>{matchedLoc}</strong> residential and business area. Our experts arrive within 60-90 minutes of booking.</p>
+                            <p className="text-muted fs-5">MeeHelper is your trusted partner for high-performance appliance repair in the <strong>{matchedLoc}</strong> residential and business area. Our experts arrive within 60-90 minutes of booking.</p>
                         </div>
                         <div className="col-lg-5 text-lg-end">
                              <a href="tel:8008615049" className="btn btn-primary btn-lg shadow-lg px-5 py-3 rounded-4">

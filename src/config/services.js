@@ -94,8 +94,8 @@ export const SERVICE_CANONICAL_MAP = {
     'Cleaning & Sanitization': 'cleaning-sanitization-services',
 
     // --- Doorstep Wash ---
-    'Charminar Auto Care': 'charminar-wheels',
-    'Doorstep Car & Bike Wash': 'charminar-wheels',
+    'MeeHelper Auto Care': 'meehelper-wheels',
+    'Doorstep Car & Bike Wash': 'meehelper-wheels',
     'Doorstep Bike Eco Wash': 'wash-bike-eco',
     'Doorstep Bike Premium Wash': 'wash-bike-prem',
     'Doorstep Bike Premium Foam Wash & Polish': 'wash-bike-prem',
@@ -103,9 +103,9 @@ export const SERVICE_CANONICAL_MAP = {
     'Hatchback/Sedan Exterior Foam Wash & Vacuum': 'wash-car-std',
     'SUV Premium Wash & Polish': 'wash-car-suv',
     'SUV Premium Foam Wash & Interior Polish': 'wash-car-suv',
-    'STANDARD (Spadex Steam Wash)': 'charminar-wheels-standard',
-    'PREMIUM (Standard & Spadex Elite)': 'charminar-wheels-premium',
-    'SPADEX PRO (Elite Package)': 'charminar-wheels-pro',
+    'STANDARD (Spadex Steam Wash)': 'meehelper-wheels-standard',
+    'PREMIUM (Standard & Spadex Elite)': 'meehelper-wheels-premium',
+    'SPADEX PRO (Elite Package)': 'meehelper-wheels-pro',
 
     // --- Category Hubs for Local SEO ---
     'Pest Control Services': 'pest-control-services',

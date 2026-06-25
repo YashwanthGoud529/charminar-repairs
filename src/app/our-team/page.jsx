@@ -4,8 +4,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Our Technicians | Charminar Repairs – Certified & Verified Engineers',
-    description: 'Meet the certified, police-verified, uniformed technicians behind Charminar Repairs. Every engineer is trained, insured, and background-checked.',
+    title: 'Our Technicians | MeeHelper – Certified & Verified Engineers',
+    description: 'Meet the certified, police-verified, uniformed technicians behind MeeHelper. Every engineer is trained, insured, and background-checked.',
     canonicalPath: '/our-team',
 });
 
@@ -31,8 +31,8 @@ export default function OurTeamPage() {
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'center', alignItems: 'center' }}>
                         {certifications.map((c, i) => (
                             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#f3e8ff', borderRadius: 4, padding: '6px 14px' }}>
-                                <span style={{ color: '#673ab7', fontWeight: 800 }}>✓</span>
-                                <span style={{ fontSize: 12, fontWeight: 600, color: '#673ab7' }}>{c}</span>
+                                <span style={{ color: '#024dbe', fontWeight: 800 }}>✓</span>
+                                <span style={{ fontSize: 12, fontWeight: 600, color: '#024dbe' }}>{c}</span>
                             </div>
                         ))}
                     </div>
@@ -52,7 +52,7 @@ export default function OurTeamPage() {
                                     </div>
                                     <div>
                                         <div style={{ fontWeight: 800, fontSize: 15, color: '#0c1228' }}>{e.name}</div>
-                                        <div style={{ fontSize: 12, color: '#673ab7', fontWeight: 700 }}>{e.role}</div>
+                                        <div style={{ fontSize: 12, color: '#024dbe', fontWeight: 700 }}>{e.role}</div>
                                         <div style={{ fontSize: 11, color: '#94a3b8', marginTop: 2 }}>{e.exp} Experience</div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ export default function OurTeamPage() {
                     <div style={{ background: '#0c1228', borderRadius: 4, padding: '36px', marginTop: 48, textAlign: 'center', color: '#fff' }}>
                         <h3 style={{ fontWeight: 800, marginBottom: 8 }}>Want to Join Our Team?</h3>
                         <p style={{ opacity: 0.75, fontSize: 14, marginBottom: 20 }}>We're always hiring certified engineers across Hyderabad. Earn well, work flexibly.</p>
-                        <Link href="/join-as-technician/" style={{ background: '#673ab7', color: '#fff', padding: '12px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14, display: 'inline-block' }}>Apply as a Technician</Link>
+                        <Link href="/join-as-technician/" style={{ background: '#024dbe', color: '#fff', padding: '12px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14, display: 'inline-block' }}>Apply as a Technician</Link>
                     </div>
                 </div>
             </section>

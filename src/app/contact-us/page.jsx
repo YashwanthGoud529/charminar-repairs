@@ -4,7 +4,7 @@ import ContactForm from '@/components/contact/ContactForm';
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
 export const metadata = constructMetadata({
-    title: 'Contact Charminar Repairs | Book Expert Appliance Service in Hyderabad',
+    title: 'Contact MeeHelper | Book Expert Appliance Service in Hyderabad',
     description: 'Contact Hyderabad\'s leading appliance repair experts. Call 8008615049 or book online for same-day washing machine, fridge, AC, or TV repairs.',
     canonicalPath: '/contact-us',
 });
@@ -12,19 +12,19 @@ export const metadata = constructMetadata({
 // --- SVG Icons Components ---
 const PhoneIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
     </svg>
 );
 
 const MailIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" />
     </svg>
 );
 
 const MapPinIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="12" r="3"/>
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="12" r="3" />
     </svg>
 );
 
@@ -32,14 +32,14 @@ const ContactUsPage = () => {
     const contactSchema = {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
-        name: 'Contact Charminar Repairs',
-        description: 'Contact Charminar Repairs for trusted appliance repair in Hyderabad. Same-day service available at 8008615049.',
-        url: 'https://www.charminarrepairs.com/contact-us',
+        name: 'Contact MeeHelper',
+        description: 'Contact MeeHelper for trusted appliance repair in Hyderabad. Same-day service available at 8008615049.',
+        url: 'https://www.meehelper.com/contact-us',
         mainEntity: {
             '@type': 'LocalBusiness',
-            name: 'Charminar Repairs',
+            name: 'MeeHelper',
             telephone: '+91-8008615049',
-            email: 'contact@charminarrepairs.com',
+            email: 'contact@meehelper.com',
             address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Karwan',
@@ -68,20 +68,20 @@ const ContactUsPage = () => {
             <section className="contact-section py-5 position-relative overflow-hidden">
                 <div className="position-absolute top-0 start-0 w-100 h-100 bg-white opacity-50 z-n1"></div>
                 <div className="bg-blob position-absolute top-0 end-0 translate-middle opacity-10"></div>
-                
+
                 <div className="container custom-container py-5 mt-n4">
                     <div className="row g-5">
                         {/* Left Column: Info & Socials */}
                         <div className="col-lg-5 col-xl-4">
                             <div className="info-sidebar sticky-top" style={{ top: '120px', zIndex: 10 }}>
                                 <div className="section-tag mb-3">CONTACT CHANNELS</div>
-                                <h2 className="fw-black text-dark-blue mb-4 fs-1 tracking-tight" style={{ fontWeight: 900, fontFamily: 'var(--font-outfit)' }}>Let's solve your appliance issues.</h2>
+                                <h2 className="fw-black text-dark-blue mb-4 fs-1 tracking-tight" style={{ fontWeight: 900, fontFamily: 'var(--font-main)' }}>Let's solve your appliance issues.</h2>
                                 <p className="text-muted mb-5 fs-6 font-inter">Choose your preferred method of contact. Our support team typically responds within 30 minutes during business hours.</p>
 
                                 {/* Contact Cards Group */}
                                 <div className="d-flex flex-column gap-4 mb-5">
                                     <div className="premium-contact-card">
-                                        <div className="card-icon bg-purple-soft d-flex align-items-center justify-content-center text-purple">
+                                        <div className="card-icon bg-blue-soft d-flex align-items-center justify-content-center text-purple">
                                             <PhoneIcon />
                                         </div>
                                         <div className="card-content">
@@ -97,8 +97,8 @@ const ContactUsPage = () => {
                                         </div>
                                         <div className="card-content">
                                             <h6 className="font-outfit">Email Address</h6>
-                                            <p className="font-inter">contact@charminarrepairs.com</p>
-                                            <span className="availability font-inter">24/7 Response Guaranteed</span>
+                                            <p className="font-inter">contact@meehelper.com</p>
+                                            <span className="availability font-inter">Same-day Response</span>
                                         </div>
                                     </div>
 
@@ -108,7 +108,17 @@ const ContactUsPage = () => {
                                         </div>
                                         <div className="card-content">
                                             <h6 className="font-outfit">Visit Us</h6>
-                                            <p className="font-inter">Karwan, Hyderabad, TS 500006</p>
+                                            <p className="font-inter mb-1">
+                                                <a 
+                                                    href="https://www.google.com/search?q=meehelper+home+services&oq=meehelper+home+services&gs_lcrp=EgZjaHJvbWUyCAgAEEUYJxg5MggIARAAGBYYHjIICAIQABgWGB4yBwgDEAAY7wUyCggEEAAYgAQYogQyBwgFEAAY7wUyBggGEEUYPDIGCAcQRRg90gEJNjQzOWowajE1qAIMsAIB8QX13v2nzLXsBA&sourceid=chrome&ie=UTF-8#sv=CAwSpAIKBmxjbF9wdhI9CgNwdnESNkNnMHZaeTh4TVhsMk9ISnVhRjg0SWhjS0VXTm9ZWEp0YVc1aGNpQnlaWEJoYVhKekVBSVlBdxKaAQoDbHFpEpIBQ2hGamFHRnliV2x1WVhJZ2NtVndZV2x5YzBqb18taUw2YjJBZ0FoYUlSQUFFQUVZQUJnQkloRmphR0Z5YldsdVlYSWdjbVZ3WVdseWN5b0VDQUlRQUhvSlNIbGtaWEpoWW1Ga2tnRWZkMkZ6YUdWeVgyRnVaRjlrY25sbGNsOXlaWEJoYVhKZmMyVnlkbWxqWlESEgoDdGJzEgtscmY6ITNzSUFFPRIWCgFxEhFjaGFybWluYXIgcmVwYWlycxoSbG9jYWwtcGxhY2Utdmlld2VyGAog1db99Ak" 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    className="text-decoration-none text-dark hover-orange fw-medium"
+                                                >
+                                                    Karwan, Hyderabad, TS 500006
+                                                    <i className="fas fa-external-link-alt ms-1 text-muted" style={{ fontSize: '10px' }}></i>
+                                                </a>
+                                            </p>
                                             <span className="availability font-inter">Main Service Hub</span>
                                         </div>
                                     </div>
@@ -137,12 +147,26 @@ const ContactUsPage = () => {
                                             <p className="small mb-0 opacity-75 font-inter">Your data is safe with our encrypted booking system.</p>
                                         </div>
                                     </div>
-                                    <div className="d-none d-md-block border-end border-white opacity-25" style={{height: '40px'}}></div>
+                                    <div className="d-none d-md-block border-end border-white opacity-25" style={{ height: '40px' }}></div>
                                     <div className="text-md-end">
                                         <p className="small mb-1 opacity-75 font-inter">Need Urgent Help?</p>
                                         <a href="tel:8008615049" className="text-purple fw-bold text-decoration-none fs-5 font-outfit" style={{ fontWeight: 700 }}>Call 8008615049</a>
                                     </div>
                                 </div>
+                            </div>
+
+                            {/* Google Maps Embed */}
+                            <div className="mt-4 rounded-4 overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.06)' }}>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.9640563516553!2d78.4396831!3d17.3700764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb972a41c95a63%3A0x2c4c5c5c5c5c5c5c!2sKarwan%2C+Hyderabad%2C+Telangana+500006!5e0!3m2!1sen!2sin!4v1719225600000!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="200"
+                                    style={{ border: 0, display: 'block' }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="MeeHelper — Karwan, Hyderabad"
+                                ></iframe>
                             </div>
                         </div>
                     </div>
@@ -150,21 +174,21 @@ const ContactUsPage = () => {
             </section>
 
             <style id="contact-page-refined">{`
-                .contact-page { font-family: var(--font-outfit), sans-serif; }
+                .contact-page { font-family: var(--font-main), sans-serif; }
                 .custom-container { max-width: 1400px !important; }
                 .fw-black { font-weight: 900; }
                 .bg-light-soft { background-color: #fbfcff !important; }
                 .text-dark-blue { color: #0c1228; }
-                .text-purple { color: #673ab7 !important; }
-                .border-purple { border-color: #673ab7 !important; }
+                .text-purple { color: #024dbe !important; }
+                .border-purple { border-color: #024dbe !important; }
                 .tracking-tight { letter-spacing: -0.03em; }
                 
                 .section-tag {
-                    color: #673ab7;
+                    color: #024dbe;
                     font-weight: 800;
                     font-size: 13px;
                     letter-spacing: 2px;
-                    border-left: 3px solid #673ab7;
+                    border-left: 3px solid #024dbe;
                     padding-left: 12px;
                 }
 
@@ -174,28 +198,27 @@ const ContactUsPage = () => {
                     padding: 24px;
                     background: #fff;
                     border: 1px solid rgba(0,0,0,0.04);
-                    border-radius: 12px;
+                    border-radius: 4px;
                     transition: all 0.3s;
                     box-shadow: 0 4px 15px rgba(0,0,0,0.02);
                 }
 
                 .premium-contact-card:hover {
                     transform: translateX(10px);
-                    box-shadow: 0 20px 40px rgba(103, 58, 183, 0.1);
-                    border-color: rgba(103, 58, 183, 0.2);
+                    box-shadow: 0 20px 40px rgba(2, 77, 190, 0.1);
+                    border-color: rgba(2, 77, 190, 0.2);
                 }
 
                 .card-icon {
                     width: 54px;
                     height: 54px;
-                    border-radius: 12px;
+                    border-radius: 4px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-shrink: 0;
                 }
 
-                .bg-purple-soft { background: #f4effc; }
                 .bg-blue-soft { background: #f0f7ff; }
                 .bg-green-soft { background: #f2fff5; }
 
@@ -224,12 +247,12 @@ const ContactUsPage = () => {
                 .step-indicator {
                     width: 44px;
                     height: 44px;
-                    background: #673ab7;
+                    background: #024dbe;
                     color: white;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    border-radius: 10px;
+                    border-radius: 4px;
                     font-weight: 900;
                     font-size: 18px;
                 }
@@ -237,7 +260,7 @@ const ContactUsPage = () => {
                 .bg-blob {
                     width: 500px;
                     height: 500px;
-                    background: radial-gradient(circle, rgba(103, 58, 183, 0.08) 0%, rgba(103, 58, 183, 0) 70%);
+                    background: radial-gradient(circle, rgba(2, 77, 190, 0.08) 0%, rgba(2, 77, 190, 0) 70%);
                     z-index: 0;
                     filter: blur(80px);
                 }

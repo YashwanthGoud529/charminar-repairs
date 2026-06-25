@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeeHelper - 10 Logo Options Showcase</title>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --text-color: #0f172a;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --indigo: #4f46e5;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #0b0f19;
+        --text-color: #f8fafc;
+        --card-bg: #111827;
+        --border-color: #1f2937;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      color: #64748b;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo-container {
+      background-color: rgba(0, 0, 0, 0.02);
+      border: 1px dashed var(--border-color);
+      border-radius: 8px;
+      padding: 30px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .btn-primary {
+      background-color: var(--indigo);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #4338ca;
+    }
+
+    .btn-secondary {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: var(--text-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .btn-secondary {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+      .btn-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .logo-container {
+        background-color: rgba(255, 255, 255, 0.01);
+      }
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #10b981;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>MeeHelper Logo Options Showcase</h1>
+    <p>Open and preview 10 different vector logo variations in high fidelity. Click to copy SVG markup.</p>
+  </header>
+
+  <div class="grid">
+    <!-- User Custom Logo -->
+    <div class="card" style="border: 2px solid #ff7000; box-shadow: 0 0 15px rgba(255, 112, 0, 0.15);">
+      <div class="logo-container" style="background-color: rgba(255, 112, 0, 0.02);">
+        <svg id="svg-custom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="100%" height="120">
+          <g transform="translate(-3, 10) scale(0.6)">
+            <path d="M 145 65 A 70 70 0 1 0 80 175" fill="none" stroke="#ff7000" stroke-width="8" stroke-linecap="round" />
+            <path d="M 55 95 L 100 55 L 145 95" fill="none" stroke="#002d62" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="92" y="73" width="6" height="6" fill="#002d62" />
+            <rect x="102" y="73" width="6" height="6" fill="#002d62" />
+            <rect x="92" y="83" width="6" height="6" fill="#002d62" />
+            <rect x="102" y="83" width="6" height="6" fill="#002d62" />
+            <path d="M 65 110 L 77 110 L 77 170 Q 65 170 65 158 Z" fill="#002d62" />
+            <polygon points="77,110 93,170 105,170 89,110" fill="#002d62" />
+            <polygon points="93,170 120,125 132,125 105,170" fill="#ff7000" />
+            <rect x="120" y="125" width="22" height="45" fill="#ff7000" />
+            <line x1="123" y1="165" x2="131" y2="142" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
+            <circle cx="131" cy="142" r="7.5" fill="#ffffff" />
+            <line x1="131" y1="142" x2="138" y2="135" stroke="#ff7000" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+          <g transform="translate(115, 76)">
+            <text x="0" y="0" font-family="'Outfit', 'Poppins', 'Segoe UI', sans-serif" font-weight="900" font-size="40" fill="#002d62" letter-spacing="-1px">Mee</text>
+            <text x="82" y="0" font-family="'Outfit', 'Poppins', 'Segoe UI', sans-serif" font-weight="700" font-size="40" fill="#ff7000" letter-spacing="-1px">Helper</text>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title" style="color: #ff7000;">★ Active Choice (Custom Logo)</div>
+      <div class="card-desc">The logo uploaded and selected by you. Stylized house + letter "M" + negative-space wrench inside a circular orange swoosh. (Navy Blue & Safety Orange)</div>
+      <div class="button-group">
+        <button class="btn-primary" style="background-color: #ff7000;" onclick="copySVG('svg-custom')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <defs>
+            <linearGradient id="g1-s" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4f46e5" /><stop offset="100%" stop-color="#06b6d4" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(10, 10)">
+            <circle cx="40" cy="40" r="38" fill="url(#g1-s)" opacity="0.1" />
+            <path d="M22 42 L40 24 L58 42" stroke="url(#g1-s)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            <path d="M30 45 L38 53 L58 28" stroke="url(#g1-s)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#4f46e5">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#0f172a">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">YOUR HOME PARTNER</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">1. The Helping Checkmark</div>
+      <div class="card-desc">Modern & Tech-Forward. A clean integration of a house roofline and a sweeping checkmark. (Royal Purple & Electric Teal)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-1')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <g transform="translate(10, 10)">
+            <circle cx="40" cy="40" r="38" fill="#2563eb" opacity="0.1" />
+            <path d="M20 32 L40 18 L60 32 L60 55 C60 59, 56 62, 52 62 L28 62 C24 62, 20 59, 20 55 Z" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            <path d="M30 44 C34 49, 46 49, 50 44" stroke="#f97316" stroke-width="5.5" stroke-linecap="round" fill="none" />
+            <circle cx="30" cy="34" r="3.5" fill="#f97316" />
+            <circle cx="50" cy="34" r="3.5" fill="#f97316" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#2563eb">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#f97316">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">FRIENDLY HOME CARE</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">2. The Friendly Smile</div>
+      <div class="card-desc">Helpful & Approachable. A smiling face silhouette merged with a house outline and a helping hand. (Ocean Blue & Safety Orange)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-2')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <g transform="translate(10, 10)">
+            <path d="M20 20 L40 14 L60 20 L60 42 C60 55, 40 66, 40 66 C40 66, 20 55, 20 42 Z" stroke="#0f172a" stroke-width="5" stroke-linejoin="round" fill="#0f172a" fill-opacity="0.05" />
+            <path d="M28 42 L40 30 L52 42 L52 52 L28 52 Z" fill="#d97706" />
+            <path d="M40 30 L40 52" stroke="#ffffff" stroke-width="3.5" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#0f172a">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#d97706">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">SECURED & VERIFIED</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">3. The Security Shield</div>
+      <div class="card-desc">Trust & Security. A clean shield layout with a gold house structure inside, emphasizing safety and verified staff. (Deep Navy & Rich Gold)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-3')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <defs>
+            <linearGradient id="g4-s" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7c3aed" /><stop offset="100%" stop-color="#f43f5e" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(10, 10)">
+            <path d="M22 45 C14 36, 22 20, 36 28 L40 32 L44 28 C58 20, 66 36, 58 45 L40 62 Z" stroke="url(#g4-s)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#7c3aed">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#f43f5e">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">INFINITE SUPPORT</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">4. The Infinite Care Loop</div>
+      <div class="card-desc">Seamless & Continuous. An infinity loop forming a house shape, representing 24/7 reliability. (Violet & Coral Rose)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-4')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <g transform="translate(10, 10)">
+            <circle cx="40" cy="40" r="38" fill="#f59e0b" opacity="0.1" />
+            <path d="M22 38 L40 20 L58 38 L50 38 L50 56 L30 56 L30 38 Z" stroke="#4338ca" stroke-width="4.5" stroke-linejoin="round" fill="none" />
+            <path d="M42 22 L30 40 L40 40 L34 58 L48 38 L38 38 Z" fill="#f59e0b" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#4338ca">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#f59e0b">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">FAST DOORSTEP SOLUTIONS</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">5. The Minimalist Bolt</div>
+      <div class="card-desc">Speed & Efficiency. A clean lightning bolt integrating with a chimney/roofline to highlight fast service. (Amber & Indigo)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-5')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <g transform="translate(10, 10)">
+            <circle cx="40" cy="40" r="28" stroke="#475569" stroke-width="5.5" stroke-dasharray="14 8" fill="none" />
+            <circle cx="40" cy="40" r="20" fill="#ffffff" stroke="#475569" stroke-width="4" />
+            <path d="M30 44 L40 34 L50 44 L50 48 L30 48 Z" fill="#fb923c" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#475569">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#fb923c">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">EXPERT APPLIANCE ENGINEERING</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">6. The Engineering Gear</div>
+      <div class="card-desc">Precision & Mechanics. A rotating gear that forms a house inside, conveying technical expertise. (Slate Grey & Amber)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-6')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <g transform="translate(10, 10)">
+            <polygon points="18,48 40,20 40,48" fill="#059669" opacity="0.8" />
+            <polygon points="40,20 62,48 40,48" fill="#0d9488" />
+            <polygon points="26,58 40,40 54,58" fill="#34d399" opacity="0.5" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#059669">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#0d9488">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">GEOMETRIC ACCURACY</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">7. The Origami Home</div>
+      <div class="card-desc">Modern & Creative. Overlapping low-poly geometric shapes creating an abstract creative brand structure. (Green & Teal)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-7')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <g transform="translate(10, 10)">
+            <path d="M16 52 C24 64, 46 64, 56 46 C60 38, 54 32, 48 36 C42 40, 32 44, 24 38" stroke="#6d28d9" stroke-width="5.5" stroke-linecap="round" fill="none" />
+            <path d="M28 30 L40 18 L52 30 L46 30 L46 42 L34 42 L34 30 Z" fill="#db2777" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#6d28d9">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#db2777">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">CARE AT YOUR DOORSTEP</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">8. The Helping Hand</div>
+      <div class="card-desc">Caring & Supportive. A clean curved hand holding and lifting a home icon, representing support and care. (Crimson & Violet)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-8')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <g transform="translate(10, 10)">
+            <path d="M22 28 C26 16, 54 16, 58 28 L48 38 L32 38 Z" fill="#6b7280" />
+            <path d="M30 38 L50 38 L50 62 L30 62 Z" fill="#1d4ed8" />
+            <polygon points="30,38 40,28 50,38" fill="#1d4ed8" />
+            <rect x="36" y="48" width="8" height="14" fill="#ffffff" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#1d4ed8">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#6b7280">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">MECHANICAL RESTORATION</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">9. The Wrench-House</div>
+      <div class="card-desc">Service & Repair. A vertical home shape carved out of a sleek open-end wrench, portraying manual repair. (Steel Blue & Chrome)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-9')">Copy SVG</button>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="card">
+      <div class="logo-container">
+        <svg id="svg-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100">
+          <g transform="translate(10, 10)">
+            <circle cx="40" cy="40" r="34" stroke="#4f46e5" stroke-width="2.5" stroke-dasharray="4 4" fill="none" />
+            <circle cx="40" cy="40" r="24" stroke="#06b6d4" stroke-width="3" stroke-dasharray="10 4" fill="none" />
+            <path d="M32 42 L40 32 L48 42 L48 50 L32 50 Z" fill="#4f46e5" />
+            <g transform="translate(95, 48)">
+              <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="36" fill="#4f46e5">Mee</text>
+              <text x="74" y="0" font-family="sans-serif" font-weight="500" font-size="36" fill="#06b6d4">Helper</text>
+              <text x="2" y="22" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748b" letter-spacing="1.5px">SMART DIGITAL DISPATCH</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="card-title">10. The Smart Connected Hub</div>
+      <div class="card-desc">Concentric circles forming a house grid, representing digital control and smart mobile matching. (Indigo & Teal)</div>
+      <div class="button-group">
+        <button class="btn-primary" onclick="copySVG('svg-10')">Copy SVG</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast">SVG code copied to clipboard!</div>
+
+<script>
+  function copySVG(elementId) {
+    var svgElement = document.getElementById(elementId);
+    
+    // Create a clone to clean up IDs for stand-alone use
+    var clone = svgElement.cloneNode(true);
+    clone.removeAttribute('id');
+    clone.style.width = '450px';
+    clone.style.height = '100px';
+    
+    // Correct the gradient references inside the cloned SVG if necessary
+    var outerHTML = clone.outerHTML;
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(outerHTML).then(function() {
+      showToast();
+    });
+  }
+
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.style.opacity = 1;
+    setTimeout(function() {
+      toast.style.opacity = 0;
+    }, 2000);
+  }
+</script>
+</body>
+</html>

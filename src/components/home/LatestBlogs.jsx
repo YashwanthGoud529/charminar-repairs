@@ -62,15 +62,15 @@ const LatestBlogs = () => {
                                     <div className="blog-card-content p-4">
                                         <time className="text-muted small mb-2 d-block" dateTime={blog.date}>{blog.date}</time>
                                         <h3 className="blog-card-title mb-3" style={{ fontSize: '18px', fontWeight: '700', lineHeight: '1.4' }}>
-                                            {blog.title.split(/(Charminar Repairs|Hyderabad)/g).map((part, i) => {
-                                                if (part === 'Charminar Repairs') return <span key={i} className="company-highlight text-purple">{part}</span>;
+                                            {blog.title.split(/(MeeHelper|Hyderabad)/g).map((part, i) => {
+                                                if (part === 'MeeHelper') return <span key={i} className="company-highlight text-purple">{part}</span>;
                                                 if (part === 'Hyderabad') return <span key={i} className="location-highlight text-orange-dark">{part}</span>;
                                                 return part;
                                             })}
                                         </h3>
                                         <p className="blog-card-excerpt mb-0" style={{ fontSize: '14px', color: '#666', height: '60px', overflow: 'hidden' }}>
-                                            {blog.excerpt.split(/(Charminar Repairs|Hyderabad)/g).map((part, i) => {
-                                                if (part === 'Charminar Repairs') return <span key={i} className="company-highlight text-purple">{part}</span>;
+                                            {blog.excerpt.split(/(MeeHelper|Hyderabad)/g).map((part, i) => {
+                                                if (part === 'MeeHelper') return <span key={i} className="company-highlight text-purple">{part}</span>;
                                                 if (part === 'Hyderabad') return <span key={i} className="location-highlight text-orange-dark">{part}</span>;
                                                 return part;
                                             })}

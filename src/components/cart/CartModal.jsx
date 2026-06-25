@@ -163,7 +163,7 @@ const CartModal = () => {
                             </div>
 
                             <div className="uc-promise-card bg-light-soft p-3 rounded-4 mb-4 border border-dashed">
-                                <h6 className="fw-bold text-dark mb-3 small text-uppercase tracking-wider font-outfit">Charminar Promise</h6>
+                                <h6 className="fw-bold text-dark mb-3 small text-uppercase tracking-wider font-outfit">MeeHelper Promise</h6>
                                 <div className="d-flex flex-column gap-2">
                                     <div className="promise-item d-flex align-items-center gap-2 small font-inter">
                                         <CheckIcon /> <span>Verified Professionals Only</span>

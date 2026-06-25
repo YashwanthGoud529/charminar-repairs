@@ -20,10 +20,11 @@ const PEST_SERVICES = [
     { id: 6, image: '/assets/Images/pest-control/cock-roch-control.jpeg', title: 'Cockroach Control', slug: '/cockroach-control' }
 ].map(service => ({ ...service, image: toCDN(service.image) }));
 
-const PestControl = () => {
+const PestControl = ({ bgColor }) => {
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
     return (
-        <section className="shared-carousel-section container" style={{ paddingTop: '50px', paddingBottom: '70px', backgroundColor: '#fff' }}>
-            <div className="container" style={{ maxWidth: '100%' }}>
+        <section className={`shared-carousel-section w-100 ${bgClass}`} style={{ paddingTop: '50px', paddingBottom: '70px' }}>
+            <div className="container">
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '32px', gap: '16px' }}>
                     <Link href="/pest-control-services/" className="text-decoration-none color-inherit">
                         <h2 className="shared-carousel-title" style={{ marginBottom: 0, cursor: 'pointer' }}>Pest Control</h2>

@@ -26,6 +26,7 @@ const SectionSkeleton = () => (
 import Category from '@/components/home/Category';
 import MostBookedServices from '@/components/home/MostBookedServices';
 import AdBanner from '@/components/home/AdBanner';
+import OffersAndDiscounts from '@/components/home/OffersAndDiscounts';
 import AllServicesList from '@/components/home/AllServicesList';
 import PestControl from '@/components/home/PestControl';
 import HomeSafety from '@/components/home/HomeSafety';
@@ -36,6 +37,12 @@ import SafetyHomeProtection from '@/components/home/SafetyHomeProtection';
 import HomeITSetup from '@/components/home/HomeITSetup';
 import PremiumPestControl from '@/components/home/PremiumPestControl';
 import SpecializedCleaningUtility from '@/components/home/SpecializedCleaningUtility';
+
+import TrustHighlights from '@/components/home/TrustHighlights';
+import HowItWorks from '@/components/home/HowItWorks';
+import Testimonials from '@/components/home/Testimonials';
+import FAQ from '@/components/shared/FAQ';
+import BottomCTA from '@/components/home/BottomCTA';
 
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
@@ -50,7 +57,7 @@ export default function Home() {
     const faqSchema = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        '@id': `https://www.charminarrepairs.com/#faq`,
+        '@id': `https://www.meehelper.com/#faq`,
         mainEntity: [
             {
                 '@type': 'Question',
@@ -87,6 +94,11 @@ export default function Home() {
         ]
     };
 
+    const faqItems = faqSchema.mainEntity.map(item => ({
+        question: item.name,
+        answer: item.acceptedAnswer.text
+    }));
+
     return (
         <main className="home-page overflow-x-hidden">
             <script
@@ -96,34 +108,36 @@ export default function Home() {
             <Hero />
             
             <LazySection fallback={<div className="container py-4"><Skeleton height="200px" /></div>}>
-                <Category />
+                <Category bgColor="white" />
             </LazySection>
+
+            <TrustHighlights bgColor="gray" />
             
             {/* SEO Content Section to boost word count and keyword consistency */}
-            <section className="seo-content-boost py-5 bg-white">
+            <section className="seo-content-boost py-5 section-bg-white">
                 <div className="container py-4">
                     <div className="row g-5 align-items-center">
                         <div className="col-lg-6 animate-fade-in-up">
                             <h2 className="fw-bold text-dark mb-4">Hyderabad's #1 Destination for Professional <span className="text-primary">Home Services</span> & Appliance Repair</h2>
                             <p className="text-muted fs-5 mb-4">
-                                At <strong>{BRAND.name}</strong>, we understand that a malfunctioning appliance can disrupt your entire household schedule. That's why we've built a world-class network of certified technicians across Hyderabad and Secunderabad to provide **instant door-step solutions**. Whether you need an AC repair in Gachibowli or a washing machine service in Dilsukhnagar, our experts are just a call away.
+                                 At <strong>{BRAND.name}</strong>, we understand that a malfunctioning appliance can disrupt your entire household schedule. That's why we've built a world-class network of certified technicians across Hyderabad and Secunderabad to provide <strong>instant door-step solutions</strong>. Whether you need an AC repair in Gachibowli or a washing machine service in Dilsukhnagar, our experts are just a call away.
                             </p>
                             <p className="text-muted mb-4 opacity-75">
                                 Our commitment to technical excellence and customer satisfaction has made us the most trusted name in the industry. We don't just fix symptoms; we diagnose the root cause of every breakdown to ensure long-term reliability. With our transparent pricing starting at just ₹100 and a comprehensive 180-day warranty, you get professional service without the premium price tag.
                             </p>
                             <div className="d-flex gap-4 mt-5 mobile-center">
                                 <div className="stat-item hover-lift">
-                                    <div className="h3 fw-bold text-primary mb-0">150k+</div>
+                                    <div className="h3 fw-bold mb-0" style={{color:'#ff6b00'}}>150k+</div>
                                     <div className="small text-muted text-uppercase tracking-wider">Repairs Done</div>
                                 </div>
                                 <div className="vr text-muted opacity-25 d-none d-md-block"></div>
                                 <div className="stat-item hover-lift">
-                                    <div className="h3 fw-bold text-primary mb-0">13+</div>
+                                    <div className="h3 fw-bold mb-0" style={{color:'#ff6b00'}}>13+</div>
                                     <div className="small text-muted text-uppercase tracking-wider">Years Experience</div>
                                 </div>
                                 <div className="vr text-muted opacity-25 d-none d-md-block"></div>
                                 <div className="stat-item hover-lift">
-                                    <div className="h3 fw-bold text-primary mb-0">2Hr</div>
+                                    <div className="h3 fw-bold mb-0" style={{color:'#ff6b00'}}>2Hr</div>
                                     <div className="small text-muted text-uppercase tracking-wider">Arrival Time</div>
                                 </div>
                             </div>
@@ -156,54 +170,70 @@ export default function Home() {
                 </div>
             </section>
 
-
             <LazySection fallback={<SectionSkeleton />}>
-                <MostBookedServices />
+                <MostBookedServices bgColor="gray" />
             </LazySection>
 
             <LazySection fallback={<div className="container py-4"><Skeleton height="150px" borderRadius="12px" /></div>}>
-                <AdBanner />
+                <AdBanner bgColor="white" />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <AllServicesList />
+                <OffersAndDiscounts />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <PestControl />
+                <AllServicesList bgColor="gray" />
+            </LazySection>
+
+            <HowItWorks bgColor="white" />
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <PestControl bgColor="gray" />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <HomeSafety />
+                <HomeSafety bgColor="white" />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <FloorPolishing />
+                <FloorPolishing bgColor="gray" />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <CleaningServices />
+                <CleaningServices bgColor="white" />
+            </LazySection>
+
+            <Testimonials bgColor="gray" />
+
+            <LazySection fallback={<SectionSkeleton />}>
+                <VehicleWash bgColor="white" />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <VehicleWash />
+                <SafetyHomeProtection bgColor="gray" />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <SafetyHomeProtection />
+                <HomeITSetup bgColor="white" />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <HomeITSetup />
+                <PremiumPestControl bgColor="gray" />
             </LazySection>
 
             <LazySection fallback={<SectionSkeleton />}>
-                <PremiumPestControl />
+                <SpecializedCleaningUtility bgColor="white" />
             </LazySection>
 
-            <LazySection fallback={<SectionSkeleton />}>
-                <SpecializedCleaningUtility />
-            </LazySection>
+            <FAQ 
+                title="Frequently Asked Questions" 
+                subtitle="Got questions? We've got answers about our doorstep services in Hyderabad."
+                items={faqItems}
+                bgColor="gray"
+            />
+
+            <BottomCTA bgColor="white" />
         </main>
     );
 }

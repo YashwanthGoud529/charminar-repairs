@@ -3,6 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import PageHero from '@/components/shared/PageHero';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import './AboutContent.css';
 
 const AboutContent = ({ aboutSchema }) => {
@@ -22,7 +26,7 @@ const AboutContent = ({ aboutSchema }) => {
             {/* Reusable Page Hero */}
             <PageHero
                 title="Our Legacy of Excellence"
-                subtitle="Charminar Repairs has been Hyderabad's most trusted name in home appliance restoration for over 13 years. We don't just fix appliances; we restore your household's peace of mind."
+                subtitle="MeeHelper has been Hyderabad's most trusted name in home appliance restoration for over 13 years. We don't just fix appliances; we restore your household's peace of mind."
                 breadcrumb="About Us"
             />
 
@@ -78,7 +82,7 @@ const AboutContent = ({ aboutSchema }) => {
                         </div>
                         <div className="col-lg-5">
                             <div className="image-stack-premium">
-                                <img src="/images/unsplash_1581091226825.png" alt="Engineering" className="main-img shadow-2xl" />
+                                <img src="/images/about-technician.png" alt="Engineering" className="main-img shadow-2xl" />
                                 <div className="floating-stat-card shadow-2xl">
                                     <div className="stat-num">13+</div>
                                     <div className="stat-label">YEARS OF<br />TRUST</div>
@@ -116,7 +120,7 @@ const AboutContent = ({ aboutSchema }) => {
             </section>
 
             {/* Professional Protocol Section */}
-            <section className="professional-protocol py-5 my-5 bg-repair-purple text-white overflow-hidden position-relative" style={{ borderRadius: '16px' }}>
+            <section className="professional-protocol py-5 my-5 bg-repair-purple text-white overflow-hidden position-relative" style={{ borderRadius: '4px' }}>
                 <div className="bg-decoration-blob top-0 start-0 opacity-10"></div>
                 <div className="container custom-container py-5 position-relative z-1">
                     <div className="text-center mb-5">
@@ -131,7 +135,7 @@ const AboutContent = ({ aboutSchema }) => {
                             { num: "04", t: "Quality Verification", d: "A master engineer verifies the repair before providing the warranty." }
                         ].map((step, i) => (
                             <div key={i} className="col-lg-3 col-md-6">
-                                <div className="protocol-card p-4 border border-white-10 h-100" style={{ borderRadius: '12px' }}>
+                                <div className="protocol-card p-4 border border-white-10 h-100" style={{ borderRadius: '4px' }}>
                                     <div className="step-num text-white opacity-50 fw-black mb-3 fs-3">{step.num}</div>
                                     <h4 className="fw-bold text-white mb-2">{step.t}</h4>
                                     <p className="text-white opacity-75 small mb-0 lh-base">{step.d}</p>
@@ -157,7 +161,7 @@ const AboutContent = ({ aboutSchema }) => {
                             { t: "Upfront Index", d: "Crystal clear pricing breakdowns with zero hidden fees.", i: "/images/scales_icon.png" }
                         ].map((p, i) => (
                             <div key={i} className="col-lg-3 col-md-6">
-                                <div className="pillar-card p-4 text-center bg-white shadow-sm border border-light h-100" style={{ borderRadius: '16px' }}>
+                                <div className="pillar-card p-4 text-center bg-white shadow-sm border border-light h-100" style={{ borderRadius: '4px' }}>
                                     <div className="pillar-icon mb-3 mx-auto">
                                         <img src={p.i} alt={p.t} width="50" />
                                     </div>
@@ -170,13 +174,149 @@ const AboutContent = ({ aboutSchema }) => {
                 </div>
             </section>
 
+            {/* Our Services Ecosystem */}
+            <section className="about-ecosystem py-5 bg-light-soft border-top border-bottom border-light">
+                <div className="container custom-container py-5">
+                    <div className="text-center mb-5">
+                        <span className="badge bg-soft-purple text-purple px-4 py-2 mb-3">OUR CORE ECOSYSTEM</span>
+                        <h2 className="fw-black text-dark-blue fs-1">Specialized Technical Verticals.</h2>
+                        <p className="text-muted font-inter small mx-auto" style={{ maxWidth: '600px' }}>
+                            We group our services into four primary engineering divisions, each staffed by industry-certified specialists.
+                        </p>
+                    </div>
+
+                    <div className="swiper-container-relative px-md-4">
+                        <Swiper
+                            modules={[Navigation, Autoplay]}
+                            navigation
+                            autoplay={{
+                                delay: 4000,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: true
+                            }}
+                            speed={800}
+                            spaceBetween={24}
+                            slidesPerView={1}
+                            breakpoints={{
+                                576: { slidesPerView: 2, spaceBetween: 24 },
+                                992: { slidesPerView: 3, spaceBetween: 24 },
+                                1200: { slidesPerView: 4, spaceBetween: 24 }
+                            }}
+                            className="about-ecosystem-swiper py-2"
+                        >
+                            {[
+                                {
+                                    title: "Appliance Engineering",
+                                    desc: "Same-day doorstep repairs and preventive maintenance for all household appliances including ACs, washing machines, refrigerators, and television units.",
+                                    image: "/images/about-appliance-repair.png",
+                                    features: ["180-Day Platinum Warranty", "Genuine OEM Spare Parts Only", "Certified Brand Specialists"]
+                                },
+                                {
+                                    title: "Premium Pest Control",
+                                    desc: "Integrated pest management services using 100% odorless, child-safe, and pet-friendly government-licensed sprays to resolve termites, bed bugs, and rodents.",
+                                    image: "/images/premium-pest-control.png",
+                                    features: ["90-Day Protection Guarantee", "Odorless & Safe Bio-Chemicals", "Licensed Pest Controllers"]
+                                },
+                                {
+                                    title: "Advanced Sanitation",
+                                    desc: "Deep cleaning and hygiene utility services including water tank UV disinfection, high-rise facade glass cleaning, and high-pressure sumps sludge clearance.",
+                                    image: "/images/about-cleaning-service.png",
+                                    features: ["Karcher Jet Wash Equipment", "6-Stage UV Sanitization", "Safety Harness Height Certified"]
+                                },
+                                {
+                                    title: "MeeHelper Auto Detailing",
+                                    desc: "Premium doorstep vehicle washing and paint correction. We bring our own high-pressure diesel steam machines, generators, and clean water to your driveway.",
+                                    image: "/images/steam-wash-pro.png",
+                                    features: ["High-Pressure Snow Foam", "Interior Hot Steam Sanitizing", "Dual-Action Machine Buffing"]
+                                }
+                            ].map((eco, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="ecosystem-card bg-white shadow-sm border border-light h-100 overflow-hidden d-flex flex-column" style={{ borderRadius: '4px', transition: 'all 0.3s', width: '100%' }}>
+                                        <div className="ecosystem-img-wrapper" style={{ height: '180px', position: 'relative', overflow: 'hidden' }}>
+                                            <img src={eco.image} alt={eco.title} className="w-100 h-100 object-fit-cover" style={{ transition: 'transform 0.5s' }} />
+                                        </div>
+                                        <div className="p-4 d-flex flex-column flex-grow-1">
+                                            <h4 className="fw-bold text-dark fs-5 mb-3">{eco.title}</h4>
+                                            <p className="text-muted small mb-4 lh-base flex-grow-1" style={{ minHeight: '80px' }}>{eco.desc}</p>
+                                            <ul className="list-unstyled mb-0 d-flex flex-column gap-2 border-top border-light pt-3 mt-auto">
+                                                {eco.features.map((feat, fIdx) => (
+                                                    <li key={fIdx} className="d-flex align-items-center gap-2 small text-secondary">
+                                                        <i className="fas fa-check-circle text-success" style={{ fontSize: '12px' }}></i>
+                                                        <span>{feat}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
+            </section>
+
+            {/* Technician Trust & Safety Protocol */}
+            <section className="safety-trust-protocol py-5 bg-white">
+                <div className="container custom-container py-5">
+                    <div className="row align-items-center g-5">
+                        <div className="col-lg-6">
+                            <div className="section-tag mb-3">ZERO-RISK ASSURANCE</div>
+                            <h2 className="display-6 fw-black text-dark-blue mb-4 tracking-tight">
+                                Your Home's Security is Our <span className="text-purple">Highest Priority</span>.
+                            </h2>
+                            <p className="text-muted mb-4 fs-6 lh-lg">
+                                We understand that letting a technician into your private residence requires high trust. That's why every engineer wearing the MeeHelper uniform is subjected to a rigorous safety, technical, and background clearance protocol before entering the field.
+                            </p>
+                            <div className="d-flex flex-column gap-3 mb-4">
+                                {[
+                                    { t: "100% Background Verified", d: "Every technician undergoes rigorous local police checks and official identity verification." },
+                                    { t: "ID Card & Verification Links", d: "Every engineer carries a digital profile with a QR link confirming their active status on our website." },
+                                    { t: "Ongoing Security Training", d: "Routine training on customer privacy, home etiquette, and safe contact protocols." }
+                                ].map((safe, idx) => (
+                                    <div key={idx} className="d-flex gap-3 align-items-start">
+                                        <div className="icon-circle bg-soft-purple text-purple d-flex align-items-center justify-content-center flex-shrink-0" style={{ width: '40px', height: '40px', borderRadius: '50%' }}>
+                                            <i className="fas fa-user-shield" style={{ fontSize: '14px' }}></i>
+                                        </div>
+                                        <div>
+                                            <h6 className="fw-bold text-dark mb-1">{safe.t}</h6>
+                                            <p className="text-muted small mb-0 lh-base">{safe.d}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="p-4 p-md-5 rounded-4 bg-light border border-light position-relative" style={{ borderRadius: '4px' }}>
+                                <h4 className="fw-black text-dark mb-3">The Quality Audits We Conduct</h4>
+                                <p className="text-muted small mb-4">We monitor job performance and user ratings constantly to maintain our elite service tier.</p>
+                                <div className="d-flex flex-column gap-3">
+                                    {[
+                                        { title: "Real-time Rating Check", pct: "98.4%", desc: "Average satisfaction rating maintained across 15,000+ customer reviews." },
+                                        { title: "First-Visit Resolution", pct: "91.2%", desc: "Percentage of repairs diagnosed and fully resolved during the initial 2-hour doorstep visit." },
+                                        { title: "OEM Spare Parts Audits", pct: "100.0%", desc: "Routine inventory audits to ensure zero third-party copy components enter our supply lines." }
+                                    ].map((audit, i) => (
+                                        <div key={i} className="p-3 bg-white shadow-sm border border-light d-flex align-items-center justify-content-between gap-3" style={{ borderRadius: '4px' }}>
+                                            <div>
+                                                <div className="fw-bold text-dark fs-6">{audit.title}</div>
+                                                <div className="text-muted x-small">{audit.desc}</div>
+                                            </div>
+                                            <div className="h3 fw-black text-purple mb-0">{audit.pct}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Bottom CTA */}
             <section className="cta-about py-5 bg-dark text-white position-relative overflow-hidden">
                 <div className="bg-decoration-blob bottom-0 end-0 opacity-25"></div>
                 <div className="container custom-container text-center py-5 position-relative z-1">
                     <h2 className="display-6 fw-black mb-4">Ready to Experience the Difference?</h2>
                     <p className="fs-5 opacity-75 mb-5 mx-auto font-inter" style={{ maxWidth: '700px' }}>
-                        Join thousands of satisfied families in Hyderabad who trust Charminar Repairs for their household peace of mind.
+                        Join thousands of satisfied families in Hyderabad who trust MeeHelper for their household peace of mind.
                     </p>
                     <div className="d-flex justify-content-center gap-3 flex-wrap">
                         <Link href="/contact-us" className="btn btn-warning px-5 py-3 fw-black rounded-3 shadow-lg">
@@ -190,21 +330,21 @@ const AboutContent = ({ aboutSchema }) => {
             </section>
 
             <style id="about-refined-styles">{`
-                .about-page { font-family: var(--font-outfit), sans-serif; }
+                .about-page { font-family: var(--font-main), sans-serif; }
                 .fw-black { font-weight: 900; }
-                .text-purple { color: #673ab7; }
+                .text-purple { color: #024dbe; }
                 .text-dark-blue { color: #0c1228; }
-                .bg-soft-purple { background: rgba(103, 58, 183, 0.08); }
+                .bg-soft-purple { background: rgba(2, 77, 190, 0.08); }
                 .bg-light-soft { background: #fbfcff; }
-                .bg-repair-purple { background: #673ab7 !important; }
+                .bg-repair-purple { background: #024dbe !important; }
                 .border-white-10 { border: 1px solid rgba(255,255,255,0.1); }
                 
                 .section-tag {
-                    color: #673ab7;
+                    color: #024dbe;
                     font-weight: 800;
                     font-size: 13px;
                     letter-spacing: 2px;
-                    border-left: 3px solid #673ab7;
+                    border-left: 3px solid #024dbe;
                     padding-left: 12px;
                 }
 
@@ -215,15 +355,15 @@ const AboutContent = ({ aboutSchema }) => {
                     padding: 20px;
                     background: #fff;
                     border: 1px solid rgba(0,0,0,0.03);
-                    border-radius: 12px;
+                    border-radius: 4px;
                     transition: all 0.3s;
                     box-shadow: 0 4px 12px rgba(0,0,0,0.02);
                 }
 
                 .premium-mini-card:hover {
                     transform: translateY(-5px);
-                    box-shadow: 0 15px 30px rgba(103, 58, 183, 0.08);
-                    border-color: rgba(103, 58, 183, 0.2);
+                    box-shadow: 0 15px 30px rgba(2, 77, 190, 0.08);
+                    border-color: rgba(2, 77, 190, 0.2);
                 }
 
                 .mini-icon-box {
@@ -237,11 +377,11 @@ const AboutContent = ({ aboutSchema }) => {
                 }
 
                 .btn-premium-purple {
-                    background: #673ab7;
+                    background: #024dbe;
                     color: #fff;
                     padding: 18px 40px;
                     border: none;
-                    border-radius: 12px;
+                    border-radius: 4px;
                     font-weight: 800;
                     text-transform: uppercase;
                     letter-spacing: 1px;
@@ -250,9 +390,9 @@ const AboutContent = ({ aboutSchema }) => {
                 }
 
                 .btn-premium-purple:hover {
-                    background: #5e35b1;
+                    background: #013c96;
                     transform: translateY(-3px);
-                    box-shadow: 0 15px 30px rgba(103, 58, 183, 0.3);
+                    box-shadow: 0 15px 30px rgba(2, 77, 190, 0.3);
                     color: #fff;
                 }
 
@@ -264,7 +404,7 @@ const AboutContent = ({ aboutSchema }) => {
 
                 .main-img {
                     width: 100%;
-                    border-radius: 12px;
+                    border-radius: 4px;
                     border: 8px solid white;
                 }
 
@@ -272,10 +412,10 @@ const AboutContent = ({ aboutSchema }) => {
                     position: absolute;
                     bottom: 0;
                     right: 0;
-                    background: #673ab7;
+                    background: #024dbe;
                     color: white;
                     padding: 25px 35px;
-                    border-radius: 12px;
+                    border-radius: 4px;
                     text-align: center;
                 }
 
@@ -294,7 +434,7 @@ const AboutContent = ({ aboutSchema }) => {
                 }
 
                 .vision-card-premium {
-                    border-radius: 16px;
+                    border-radius: 4px;
                     background: #f8faff;
                     border: 1px solid rgba(0,0,0,0.02);
                     transition: all 0.3s;
@@ -304,16 +444,16 @@ const AboutContent = ({ aboutSchema }) => {
                     font-weight: 800;
                     font-size: 12px;
                     letter-spacing: 2px;
-                    color: #673ab7;
+                    color: #024dbe;
                 }
 
                 .pillar-card {
-                    border-radius: 16px;
+                    border-radius: 4px;
                     transition: all 0.3s;
                 }
 
                 .pillar-card:hover {
-                    border-color: #673ab7;
+                    border-color: #024dbe;
                     transform: translateY(-10px);
                     box-shadow: 0 20px 40px rgba(0,0,0,0.06);
                 }
@@ -322,9 +462,23 @@ const AboutContent = ({ aboutSchema }) => {
                     position: absolute;
                     width: 600px;
                     height: 600px;
-                    background: radial-gradient(circle, rgba(103, 58, 183, 0.08) 0%, rgba(103, 58, 183, 0) 70%);
+                    background: radial-gradient(circle, rgba(2, 77, 190, 0.08) 0%, rgba(2, 77, 190, 0) 70%);
                     z-index: 0;
                     filter: blur(50px);
+                }
+
+                .ecosystem-card:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 20px 40px rgba(2, 77, 190, 0.08) !important;
+                    border-color: rgba(2, 77, 190, 0.2) !important;
+                }
+                
+                .ecosystem-card:hover img {
+                    transform: scale(1.05);
+                }
+                
+                .ecosystem-img-wrapper img {
+                    transition: transform 0.5s ease;
                 }
             `}</style>
         </main>

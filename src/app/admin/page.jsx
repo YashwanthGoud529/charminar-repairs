@@ -91,7 +91,7 @@ const AdminPage = () => {
     const serviceCategories = dbCategories.length > 0 ? dbCategories : Object.keys(SERVICE_DATA_MAP).map(catName => ({
         name: catName,
         slug: catName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
-        icon: SERVICE_DATA_MAP[catName].icon
+        icon: SERVICE_DATA_MAP[catName] ? SERVICE_DATA_MAP[catName].icon : ''
     }));
 
     const specialtyOptions = [
@@ -195,6 +195,7 @@ const AdminPage = () => {
             let totalSub = 0;
             
             for (const [catName, data] of Object.entries(SERVICE_DATA_MAP)) {
+                if (!data) continue;
                 const slug = catName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                 
                 // 1. Seed Top-Level Metadata (The main service info)

@@ -4,8 +4,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Annual Maintenance Contract (AMC) | Charminar Repairs Hyderabad',
-    description: 'Protect your home appliances year-round with Charminar Repairs AMC plans. Starting at ₹999/year for ACs, fridges, washing machines, and more.',
+    title: 'Annual Maintenance Contract (AMC) | MeeHelper Hyderabad',
+    description: 'Protect your home appliances year-round with MeeHelper AMC plans. Starting at ₹999/year for ACs, fridges, washing machines, and more.',
     canonicalPath: '/amc',
 });
 
@@ -16,7 +16,7 @@ const plans = [
         notIncluded: ['Spare Parts Cost', 'Emergency Visits'],
     },
     {
-        name: 'Home AMC', price: '₹2,499', period: '/year', color: '#673ab7', popular: true,
+        name: 'Home AMC', price: '₹2,499', period: '/year', color: '#024dbe', popular: true,
         appliances: 'Up to 4 Appliances', visits: '4 Preventive Visits', coverage: ['4 Free Service Calls', '20% Discount on Spare Parts', 'Priority Booking', '24/7 WhatsApp Support', 'Free Emergency Visits (2)', 'Annual Health Report'],
         notIncluded: ['Spare Parts Cost above ₹500'],
     },
@@ -46,8 +46,8 @@ export default function AMCPage() {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20, marginBottom: 60 }}>
                         {plans.map((p, i) => (
-                            <div key={i} style={{ background: '#fff', border: p.popular ? `2px solid #673ab7` : '1px solid #e8eaf0', borderRadius: 4, overflow: 'hidden', position: 'relative' }}>
-                                {p.popular && <div style={{ background: '#673ab7', color: '#fff', textAlign: 'center', padding: '5px 0', fontSize: 11, fontWeight: 800, letterSpacing: 1 }}>MOST POPULAR</div>}
+                            <div key={i} style={{ background: '#fff', border: p.popular ? `2px solid #024dbe` : '1px solid #e8eaf0', borderRadius: 4, overflow: 'hidden', position: 'relative' }}>
+                                {p.popular && <div style={{ background: '#024dbe', color: '#fff', textAlign: 'center', padding: '5px 0', fontSize: 11, fontWeight: 800, letterSpacing: 1 }}>MOST POPULAR</div>}
                                 <div style={{ padding: '28px 24px' }}>
                                     <div style={{ fontWeight: 800, fontSize: 18, color: '#0c1228', marginBottom: 4 }}>{p.name}</div>
                                     <div style={{ display: 'flex', alignItems: 'baseline', gap: 2, marginBottom: 4 }}>
@@ -69,7 +69,7 @@ export default function AMCPage() {
                                             </li>
                                         ))}
                                     </ul>
-                                    <Link href="/contact-us/" style={{ background: p.popular ? '#673ab7' : '#f8f9fc', color: p.popular ? '#fff' : '#0c1228', border: p.popular ? 'none' : '1px solid #e2e8f0', padding: '11px 0', borderRadius: 4, fontWeight: 700, fontSize: 14, display: 'block', textAlign: 'center' }}>
+                                    <Link href="/contact-us/" style={{ background: p.popular ? '#024dbe' : '#f8f9fc', color: p.popular ? '#fff' : '#0c1228', border: p.popular ? 'none' : '1px solid #e2e8f0', padding: '11px 0', borderRadius: 4, fontWeight: 700, fontSize: 14, display: 'block', textAlign: 'center' }}>
                                         Get This Plan
                                     </Link>
                                 </div>

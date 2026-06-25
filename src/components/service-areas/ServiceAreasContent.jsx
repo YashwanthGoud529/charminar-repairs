@@ -11,7 +11,7 @@ const ServiceAreasContent = ({ locations }) => {
             {/* Shared Page Hero */}
             <PageHero
                 title="Service Areas Across Hyderabad"
-                subtitle="Charminar Repairs operates an elite technical network across the city. We guarantee a 90-minute arrival at your doorstep, serving over 100+ major localities in Greater Hyderabad."
+                subtitle="MeeHelper operates an elite technical network across the city. We guarantee a 90-minute arrival at your doorstep, serving over 100+ major localities in Greater Hyderabad."
                 breadcrumb="Service Areas"
             />
 
@@ -49,7 +49,7 @@ const ServiceAreasContent = ({ locations }) => {
 
                             <div className="d-flex flex-column gap-4">
                                 <div className="feature-item-logistics bg-white p-4 shadow-sm border border-light">
-                                    <div className="log-icon-box bg-purple-soft">
+                                    <div className="log-icon-box bg-blue-soft">
                                         <i className="fas fa-truck-moving text-purple"></i>
                                     </div>
                                     <div>
@@ -84,7 +84,7 @@ const ServiceAreasContent = ({ locations }) => {
             <section className="neighborhoods-section py-5 my-5">
                 <div className="container custom-container py-4">
                     <div className="text-center mb-5 pb-4 border-bottom border-light">
-                        <span className="badge bg-soft-purple text-purple px-4 py-2 mb-3">CITY COVERAGE</span>
+                        <span className="badge bg-soft-blue text-purple px-4 py-2 mb-3">CITY COVERAGE</span>
                         <h2 className="fw-black text-dark-blue fs-1">Active Service Localities</h2>
                         <p className="text-muted fs-5">Serving all Residential and Commercial hubs in Greater Hyderabad.</p>
                     </div>
@@ -127,7 +127,7 @@ const ServiceAreasContent = ({ locations }) => {
                         Our nearest technician is likely just minutes away from your home. Book now for a certified restoration service.
                     </p>
                     <div className="d-flex flex-wrap justify-content-center gap-4">
-                        <Link href="/contact-us" className="btn btn-primary px-5 py-3 fw-bold rounded-3 text-uppercase" style={{ background: '#673ab7', borderColor: '#673ab7' }}>
+                        <Link href="/contact-us" className="btn btn-primary px-5 py-3 fw-bold rounded-3 text-uppercase" style={{ background: '#024dbe', borderColor: '#024dbe' }}>
                             CONFIRM BOOKING
                         </Link>
                         <a href="tel:8008615049" className="btn btn-outline-light px-5 py-3 fw-black rounded-3 text-uppercase border-2">
@@ -138,21 +138,21 @@ const ServiceAreasContent = ({ locations }) => {
             </section>
 
             <style id="areas-premium-styles">{`
-                .service-areas-intl { font-family: var(--font-outfit), sans-serif; }
+                .service-areas-intl { font-family: var(--font-main), sans-serif; }
                 .fw-black { font-weight: 900; }
-                .text-purple { color: #673ab7; }
+                .text-purple { color: #024dbe; }
                 .tracking-tight { letter-spacing: -0.01em; }
                 .bg-light-soft { background: #fbfcff; }
                 .text-dark-blue { color: #0c1228; }
-                .bg-purple-soft { background: #f4effc; }
+                .bg-blue-soft { background: #f0f7ff; }
                 .bg-blue-soft { background: #f0f7ff; }
 
                 .section-tag {
-                    color: #673ab7;
+                    color: #024dbe;
                     font-weight: 800;
                     font-size: 13px;
                     letter-spacing: 2px;
-                    border-left: 3px solid #673ab7;
+                    border-left: 3px solid #024dbe;
                     padding-left: 12px;
                 }
 
@@ -165,7 +165,7 @@ const ServiceAreasContent = ({ locations }) => {
                 .premium-summary-card:hover {
                     transform: translateY(-8px);
                     box-shadow: 0 20px 40px rgba(0,0,0,0.06) !important;
-                    border-color: rgba(103, 58, 183, 0.1);
+                    border-color: rgba(2, 77, 190, 0.1);
                 }
 
                 .summary-icon-wrapper {
@@ -206,8 +206,8 @@ const ServiceAreasContent = ({ locations }) => {
 
                 .loc-card-v:hover {
                     transform: scale(1.03);
-                    border-color: #673ab7 !important;
-                    box-shadow: 0 10px 30px rgba(103, 58, 183, 0.1) !important;
+                    border-color: #024dbe !important;
+                    box-shadow: 0 10px 30px rgba(2, 77, 190, 0.1) !important;
                 }
 
                 .status-dot {
@@ -241,7 +241,7 @@ const ServiceAreasContent = ({ locations }) => {
                     color: white;
                 }
 
-                .bg-soft-purple { background: rgba(103, 58, 183, 0.08); }
+                .bg-soft-blue { background: rgba(2, 77, 190, 0.08); }
             `}</style>
         </main>
     );

@@ -61,9 +61,9 @@ export const SERVICE_DATA_MAP = {
         ]
     },
     'Explore Our Services': {
-        icon: '/images/charminar-repairs-logo.jpeg',
+        icon: '/favicon.ico',
         photo: '/images/unsplash_1621905251189.jpg',
-        desc: 'Discover the full range of <strong>professional home services provided by Charminar Repairs</strong>. From specialized appliance repair to complete home maintenance, our certified experts cover every corner of Hyderabad.',
+        desc: 'Discover the full range of <strong>professional home services provided by MeeHelper</strong>. From specialized appliance repair to complete home maintenance, our certified experts cover every corner of Hyderabad.',
         highlights: [
             '✦ Full Spectrum of Appliance Repair Solutions',
             '✦ Comprehensive Home Maintenance & Repairs',
@@ -105,7 +105,7 @@ export const SERVICE_DATA_MAP = {
         globalDiscount: 16,
         icon: '/images/ac_icon.png',
         photo: '/images/ac-repair.png',
-        desc: 'Is your <strong>AC blowing warm air</strong>, leaking water, or making unexplained noises? At <strong>Charminar Repairs</strong>, our HVAC-certified technicians perform a complete <strong>25-point diagnostic</strong> on your air conditioner across <strong>Hyderabad</strong> — from the outdoor compressor unit to the indoor evaporator coil.',
+        desc: 'Is your <strong>AC blowing warm air</strong>, leaking water, or making unexplained noises? At <strong>MeeHelper</strong>, our HVAC-certified technicians perform a complete <strong>25-point diagnostic</strong> on your air conditioner across <strong>Hyderabad</strong> — from the outdoor compressor unit to the indoor evaporator coil.',
         highlights: [
             '✦ Split & Window AC Repair — All Types',
             '✦ Refrigerant Gas Charging (R-32 / R-22 / R-410A)',
@@ -160,7 +160,7 @@ export const SERVICE_DATA_MAP = {
         ],
         reviews: [
             { user: 'Ravi K., Banjara Hills', text: 'AC was blowing warm air — technician diagnosed gas leak and fixed it in under an hour. Very professional!' },
-            { user: 'Priya M., Madhapur', text: 'Brilliant job on the PCB repair. Saved me from buying a new AC. Highly recommend Charminar Repairs!' }
+            { user: 'Priya M., Madhapur', text: 'Brilliant job on the PCB repair. Saved me from buying a new AC. Highly recommend MeeHelper!' }
         ],
         spotlight: {
             title: 'HVAC Certified Technicians Only',
@@ -2005,7 +2005,7 @@ export const SERVICE_DATA_MAP = {
     'Packers and Movers': {
         icon: '/assets/Images/category/packers-movers.jpeg',
         photo: '/assets/Images/category/packers-movers.jpeg',
-        desc: 'Relocating to a new home or office? At <strong>Charminar Repairs Packers & Movers</strong>, we provide seamless, secure, and professional relocation services across Hyderabad. Our trained moving team handles packing, loading, transportation, and unpacking with 100% safety and zero damage guaranteed.',
+        desc: 'Relocating to a new home or office? At <strong>MeeHelper Packers & Movers</strong>, we provide seamless, secure, and professional relocation services across Hyderabad. Our trained moving team handles packing, loading, transportation, and unpacking with 100% safety and zero damage guaranteed.',
         highlights: [
             '✦ ISO-Certified Packing & Moving Professional Teams',
             '✦ Zero Damage Guarantee with Complete Transit Insurance',
@@ -2063,53 +2063,53 @@ export const SERVICE_DATA_MAP = {
         spotlight: {
             title: 'Verified Moving Partners',
             desc: 'All our movers undergo strict background checks, vehicle audits, and packing certifications. We guarantee a stress-free shifting experience with dedicated support coordinators.'
-        },
-        'Air Cooler Repair': {
-            globalDiscount: 10,
-            icon: '/images/ac_icon.png',
-            photo: '/images/ac-repair.png',
-            desc: 'Is your <strong>air cooler not throwing cool air</strong>, leaking water, or having motor issues? At <strong>Charminar Repairs</strong>, our certified technicians perform quick doorstep diagnostics and servicing on all types of desert and personal coolers across <strong>Hyderabad</strong>.',
-            highlights: [
-                '✦ Desert & Personal Cooler Repair',
-                '✦ Fan Motor & Pump Repair/Replacement',
-                '✦ Cooling Pad (Honey-Comb / Wood-Wool) Changes',
-                '✦ Water Leakage & Body Damage Restoration',
-                '✦ Electrical Wiring & Switch Troubleshooting',
-                '✦ Same-Day Doorstep Service in Hyderabad',
-                '✦ 180-Day Warranty on Spares & Service'
-            ],
-            brands: ['Symphony', 'Kenstar', 'Bajaj', 'Orient', 'Crompton', 'Usha', 'Havells', 'Hindware'],
-            specializations: [
-                'Fan Motor Restoration', 'Submersible Pump Swaps', 'Honey-Comb Pad Cleaning',
-                'Wiring & Safety Audits', 'Water Distribution Checks'
-            ],
-            restorationFramework: [
-                { title: 'Fan Motor Torque & Alignment', icon: 'fas fa-fan' },
-                { title: 'Submersible Pump Water Distribution', icon: 'fas fa-droplet' },
-                { title: 'Honey-Comb Pad Descaling', icon: 'fas fa-wind' },
-                { title: 'Electrical Control Switch & Safety Audit', icon: 'fas fa-microchip' }
-            ],
-            faultResolution: [
-                { t: 'Cooler Not Throwing Cool Air', i: 'fas fa-temperature-up', d: 'Water pump check and pad clearing/replacement.' },
-                { t: 'Water Leakage Underneath', i: 'fas fa-droplet-slash', d: 'Tank inspection and hose replacement.' },
-                { t: 'Fan Motor Not Spinning', i: 'fas fa-rotate', d: 'Motor winding diagnostics and capacitor replacement.' }
-            ],
-            subServices: [
-                { id: 'cooler-visit', name: 'Air Cooler Diagnostic Visit', price: 199, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Complete safety and mechanical checkup of pump, motor, and pads.' },
-                { id: 'cooler-pump', name: 'Cooler Pump Replacement', price: 499, image: '/images/gas_1.png', desc: 'Installation of high-lift submersible pump to restore water flow.' },
-                { id: 'cooler-motor', name: 'Fan Motor Repair / Swap', price: 899, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Fixes noisy operations or motor failures.' }
-            ],
-            inclusions: [
-                'Thorough inspection of motor, pump, and pads',
-                '180-day warranty on all parts replaced',
-                'Post-service testing for cooling performance'
-            ],
-            exclusions: [
-                'Cost of new cooling pads if replaced',
-                'Complete body/tank replacement',
-                'External power socket repairs'
-            ]
         }
+    },
+    'Air Cooler Repair': {
+        globalDiscount: 10,
+        icon: '/images/ac_icon.png',
+        photo: '/images/ac-repair.png',
+        desc: 'Is your <strong>air cooler not throwing cool air</strong>, leaking water, or having motor issues? At <strong>MeeHelper</strong>, our certified technicians perform quick doorstep diagnostics and servicing on all types of desert and personal coolers across <strong>Hyderabad</strong>.',
+        highlights: [
+            '✦ Desert & Personal Cooler Repair',
+            '✦ Fan Motor & Pump Repair/Replacement',
+            '✦ Cooling Pad (Honey-Comb / Wood-Wool) Changes',
+            '✦ Water Leakage & Body Damage Restoration',
+            '✦ Electrical Wiring & Switch Troubleshooting',
+            '✦ Same-Day Doorstep Service in Hyderabad',
+            '✦ 180-Day Warranty on Spares & Service'
+        ],
+        brands: ['Symphony', 'Kenstar', 'Bajaj', 'Orient', 'Crompton', 'Usha', 'Havells', 'Hindware'],
+        specializations: [
+            'Fan Motor Restoration', 'Submersible Pump Swaps', 'Honey-Comb Pad Cleaning',
+            'Wiring & Safety Audits', 'Water Distribution Checks'
+        ],
+        restorationFramework: [
+            { title: 'Fan Motor Torque & Alignment', icon: 'fas fa-fan' },
+            { title: 'Submersible Pump Water Distribution', icon: 'fas fa-droplet' },
+            { title: 'Honey-Comb Pad Descaling', icon: 'fas fa-wind' },
+            { title: 'Electrical Control Switch & Safety Audit', icon: 'fas fa-microchip' }
+        ],
+        faultResolution: [
+            { t: 'Cooler Not Throwing Cool Air', i: 'fas fa-temperature-up', d: 'Water pump check and pad clearing/replacement.' },
+            { t: 'Water Leakage Underneath', i: 'fas fa-droplet-slash', d: 'Tank inspection and hose replacement.' },
+            { t: 'Fan Motor Not Spinning', i: 'fas fa-rotate', d: 'Motor winding diagnostics and capacitor replacement.' }
+        ],
+        subServices: [
+            { id: 'cooler-visit', name: 'Air Cooler Diagnostic Visit', price: 199, image: '/images/img_icons8_com_3d_fluency_94_conference_png.png', desc: 'Complete safety and mechanical checkup of pump, motor, and pads.' },
+            { id: 'cooler-pump', name: 'Cooler Pump Replacement', price: 499, image: '/images/gas_1.png', desc: 'Installation of high-lift submersible pump to restore water flow.' },
+            { id: 'cooler-motor', name: 'Fan Motor Repair / Swap', price: 899, image: '/images/img_icons8_com_3d_fluency_94_line_chart_png.png', desc: 'Fixes noisy operations or motor failures.' }
+        ],
+        inclusions: [
+            'Thorough inspection of motor, pump, and pads',
+            '180-day warranty on all parts replaced',
+            'Post-service testing for cooling performance'
+        ],
+        exclusions: [
+            'Cost of new cooling pads if replaced',
+            'Complete body/tank replacement',
+            'External power socket repairs'
+        ]
     }
 };
 
@@ -2164,7 +2164,7 @@ export const DEFAULT_SERVICE = {
     ],
     spotlight: {
         title: 'Certified Excellence Standards',
-        desc: 'At Charminar Repairs, we follow a rigorous certification process for every technician. We ensure that your home appliances are handled by experts who understand the engineering behind the brand.'
+        desc: 'At MeeHelper, we follow a rigorous certification process for every technician. We ensure that your home appliances are handled by experts who understand the engineering behind the brand.'
     }
 };
 
@@ -2173,7 +2173,7 @@ Object.assign(SERVICE_DATA_MAP, {
         globalDiscount: 55,
         icon: '/images/home-cleaning.png',
         photo: '/images/home-cleaning.png',
-        desc: 'Charminar Repairs is Hyderabad\'s premium **professional deep home cleaning services** partner. We offer ISO-certified home deep cleaning using eco-friendly, family-safe agents and heavy-duty machinery. Our trained and background-verified crew cleans every nook and cranny — from ceiling fans to floor scrubbing — ensuring a 100% satisfaction guarantee.',
+        desc: 'MeeHelper is Hyderabad\'s premium **professional deep home cleaning services** partner. We offer ISO-certified home deep cleaning using eco-friendly, family-safe agents and heavy-duty machinery. Our trained and background-verified crew cleans every nook and cranny — from ceiling fans to floor scrubbing — ensuring a 100% satisfaction guarantee.',
         highlights: [
             '✦ ISO Certified Cleaners & Premium Equipment',
             '✦ Eco-Friendly, Kids & Pet-Safe Disinfectants',
@@ -3156,7 +3156,7 @@ Object.assign(SERVICE_DATA_MAP, {
             'Free helmet sanitization for two-wheelers'
         ],
         exclusions: [
-            'Exterior body washing (available under Charminar Auto Care)',
+            'Exterior body washing (available under MeeHelper Auto Care)',
             'Removing deep carpet grease stains',
             'Engine bay sanitization'
         ],
@@ -3207,14 +3207,14 @@ Object.assign(SERVICE_DATA_MAP, {
         ],
         spotlight: {
             title: 'Sanitized Store Badges',
-            desc: 'After every commercial sanitization, we provide a "Charminar Repairs Sanitized" door decal to assure your walk-in customers of their safety.'
+            desc: 'After every commercial sanitization, we provide a "MeeHelper Sanitized" door decal to assure your walk-in customers of their safety.'
         }
     },
-    'Charminar Auto Care': {
+    'MeeHelper Auto Care': {
         globalDiscount: 20,
         icon: '/images/doorstep-wash.png',
         photo: '/images/doorstep-wash.png',
-        desc: 'Charminar Auto Care is Hyderabad\'s premium **doorstep car detailing and steam wash service**. We bring high-pressure steam wash systems, deep cleaning extractors, and buffing machines to your doorstep. Clean, professional, and scratch-free detailing is guaranteed.',
+        desc: 'MeeHelper Auto Care is Hyderabad\'s premium **doorstep car detailing and steam wash service**. We bring high-pressure steam wash systems, deep cleaning extractors, and buffing machines to your doorstep. Clean, professional, and scratch-free detailing is guaranteed.',
         highlights: [
             '✦ High-Pressure Snow Foam & Steam Wash',
             '✦ Deep Vacuuming & Upholstery Steaming',
@@ -3241,61 +3241,61 @@ Object.assign(SERVICE_DATA_MAP, {
             { t: 'Dirty AC Vents & Microbes', i: 'fas fa-shield-virus', d: 'High temperature steam sanitization.' }
         ],
         subServices: [
-            { 
-                id: 'wash-bike-eco', 
-                name: 'Doorstep Bike Eco Wash', 
-                price: 299, 
-                category: 'Bike Wash', 
-                image: '/images/bike-wash.png', 
-                desc: 'Pressure jet wash, cleaning, and dry wipe. Ideal for daily commuters.' 
+            {
+                id: 'wash-bike-eco',
+                name: 'Doorstep Bike Eco Wash',
+                price: 299,
+                category: 'Bike Wash',
+                image: '/images/bike-wash-eco.png',
+                desc: 'Pressure jet wash, cleaning, and dry wipe. Ideal for daily commuters.'
             },
-            { 
-                id: 'wash-bike-prem', 
-                name: 'Doorstep Bike Premium Wash', 
-                price: 499, 
-                category: 'Bike Wash', 
-                image: '/images/bike-wash.png', 
-                desc: 'Active snow foam wash, tyre dressing, dashboard wax polish, and chain lubrication.' 
+            {
+                id: 'wash-bike-prem',
+                name: 'Doorstep Bike Premium Wash',
+                price: 499,
+                category: 'Bike Wash',
+                image: '/images/bike-wash-premium.png',
+                desc: 'Active snow foam wash, tyre dressing, dashboard wax polish, and chain lubrication.'
             },
-            { 
-                id: 'wash-car-std', 
-                name: 'Car Exterior Wash & Vacuum', 
-                price: 799, 
-                category: 'Car Wash', 
-                image: '/images/car-wash.png', 
-                desc: 'Snow foam wash, tire dressing, interior high-suction vacuum, and floor mat cleaning.' 
+            {
+                id: 'wash-car-std',
+                name: 'Car Exterior Wash & Vacuum',
+                price: 799,
+                category: 'Car Wash',
+                image: '/images/car-wash-standard.png',
+                desc: 'Snow foam wash, tire dressing, interior high-suction vacuum, and floor mat cleaning.'
             },
-            { 
-                id: 'wash-car-suv', 
-                name: 'SUV Premium Wash & Polish', 
-                price: 1199, 
-                category: 'Car Wash', 
-                image: '/images/car-wash.png', 
-                desc: 'Complete snow foam wash, interior vacuuming, dashboard polish, glass wipe, and alloy polish.' 
+            {
+                id: 'wash-car-suv',
+                name: 'SUV Premium Wash & Polish',
+                price: 1199,
+                category: 'Car Wash',
+                image: '/images/car-wash-suv.png',
+                desc: 'Complete snow foam wash, interior vacuuming, dashboard polish, glass wipe, and alloy polish.'
             },
-            { 
-                id: 'charminar-wheels-standard', 
-                name: 'STANDARD (Spadex Steam Wash)', 
-                price: 1499, 
-                category: 'Spadex Car Detailing', 
-                image: '/images/doorstep-wash.png', 
-                desc: 'Full Exterior Steam Wash, Vacuuming of Interiors, Dashboard & Door panels Cleaning, Boot cleaning, Windshield cleaning, Wheel & Wheel Arch cleaning, Tyres dressing, Deodorizing, Total interiors steam wash and anti-bacterial treatment. For MUVs, Mahindra Thar, XUVs, 6+ Seaters & Premium branded cars Rs 300 extra charges.' 
+            {
+                id: 'meehelper-wheels-standard',
+                name: 'STANDARD (Spadex Steam Wash)',
+                price: 1499,
+                category: 'Spadex Car Detailing',
+                image: '/images/steam-wash-standard.png',
+                desc: 'Full Exterior Steam Wash, Vacuuming of Interiors, Dashboard & Door panels Cleaning, Boot cleaning, Windshield cleaning, Wheel & Wheel Arch cleaning, Tyres dressing, Deodorizing, Total interiors steam wash and anti-bacterial treatment. For MUVs, Mahindra Thar, XUVs, 6+ Seaters & Premium branded cars Rs 300 extra charges.'
             },
-            { 
-                id: 'charminar-wheels-premium', 
-                name: 'PREMIUM (Standard & Spadex Elite)', 
-                price: 2499, 
-                category: 'Spadex Car Detailing', 
-                image: '/images/doorstep-wash.png', 
-                desc: 'Interiors Deep cleaning (4 layers-Vacuuming Steaming, Washing & Premium polishing), Seats, Door panels, Dashboard and Roof steaming, Washing and premium polishing, Engine bay steam Wash dressing. For MUVs, Mahindra Thar, XUVs, 6+ Seaters & Premium branded cars Rs 300 extra charges.' 
+            {
+                id: 'meehelper-wheels-premium',
+                name: 'PREMIUM (Standard & Spadex Elite)',
+                price: 2499,
+                category: 'Spadex Car Detailing',
+                image: '/images/steam-wash-premium.png',
+                desc: 'Interiors Deep cleaning (4 layers-Vacuuming Steaming, Washing & Premium polishing), Seats, Door panels, Dashboard and Roof steaming, Washing and premium polishing, Engine bay steam Wash dressing. For MUVs, Mahindra Thar, XUVs, 6+ Seaters & Premium branded cars Rs 300 extra charges.'
             },
-            { 
-                id: 'charminar-wheels-pro', 
-                name: 'SPADEX PRO (Elite Package)', 
-                price: 3699, 
-                category: 'Spadex Car Detailing', 
-                image: '/images/doorstep-wash.png', 
-                desc: 'Spadex Standard + Spadex Premium + Full Body Buffing & Polishing. For MUVs, Mahindra Thar, XUVs, 6+ Seaters & Premium branded cars Rs 300 extra charges.' 
+            {
+                id: 'meehelper-wheels-pro',
+                name: 'SPADEX PRO (Elite Package)',
+                price: 3699,
+                category: 'Spadex Car Detailing',
+                image: '/images/steam-wash-pro.png',
+                desc: 'Spadex Standard + Spadex Premium + Full Body Buffing & Polishing. For MUVs, Mahindra Thar, XUVs, 6+ Seaters & Premium branded cars Rs 300 extra charges.'
             }
         ],
         inclusions: [
@@ -3321,7 +3321,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'After Party Cleaning': {
         icon: '/images/specialized-cleaning.png',
         photo: '/images/specialized-cleaning.png',
-        desc: 'Are you a party lover but don\'t know how to clean the after-party mess all around? Call <strong>Charminar Repairs</strong> immediately! We provide the best after-party cleaning services in Hyderabad to clear out the mess and give our customers complete peace of mind. Our after-party cleaning service is highly budget-friendly and is excellent for residential as well as commercial events. From corporate halls, luxury apartments, and villas, we have the best after-party cleaners in Hyderabad who can handle all types of cleaning requirements. Active cleaning is completed standard and at a reasonable price at your spot.',
+        desc: 'Are you a party lover but don\'t know how to clean the after-party mess all around? Call <strong>MeeHelper</strong> immediately! We provide the best after-party cleaning services in Hyderabad to clear out the mess and give our customers complete peace of mind. Our after-party cleaning service is highly budget-friendly and is excellent for residential as well as commercial events. From corporate halls, luxury apartments, and villas, we have the best after-party cleaners in Hyderabad who can handle all types of cleaning requirements. Active cleaning is completed standard and at a reasonable price at your spot.',
         highlights: [
             '✦ Well Trained & Certified Party Cleaners',
             '✦ Customized Deep Cleaning Packages',
@@ -3352,7 +3352,7 @@ Object.assign(SERVICE_DATA_MAP, {
             'Repair of damaged furniture or property fixtures'
         ],
         reviews: [
-            { user: 'Sameer K., Gachibowli', text: 'Used Charminar Repairs after our housewarming party. The team was extremely fast, bagged all the trash, and left the bathrooms sanitized. Highly recommended!' },
+            { user: 'Sameer K., Gachibowli', text: 'Used MeeHelper after our housewarming party. The team was extremely fast, bagged all the trash, and left the bathrooms sanitized. Highly recommended!' },
             { user: 'Srilatha M., Jubilee Hills', text: 'Professional party cleaners. They cleared the terrace and living room area perfectly. No hidden fees.' }
         ]
     },
@@ -3511,7 +3511,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'CCTV Camera Installation & Maintenance': {
         icon: '/images/safety-cctv.png',
         photo: '/images/safety-cctv.png',
-        desc: 'Keep your home and workplace secure with <strong>Charminar Repairs\' professional CCTV camera installation services</strong> in Hyderabad. We offer high-definition security camera mountings, complete DVR/NVR wiring, and mobile monitoring app setup for CP Plus, Hikvision, and Dahua systems.',
+        desc: 'Keep your home and workplace secure with <strong>MeeHelper\' professional CCTV camera installation services</strong> in Hyderabad. We offer high-definition security camera mountings, complete DVR/NVR wiring, and mobile monitoring app setup for CP Plus, Hikvision, and Dahua systems.',
         highlights: [
             '✦ Complete Dome & Bullet Camera Setups',
             '✦ DVR/NVR Installation & HDD Storage Setup',
@@ -3544,7 +3544,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Smart Door Lock Installation': {
         icon: '/images/safety-smartlock.png',
         photo: '/images/safety-smartlock.png',
-        desc: 'Upgrade your home entryway security with <strong>Charminar Repairs\' smart door lock installation services</strong> in Hyderabad. We specialize in fitting high-security biometric locks, digital keypad locks, and IoT smart locks on wooden and metal doors.',
+        desc: 'Upgrade your home entryway security with <strong>MeeHelper\' smart door lock installation services</strong> in Hyderabad. We specialize in fitting high-security biometric locks, digital keypad locks, and IoT smart locks on wooden and metal doors.',
         highlights: [
             '✦ Professional Biometric & Keypad Lock Installation',
             '✦ Seamless IoT App & Smart Home Integration',
@@ -3577,7 +3577,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Wall Waterproofing & Crack Sealing': {
         icon: '/images/safety-waterproofing.png',
         photo: '/images/safety-waterproofing.png',
-        desc: 'Restore and protect your walls from moisture damage with <strong>Charminar Repairs\' damp waterproofing and crack sealing services</strong> in Hyderabad. We use high-performance chemical membranes, damp injection barriers, and polyurethane sealants to fix walls permanently.',
+        desc: 'Restore and protect your walls from moisture damage with <strong>MeeHelper\' damp waterproofing and crack sealing services</strong> in Hyderabad. We use high-performance chemical membranes, damp injection barriers, and polyurethane sealants to fix walls permanently.',
         highlights: [
             '✦ Multi-Stage Chemical Moisture Barrier Application',
             '✦ Durable Polyurethane Crack Sealing & Epoxy Injections',
@@ -3610,7 +3610,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Emergency Locksmith Service': {
         icon: '/images/safety-locksmith.png',
         photo: '/images/safety-locksmith.png',
-        desc: 'Get rapid assistance with lockouts and broken locks with <strong>Charminar Repairs\' emergency locksmith services</strong> in Hyderabad. Our mobile technicians are available same-day to repair locks, replace key cylinders, and bypass door locks safely.',
+        desc: 'Get rapid assistance with lockouts and broken locks with <strong>MeeHelper\' emergency locksmith services</strong> in Hyderabad. Our mobile technicians are available same-day to repair locks, replace key cylinders, and bypass door locks safely.',
         highlights: [
             '✦ Lockout Assistance & Safe Non-Damage Door Opening',
             '✦ Immediate Lock Cylinder & Key Replacements',
@@ -3643,7 +3643,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'WiFi Router Setup & Range Extender Installation': {
         icon: '/images/it-wifi.png',
         photo: '/images/it-wifi.png',
-        desc: 'Eliminate network dead zones and optimize internet speeds with <strong>Charminar Repairs\' professional WiFi router setup services</strong> in Hyderabad. We configure router protocols, secure passwords, set up mesh systems, and align range extenders.',
+        desc: 'Eliminate network dead zones and optimize internet speeds with <strong>MeeHelper\' professional WiFi router setup services</strong> in Hyderabad. We configure router protocols, secure passwords, set up mesh systems, and align range extenders.',
         highlights: [
             '✦ Complete WiFi Router configuration & WAN settings',
             '✦ Network Range Extender & Repeater installations',
@@ -3676,7 +3676,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Desktop PC & Printer Repair': {
         icon: '/images/it-pcrepair.png',
         photo: '/images/it-pcrepair.png',
-        desc: 'Restore your PC\'s productivity with <strong>Charminar Repairs\' professional desktop PC and printer repair services</strong> in Hyderabad. We troubleshoot slow performance, diagnose hardware failures, install RAM/SSD upgrades, and configure office printers.',
+        desc: 'Restore your PC\'s productivity with <strong>MeeHelper\' professional desktop PC and printer repair services</strong> in Hyderabad. We troubleshoot slow performance, diagnose hardware failures, install RAM/SSD upgrades, and configure office printers.',
         highlights: [
             '✦ Hardware diagnostics & logic board troubleshooting',
             '✦ High-speed SSD upgrades & RAM expansions',
@@ -3709,7 +3709,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Smart Home Setup & Hub Integration': {
         icon: '/images/it-smarthome.png',
         photo: '/images/it-smarthome.png',
-        desc: 'Transform your residence into a connected workspace with <strong>Charminar Repairs\' smart home setup services</strong> in Hyderabad. We pair voice assistants, integrate smart lights, configure IR blasters, and set up home automation scenes.',
+        desc: 'Transform your residence into a connected workspace with <strong>MeeHelper\' smart home setup services</strong> in Hyderabad. We pair voice assistants, integrate smart lights, configure IR blasters, and set up home automation scenes.',
         highlights: [
             '✦ Voice Assistant Integration (Alexa, Google Home)',
             '✦ Smart LED Bulb & Smart Plug configuration',
@@ -3742,7 +3742,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Laptop Software Setup & OS Installation': {
         icon: '/images/it-laptopsoft.png',
         photo: '/images/it-laptopsoft.png',
-        desc: 'Solve slow speeds and software errors with <strong>Charminar Repairs\' laptop software services</strong> in Hyderabad. We install Windows/macOS operating systems, remove viruses, configure security tools, and install essential drivers.',
+        desc: 'Solve slow speeds and software errors with <strong>MeeHelper\' laptop software services</strong> in Hyderabad. We install Windows/macOS operating systems, remove viruses, configure security tools, and install essential drivers.',
         highlights: [
             '✦ Operating System Installation (Windows 11/10, macOS)',
             '✦ Virus, Spyware & Adware Malware Removal',
@@ -3775,7 +3775,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Rodent & Rat Control': {
         icon: '/images/pest-rodent.png',
         photo: '/images/pest-rodent.png',
-        desc: 'Eliminate dangerous and destructive rats with <strong>Charminar Repairs\' rodent control services</strong> in Hyderabad. We place high-grade rodent traps, secure entry points, and use government-licensed non-leak baits to clear rats safely.',
+        desc: 'Eliminate dangerous and destructive rats with <strong>MeeHelper\' rodent control services</strong> in Hyderabad. We place high-grade rodent traps, secure entry points, and use government-licensed non-leak baits to clear rats safely.',
         highlights: [
             '✦ Multi-Point Rodent Trap & Box Placement',
             '✦ Government-Approved Safe Baiting System',
@@ -3808,7 +3808,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Beehive & Wasp Nest Removal': {
         icon: '/images/pest-beehive.png',
         photo: '/images/pest-beehive.png',
-        desc: 'Safely remove dangerous beehives and wasp nests with <strong>Charminar Repairs\' professional nest removal services</strong> in Hyderabad. We utilize specialized height gear, smoke dispersers, and protective suits to clear balconies and high walls safely.',
+        desc: 'Safely remove dangerous beehives and wasp nests with <strong>MeeHelper\' professional nest removal services</strong> in Hyderabad. We utilize specialized height gear, smoke dispersers, and protective suits to clear balconies and high walls safely.',
         highlights: [
             '✦ Safe, Professional Beehive Extraction',
             '✦ Balloon/Height Balcony Access Specialist tools',
@@ -3841,7 +3841,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Pre-Construction Anti-Termite Treatment': {
         icon: '/images/pest-termite.png',
         photo: '/images/pest-termite.png',
-        desc: 'Create a permanent protective barrier against termites with <strong>Charminar Repairs\' foundational anti-termite treatments</strong> in Hyderabad. We apply sub-soil chemical barriers and construct physical piping networks to protect properties long-term.',
+        desc: 'Create a permanent protective barrier against termites with <strong>MeeHelper\' foundational anti-termite treatments</strong> in Hyderabad. We apply sub-soil chemical barriers and construct physical piping networks to protect properties long-term.',
         highlights: [
             '✦ Foundational Sub-Soil chemical barrier spray',
             '✦ Termidor / Imidacloprid premium chemical application',
@@ -3874,7 +3874,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Complete Ant Control & Prevention': {
         icon: '/images/pest-ant.png',
         photo: '/images/pest-ant.png',
-        desc: 'Eradicate black and red ant infestations with <strong>Charminar Repairs\' customized ant control services</strong> in Hyderabad. We apply odorless ant gel baits in kitchen corners and spray eco-safe chemical barriers along wall perimeters.',
+        desc: 'Eradicate black and red ant infestations with <strong>MeeHelper\' customized ant control services</strong> in Hyderabad. We apply odorless ant gel baits in kitchen corners and spray eco-safe chemical barriers along wall perimeters.',
         highlights: [
             '✦ Spot treatment with Premium Bayer ant gel baits',
             '✦ Wall perimeter chemical spray barriers',
@@ -3907,7 +3907,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Septic Tank & Drainage Cleaning': {
         icon: '/images/clean-septictank.png',
         photo: '/images/clean-septictank.png',
-        desc: 'Ensure your drainage system remains functional with <strong>Charminar Repairs\' professional septic tank cleaning services</strong> in Hyderabad. We employ high-pressure vacuum tankers and sludge pumps to extract waste and clear drainage blocks.',
+        desc: 'Ensure your drainage system remains functional with <strong>MeeHelper\' professional septic tank cleaning services</strong> in Hyderabad. We employ high-pressure vacuum tankers and sludge pumps to extract waste and clear drainage blocks.',
         highlights: [
             '✦ Heavy-Duty Vacuum Tanker Sludge Extraction',
             '✦ High-Pressure Jetting to Clear Drainage Blocks',
@@ -3940,7 +3940,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'High-Rise Facade Window Cleaning': {
         icon: '/images/clean-facade.png',
         photo: '/images/clean-facade.png',
-        desc: 'Restore the external appearance of your commercial or residential building with <strong>Charminar Repairs\' high-rise facade cleaning services</strong> in Hyderabad. Our crew is equipped with safety harnesses, pressure washers, and glass restorers.',
+        desc: 'Restore the external appearance of your commercial or residential building with <strong>MeeHelper\' high-rise facade cleaning services</strong> in Hyderabad. Our crew is equipped with safety harnesses, pressure washers, and glass restorers.',
         highlights: [
             '✦ Professional High-Rise Safety Harness Cleaning',
             '✦ Hard Water Stain & Dirt Grime Scraping',
@@ -3973,7 +3973,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Water Tank & Sump Deep Cleaning': {
         icon: '/images/clean-watertank.png',
         photo: '/images/clean-watertank.png',
-        desc: 'Protect your family from water-borne diseases with <strong>Charminar Repairs\' 6-stage water tank cleaning services</strong> in Hyderabad. We vacuum sludge, scrub walls with high-pressure jets, sanitize with anti-bacterial sprays, and use UV sterilization.',
+        desc: 'Protect your family from water-borne diseases with <strong>MeeHelper\' 6-stage water tank cleaning services</strong> in Hyderabad. We vacuum sludge, scrub walls with high-pressure jets, sanitize with anti-bacterial sprays, and use UV sterilization.',
         highlights: [
             '✦ 6-Stage Deep Water Tank Sanitization',
             '✦ High-Pressure Jet Washing & Wall Scrubbing',
@@ -4007,7 +4007,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Kitchen & Bathroom Deep Scrubbing': {
         icon: '/images/clean-scrubbing.png',
         photo: '/images/clean-scrubbing.png',
-        desc: 'Eradicate grease, oil, and hard water stains with <strong>Charminar Repairs\' intensive kitchen and bathroom deep scrubbing services</strong> in Hyderabad. We scrub tiles, tiles joints, exhaust fans, toilet bowls, sinks, and glass dividers.',
+        desc: 'Eradicate grease, oil, and hard water stains with <strong>MeeHelper\' intensive kitchen and bathroom deep scrubbing services</strong> in Hyderabad. We scrub tiles, tiles joints, exhaust fans, toilet bowls, sinks, and glass dividers.',
         highlights: [
             '✦ Deep Rotary Machine Scrubbing for floor tiles',
             '✦ Specialized Hard Water Acid-Free stain removals',
@@ -4244,7 +4244,7 @@ Object.assign(SERVICE_DATA_MAP, {
         ],
         reviews: [
             { user: 'Venu G., Hitech City (Office Manager)', text: 'We signed an annual AMC for our 80-seater office. Plumbing, AC, and electrical issues are resolved same-day. Great service!' },
-            { user: 'Rahul P., Kukatpally (Restaurant Owner)', text: 'Our commercial refrigerator broke down on a Friday night. Charminar Repairs sent a technician within 2 hours. Excellent response!' }
+            { user: 'Rahul P., Kukatpally (Restaurant Owner)', text: 'Our commercial refrigerator broke down on a Friday night. MeeHelper sent a technician within 2 hours. Excellent response!' }
         ]
     },
 
@@ -4252,7 +4252,7 @@ Object.assign(SERVICE_DATA_MAP, {
     'Home Care Plans & AMC': {
         icon: '/images/ok_icon.png',
         photo: '/images/ok_icon.png',
-        desc: 'Enjoy year-round peace of mind with <strong>Charminar Repairs Home Care Plans and AMC subscriptions</strong>. Our plans cover appliance maintenance, pest control, RO servicing, and cleaning on a regular schedule — saving you time, money, and stress.',
+        desc: 'Enjoy year-round peace of mind with <strong>MeeHelper Home Care Plans and AMC subscriptions</strong>. Our plans cover appliance maintenance, pest control, RO servicing, and cleaning on a regular schedule — saving you time, money, and stress.',
         highlights: [
             '✦ Annual Home Care Plan — All-in-One Convenience',
             '✦ Appliance AMC Bundle for All Major Appliances',
@@ -4263,7 +4263,7 @@ Object.assign(SERVICE_DATA_MAP, {
             '✦ Priority Booking with Guaranteed Slots',
             '✦ Free Emergency Visits Included in Plans'
         ],
-        brands: ['Charminar Repairs Certified', 'Aquaguard', 'Kent', 'Eureka Forbes', 'Bayer Pest', 'Samsung', 'LG', 'Whirlpool'],
+        brands: ['MeeHelper Certified', 'Aquaguard', 'Kent', 'Eureka Forbes', 'Bayer Pest', 'Samsung', 'LG', 'Whirlpool'],
         specializations: ['Annual Home Plans', 'Appliance AMC', 'Pest Control AMC', 'RO AMC', 'Cleaning Subscription', 'Senior Care'],
         subServices: [
             { id: 'annual-home-care', name: 'Annual Home Care Plan', price: 7999, category: 'Annual Plans', image: '/images/ok_icon.png', desc: '₹7999/year. Covers 4 appliance services, 2 pest control visits, 2 deep cleans, and priority support.' },
@@ -4450,7 +4450,7 @@ Object.assign(SERVICE_DATA_MAP, {
             'Storage insurance beyond 1 month (extended plan)'
         ],
         reviews: [
-            { user: 'Anand P., Hitech City', text: 'Shifted our 30-person office in one weekend. Charminar Repairs handled everything — IT equipment, workstations, and cabinets. Zero damage!' },
+            { user: 'Anand P., Hitech City', text: 'Shifted our 30-person office in one weekend. MeeHelper handled everything — IT equipment, workstations, and cabinets. Zero damage!' },
             { user: 'Lakshmi V., Gachibowli', text: 'Sent my bike from Hyderabad to Chennai. It arrived in perfect condition, wrapped securely. Great service and on-time delivery!' }
         ]
     }
@@ -4471,3 +4471,30 @@ Object.keys(SERVICE_DATA_MAP).forEach(key => {
         });
     }
 });
+
+// Map alternative UI names to database keys for seamless data lookup
+SERVICE_DATA_MAP['AC Repairing'] = SERVICE_DATA_MAP['Air Conditioner Repair'];
+SERVICE_DATA_MAP['Refrigerator Repairing'] = SERVICE_DATA_MAP['Refrigerator Repair'];
+SERVICE_DATA_MAP['Washing Machine Repairing'] = SERVICE_DATA_MAP['Washing Machine Repair'];
+SERVICE_DATA_MAP['TV Repairing'] = SERVICE_DATA_MAP['Television Repair'];
+SERVICE_DATA_MAP['Microwave Repairing'] = SERVICE_DATA_MAP['Microwave Oven Repair'];
+SERVICE_DATA_MAP['Geyser Repairing'] = SERVICE_DATA_MAP['Geyser & Water Heater Repair'];
+SERVICE_DATA_MAP['Chimney Repairing'] = SERVICE_DATA_MAP['Kitchen Chimney Service'];
+SERVICE_DATA_MAP['Water Purifier Repairing'] = SERVICE_DATA_MAP['Water Purifier (RO) Service'];
+SERVICE_DATA_MAP['Laptop Repairing'] = SERVICE_DATA_MAP['Laptop & Desktop Repair'];
+SERVICE_DATA_MAP['Air Cooler Repairing'] = SERVICE_DATA_MAP['Air Cooler Repair'];
+SERVICE_DATA_MAP['Kitchen Sink Repairing'] = SERVICE_DATA_MAP['Plumbing Work'];
+SERVICE_DATA_MAP['Men Haircut'] = SERVICE_DATA_MAP['Haircut for Men'];
+SERVICE_DATA_MAP['Washing Machine Checkup'] = SERVICE_DATA_MAP['Automatic Machine Check-up'];
+SERVICE_DATA_MAP['Manicure Service'] = SERVICE_DATA_MAP['British Rose Pedicure'];
+SERVICE_DATA_MAP['Massage for Men'] = SERVICE_DATA_MAP['Haircut for Men'];
+SERVICE_DATA_MAP['AC Installation'] = SERVICE_DATA_MAP['Air Conditioner Repair'];
+SERVICE_DATA_MAP['Doorstep Bike Eco Wash'] = SERVICE_DATA_MAP['MeeHelper Auto Care'];
+SERVICE_DATA_MAP['Doorstep Bike Premium Foam Wash & Polish'] = SERVICE_DATA_MAP['MeeHelper Auto Care'];
+SERVICE_DATA_MAP['Hatchback/Sedan Exterior Foam Wash & Vacuum'] = SERVICE_DATA_MAP['MeeHelper Auto Care'];
+SERVICE_DATA_MAP['SUV Premium Foam Wash & Interior Polish'] = SERVICE_DATA_MAP['MeeHelper Auto Care'];
+SERVICE_DATA_MAP['STANDARD (Spadex Steam Wash)'] = SERVICE_DATA_MAP['MeeHelper Auto Care'];
+SERVICE_DATA_MAP['PREMIUM (Standard & Spadex Elite)'] = SERVICE_DATA_MAP['MeeHelper Auto Care'];
+SERVICE_DATA_MAP['SPADEX PRO (Elite Package)'] = SERVICE_DATA_MAP['MeeHelper Auto Care'];
+
+

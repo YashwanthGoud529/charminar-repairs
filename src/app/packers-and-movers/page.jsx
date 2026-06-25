@@ -6,7 +6,7 @@ import LocalReviews from '@/components/services/LocalReviews';
 
 export const metadata = constructMetadata({
     title: 'Professional Packers and Movers in Hyderabad | Insured Relocation',
-    description: 'Looking for reliable packers and movers in Hyderabad? Charminar Repairs offers 100% safe, closed container-truck relocation with 3-layer packing and free transit damage coverage. Calculate shifting cost instantly!',
+    description: 'Looking for reliable packers and movers in Hyderabad? MeeHelper offers 100% safe, closed container-truck relocation with 3-layer packing and free transit damage coverage. Calculate shifting cost instantly!',
     canonicalPath: '/packers-and-movers/',
 });
 
@@ -18,7 +18,7 @@ const PackersMoversPage = () => {
         'description': 'Professional doorstep shifting and packing services across Hyderabad with covered container trucks and free insurance.',
         'provider': {
             '@type': 'LocalBusiness',
-            'name': 'Charminar Repairs Packers & Movers',
+            'name': 'MeeHelper Packers & Movers',
             'telephone': '+91-8008615049',
             'address': {
                 '@type': 'PostalAddress',

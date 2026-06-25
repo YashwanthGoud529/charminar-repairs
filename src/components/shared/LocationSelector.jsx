@@ -76,7 +76,7 @@ const LocationSelector = () => {
     return (
         <div className="location-selector-wrapper" ref={dropdownRef}>
             <div className="location-display" onClick={() => setIsOpen(!isOpen)}>
-                <MapMarkerIcon size={18} className="location-pin-icon" style={{ color: '#673ab7', stroke: '#673ab7' }} />
+                <MapMarkerIcon size={18} className="location-pin-icon" style={{ color: '#024dbe', stroke: '#024dbe' }} />
                 <span title={selectedLocation} className="location-label">
                     {selectedLocation || 'Select Location'}
                 </span>

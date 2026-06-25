@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LocalReviews = ({ serviceName, locationLabel }) => {
+const LocalReviews = ({ serviceName, locationLabel, bgColor }) => {
     const loc = locationLabel || 'Hyderabad';
     
     const getServiceType = (serviceName) => {
@@ -76,7 +76,7 @@ const LocalReviews = ({ serviceName, locationLabel }) => {
 
     const type = getServiceType(serviceName);
 
-    let review2Text = `Brilliant service from Charminar Repairs! The doorstep visit was on time, and they used original spare parts. My appliance feels as good as new. Best ${serviceName.toLowerCase()} in Hyderabad.`;
+    let review2Text = `Brilliant service from MeeHelper! The doorstep visit was on time, and they used original spare parts. My appliance feels as good as new. Best ${serviceName.toLowerCase()} in Hyderabad.`;
     let review1Text = `I had my ${serviceName.toLowerCase()} done at my resident in ${loc} yesterday. The technician CH and team were professional, punctual, and highly skilled. They resolved the sudden problem within 45 minutes!`;
     let review3Text = `Expert and certified professionals. They explained the problem clearly and gave a transparent quote before starting. Very happy with the 180-day warranty too.`;
 
@@ -116,8 +116,10 @@ const LocalReviews = ({ serviceName, locationLabel }) => {
         { name: 'Arjun M.', location: 'KPHB Colony', text: review3Text, rating: 4.8, date: '3 weeks ago' }
     ];
 
+    const bgClass = bgColor === 'gray' ? 'bg-light-soft' : 'bg-white';
+
     return (
-        <section className="reviews-section py-5 bg-light-soft border-top">
+        <section className={`reviews-section py-5 ${bgClass} border-top`}>
             <div className="container custom-container px-lg-4">
                 <div className="d-flex align-items-center justify-content-between mb-4">
                    <h2 className="fw-black text-dark fs-3 mb-0">What Our Customers Say in {loc}</h2>
@@ -133,7 +135,7 @@ const LocalReviews = ({ serviceName, locationLabel }) => {
                 <div className="row g-4 overflow-auto py-2 no-scrollbar flex-nowrap flex-md-wrap">
                     {reviews.map((r, i) => (
                         <div key={i} className="col-lg-4 col-md-6 col-11 flex-shrink-0">
-                            <div className="p-4 bg-white border border-light h-100 shadow-sm" style={{ borderRadius: '8px' }}>
+                            <div className="p-4 bg-white border border-light h-100 shadow-sm" style={{ borderRadius: '4px' }}>
                                 <div className="d-flex justify-content-between align-items-center mb-3">
                                     <div className="d-flex align-items-center gap-2">
                                         <div className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style={{ width: '32px', height: '32px', fontSize: '13px' }}>{r.name.charAt(0)}</div>

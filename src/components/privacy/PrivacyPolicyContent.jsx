@@ -8,7 +8,7 @@ const PrivacyPolicyContent = () => {
         <main className="privacy-policy-main">
             <PageHero
                 title="Privacy Policy"
-                subtitle="We are committed to protecting your personal information. Learn how Charminar Repairs collects, uses, and safeguards your data while providing appliance repair services across Hyderabad."
+                subtitle="We are committed to protecting your personal information. Learn how MeeHelper collects, uses, and safeguards your data while providing appliance repair services across Hyderabad."
                 breadcrumb="Privacy Policy"
             />
 
@@ -21,12 +21,12 @@ const PrivacyPolicyContent = () => {
                                 <section className="mb-5">
                                     <h2 className="h4 fw-bold mb-4" style={{ color: '#0c1228' }}>1. Information We Collect</h2>
                                     <p className="text-muted leading-relaxed">
-                                        At <strong>Charminar Repairs Services</strong>, Hyderabad, we collect personal details such as your name, contact number, email, address, and appliance details when you book services for washing machines, refrigerators, air conditioners, and other home appliances.
+                                        At <strong>MeeHelper Services</strong>, Hyderabad, we collect personal details such as your name, contact number, email, address, and appliance details when you book services for washing machines, refrigerators, air conditioners, and other home appliances.
                                     </p>
                                     <div className="p-3 bg-light border-start border-purple border-4" style={{ borderRadius: '8px' }}>
                                         <ul className="text-muted mb-0 small list-unstyled">
-                                            <li className="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#673ab7" viewBox="0 0 16 16" className="me-2"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" /></svg> Name, Email, Phone Number, Address</li>
-                                            <li className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#673ab7" viewBox="0 0 16 16" className="me-2"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" /></svg> Appliance Details and Service Requests</li>
+                                            <li className="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#024dbe" viewBox="0 0 16 16" className="me-2"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" /></svg> Name, Email, Phone Number, Address</li>
+                                            <li className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#024dbe" viewBox="0 0 16 16" className="me-2"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" /></svg> Appliance Details and Service Requests</li>
                                         </ul>
                                     </div>
                                 </section>
@@ -81,17 +81,17 @@ const PrivacyPolicyContent = () => {
                                     <h5 className="fw-bold mb-4" style={{ color: '#0c1228' }}>Need Assistance?</h5>
                                     <p className="text-muted small mb-4">If you have any questions regarding our privacy policy or your data, please contact our support team.</p>
                                     <div className="d-flex flex-column gap-3">
-                                        <a href="tel:8008615049" className="btn btn-primary py-3 fw-bold text-white shadow-sm" style={{ background: '#673ab7', border: 'none', borderRadius: '8px' }}>
+                                        <a href="tel:8008615049" className="btn btn-primary py-3 fw-bold text-white shadow-sm" style={{ background: '#024dbe', border: 'none', borderRadius: '8px' }}>
                                             Call 8008615049
                                         </a>
-                                        <a href="mailto:contact@charminarrepairs.com" className="btn btn-outline-dark py-3 fw-bold" style={{ borderRadius: '8px' }}>
+                                        <a href="mailto:contact@meehelper.com" className="btn btn-outline-dark py-3 fw-bold" style={{ borderRadius: '8px' }}>
                                             Email Support
                                         </a>
                                     </div>
                                 </div>
                                 <div className="p-4 bg-dark text-white shadow-sm border" style={{ borderRadius: '8px' }}>
                                     <div className="text-purple mb-3 h2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#673ab7" viewBox="0 0 16 16"><path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" /></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#024dbe" viewBox="0 0 16 16"><path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" /></svg>
                                     </div>
                                     <h5 className="fw-bold mb-3">100% Secure Service</h5>
                                     <p className="small opacity-75 mb-0">We use industry-standard encryption to protect your service booking data and personal information.</p>
@@ -103,8 +103,8 @@ const PrivacyPolicyContent = () => {
             </section>
 
             <style jsx>{`
-                .text-purple { color: #673ab7; }
-                .border-purple { border-color: #673ab7 !important; }
+                .text-purple { color: #024dbe; }
+                .border-purple { border-color: #024dbe !important; }
                 .leading-relaxed { line-height: 1.8; }
             `}</style>
         </main>

@@ -5,28 +5,21 @@ import MainLayoutWrapper from '@/components/shared/MainLayoutWrapper';
 import ScrollToTop from '@/components/shared/ScrollToTop';
 import ThirdPartyScripts from '@/components/shared/ThirdPartyScripts';
 import Providers from './providers';
-import { Outfit, Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
-const outfit = Outfit({
+const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-outfit',
-  weight: ['300', '400', '500', '600', '700', '800'],
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata = constructMetadata({
-  title: 'Appliance Repair Hyderabad | Charminar Repairs Service',
+  title: 'Appliance Repair Hyderabad | MeeHelper Service',
   description: 'Trusted appliance repair in Hyderabad. Certified service for ACs, fridges & washers. 180-Day Warranty. Book same-day repair.',
   canonicalPath: '/',
-  keywords: 'appliance repair Hyderabad, washing machine repair Hyderabad, AC repair Hyderabad, refrigerator repair Hyderabad, microwave repair Hyderabad, TV repair Hyderabad, same-day appliance repair, doorstep repair Hyderabad, Charminar Repairs, home appliance service center Hyderabad, 180-day warranty repair',
+  keywords: 'appliance repair Hyderabad, washing machine repair Hyderabad, AC repair Hyderabad, refrigerator repair Hyderabad, microwave repair Hyderabad, TV repair Hyderabad, same-day appliance repair, doorstep repair Hyderabad, MeeHelper, home appliance service center Hyderabad, 180-day warranty repair',
 });
 
 import StyledJsxRegistry from './registry';
@@ -37,9 +30,9 @@ const organizationSchema = {
   '@graph': [
     {
       "@type": "LocalBusiness",
-      "name": "Charminar Repairs",
-      "image": "/images/charminar-repairs-logo.jpeg",
-      "url": "https://www.charminarrepairs.com",
+      "name": "MeeHelper",
+      "image": "/logo.png",
+      "url": "https://www.meehelper.com",
       "telephone": "+91 8008615049",
       "address": {
         "@type": "PostalAddress",
@@ -52,36 +45,36 @@ const organizationSchema = {
       "areaServed": "Hyderabad",
       "priceRange": "₹₹",
       "sameAs": [
-        "https://www.facebook.com/charminarrepairs",
-        "https://www.instagram.com/charminarrepairs",
-        "https://www.linkedin.com/company/charminarrepairs",
-        "https://www.youtube.com/@charminarrepairs",
-        "https://twitter.com/charminarrepairs"
+        "https://www.facebook.com/meehelper",
+        "https://www.instagram.com/meehelper",
+        "https://www.linkedin.com/company/meehelper",
+        "https://www.youtube.com/@meehelper",
+        "https://twitter.com/meehelper"
       ]
     },
     {
       '@type': 'Organization',
-      '@id': 'https://www.charminarrepairs.com/#organization',
-      name: 'Charminar Repairs',
-      url: 'https://www.charminarrepairs.com',
+      '@id': 'https://www.meehelper.com/#organization',
+      name: 'MeeHelper',
+      url: 'https://www.meehelper.com',
       logo: {
         '@type': 'ImageObject',
-        '@id': 'https://www.charminarrepairs.com/#logo',
-        url: '/images/charminar-repairs-logo.jpeg',
+        '@id': 'https://www.meehelper.com/#logo',
+        url: '/logo.png',
         width: 300,
         height: 100,
-        caption: 'Charminar Repairs',
+        caption: 'MeeHelper',
       },
       image: {
-        '@id': 'https://www.charminarrepairs.com/#logo',
+        '@id': 'https://www.meehelper.com/#logo',
       },
       sameAs: [
-        'https://www.facebook.com/charminarrepairs',
-        'https://www.instagram.com/charminarrepairs',
-        'https://twitter.com/charminarrepairs',
-        'https://www.youtube.com/@charminarrepairs',
-        'https://www.linkedin.com/company/charminarrepairs',
-        'https://g.co/kgs/charminarrepairs',
+        'https://www.facebook.com/meehelper',
+        'https://www.instagram.com/meehelper',
+        'https://twitter.com/meehelper',
+        'https://www.youtube.com/@meehelper',
+        'https://www.linkedin.com/company/meehelper',
+        'https://g.co/kgs/meehelper',
       ],
       contactPoint: [
         {
@@ -99,7 +92,7 @@ const organizationSchema = {
           },
         }
       ],
-      email: 'contact@charminarrepairs.com',
+      email: 'contact@meehelper.com',
       foundingDate: '2013',
       areaServed: {
         '@type': 'City',
@@ -108,19 +101,19 @@ const organizationSchema = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://www.charminarrepairs.com/#website',
-      url: 'https://www.charminarrepairs.com',
-      name: 'Charminar Repairs',
+      '@id': 'https://www.meehelper.com/#website',
+      url: 'https://www.meehelper.com',
+      name: 'MeeHelper',
       description: 'Professional home appliance repair service in Hyderabad with same-day service and 180-day warranty.',
       publisher: {
-        '@id': 'https://www.charminarrepairs.com/#organization',
+        '@id': 'https://www.meehelper.com/#organization',
       },
       potentialAction: [
         {
           '@type': 'SearchAction',
           target: {
             '@type': 'EntryPoint',
-            urlTemplate: 'https://www.charminarrepairs.com/{search_term_string}',
+            urlTemplate: 'https://www.meehelper.com/{search_term_string}',
           },
           'query-input': 'required name=search_term_string',
         },
@@ -132,7 +125,7 @@ const organizationSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" className={`${outfit.variable} ${inter.variable}`}>
+    <html lang="en-IN" className={`${poppins.variable}`}>
       <head>
         <meta charSet="utf-8" />
 
@@ -150,7 +143,7 @@ export default function RootLayout({ children }) {
         />
 
         {/* Preload Critical Assets for better LCP */}
-        <link rel="preload" href="/images/charminar-repairs-logo.jpeg" as="image" />
+        <link rel="preload" href="/logo.png" as="image" />
         <link rel="preload" href="/assets/Images/appliance/icons/ac.jpg" as="image" />
         <link rel="preload" href="/assets/Images/appliance/icons/washing-machine.jpg" as="image" />
         <link rel="preload" href="/assets/Images/appliance/icons/fridge.jpg" as="image" />

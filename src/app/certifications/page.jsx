@@ -4,8 +4,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Certifications & Authorizations | Charminar Repairs',
-    description: 'Charminar Repairs is certified and trained by top appliance brands including Samsung, LG, Whirlpool, Bosch, and Voltas for authorized repair services in Hyderabad.',
+    title: 'Certifications & Authorizations | MeeHelper',
+    description: 'MeeHelper is certified and trained by top appliance brands including Samsung, LG, Whirlpool, Bosch, and Voltas for authorized repair services in Hyderabad.',
     canonicalPath: '/certifications',
 });
 
@@ -62,11 +62,11 @@ export default function CertificationsPage() {
                         {brands.map((b, i) => (
                             <div key={i} style={{ background: '#fff', border: '1px solid #e8eaf0', borderRadius: 4, padding: '20px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
                                 <div style={{ width: 42, height: 42, background: b.color + '15', borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                    <span style={{ fontWeight: 900, fontSize: 11, color: b.color }}>{b.name.slice(0,3).toUpperCase()}</span>
+                                    <span style={{ fontWeight: 900, fontSize: 11, color: b.color }}>{b.name.slice(0, 3).toUpperCase()}</span>
                                 </div>
                                 <div>
                                     <div style={{ fontWeight: 800, fontSize: 14, color: '#0c1228', marginBottom: 2 }}>{b.name}</div>
-                                    <div style={{ fontSize: 11, color: '#673ab7', fontWeight: 700, marginBottom: 4 }}>{b.type}</div>
+                                    <div style={{ fontSize: 11, color: '#024dbe', fontWeight: 700, marginBottom: 4 }}>{b.type}</div>
                                     <div style={{ fontSize: 11, color: '#94a3b8' }}>{b.category}</div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ export default function CertificationsPage() {
                     <div style={{ background: '#f3e8ff', borderRadius: 4, padding: '20px 24px', marginTop: 36, display: 'flex', gap: 14, alignItems: 'flex-start' }}>
                         <span style={{ fontSize: 20 }}>ℹ️</span>
                         <p style={{ color: '#4c1d95', fontSize: 13, margin: 0, lineHeight: 1.7 }}>
-                            <strong>Disclaimer:</strong> Charminar Repairs is an independent multi-brand service company. Brand names are mentioned to indicate our technical expertise with those products. We are not the official warranty service center for these brands unless explicitly stated.
+                            <strong>Disclaimer:</strong> MeeHelper is an independent multi-brand service company. Brand names are mentioned to indicate our technical expertise with those products. We are not the official warranty service center for these brands unless explicitly stated.
                         </p>
                     </div>
                 </div>

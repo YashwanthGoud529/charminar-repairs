@@ -11,49 +11,49 @@ import toast from 'react-hot-toast';
 // --- SVG Icons Components ---
 const UsersIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
     </svg>
 );
 
 const WalletIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"/>
+        <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4" /><path d="M4 6v12c0 1.1.9 2 2 2h14v-4" /><path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z" />
     </svg>
 );
 
 const UserCircleIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="me-2">
-        <circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>
+        <circle cx="12" cy="12" r="10" /><path d="M12 8v4" /><path d="M12 16h.01" />
     </svg>
 );
 
 const ChartLineIcon = () => (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
     </svg>
 );
 
 const ShieldCheckIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-success">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 11 12 14 15 9"/>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 11 12 14 15 9" />
     </svg>
 );
 
 const RocketIcon = () => (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="text-warning">
-        <path d="M13.13 22.19L11.5 18.36L9.87 22.19L12 21M5 16H3.45L5 9L12.06 2L19.11 9L20.66 16H19M12 9A2 2 0 1012 13 2 2 0 0012 9Z"/>
+        <path d="M13.13 22.19L11.5 18.36L9.87 22.19L12 21M5 16H3.45L5 9L12.06 2L19.11 9L20.66 16H19M12 9A2 2 0 1012 13 2 2 0 0012 9Z" />
     </svg>
 );
 
 const ClockIcon = () => (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-warning">
-        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
     </svg>
 );
 
 const GraduationIcon = () => (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-danger">
-        <path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+        <path d="M22 10L12 5 2 10l10 5 10-5z" /><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
     </svg>
 );
 
@@ -100,7 +100,7 @@ const CareersContent = ({ careersSchema }) => {
         { title: 'Dishwasher Technician', color: '#3f51b5' },
         { title: 'Kitchen Chimney Pro', color: '#795548' },
         { title: 'Geyser & Heater Expert', color: '#f44336' },
-        { title: 'Laptop & IT Support', color: '#673ab7' },
+        { title: 'Laptop & IT Support', color: '#024dbe' },
         { title: 'Solar Water Heater Tech', color: '#ff9800' }
     ];
 
@@ -131,7 +131,7 @@ const CareersContent = ({ careersSchema }) => {
     return (
         <main className="careers-page-v3 bg-light-soft min-vh-100">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(careersSchema) }} />
-            
+
             <PageHero
                 title="Empower Your Service Business"
                 subtitle="Join Hyderabad's most transparent network. Empowering 500+ local experts with steady bookings and seamless management."
@@ -201,7 +201,7 @@ const CareersContent = ({ careersSchema }) => {
                                     <div key={idx} className="col-6 col-md-4">
                                         <div className="bg-white p-3 border rounded-3 shadow-sm d-flex align-items-center gap-3 transition-all h-100">
                                             <div className="p-2 rounded-2 d-flex align-items-center justify-content-center" style={{ background: `${job.color}15`, color: job.color, width: 40, height: 40 }}>
-                                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" /></svg>
                                             </div>
                                             <span className="small fw-bold text-dark font-outfit">{job.title}</span>
                                         </div>
@@ -219,25 +219,25 @@ const CareersContent = ({ careersSchema }) => {
                                     </div>
                                     <form onSubmit={handleSubmit}>
                                         <div className="form-floating mb-3">
-                                            <input type="text" className="form-control" placeholder="Name" required value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} />
+                                            <input type="text" className="form-control" placeholder="Name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
                                             <label>Full Name</label>
                                         </div>
                                         <div className="row g-2 mb-3">
                                             <div className="col-md-6">
                                                 <div className="form-floating">
-                                                    <input type="tel" className="form-control" placeholder="Phone" required value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} />
+                                                    <input type="tel" className="form-control" placeholder="Phone" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
                                                     <label>Mobile No.</label>
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
                                                 <div className="form-floating">
-                                                    <input type="tel" className="form-control" placeholder="WhatsApp" value={formData.whatsapp} onChange={(e) => setFormData({...formData, whatsapp: e.target.value})} />
+                                                    <input type="tel" className="form-control" placeholder="WhatsApp" value={formData.whatsapp} onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })} />
                                                     <label>WhatsApp No.</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <select className="form-select" required value={formData.specialization} onChange={(e) => setFormData({...formData, specialization: e.target.value})}>
+                                            <select className="form-select" required value={formData.specialization} onChange={(e) => setFormData({ ...formData, specialization: e.target.value })}>
                                                 <option value="">Select Specialty</option>
                                                 <option value="Washing Machine">Washing Machine</option>
                                                 <option value="Fridge">Refrigerator</option>
@@ -248,16 +248,16 @@ const CareersContent = ({ careersSchema }) => {
                                             <label>Category Expertise</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <input type="text" className="form-control" list="area-list" placeholder="Area" required value={formData.location} onChange={(e) => setFormData({...formData, location: e.target.value})} />
+                                            <input type="text" className="form-control" list="area-list" placeholder="Area" required value={formData.location} onChange={(e) => setFormData({ ...formData, location: e.target.value })} />
                                             <label>Operation Area (Hyderabad)</label>
                                             <datalist id="area-list">{hyderabadAreas.map((area, i) => (<option key={i} value={area} />))}</datalist>
                                         </div>
                                         <div className="row g-2 mb-3">
-                                            <div className="col-md-6"><div className="form-floating"><select className="form-select" required value={formData.experience} onChange={(e) => setFormData({...formData, experience: e.target.value})}><option value="">Exp</option><option value="1-2">1-2 Years</option><option value="3-5">3-5 Years</option><option value="5+">5+ Years</option></select><label>Experience</label></div></div>
-                                            <div className="col-md-6"><div className="form-floating"><input type="text" className="form-control" placeholder="UPI" value={formData.upi} onChange={(e) => setFormData({...formData, upi: e.target.value})} /><label>UPI ID</label></div></div>
+                                            <div className="col-md-6"><div className="form-floating"><select className="form-select" required value={formData.experience} onChange={(e) => setFormData({ ...formData, experience: e.target.value })}><option value="">Exp</option><option value="1-2">1-2 Years</option><option value="3-5">3-5 Years</option><option value="5+">5+ Years</option></select><label>Experience</label></div></div>
+                                            <div className="col-md-6"><div className="form-floating"><input type="text" className="form-control" placeholder="UPI" value={formData.upi} onChange={(e) => setFormData({ ...formData, upi: e.target.value })} /><label>UPI ID</label></div></div>
                                         </div>
                                         <div className="form-floating mb-4">
-                                            <input type="password" className="form-control" placeholder="Pass" required value={formData.password} onChange={(e) => setFormData({...formData, password: e.target.value})} />
+                                            <input type="password" className="form-control" placeholder="Pass" required value={formData.password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
                                             <label>Create Password</label>
                                         </div>
                                         <button type="submit" className="btn btn-primary w-100 py-3 fw-bold shadow-lg" disabled={isSubmitting} style={{ borderRadius: '8px' }}>

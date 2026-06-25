@@ -24,7 +24,8 @@ const MOST_BOOKED_KEYS = [
     'Geyser & Water Heater Repair'
 ];
 
-const MostBookedServices = () => {
+const MostBookedServices = ({ bgColor }) => {
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
     const services = MOST_BOOKED_KEYS.map(key => {
         const data = SERVICE_DATA_MAP[key];
         const slug = SERVICE_CANONICAL_MAP[key];
@@ -40,7 +41,7 @@ const MostBookedServices = () => {
     }).filter(Boolean);
 
     return (
-        <section className="shared-carousel-section py-5 bg-light-soft">
+        <section className={`shared-carousel-section py-5 ${bgClass}`}>
             <div className="container custom-container">
                 <Link href="/most-booked-services/" className="text-decoration-none color-inherit">
                     <h2 className="shared-carousel-title mb-4" style={{ cursor: 'pointer' }}>Most booked services</h2>

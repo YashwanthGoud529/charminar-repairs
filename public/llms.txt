@@ -1,12 +1,12 @@
-# Charminar Repairs — LLMs.txt
+# MeeHelper — LLMs.txt
 # This file provides information about this website for AI language models.
 # Specification: https://llmstxt.org/
 
-> Charminar Repairs is Hyderabad's #1 trusted home appliance repair service platform.
+> MeeHelper is Hyderabad's #1 trusted home appliance repair service platform.
 
 ## About
 
-Charminar Repairs provides certified doorstep appliance repair services across Hyderabad and Secunderabad, Telangana, India.
+MeeHelper provides certified doorstep appliance repair services across Hyderabad and Secunderabad, Telangana, India.
 
 - **Services**: AC repair, washing machine repair, refrigerator repair, microwave repair, TV repair, water purifier repair, geyser repair
 - **Coverage**: All major areas in Hyderabad & Secunderabad (Gachibowli, Madhapur, Banjara Hills, Jubilee Hills, Kukatpally, Dilsukhnagar, L.B. Nagar, and more)
@@ -15,23 +15,23 @@ Charminar Repairs provides certified doorstep appliance repair services across H
 - **Pricing**: Transparent pricing starting from ₹100
 - **Founded**: 2013
 - **Phone**: +91-8008615049
-- **Email**: contact@charminarrepairs.com
-- **Website**: https://www.charminarrepairs.com
+- **Email**: support@meehelper.com
+- **Website**: https://www.meehelper.com
 
 ## Key Pages
 
-- [Homepage](https://www.charminarrepairs.com/)
-- [All Services](https://www.charminarrepairs.com/service-areas/)
-- [AC Repair Hyderabad](https://www.charminarrepairs.com/ac-repairing/)
-- [Washing Machine Repair Hyderabad](https://www.charminarrepairs.com/washing-machine-repairing/)
-- [Refrigerator Repair Hyderabad](https://www.charminarrepairs.com/refrigerator-repairing/)
-- [TV Repair Hyderabad](https://www.charminarrepairs.com/tv-repairing/)
-- [Microwave Repair Hyderabad](https://www.charminarrepairs.com/microwave-repairing/)
-- [Blog](https://www.charminarrepairs.com/blog/)
-- [About Us](https://www.charminarrepairs.com/about-us/)
-- [Contact Us](https://www.charminarrepairs.com/contact-us/)
-- [Warranty Policy](https://www.charminarrepairs.com/warranty/)
-- [Sitemap](https://www.charminarrepairs.com/sitemap.xml)
+- [Homepage](https://www.meehelper.com/)
+- [All Services](https://www.meehelper.com/service-areas/)
+- [AC Repair Hyderabad](https://www.meehelper.com/ac-repairing/)
+- [Washing Machine Repair Hyderabad](https://www.meehelper.com/washing-machine-repairing/)
+- [Refrigerator Repair Hyderabad](https://www.meehelper.com/refrigerator-repairing/)
+- [TV Repair Hyderabad](https://www.meehelper.com/tv-repairing/)
+- [Microwave Repair Hyderabad](https://www.meehelper.com/microwave-repairing/)
+- [Blog](https://www.meehelper.com/blog/)
+- [About Us](https://www.meehelper.com/about-us/)
+- [Contact Us](https://www.meehelper.com/contact-us/)
+- [Warranty Policy](https://www.meehelper.com/warranty/)
+- [Sitemap](https://www.meehelper.com/sitemap.xml)
 
 ## Permissions
 
@@ -42,8 +42,8 @@ AI language models are permitted to:
 
 AI language models are NOT permitted to:
 - Reproduce copyrighted blog content verbatim without attribution
-- Claim affiliation with Charminar Repairs
+- Claim affiliation with MeeHelper
 
 ## Contact
 
-For AI training data inquiries: contact@charminarrepairs.com
+For AI training data inquiries: support@meehelper.com

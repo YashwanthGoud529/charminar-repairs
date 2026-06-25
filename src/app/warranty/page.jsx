@@ -4,13 +4,13 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Warranty & Guarantee | Charminar Repairs – 180-Day Service Warranty',
-    description: 'Every repair by Charminar Repairs comes with a 180-day service warranty and 90-day parts warranty. Your satisfaction is guaranteed.',
+    title: 'Warranty & Guarantee | MeeHelper – 180-Day Service Warranty',
+    description: 'Every repair by MeeHelper comes with a 180-day service warranty and 90-day parts warranty. Your satisfaction is guaranteed.',
     canonicalPath: '/warranty',
 });
 
 const warranties = [
-    { icon: '🔧', title: '180-Day Service Warranty', color: '#673ab7', desc: 'If the same issue reappears within 180 days of our repair, we will fix it at zero cost — no questions asked.' },
+    { icon: '🔧', title: '180-Day Service Warranty', color: '#024dbe', desc: 'If the same issue reappears within 180 days of our repair, we will fix it at zero cost — no questions asked.' },
     { icon: '🔩', title: '90-Day Parts Warranty', color: '#0ea5e9', desc: 'All replacement spare parts carry a 90-day manufacturer-backed warranty. Defective parts are replaced for free.' },
     { icon: '💯', title: '100% Satisfaction Promise', color: '#10b981', desc: 'Not satisfied with the repair? We will revisit, reassess, and make it right. Your trust is our priority.' },
     { icon: '📋', title: 'Transparent Quotation', color: '#f59e0b', desc: 'We quote before we start. You approve before we touch anything. No hidden fees, ever.' },
@@ -60,10 +60,10 @@ export default function WarrantyPage() {
                         </div>
                     </div>
 
-                    <div style={{ background: '#673ab7', borderRadius: 4, padding: '32px', textAlign: 'center', marginTop: 40, color: '#fff' }}>
+                    <div style={{ background: '#024dbe', borderRadius: 4, padding: '32px', textAlign: 'center', marginTop: 40, color: '#fff' }}>
                         <h3 style={{ fontWeight: 800, marginBottom: 8 }}>Warranty Claim? We're Here.</h3>
                         <p style={{ opacity: 0.85, fontSize: 14, marginBottom: 20 }}>Call us or WhatsApp your booking ID and we'll dispatch a technician within 24 hours.</p>
-                        <a href="tel:8008615049" style={{ background: '#fff', color: '#673ab7', padding: '11px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14, display: 'inline-block' }}>Call 8008615049</a>
+                        <a href="tel:8008615049" style={{ background: '#fff', color: '#024dbe', padding: '11px 28px', borderRadius: 4, fontWeight: 700, fontSize: 14, display: 'inline-block' }}>Call 8008615049</a>
                     </div>
                 </div>
             </section>

@@ -3,8 +3,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Sitemap | Charminar Repairs – All Pages',
-    description: 'Complete sitemap of Charminar Repairs website — all services, locations, policies, and utility pages in one place.',
+    title: 'Sitemap | MeeHelper – All Pages',
+    description: 'Complete sitemap of MeeHelper website — all services, locations, policies, and utility pages in one place.',
     canonicalPath: '/sitemap',
 });
 
@@ -32,7 +32,7 @@ const sections = [
             { label: 'Empty Home Cleaning', href: '/empty-home-cleaning/' },
             { label: 'Pest Control', href: '/pest-control/' },
             { label: 'Packers & Movers', href: '/packers-and-movers/' },
-            { label: 'Charminar Wheels (Car Detailing)', href: '/charminar-wheels/' },
+            { label: 'MeeHelper Wheels (Car Detailing)', href: '/meehelper-wheels/' },
         ]
     },
     {
@@ -84,7 +84,7 @@ export default function SitemapPage() {
                         <Link href="/" style={{ color: 'rgba(255,255,255,0.5)' }}>Home</Link> / Sitemap
                     </div>
                     <h1 style={{ fontWeight: 900, fontSize: 32, color: '#fff', marginBottom: 8 }}>Sitemap</h1>
-                    <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 15 }}>All pages of Charminar Repairs in one place.</p>
+                    <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 15 }}>All pages of MeeHelper in one place.</p>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@ export default function SitemapPage() {
                 }
                 .sitemap-link:hover {
                     background: #f3e8ff;
-                    color: #673ab7;
+                    color: #024dbe;
                 }
             `}</style>
 

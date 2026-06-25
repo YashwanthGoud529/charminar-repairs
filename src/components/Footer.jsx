@@ -3,15 +3,26 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { BRAND } from '@/config/branding';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import './Footer.css';
 
 const Footer = () => {
     const [email, setEmail] = useState('');
     const [subscribed, setSubscribed] = useState(false);
 
-    const handleSubscribe = (e) => {
+    const handleSubscribe = async (e) => {
         e.preventDefault();
         if (email) {
+            try {
+                await addDoc(collection(db, 'newsletter_subscribers'), {
+                    email,
+                    source: 'Footer Newsletter',
+                    subscribedAt: serverTimestamp()
+                });
+            } catch (_) {
+                // silently fail — still show success to user
+            }
             setSubscribed(true);
             setEmail('');
             setTimeout(() => setSubscribed(false), 5000);
@@ -36,7 +47,31 @@ const Footer = () => {
 
     return (
         <footer className="footer-area">
-            
+
+            {/* ── Quick Book Strip ── */}
+            <div style={{ background: 'linear-gradient(90deg, #ff6b00 0%, #e05e00 100%)', padding: '14px 0' }}>
+                <div className="container-fluid px-lg-5">
+                    <div className="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                        <div className="d-flex align-items-center gap-3">
+                            <div style={{ width: '40px', height: '40px', background: 'rgba(255,255,255,0.2)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <i className="fas fa-tools" style={{ color: '#fff', fontSize: '16px' }}></i>
+                            </div>
+                            <div>
+                                <div style={{ color: '#fff', fontWeight: 800, fontSize: '15px', lineHeight: 1.2 }}>Appliance Trouble? Book a Technician in 60 Seconds</div>
+                                <div style={{ color: 'rgba(255,255,255,0.85)', fontSize: '12px' }}>Same-day service · No visit charge on repair completion</div>
+                            </div>
+                        </div>
+                        <div className="d-flex gap-2 flex-wrap">
+                            <a href={`tel:+91${BRAND.phone}`} className="d-flex align-items-center gap-2 px-4 py-2 fw-bold" style={{ background: '#fff', color: '#ff6b00', borderRadius: '4px', fontSize: '14px', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                                <i className="fas fa-phone-alt"></i> Call Now
+                            </a>
+                            <a href={`https://wa.me/91${BRAND.phone}?text=Hi%2C%20I%20need%20appliance%20repair%20service.`} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center gap-2 px-4 py-2 fw-bold" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', border: '1.5px solid rgba(255,255,255,0.5)', borderRadius: '4px', fontSize: '14px', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                                <i className="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {/* Top scrolling partner brands */}
             <div className="footer-brands-bar py-3">
                 <div className="container-fluid px-lg-5">
@@ -74,7 +109,7 @@ const Footer = () => {
                                             <i className="fas fa-map-marker-alt"></i>
                                         </div>
                                         <div>
-                                            <a href="https://maps.google.com/?q=Karwan,+Hyderabad,+Telangana+500006" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none hover-orange block-desc small">
+                                            <a href="https://www.google.com/search?q=meehelper+home+services&oq=meehelper+home+services&gs_lcrp=EgZjaHJvbWUyCAgAEEUYJxg5MggIARAAGBYYHjIICAIQABgWGB4yBwgDEAAY7wUyCggEEAAYgAQYogQyBwgFEAAY7wUyBggGEEUYPDIGCAcQRRg90gEJNjQzOWowajE1qAIMsAIB8QX13v2nzLXsBA&sourceid=chrome&ie=UTF-8#sv=CAwSpAIKBmxjbF9wdhI9CgNwdnESNkNnMHZaeTh4TVhsMk9ISnVhRjg0SWhjS0VXTm9ZWEp0YVc1aGNpQnlaWEJoYVhKekVBSVlBdxKaAQoDbHFpEpIBQ2hGamFHRnliV2x1WVhJZ2NtVndZV2x5YzBqb18taUw2YjJBZ0FoYUlSQUFFQUVZQUJnQkloRmphR0Z5YldsdVlYSWdjbVZ3WVdseWN5b0VDQUlRQUhvSlNIbGtaWEpoWW1Ga2tnRWZkMkZ6YUdWeVgyRnVaRjlrY25sbGNsOXlaWEJoYVhKZmMyVnlkbWxqWlESEgoDdGJzEgtscmY6ITNzSUFFPRIWCgFxEhFjaGFybWluYXIgcmVwYWlycxoSbG9jYWwtcGxhY2Utdmlld2VyGAog1db99Ak" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none hover-orange block-desc small">
                                                 <span itemProp="streetAddress">Karwan</span>,{' '}
                                                 <span itemProp="addressLocality">Hyderabad</span>,{' '}
                                                 <span itemProp="addressRegion">Telangana</span>{' '}
@@ -124,16 +159,36 @@ const Footer = () => {
                                     <a href={`https://wa.me/91${BRAND.phone}`} target="_blank" rel="noopener noreferrer" className="social-btn bg-whatsapp" aria-label="WhatsApp">
                                         <i className="fab fa-whatsapp"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/company/charminarrepairs" target="_blank" rel="noopener noreferrer" className="social-btn bg-linkedin" aria-label="LinkedIn">
+                                    <a href="https://www.linkedin.com/company/meehelper" target="_blank" rel="noopener noreferrer" className="social-btn bg-linkedin" aria-label="LinkedIn">
                                         <i className="fab fa-linkedin-in"></i>
                                     </a>
-                                    <a href="https://www.youtube.com/@charminarrepairs" target="_blank" rel="noopener noreferrer" className="social-btn bg-youtube" aria-label="YouTube">
+                                    <a href="https://www.youtube.com/@meehelper" target="_blank" rel="noopener noreferrer" className="social-btn bg-youtube" aria-label="YouTube">
                                         <i className="fab fa-youtube"></i>
                                     </a>
                                 </div>
                             </div>
 
-                            {/* Highlighted Emergency Helpline */}
+                            {/* Working Hours */}
+                            <div className="mb-4">
+                                <h5 className="widget-subtitle mb-2 small text-uppercase fw-bold text-white opacity-75">Working Hours</h5>
+                                <table style={{ width: '100%', fontSize: '12px', borderCollapse: 'separate', borderSpacing: '0 4px' }}>
+                                    <tbody>
+                                        {[
+                                            { day: 'Mon – Fri', time: '8:00 AM – 9:00 PM', active: true },
+                                            { day: 'Saturday', time: '8:00 AM – 9:00 PM', active: true },
+                                            { day: 'Sunday', time: '9:00 AM – 7:00 PM', active: true },
+                                            { day: 'Public Holidays', time: 'Emergency Only', active: false },
+                                        ].map((row, i) => (
+                                            <tr key={i}>
+                                                <td style={{ color: 'rgba(255,255,255,0.6)', paddingRight: '12px', paddingBottom: '4px' }}>{row.day}</td>
+                                                <td style={{ color: row.active ? '#4ade80' : '#fb923c', fontWeight: 600, paddingBottom: '4px' }}>{row.time}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            {/* Emergency Helpline */}
                             <div className="emergency-helpline-box p-3 mb-2 border border-danger-subtle bg-danger-soft hover-lift">
                                 <div className="d-flex align-items-center gap-3">
                                     <div className="pulse-danger-icon shadow">
@@ -169,6 +224,9 @@ const Footer = () => {
                                 <li><Link href="/certifications/">Certifications</Link></li>
                                 <li><Link href="/case-studies/">Case Studies</Link></li>
                                 <li><Link href="/faq/">FAQ Help Center</Link></li>
+                                <li><Link href="/terms-of-service/">Service Agreement</Link></li>
+                                <li><Link href="/privacy-policy/">Security &amp; Trust</Link></li>
+                                <li><Link href="/join-as-technician/">Verify a Technician</Link></li>
                                 <li><Link href="/privacy-policy/#accessibility" className="text-muted-custom">Accessibility Statement</Link></li>
                             </ul>
                         </div>
@@ -176,7 +234,7 @@ const Footer = () => {
                         {/* Column 3 - Services */}
                         <div className="col-xl-2 col-lg-3 col-md-6 col-6">
                             <h4 className="widget-title">Popular Services</h4>
-                            <ul className="list-unstyled links-list">
+                            <ul className="list-unstyled links-list mb-4">
                                 <li><Link href="/washing-machine-repairing/">Washing Machine</Link></li>
                                 <li><Link href="/ac-repairing/">AC Repair</Link></li>
                                 <li><Link href="/refrigerator-repairing/">Refrigerator</Link></li>
@@ -190,7 +248,17 @@ const Footer = () => {
                                 <li><Link href="/deep-home-cleaning/">Deep Home Cleaning</Link></li>
                                 <li><Link href="/pest-control-services/">Pest Control</Link></li>
                                 <li><Link href="/packers-and-movers/">Packers &amp; Movers</Link></li>
-                                <li><Link href="/charminar-wheels/">Charminar Wheels</Link></li>
+                                <li><Link href="/meehelper-wheels/">MeeHelper Wheels</Link></li>
+                                <li><Link href="/home-it-office-setup/">Home IT Setup</Link></li>
+                            </ul>
+
+                            <h4 className="widget-title">Appliance Guides</h4>
+                            <ul className="list-unstyled links-list">
+                                <li><Link href="/blog/ac-filter-cleaning-guide/"><i className="fas fa-book-open me-2 text-orange" style={{ fontSize: '11px' }}></i>AC Filter Cleaning</Link></li>
+                                <li><Link href="/blog/washing-machine-error-codes-guide/"><i className="fas fa-book-open me-2 text-orange" style={{ fontSize: '11px' }}></i>Washer Error Codes</Link></li>
+                                <li><Link href="/blog/refrigerator-not-cooling-solutions/"><i className="fas fa-book-open me-2 text-orange" style={{ fontSize: '11px' }}></i>Fridge Cooling Guide</Link></li>
+                                <li><Link href="/blog/ro-water-purifier-tds-standards/"><i className="fas fa-book-open me-2 text-orange" style={{ fontSize: '11px' }}></i>RO Purifier TDS Chart</Link></li>
+                                <li><Link href="/blog/kitchen-chimney-cleaning-frequency/"><i className="fas fa-book-open me-2 text-orange" style={{ fontSize: '11px' }}></i>Chimney Care Tips</Link></li>
                             </ul>
                         </div>
 
@@ -204,7 +272,16 @@ const Footer = () => {
                                 <li><Link href="/how-it-works/">How It Works</Link></li>
                                 <li><Link href="/offers/">Offers &amp; Coupons</Link></li>
                                 <li><Link href="/compare-plans/">Compare Plans</Link></li>
+                                <li><Link href="/corporate/">Real Estate AMC</Link></li>
+                                <li><Link href="/amc/">Startup IT AMC</Link></li>
                                 <li><Link href="/join-as-technician/">Join as Technician</Link></li>
+                            </ul>
+
+                            <h4 className="widget-title">Customer Care</h4>
+                            <ul className="list-unstyled links-list mb-4">
+                                <li><a href={`tel:+91${BRAND.phone}`} className="text-white text-decoration-none hover-orange"><i className="fas fa-headset me-2 text-orange" style={{ fontSize: '11px' }}></i>Request Callback</a></li>
+                                <li><a href={`https://wa.me/91${BRAND.phone}?text=Hi%2C%20I%20have%20a%20grievance%20or%20complaint%20regarding%20a%20service.`} target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none hover-orange"><i className="fas fa-envelope-open-text me-2 text-orange" style={{ fontSize: '11px' }}></i>Grievance Desk</a></li>
+                                <li><Link href="/join-as-technician/"><i className="fas fa-user-check me-2 text-orange" style={{ fontSize: '11px' }}></i>Verify Engineer ID</Link></li>
                             </ul>
 
                             <h4 className="widget-title">Newsletter Signup</h4>
@@ -232,6 +309,7 @@ const Footer = () => {
                             </div>
                         </div>
 
+
                         {/* Column 5 - Service Areas & App Download */}
                         <div className="col-xl-3 col-lg-4 col-md-6 col-6">
                             <h4 className="widget-title">Service Areas</h4>
@@ -244,36 +322,50 @@ const Footer = () => {
                                 <li><Link href="/washing-machine-repairing-in-kondapur/">Kondapur</Link></li>
                                 <li><Link href="/ac-repairing-in-hitech-city/">Hitech City</Link></li>
                                 <li><Link href="/washing-machine-repairing-in-secunderabad/">Secunderabad</Link></li>
+                                <li><Link href="/refrigerator-repairing-in-begumpet/">Begumpet</Link></li>
+                                <li><Link href="/washing-machine-repairing-in-miyapur/">Miyapur</Link></li>
                                 <li><Link href="/service-areas/" className="fw-bold text-orange">Browse All Areas <ArrowRightIcon /></Link></li>
                             </ul>
 
                             <h4 className="widget-title">Download App <ComingSoonBadge /></h4>
                             <div className="app-download-container d-flex flex-column gap-2 mb-3">
-                                {/* App Store Badge */}
-                                <a href="#" className="app-download-btn d-flex align-items-center gap-3 px-3 py-2 text-white text-decoration-none shadow hover-lift" style={{ background: '#0a0f1d', border: '1px solid rgba(255,255,255,0.08)', width: 'fit-content' }}>
+                                {/* App Store Badge — Coming Soon */}
+                                <div className="app-download-btn d-flex align-items-center gap-3 px-3 py-2 text-white" style={{ background: '#0a0f1d', border: '1px solid rgba(255,255,255,0.08)', width: 'fit-content', opacity: 0.6, cursor: 'not-allowed', position: 'relative' }} title="Coming Soon on App Store">
                                     <svg width="22" height="26" viewBox="0 0 170 170" fill="currentColor" className="text-white">
                                         <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.37.13-9.13-1.9-14.29-6.07-3.57-2.91-7.39-7.58-11.45-14-9.96-15.72-14.94-32.65-14.94-50.81 0-17.75 4.96-32.74 14.89-44.97 7.73-9.54 16.64-14.37 26.74-14.5 5.14 0 10.46 1.48 15.96 4.43 5.5 2.96 9.68 4.43 12.56 4.43 3.12 0 7.37-1.48 12.74-4.43 5.38-2.95 10.38-4.37 15.01-4.25 10.92.37 19.86 4.43 26.83 12.21 4.5 5.08 7.9 10.59 10.18 16.5-18.06 7.42-26.97 19.46-26.72 36.14.25 13.2 5.23 24.1 14.94 32.72 5.02 4.48 10.66 7.69 16.92 9.62zM119.22 35.24c0-7.72 2.76-14.88 8.28-21.49 5.52-6.61 12.24-10.45 20.17-11.53.13 1.02.19 1.83.19 2.44 0 7.47-2.81 14.49-8.43 21.05-5.63 6.56-12.42 10.44-20.37 11.64-.07-.75-.12-1.45-.12-2.11z" />
                                     </svg>
                                     <div className="text-start">
-                                        <div style={{ fontSize: '7px', opacity: 0.6, textTransform: 'uppercase', lineHeight: 1 }}>Download on the</div>
+                                        <div style={{ fontSize: '7px', opacity: 0.6, textTransform: 'uppercase', lineHeight: 1 }}>Coming Soon</div>
                                         <div style={{ fontSize: '11px', fontWeight: 'bold', lineHeight: 1.2 }}>App Store</div>
                                     </div>
-                                </a>
-                                {/* Play Store Badge */}
-                                <a href="#" className="app-download-btn d-flex align-items-center gap-3 px-3 py-2 text-white text-decoration-none shadow hover-lift" style={{ background: '#0a0f1d', border: '1px solid rgba(255,255,255,0.08)', width: 'fit-content' }}>
+                                </div>
+                                {/* Play Store Badge — Coming Soon */}
+                                <div className="app-download-btn d-flex align-items-center gap-3 px-3 py-2 text-white" style={{ background: '#0a0f1d', border: '1px solid rgba(255,255,255,0.08)', width: 'fit-content', opacity: 0.6, cursor: 'not-allowed' }} title="Coming Soon on Google Play">
                                     <svg width="22" height="26" viewBox="0 0 512 512" fill="currentColor" className="text-white">
                                         <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58 33.3-60.1-60.1 60.1-60.1 58 33.3c13 7.5 21.7 19.9 21.7 33.6s-8.7 26.2-21.7 33.3zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
                                     </svg>
                                     <div className="text-start">
-                                        <div style={{ fontSize: '7px', opacity: 0.6, textTransform: 'uppercase', lineHeight: 1 }}>GET IT ON</div>
+                                        <div style={{ fontSize: '7px', opacity: 0.6, textTransform: 'uppercase', lineHeight: 1 }}>Coming Soon</div>
                                         <div style={{ fontSize: '11px', fontWeight: 'bold', lineHeight: 1.2 }}>Google Play</div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             
-                            <div className="language-support d-flex align-items-center gap-2">
+                            <div className="language-support d-flex align-items-center gap-2 mb-3">
                                 <i className="fas fa-globe text-primary"></i>
                                 <span className="small text-white opacity-75">Available in: <strong>English, Hindi, Telugu</strong></span>
+                            </div>
+
+                            {/* Customer Testimonial Snippet */}
+                            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', padding: '14px', marginTop: '4px' }}>
+                                <div className="d-flex gap-1 mb-1">
+                                    {[1,2,3,4,5].map(s => <span key={s} style={{ color: '#fbbf24', fontSize: '12px' }}>★</span>)}
+                                    <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)', marginLeft: '4px' }}>Verified Review</span>
+                                </div>
+                                <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.7)', margin: '0 0 6px', lineHeight: 1.5, fontStyle: 'italic' }}>
+                                    "Technician arrived in 90 minutes, fixed my LG AC same day. Transparent pricing, no surprises!"
+                                </p>
+                                <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.45)' }}>— Priya S., Kondapur · June 2026</span>
                             </div>
                         </div>
 
@@ -287,7 +379,7 @@ const Footer = () => {
                     <div className="row g-4 align-items-center">
                         {/* Why Choose Us */}
                         <div className="col-lg-5 col-12">
-                            <h5 className="small text-uppercase text-white fw-bold mb-3 tracking-wider text-muted-label">Why Choose Charminar Repairs?</h5>
+                            <h5 className="small text-uppercase text-white fw-bold mb-3 tracking-wider text-muted-label">Why Choose MeeHelper?</h5>
                             <div className="row g-2">
                                 <div className="col-6 d-flex align-items-center gap-2">
                                     <i className="fas fa-check-circle text-success"></i>
@@ -362,12 +454,35 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* SEO Description Copy */}
-            <div className="footer-seo-content py-3 text-start bg-dark-soft">
+            {/* SEO Description Copy & Brand/Locality Expansion */}
+            <div className="footer-seo-content py-4 text-start bg-dark-soft border-top border-secondary-subtle">
                 <div className="container-fluid px-lg-5">
-                    <p className="mb-0 text-muted small" style={{ fontSize: '11.5px', lineHeight: '1.6', opacity: 0.65 }}>
-                        Charminar Repairs is Hyderabad's premier doorstep service marketplace, offering background-verified and certified engineering solutions. We specialize in comprehensive multibrand appliance repair, home cleaning, deep sanitization, electrical wiring, home IT configuration, safety installations, and local packers &amp; movers. Operating across all major areas including Gachibowli, Madhapur, Hitech City, Kukatpally, Banjara Hills, and Secunderabad, we ensure genuine OEM components, upfront transparent pricing, and robust service warranties. All home repairs are performed by trained technicians adhering to strict safety guidelines.
-                    </p>
+                    <div className="row g-4">
+                        <div className="col-12">
+                            <h6 className="text-white small fw-bold mb-2 text-uppercase tracking-wider" style={{ color: '#ff6b00' }}>About MeeHelper Hyderabad</h6>
+                            <p className="mb-0 text-muted small" style={{ fontSize: '11.5px', lineHeight: '1.7', opacity: 0.75 }}>
+                                MeeHelper is Hyderabad's premier doorstep service marketplace, offering background-verified and certified engineering solutions. We specialize in comprehensive multibrand appliance repair, home cleaning, deep sanitization, electrical wiring, home IT configuration, safety installations, and local packers &amp; movers. Operating across all major areas, we ensure genuine OEM components, upfront transparent pricing, and robust service warranties. All home repairs are performed by trained technicians adhering to strict safety guidelines.
+                            </p>
+                        </div>
+                        <div className="col-lg-6 col-12">
+                            <h6 className="text-white small fw-bold mb-2 text-uppercase tracking-wider" style={{ color: '#ff6b00' }}>Top Brands We Service</h6>
+                            <p className="mb-0 text-muted small" style={{ fontSize: '11.5px', lineHeight: '1.7', opacity: 0.75 }}>
+                                We provide expert out-of-warranty service and repair for all leading global appliance brands: <strong>Samsung, LG, Whirlpool, Bosch, IFB, Voltas, Godrej, Daikin, Carrier, Panasonic, Sony, Hitachi, Blue Star, Lloyd, Haier, Mitsubishi, O General, Kent, Aquaguard, Bajaj, Havells, Philips, Dell, HP, Lenovo, and Asus</strong>. All brand trademarks are the property of their respective owners.
+                            </p>
+                        </div>
+                        <div className="col-lg-6 col-12">
+                            <h6 className="text-white small fw-bold mb-2 text-uppercase tracking-wider" style={{ color: '#ff6b00' }}>Areas We Serve in Hyderabad</h6>
+                            <p className="mb-0 text-muted small" style={{ fontSize: '11.5px', lineHeight: '1.7', opacity: 0.75 }}>
+                                Our technicians are strategically stationed across all Hyderabad localities: <strong>Madhapur, Gachibowli, Kondapur, Hitech City, Nanakramguda, Financial District, Kokapet, Narsingi, Manikonda, Puppalguda, Miyapur, Chandanagar, Hafeezpet, Kukatpally, Pragathi Nagar, Nizampet, Bachupally, Balanagar, Ameerpet, SR Nagar, Yousufguda, Banjara Hills, Jubilee Hills, Begumpet, Secunderabad, Alwal, Sainikpuri, Yapral, Neredmet, Safilguda, Malkajgiri, Habsiguda, Tarnaka, Uppal, Ramanthapur, Boduppal, L.B. Nagar, Vanasthalipuram, Dilsukhnagar, Kothapet, Malakpet, Saidabad, Santosh Nagar, Attapur, Rajendranagar, Mehdipatnam, Tolichowki, Masab Tank, and Charminar</strong>.
+                            </p>
+                        </div>
+                        <div className="col-12 mt-3 pt-3 border-top border-secondary-subtle">
+                            <h6 className="text-white small fw-bold mb-2 text-uppercase tracking-wider" style={{ color: '#ff6b00' }}>Professional Commitment & Quality Standards</h6>
+                            <p className="mb-0 text-muted small" style={{ fontSize: '11.5px', lineHeight: '1.7', opacity: 0.75 }}>
+                                At MeeHelper, we hold our service delivery to the highest industry standards. Every technical partner undergoes rigorous background verification, biometric identification checks, and practical skills assessment at our central training facility before onboarding. We utilize state-of-the-art diagnostic machinery and supply 100% genuine OEM spare parts, backed by our service protection framework. For any queries, scheduling modifications, or escalations, our dedicated grievance redressal desk is online 24/7 to ensure resolutions within 24 hours. Your safety, convenience, and peace of mind are our primary directives.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

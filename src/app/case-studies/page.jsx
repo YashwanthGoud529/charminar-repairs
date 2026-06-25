@@ -4,8 +4,8 @@ import { constructMetadata } from '@/components/seo/constructMetadata';
 import Link from 'next/link';
 
 export const metadata = constructMetadata({
-    title: 'Case Studies | Charminar Repairs – Before & After Repair Stories',
-    description: 'Read real repair case studies from Charminar Repairs. See how we fixed complex appliance issues across Hyderabad homes.',
+    title: 'Case Studies | MeeHelper – Before & After Repair Stories',
+    description: 'Read real repair case studies from MeeHelper. See how we fixed complex appliance issues across Hyderabad homes.',
     canonicalPath: '/case-studies',
 });
 
@@ -18,7 +18,7 @@ const cases = [
         time: '3 Hours', cost: '₹2,800', outcome: 'AC cooling to 18°C within 15 minutes. Customer reported zero issues over 6-month follow-up.',
     },
     {
-        id: 2, tag: 'Washing Machine', color: '#673ab7', area: 'Madhapur', appliance: 'Samsung 7kg Front Load',
+        id: 2, tag: 'Washing Machine', color: '#024dbe', area: 'Madhapur', appliance: 'Samsung 7kg Front Load',
         issue: 'Machine stopping mid-cycle and displaying error code E4. Clothes coming out soaking wet.',
         diagnosis: 'Blocked drain pump filter combined with a faulty door latch sensor triggering a safety stop.',
         solution: 'Deep-cleaned the blocked filter (removed a large sock + debris). Replaced door latch mechanism with OEM Samsung part.',
@@ -91,7 +91,7 @@ export default function CaseStudiesPage() {
                     </div>
 
                     <div style={{ textAlign: 'center', marginTop: 48 }}>
-                        <Link href="/contact-us/" style={{ background: '#673ab7', color: '#fff', padding: '13px 32px', borderRadius: 4, fontWeight: 700, fontSize: 15, display: 'inline-block' }}>Book Your Repair Today</Link>
+                        <Link href="/contact-us/" style={{ background: '#024dbe', color: '#fff', padding: '13px 32px', borderRadius: 4, fontWeight: 700, fontSize: 15, display: 'inline-block' }}>Book Your Repair Today</Link>
                     </div>
                 </div>
             </section>

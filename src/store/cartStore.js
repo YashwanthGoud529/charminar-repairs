@@ -78,7 +78,7 @@ export const useCartStore = create()(
       }
     }),
     {
-      name: 'charminar-cart-storage',
+      name: 'meehelper-cart-storage',
     }
   )
 );

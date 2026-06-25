@@ -12,9 +12,11 @@ import './CarouselShared.css';
 import { SERVICE_DATA_MAP } from '@/config/serviceData';
 import { toCDN } from '@/config/services';
 
-const SafetyHomeProtection = () => {
+const SafetyHomeProtection = ({ bgColor }) => {
     const parentService = SERVICE_DATA_MAP['Safety & Home Protection'];
     if (!parentService) return null;
+
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
 
     const services = parentService.subServices.map(sub => ({
         ...sub,
@@ -23,7 +25,7 @@ const SafetyHomeProtection = () => {
     }));
 
     return (
-        <section className="safety-protection-carousel py-5 bg-light-soft" style={{ borderRadius: '12px' }}>
+        <section className={`safety-protection-carousel py-5 ${bgClass}`} style={{ borderRadius: '4px' }}>
             <div className="container custom-container">
                 <div className="d-flex align-items-center mb-4 gap-3">
                     <h2 className="shared-carousel-title mb-0">Safety & Home Protection</h2>

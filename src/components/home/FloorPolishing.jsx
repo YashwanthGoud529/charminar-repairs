@@ -18,9 +18,10 @@ const FLOOR_POLISHING_SERVICES = [
     { id: 'granite-floor-polishing', title: 'Granite Floor Polishing', price: '20', image: '/images/granite-floor-polishing.png', slug: '/granite-floor-polishing/' },
 ].map(service => ({ ...service, image: toCDN(service.image) }));
 
-const FloorPolishing = () => {
+const FloorPolishing = ({ bgColor }) => {
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
     return (
-        <section className="floor-polishing-carousel py-5 bg-light-soft" style={{ borderRadius: '12px' }}>
+        <section className={`floor-polishing-carousel py-5 ${bgClass}`} style={{ borderRadius: '4px' }}>
             <div className="container custom-container">
                 <div className="d-flex align-items-center mb-4 gap-3">
                     <h2 className="shared-carousel-title mb-0">Floor Polishing</h2>

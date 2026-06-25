@@ -61,11 +61,12 @@ Object.keys(CLEANING_SERVICES_DATA).forEach(cat => {
     }));
 });
 
-const CleaningServices = () => {
+const CleaningServices = ({ bgColor }) => {
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
     const [activeCategory, setActiveCategory] = useState('home');
 
     return (
-        <section className="shared-carousel-section cleaning-services-section py-5 bg-light-soft">
+        <section className={`shared-carousel-section cleaning-services-section py-5 ${bgClass}`}>
             <div className="container custom-container">
                 <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4 gap-3">
                     <div className="d-flex align-items-center gap-3">

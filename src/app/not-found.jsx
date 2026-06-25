@@ -36,14 +36,14 @@ export default function NotFound() {
             </div>
 
             <style jsx>{`
-                .text-purple { color: #673ab7; }
+                .text-purple { color: #024dbe; }
                 .fw-black { font-weight: 900; }
-                .btn-purple { background: #673ab7; color: white; border-color: #673ab7; transition: all 0.3s; }
+                .btn-purple { background: #024dbe; color: white; border-color: #024dbe; transition: all 0.3s; }
                 .btn-purple:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(103, 58, 183, 0.2); color: white; }
-                .btn-outline-purple { color: #673ab7; border: 2px solid #673ab7; transition: all 0.3s; }
-                .btn-outline-purple:hover { background: #673ab7; color: white; transform: translateY(-3px); }
-                .badge-premium { background: rgba(103, 58, 183, 0.08); color: #673ab7; padding: 10px 24px; border-radius: 4px; font-weight: 800; font-size: 14px; letter-spacing: 1px; display: inline-block; }
-                .hover-purple:hover { color: #673ab7 !important; }
+                .btn-outline-purple { color: #024dbe; border: 2px solid #024dbe; transition: all 0.3s; }
+                .btn-outline-purple:hover { background: #024dbe; color: white; transform: translateY(-3px); }
+                .badge-premium { background: rgba(103, 58, 183, 0.08); color: #024dbe; padding: 10px 24px; border-radius: 4px; font-weight: 800; font-size: 14px; letter-spacing: 1px; display: inline-block; }
+                .hover-purple:hover { color: #024dbe !important; }
                 .transition-all { transition: all 0.3s; }
             `}</style>
         </main>

@@ -3,7 +3,7 @@ import ServiceAreasContent from '@/components/service-areas/ServiceAreasContent'
 import { constructMetadata } from '@/components/seo/constructMetadata';
 
 export const metadata = constructMetadata({
-    title: 'Appliance Repair Service Areas in Hyderabad | Charminar Repairs',
+    title: 'Appliance Repair Service Areas in Hyderabad | MeeHelper',
     description: 'Serving all major localities in Hyderabad including Gachibowli, Madhapur, Banjara Hills, and Secunderabad. 2-hour arrival guarantee across 100+ locations.',
     canonicalPath: '/service-areas',
 });

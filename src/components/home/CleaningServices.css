@@ -1,5 +1,5 @@
 .cleaning-services-section {
-    border-radius: 12px;
+    border-radius: 4px;
     margin-top: 30px;
 }
 
@@ -25,13 +25,13 @@
     color: #4a5568;
     border: 1px solid #e2e8f0;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 4px;
     font-weight: 600;
     font-size: 14px;
     white-space: nowrap;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .cleaning-tab-btn:hover {
@@ -41,16 +41,16 @@
 }
 
 .cleaning-tab-btn.active {
-    background: #673ab7;
+    background: #024dbe;
     color: #fff;
-    border-color: #673ab7;
-    box-shadow: 0 4px 12px rgba(103, 58, 183, 0.25);
+    border-color: #024dbe;
+    box-shadow: 0 4px 12px rgba(2, 77, 190, 0.25);
 }
 
 .cleaning-card-wrapper {
     background: #fff;
     border: 1px solid #edf2f7;
-    border-radius: 16px;
+    border-radius: 4px;
     overflow: hidden;
     height: 100%;
     transition: all 0.3s ease;
@@ -61,7 +61,7 @@
 .cleaning-card-wrapper:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    border-color: rgba(103, 58, 183, 0.15);
+    border-color: rgba(2, 77, 190, 0.15);
 }
 
 .cleaning-img-container {
@@ -154,11 +154,11 @@
 }
 
 .cleaning-book-btn {
-    background: #673ab7;
+    background: #024dbe;
     color: #fff;
     border: none;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
@@ -175,9 +175,11 @@
     .cleaning-img-container {
         height: 160px;
     }
+
     .cleaning-card-body {
         padding: 15px;
     }
+
     .cleaning-card-title {
         font-size: 14px;
     }

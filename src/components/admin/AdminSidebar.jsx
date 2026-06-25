@@ -10,9 +10,9 @@ const AdminSidebar = ({ activeTab, onTabChange, onLogout, isOpen, onClose }) => 
             <aside className={`admin-sidebar ${isOpen ? 'open' : ''}`}>
                 <div className="sidebar-logo p-4 d-flex align-items-center gap-3">
                     <div className=" shadow-sm">
-                        <img src="/favicon.png" alt="logo" width="28" height="28" />
+                        <img src="/favicon.ico" alt="logo" width="28" height="28" />
                     </div>
-                    <div className="fw-extrabold text-white fs-4 tracking-tight">Charminar <span className="text-orange">Admin</span></div>
+                    <div className="fw-extrabold text-white fs-4 tracking-tight">MeeHelper <span className="text-orange">Admin</span></div>
                 </div>
 
                 <div className="sidebar-divider"></div>

@@ -21,10 +21,11 @@ const CATEGORY_ITEMS = [
     { id: 8, image: '/assets/Images/category/relax-men.jpeg', alt: 'Men Salon', slug: `/${SERVICE_CANONICAL_MAP['Haircut for Men']}` },
 ].map(item => ({ ...item, image: toCDN(item.image) }));
 
-const Category = () => {
+const Category = ({ bgColor }) => {
+    const bgClass = bgColor === 'gray' ? 'section-bg-gray' : 'section-bg-white';
     return (
-        <section className="shared-carousel-section container" style={{ paddingTop: '50px', paddingBottom: '50px', }}>
-            <div className="container" style={{ maxWidth: '100%' }}>
+        <section className={`shared-carousel-section w-100 ${bgClass}`} style={{ paddingTop: '50px', paddingBottom: '50px', }}>
+            <div className="container">
                 <Link href="/all-services-hyderabad/" className="text-decoration-none color-inherit">
                     <h2 className="shared-carousel-title animate-fade-in-up" style={{ paddingLeft: '15px', cursor: 'pointer' }}>Category</h2>
                 </Link>
