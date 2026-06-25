@@ -254,11 +254,11 @@ const Footer = () => {
 
                             <h4 className="widget-title">Appliance Guides</h4>
                             <ul className="list-unstyled links-list">
-                                <li><Link href="/blog/ac-filter-cleaning-guide/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>AC Filter Cleaning</Link></li>
-                                <li><Link href="/blog/washing-machine-error-codes-guide/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>Washer Error Codes</Link></li>
-                                <li><Link href="/blog/refrigerator-not-cooling-solutions/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>Fridge Cooling Guide</Link></li>
-                                <li><Link href="/blog/ro-water-purifier-tds-standards/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>RO Purifier TDS Chart</Link></li>
-                                <li><Link href="/blog/kitchen-chimney-cleaning-frequency/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>Chimney Care Tips</Link></li>
+                                <li><Link href="/blog/ac-repair-gachibowli-servicing-guide/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>AC Filter Cleaning</Link></li>
+                                <li><Link href="/blog/washing-machine-electronic-error-codes-guide/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>Washer Error Codes</Link></li>
+                                <li><Link href="/blog/refrigerator-cooling-issues-hyderabad-summer/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>Fridge Cooling Guide</Link></li>
+                                <li><Link href="/blog/ro-water-purifier-service-hyderabad/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>RO Purifier TDS Chart</Link></li>
+                                <li><Link href="/blog/kitchen-chimney-cleaning-hyderabad-guide/"><i className="fas fa-book-open me-2 text-orange footer-guide-icon"></i>Chimney Care Tips</Link></li>
                             </ul>
                         </div>
 
