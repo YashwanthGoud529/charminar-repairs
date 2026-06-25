@@ -113,27 +113,27 @@ const Header = () => {
     return (
         <header className={`header-container-v3 ${scrolled ? 'scrolled' : ''}`}>
             {/* Top Sub-Header Bar */}
-            <div className="top-subheader-bar text-white" style={{ background: '#024dbe', padding: '10px 0', fontSize: '12px', fontWeight: '500', letterSpacing: '0.3px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+            <div className="top-subheader-bar text-white">
                 <div className="container-fluid px-lg-5 d-flex justify-content-between align-items-center flex-wrap gap-3">
                     <div className="d-flex align-items-center gap-4 flex-wrap">
-                        <span className="d-flex align-items-center" style={{ gap: '8px' }}>
-                            <span style={{ fontSize: '16px' }}>🎖️</span>
+                        <span className="top-subheader-item">
+                            <span className="top-subheader-icon">🎖️</span>
                             <span className="fw-semibold">ISO 9001:2015 Certified Service Network</span>
                         </span>
                         <span className="opacity-50 d-none d-md-inline">|</span>
-                        <span className="d-none d-md-inline d-flex align-items-center" style={{ gap: '8px' }}>
-                            <span style={{ fontSize: '16px' }}>🛡️</span>
+                        <span className="d-none d-md-inline top-subheader-item">
+                            <span className="top-subheader-icon">🛡️</span>
                             <span>180-Day Doorstep Protection Warranty</span>
                         </span>
                     </div>
                     <div className="d-flex align-items-center gap-4 flex-wrap">
-                        <span className="d-flex align-items-center" style={{ gap: '8px' }}>
-                            <span style={{ fontSize: '16px' }}>📞</span>
+                        <span className="top-subheader-item">
+                            <span className="top-subheader-icon">📞</span>
                             <strong>Helpline: 8008615049</strong>
                         </span>
                         <span className="opacity-50 d-none d-sm-inline">|</span>
-                        <span className="d-none d-sm-inline d-flex align-items-center" style={{ gap: '8px' }}>
-                            <span style={{ fontSize: '16px' }}>⏰</span>
+                        <span className="d-none d-sm-inline top-subheader-item">
+                            <span className="top-subheader-icon">⏰</span>
                             <span>Mon–Sun: 8:00 AM – 9:00 PM</span>
                         </span>
                     </div>
@@ -152,14 +152,13 @@ const Header = () => {
                                         height={70}
                                         priority
                                         className="main-logo-v3"
-                                        style={{ height: '70px', width: 'auto' }}
                                     />
                                 </Link>
                             </div>
                             <ul className="nav-list-v3 d-none d-xl-flex">
                                 <li className="nav-item-dropdown-v3">
                                     <Link href="/all-services-hyderabad/" className={isActive('/all-services-hyderabad') ? 'active' : ''}>
-                                        <i className="fas fa-tools" style={{ fontSize: '14px', opacity: 0.85 }}></i> Services <i className="fas fa-chevron-down ms-1" style={{ fontSize: '10px' }}></i>
+                                        <i className="fas fa-tools nav-link-icon"></i> Services <i className="fas fa-chevron-down ms-1 nav-chevron-icon"></i>
                                     </Link>
                                     <div className="mega-dropdown-v3">
                                         <div className="dropdown-col-v3">
@@ -186,11 +185,11 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </li>
-                                <li><Link href="/about-us" className={isActive('/about-us') ? 'active' : ''}><i className="fas fa-info-circle" style={{ fontSize: '14px', opacity: 0.85 }}></i> About</Link></li>
-                                <li><Link href="/pricing" className={isActive('/pricing') ? 'active' : ''}><i className="fas fa-tags" style={{ fontSize: '14px', opacity: 0.85 }}></i> Pricing</Link></li>
+                                <li><Link href="/about-us" className={isActive('/about-us') ? 'active' : ''}><i className="fas fa-info-circle nav-link-icon"></i> About</Link></li>
+                                <li><Link href="/pricing" className={isActive('/pricing') ? 'active' : ''}><i className="fas fa-tags nav-link-icon"></i> Pricing</Link></li>
                                 {/* <li><Link href="/service-areas" className={isActive('/service-areas') ? 'active' : ''}>Areas</Link></li> */}
-                                <li><Link href="/blog" className={isActive('/blog') ? 'active' : ''}><i className="fas fa-blog" style={{ fontSize: '14px', opacity: 0.85 }}></i> Blog</Link></li>
-                                <li><Link href="/contact-us" className={isActive('/contact-us') ? 'active' : ''}><i className="fas fa-envelope" style={{ fontSize: '14px', opacity: 0.85 }}></i> Contact</Link></li>
+                                <li><Link href="/blog" className={isActive('/blog') ? 'active' : ''}><i className="fas fa-blog nav-link-icon"></i> Blog</Link></li>
+                                <li><Link href="/contact-us" className={isActive('/contact-us') ? 'active' : ''}><i className="fas fa-envelope nav-link-icon"></i> Contact</Link></li>
                                 <li className="ms-lg-3">
                                     <Link href="/careers" className="partner-btn-v3 d-flex align-items-center gap-2">
                                         <span>Join Our Team</span>
@@ -242,8 +241,8 @@ const Header = () => {
                                         <i className="fas fa-phone-alt"></i>
                                     </div>
                                     <div className="d-flex flex-column">
-                                        <span className="text-muted x-small fw-medium" style={{ lineHeight: 1 }}>24/7 Support</span>
-                                        <span className="text-dark fw-black small" style={{ lineHeight: 1 }}>80086 15049</span>
+                                        <span className="text-muted x-small fw-medium call-btn-text-muted">24/7 Support</span>
+                                        <span className="text-dark fw-black small call-btn-text-dark">80086 15049</span>
                                     </div>
                                 </a>
                                 {/* <Link href="/cart" className="icon-box-colorful icon-box-purple position-relative" aria-label="View shopping cart with repairs">
@@ -274,7 +273,7 @@ const Header = () => {
                         alt="MeeHelper Logo"
                         width={120}
                         height={34}
-                        style={{ height: '70px', width: 'auto', objectFit: 'contain' }}
+                        className="mobile-sidebar-logo"
                     />
                     <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close navigation sidebar">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
@@ -307,11 +306,11 @@ const Header = () => {
                         <LocationSelector />
                     </div>
                     <ul className="mobile-nav-list-v3">
-                        <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-home me-2" style={{ width: '20px' }}></i>Home</Link></li>
-                        <li><Link href="/all-services-hyderabad/" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-tools me-2.5" style={{ width: '20px' }}></i>Services</Link></li>
-                        <li><Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-tags me-2.5" style={{ width: '20px' }}></i>Pricing Card</Link></li>
-                        <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-info-circle me-2.5" style={{ width: '20px' }}></i>About Us</Link></li>
-                        <li><Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-envelope me-2.5" style={{ width: '20px' }}></i>Contact Experts</Link></li>
+                        <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-home me-2 mobile-nav-icon"></i>Home</Link></li>
+                        <li><Link href="/all-services-hyderabad/" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-tools me-2 mobile-nav-icon"></i>Services</Link></li>
+                        <li><Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-tags me-2 mobile-nav-icon"></i>Pricing Card</Link></li>
+                        <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-info-circle me-2 mobile-nav-icon"></i>About Us</Link></li>
+                        <li><Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}><i className="fas fa-envelope me-2 mobile-nav-icon"></i>Contact Experts</Link></li>
                         <li className="mt-4">
                             <Link href="/careers" className="partner-btn-v3 w-100 justify-content-center" onClick={() => setIsMobileMenuOpen(false)}>
                                 <i className="fas fa-briefcase me-2"></i>

@@ -1,12 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
-import { HYDERABAD_LOCATIONS } from '@/config/locations';
+import { HOME_PAGE_SLUGS } from '@/config/services';
+
+const TOP_LOCATIONS = [
+    'Gachibowli',
+    'Madhapur',
+    'Banjara Hills',
+    'Jubilee Hills',
+    'Kukatpally',
+    'Kondapur',
+    'Hitech City',
+    'Secunderabad',
+    'Begumpet',
+    'Miyapur'
+];
 
 const NearbyLocations = ({ serviceSlug, serviceName, currentLocation, bgColor }) => {
-    // Get 8 random locations to suggest
-    const suggestedLocations = HYDERABAD_LOCATIONS
+    // Disable nearby locations section for minor service pages (not in HOME_PAGE_SLUGS)
+    if (!HOME_PAGE_SLUGS.includes(serviceSlug)) {
+        return null;
+    }
+
+    // Get suggestions from top pre-rendered locations, excluding the current location
+    const suggestedLocations = TOP_LOCATIONS
         .filter(l => l.toLowerCase().trim() !== (currentLocation || '').toLowerCase().trim())
-        .sort(() => 0.5 - Math.random())
         .slice(0, 8);
 
     const toSlug = (str) =>
@@ -34,7 +51,7 @@ const NearbyLocations = ({ serviceSlug, serviceName, currentLocation, bgColor })
                                 href={`/${serviceSlug}-in-${toSlug(loc)}/`} 
                                 className="d-flex align-items-center p-3 border border-light bg-light rounded text-decoration-none text-muted transition-all hover-dark hover-border-primary text-nowrap text-truncate"
                                 style={{ fontSize: '13px', borderRadius: '4px' }}
-                                title={`${serviceName} in ${loc}`}
+                                title={`${serviceName} in {loc}`}
                             >
                                 <MapMarkerIcon />
                                 <span className="text-truncate">{serviceName} in {loc}</span>

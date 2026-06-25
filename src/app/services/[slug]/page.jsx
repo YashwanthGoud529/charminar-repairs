@@ -204,7 +204,64 @@ function getFAQItems(serviceName, type, brand, loc, isNearMe, brandPart) {
 }
 
 export async function generateStaticParams() {
-    return HOME_PAGE_SLUGS.map(slug => ({ slug }));
+    const { SLUG_TO_TITLE } = getSlugResolution();
+    const uniqueCanonicalSlugs = Array.from(new Set([
+        ...CANONICAL_SLUGS,
+        ...Object.keys(SLUG_TO_TITLE)
+    ]));
+    const uniqueHomePageSlugs = Array.from(new Set(HOME_PAGE_SLUGS));
+    
+    const params = [];
+    
+    // 1. Add all base canonical & alias service slugs
+    uniqueCanonicalSlugs.forEach(slug => {
+        if (slug) params.push({ slug });
+    });
+    
+    // 2. Add brand combinations for services that actually have brands
+    const brandServiceSlugs = [];
+    Object.entries(SERVICE_CANONICAL_MAP).forEach(([name, slug]) => {
+        const brands = SERVICE_DATA_MAP[name]?.brands || [];
+        brands.forEach(b => {
+            brandServiceSlugs.push(`${toSlug(b)}-${slug}`);
+        });
+    });
+    brandServiceSlugs.forEach(slug => {
+        if (slug) params.push({ slug });
+    });
+
+    // 3. Add service-location combinations for top services
+    uniqueHomePageSlugs.forEach(serviceSlug => {
+        HYDERABAD_LOCATIONS.forEach(loc => {
+            const locSlug = toSlug(loc);
+            params.push({ slug: `${serviceSlug}-in-${locSlug}` });
+        });
+        params.push({ slug: `${serviceSlug}-near-me` });
+    });
+
+    // 4. Add other custom paths
+    const customSlugs = [
+        'all-services-hyderabad',
+        'cleaning-sanitization-services',
+        'meehelper-wheels',
+        'floor-polishing',
+        'packers-and-movers'
+    ];
+    customSlugs.forEach(slug => {
+        params.push({ slug });
+    });
+    
+    // Deduplicate params by slug to ensure clean and fast static export
+    const seen = new Set();
+    const uniqueParams = [];
+    params.forEach(p => {
+        if (p.slug && !seen.has(p.slug)) {
+            seen.add(p.slug);
+            uniqueParams.push(p);
+        }
+    });
+    
+    return uniqueParams;
 }
 
 export const dynamicParams = false;

@@ -264,7 +264,19 @@ export async function generateStaticParams() {
         if (slug) params.push({ slug });
     });
     
-    // 2. Add service-location combinations for top services
+    // 2. Add brand combinations for services that actually have brands
+    const brandServiceSlugs = [];
+    Object.entries(SERVICE_CANONICAL_MAP).forEach(([name, slug]) => {
+        const brands = SERVICE_DATA_MAP[name]?.brands || [];
+        brands.forEach(b => {
+            brandServiceSlugs.push(`${toSlug(b)}-${slug}`);
+        });
+    });
+    brandServiceSlugs.forEach(slug => {
+        if (slug) params.push({ slug });
+    });
+
+    // 3. Add service-location combinations for top services
     uniqueHomePageSlugs.forEach(serviceSlug => {
         HYDERABAD_LOCATIONS.forEach(loc => {
             const locSlug = toSlug(loc);
@@ -273,7 +285,7 @@ export async function generateStaticParams() {
         params.push({ slug: `${serviceSlug}-near-me` });
     });
 
-    // 3. Add other custom paths
+    // 4. Add other custom paths
     const customSlugs = [
         'all-services-hyderabad',
         'cleaning-sanitization-services',
@@ -285,7 +297,17 @@ export async function generateStaticParams() {
         params.push({ slug });
     });
     
-    return params;
+    // Deduplicate params by slug to ensure clean and fast static export
+    const seen = new Set();
+    const uniqueParams = [];
+    params.forEach(p => {
+        if (p.slug && !seen.has(p.slug)) {
+            seen.add(p.slug);
+            uniqueParams.push(p);
+        }
+    });
+    
+    return uniqueParams;
 }
 
 export const dynamicParams = false;

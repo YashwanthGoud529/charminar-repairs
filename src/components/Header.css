@@ -496,3 +496,55 @@
     color: #024dbe !important;
     transform: translateX(5px);
 }
+
+/* Migrate Inline Styles from Header.jsx */
+.top-subheader-bar {
+    background: #024dbe;
+    padding: 10px 0;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-subheader-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-subheader-icon {
+    font-size: 16px;
+}
+
+.main-logo-v3 {
+    height: 70px !important;
+    width: auto !important;
+}
+
+.nav-link-icon {
+    font-size: 14px !important;
+    opacity: 0.85 !important;
+}
+
+.nav-chevron-icon {
+    font-size: 10px !important;
+}
+
+.call-btn-text-muted {
+    line-height: 1 !important;
+}
+
+.call-btn-text-dark {
+    line-height: 1 !important;
+}
+
+.mobile-sidebar-logo {
+    height: 70px !important;
+    width: auto !important;
+    object-fit: contain;
+}
+
+.mobile-nav-icon {
+    width: 20px !important;
+}
